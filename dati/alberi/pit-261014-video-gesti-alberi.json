@@ -1,0 +1,658 @@
+{
+ "data": "2026-10-14",
+ "nota": "Contenuto della pagina dei gesti senza riferimenti esterni: guida pratica per esercitarsi su piccoli fogli A5 partendo da 6 colori di base, presentando i vari modi e approcci mostrati nei video.",
+ "apertura": {
+  "titolo": "Alberi ad acquerello: i gesti nei video",
+  "sottotitolo": "Guida pratica per esercitarsi su sette tipi di albero (e sui riflessi nell'acqua) partendo da 6 colori di base, su piccoli fogli A5. Per ogni esercizio trovi i gesti fondamentali e i vari modi possibili per realizzarli, mostrati da autori diversi.",
+  "esercizi": [
+   {
+    "titolo": "Si parte da 6 colori di base",
+    "testo": "Tutti gli esercizi partono da 6 soli colori: Giallo limone, Ceruleo (blu ceruleo), Cremisi d'alizarina, Terra di Siena bruciata (TSB), Terra d'ombra bruciata (TOB) e Blu oltremare (BO). Mescolandoli si ottengono le 12 miscele indicate nei passi con le sigle da M1 a M12."
+   },
+   {
+    "titolo": "Non c'è un solo modo: i video mostrano varie possibilità",
+    "testo": "Nell'acquerello non esiste una ricetta unica per dipingere un albero. I video raccolti in ogni scheda vengono da autori diversi e non sono le tappe di un solo dipinto filmato dall'inizio alla fine: a volte mostrano fasi che si susseguono, ma molto spesso mostrano approcci e modi diversi per risolvere lo stesso albero (per esempio partire dalla punta oppure dai ciuffi; usare la punta del pennello oppure il fianco; aprire la luce sollevando il colore oppure aggiungendo il giallo a fresco; riservare i bianchi col mascherante oppure a mano libera). Sul tuo foglietto A5 puoi provare più modi uno accanto all'altro e capire quale funziona meglio per la tua mano."
+   },
+   {
+    "titolo": "Lavora su piccoli fogli A5 (uno per le miscele, sette per gli esercizi)",
+    "testo": "Per imparare i gesti non partire da un foglio grande: usa fogli piccoli formato A5, oppure taglia in otto parti un foglio 30 x 40 cm di carta da acquerello (cotone 300 g/mq, grana fina), fissandoli col nastro di carta su una tavoletta rigida. Usa il primo foglietto per provare le 12 miscele (M1-M12) e tienilo sul tavolo come campione; usa gli altri sette foglietti per provare le diverse possibilità di ciascun tipo di albero."
+   },
+   {
+    "titolo": "Cosa tenere sul tavolo",
+    "testo": "Pennelli: un tondo grande (n. 10), un tondo medio con buona punta (n. 6-8), un tondo piccolo o rigger (n. 2-4), un piatto per bagnare e, se lo hai, un ventaglio o una spugna naturale. Piccoli attrezzi per gli effetti: liquido mascherante (da dare con un tiralinee o con un vecchio pennello sintetico prima insaponato, e da togliere a secco con la gomma crêpe), una vecchia tessera di plastica per scalfire i rametti chiari, un pizzico di sale fino e un fazzoletto di carta."
+   }
+  ],
+  "tavolozza": [
+   "Giallo limone",
+   "Ceruleo (blu ceruleo)",
+   "Cremisi d'alizarina",
+   "Terra di Siena bruciata (TSB)",
+   "Terra d'ombra bruciata (TOB)",
+   "Blu oltremare (BO)"
+  ],
+  "miscele": [
+   {
+    "m": "M1",
+    "nome": "verde giallo",
+    "ricetta": "giallo limone + punta di ceruleo"
+   },
+   {
+    "m": "M2",
+    "nome": "verde medio",
+    "ricetta": "giallo limone + oltremare (BO)"
+   },
+   {
+    "m": "M3",
+    "nome": "verde scuro",
+    "ricetta": "oltremare (BO) + giallo limone + Siena bruciata (TSB)"
+   },
+   {
+    "m": "M4",
+    "nome": "verde-blu d'ombra",
+    "ricetta": "oltremare (BO) + ombra bruciata (TOB) + poco giallo"
+   },
+   {
+    "m": "M5",
+    "nome": "arancio",
+    "ricetta": "giallo limone + Siena bruciata (TSB)"
+   },
+   {
+    "m": "M6",
+    "nome": "rame",
+    "ricetta": "Siena bruciata (TSB) + cremisi"
+   },
+   {
+    "m": "M7",
+    "nome": "rosso cupo",
+    "ricetta": "cremisi + ombra bruciata (TOB)"
+   },
+   {
+    "m": "M8",
+    "nome": "viola",
+    "ricetta": "oltremare (BO) + cremisi"
+   },
+   {
+    "m": "M9",
+    "nome": "grigio-lilla",
+    "ricetta": "ceruleo + cremisi, molto diluiti"
+   },
+   {
+    "m": "M10",
+    "nome": "scuro",
+    "ricetta": "oltremare (BO) + ombra bruciata (TOB) + punta di cremisi"
+   },
+   {
+    "m": "M11",
+    "nome": "grigio caldo",
+    "ricetta": "oltremare (BO) + Siena bruciata (TSB), diluito"
+   },
+   {
+    "m": "M12",
+    "nome": "azzurri",
+    "ricetta": "ceruleo in basso e nell'acqua, oltremare (BO) in alto"
+   }
+  ]
+ },
+ "alberi": [
+  {
+   "voce": "A1 Abeti fitti",
+   "breve": "Abeti",
+   "descrizione": "Abeti in gruppo, a media distanza: un muro di coni stretti con le punte ad altezze diverse. Qui sotto trovi vari modi per impostare il singolo cono (di punta sull'asse guida, a macchia rapida o col fianco del pennello), due modi per dargli luce e ombra mentre è umido, e infine come sovrapporre più abeti in un gruppo fitto.",
+   "colori": [
+    {
+     "m": "M1",
+     "ricetta": "giallo limone + punta di ceruleo",
+     "per": "luce nei rami o velo di fondo"
+    },
+    {
+     "m": "M3",
+     "ricetta": "oltremare (BO) + giallo limone + Siena bruciata (TSB)",
+     "per": "i coni"
+    },
+    {
+     "m": "M4",
+     "ricetta": "oltremare (BO) + ombra bruciata (TOB) + poco giallo",
+     "per": "le ombre"
+    }
+   ],
+   "pennelli": "Tondo medio a punta (n. 8, usato di punta o di fianco secondo il modo scelto) e tondo piccolo (n. 2, per l'asse e il tronco a tratti).",
+   "foglietto": "Foglietto A5 in orizzontale: a sinistra prova i diversi modi di costruire il cono singolo e di dargli luce (passi 1, 2 e 3); a destra prova il gruppo fitto sovrapponendo i coni scuri davanti a quelli chiari già asciutti (passo 4), oppure stendendo prima un velo chiaro di M1 come fondo.",
+   "passi": [
+    {
+     "carta": "asciutta",
+     "testo": "La partenza dall'asse guida e dalla punta a V (e i rami di punta): nel primo abete del suo video, Emma Jane Lefebvre traccia una linea verticale leggera e discontinua, parte dalla cima con piccoli tocchi stretti a V rivolti in su e scende con tocchi minuti di punta.",
+     "video": {
+      "id": "M8GEtzf0rQQ",
+      "minuto": "02:30"
+     }
+    },
+    {
+     "carta": "asciutta",
+     "testo": "Scendere lungo il cono (due varianti): 1) nello stesso video del passo 1, sul secondo albero accanto, la stessa autrice mostra come scendere più in fretta usando il fianco e la pancia del pennello inclinato in modo asimmetrico; 2) nel secondo video, Paul Clark mostra un approccio ancora più rapido che forma il cono in quattro secondi.",
+     "video": {
+      "id": "M8GEtzf0rQQ",
+      "minuto": "05:43"
+     }
+    },
+    {
+     "carta": "umida",
+     "testo": "Luce e ombra sull'abete ancora umido (due possibilità): 1) proseguendo sullo stesso abete di Paul Clark del passo 2, asciuga il pennello per sollevare un po' di colore a sinistra (luce) e appoggia lo scuro (M4) a destra (ombra); 2) oppure, come nel video di Angela Fehr, lascia cadere del giallo-verde (M1) direttamente nei rami umidi.",
+     "video": {
+      "id": "ygV5PuvzjE4",
+      "minuto": "13:38"
+     }
+    },
+    {
+     "carta": "asciutta",
+     "testo": "Dal cono singolo al gruppo fitto (terza parte dello stesso video dei passi 1 e 2): dipingi prima una fila di abeti più chiari e diluiti (M2) sullo sfondo variando le altezze, lasciali asciugare del tutto e poi dipingi sopra e in mezzo gli abeti più vicini e più scuri (M3, M4).",
+     "video": {
+      "id": "M8GEtzf0rQQ",
+      "minuto": "12:35"
+     }
+    },
+    {
+     "carta": "asciutta",
+     "testo": "Il tronco (opzionale, a chioma asciutta): negli abeti fitti spesso il fusto è coperto; se vuoi farlo intravedere, segnalo solo a brevi tratti nei piccoli varchi rimasti aperti fra i rami.",
+     "video": {
+      "id": "CnH1yxXsJB8",
+      "minuto": "25:00"
+     }
+    }
+   ],
+   "controllo": "Qualunque modo tu abbia scelto per il cono, la punta è stretta, i rami non sono simmetrici, nel gruppo i coni chiari dietro staccano da quelli scuri davanti e il tronco non taglia l'albero da cima a fondo.",
+   "attenzione": [
+    "Coni tutti uguali, dritti e alla stessa altezza: varia altezza, larghezza e inclinazione.",
+    "Non lasciare l'asse del tronco scoperto da cima a fondo: i rami passano anche davanti al tronco."
+   ],
+   "illustrazione": {
+    "file": "pit-261013-illustrazione-A1-spina-di-pesce.png",
+    "didascalia": "Rami a spina di pesce con la pancia del pennello, attorno a un asse sottile."
+   },
+   "ritaglio": {
+    "file": "pit-261015-riferimento-A1-abeti-fitti.png",
+    "didascalia": "Il gruppo degli abeti fitti con la montagna dietro, i faggi a destra e la riva sotto."
+   }
+  },
+  {
+   "voce": "A2 Abeti alti contro il cielo",
+   "breve": "Abeti alti",
+   "descrizione": "Abeti isolati, alti e radi contro il cielo: si dipingono sul cielo già asciutto, lasciando passare l'azzurro fra i piani dei rami. I primi tre passi mostrano tre modi diversi di costruirli (partendo dai ciuffi, disegnando i singoli rami con gli aghi, oppure a tocchi saltellati col pennello): provali e scegli quello più adatto a te.",
+   "colori": [
+    {
+     "m": "M2",
+     "ricetta": "giallo limone + oltremare (BO)",
+     "per": "i rami al sole"
+    },
+    {
+     "m": "M3",
+     "ricetta": "oltremare (BO) + giallo limone + Siena bruciata (TSB)",
+     "per": "i rami in ombra"
+    },
+    {
+     "m": "M5 e M11",
+     "ricetta": "giallo limone + Siena bruciata (TSB); oltremare (BO) + Siena bruciata (TSB)",
+     "per": "il tronco, chiaro e scuro"
+    }
+   ],
+   "pennelli": "Tondo piccolo a punta fine o rigger (n. 2-4, per il tronco lungo e i rami sottili) e tondo medio (n. 6-8, per i ciuffi o i tocchi saltellati).",
+   "foglietto": "Foglietto A5 in verticale, con un cielo azzurro (M12, ceruleo in basso e oltremare (BO) in alto) steso bagnato su bagnato e lasciato asciugare del tutto. Dipingici sopra due o tre abeti alti 8-9 cm provando i tre modi diversi dei passi 1, 2 e 3.",
+   "passi": [
+    {
+     "carta": "asciutta",
+     "testo": "Primo modo (prima i ciuffi, poi il tronco col rigger): tampona prima i ciuffi di fogliame staccati lasciando l'azzurro in mezzo; quando sono asciutti, tira col rigger il tronco sottile dal basso verso l'alto e collega i rami.",
+     "video": {
+      "id": "I5j93ugmHpw",
+      "minuto": "03:01"
+     }
+    },
+    {
+     "carta": "asciutta",
+     "testo": "Secondo modo (tronco lungo, rami singoli e aghi): traccia prima il tronco sottile, poi nella parte alta tira linee singole ben distanziate inclinate in giù e aggiungi piccoli aghi sottili su ciascun ramo.",
+     "video": {
+      "id": "fwy6GwwOjrM",
+      "minuto": "02:42"
+     }
+    },
+    {
+     "carta": "asciutta",
+     "testo": "Terzo modo (a tocchi saltellati da un lato all'altro): senza disegnare i singoli aghi, scendi dall'alto appoggiando e spingendo appena il pennello da un lato all'altro in modo irregolare, lasciando varchi aperti fra i piani.",
+     "video": {
+      "id": "62CZtwWxPW4",
+      "minuto": "04:08"
+     }
+    },
+    {
+     "carta": "umida",
+     "testo": "Luce e ombra sui rami (per tutti e tre i modi): mentre il verde è ancora umido, solleva un filo di luce sul lato al sole col pennello scarico e appoggia pochi tocchi di M4 sotto i piani più bassi.",
+     "video": {
+      "id": "ygV5PuvzjE4",
+      "minuto": "13:38"
+     }
+    },
+    {
+     "carta": "asciutta",
+     "testo": "Rifinire il tronco nei varchi: se i rami dipinti nei modi 2 o 3 hanno interrotto il fusto, a secco ricollega e scurisci a tratti il tronco solo negli spazi aperti fra un palco e l'altro.",
+     "video": {
+      "id": "CnH1yxXsJB8",
+      "minuto": "25:00"
+     }
+    }
+   ],
+   "controllo": "Confronta i modi provati sul foglietto: in tutti l'azzurro del cielo deve passare fra i piani, due piani vicini non devono essere uguali e il tronco compare nei varchi. Se la sagoma si è chiusa in una macchia piena, hai fatto troppi tratti.",
+   "attenzione": [
+    "Non riempire la sagoma: il cielo deve passare fra i piani.",
+    "Niente piani uguali e simmetrici sui due lati."
+   ],
+   "illustrazione": {
+    "file": "pit-261013-illustrazione-A2-piani-staccati.png",
+    "didascalia": "Piani di rami corti e staccati, col cielo che passa in mezzo."
+   },
+   "ritaglio": {
+    "file": "pit-261015-riferimento-A2-abeti-alti.png",
+    "didascalia": "I due abeti alti contro il cielo, con le montagne sullo sfondo e gli alberi vicini."
+   }
+  },
+  {
+   "voce": "A3 Faggi d'autunno",
+   "breve": "Faggi",
+   "descrizione": "Faggi in autunno, a media distanza: tre o quattro masse tonde, oro in alto, rame al centro, rosso cupo in basso, senza tronco visibile. Qui si lavora bagnato su bagnato: i video mostrano sia come impostare la chioma (col pennello mosso di pancia oppure con la spugna), sia come far fondere i rossi e gli scuri a fresco.",
+   "colori": [
+    {
+     "m": "M5",
+     "ricetta": "giallo limone + Siena bruciata (TSB)",
+     "per": "la prima stesura"
+    },
+    {
+     "m": "M6",
+     "ricetta": "Siena bruciata (TSB) + cremisi",
+     "per": "il centro"
+    },
+    {
+     "m": "M7",
+     "ricetta": "cremisi + ombra bruciata (TOB)",
+     "per": "sotto e negli incavi"
+    }
+   ],
+   "pennelli": "Tondo grande (n. 10, mosso di pancia per i lobi, oppure una piccola spugna naturale), tondo medio (n. 6, per le gocce di rame e l'ombra) e una tessera di plastica (per scalfire i fili chiari).",
+   "foglietto": "Foglietto A5 in orizzontale con un velo di M5 molto diluito già asciutto. Accosta due lobi tondi larghi 5-6 cm: sul bordo destro di uno solo appoggia a fresco il verde scuro (M3) di un abete, lasciando l'altro senza verde per confronto.",
+   "passi": [
+    {
+     "carta": "asciutta",
+     "testo": "La massa chiara di base (M5): stendi i lobi muovendo il pennello grande di pancia in tondo dal centro verso il bordo per lasciare il contorno frastagliato e qualche vuoto (in alternativa puoi tamponare con una spugna naturale).",
+     "video": {
+      "id": "ygV5PuvzjE4",
+      "minuto": "11:27"
+     }
+    },
+    {
+     "carta": "umida",
+     "testo": "Il cuore caldo a fresco: mentre l'arancio è ben bagnato, lascia cadere gocce di M6 al centro e un po' di cremisi in basso, lasciando che si espandano da sole senza ripassare.",
+     "video": {
+      "id": "Ard-oCmPDfc",
+      "minuto": "10:32"
+     }
+    },
+    {
+     "carta": "umida",
+     "testo": "L'ombra bassa (ancora umido): picchietta M7 lungo il bordo inferiore di ogni lobo per dare volume alla chioma.",
+     "video": {
+      "id": "ygV5PuvzjE4",
+      "minuto": "11:44"
+     }
+    },
+    {
+     "carta": "umida",
+     "testo": "L'incontro con gli abeti vicini (possibilità per i gruppi misti): se accanto ai faggi ci sono conifere scure, appoggia M3 sul bordo arancio ancora umido così che il verde si sfrangi leggermente nel rame.",
+     "video": {
+      "id": "H5WssEEjdoI",
+      "minuto": "05:04"
+     }
+    },
+    {
+     "carta": "umida",
+     "testo": "I rametti chiari (quasi asciutto): quando il colore ha perso il lucido, trascina lo spigolo di una tessera di plastica per aprire due o tre fili chiari nella massa.",
+     "video": {
+      "id": "hUyX4iGaZTc",
+      "minuto": "04:44"
+     }
+    }
+   ],
+   "controllo": "Il passaggio dall'oro al rosso cupo resta trasparente e senza fango, il verde si sfrangia per mezzo centimetro sul bordo senza invadere la chioma e i fili chiari della tessera sembrano rametti.",
+   "attenzione": [
+    "Il rame e lo scuro vanno messi finché l'arancio è umido, o resta uno stacco duro.",
+    "Niente tronco disegnato attraverso la massa."
+   ],
+   "illustrazione": {
+    "file": "pit-261013-illustrazione-A3-rosso-sul-bagnato.png",
+    "didascalia": "Il rosso scuro lasciato cadere sulla chioma arancio ancora bagnata."
+   },
+   "ritaglio": {
+    "file": "pit-261015-riferimento-A3-faggi-autunno.png",
+    "didascalia": "Le chiome calde dei faggi tra il pendio arancio, gli abeti a sinistra e la riva."
+   }
+  },
+  {
+   "voce": "A4 Siepi rosso-rame",
+   "breve": "Siepi",
+   "descrizione": "Siepi a media distanza: blocchi bassi e larghi con la cima quasi piatta, rame in luce e una fascia scura stretta alla base che si raccorda col prato. Fra un blocco e l'altro può stare un cespuglio scuro a cupola.",
+   "colori": [
+    {
+     "m": "M5",
+     "ricetta": "giallo limone + Siena bruciata (TSB)",
+     "per": "la base calda"
+    },
+    {
+     "m": "M6",
+     "ricetta": "Siena bruciata (TSB) + cremisi",
+     "per": "il blocco"
+    },
+    {
+     "m": "M7",
+     "ricetta": "cremisi + ombra bruciata (TOB)",
+     "per": "la fascia alla base"
+    },
+    {
+     "m": "M4",
+     "ricetta": "oltremare (BO) + ombra bruciata (TOB) + poco giallo",
+     "per": "la cupola scura"
+    }
+   ],
+   "pennelli": "Tondo medio (n. 6, per i tocchi orizzontali, le gocce di rame, la fascia alla base e la cupola) e piatto piccolo pulito e umido (per sciogliere a tratti il bordo basso).",
+   "foglietto": "Foglietto A5 in orizzontale con un velo di M5 molto diluito già asciutto. Traccia a matita due blocchi bassi a cima quasi piatta, con lo spazio in mezzo per una cupola scura in M4 e il prato davanti.",
+   "passi": [
+    {
+     "carta": "asciutta",
+     "testo": "Il blocco della siepe: stendi M5 a tocchi piccoli e orizzontali, dal bordo alto in giù.",
+     "video": {
+      "id": "H5WssEEjdoI",
+      "minuto": "06:42"
+     }
+    },
+    {
+     "carta": "umida",
+     "testo": "Variazione di tono a fresco: lascia cadere subito gocce di M6 e un po' di cremisi nella siepe ancora bagnata.",
+     "video": {
+      "id": "Ard-oCmPDfc",
+      "minuto": "10:32"
+     }
+    },
+    {
+     "carta": "umida",
+     "testo": "L'ombra sotto la siepe: metti M7 in una fascia stretta alla base e scioglila col pennello umido in due o tre punti verso il terreno.",
+     "video": {
+      "id": "HapsDeXdzpU",
+      "minuto": "00:52"
+     }
+    },
+    {
+     "carta": "asciutta",
+     "testo": "Il cespuglio scuro fra le siepi (due modi): puoi dipingere una cupola scura in M4 come forma raccolta fra i due blocchi, oppure usare lo scuro in negativo dietro il profilo chiaro della siepe per farla staccare.",
+     "video": {
+      "id": "rNziSVHRLOI",
+      "minuto": "14:16"
+     }
+    },
+    {
+     "carta": "umida",
+     "testo": "Il prato davanti: acqua pulita e una passata leggera e semplice di M9 sotto le siepi.",
+     "video": {
+      "id": "c-hPM0RLgfM",
+      "minuto": "10:00"
+     }
+    }
+   ],
+   "controllo": "Il rame passa dal chiaro in alto allo scuro in basso, l'ombra alla base è una fascia stretta sciolta solo in due o tre punti verso il prato e la cupola scura stacca bene fra i due blocchi.",
+   "attenzione": [
+    "Niente riga scura netta e continua lungo tutta la base.",
+    "Il rame mai piatto in un solo tono: chiaro in alto, scuro in basso."
+   ],
+   "illustrazione": {
+    "file": "pit-261013-illustrazione-A4-base-scura.png",
+    "didascalia": "Tocchi scuri e fitti in una fascia stretta alla base della siepe."
+   },
+   "ritaglio": {
+    "file": "pit-261015-riferimento-A4-siepi-rame.png",
+    "didascalia": "Le siepi rosso-rame con la cupola scura in mezzo, il bosco dietro e il prato brinato davanti."
+   }
+  },
+  {
+   "voce": "A5 Latifoglie brinate",
+   "breve": "Latifoglie",
+   "descrizione": "Latifoglie spoglie con la brina: fusti sottili color crema davanti a una massa scura, chiome a velo (oro in alto e grigio-lilla in basso) e puntini chiari di brina. Per riservare i fusti chiari puoi usare il liquido mascherante (ideale per rami sottili e biforcati) oppure striscioline di nastro di carta (per tronchi più dritti).",
+   "colori": [
+    {
+     "m": "M5",
+     "ricetta": "giallo limone + Siena bruciata (TSB), con più giallo",
+     "per": "il velo in luce"
+    },
+    {
+     "m": "M9",
+     "ricetta": "ceruleo + cremisi, molto diluiti",
+     "per": "il velo in basso"
+    },
+    {
+     "m": "M8",
+     "ricetta": "oltremare (BO) + cremisi",
+     "per": "la massa in ombra"
+    }
+   ],
+   "pennelli": "Tiralinee o vecchio pennello sintetico insaponato (per il mascherante), tondo grande a punta (per i veli e la massa scura), ventaglio o piatto scarico (per il velo di rametti), rigger e gomma crêpe.",
+   "foglietto": "Foglietto A5 in verticale, carta bianca asciutta. Traccia a matita due fusti sottili da cima a fondo, uno con una biforcazione a Y: a fine esercizio darai l'ombra su un lato di un solo fusto, lasciando l'altro tutto bianco per confronto.",
+   "passi": [
+    {
+     "carta": "asciutta",
+     "testo": "Riservare i fusti chiari all'inizio: prima di ogni colore, traccia i fusti sottili col mascherante (oppure, per tronchi più dritti come nel video seguente, coprili con striscioline di nastro di carta) e lascia asciugare.",
+     "video": {
+      "id": "Ard-oCmPDfc",
+      "minuto": "01:32"
+     }
+    },
+    {
+     "carta": "bagnata",
+     "testo": "Il velo di fondo bagnato su bagnato: sul foglio bagnato stendi M5 in alto e M9 sotto, lasciando che i due colori si fondano da soli passando sopra i fusti protetti.",
+     "video": {
+      "id": "hUyX4iGaZTc",
+      "minuto": "01:08"
+     }
+    },
+    {
+     "carta": "umida",
+     "testo": "L'effetto della brina col sale: quando il lilla perde il lucido dell'acqua, spargi qualche grano di sale fino; a foglio completamente asciutto spazzolalo via per scoprire i puntini chiari.",
+     "video": {
+      "id": "yeJNI1DkJHE",
+      "minuto": "02:40"
+     },
+     "proposta": true
+    },
+    {
+     "carta": "asciutta",
+     "testo": "La massa scura dietro i fusti: a carta asciutta dipingi la massa in ombra (M8) attorno alle parti chiare e sfuma subito il bordo alto con un pennello di acqua pulita.",
+     "video": {
+      "id": "EkqenioJoIM",
+      "minuto": "04:57"
+     }
+    },
+    {
+     "carta": "asciutta",
+     "testo": "Il velo di rametti spogli: passa un pennello a ventaglio quasi asciutto in archi leggeri (in alternativa puoi tirare pochi rametti sottili col rigger).",
+     "video": {
+      "id": "so525jhbHxw",
+      "minuto": "00:08"
+     }
+    },
+    {
+     "carta": "asciutta",
+     "testo": "Scoprire e arrotondare i fusti: togli il mascherante con la gomma crêpe e passa un filo di M9 lungo un solo bordo di ciascun fusto per dargli volume cilindrico.",
+     "video": {
+      "id": "absGcbVLnp0",
+      "minuto": "14:20"
+     }
+    }
+   ],
+   "controllo": "Il sale ha aperto i puntini chiari sul lilla, i fusti risparmiati dal mascherante sono netti contro la massa scura e il fusto con l'ombra su un lato solo appare cilindrico rispetto a quello lasciato piatto.",
+   "attenzione": [
+    "Sale sul bagnato: si scioglie. Sull'asciutto: non fa niente. Va messo appena sparisce il lucido.",
+    "L'ombra dei fusti va sempre su un lato solo."
+   ],
+   "illustrazione": {
+    "file": "pit-261013-illustrazione-A5-sale.png",
+    "didascalia": "Qualche grano di sale sul lilla che ha appena perso il lucido."
+   },
+   "ritaglio": {
+    "file": "pit-261015-riferimento-A5-latifoglie-brinate.png",
+    "didascalia": "Le latifoglie brinate coi fusti chiari, la massa scura sotto, la montagna e l'abete a fianco."
+   }
+  },
+  {
+   "voce": "A6 Arbusti brinati",
+   "breve": "Arbusti",
+   "descrizione": "Arbusti in primo piano, su un fondo chiaro come l'acqua: rami scuri e sottili, foglie ovali quasi nere, un filo bianco-azzurro di brina sul bordo. Per ottenere il filo chiaro sulle foglie ci sono due modi: proteggerlo prima col mascherante (più sicuro) oppure lasciarlo scoperto a mano libera tra una pennellata e l'altra (come nel video delle foglie).",
+   "colori": [
+    {
+     "m": "M10",
+     "ricetta": "oltremare (BO) + ombra bruciata (TOB) + punta di cremisi",
+     "per": "rami e foglie"
+    },
+    {
+     "m": "M4",
+     "ricetta": "oltremare (BO) + ombra bruciata (TOB) + poco giallo",
+     "per": "le foglie viste di faccia"
+    },
+    {
+     "m": "ceruleo",
+     "ricetta": "molto diluito",
+     "per": "l'azzurro della brina"
+    }
+   ],
+   "pennelli": "Rigger (per tirare i rami dal basso in alto), tiralinee o vecchio pennello insaponato (per il filo di mascherante), tondo piccolo a punta fine (n. 4, per le foglie) e pennello pulito appena umido.",
+   "foglietto": "Foglietto A5 in orizzontale con un fondo azzurro chiaro (M12) già completamente asciutto. Traccia un ramo con sette foglie ovali di 2-3 cm: prova il filo di brina col mascherante sottilissimo su tre foglie, più largo su altre due, e prova sulle ultime due a risparmiare il filo chiaro a mano libera senza mascherante.",
+   "passi": [
+    {
+     "carta": "asciutta",
+     "testo": "Il filo di brina col mascherante (modo A, consigliato): sul fondo azzurro ben asciutto traccia col mascherante un filo sottilissimo dove andrà il bordo superiore delle foglie e lascialo asciugare.",
+     "video": {
+      "id": "Ard-oCmPDfc",
+      "minuto": "01:32"
+     },
+     "proposta": true
+    },
+    {
+     "carta": "asciutta",
+     "testo": "I rami sottili: col rigger in M10 tira i rami dal basso verso l'alto con un gesto rapido, facendoli anche incrociare in modo naturale.",
+     "video": {
+      "id": "85TPQrANtdI",
+      "minuto": "03:47"
+     }
+    },
+    {
+     "carta": "asciutta",
+     "testo": "Le foglie scure: di punta, in M4 o M10, dipingi le foglie appoggiandole al filo di mascherante (oppure, col modo B mostrato nel video, fermati col pennello appena prima di chiudere il bordo per lasciare scoperto un filo chiaro a mano libera).",
+     "video": {
+      "id": "256QaobNvtk",
+      "minuto": "08:21"
+     }
+    },
+    {
+     "carta": "asciutta",
+     "testo": "Ammorbidire il filo bianco a secco: togli il mascherante e sfiora il filo chiaro con un pennello pulito e appena umido perché un velo di colore scuro lo addolcisca.",
+     "video": {
+      "id": "256QaobNvtk",
+      "minuto": "04:30"
+     }
+    }
+   ],
+   "controllo": "Il filo sottile dà l'effetto della brina mentre quello largo spezza la foglia; confronta le foglie fatte col mascherante e quelle risparmiate a mano libera; il bordo appena ammorbidito col pennello umido si lega alla foglia.",
+   "attenzione": [
+    "Pochi rami e non troppo fitti, tirati con un gesto continuo dal basso in alto.",
+    "Il filo di mascherante deve essere sottilissimo: largo, spezza la foglia."
+   ],
+   "illustrazione": {
+    "file": "pit-261013-illustrazione-A6-mascherante.png",
+    "didascalia": "La gomma crêpe stacca il mascherante e scopre il filo bianco sul bordo delle foglie."
+   },
+   "ritaglio": {
+    "file": "pit-261015-riferimento-A6-arbusti-brinati.png",
+    "didascalia": "Gli arbusti in primo piano contro il chiaro dell'acqua, coi rami sottili e il filo di brina sulle foglie."
+   }
+  },
+  {
+   "voce": "A7 Riflessi nell'acqua ferma",
+   "breve": "Riflessi",
+   "descrizione": "Gli alberi riflessi nell'acqua ferma, sotto la riva: capovolti, più spenti e morbidi. I video mostrano due modi di far scendere i riflessi nell'acqua bagnata: tirandoli col pennello piatto con la tavola in piano (più controllato) oppure inclinando la tavoletta quasi in verticale perché il colore scenda da solo.",
+   "colori": [
+    {
+     "m": "le miscele degli alberi",
+     "ricetta": "più diluite e spente con un po' d'azzurro",
+     "per": "i riflessi"
+    },
+    {
+     "m": "M10",
+     "ricetta": "oltremare (BO) + ombra bruciata (TOB) + punta di cremisi",
+     "per": "lo scuro subito sotto la riva"
+    },
+    {
+     "m": "M12",
+     "ricetta": "ceruleo e oltremare (BO)",
+     "per": "l'acqua chiara"
+    }
+   ],
+   "pennelli": "Piatto largo (per bagnare l'acqua in orizzontale), piatto da mezzo pollice o tondo grande (per i riflessi verticali e lo scuro sotto la riva), tondo fine pulito e fazzoletto di carta.",
+   "foglietto": "Foglietto A5 in orizzontale fissato a una tavoletta che puoi inclinare, con un velo azzurro (M12) già asciutto e una linea di riva a 4 cm dal bordo alto. Sopra la riva dipingi prima tre macchie vicine (arancio M5, verde M3, viola M8) e lasciale asciugare del tutto: sotto la riva proverai i loro riflessi.",
+   "passi": [
+    {
+     "carta": "asciutta",
+     "testo": "Bagnare lo specchio d'acqua: passa acqua pulita su tutta la zona dei riflessi, a pennellate orizzontali leggere senza strofinare il fondo azzurro.",
+     "video": {
+      "id": "Yw8t72gWmwo",
+      "minuto": "01:48"
+     }
+    },
+    {
+     "carta": "bagnata",
+     "testo": "Calare i colori dei riflessi (modo A, col pennello piatto in piano): tira pennellate verticali dalla riva in giù riprendendo i colori degli alberi sopra, con più pigmento e meno acqua.",
+     "video": {
+      "id": "iXftclrXe8Y",
+      "minuto": "00:20"
+     }
+    },
+    {
+     "carta": "bagnata",
+     "testo": "Far scendere i riflessi (modo B, inclinando la tavoletta): in alternativa o subito dopo aver appoggiato i colori, inclina la tavola quasi in verticale così che il colore scenda da solo in strisce morbide.",
+     "video": {
+      "id": "Yw8t72gWmwo",
+      "minuto": "02:34"
+     }
+    },
+    {
+     "carta": "bagnata",
+     "testo": "L'ombra di riva: mentre l'acqua è ancora bagnata, picchietta un tono più scuro (M10) subito sotto la linea della riva.",
+     "video": {
+      "id": "Yw8t72gWmwo",
+      "minuto": "02:42"
+     }
+    },
+    {
+     "carta": "asciutta",
+     "testo": "Le increspature chiare a secco: a carta asciutta, passa un pennello pulito e umido avanti e indietro in orizzontale e tampona col fazzoletto per aprire poche linee chiare.",
+     "video": {
+      "id": "Yw8t72gWmwo",
+      "minuto": "05:04"
+     }
+    }
+   ],
+   "controllo": "Il riflesso è più morbido e spento delle macchie sopra la riva, è più scuro solo subito sotto la riva e si scioglie nell'azzurro in basso senza bordi duri; le linee chiare orizzontali sono poche e sottili.",
+   "attenzione": [
+    "Scurisci per gradi: lo scuro sull'umido si toglie male.",
+    "Non strofinare la carta quando ribagni o sollevi le linee chiare."
+   ],
+   "illustrazione": {
+    "file": "pit-261013-illustrazione-A7-tavola-inclinata.png",
+    "didascalia": "La tavola inclinata: i riflessi scendono in strisce morbide."
+   },
+   "ritaglio": {
+    "file": "pit-261015-riferimento-A7-riflessi-acqua.png",
+    "didascalia": "La riva e lo specchio d'acqua coi riflessi verticali che si sciolgono nell'azzurro."
+   }
+  }
+ ]
+}

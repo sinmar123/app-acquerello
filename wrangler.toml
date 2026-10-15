@@ -1,0 +1,5 @@
+# Cloudflare Pages - Quaderno di acquerello
+# Deploy: dopo scripts/genera-sito.py -> npx wrangler pages deploy site --project-name app-acquerello --branch main
+name = "app-acquerello"
+compatibility_date = "2026-10-15"
+pages_build_output_dir = "site"
