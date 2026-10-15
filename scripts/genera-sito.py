@@ -26,8 +26,8 @@ SEZIONI = [
         "sottotitolo": "Sette esercizi su foglietti A5 partendo da 6 colori di base e 12 miscele",
         "descrizione": (
             "Abeti fitti, abeti vecchi, faggi, siepi d'autunno, latifoglie brinate, arbusti in controluce "
-            "e riflessi nell'acqua: 35 passi con 39 estratti video al secondo esatto del gesto, strisce di "
-            "4 fotogrammi a schermo intero, traduzione in italiano del parlato e infografica riepilogativa in 4 fasi."
+            "e riflessi nell'acqua: 35 passi con 39 estratti video al secondo esatto del gesto, "
+            "traduzione in italiano del parlato e infografica riepilogativa in 4 fasi."
         ),
         "badge": ["7 esercizi A5", "6 colori · 12 miscele", "39 estratti video", "7 infografiche in 4 fasi"],
         "sorgente_dir": PIT_DIR / "acquerello-alberi",

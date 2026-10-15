@@ -395,14 +395,6 @@ def pagina():
         trad = (tab.get(sigla) or {}).get("traduzione", "")
         riga_trad = (f'<p class="traduzione muto">{e(trad)}</p>' if trad.startswith("(") else
                      f'<p class="traduzione"><b>Nel video dice:</b> «{e(trad)}»</p>') if trad else ""
-        quadri_html = []
-        ts = tempi_striscia(r, i0, i1)
-        for k, t in enumerate(ts, 1):
-            fp = os.path.join(cartella_strisce, f"{vid}-t{t}.jpg")
-            if os.path.exists(fp) and os.path.getsize(fp) > 1000:
-                src_q = c.jpeg(Image.open(fp), 640, 76)
-                quadri_html.append(f'<figure><img src="{src_q}" alt="{e(sigla)} {mmss(t)}"><figcaption>{k}/{len(ts)} · {mmss(t)}</figcaption></figure>')
-        barra_quadri = f'<div class="striscia">{"".join(quadri_html)}</div>' if quadri_html else ""
         yt = f"https://www.youtube.com/watch?v={vid}&t={i0}s"
         return (f'<div class="video" data-passo="{e(sigla)}" data-id="{e(vid)}" data-inizio="{i0}" data-fine="{i1}">'
                 f'<button class="guarda" type="button"><span class="tri">▶</span><span class="lab">Guarda il gesto'
@@ -414,7 +406,6 @@ def pagina():
                 f'<button type="button" class="ripeti" aria-pressed="false">Ripeti</button>'
                 f'<a class="yt" href="{e(yt)}" target="_blank" rel="noopener">YouTube ↗</a></div>'
                 f'<p class="dove-video">da {mmss(i0)} a {mmss(i1)} nel video di {e(canale)}</p>'
-                + barra_quadri
                 + riga_trad
                 + (f'<p class="nel-video">{e(nel_video)}</p>' if nel_video else '') + '</div>')
 
