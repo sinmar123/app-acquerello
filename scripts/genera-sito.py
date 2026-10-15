@@ -89,16 +89,10 @@ def sincronizza_dati_repo(s: dict) -> None:
 def genera_home(sezioni_pronte: list[dict]) -> str:
     cards = []
     for s in sezioni_pronte:
-        img_html = (
-            f'<img class="card-img" src="{s["thumb"]}" alt="{s["titolo"]}">'
-            if s.get("thumb")
-            else ""
-        )
         badges = "".join(f'<span class="pill">{b}</span>' for b in s.get("badge", []))
         cards.append(
             f"""<article class="card">
   <a class="card-link" href="./{s['slug']}/">
-    {img_html}
     <div class="card-body">
       <div class="card-head">
         <span class="sig">{s['numero']}</span>
@@ -135,7 +129,6 @@ main{{max-width:820px;margin:0 auto;padding:22px 14px 48px}}
 .card{{background:#fffdf8;border:1px solid #dfd5c3;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(31,28,23,.06);transition:transform .15s ease,box-shadow .15s ease}}
 .card:hover{{transform:translateY(-2px);box-shadow:0 6px 18px rgba(31,28,23,.12)}}
 .card-link{{display:block;color:inherit;text-decoration:none}}
-.card-img{{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-bottom:1px solid #dfd5c3}}
 .card-body{{padding:16px 18px 18px}}
 .card-head{{display:flex;align-items:flex-start;gap:12px;margin-bottom:8px}}
 .sig{{display:inline-flex;align-items:center;justify-content:center;min-width:32px;height:32px;border-radius:8px;background:#263529;color:#f7f2e7;font-weight:700;font-size:.95rem;margin-top:2px}}
@@ -189,9 +182,7 @@ def main():
         dest_html.write_text(html_con_barra, encoding="utf-8")
         print(f"[{s['slug']}] Scritto {dest_html.relative_to(APP_DIR)} ({dest_html.stat().st_size // 1024} KB)")
 
-        copia = dict(s)
-        copia["thumb"] = miniatura_data_uri(s["copertina"])
-        sezioni_pronte.append(copia)
+        sezioni_pronte.append(dict(s))
 
     index_html = SITE_DIR / "index.html"
     index_html.write_text(genera_home(sezioni_pronte), encoding="utf-8")
