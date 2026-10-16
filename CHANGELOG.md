@@ -2,6 +2,15 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-16 - CC - Pubblicazione automatica da GitHub
+
+- Token Cloudflare «github-actions-app-acquerello», col solo permesso Cloudflare Pages: Edit sull'account del progetto, creato da Claude su Chrome e passato a GitHub dagli appunti senza mai mostrarlo. Prima di salvarlo è stato verificato: attivo, e in grado di leggere il progetto Pages `app-acquerello`.
+- Nel repository: secret `CLOUDFLARE_API_TOKEN` e `CLOUDFLARE_ACCOUNT_ID`, variabile `PUBBLICA_CLOUDFLARE` = `si`.
+- Prova: workflow avviato a mano su `main`, «costruisci» e «pubblica» verdi, pubblicazione `ac921423` in produzione; home e pagina degli alberi rispondono 200 coi titoli giusti.
+- Da ora unire su `main` vuol dire pubblicare: aggiornati README, `AGENTS.md`, `CLAUDE.md` e `_index`.
+
+Prossima azione: nessuna.
+
 ## 2026-10-16 - CC - GitHub copia principale, come per le NTC
 
 Su richiesta di Sandro il repository basta a se stesso, e ci possono lavorare anche le sessioni cloud.
