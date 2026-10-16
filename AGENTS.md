@@ -17,6 +17,7 @@ Istruzioni per gli agenti che lavorano su questo repository, nel workspace di Sa
 ## Come si lavora
 
 - Si lavora su un ramo e si chiude con una pull request; mai scrivere su `main`.
+- Unire su `main` vuol dire pubblicare: a ogni modifica di `main` il job «pubblica» manda il sito su Cloudflare Pages.
 - I testi si cambiano nel json e nel modulo delle infografiche, mai nell'html generato.
 - Dopo ogni modifica si lancia `python scripts/genera-sito.py`, che deve finire senza errori, e si guarda la parte cambiata in `site/`. Su ogni pull request GitHub rifà la generazione nel controllo «costruisci».
 - Nuova sezione: cartella `dati/<tema>/` col suo generatore e i suoi dati, e voce nella lista `SEZIONI` di `scripts/genera-sito.py`.
