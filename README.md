@@ -51,9 +51,9 @@ Serve solo Pillow (`scripts/requisiti.txt`). `site/` e le pagine html generate d
 
 ## Controllo e pubblicazione
 
-Su GitHub il controllo «costruisci» (`.github/workflows/sito.yml`) rigenera il sito a ogni pull request e a ogni modifica di `main`. Il job «pubblica» manda il sito su Cloudflare Pages a ogni modifica di `main`, ma solo quando nel repository ci sono la variabile `PUBBLICA_CLOUDFLARE` = `si` e i secret `CLOUDFLARE_API_TOKEN` e `CLOUDFLARE_ACCOUNT_ID`.
+Su GitHub il controllo «costruisci» (`.github/workflows/sito.yml`) rigenera il sito a ogni pull request e a ogni modifica di `main`. Il job «pubblica» manda il sito su Cloudflare Pages a ogni modifica di `main`: dal 16/10/2026 nel repository ci sono la variabile `PUBBLICA_CLOUDFLARE` = `si` e i secret `CLOUDFLARE_API_TOKEN` (token Cloudflare «github-actions-app-acquerello», permesso Cloudflare Pages: Edit) e `CLOUDFLARE_ACCOUNT_ID`. Quindi unire una pull request su `main` vuol dire pubblicare. Per spegnere la pubblicazione automatica basta cambiare la variabile.
 
-Finché mancano, si pubblica dal W520, dalla cartella `software/applicazioni-github/app-acquerello`, stando su `main`:
+Resta la pubblicazione a mano dal W520, dalla cartella `software/applicazioni-github/app-acquerello`, stando su `main`:
 
 ```bat
 npm run deploy
