@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Genera il sito statico delle guide di acquerello in site/ partendo dalle cartelle pit/acquerello-*
-e allinea in dati/ i sorgenti delle sezioni per il repository GitHub."""
+"""Genera il sito statico delle guide di acquerello in site/ dai sorgenti delle sezioni in dati/<sezione>/.
+
+Dal 16/10/2026 il repository basta a se stesso: GitHub è la copia principale e i sorgenti delle pagine
+non si copiano più da pit/acquerello-* del workspace, dove restano lo studio e i pdf."""
 import base64
 import io
 import pathlib
-import shutil
 import subprocess
 import sys
 
@@ -13,8 +14,6 @@ from PIL import Image
 sys.stdout.reconfigure(encoding="utf-8")
 
 APP_DIR = pathlib.Path(__file__).resolve().parent.parent
-WKS_DIR = APP_DIR.parent.parent.parent
-PIT_DIR = WKS_DIR / "pit"
 SITE_DIR = APP_DIR / "site"
 DATI_DIR = APP_DIR / "dati"
 
@@ -30,18 +29,8 @@ SEZIONI = [
             "traduzione in italiano del parlato e infografica riepilogativa in 4 fasi."
         ),
         "badge": ["7 esercizi A5", "6 colori · 12 miscele", "39 estratti video", "7 infografiche in 4 fasi"],
-        "sorgente_dir": PIT_DIR / "acquerello-alberi",
-        "script_genera": PIT_DIR / "acquerello-alberi" / "pit-261013-video-gesti.py",
-        "html_generato": PIT_DIR / "acquerello-alberi" / "pit-261014-video-gesti-alberi.html",
-        "copertina": PIT_DIR / "acquerello-alberi" / "illustrazioni" / "pit-261015-riferimento-A1-abeti-fitti.png",
-        "file_repo": [
-            "pit-261014-video-gesti-alberi.json",
-            "pit-261013-video-gesti-segmenti.csv",
-            "pit-261013-video-gesti.py",
-            "pit-261015-infografiche.py",
-            "pit-261013-illustrazioni.py",
-        ],
-        "illustrazioni_glob": "pit-261015-riferimento-*.png",
+        "script_genera": DATI_DIR / "alberi" / "pit-261013-video-gesti.py",
+        "html_generato": DATI_DIR / "alberi" / "pit-261014-video-gesti-alberi.html",
     }
 ]
 
@@ -68,22 +57,6 @@ def inietta_link_indice(html: str) -> str:
     if 'href="../"' in html:
         return html
     return html.replace("<body>", "<body>\n" + barra, 1)
-
-
-def sincronizza_dati_repo(s: dict) -> None:
-    src_dir: pathlib.Path = s["sorgente_dir"]
-    dst_dir = DATI_DIR / s["slug"]
-    dst_dir.mkdir(parents=True, exist_ok=True)
-    for fname in s.get("file_repo", []):
-        f_src = src_dir / fname
-        if f_src.exists():
-            shutil.copy2(f_src, dst_dir / fname)
-    pattern = s.get("illustrazioni_glob")
-    if pattern and (src_dir / "illustrazioni").exists():
-        ill_dst = dst_dir / "illustrazioni"
-        ill_dst.mkdir(parents=True, exist_ok=True)
-        for img in sorted((src_dir / "illustrazioni").glob(pattern)):
-            shutil.copy2(img, ill_dst / img.name)
 
 
 def genera_home(sezioni_pronte: list[dict]) -> str:
@@ -165,7 +138,6 @@ def main():
     sezioni_pronte = []
 
     for s in SEZIONI:
-        sincronizza_dati_repo(s)
         script = s["script_genera"]
         html_src = s["html_generato"]
         if script.exists():
