@@ -33,7 +33,7 @@ Lo script:
 2. rigenera l'HTML di ogni sezione e lo copia in `site/<sezione>/index.html` con la barra di ritorno all'indice generale;
 3. genera la home `site/index.html`.
 
-La cartella compilata `site/` è in `.gitignore` (per non caricare su Git i fotogrammi in base64 dei video).
+La cartella compilata `site/` è in `.gitignore` (si rigenera sempre da `dati/` con `scripts/genera-sito.py`).
 
 ## Pubblicare su Cloudflare Pages
 
