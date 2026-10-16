@@ -1,0 +1,2 @@
+# Dipendenze per generare il sito (scripts/genera-sito.py e i generatori in dati/<sezione>/)
+Pillow==12.3.0

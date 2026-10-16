@@ -1,5 +1,9 @@
 # Pagina coi pezzi dei video veri per i gesti degli alberi ad acquerello.
 #
+# Dal 16/10/2026 lo script sta nel repository app-acquerello (dati/alberi/), che è la copia principale:
+# per «pagina» bastano i file di questa cartella. Gli altri comandi usano yt-dlp, YouTube e le schede
+# dei video, che restano nel workspace di Sandro (pit/acquerello-alberi/schede/): girano dal W520.
+#
 # Dal 14/10/2026 la pagina è un tutorial sugli alberi, senza il corso: niente stampa della prima prova
 # né ritagli, nessun passo attribuito a Irene, e i quattro passi che venivano dalla sua demo hanno un
 # video. Il contenuto sta in pit-261014-video-gesti-alberi.json, ricavato dalla versione breve del 13/10,
@@ -252,9 +256,11 @@ def mandati():
     tab = leggi_tabella()
     os.makedirs(os.path.join(LAVORO, "mandati"), exist_ok=True)
     schede = {}
-    for f in glob.glob(os.path.join(QUI, "schede", "*.json")):
+    for f in glob.glob(os.path.join(cartella_schede(), "*.json")):
         j = json.load(open(f, encoding="utf-8"))
         schede[j["video"]["id"]] = j
+    if not schede:
+        print("ATTENZIONE: nessuna scheda dei video in", cartella_schede())
     ids = sorted({r["video"] for r in tab.values()})
     sub = {vid: sottotitoli(vid) for vid in ids}
     gruppi = {}
@@ -290,13 +296,41 @@ def mandati():
         open(os.path.join(LAVORO, "mandati", f"{sigle[0]}.md"), "w", encoding="utf-8").write("\n".join(r) + "\n")
         print(sigle, vid, minuto, len(estratto), "righe di sottotitoli")
 
+def cartella_schede():
+    # Le schede dei video stanno con lo studio, nel workspace: <workspace>/pit/acquerello-alberi/schede/.
+    # Il repository è in <workspace>/software/applicazioni-github/app-acquerello/, cinque livelli sotto.
+    if os.path.isdir(os.path.join(QUI, "schede")):
+        return os.path.join(QUI, "schede")
+    wks = QUI
+    for _ in range(5):
+        wks = os.path.dirname(wks)
+    return os.path.join(wks, "pit", "acquerello-alberi", "schede")
+
 def comune():
-    # Testo protetto per l'html, immagini in jpeg e pillole della carta vengono dallo script del tutorial completo.
-    import importlib.util
-    spec = importlib.util.spec_from_file_location("completa", os.path.join(QUI, "pit-261013-impagina-tutorial.py"))
-    c = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(c)
-    return c
+    # Testo protetto per l'html, immagini in jpeg e pillole della carta. Fino al 16/10/2026 venivano dallo
+    # script del tutorial completo, pit-261013-impagina-tutorial.py, che resta nel workspace per i pdf:
+    # qui sono ricopiate uguali, perché la pagina si generi coi soli file del repository. Le immagini
+    # della pagina stanno tutte in illustrazioni/.
+    import base64, html, io, types
+    from PIL import Image, ImageOps
+
+    e = lambda t: html.escape(str(t or ""))
+
+    def jpeg(im, lato=1400, q=84):
+        im = im.convert("RGB")
+        im.thumbnail((lato, lato))
+        b = io.BytesIO()
+        im.save(b, "JPEG", quality=q)
+        return "data:image/jpeg;base64," + base64.b64encode(b.getvalue()).decode()
+
+    def apri(nome):
+        return ImageOps.exif_transpose(Image.open(os.path.join(QUI, "illustrazioni", nome)))
+
+    def pillola(carta):
+        c = (carta or "").strip().lower()
+        return f'<span class="pill {e(c)}">{e(c)}</span>' if c in ("bagnata", "umida", "asciutta") else ""
+
+    return types.SimpleNamespace(e=e, jpeg=jpeg, apri=apri, pillola=pillola)
 
 def tempi_striscia(r, i0, i1):
     if r and r.get("quadri"):
