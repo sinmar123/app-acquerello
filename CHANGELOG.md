@@ -9,7 +9,7 @@ Cronologia delle modifiche. Ordine cronologico inverso.
 - Prova: workflow avviato a mano su `main`, «costruisci» e «pubblica» verdi, pubblicazione `ac921423` in produzione; home e pagina degli alberi rispondono 200 coi titoli giusti.
 - Da ora unire su `main` vuol dire pubblicare: aggiornati README, `AGENTS.md`, `CLAUDE.md` e `_index`.
 
-Prossima azione: nessuna.
+Prossima azione: alla prima sessione cloud, se claude.ai/code non vede il repository privato, aggiungerlo all'app Claude su GitHub; Sandro conferma o toglie da `CLAUDE.md` la regola per cui la sessione cloud unisce da sé le pull request.
 
 ## 2026-10-16 - CC - GitHub copia principale, come per le NTC
 
