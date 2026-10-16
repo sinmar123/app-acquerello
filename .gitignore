@@ -1,4 +1,6 @@
 site/
+# pagina di ogni sezione, generata accanto ai suoi sorgenti e copiata in site/ da scripts/genera-sito.py
+dati/**/*.html
 node_modules/
 .wrangler/
 .dev.vars
