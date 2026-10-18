@@ -2,6 +2,31 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-18 - GBOT-app-acquerello - Chiusura giornata e consegne per il prossimo agente
+
+Riepilogo delle pull request del 18/10/2026, tutte unite su `main` da Sandro e pubblicate:
+
+- **#5** `gbot/regola-merge-claude-md`: tolta da `CLAUDE.md` la regola del merge automatico della sessione cloud; l'unione su `main` si fa solo con l'ok di Sandro.
+- **#6** `gbot/teoria-colori`: nuova sezione Teoria dei colori (Munsell, luce e pigmento, acquerello, tavolozza) con il calcolatore di miscele in JavaScript che gira nel browser.
+- **#7** `gbot/cremisi-pr206`: cremisi della tavolozza corretto in PR206, come sull'etichetta del tubetto di Sandro.
+- **#8** `gbot/alberi-colori`: Alberi, tavolozza dei 6 colori e 12 miscele riviste (colore dominante, consistenza tè, latte, miele, pigmenti, convenzione delle dosi, tre prove), con collegamenti al calcolatore precompilato.
+- **#9** `gbot/principi`: nuova sezione Principi generali, prima nell'indice, con ogni frase legata alla sua fonte; rimandi da Alberi e Teoria dei colori.
+- **#10** `gbot/marche`: colori senza marche in Alberi e Teoria dei colori (nome comune e pigmento) e nuova sezione Marche e tubetti, con fonte ufficiale e data su ogni riga.
+
+Sezioni pubblicate: 1 Principi generali, 2 Alberi, 3 Teoria dei colori, 4 Marche e tubetti. Il README è allineato.
+
+**Prossima azione** (cose aperte per il prossimo agente):
+
+1. **Taratura dei 6 colori del calcolatore.** Oggi i colori in `dati/colori/tavolozza.json` sono sRGB stimati a occhio, segnati «provvisorio». Vanno tarati sulle prove di Sandro: ogni colore steso a consistenza miele e tè, su bianco e su nero, fotografato.
+2. **Illustrazioni dei Principi.** Da fotografare: i campioni tè, latte e miele, i momenti della carta (da bagnata ad asciutta), bordi netti e morbidi, fioriture, e le altre prove dei capitoli. Le foto sostituiscono o affiancano gli schemi SVG indicativi di oggi.
+3. **Le tre prove di ogni miscela** (M1-M12 negli Alberi): da fare sul foglietto e fotografare, per sostituire i testi descrittivi con le immagini vere.
+4. **Ricette del calcolatore.** Eventuale penalità di complessità, così la ricerca preferisce le miscele con meno colori e meno parti a parità di somiglianza.
+5. **Vaghezze residue nei passi Alberi, non toccate oggi**: «un po' di cremisi» in A3-2 e A4-2, e le indicazioni ancora vaghe nei passi di A6 e A7, da rileggere passo per passo.
+
+**Regola**: si lavora su un ramo e si chiude con una pull request; l'unione su `main` (che pubblica il sito) solo con l'ok esplicito di Sandro.
+
+-- GBOT-app-acquerello
+
 ## 2026-10-18 - GBOT-app-acquerello - Colori senza marche e nuova sezione «Marche e tubetti»
 
 Con l'ok di Sandro alla proposta del 18/10 preparata da GBOT-app-acquerello. Parte dal ramo `gbot/principi`.
