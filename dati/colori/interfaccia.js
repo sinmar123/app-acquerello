@@ -13,6 +13,7 @@
   function $(id) { return document.getElementById(id); }
   function hex(R) { return Acq.aHex(Acq.aSrgb(R)); }
   function ricetta(lista) {
+    if (lista.length === 1) return 'solo ' + lista[0].col.nome.charAt(0).toLowerCase() + lista[0].col.nome.slice(1) + ' (' + lista[0].col.pigmento + ')';
     return lista.map(function (x) { return x.parti + ' ' + (x.parti === 1 ? 'parte' : 'parti') + ' di ' + x.col.nome.charAt(0).toLowerCase() + x.col.nome.slice(1) + ' (' + x.col.pigmento + ')'; }).join(' + ');
   }
 
@@ -23,6 +24,20 @@
     COL.forEach(function (c) { var o = document.createElement('option'); o.value = c.id; o.textContent = c.nome + ' (' + c.pigmento + ')'; s.appendChild(o); });
   });
   sel[0].value = 'giallo'; sel[1].value = 'oltremare'; sel[2].value = '';
+  // parametro nell'indirizzo: ?mix=giallo:10,ceruleo:1 precompila il mescolatore (usato dalla sezione Alberi)
+  (function () {
+    var m = /[?&]mix=([^&#]*)/.exec(window.location.search);
+    if (!m) return;
+    var voci = decodeURIComponent(m[1]).split(',').map(function (v) { var p = v.split(':'); return { id: p[0], parti: parseInt(p[1], 10) || 1 }; })
+      .filter(function (v) { return Acq.colore(v.id); }).slice(0, 3);
+    if (!voci.length) return;
+    if (voci.length === 1) voci.push({ id: voci[0].id, parti: voci[0].parti }); // un solo tubetto: stesso colore anche nella seconda riga
+    [0, 1, 2].forEach(function (k) {
+      var v = voci[k];
+      sel[k].value = v ? v.id : '';
+      parti[k].value = v ? Math.max(1, Math.min(10, v.parti)) : 1;
+    });
+  })();
   function leggiMix() {
     var lista = [];
     sel.forEach(function (s, i) {
