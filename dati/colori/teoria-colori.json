@@ -51,7 +51,7 @@
         "Sono i sei colori di base degli esercizi sugli alberi, nei tubetti Winsor &amp; Newton Cotman. Conta il <b>pigmento</b>, cioè la sigla del Colour Index scritta sull'etichetta (PY = giallo, PB = blu, PR = rosso, PBr = bruno): lo stesso nome commerciale, con un'altra marca o un'altra serie, può nascondere un pigmento diverso.",
         "I riquadri colorati sono <b>provvisori</b>: valori scelti a occhio per far funzionare il calcolatore, non misure dei tuoi tubetti. Vanno sostituiti con la taratura sulle prove (vedi il calcolatore)."
       ],
-      "fonti": ["cotman"]
+      "fonti": ["cotman", "cotman-cremisi"]
     },
     {
       "id": "calcolatore",
@@ -84,6 +84,7 @@
     "wiki-km": {"testo": "Kubelka-Munk theory, Wikipedia (inglese)", "url": "https://en.wikipedia.org/wiki/Kubelka%E2%80%93Munk_theory"},
     "watercolor-fanatic": {"testo": "Corso Watercolor Fanatic, lezione 4 (appunti di Sandro)", "url": ""},
     "cotman": {"testo": "Winsor &amp; Newton, Cotman Watercolour: tabella dei colori e dei pigmenti", "url": "https://www.winsornewton.com/pages/cotman-watercolour"},
+    "cotman-cremisi": {"testo": "Winsor &amp; Newton, Cotman Alizarin Crimson Hue: formula attuale PR179 (il tubetto della tavolozza è della formula precedente, PR206)", "url": "https://www.winsornewton.com/en-ca/products/cotman-watercolour-alizarin-crimson-hue"},
     "spectraljs": {"testo": "Ronald van Wijnen, spectral.js (licenza MIT): tabelle spettrali usate dal calcolatore", "url": "https://github.com/rvanwijnen/spectral.js"},
     "oklab": {"testo": "Björn Ottosson, OKLab: lo spazio colore usato per misurare la distanza fra due colori", "url": "https://bottosson.github.io/posts/oklab/"},
     "munsell-renotation": {"testo": "colour-science: conversione della renotation di Munsell (usata per la tabella delle tinte)", "url": "https://www.colour-science.org/"},
