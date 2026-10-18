@@ -1,0 +1,643 @@
+{
+ "data": "2026-10-18",
+ "nota": "Testi della sezione Principi generali, dalla proposta approvata da Sandro il 18/10/2026. Ogni affermazione ha le sue fonti; ciò che non aveva fonte è rimasto fuori. GBOT-app-acquerello.",
+ "titolo": "Principi generali: acqua, colore e carta",
+ "sottotitolo": "Le tre consistenze della miscela, gli stati della carta e come abbinarli, prima di ogni esercizio.",
+ "introduzione": [
+  "Prima degli esercizi, poche regole che tornano in tutti i video e nei corsi raccolti per il Quaderno. Ogni frase ha un numero che rimanda alle fonti in fondo alla pagina: gli appunti di Sandro sui corsi e i video della sezione Alberi, aperti al minuto giusto.",
+  "Gli esercizi sono nella sezione <a href=\"../alberi/\">Alberi</a>; i pigmenti, la tavolozza e il calcolatore di miscele, con la striscia di diluizione dal miele al tè, nella sezione <a href=\"../colori/\">Teoria dei colori</a>."
+ ],
+ "nota_fonti": "Le citazioni dei video vengono dalle schede di studio preparate per la sezione Alberi, riassunti del parlato e del gesto controllati a campione: il collegamento apre il video al minuto indicato, per controllare. Le citazioni dei corsi vengono dagli appunti di Sandro.",
+ "capitoli": [
+  {
+   "id": "consistenze",
+   "breve": "Tè, latte, miele",
+   "titolo": "1. Le tre consistenze: tè, latte, miele",
+   "blocchi": [
+    {
+     "tipo": "p",
+     "testo": "Ogni miscela si prepara a una di tre consistenze, che il corso di Watercolor Fanatic chiama con tre parole facili da ricordare:",
+     "fonti": [
+      "wf4"
+     ]
+    },
+    {
+     "tipo": "lista",
+     "voci": [
+      {
+       "testo": "<b>tè</b>: un velo leggero, più acqua che pigmento;",
+       "fonti": [
+        "wf4"
+       ]
+      },
+      {
+       "testo": "<b>latte</b>: una via di mezzo, acqua e pigmento in equilibrio;",
+       "fonti": [
+        "wf4"
+       ]
+      },
+      {
+       "testo": "<b>miele</b>: un velo spesso, più pigmento che acqua.",
+       "fonti": [
+        "wf4"
+       ]
+      }
+     ]
+    },
+    {
+     "tipo": "svg",
+     "nome": "consistenze"
+    },
+    {
+     "tipo": "p",
+     "testo": "Ogni consistenza dà trasparenza e trama diverse, e va bene in un momento diverso del lavoro. Negli esempi del corso il primo velo è «una tinta da tè» e i dettagli si fanno «con una miscela lattea» che si allarga meno, mentre foglie e ombre vengono «con meno acqua e più pigmento».",
+     "fonti": [
+      "wf4",
+      "wf6",
+      "wf-fiori"
+     ]
+    },
+    {
+     "tipo": "p",
+     "testo": "Nelle schede dei video della sezione Alberi le stesse tre consistenze si chiamano «molto diluito», «medio» e «denso».",
+     "fonti": [
+      "schede-campi"
+     ]
+    },
+    {
+     "tipo": "p",
+     "testo": "<b>Tutti i colori di un velo con la stessa consistenza.</b> Quando in un velo bagnato su bagnato si aggiungono colori diversi, devono avere tutti un rapporto acqua-pigmento simile: così il velo resta uniforme e nessun colore prende il sopravvento.",
+     "fonti": [
+      "wf7"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "carta-umidita",
+   "breve": "Carta asciutta, umida, bagnata",
+   "titolo": "2. Gli stati della carta: asciutta, umida, bagnata e i momenti di mezzo",
+   "blocchi": [
+    {
+     "tipo": "p",
+     "testo": "Lo stesso colore si comporta in modo diverso secondo quanta acqua c'è già sulla carta. Le schede dei video della sezione Alberi segnano, per ogni passo, uno di tre stati:",
+     "fonti": [
+      "wf4",
+      "schede-campi"
+     ]
+    },
+    {
+     "tipo": "lista",
+     "voci": [
+      {
+       "testo": "<span class=\"pill bagnata\">bagnata</span> la carta è stata bagnata con acqua pulita e il colore si allarga liberamente: serve per sfondi e passaggi morbidi. La superficie è lucida in modo uniforme, ma senza pozzanghere.",
+       "fonti": [
+        "wf8",
+        "julie-lucida"
+       ]
+      },
+      {
+       "testo": "<span class=\"pill umida\">umida</span> negli esempi dei video è la carta che ha perso il lucido ma non è ancora asciutta: il colore si fonde ancora, ma si allarga meno che sul bagnato. Questa è una descrizione ricavata dagli esempi, non una definizione dei materiali.",
+       "fonti": [
+        "gaivelen-graffio",
+        "norris",
+        "wf6"
+       ]
+      },
+      {
+       "testo": "<span class=\"pill asciutta\">asciutta</span> il colore si posa su carta non bagnata e i bordi restano netti e precisi: serve per dettagli, ombre e trame su un velo già asciutto.",
+       "fonti": [
+        "wf8"
+       ]
+      }
+     ]
+    },
+    {
+     "tipo": "p",
+     "testo": "Fra bagnata e asciutta i video indicano alcuni <b>momenti di mezzo</b>, tutti legati al lucido dell'acqua sulla carta:",
+     "fonti": [
+      "kersey",
+      "gaivelen-graffio",
+      "norris-faggio-luci"
+     ]
+    },
+    {
+     "tipo": "lista",
+     "voci": [
+      {
+       "testo": "<b>il lucido sta sparendo</b>: è il momento per mettere un colore denso sul fondo inumidito, o per spargere il sale. In un video si dice che quando il lucido scompare la carta è pronta per il colore senza sbavature eccessive.",
+       "fonti": [
+        "kersey",
+        "davidson",
+        "clark-d"
+       ]
+      },
+      {
+       "testo": "<b>umida e opaca</b>, senza più lucido: è il momento per incidere la carta con la spatola, o per le fioriture volute. Il corso di Watercolor Fanatic la chiama «semi-umida», ideale per lo strato successivo senza che il colore si allarghi troppo.",
+       "fonti": [
+        "gaivelen-graffio",
+        "julie-fior",
+        "wf6"
+       ]
+      },
+      {
+       "testo": "<b>quasi asciutta</b>: per sollevare le luci col pennello quasi asciutto, o per incidere segni chiari più netti con una tessera di plastica.",
+       "fonti": [
+        "norris-faggio-luci",
+        "davidson-betulle"
+       ]
+      }
+     ]
+    },
+    {
+     "tipo": "svg",
+     "nome": "carta"
+    },
+    {
+     "tipo": "p",
+     "testo": "Per riconoscere i momenti a occhio, guarda il riflesso della luce sul foglio: la carta bagnata luccica, quella umida no.",
+     "fonti": [
+      "clark-d",
+      "davidson",
+      "gaivelen-graffio"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "abbinare",
+   "breve": "Pennello e carta",
+   "titolo": "3. Abbinare il pennello alla carta",
+   "blocchi": [
+    {
+     "tipo": "p",
+     "testo": "Il principio che torna in tutti i materiali è far corrispondere l'acqua nel pennello e nel colore a quella che c'è già sulla carta.",
+     "fonti": [
+      "wf4"
+     ]
+    },
+    {
+     "tipo": "lista",
+     "voci": [
+      {
+       "testo": "<b>Colore più bagnato della carta: fioriture.</b> Se un colore più acquoso arriva su un velo che sta asciugando, si formano i «cavolfiori», cioè fioriture (in inglese <i>backrun</i> o <i>bloom</i>) dai bordi frastagliati. Per evitarli si abbina l'umidità di pennello e colore a quella della carta.",
+       "fonti": [
+        "wf4",
+        "webber-fior"
+       ]
+      },
+      {
+       "testo": "<b>Le fioriture si possono anche cercare apposta</b>: gocce d'acqua pulita o di colore molto acquoso su un velo umido, oppure bianco molto acquoso su un fondo che ha già cominciato ad asciugare. Se invece sul foglio c'è una pozzanghera, il colore si scioglie e basta, e la fioritura non viene.",
+       "fonti": [
+        "clark-p",
+        "webber-fior",
+        "julie-fior"
+       ]
+      },
+      {
+       "testo": "<b>Sul bagnato e sull'umido, colore più denso.</b> Le miscele al miele si possono mettere su un velo umido senza che si allarghino troppo; quelle al tè o al latte vanno usate con cautela, perché il colore non sanguini troppo e non si mescoli più del voluto. Un video dice lo stesso per le chiome su carta umida: con troppa acqua nel colore la macchia va oltre il voluto, quindi il colore va tenuto denso.",
+       "fonti": [
+        "wf4",
+        "norris"
+       ]
+      },
+      {
+       "testo": "<b>Il pennello assorbe, non solo stende.</b> Un pennello più asciutto toglie l'acqua in più dalla carta; un pennello pulito e scarico, a volte detto «assetato», solleva il colore fresco per aprire le luci.",
+       "fonti": [
+        "wf4",
+        "drawpaint-cactus"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "acqua",
+   "breve": "Controllo dell'acqua",
+   "titolo": "4. Il controllo dell'acqua",
+   "blocchi": [
+    {
+     "tipo": "lista",
+     "voci": [
+      {
+       "testo": "Cambia spesso la quantità d'acqua nel pennello e sulla carta, passando presto da un pennello carico a uno quasi asciutto.",
+       "fonti": [
+        "mow"
+       ]
+      },
+      {
+       "testo": "Spugne, asciugamani e carta assorbente servono a regolare l'acqua nel pennello e sulla carta. Prima di sollevare il colore si asciuga il pennello: lo fa per esempio Paul Clark nel passo A1-3 della sezione Alberi.",
+       "fonti": [
+        "mow",
+        "alberi-a1-3"
+       ]
+      },
+      {
+       "testo": "Prepara colore a sufficienza: se devi fermarti a mescolarne altro, il velo viene disomogeneo.",
+       "fonti": [
+        "mow"
+       ]
+      },
+      {
+       "testo": "Se sulla carta c'è troppa acqua, asciugala un poco con un pennello pulito: le forme restano definite ma morbide.",
+       "fonti": [
+        "wf6"
+       ]
+      },
+      {
+       "testo": "Un pennello che trattiene troppa acqua, usato sul bagnato, rischia di «annegare» il pigmento; e troppa acqua quando si ammorbidiscono le riserve bianche allaga il foglio.",
+       "fonti": [
+        "gaivelen-acqua",
+        "dewinton"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bordi",
+   "breve": "Bordi",
+   "titolo": "5. Bordi netti e bordi morbidi",
+   "blocchi": [
+    {
+     "tipo": "lista",
+     "voci": [
+      {
+       "testo": "<b>Bordi netti</b>: colore più denso su carta asciutta.",
+       "fonti": [
+        "wf8"
+       ]
+      },
+      {
+       "testo": "<b>Bordi morbidi</b>: colore su carta bagnata o ancora umida. Un consiglio dai video: i bordi morbidi danno il volume tondo di una chioma.",
+       "fonti": [
+        "norris-faggio-morbidi",
+        "webber-morbidi",
+        "cafe"
+       ]
+      },
+      {
+       "testo": "<b>Ammorbidire un bordo già fatto</b>: passa lungo il bordo un pennello pulito e appena umido, oppure un fazzoletto inumidito.",
+       "fonti": [
+        "drawpaint-ombra",
+        "clark-negativo"
+       ]
+      },
+      {
+       "testo": "<b>Il tempo conta</b>: se si lavora troppo piano sul bagnato la carta asciuga e restano bordi duri non voluti; le luci dello studio la asciugano in fretta.",
+       "fonti": [
+        "drawpaint"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "asciugatura",
+   "breve": "Asciugatura",
+   "titolo": "6. L'asciugatura",
+   "blocchi": [
+    {
+     "tipo": "lista",
+     "voci": [
+      {
+       "testo": "Si può lasciar asciugare all'aria, col phon o al sole, facendo attenzione che il getto d'aria non sposti il pigmento.",
+       "fonti": [
+        "wf5"
+       ]
+      },
+      {
+       "testo": "Il phon tenuto troppo vicino a un velo bagnato può far nascere i cavolfiori.",
+       "fonti": [
+        "wf7"
+       ]
+      },
+      {
+       "testo": "Per velare, lo strato sotto deve essere asciutto, così il colore nuovo non lo disturba.",
+       "fonti": [
+        "wf5",
+        "wf8"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "carta-tipi",
+   "breve": "Grana e peso",
+   "titolo": "7. La carta: grana, peso, colla",
+   "blocchi": [
+    {
+     "tipo": "p",
+     "testo": "<b>Tre superfici.</b>",
+     "fonti": [
+      "carta"
+     ]
+    },
+    {
+     "tipo": "lista",
+     "voci": [
+      {
+       "testo": "<b>hot press</b>: liscia, con bordi nitidi, adatta al dettaglio (per esempio l'illustrazione botanica); asciuga più in fretta e fa risaltare la granulazione;",
+       "fonti": [
+        "carta"
+       ]
+      },
+      {
+       "testo": "<b>cold press</b>: la più usata e versatile, e la più facile da controllare per chi comincia, nei veli e nella distribuzione del pigmento; nelle schede dei video è detta «a grana fine»;",
+       "fonti": [
+        "carta",
+        "schede-carte"
+       ]
+      },
+      {
+       "testo": "<b>rough</b>: molto ruvida, adatta a effetti come il pennello secco; nelle schede dei video è detta «a grana ruvida». Per il pennello secco un video consiglia carta 100% cotone a grana ruvida.",
+       "fonti": [
+        "carta",
+        "schede-carte",
+        "kerr"
+       ]
+      }
+     ]
+    },
+    {
+     "tipo": "p",
+     "testo": "<b>Le finiture non sono uniformi</b>: cambiano da marca a marca, e anche due hot press della stessa marca possono essere diverse.",
+     "fonti": [
+      "carta"
+     ]
+    },
+    {
+     "tipo": "lista",
+     "voci": [
+      {
+       "testo": "<b>Peso.</b> I pesi comuni sono 300 g/m² e 640 g/m²: la carta più pesante assorbe più acqua, è più robusta e si increspa meno sotto i veli carichi.",
+       "fonti": [
+        "carta"
+       ]
+      },
+      {
+       "testo": "La 300 g/m² è la più comune ed economica, ma si increspa di più, soprattutto nei fogli grandi e con molta acqua: tenderla prima di dipingere aiuta.",
+       "fonti": [
+        "carta"
+       ]
+      },
+      {
+       "testo": "La carta da 190 g/m² si increspa molto ed è poco usata per l'acquerello.",
+       "fonti": [
+        "carta"
+       ]
+      }
+     ]
+    },
+    {
+     "tipo": "p",
+     "testo": "<b>Colla.</b> La carta contiene una colla che limita l'assorbimento di acqua e pigmento. La quantità cambia da marca a marca e decide molto di quanto colore si riesce a sollevare.",
+     "fonti": [
+      "carta"
+     ]
+    },
+    {
+     "tipo": "p",
+     "testo": "<b>La carta del Quaderno.</b> Per gli esercizi sugli alberi il Quaderno usa cotone 300 g/m² a grana fina, in foglietti A5 fissati col nastro di carta. Asciuga i bordi del foglio col fazzoletto: vicino al nastro l'acqua si accumula e lascia un deposito di pigmento.",
+     "fonti": [
+      "alberi-foglietti",
+      "wf-fiori"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "riassunto",
+   "breve": "Riassunto",
+   "titolo": "8. Tabella riassuntiva",
+   "blocchi": [
+    {
+     "tipo": "tabella",
+     "intestazione": [
+      "Carta",
+      "Che aspetto ha",
+      "Colore adatto",
+      "Cosa ottieni"
+     ],
+     "righe": [
+      {
+       "celle": [
+        "bagnata",
+        "lucida, senza pozzanghere",
+        "tè o latte, tutti a consistenza simile",
+        "il colore si allarga e si fonde: fondi, passaggi morbidi"
+       ],
+       "fonti": [
+        "wf8",
+        "wf7",
+        "julie-lucida"
+       ]
+      },
+      {
+       "celle": [
+        "il lucido sta sparendo",
+        "il riflesso si spegne",
+        "più denso, verso il miele",
+        "un segno morbido che si allarga poco; il momento del sale"
+       ],
+       "fonti": [
+        "kersey",
+        "davidson",
+        "clark-d"
+       ]
+      },
+      {
+       "celle": [
+        "umida, opaca",
+        "niente riflesso",
+        "miele",
+        "si fonde ancora, ma si allarga poco; incisioni con la spatola"
+       ],
+       "fonti": [
+        "wf4",
+        "wf6",
+        "gaivelen-graffio",
+        "norris"
+       ]
+      },
+      {
+       "celle": [
+        "quasi asciutta",
+        "",
+        "pennello quasi asciutto o tessera",
+        "luci sollevate, incisioni chiare nette"
+       ],
+       "fonti": [
+        "norris-faggio-luci",
+        "davidson-betulle"
+       ]
+      },
+      {
+       "celle": [
+        "asciutta",
+        "",
+        "qualsiasi, più denso per i dettagli",
+        "bordi netti, velature"
+       ],
+       "fonti": [
+        "wf8",
+        "wf5"
+       ]
+      },
+      {
+       "celle": [
+        "attenzione",
+        "colore più bagnato della carta che sta asciugando",
+        "",
+        "fioriture a cavolfiore"
+       ],
+       "fonti": [
+        "wf4",
+        "webber-fior"
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "fonti": {
+  "wf4": {
+   "testo": "Corso Watercolor Fanatic, lezione 4 «The Three Common Watercolor Mixtures and How to Use Them!» (appunti di Sandro): «'tè' (lavaggio leggero con più acqua che pigmento), 'latte' (lavaggio medio con acqua e pigmento bilanciati) e 'miele' (lavaggio spesso con più pigmento che acqua)»; «abbinare l'umidità del pennello e della pittura alla condizione della carta»; «Utilizzare un pennello più asciutto può aiutare ad assorbire l'acqua in eccesso dalla carta»",
+   "url": ""
+  },
+  "wf5": {
+   "testo": "Corso Watercolor Fanatic, lezione 5 «Blending Watercolor Wash Techniques» (appunti di Sandro): asciugare con «l'aria naturale, il phon o il sole» evitando «che il flusso d'aria alteri la distribuzione del pigmento»; strati «applicati dopo l'asciugatura del precedente»",
+   "url": ""
+  },
+  "wf6": {
+   "testo": "Corso Watercolor Fanatic, lezione 6 (appunti di Sandro): «lavaggio leggero (tinta da tè)»; «un mix più denso di colore (miscela lattea) che non si diffonde tanto»; se l'acqua è eccessiva «la asciuga leggermente con un pennello pulito»; «una condizione \"semi-umida\" della carta»",
+   "url": ""
+  },
+  "wf7": {
+   "testo": "Corso Watercolor Fanatic, lezione 7 (appunti di Sandro): «Tutti i colori aggiunti devono avere una consistenza simile in termini di rapporto acqua-pigmento, per assicurare un lavaggio uniforme senza dominanze cromatiche eccessive»; col phon «non avvicinarsi troppo» per evitare i «cauliflowers»",
+   "url": ""
+  },
+  "wf8": {
+   "testo": "Corso Watercolor Fanatic, lezione 8 (appunti di Sandro): umido su secco, «colore puro su carta asciutta [...] applicazioni di colore nette e precise»; umido su umido, «Entrambi la carta e il pennello sono bagnati, permettendo al colore applicato di diffondersi liberamente»; «pittura più spessa per creare bordi duri»",
+   "url": ""
+  },
+  "wf-fiori": {
+   "testo": "Corso Watercolor Fanatic, «Try This Loose Watercolor Flower Painting» (appunti di Sandro): «miscele \"latte\", con meno acqua e più pigmento»; asciugare i bordi del foglio per «impedire che si formi un accumulo di pigmento ai bordi causato dal nastro adesivo»",
+   "url": ""
+  },
+  "mow": {
+   "testo": "The Mind of Watercolor, «Are You Still Making These 3 Watercolor Control Mistakes?» (appunti di Sandro): «passare rapidamente da un pennello saturato ad uno quasi asciutto»; «spugne, asciugamani e carta assorbente»; «Non essere parsimoniosi con il pigmento»",
+   "url": ""
+  },
+  "carta": {
+   "testo": "Video sulla scelta della carta (appunti di Sandro): hot press, cold press e rough; 300 e 640 g/m²; la carta da 190 g/m² «si increspa notevolmente»; «non esiste uno standard» fra le marche; la colla «influisce notevolmente sulla capacità di sollevamento»",
+   "url": "https://www.youtube.com/watch?v=D_AnLl0PMlo"
+  },
+  "julie-lucida": {
+   "testo": "Julie Watercolors, «Easy Watercolor Techniques for Frost Effect», 02:24: la superficie «lucida e omogenea, non allagata»",
+   "url": "https://www.youtube.com/watch?v=Gj-HsnqN4mw&t=144s"
+  },
+  "julie-fior": {
+   "testo": "Julie Watercolors, «Easy Watercolor Techniques for Frost Effect», 06:12-06:33: gocce molto acquose «su fondo blu leggermente in fase di asciugatura (umido opaco)»; niente fioriture «se ci sono pozzanghere d'acqua sul foglio»",
+   "url": "https://www.youtube.com/watch?v=Gj-HsnqN4mw&t=372s"
+  },
+  "clark-d": {
+   "testo": "Painting with Paint Basket (Dennis Clark), «How to paint trees & bushes in watercolor», 06:04: «quando il lucido superficiale scompare, la carta è pronta per ricevere colore senza sbavature eccessive»",
+   "url": "https://www.youtube.com/watch?v=rNziSVHRLOI&t=364s"
+  },
+  "davidson": {
+   "testo": "Lois & Morgaine Davidson Art, «Use SALT to Paint a Watercolour Loose Frosty Evening Fields Landscape», 02:44: il sale «quando la lucentezza dell'acqua è appena svanita»",
+   "url": "https://www.youtube.com/watch?v=yeJNI1DkJHE&t=164s"
+  },
+  "kersey": {
+   "testo": "Geoff Kersey, «Summer and Autumn Trees», 21:28: verde denso sul fondo inumidito «appena la lucentezza dell'acqua comincia a svanire»",
+   "url": "https://www.youtube.com/watch?v=CnH1yxXsJB8&t=1288s"
+  },
+  "gaivelen-graffio": {
+   "testo": "Lena Gaivelen Art, «Wet technique in watercolor | Autumn trees and reflections», 01:06: incisione con la spatola «quando la superficie è umida ma non più lucida»",
+   "url": "https://www.youtube.com/watch?v=iXftclrXe8Y&t=66s"
+  },
+  "gaivelen-acqua": {
+   "testo": "Lena Gaivelen Art, «Wet technique in watercolor | Autumn trees and reflections», 00:32: un pennello che trattiene troppa acqua sul bagnato rischia di «annegare il pigmento»",
+   "url": "https://www.youtube.com/watch?v=iXftclrXe8Y&t=32s"
+  },
+  "norris": {
+   "testo": "Art By Lynn Norris, «How to paint easy foreground Scots pine evergreen trees», 02:06: troppa acqua nel colore su carta umida; «la pittura deve essere densa»",
+   "url": "https://www.youtube.com/watch?v=I5j93ugmHpw&t=126s"
+  },
+  "webber-fior": {
+   "testo": "In the Studio with Michele Webber, «How to Paint Trees (Distant Trees in Watercolor)», 13:20: «colore molto acquoso su aree parzialmente asciutte per produrre effetti cavolfiore»",
+   "url": "https://www.youtube.com/watch?v=Ard-oCmPDfc&t=800s"
+  },
+  "webber-morbidi": {
+   "testo": "In the Studio with Michele Webber, «How to Paint Trees (Distant Trees in Watercolor)», 05:46: alberi sul bordo del cielo ancora umido, per bordi morbidi e sfumati",
+   "url": "https://www.youtube.com/watch?v=Ard-oCmPDfc&t=346s"
+  },
+  "clark-p": {
+   "testo": "Paul Clark, «How to Paint Sunlight Through the Trees in Watercolour», 06:23: gocce d'acqua pulita sulla campitura umida (backruns)",
+   "url": "https://www.youtube.com/watch?v=Lx_5Yrm8XFo&t=383s"
+  },
+  "drawpaint": {
+   "testo": "Draw Paint, «Watercolor Landscape - Hedges Grass & Trees (Part A)», 04:53: le luci dello studio asciugano in fretta la carta, «rischiando bordi duri non voluti»",
+   "url": "https://www.youtube.com/watch?v=H5WssEEjdoI&t=293s"
+  },
+  "dewinton": {
+   "testo": "de Winton Paper Co., «How To Paint Frosty Leaves in Watercolour», 05:35: non «inondare il foglio con troppa acqua» quando si ammorbidiscono le linee bianche",
+   "url": "https://www.youtube.com/watch?v=256QaobNvtk&t=335s"
+  },
+  "norris-faggio-morbidi": {
+   "testo": "Art By Lynn Norris, «watercolour tree practice, Copper Beech tree», 00:15: carta inumidita con acqua pulita, colore picchiettato per bordi morbidi",
+   "url": "https://www.youtube.com/watch?v=obOgLmmHu1Y&t=15s"
+  },
+  "norris-faggio-luci": {
+   "testo": "Art By Lynn Norris, «watercolour tree practice, Copper Beech tree», 09:20: aspettare che il colore non sia più del tutto bagnato per sollevare le luci col pennello quasi asciutto",
+   "url": "https://www.youtube.com/watch?v=obOgLmmHu1Y&t=560s"
+  },
+  "davidson-betulle": {
+   "testo": "Lois & Morgaine Davidson Art, «Lois' Simple Birch Trees WITHOUT Masking Fluid!», 09:15: con la pittura quasi asciutta la tessera di plastica incide segni bianchi più netti",
+   "url": "https://www.youtube.com/watch?v=CZzgjeG9Oiw&t=555s"
+  },
+  "cafe": {
+   "testo": "Café Watercolor (Eric Yi Lin), «Painting Trees in Watercolor - Simple way to paint Autumn Trees», 02:24: bordi morbidi, bagnato su bagnato, per la curvatura della chioma",
+   "url": "https://www.youtube.com/watch?v=4j3CSYZZMbQ&t=144s"
+  },
+  "drawpaint-ombra": {
+   "testo": "Draw Paint, «Watercolour Trees Lesson - Tall & Slim Trees», 07:04: pennello pulito e scaricato, di punta, sul bordo duro dell'ombra per sfumarlo",
+   "url": "https://www.youtube.com/watch?v=pD2RifxNeRM&t=424s"
+  },
+  "clark-negativo": {
+   "testo": "Paul Clark, «Negative Painting Techniques in Watercolour», 08:36: un fazzoletto inumidito sui bordi duri per ammorbidirli",
+   "url": "https://www.youtube.com/watch?v=absGcbVLnp0&t=516s"
+  },
+  "drawpaint-cactus": {
+   "testo": "Draw Paint, «Watercolor Trees - Cypress, Cactus and Poplar», 07:49: pennello scarico e semi-asciutto (thirsty brush) per togliere colore e aprire le luci",
+   "url": "https://www.youtube.com/watch?v=n-qmB4csEOs&t=469s"
+  },
+  "kerr": {
+   "testo": "Anne Kerr Art Studio, «How to paint a tree in watercolour (summer and autumn foliage)», 00:40: carta 100% cotone a grana ruvida per il pennello secco",
+   "url": "https://www.youtube.com/watch?v=yG56Y0AcUVU&t=40s"
+  },
+  "schede-carte": {
+   "testo": "Schede dei video della sezione Alberi: carta «a grana fine (cold pressed)» (Lois & Morgaine Davidson Art, The Mind of Watercolor) e «a grana ruvida (rough)» (Karen Rice Art)",
+   "url": ""
+  },
+  "schede-campi": {
+   "testo": "Schede dei video della sezione Alberi: per ogni passo lo stato della carta (asciutta, umida, bagnata) e la consistenza del colore (molto diluito, medio, denso)",
+   "url": ""
+  },
+  "alberi-foglietti": {
+   "testo": "Sezione Alberi del Quaderno, «Lavora su piccoli fogli A5»",
+   "url": "../alberi/"
+  },
+  "alberi-a1-3": {
+   "testo": "Sezione Alberi del Quaderno, passo A1-3: Paul Clark asciuga il pennello per sollevare un po' di colore",
+   "url": "../alberi/#A1-3"
+  }
+ }
+}

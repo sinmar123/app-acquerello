@@ -19,8 +19,22 @@ DATI_DIR = APP_DIR / "dati"
 
 SEZIONI = [
     {
-        "slug": "alberi",
+        "slug": "principi",
         "numero": "1",
+        "titolo": "Principi generali: acqua, colore e carta",
+        "sottotitolo": "Da leggere prima degli esercizi: le tre consistenze, gli stati della carta e come abbinarli",
+        "descrizione": (
+            "Tè, latte e miele; carta asciutta, umida, bagnata e i momenti di mezzo, riconoscibili dal lucido dell'acqua; "
+            "come abbinare il pennello alla carta, fioriture comprese; bordi netti e morbidi, asciugatura, "
+            "carta hot press, cold press e rough. Ogni frase con la sua fonte, dai corsi e dai video al minuto giusto."
+        ),
+        "badge": ["8 capitoli", "tè · latte · miele", "stati della carta", "ogni frase con la fonte"],
+        "script_genera": DATI_DIR / "principi" / "genera-principi.py",
+        "html_generato": DATI_DIR / "principi" / "principi.html",
+    },
+    {
+        "slug": "alberi",
+        "numero": "2",
         "titolo": "Alberi ad acquerello: i gesti nei video",
         "sottotitolo": "Sette esercizi su foglietti A5 partendo da 6 colori di base e 12 miscele",
         "descrizione": (
@@ -34,7 +48,7 @@ SEZIONI = [
     },
     {
         "slug": "colori",
-        "numero": "2",
+        "numero": "3",
         "titolo": "Teoria dei colori per l'acquerello",
         "sottotitolo": "Munsell, luce e pigmento, acqua e carta, la tavolozza Cotman e un calcolatore di miscele",
         "descrizione": (

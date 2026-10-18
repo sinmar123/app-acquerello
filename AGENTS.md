@@ -11,6 +11,9 @@ Istruzioni per gli agenti che lavorano su questo repository, nel workspace di Sa
   - `pit-261015-infografiche.py`: le infografiche in 4 fasi in fondo a ogni albero;
   - `pit-261013-video-gesti.py`: il generatore della pagina (comando `pagina`) e gli strumenti di studio dei video;
   - `illustrazioni/`: le immagini della pagina, fatte con Nano Banana da `pit-261013-illustrazioni.py`.
+- `dati/principi/`, la sezione Principi generali, prima nell'indice:
+  - `principi.json`: testi degli 8 capitoli, ognuno con le chiavi delle sue fonti, e l'elenco delle fonti (appunti dei corsi e video al minuto);
+  - `genera-principi.py`: il generatore della pagina (comando `pagina`); si ferma se una frase non ha fonte, se una fonte manca o non è citata, o se un testo contiene «da verificare».
 - `dati/colori/`, la sezione Teoria dei colori:
   - `teoria-colori.json`: testi dei 5 capitoli, limiti del calcolatore e fonti;
   - `tavolozza.json`: i 6 tubetti Cotman, con colori sRGB provvisori da sostituire con la taratura sulle prove di Sandro;

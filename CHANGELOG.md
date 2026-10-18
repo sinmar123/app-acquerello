@@ -2,6 +2,18 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-18 - GBOT-app-acquerello - Nuova sezione «Principi generali»
+
+Con l'ok di Sandro alla proposta del 18/10 preparata da GBOT-app-acquerello, prima sezione del Quaderno: `/principi/`, generata da `dati/principi/` e messa in testa a `SEZIONI` (Alberi diventa la 2, Teoria dei colori la 3).
+
+- Otto capitoli: le tre consistenze tè, latte, miele e la regola dei colori a consistenza simile; gli stati della carta (asciutta, umida, bagnata) e i momenti di mezzo legati al lucido dell'acqua; abbinare il pennello alla carta, fioriture comprese; il controllo dell'acqua; bordi netti e morbidi; l'asciugatura; la carta hot press, cold press e rough, peso e colla; una tabella riassuntiva. Due schemi SVG semplici (le tre consistenze, la scala da bagnata ad asciutta), dichiarati come indicativi.
+- Ogni frase ha i suoi rimandi numerati alle fonti in fondo alla pagina: appunti di Sandro sui corsi (Watercolor Fanatic, The Mind of Watercolor, video sulla carta) e video della sezione Alberi aperti al minuto. Il generatore si ferma se una frase non ha fonte, se una fonte manca o non è citata, o se resta un «da verificare». Rimasti fuori, come deciso da Sandro, «satinata» per la hot press e la carta umida «fredda»; «umida» è descritta dagli esempi dei video, e la pagina lo dice.
+- Alberi: la legenda della carta umida dice «opaca» (tolto «fredda») e rimanda ai Principi; rimando anche nel riquadro «Come leggere le dosi» e come primo punto di «Come funziona questo tutorial».
+- Teoria dei colori: il capitolo 3 perde i paragrafi su tè, latte, miele e sulla carta, sostituiti da un rimando ai Principi; l'etichetta della striscia di diluizione del calcolatore rimanda alle tre consistenze.
+- Aggiornati README e `AGENTS.md`. Prova in Chrome senza interfaccia: nessun errore, nessuna ancora rotta, rimandi interni corretti.
+
+-- GBOT-app-acquerello
+
 ## 2026-10-18 - GBOT-app-acquerello - Alberi: tavolozza Cotman e 12 miscele riviste
 
 Con l'ok di Sandro alla proposta sui testi delle miscele (bozza del 18/10 preparata da GBOT-app-acquerello).
