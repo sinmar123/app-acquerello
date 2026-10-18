@@ -87,18 +87,20 @@ def elenco_fonti(chiavi, fonti):
             voci.append(f'<a href="{e(f["url"])}" target="_blank" rel="noopener">{f["testo"]}</a>')
         else:
             voci.append(f["testo"])
+    if not voci:
+        return ""
     return '<p class="fonti-cap">Fonti: ' + "; ".join(voci) + ".</p>"
 
 
 def schede_tavolozza(tav):
     carte = []
     for c in tav["colori"]:
+        tras = f" · nel tubetto della tavolozza: {e(c['trasparenza_tubetto'])}" if c.get("trasparenza_tubetto") else ""
         carte.append(f"""<div class="tubo">
   <div class="tubo-camp" style="background:{e(c['srgb'])}"><span>provvisorio</span></div>
   <div class="tubo-txt">
     <b>{e(c['nome'])}</b><br>
-    <span class="cot">Cotman n. {e(c['numero'])} {e(c['nome_cotman'])}</span><br>
-    Pigmento <b>{e(c['pigmento'])}</b> · {e(c['trasparenza'])}<br>
+    Pigmento <b>{e(c['pigmento'])}</b>{tras}<br>
     <span class="nota-tubo">{e(c['note'])}</span>
   </div>
 </div>""")

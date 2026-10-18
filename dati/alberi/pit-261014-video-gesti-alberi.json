@@ -13,7 +13,7 @@
   "esercizi": [
    {
     "titolo": "Si parte da 6 colori di base",
-    "testo": "Tutti gli esercizi partono da 6 soli colori, tubetti Winsor & Newton Cotman: Giallo limone, Ceruleo (blu ceruleo), Cremisi d'alizarina, Terra di Siena bruciata (TSB), Terra d'ombra bruciata (TOB) e Blu oltremare (BO). Mescolandoli si ottengono le 12 miscele indicate nei passi con le sigle da M1 a M12. Pigmenti, nomi Cotman e un calcolatore per provare le miscele a schermo stanno nella sezione Teoria dei colori."
+    "testo": "Tutti gli esercizi partono da 6 soli colori: giallo limone (PY175), ceruleo (PB15), cremisi (PR206), terra di Siena bruciata (TSB, PR101), terra d'ombra bruciata (TOB, PBr7 + PY42) e blu oltremare (BO, PB29). Tra parentesi c'è il pigmento, che conta più del nome. Mescolandoli si ottengono le 12 miscele indicate nei passi con le sigle da M1 a M12. Le schede dei colori e un calcolatore per provare le miscele a schermo stanno nella sezione Teoria dei colori; i tubetti corrispondenti, marca per marca, nella sezione Marche e tubetti."
    },
    {
     "titolo": "Non c'è un solo modo: i video mostrano varie possibilità",
@@ -32,52 +32,39 @@
    {
     "id": "giallo",
     "nome": "Giallo limone",
-    "cotman": "Lemon Yellow Hue",
-    "numero": "346",
-    "pigmento": "PY175",
-    "trasparenza": "trasparente"
+    "pigmento": "PY175"
    },
    {
     "id": "ceruleo",
-    "nome": "Ceruleo (blu ceruleo)",
-    "cotman": "Cerulean Blue Hue",
-    "numero": "139",
+    "nome": "Ceruleo",
     "pigmento": "PB15",
-    "trasparenza": "opaco",
-    "nota": "blu ftalo schiarito, non il ceruleo vero (PB35); tinge molto"
+    "trasparenza_tubetto": "opaco",
+    "nota": "blu ftalo schiarito, non il ceruleo vero, che è PB35; tinge molto"
    },
    {
     "id": "cremisi",
-    "nome": "Cremisi d'alizarina",
-    "cotman": "Alizarin Crimson Hue",
-    "numero": "3",
+    "nome": "Cremisi",
     "pigmento": "PR206",
-    "trasparenza": "trasparente",
-    "nota": "PR206 sull'etichetta del tubetto (formula vecchia); la formula attuale Winsor & Newton è PR179"
+    "nota": "pigmento letto sull'etichetta del tubetto"
    },
    {
     "id": "siena",
-    "nome": "Terra di Siena bruciata (TSB)",
-    "cotman": "Burnt Sienna",
-    "numero": "74",
-    "pigmento": "PR101",
-    "trasparenza": "trasparente"
+    "nome": "Terra di Siena bruciata",
+    "sigla": "TSB",
+    "pigmento": "PR101"
    },
    {
     "id": "ombra",
-    "nome": "Terra d'ombra bruciata (TOB)",
-    "cotman": "Burnt Umber",
-    "numero": "76",
+    "nome": "Terra d'ombra bruciata",
+    "sigla": "TOB",
     "pigmento": "PBr7 + PY42",
-    "trasparenza": "opaco"
+    "trasparenza_tubetto": "opaco"
    },
    {
     "id": "oltremare",
-    "nome": "Blu oltremare (BO)",
-    "cotman": "Ultramarine",
-    "numero": "660",
+    "nome": "Blu oltremare",
+    "sigla": "BO",
     "pigmento": "PB29",
-    "trasparenza": "trasparente",
     "nota": "granuloso"
    }
   ],
@@ -88,7 +75,7 @@
     "ricetta": "giallo limone con una punta di ceruleo",
     "consistenza": "latte",
     "pigmenti": "giallo limone PY175, ceruleo PB15",
-    "nota": "Il ceruleo Cotman tinge molto: aggiungilo davvero un tocco alla volta.",
+    "nota": "Il ceruleo PB15 tinge molto: aggiungilo davvero un tocco alla volta.",
     "mix": [
      [
       "giallo",
@@ -234,7 +221,7 @@
     "ricetta": "cremisi con una punta di ceruleo, molto diluiti",
     "consistenza": "tè",
     "pigmenti": "cremisi PR206, ceruleo PB15",
-    "nota": "Domina il cremisi perché il ceruleo Cotman tinge molto più forte: a parti uguali il blu coprirebbe il lilla.",
+    "nota": "Domina il cremisi perché il ceruleo PB15 tinge molto più forte: a parti uguali il blu coprirebbe il lilla.",
     "mix": [
      [
       "cremisi",
@@ -303,7 +290,6 @@
     ]
    }
   ],
-  "tavolozza_fonte": "https://www.winsornewton.com/pages/cotman-watercolour",
   "dosi": {
    "titolo": "Come leggere le dosi (una convenzione, non un dato)",
    "testo": "Le miscele sono una proposta e non vengono dai video, e nessuno dei materiali dà quantità. Per leggerle usiamo questa convenzione, che vale solo come punto di partenza da verificare sul foglietto: si prepara sempre prima il colore che domina (il primo scritto) e poi si aggiunge l'altro poco alla volta.",

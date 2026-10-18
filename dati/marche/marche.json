@@ -1,0 +1,601 @@
+{
+ "data": "2026-10-18",
+ "nota": "Dati dei tubetti presi solo dalle pagine ufficiali dei produttori, con il link e la data di controllo su ogni riga. I colori (id e nome comune) vengono da dati/colori/tavolozza.json. GBOT-app-acquerello, 18/10/2026.",
+ "titolo": "Marche e tubetti: i sei colori di base nei negozi",
+ "sottotitolo": "Per ogni colore della tavolozza, il tubetto corrispondente in sei serie: nome commerciale, numero, pigmenti e trasparenza, dalle pagine ufficiali dei produttori",
+ "introduzione": [
+  "Gli esercizi del Quaderno chiamano i colori col nome comune e col pigmento, per esempio «blu oltremare (PB29)». Il pigmento è la sigla del Colour Index stampata sull'etichetta: PY per i gialli, PR per i rossi, PB per i blu, PBr per i bruni. È questa sigla che decide come si comporta il colore, non il nome sul tubetto.",
+  "Qui trovi lo stesso colore in sei serie di cinque marche, con i dati presi dalle pagine ufficiali dei produttori. Prima di comprare un colore, guarda il pigmento: due tubetti con lo stesso nome possono avere pigmenti diversi, e due tubetti con nomi diversi possono avere lo stesso pigmento.",
+  "I produttori a volte cambiano la formula senza cambiare il nome: il cremisi Cotman usato negli esercizi ha PR206 sull'etichetta, mentre la formula di oggi sul sito è PR179. Conta sempre l'etichetta del tubetto che hai in mano."
+ ],
+ "criterio": "Oltre alla serie degli esercizi (Cotman) e alla serie superiore della stessa marca, ci sono le marche confrontate nel video «Best Brand to Fill Watercolour Pans», raccolto nei materiali del Quaderno: Daniel Smith, Schmincke, Van Gogh e Maimeri Blu. Per ogni colore c'è il tubetto col nome più vicino; quando la serie ne ha due (per esempio il ceruleo vero e un'imitazione), ci sono tutti e due.",
+ "criterio_fonte": "https://www.youtube.com/watch?v=F-wkzt94-OA",
+ "trasparenza": {
+  "T": "trasparente",
+  "ST": "semitrasparente",
+  "SO": "semicoprente",
+  "O": "coprente"
+ },
+ "nota_trasparenza": "Trasparenza come la dichiara il produttore, tradotta: trasparente, semitrasparente, semicoprente, coprente (cioè opaco). «Granulante» solo dove la pagina ufficiale lo dice.",
+ "marche": [
+  {
+   "id": "wn-cotman",
+   "marca": "Winsor & Newton",
+   "serie": "Cotman",
+   "nota": "È la serie dei tubetti usati negli esercizi del Quaderno.",
+   "fonte_generale": "https://www.winsornewton.com/pages/cotman-watercolour",
+   "righe": [
+    {
+     "colore": "giallo",
+     "nome_commerciale": "Lemon Yellow Hue",
+     "numero": "346",
+     "pigmenti": "PY175",
+     "trasparenza": "T",
+     "fonte": "https://www.winsornewton.com/en-ca/products/cotman-watercolour-lemon-yellow-hue",
+     "controllato": "2026-10-18"
+    },
+    {
+     "colore": "ceruleo",
+     "nome_commerciale": "Cerulean Blue Hue",
+     "numero": "139",
+     "pigmenti": "PB15",
+     "trasparenza": "O",
+     "fonte": "https://www.winsornewton.com/en-ca/products/cotman-watercolour-cerulean-blue-hue",
+     "controllato": "2026-10-18"
+    },
+    {
+     "colore": "cremisi",
+     "nome_commerciale": "Alizarin Crimson Hue",
+     "numero": "3",
+     "pigmenti": "PR179",
+     "trasparenza": "T",
+     "nota": "PR179 è la formula di oggi sul sito; sull'etichetta del tubetto usato negli esercizi c'è PR206, la formula precedente (etichetta controllata da Sandro il 18/10/2026).",
+     "fonte": "https://www.winsornewton.com/en-ca/products/cotman-watercolour-alizarin-crimson-hue",
+     "controllato": "2026-10-18"
+    },
+    {
+     "colore": "siena",
+     "nome_commerciale": "Burnt Sienna",
+     "numero": "74",
+     "pigmenti": "PR101",
+     "trasparenza": "T",
+     "fonte": "https://www.winsornewton.com/en-ca/products/cotman-watercolour-burnt-sienna",
+     "controllato": "2026-10-18"
+    },
+    {
+     "colore": "ombra",
+     "nome_commerciale": "Burnt Umber",
+     "numero": "76",
+     "pigmenti": "PBr7, PY42",
+     "trasparenza": "O",
+     "fonte": "https://www.winsornewton.com/en-ca/products/cotman-watercolour-burnt-umber",
+     "controllato": "2026-10-18"
+    },
+    {
+     "colore": "oltremare",
+     "nome_commerciale": "Ultramarine",
+     "numero": "660",
+     "pigmenti": "PB29",
+     "trasparenza": "T",
+     "granulante": true,
+     "fonte": "https://www.winsornewton.com/en-ca/products/cotman-watercolour-ultramarine",
+     "controllato": "2026-10-18"
+    }
+   ]
+  },
+  {
+   "id": "wn-professional",
+   "marca": "Winsor & Newton",
+   "serie": "Professional",
+   "nota": "La serie superiore della stessa marca.",
+   "fonte_generale": "https://www.winsornewton.com/pages/professional-watercolour",
+   "righe": [
+    {
+     "colore": "giallo",
+     "nome_commerciale": "Winsor Lemon",
+     "numero": "722",
+     "pigmenti": "PY175",
+     "trasparenza": "ST",
+     "fonte": "https://www.winsornewton.com/en-ca/products/professional-watercolour-winsor-lemon",
+     "controllato": "2026-10-18"
+    },
+    {
+     "colore": "ceruleo",
+     "variante": "ceruleo vero",
+     "nome_commerciale": "Cerulean Blue",
+     "numero": "137",
+     "pigmenti": "PB35",
+     "trasparenza": "SO",
+     "granulante": true,
+     "fonte": "https://www.winsornewton.com/en-ca/products/professional-watercolour-cerulean-blue",
+     "controllato": "2026-10-18"
+    },
+    {
+     "colore": "cremisi",
+     "nome_commerciale": "Permanent Alizarin Crimson",
+     "numero": "466",
+     "pigmenti": "PR179",
+     "trasparenza": "T",
+     "fonte": "https://www.winsornewton.com/en-ca/products/professional-watercolour-permanent-alizarin-crimson",
+     "controllato": "2026-10-18"
+    },
+    {
+     "colore": "cremisi",
+     "variante": "alizarina vera",
+     "nome_commerciale": "Alizarin Crimson",
+     "numero": "4",
+     "pigmenti": "PR83",
+     "trasparenza": "T",
+     "nota": "Resistenza alla luce sul sito: «Moderately Durable».",
+     "fonte": "https://www.winsornewton.com/en-ca/products/professional-watercolour-alizarin-crimson",
+     "controllato": "2026-10-18"
+    },
+    {
+     "colore": "siena",
+     "nome_commerciale": "Burnt Sienna",
+     "numero": "74",
+     "pigmenti": "PR101",
+     "trasparenza": "T",
+     "fonte": "https://www.winsornewton.com/en-ca/products/professional-watercolour-burnt-sienna",
+     "controllato": "2026-10-18"
+    },
+    {
+     "colore": "ombra",
+     "nome_commerciale": "Burnt Umber",
+     "numero": "76",
+     "pigmenti": "PBr7, PR101, PY42",
+     "trasparenza": "T",
+     "fonte": "https://www.winsornewton.com/en-ca/products/professional-watercolour-burnt-umber",
+     "controllato": "2026-10-18"
+    },
+    {
+     "colore": "oltremare",
+     "nome_commerciale": "French Ultramarine",
+     "numero": "263",
+     "pigmenti": "PB29",
+     "trasparenza": "T",
+     "granulante": true,
+     "fonte": "https://www.winsornewton.com/en-ca/products/professional-watercolour-french-ultramarine",
+     "controllato": "2026-10-18"
+    }
+   ]
+  },
+  {
+   "id": "van-gogh",
+   "marca": "Royal Talens",
+   "serie": "Van Gogh",
+   "fonte_generale": "https://www.royaltalens.com/products/van-gogh-watercolour-tube-10-ml",
+   "righe": [
+    {
+     "colore": "giallo",
+     "nome_commerciale": "Permanent Lemon Yellow (Primary)",
+     "numero": "254",
+     "pigmenti": "PY184",
+     "trasparenza": "T",
+     "fonte": "https://www.royaltalens.com/products/van-gogh-watercolour-tube-10-ml",
+     "controllato": "2026-10-18"
+    },
+    {
+     "colore": "ceruleo",
+     "nome_commerciale": "Cerulean Blue (Phthalo)",
+     "numero": "535",
+     "pigmenti": "PB15, PW6",
+     "trasparenza": "T",
+     "fonte": "https://www.royaltalens.com/products/van-gogh-watercolour-tube-10-ml",
+     "controllato": "2026-10-18"
+    },
+    {
+     "colore": "cremisi",
+     "assente": "Nella pagina ufficiale dei tubetti da 10 ml non c'è un colore chiamato alizarina o cremisi.",
+     "fonte": "https://www.royaltalens.com/products/van-gogh-watercolour-tube-10-ml",
+     "controllato": "2026-10-18"
+    },
+    {
+     "colore": "siena",
+     "nome_commerciale": "Burnt Sienna",
+     "numero": "411",
+     "pigmenti": "PR101",
+     "trasparenza": "T",
+     "fonte": "https://www.royaltalens.com/products/van-gogh-watercolour-tube-10-ml",
+     "controllato": "2026-10-18"
+    },
+    {
+     "colore": "ombra",
+     "nome_commerciale": "Burnt Umber",
+     "numero": "409",
+     "pigmenti": "PBr7",
+     "trasparenza": "T",
+     "fonte": "https://www.royaltalens.com/products/van-gogh-watercolour-tube-10-ml",
+     "controllato": "2026-10-18"
+    },
+    {
+     "colore": "oltremare",
+     "nome_commerciale": "Ultramarine Deep",
+     "numero": "506",
+     "pigmenti": "PB29",
+     "trasparenza": "T",
+     "fonte": "https://www.royaltalens.com/products/van-gogh-watercolour-tube-10-ml",
+     "controllato": "2026-10-18"
+    }
+   ]
+  },
+  {
+   "id": "daniel-smith",
+   "marca": "Daniel Smith",
+   "serie": "Extra Fine",
+   "nota": "Sulle pagine ufficiali c'è solo il codice SKU, non un numero di colore breve: in tabella va lo SKU.",
+   "fonte_generale": "https://danielsmith.com/",
+   "righe": [
+    {
+     "colore": "giallo",
+     "nome_commerciale": "Lemon Yellow",
+     "sku": "284600165",
+     "pigmenti": "PY175",
+     "trasparenza": "T",
+     "fonte": "https://danielsmith.com/color-stories/watercolors/lemon-yellow-watercolor/",
+     "controllato": "2026-10-18"
+    },
+    {
+     "colore": "ceruleo",
+     "variante": "ceruleo vero",
+     "nome_commerciale": "Cerulean Blue",
+     "sku": "284600206",
+     "pigmenti": "PB35",
+     "trasparenza": "ST",
+     "granulante": true,
+     "fonte": "https://danielsmith.com/color-stories/watercolors/cerulean-blue-watercolor/",
+     "controllato": "2026-10-18"
+    },
+    {
+     "colore": "ceruleo",
+     "variante": "ceruleo di cromo",
+     "nome_commerciale": "Cerulean Blue Chromium",
+     "sku": "284600021",
+     "pigmenti": "PB36",
+     "trasparenza": "ST",
+     "fonte": "https://danielsmith.com/color-stories/watercolors/cerulean-blue-chromium-watercolor/",
+     "controllato": "2026-10-18"
+    },
+    {
+     "colore": "cremisi",
+     "nome_commerciale": "Permanent Alizarin Crimson",
+     "sku": "284600185",
+     "pigmenti": "PR177, PV19, PR149",
+     "trasparenza": "T",
+     "fonte": "https://danielsmith.com/color-stories/watercolors/permanent-alizarin-crimson-watercolor/",
+     "controllato": "2026-10-18"
+    },
+    {
+     "colore": "cremisi",
+     "variante": "alizarina vera",
+     "nome_commerciale": "Alizarin Crimson",
+     "sku": "284600004",
+     "pigmenti": "PR83",
+     "trasparenza": "T",
+     "nota": "Resistenza alla luce sul sito: «IV – Fugitive».",
+     "fonte": "https://danielsmith.com/color-stories/watercolors/alizarin-crimson-watercolor/",
+     "controllato": "2026-10-18"
+    },
+    {
+     "colore": "siena",
+     "nome_commerciale": "Burnt Sienna",
+     "sku": "284600010",
+     "pigmenti": "PBr7",
+     "trasparenza": "ST",
+     "granulante": true,
+     "fonte": "https://danielsmith.com/color-stories/watercolors/burnt-sienna-watercolor/",
+     "controllato": "2026-10-18"
+    },
+    {
+     "colore": "ombra",
+     "nome_commerciale": "Burnt Umber",
+     "sku": "284600011",
+     "pigmenti": "PBr7",
+     "trasparenza": "ST",
+     "fonte": "https://danielsmith.com/color-stories/watercolors/burnt-umber-watercolor/",
+     "controllato": "2026-10-18"
+    },
+    {
+     "colore": "oltremare",
+     "nome_commerciale": "French Ultramarine",
+     "sku": "284600034",
+     "pigmenti": "PB29",
+     "trasparenza": "T",
+     "granulante": true,
+     "fonte": "https://danielsmith.com/color-stories/watercolors/french-ultramarine-watercolor/",
+     "controllato": "2026-10-18"
+    }
+   ]
+  },
+  {
+   "id": "schmincke",
+   "marca": "Schmincke",
+   "serie": "HORADAM Aquarell",
+   "nota": "Il numero a tre cifre è quello del colore; sul sito il codice articolo è 14 seguito dal numero (per esempio 14483).",
+   "fonte_generale": "https://www.schmincke.de/en/produkte/aquarell/horadam-aquarell",
+   "righe": [
+    {
+     "colore": "giallo",
+     "nome_commerciale": "chromium yellow hue lemon",
+     "numero": "211",
+     "pigmenti": "PY175",
+     "trasparenza": "T",
+     "fonte": "https://www.schmincke.de/en/produkte/aquarell/horadam-aquarell",
+     "controllato": "2026-10-18"
+    },
+    {
+     "colore": "giallo",
+     "variante": "altro pigmento",
+     "nome_commerciale": "lemon yellow",
+     "numero": "215",
+     "pigmenti": "PY3",
+     "trasparenza": "ST",
+     "fonte": "https://www.schmincke.de/en/produkte/aquarell/horadam-aquarell",
+     "controllato": "2026-10-18"
+    },
+    {
+     "colore": "ceruleo",
+     "variante": "imitazione",
+     "nome_commerciale": "cerulean blue hue",
+     "numero": "481",
+     "pigmenti": "PW4, PB15:3",
+     "trasparenza": "ST",
+     "fonte": "https://www.schmincke.de/en/produkte/aquarell/horadam-aquarell",
+     "controllato": "2026-10-18"
+    },
+    {
+     "colore": "ceruleo",
+     "variante": "ceruleo vero",
+     "nome_commerciale": "cobalt azure",
+     "numero": "483",
+     "pigmenti": "PB35",
+     "trasparenza": "ST",
+     "granulante": true,
+     "fonte": "https://www.schmincke.de/en/produkte/aquarell/horadam-aquarell",
+     "controllato": "2026-10-18"
+    },
+    {
+     "colore": "cremisi",
+     "nome_commerciale": "madder red dark",
+     "numero": "354",
+     "pigmenti": "PV19, PR179",
+     "trasparenza": "ST",
+     "fonte": "https://www.schmincke.de/en/produkte/aquarell/horadam-aquarell",
+     "controllato": "2026-10-18"
+    },
+    {
+     "colore": "cremisi",
+     "variante": "alizarina vera",
+     "nome_commerciale": "alizarin crimson",
+     "numero": "357",
+     "pigmenti": "PR83:1",
+     "trasparenza": "ST",
+     "fonte": "https://www.schmincke.de/en/produkte/aquarell/horadam-aquarell",
+     "controllato": "2026-10-18"
+    },
+    {
+     "colore": "siena",
+     "nome_commerciale": "burnt Sienna",
+     "numero": "661",
+     "pigmenti": "PR101, PBk9",
+     "trasparenza": "SO",
+     "fonte": "https://www.schmincke.de/en/produkte/aquarell/horadam-aquarell",
+     "controllato": "2026-10-18"
+    },
+    {
+     "colore": "ombra",
+     "nome_commerciale": "burnt umber",
+     "numero": "668",
+     "pigmenti": "PBr7",
+     "trasparenza": "SO",
+     "fonte": "https://www.schmincke.de/en/produkte/aquarell/horadam-aquarell",
+     "controllato": "2026-10-18"
+    },
+    {
+     "colore": "oltremare",
+     "nome_commerciale": "French ultramarine",
+     "numero": "493",
+     "pigmenti": "PB29",
+     "trasparenza": "T",
+     "granulante": true,
+     "fonte": "https://www.schmincke.de/en/produkte/aquarell/horadam-aquarell",
+     "controllato": "2026-10-18"
+    }
+   ]
+  },
+  {
+   "id": "maimeri-blu",
+   "marca": "Maimeri",
+   "serie": "Maimeri Blu",
+   "nota": "Sul sito la coprenza è un'icona, letta con la legenda della pagina («trasparente», «semicoprente», «coprente»).",
+   "fonte_generale": "https://www.maimeri.it/it/categorie/acquerello/maimeri-blu/",
+   "righe": [
+    {
+     "colore": "giallo",
+     "nome_commerciale": "Giallo permanente limone",
+     "numero": "112",
+     "pigmenti": "PY175",
+     "trasparenza": "T",
+     "fonte": "https://www.maimeri.it/it/categorie/acquerello/maimeri-blu/giallo-permanente-limone-1609112.html",
+     "controllato": "2026-10-18"
+    },
+    {
+     "colore": "ceruleo",
+     "nome_commerciale": "Blu ceruleo",
+     "numero": "368",
+     "pigmenti": "PB36",
+     "trasparenza": "SO",
+     "fonte": "https://www.maimeri.it/it/categorie/acquerello/maimeri-blu/blu-ceruleo-1609368.html",
+     "controllato": "2026-10-18"
+    },
+    {
+     "colore": "ceruleo",
+     "variante": "ceruleo vero",
+     "nome_commerciale": "Celeste ceruleo",
+     "numero": "417",
+     "pigmenti": "PB35",
+     "trasparenza": "T",
+     "fonte": "https://www.maimeri.it/it/categorie/acquerello/maimeri-blu/celeste-ceruleo-1609417.html",
+     "controllato": "2026-10-18"
+    },
+    {
+     "colore": "cremisi",
+     "nome_commerciale": "Lacca di garanza permanente scura",
+     "numero": "178",
+     "pigmenti": "PR179",
+     "trasparenza": "T",
+     "fonte": "https://www.maimeri.it/it/categorie/acquerello/maimeri-blu/lacca-di-garanza-permanente-scura-1609178.html",
+     "controllato": "2026-10-18"
+    },
+    {
+     "colore": "cremisi",
+     "variante": "altro pigmento",
+     "nome_commerciale": "Lacca cremisi",
+     "numero": "174",
+     "pigmenti": "PR149",
+     "trasparenza": "T",
+     "fonte": "https://www.maimeri.it/it/categorie/acquerello/maimeri-blu/lacca-cremisi-1609174.html",
+     "controllato": "2026-10-18"
+    },
+    {
+     "colore": "siena",
+     "nome_commerciale": "Terra di Siena bruciata",
+     "numero": "278",
+     "pigmenti": "PBr7",
+     "trasparenza": "SO",
+     "fonte": "https://www.maimeri.it/it/categorie/acquerello/maimeri-blu/terra-di-siena-bruciata-1609278.html",
+     "controllato": "2026-10-18"
+    },
+    {
+     "colore": "ombra",
+     "nome_commerciale": "Terra d'ombra bruciata",
+     "numero": "492",
+     "pigmenti": "PBr7",
+     "trasparenza": "SO",
+     "fonte": "https://www.maimeri.it/it/categorie/acquerello/maimeri-blu/terra-d-ombra-bruciata-1609492.html",
+     "controllato": "2026-10-18"
+    },
+    {
+     "colore": "oltremare",
+     "nome_commerciale": "Blu oltremare scuro",
+     "numero": "392",
+     "pigmenti": "PB29",
+     "trasparenza": "SO",
+     "fonte": "https://www.maimeri.it/it/categorie/acquerello/maimeri-blu/blu-oltremare-scuro-1609392.html",
+     "controllato": "2026-10-18"
+    }
+   ]
+  }
+ ],
+ "stesso_nome": [
+  {
+   "testo": "<b>Cremisi.</b> L'alizarina vera è il PR83: Winsor &amp; Newton Professional Alizarin Crimson (resistenza alla luce «Moderately Durable»), Daniel Smith Alizarin Crimson («IV – Fugitive»), Schmincke alizarin crimson (PR83:1). Le versioni «permanenti» e le imitazioni usano altri pigmenti: PR179 (Cotman Alizarin Crimson Hue nella formula di oggi, Winsor &amp; Newton Professional Permanent Alizarin Crimson, Maimeri Blu Lacca di garanza permanente scura), PR177 + PV19 + PR149 (Daniel Smith Permanent Alizarin Crimson) o PV19 + PR179 (Schmincke madder red dark). Il cremisi della tavolozza ha PR206 sull'etichetta: stesso nome e stesso numero (3) del Cotman in vendita oggi, che però è PR179.",
+   "marche": [
+    "wn-cotman",
+    "wn-professional",
+    "daniel-smith",
+    "schmincke",
+    "maimeri-blu"
+   ]
+  },
+  {
+   "testo": "<b>Ceruleo.</b> Il ceruleo vero è il PB35, e granula: Winsor &amp; Newton Professional Cerulean Blue, Daniel Smith Cerulean Blue, Schmincke cobalt azure, Maimeri Blu Celeste ceruleo. Le imitazioni (<i>hue</i>) usano il blu ftalo: PB15 (Cotman Cerulean Blue Hue, il ceruleo della tavolozza), PB15 + PW6 (Van Gogh Cerulean Blue (Phthalo)), PW4 + PB15:3 (Schmincke cerulean blue hue). Maimeri Blu chiama «Blu ceruleo» un PB36 e riserva il PB35 al «Celeste ceruleo».",
+   "marche": [
+    "wn-professional",
+    "daniel-smith",
+    "schmincke",
+    "maimeri-blu",
+    "wn-cotman",
+    "van-gogh"
+   ]
+  },
+  {
+   "testo": "<b>Terra di Siena bruciata.</b> È PR101 per Winsor &amp; Newton, Van Gogh e Schmincke (che aggiunge PBk9), ma PBr7 per Daniel Smith e Maimeri Blu.",
+   "marche": [
+    "wn-cotman",
+    "wn-professional",
+    "van-gogh",
+    "schmincke",
+    "daniel-smith",
+    "maimeri-blu"
+   ]
+  },
+  {
+   "testo": "<b>Giallo limone.</b> È PY175 per Cotman, Winsor &amp; Newton Professional (Winsor Lemon), Daniel Smith, Maimeri Blu e Schmincke chromium yellow hue lemon, ma il «lemon yellow» di Schmincke è PY3 e il giallo limone di Van Gogh è PY184.",
+   "marche": [
+    "wn-cotman",
+    "wn-professional",
+    "daniel-smith",
+    "maimeri-blu",
+    "schmincke",
+    "van-gogh"
+   ]
+  },
+  {
+   "testo": "<b>Terra d'ombra bruciata.</b> Cambia da marca a marca: PBr7 + PY42 (Cotman), PBr7 + PR101 + PY42 (Winsor &amp; Newton Professional), PBr7 da solo (Van Gogh, Daniel Smith, Schmincke, Maimeri Blu).",
+   "marche": [
+    "wn-cotman",
+    "wn-professional",
+    "van-gogh",
+    "daniel-smith",
+    "schmincke",
+    "maimeri-blu"
+   ]
+  },
+  {
+   "testo": "<b>Oltremare.</b> È PB29 in tutte le serie della tabella, ma lo Schmincke «ultramarine blue» 496 è PB29 + PB15: anche qui il nome da solo non basta.",
+   "marche": [
+    "schmincke"
+   ]
+  },
+  {
+   "testo": "<b>La trasparenza cambia anche nella stessa marca.</b> La terra d'ombra bruciata è coprente nella serie Cotman e trasparente nella Professional; il ceruleo Cotman (PB15) è coprente, quello Van Gogh (PB15 + PW6) è dichiarato trasparente.",
+   "marche": [
+    "wn-cotman",
+    "wn-professional",
+    "van-gogh"
+   ]
+  }
+ ],
+ "etichetta": [
+  {
+   "testo": "<b>pigmento</b>: il Colour Index, cioè lettere e numero (per esempio PB29);",
+   "marche": [
+    "wn-cotman",
+    "van-gogh",
+    "daniel-smith",
+    "schmincke",
+    "maimeri-blu"
+   ]
+  },
+  {
+   "testo": "<b>numero del colore</b> (Daniel Smith dà lo SKU);",
+   "marche": [
+    "wn-cotman",
+    "van-gogh",
+    "schmincke",
+    "maimeri-blu",
+    "daniel-smith"
+   ]
+  },
+  {
+   "testo": "<b>trasparenza</b>;",
+   "marche": [
+    "wn-cotman",
+    "van-gogh",
+    "daniel-smith",
+    "schmincke",
+    "maimeri-blu"
+   ]
+  },
+  {
+   "testo": "<b>resistenza alla luce</b>, con diciture diverse da marca a marca: Winsor &amp; Newton usa le classi I e II e le diciture «Permanent» ed «Extremely Permanent» (e «Moderately Durable» per l'Alizarin Crimson); Royal Talens usa +++; Daniel Smith usa I-IV («IV – Fugitive» per l'Alizarin Crimson).",
+   "marche": [
+    "wn-cotman",
+    "wn-professional",
+    "van-gogh",
+    "daniel-smith"
+   ]
+  }
+ ]
+}

@@ -22,7 +22,8 @@ Dal 16/10/2026 **GitHub è la copia principale**, come per il repository delle N
 | `/` (`site/index.html`) | Indice generale del Quaderno di acquerello | `scripts/genera-sito.py` | - |
 | `/principi/` (`site/principi/index.html`) | **1. Principi generali: acqua, colore e carta** (tè, latte, miele; stati della carta e momenti di mezzo; pennello e carta; bordi, asciugatura, tipi di carta; ogni frase con la fonte, video aperti al minuto) | `dati/principi/` | `pit/documentazione/`, `pit/acquerello-alberi/schede/` |
 | `/alberi/` (`site/alberi/index.html`) | **2. Alberi ad acquerello: i gesti nei video** (7 esercizi A5, 6 colori, 12 miscele, 35 passi, 39 estratti video, 7 infografiche in 4 fasi) | `dati/alberi/` | `pit/acquerello-alberi/` |
-| `/colori/` (`site/colori/index.html`) | **3. Teoria dei colori per l'acquerello** (Munsell, luce e pigmento, acqua e carta, schede dei 6 tubetti Cotman, calcolatore di miscele in JavaScript che gira nel browser) | `dati/colori/` | `pit/documentazione/` |
+| `/colori/` (`site/colori/index.html`) | **3. Teoria dei colori per l'acquerello** (Munsell, luce e pigmento, velature, schede dei 6 colori di base col nome comune e il pigmento, calcolatore di miscele in JavaScript che gira nel browser) | `dati/colori/` | `pit/documentazione/` |
+| `/marche/` (`site/marche/index.html`) | **4. Marche e tubetti** (i 6 colori di base in sei serie: Winsor & Newton Cotman e Professional, Van Gogh, Daniel Smith, Schmincke Horadam, Maimeri Blu; dati solo da pagine ufficiali, con link e data su ogni riga; stesso nome, pigmenti diversi) | `dati/marche/` | - |
 
 ## Lavorare con un agente
 
