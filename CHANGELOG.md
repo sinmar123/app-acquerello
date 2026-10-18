@@ -2,6 +2,20 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-18 - GBOT-app-acquerello - Nuova sezione «Teoria dei colori» con calcolatore di miscele
+
+Su richiesta di Sandro, seconda sezione del Quaderno: `/colori/`, generata da `dati/colori/` e aggiunta a `SEZIONI` in `scripts/genera-sito.py`, quindi anche alla home.
+
+- Una pagina con 5 capitoli: tinta, valore e croma secondo Munsell (con scala dei valori e ruota delle 40 tinte dalla renotation del 1943); luce e pigmento, additivo e sottrattivo, perché la ruota dei colori non predice le miscele, Kubelka-Munk; l'acquerello, cioè tè, latte, miele, stato della carta, mescolanza e velatura, granulazione; la tavolozza, con le schede dei 6 tubetti Winsor & Newton Cotman e i loro pigmenti dalla tabella ufficiale; il calcolatore. Testi in `teoria-colori.json`, con le fonti collegate a ogni capitolo (Wikipedia, handprint.com, huevaluechroma.com, Winsor & Newton).
+- Calcolatore in JavaScript puro scritto per il Quaderno (`calcolatore.js`, `interfaccia.js`), tutto dentro l'html, nessuna libreria esterna: mescola 2 o 3 tubetti in parti intere con anteprima e striscia di diluizione dal miele al tè; cerca a forza bruta le 5 combinazioni di 1-3 tubetti con parti fino a 10 più vicine a un colore scelto, con distanza in OKLab; dà la notazione Munsell approssimata. Modello: Kubelka-Munk a una costante su 38 bande, con le tabelle spettrali di spectral.js (licenza MIT, testo della licenza in `spettri-spectraljs.js`). Niente Mixbox né codice di ArtistAssistApp, che è solo collegata.
+- I colori dei 6 tubetti in `tavolozza.json` sono provvisori, scelti a occhio, e la pagina lo dice: vanno sostituiti con la taratura sulle prove di Sandro. In pagina anche i limiti del calcolatore.
+- Prove nel browser senza interfaccia: giallo limone + oltremare 1:1 dà un verde (7,5GY 6,2/6,1), oltremare + Siena bruciata 1:1 un grigio scuro (7Y 2,9/1,1), oltremare + cremisi un viola; nessun errore nella console e nessuna richiesta esterna.
+- Aggiornati README, `AGENTS.md` e la data della home.
+
+Prossima azione: Sandro guarda la pagina e conferma il cremisi (PR179 o PR206); poi si tarano i 6 tubetti sulle sue prove. La proposta sui testi delle 12 miscele della sezione Alberi è a parte, da approvare prima di scriverla nel json.
+
+-- GBOT-app-acquerello
+
 ## 2026-10-18 - GBOT-app-acquerello - Niente merge automatico della sessione cloud
 
 - In `CLAUDE.md` tolta la regola per cui la sessione cloud unisce da sé le pull request: su decisione di Sandro, l'unione su `main`, che pubblica il sito, si fa solo con il suo ok esplicito per quella pull request. Chiude così la prossima azione lasciata aperta il 2026-10-16.
