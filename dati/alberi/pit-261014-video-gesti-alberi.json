@@ -4,6 +4,12 @@
  "apertura": {
   "titolo": "Alberi ad acquerello: i gesti nei video",
   "sottotitolo": "Guida pratica per esercitarsi su sette tipi di albero (e sui riflessi nell'acqua) partendo da 6 colori di base, su piccoli fogli A5. Per ogni esercizio trovi i gesti fondamentali e i vari modi possibili per realizzarli, mostrati da autori diversi.",
+  "principi": {
+   "titolo": "Prima degli esercizi",
+   "testo": "Le tre consistenze tè, latte, miele, gli stati della carta e come abbinare il pennello alla carta sono spiegati in una sezione a parte:",
+   "link": "Principi generali",
+   "href": "../principi/"
+  },
   "esercizi": [
    {
     "titolo": "Si parte da 6 colori di base",
@@ -319,7 +325,12 @@
      "quantità simili, partendo da A e correggendo a occhio"
     ]
    ],
-   "chiusura": "La consistenza è quella della scala tè, latte, miele: tè molta acqua e poco pigmento, latte medio, miele poca acqua e molto pigmento. Viene dalle schede dei video, dove l'autore stende lo stesso tipo di colore. La miscela vera è quella della tua prova riuscita: fotografala e tienila come campione."
+   "chiusura": "La consistenza è quella della scala tè, latte, miele: tè molta acqua e poco pigmento, latte medio, miele poca acqua e molto pigmento. Viene dalle schede dei video, dove l'autore stende lo stesso tipo di colore. La miscela vera è quella della tua prova riuscita: fotografala e tienila come campione.",
+   "rimando": {
+    "testo": "Le tre consistenze, con le fonti e la scelta del colore secondo lo stato della carta, sono spiegate nei",
+    "link": "Principi generali",
+    "href": "../principi/#consistenze"
+   }
   },
   "prove": {
    "titolo": "Le tre prove per ogni miscela",

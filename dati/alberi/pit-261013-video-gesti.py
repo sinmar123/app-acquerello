@@ -488,6 +488,10 @@ def pagina():
                        f'<ol class="passi">{"".join(passi)}</ol>{blocco_coda}</section>')
 
     esercizi = "".join(f'<li><b>{e(x["titolo"])}.</b> {e(x["testo"])}</li>' for x in a.get("esercizi", []))
+    if a.get("principi"):
+        pr = a["principi"]
+        esercizi = (f'<li><b>{e(pr["titolo"])}.</b> {e(pr["testo"])} <a href="{e(pr["href"])}">{e(pr["link"])}</a>.</li>'
+                    + esercizi)
     miscele, sei_colori, riquadri = parte_colori(a, e)
     crediti = "".join(f'<li><a href="https://www.youtube.com/watch?v={e(v)}" target="_blank" rel="noopener">'
                       f'{e(selezione.get(v, {}).get("canale", v))}, «{e(selezione.get(v, {}).get("titolo", ""))}»</a></li>'
@@ -507,7 +511,7 @@ def pagina():
 <table class="mix">{miscele}</table></details>
 <div class="uso-video">
 <h3>Come seguire i passi e usare i video</h3>
-<p class="legenda"><b>Stato del foglietto a inizio passo:</b> {pill('bagnata')} lucida d'acqua, il colore corre · {pill('umida')} opaca ma fredda, i bordi si fondono · {pill('asciutta')} il tratto resta netto.</p>
+<p class="legenda"><b>Stato del foglietto a inizio passo:</b> {pill('bagnata')} lucida d'acqua, il colore corre · {pill('umida')} opaca, i bordi si fondono · {pill('asciutta')} il tratto resta netto. <a href="../principi/#carta-umidita">Gli stati della carta, momenti di mezzo compresi, nei Principi generali</a>.</p>
 <ul class="come">
 <li>Tocca <b>▶ Guarda il gesto</b>: il video parte nel punto giusto e si ferma da solo dopo 7-27 secondi.</li>
 <li><b>Da capo</b> fa ripartire il pezzo, <b>Lento</b> lo porta a metà velocità per studiare il movimento della mano, <b>Ripeti</b> lo ripete in continuo mentre provi sul foglietto.</li>
@@ -559,8 +563,11 @@ def parte_colori(a, e):
 
     def riquadro(r, classe):
         voci = "".join(f'<li><b>{e(k)}</b>: {e(v)}</li>' for k, v in r["voci"])
+        rim = r.get("rimando")
+        rimando = (f'<p class="rimando">{e(rim["testo"])} <a href="{e(rim["href"])}">{e(rim["link"])}</a>.</p>'
+                   if rim else "")
         return (f'<div class="{classe}"><h4>{e(r["titolo"])}</h4><p>{e(r["testo"])}</p><ul>{voci}</ul>'
-                f'<p>{e(r["chiusura"])}</p></div>')
+                f'<p>{e(r["chiusura"])}</p>{rimando}</div>')
     riquadri = riquadro(a["dosi"], "dosi") + riquadro(a["prove"], "prove") + f'<p class="nota-calc">{e(a["calcolatore_nota"])}</p>'
 
     def link(mix, testo):
