@@ -1,0 +1,15 @@
+{
+  "nota": "I sei colori Winsor & Newton Cotman di Sandro. I dati di tubetto (numero, pigmento, trasparenza) vengono dalla tabella ufficiale Winsor & Newton. I colori sRGB e la forza di tintura sono valori INDICATIVI E PROVVISORI scelti a occhio per far funzionare il calcolatore: non sono misure. Vanno sostituiti con la taratura sulle prove di Sandro (campione pieno di ogni tubetto, fotografato o misurato).",
+  "fonte_tubetti": "https://www.winsornewton.com/pages/cotman-watercolour",
+  "fonte_colori": "provvisori, stima a occhio del colore pieno su carta bianca; da tarare sulle prove di Sandro",
+  "data": "2026-10-18",
+  "carta": {"nome": "carta bianca", "srgb": "#FBF8F0", "fonte": "provvisorio: bianco carta caldo indicativo"},
+  "colori": [
+    {"id": "giallo", "nome": "Giallo limone", "nome_cotman": "Lemon Yellow Hue", "numero": "346", "pigmento": "PY175", "trasparenza": "trasparente", "note": "giallo freddo", "srgb": "#F5E446", "forza": 1.0, "stato": "provvisorio"},
+    {"id": "ceruleo", "nome": "Ceruleo", "nome_cotman": "Cerulean Blue Hue", "numero": "139", "pigmento": "PB15", "trasparenza": "opaco", "note": "blu ftalo schiarito, non il ceruleo vero (PB35); tinge molto", "srgb": "#2A7FC0", "forza": 1.0, "stato": "provvisorio"},
+    {"id": "cremisi", "nome": "Cremisi d'alizarina", "nome_cotman": "Alizarin Crimson Hue", "numero": "3", "pigmento": "PR179", "trasparenza": "trasparente", "note": "i tubetti più vecchi possono essere PR206: da confermare sull'etichetta", "srgb": "#8E1C34", "forza": 1.0, "stato": "provvisorio"},
+    {"id": "siena", "nome": "Terra di Siena bruciata", "nome_cotman": "Burnt Sienna", "numero": "74", "pigmento": "PR101", "trasparenza": "trasparente", "note": "TSB", "srgb": "#964628", "forza": 1.0, "stato": "provvisorio"},
+    {"id": "ombra", "nome": "Terra d'ombra bruciata", "nome_cotman": "Burnt Umber", "numero": "76", "pigmento": "PBr7 + PY42", "trasparenza": "opaco", "note": "TOB", "srgb": "#5F412D", "forza": 1.0, "stato": "provvisorio"},
+    {"id": "oltremare", "nome": "Blu oltremare", "nome_cotman": "Ultramarine", "numero": "660", "pigmento": "PB29", "trasparenza": "trasparente", "note": "BO; granuloso", "srgb": "#283A9E", "forza": 1.0, "stato": "provvisorio"}
+  ]
+}

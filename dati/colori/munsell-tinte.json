@@ -1,0 +1,247 @@
+{
+ "nota": "Angolo di tinta CIELAB (D65) e rapporto C*ab / croma Munsell per le 40 tinte Munsell a valore 5 e croma 6. Servono al calcolatore per dare una notazione Munsell APPROSSIMATA: fuori da valore 5 e croma 6 l'errore cresce. Il campo srgb_6_6 è il colore indicativo a schermo della stessa tinta a valore 6 e croma 6, solo per il disegno della ruota.",
+ "fonte": "Munsell renotation (1943), convertita con la libreria colour-science 0.4.7 (munsell_colour_to_xyY, illuminante C adattato a D65 con Bradford, poi CIELAB)",
+ "data": "2026-10-18",
+ "tinte": [
+  {
+   "tinta": "2.5R",
+   "h": 18.3,
+   "k": 4.67,
+   "srgb_6_6": "#C38284"
+  },
+  {
+   "tinta": "5R",
+   "h": 26.0,
+   "k": 4.86,
+   "srgb_6_6": "#C4827E"
+  },
+  {
+   "tinta": "7.5R",
+   "h": 33.4,
+   "k": 5.06,
+   "srgb_6_6": "#C48378"
+  },
+  {
+   "tinta": "10R",
+   "h": 42.6,
+   "k": 5.37,
+   "srgb_6_6": "#C4846F"
+  },
+  {
+   "tinta": "2.5YR",
+   "h": 50.9,
+   "k": 5.59,
+   "srgb_6_6": "#C38567"
+  },
+  {
+   "tinta": "5YR",
+   "h": 60.0,
+   "k": 5.92,
+   "srgb_6_6": "#C0875E"
+  },
+  {
+   "tinta": "7.5YR",
+   "h": 67.4,
+   "k": 6.23,
+   "srgb_6_6": "#BC8958"
+  },
+  {
+   "tinta": "10YR",
+   "h": 75.8,
+   "k": 6.61,
+   "srgb_6_6": "#B68C50"
+  },
+  {
+   "tinta": "2.5Y",
+   "h": 83.5,
+   "k": 6.96,
+   "srgb_6_6": "#B08F4A"
+  },
+  {
+   "tinta": "5Y",
+   "h": 90.4,
+   "k": 7.25,
+   "srgb_6_6": "#A89245"
+  },
+  {
+   "tinta": "7.5Y",
+   "h": 96.6,
+   "k": 7.45,
+   "srgb_6_6": "#A19543"
+  },
+  {
+   "tinta": "10Y",
+   "h": 102.4,
+   "k": 7.46,
+   "srgb_6_6": "#9A9743"
+  },
+  {
+   "tinta": "2.5GY",
+   "h": 109.8,
+   "k": 7.25,
+   "srgb_6_6": "#919948"
+  },
+  {
+   "tinta": "5GY",
+   "h": 117.9,
+   "k": 6.94,
+   "srgb_6_6": "#889C4F"
+  },
+  {
+   "tinta": "7.5GY",
+   "h": 130.0,
+   "k": 6.49,
+   "srgb_6_6": "#799E5C"
+  },
+  {
+   "tinta": "10GY",
+   "h": 140.5,
+   "k": 6.11,
+   "srgb_6_6": "#6CA067"
+  },
+  {
+   "tinta": "2.5G",
+   "h": 153.5,
+   "k": 5.78,
+   "srgb_6_6": "#5EA275"
+  },
+  {
+   "tinta": "5G",
+   "h": 162.0,
+   "k": 5.58,
+   "srgb_6_6": "#54A27F"
+  },
+  {
+   "tinta": "7.5G",
+   "h": 167.9,
+   "k": 5.43,
+   "srgb_6_6": "#4FA386"
+  },
+  {
+   "tinta": "10G",
+   "h": 173.9,
+   "k": 5.26,
+   "srgb_6_6": "#4AA38C"
+  },
+  {
+   "tinta": "2.5BG",
+   "h": 180.2,
+   "k": 5.11,
+   "srgb_6_6": "#45A391"
+  },
+  {
+   "tinta": "5BG",
+   "h": 189.2,
+   "k": 4.94,
+   "srgb_6_6": "#3FA29A"
+  },
+  {
+   "tinta": "7.5BG",
+   "h": 197.0,
+   "k": 4.87,
+   "srgb_6_6": "#3DA2A1"
+  },
+  {
+   "tinta": "10BG",
+   "h": 207.2,
+   "k": 4.73,
+   "srgb_6_6": "#3DA1A8"
+  },
+  {
+   "tinta": "2.5B",
+   "h": 216.2,
+   "k": 4.6,
+   "srgb_6_6": "#40A0AE"
+  },
+  {
+   "tinta": "5B",
+   "h": 227.0,
+   "k": 4.41,
+   "srgb_6_6": "#4B9EB3"
+  },
+  {
+   "tinta": "7.5B",
+   "h": 237.7,
+   "k": 4.21,
+   "srgb_6_6": "#579CB7"
+  },
+  {
+   "tinta": "10B",
+   "h": 248.3,
+   "k": 4.06,
+   "srgb_6_6": "#629AB9"
+  },
+  {
+   "tinta": "2.5PB",
+   "h": 260.6,
+   "k": 4.01,
+   "srgb_6_6": "#6F97BB"
+  },
+  {
+   "tinta": "5PB",
+   "h": 272.5,
+   "k": 4.02,
+   "srgb_6_6": "#7A95BC"
+  },
+  {
+   "tinta": "7.5PB",
+   "h": 286.6,
+   "k": 4.16,
+   "srgb_6_6": "#8891BC"
+  },
+  {
+   "tinta": "10PB",
+   "h": 298.1,
+   "k": 4.34,
+   "srgb_6_6": "#938FBA"
+  },
+  {
+   "tinta": "2.5P",
+   "h": 306.6,
+   "k": 4.34,
+   "srgb_6_6": "#9B8CB7"
+  },
+  {
+   "tinta": "5P",
+   "h": 314.8,
+   "k": 4.35,
+   "srgb_6_6": "#A38AB3"
+  },
+  {
+   "tinta": "7.5P",
+   "h": 324.8,
+   "k": 4.35,
+   "srgb_6_6": "#AC87AD"
+  },
+  {
+   "tinta": "10P",
+   "h": 333.7,
+   "k": 4.35,
+   "srgb_6_6": "#B286A7"
+  },
+  {
+   "tinta": "2.5RP",
+   "h": 342.9,
+   "k": 4.34,
+   "srgb_6_6": "#B784A0"
+  },
+  {
+   "tinta": "5RP",
+   "h": 354.5,
+   "k": 4.37,
+   "srgb_6_6": "#BC8397"
+  },
+  {
+   "tinta": "7.5RP",
+   "h": 3.3,
+   "k": 4.45,
+   "srgb_6_6": "#BF8291"
+  },
+  {
+   "tinta": "10RP",
+   "h": 11.3,
+   "k": 4.54,
+   "srgb_6_6": "#C2828A"
+  }
+ ]
+}

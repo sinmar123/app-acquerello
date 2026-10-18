@@ -6,7 +6,7 @@ stato: attivo
 tipo: applicazione web statica su Cloudflare Pages
 creazione: 2026-10-15
 giornale: "[[app-acquerello-giornale]]"
-ultimo-aggiornamento: 2026-10-16
+ultimo-aggiornamento: 2026-10-18
 ---
 
 # app-acquerello
@@ -21,6 +21,7 @@ Dal 16/10/2026 **GitHub è la copia principale**, come per il repository delle N
 |----------|---------|----------|----------------------|
 | `/` (`site/index.html`) | Indice generale del Quaderno di acquerello | `scripts/genera-sito.py` | - |
 | `/alberi/` (`site/alberi/index.html`) | **1. Alberi ad acquerello: i gesti nei video** (7 esercizi A5, 6 colori, 12 miscele, 35 passi, 39 estratti video, 7 infografiche in 4 fasi) | `dati/alberi/` | `pit/acquerello-alberi/` |
+| `/colori/` (`site/colori/index.html`) | **2. Teoria dei colori per l'acquerello** (Munsell, luce e pigmento, acqua e carta, schede dei 6 tubetti Cotman, calcolatore di miscele in JavaScript che gira nel browser) | `dati/colori/` | `pit/documentazione/` |
 
 ## Lavorare con un agente
 

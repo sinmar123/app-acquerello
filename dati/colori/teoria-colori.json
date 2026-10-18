@@ -1,0 +1,92 @@
+{
+  "data": "2026-10-18",
+  "nota": "Testi della sezione Teoria dei colori. Ogni affermazione rimanda alle fonti elencate in fondo; i testi delle fonti sono citati e collegati, non copiati. I campi possono contenere semplici tag html (b, i, a, br).",
+  "titolo": "Teoria dei colori per l'acquerello",
+  "sottotitolo": "Tinta, valore e croma secondo Munsell, perché i pigmenti non si mescolano come le luci, cosa cambia con l'acqua e la carta, i sei tubetti della tavolozza e un calcolatore di miscele che gira tutto nel browser.",
+  "capitoli": [
+    {
+      "id": "munsell",
+      "breve": "Munsell",
+      "titolo": "1. Tinta, valore, croma",
+      "paragrafi": [
+        "Albert Munsell (1858-1918), pittore e insegnante di Boston, propose nel 1905 (<i>A Color Notation</i>) di descrivere ogni colore di un oggetto con tre misure indipendenti, scelte in modo che passi uguali si vedano come differenze uguali. Il suo atlante del 1915 fu rivisto nel 1943 dalla Optical Society of America (la «renotation»), che lo collegò alla colorimetria della CIE: è la base delle edizioni di oggi.",
+        "<b>Tinta</b> (hue): la famiglia del colore. Munsell usa 5 tinte principali, rosso R, giallo Y, verde G, blu B, porpora P, e 5 intermedie, YR, GY, BG, PB, RP. Ognuna si divide in passi (2,5, 5, 7,5, 10): nell'atlante le tinte sono 40.",
+        "<b>Valore</b> (value): quanto il colore è chiaro o scuro, da 0 (nero ideale) a 10 (bianco ideale). I grigi si scrivono N1, N2... N9. Il valore Munsell corrisponde circa alla chiarezza CIELAB L* divisa per 10: un grigio N5 ha L* intorno a 50.",
+        "<b>Croma</b> (chroma): quanto il colore si stacca dal grigio dello stesso valore. Un grigio ha croma 0; non c'è un massimo fisso, perché il croma più alto che si può ottenere cambia da tinta a tinta e da valore a valore. Per questo il «solido» di Munsell non è una sfera ma una forma irregolare, e ogni tavolozza ne copre solo una parte.",
+        "La notazione si scrive <b>tinta valore/croma</b>: per esempio <b>5PB 3/10</b> è un blu violaceo scuro e intenso, <b>10YR 7/4</b> un ocra chiaro e smorzato.",
+        "Per chi dipinge, il valore è la misura che conta di più: se i valori sono giusti, il disegno regge anche con tinte approssimate. Nell'acquerello il valore si alza con l'acqua, non col bianco."
+      ],
+      "fonti": ["wiki-munsell", "briggs", "handprint-valore"]
+    },
+    {
+      "id": "luce",
+      "breve": "Luce e pigmento",
+      "titolo": "2. Luce e pigmento",
+      "paragrafi": [
+        "<b>Mescolanza additiva</b>: le luci colorate si sommano. Su uno schermo rosso, verde e blu accesi insieme danno il bianco, rosso e verde danno il giallo. Più luce si aggiunge, più il risultato è chiaro.",
+        "<b>Mescolanza sottrattiva</b>: un pigmento assorbe una parte della luce e rimanda il resto. Mescolando due pigmenti, ognuno toglie la sua parte, e torna all'occhio solo la luce che nessuno dei due ha assorbito. Il risultato è più scuro dei due colori di partenza e di solito meno intenso.",
+        "<b>Perché la ruota dei colori non basta.</b> Il colore che vediamo è un riassunto: due pigmenti che sembrano uguali possono assorbire in modo diverso le varie lunghezze d'onda, e allora si mescolano in modo diverso. Bruce MacEvoy (handprint.com) lo chiama l'errore della ruota dei colori: la posizione di un pigmento sulla ruota non predice con sicurezza cosa darà in miscela, né quanto la miscela perderà di intensità. Conviene sempre provare sul foglietto.",
+        "<b>Il modello del calcolatore.</b> La teoria di Kubelka e Munk (1931) descrive uno strato di colore con due grandezze per ogni lunghezza d'onda: quanto assorbe (K) e quanto diffonde (S). Nella versione più semplice, «a una costante», di ogni pigmento basta il rapporto K/S: il K/S di una miscela è la media dei K/S dei componenti, pesata con le quantità. Il calcolatore fa questo conto su 38 bande dello spettro, da 380 a 750 nanometri, e poi riconverte in un colore per lo schermo."
+      ],
+      "fonti": ["wiki-additiva", "wiki-sottrattiva", "handprint-mescolanza", "handprint-ruota", "wiki-km"]
+    },
+    {
+      "id": "acquerello",
+      "breve": "L'acquerello",
+      "titolo": "3. L'acquerello: acqua, carta, velature",
+      "paragrafi": [
+        "Nell'acquerello il bianco è la carta. Un velo di colore trasparente lascia passare la luce, che arriva alla carta, rimbalza e riattraversa il velo: per schiarire si aggiunge acqua, così sulla carta arriva meno pigmento.",
+        "<b>La diluizione: tè, latte, miele.</b> Il corso di Watercolor Fanatic (lezione 4) descrive la consistenza della miscela con tre parole facili da ricordare: <b>tè</b>, molta acqua e poco pigmento, per veli chiari; <b>latte</b>, consistenza media; <b>miele</b>, poca acqua e molto pigmento, per i colori pieni e gli scuri. Nelle schede dei video della sezione Alberi le stesse tre consistenze compaiono come «molto diluito», «medio» e «denso».",
+        "<b>La carta.</b> Su carta asciutta il segno resta dove lo metti e ha bordi netti; su carta umida il colore si allarga un poco e i bordi si ammorbidiscono; su carta bagnata il colore si espande e si fonde da solo con quelli vicini.",
+        "<b>Mescolare o velare.</b> Si può mescolare in tavolozza, e allora i pigmenti stanno nello stesso strato; oppure velare, cioè stendere un colore sopra un altro già asciutto, così la luce passa per due filtri uno sopra l'altro. Con pigmenti trasparenti i due risultati si somigliano, ma non sono uguali. Con quelli opachi, come il ceruleo Cotman e la terra d'ombra bruciata della tavolozza, lo strato sopra copre di più e l'ordine delle velature cambia il risultato.",
+        "<b>Granulazione.</b> Alcuni pigmenti, come l'oltremare PB29, si depositano negli avvallamenti della carta e lasciano una trama a puntini. È uno degli effetti che nessun calcolatore vede."
+      ],
+      "fonti": ["watercolor-fanatic", "handprint-mescolanza", "handprint-wcolor"]
+    },
+    {
+      "id": "tavolozza",
+      "breve": "La tavolozza",
+      "titolo": "4. La mia tavolozza: sei tubetti Cotman",
+      "paragrafi": [
+        "Sono i sei colori di base degli esercizi sugli alberi, nei tubetti Winsor &amp; Newton Cotman. Conta il <b>pigmento</b>, cioè la sigla del Colour Index scritta sull'etichetta (PY = giallo, PB = blu, PR = rosso, PBr = bruno): lo stesso nome commerciale, con un'altra marca o un'altra serie, può nascondere un pigmento diverso.",
+        "I riquadri colorati sono <b>provvisori</b>: valori scelti a occhio per far funzionare il calcolatore, non misure dei tuoi tubetti. Vanno sostituiti con la taratura sulle prove (vedi il calcolatore)."
+      ],
+      "fonti": ["cotman"]
+    },
+    {
+      "id": "calcolatore",
+      "breve": "Calcolatore",
+      "titolo": "5. Calcolatore di miscele",
+      "paragrafi": [
+        "Tre strumenti che girano tutti nel browser, senza collegamenti esterni: <b>mescola</b> due o tre tubetti in parti intere e guarda l'anteprima con la sua striscia di diluizione; <b>trova la miscela</b> per un colore scelto col selettore; leggi per ogni risultato la <b>notazione Munsell approssimata</b>."
+      ],
+      "limiti": [
+        "È una <b>stima da verificare sul foglietto</b>, non una ricetta.",
+        "Vale solo per i tubetti <b>tarati</b>. Oggi i colori dei sei tubetti sono provvisori, quindi anche i risultati lo sono.",
+        "Diluizione, granulazione, tipo di carta, carta asciutta o bagnata e ordine delle velature cambiano il risultato; il calcolatore considera solo la mescolanza in tavolozza e, nella striscia, il velo sul bianco della carta.",
+        "Lo schermo non è la carta: luminosità, taratura del monitor e luce della stanza cambiano quello che vedi.",
+        "Le parti sono quantità uguali di colore preso dal tubetto o dal pozzetto, non di miscela già diluita. La corrispondenza fra i passi della striscia e tè, latte, miele è una convenzione del Quaderno.",
+        "La notazione Munsell è approssimata: il valore viene da L*, tinta e croma da una tabella della renotation di Munsell calcolata a valore 5 e croma 6, e lontano da lì l'errore cresce."
+      ],
+      "taratura": "Per tarare: stendi ogni tubetto pieno (miele) su un pezzo della stessa carta, fotografalo alla luce del giorno accanto a un cartoncino bianco, oppure misuralo con un colorimetro, e scrivi i sei valori sRGB in <code>dati/colori/tavolozza.json</code> al posto di quelli provvisori. Il campo <code>forza</code> serve a correggere un tubetto che in miscela si rivela più forte o più debole del previsto.",
+      "fonti": ["spectraljs", "oklab", "wiki-km", "munsell-renotation", "artistassist"]
+    }
+  ],
+  "fonti": {
+    "wiki-munsell": {"testo": "Munsell color system, Wikipedia (inglese)", "url": "https://en.wikipedia.org/wiki/Munsell_color_system"},
+    "briggs": {"testo": "David Briggs, The Dimensions of Colour: hue, value, chroma", "url": "http://www.huevaluechroma.com/011.php"},
+    "handprint-valore": {"testo": "Bruce MacEvoy, handprint.com: tonal value", "url": "https://www.handprint.com/HP/WCL/color11.html"},
+    "wiki-additiva": {"testo": "Sintesi additiva, Wikipedia", "url": "https://it.wikipedia.org/wiki/Sintesi_additiva"},
+    "wiki-sottrattiva": {"testo": "Sintesi sottrattiva, Wikipedia", "url": "https://it.wikipedia.org/wiki/Sintesi_sottrattiva"},
+    "handprint-mescolanza": {"testo": "Bruce MacEvoy, handprint.com: additive &amp; subtractive color mixing", "url": "https://www.handprint.com/HP/WCL/color5.html"},
+    "handprint-ruota": {"testo": "Bruce MacEvoy, handprint.com: mixing with a color wheel (the color wheel fallacy)", "url": "https://www.handprint.com/HP/WCL/color14.html"},
+    "handprint-wcolor": {"testo": "Bruce MacEvoy, handprint.com: color theory, indice", "url": "https://www.handprint.com/HP/WCL/wcolor.html"},
+    "wiki-km": {"testo": "Kubelka-Munk theory, Wikipedia (inglese)", "url": "https://en.wikipedia.org/wiki/Kubelka%E2%80%93Munk_theory"},
+    "watercolor-fanatic": {"testo": "Corso Watercolor Fanatic, lezione 4 (appunti di Sandro)", "url": ""},
+    "cotman": {"testo": "Winsor &amp; Newton, Cotman Watercolour: tabella dei colori e dei pigmenti", "url": "https://www.winsornewton.com/pages/cotman-watercolour"},
+    "spectraljs": {"testo": "Ronald van Wijnen, spectral.js (licenza MIT): tabelle spettrali usate dal calcolatore", "url": "https://github.com/rvanwijnen/spectral.js"},
+    "oklab": {"testo": "Björn Ottosson, OKLab: lo spazio colore usato per misurare la distanza fra due colori", "url": "https://bottosson.github.io/posts/oklab/"},
+    "munsell-renotation": {"testo": "colour-science: conversione della renotation di Munsell (usata per la tabella delle tinte)", "url": "https://www.colour-science.org/"},
+    "artistassist": {"testo": "ArtistAssistApp, app gratuita esterna per miscele ad acquerello (solo collegamento)", "url": "https://artistassistapp.com/en/"}
+  }
+}
