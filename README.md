@@ -20,8 +20,9 @@ Dal 16/10/2026 **GitHub è la copia principale**, come per il repository delle N
 | Percorso | Sezione | Sorgenti | Studio nel workspace |
 |----------|---------|----------|----------------------|
 | `/` (`site/index.html`) | Indice generale del Quaderno di acquerello | `scripts/genera-sito.py` | - |
-| `/alberi/` (`site/alberi/index.html`) | **1. Alberi ad acquerello: i gesti nei video** (7 esercizi A5, 6 colori, 12 miscele, 35 passi, 39 estratti video, 7 infografiche in 4 fasi) | `dati/alberi/` | `pit/acquerello-alberi/` |
-| `/colori/` (`site/colori/index.html`) | **2. Teoria dei colori per l'acquerello** (Munsell, luce e pigmento, acqua e carta, schede dei 6 tubetti Cotman, calcolatore di miscele in JavaScript che gira nel browser) | `dati/colori/` | `pit/documentazione/` |
+| `/principi/` (`site/principi/index.html`) | **1. Principi generali: acqua, colore e carta** (tè, latte, miele; stati della carta e momenti di mezzo; pennello e carta; bordi, asciugatura, tipi di carta; ogni frase con la fonte, video aperti al minuto) | `dati/principi/` | `pit/documentazione/`, `pit/acquerello-alberi/schede/` |
+| `/alberi/` (`site/alberi/index.html`) | **2. Alberi ad acquerello: i gesti nei video** (7 esercizi A5, 6 colori, 12 miscele, 35 passi, 39 estratti video, 7 infografiche in 4 fasi) | `dati/alberi/` | `pit/acquerello-alberi/` |
+| `/colori/` (`site/colori/index.html`) | **3. Teoria dei colori per l'acquerello** (Munsell, luce e pigmento, acqua e carta, schede dei 6 tubetti Cotman, calcolatore di miscele in JavaScript che gira nel browser) | `dati/colori/` | `pit/documentazione/` |
 
 ## Lavorare con un agente
 
