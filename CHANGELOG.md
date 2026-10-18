@@ -2,6 +2,18 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-18 - GBOT-app-acquerello - Alberi: tavolozza Cotman e 12 miscele riviste
+
+Con l'ok di Sandro alla proposta sui testi delle miscele (bozza del 18/10 preparata da GBOT-app-acquerello).
+
+- `dati/alberi/pit-261014-video-gesti-alberi.json`: la tavolozza diventa la lista dei 6 tubetti Winsor & Newton Cotman con nome, numero, pigmento e trasparenza (cremisi PR206, formula vecchia; la formula attuale W&N è PR179), uguale a `dati/colori/tavolozza.json`: il generatore si ferma se le due tavolozze non coincidono. Le 12 miscele hanno ora colore dominante e secondario, consistenza tè/latte/miele ricavata dalle schede dei video, pigmenti e, dove serve, una nota. Nuovi riquadri «Come leggere le dosi», dichiarato come convenzione da verificare sul foglietto e non come dato, e «Le tre prove per ogni miscela» (meno, come scritto, di più). Allineate alla proposta anche le ricette ripetute nei «Colori» di ogni albero; i testi dei passi non cambiano.
+- Due modifiche di sostanza: M9 ha ora il cremisi dominante con una punta di ceruleo; M11 è al latte e non più «diluito», come nella scheda del video.
+- Collegamenti alla sezione Teoria dei colori e al calcolatore; ogni miscela ha «prova nel calcolatore», che apre il mescolatore coi tubetti già scelti. Le parti traducono la convenzione (colore base 10, punta 1, poco 3, un po' 4, quantità simili 10), e la pagina lo dice.
+- `dati/colori/interfaccia.js`: nuovo parametro nell'indirizzo `?mix=id:parti,...` che precompila il mescolatore; un solo tubetto si legge «solo ...». `calcolatore.js`: virgola decimale anche nella notazione dei grigi (N 2,6).
+- Prova in Chrome senza interfaccia: i 13 collegamenti aprono il mescolatore con i colori giusti, nessun errore in console.
+
+-- GBOT-app-acquerello
+
 ## 2026-10-18 - GBOT-app-acquerello - Cremisi della tavolozza: PR206
 
 - Sandro ha controllato l'etichetta: il suo Cotman Alizarin Crimson Hue (n. 3) è PR206, la formula vecchia. In `dati/colori/tavolozza.json` il pigmento passa da PR179 a PR206, con nota e fonte: la formula attuale Winsor & Newton è PR179 (https://www.winsornewton.com/en-ca/products/cotman-watercolour-alizarin-crimson-hue). La pagina mostra PR206 nella scheda del tubetto, nel mescolatore e nelle proposte; la pagina del prodotto è aggiunta alle fonti del capitolo sulla tavolozza.

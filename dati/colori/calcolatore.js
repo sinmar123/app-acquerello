@@ -97,7 +97,7 @@ var Acq = (function () {
   function indiceTinta(nome) { var m = nome.match(/^([\d.]+)([A-Z]+)$/); return FAMIGLIE.indexOf(m[2]) * 10 + parseFloat(m[1]); }
   function munsell(R) {
     var L = lab(R), V = L[0] / 10, C = Math.sqrt(L[1] * L[1] + L[2] * L[2]);
-    if (C < 3) return { testo: 'N ' + V.toFixed(1), valore: V, croma: 0, tinta: 'N' };
+    if (C < 3) return { testo: 'N ' + V.toFixed(1).replace('.', ','), valore: V, croma: 0, tinta: 'N' };
     var h = (Math.atan2(L[2], L[1]) * 180 / Math.PI + 360) % 360;
     var n = TINTE.length, a = TINTE[n - 1], b = TINTE[0], ha = a.h - 360, hb = b.h;
     for (var i = 0; i < n - 1; i++) if (h >= TINTE[i].h && h < TINTE[i + 1].h) { a = TINTE[i]; b = TINTE[i + 1]; ha = a.h; hb = b.h; }

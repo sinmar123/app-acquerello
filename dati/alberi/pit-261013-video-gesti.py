@@ -488,8 +488,7 @@ def pagina():
                        f'<ol class="passi">{"".join(passi)}</ol>{blocco_coda}</section>')
 
     esercizi = "".join(f'<li><b>{e(x["titolo"])}.</b> {e(x["testo"])}</li>' for x in a.get("esercizi", []))
-    miscele = "".join(f'<tr><td class="m">{e(x["m"])}</td><td><b>{e(x["nome"])}</b><br>{e(x["ricetta"])}</td></tr>'
-                      for x in a["miscele"])
+    miscele, sei_colori, riquadri = parte_colori(a, e)
     crediti = "".join(f'<li><a href="https://www.youtube.com/watch?v={e(v)}" target="_blank" rel="noopener">'
                       f'{e(selezione.get(v, {}).get("canale", v))}, «{e(selezione.get(v, {}).get("titolo", ""))}»</a></li>'
                       for v in video_usati)
@@ -502,8 +501,9 @@ def pagina():
 <h3>Come funziona questo tutorial</h3>
 <ul class="come">{esercizi}</ul>
 </div>
-<details class="miscele-box"><summary>I 6 colori di base e le 12 miscele (M1-M12) da provare sul primo foglietto</summary>
-<p class="sei-colori"><b>I 6 colori di base:</b> {e(", ".join(a["tavolozza"]))}.</p>
+<details class="miscele-box" id="miscele"><summary>I 6 colori di base e le 12 miscele (M1-M12) da provare sul primo foglietto</summary>
+{sei_colori}
+{riquadri}
 <table class="mix">{miscele}</table></details>
 <div class="uso-video">
 <h3>Come seguire i passi e usare i video</h3>
@@ -535,6 +535,50 @@ def pagina():
     if mancano:
         print("SEGMENTI NON ANCORA DECISI (minuto della scheda + 20 s):", " ".join(mancano))
 
+def parte_colori(a, e):
+    """Tavolozza, riquadri «Come leggere le dosi» e «Le tre prove», tabella delle 12 miscele con il collegamento
+    al mescolatore della sezione Teoria dei colori (../colori/?mix=id:parti,...#mescola). GBOT-app-acquerello, 18/10/2026."""
+    tav = a["tavolozza"]
+    # coerenza con la tavolozza della sezione Teoria dei colori, se c'è nel repository
+    p_col = os.path.join(QUI, "..", "colori", "tavolozza.json")
+    if os.path.exists(p_col):
+        rif = {c["id"]: c for c in json.load(open(p_col, encoding="utf-8"))["colori"]}
+        for c in tav:
+            r = rif.get(c["id"])
+            if not r or (r["pigmento"], r["numero"], r["nome_cotman"]) != (c["pigmento"], c["numero"], c["cotman"]):
+                raise SystemExit(f"tavolozza: {c['id']} diverso da dati/colori/tavolozza.json")
+    nomi = {c["id"]: c["nome"] for c in tav}
+    righe_tav = "".join(
+        f'<li><b>{e(c["nome"])}</b>: Cotman n. {e(c["numero"])} {e(c["cotman"])}, pigmento <b>{e(c["pigmento"])}</b>, '
+        f'{e(c["trasparenza"])}{(" (" + e(c["nota"]) + ")") if c.get("nota") else ""}</li>' for c in tav)
+    sei_colori = (f'<div class="sei-colori"><b>I 6 colori di base</b> (tubetti Winsor &amp; Newton Cotman, '
+                  f'<a href="{e(a["tavolozza_fonte"])}" target="_blank" rel="noopener">tabella ufficiale</a>):'
+                  f'<ul class="tav">{righe_tav}</ul>'
+                  f'<p class="rimando">Teoria, schede dei tubetti e calcolatore di miscele: '
+                  f'<a href="../colori/">Teoria dei colori</a> · <a href="../colori/#calcolatore">calcolatore</a>.</p></div>')
+
+    def riquadro(r, classe):
+        voci = "".join(f'<li><b>{e(k)}</b>: {e(v)}</li>' for k, v in r["voci"])
+        return (f'<div class="{classe}"><h4>{e(r["titolo"])}</h4><p>{e(r["testo"])}</p><ul>{voci}</ul>'
+                f'<p>{e(r["chiusura"])}</p></div>')
+    riquadri = riquadro(a["dosi"], "dosi") + riquadro(a["prove"], "prove") + f'<p class="nota-calc">{e(a["calcolatore_nota"])}</p>'
+
+    def link(mix, testo):
+        q = ",".join(f"{i}:{n}" for i, n in mix)
+        return f'<a class="calc" href="../colori/?mix={e(q)}#mescola">{e(testo)}</a>'
+    righe = []
+    for x in a["miscele"]:
+        if x.get("mix"):
+            lk = link(x["mix"], "prova nel calcolatore")
+        else:
+            lk = " · ".join(link([m], f"{nomi[m[0]].split(' (')[0].lower()} nel calcolatore") for m in x.get("mix_separati", []))
+        nota = f' {e(x["nota"])}' if x.get("nota") else ""
+        righe.append(f'<tr><td class="m">{e(x["m"])}</td><td><b>{e(x["nome"])}</b><br>{e(x["ricetta"])}'
+                     f'<br><span class="cons">Consistenza: <b>{e(x["consistenza"])}</b></span>'
+                     f'<br><span class="pigm">Pigmenti: {e(x["pigmenti"])}.{nota}</span><br>{lk}</td></tr>')
+    return "".join(righe), sei_colori, riquadri
+
+
 CSS = """
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; scroll-padding-top: 52px; }
@@ -561,7 +605,13 @@ figcaption { font-size: .85em; color: #555; margin-top: 3px; }
 ol.alberi { columns: 2; column-gap: 2.2em; padding-left: 20px; margin: 6px 0 12px; } ol.alberi li { break-inside: avoid; } ol.alberi a { color: inherit; text-decoration: none; }
 details { margin: 12px 0; background: #f1efe8; border-radius: 8px; padding: 9px 12px; border: 1px solid #dfd9cc; }
 summary { font-weight: 600; cursor: pointer; color: #2c4f3a; }
-.sei-colori { margin: 8px 0; font-size: .95em; }
+.sei-colori { margin: 8px 0; font-size: .95em; } .sei-colori ul.tav { margin: 4px 0; padding-left: 20px; } .sei-colori li { margin-bottom: 2px; }
+.rimando { margin: 6px 0; font-size: .92em; } .rimando a, a.calc { color: #2c6a4a; font-weight: 600; }
+.dosi, .prove { background: #fff8ea; border-left: 4px solid #c87a28; border-radius: 6px; padding: 7px 10px; margin: 8px 0; font-size: .9em; color: #3a2a10; }
+.prove { background: #eef4ef; border-left-color: #3d6b4f; color: #1f3c2b; }
+.dosi h4, .prove h4 { margin: 0 0 4px; font-size: 1em; } .dosi p, .prove p { margin: 4px 0; } .dosi ul, .prove ul { margin: 4px 0; padding-left: 20px; }
+.nota-calc { font-size: .82em; color: #555; margin: 6px 0; }
+.cons, .pigm { font-size: .88em; color: #3d352b; } a.calc { font-size: .85em; }
 table.mix { border-collapse: collapse; width: 100%; } table.mix td { border-bottom: 1px solid #d8e2da; padding: 5px 6px; vertical-align: top; }
 td.m { font-weight: 700; color: #2c4f3a; width: 3em; }
 section.albero { border-top: 3px solid #3d6b4f; padding-top: 14px; margin-top: 26px; }
