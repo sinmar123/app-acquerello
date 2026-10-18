@@ -50,15 +50,29 @@ SEZIONI = [
         "slug": "colori",
         "numero": "3",
         "titolo": "Teoria dei colori per l'acquerello",
-        "sottotitolo": "Munsell, luce e pigmento, acqua e carta, la tavolozza Cotman e un calcolatore di miscele",
+        "sottotitolo": "Munsell, luce e pigmento, velature, i sei colori di base e un calcolatore di miscele",
         "descrizione": (
             "Tinta, valore e croma secondo Munsell; perché i pigmenti non si mescolano come le luci; "
-            "diluizione tè, latte, miele e velature; le schede dei sei tubetti Cotman; un calcolatore "
+            "mescolare o velare; le schede dei sei colori di base, col nome comune e il pigmento; un calcolatore "
             "che mescola i tubetti in parti intere e cerca la miscela per un colore scelto, tutto nel browser."
         ),
-        "badge": ["5 capitoli", "6 tubetti Cotman", "calcolatore di miscele", "stime da verificare sul foglietto"],
+        "badge": ["5 capitoli", "6 colori di base", "calcolatore di miscele", "stime da verificare sul foglietto"],
         "script_genera": DATI_DIR / "colori" / "genera-teoria-colori.py",
         "html_generato": DATI_DIR / "colori" / "teoria-colori.html",
+    },
+    {
+        "slug": "marche",
+        "numero": "4",
+        "titolo": "Marche e tubetti",
+        "sottotitolo": "I sei colori di base nelle serie in commercio: nome del tubetto, numero, pigmento e trasparenza",
+        "descrizione": (
+            "Per ognuno dei sei colori, il tubetto corrispondente in sei serie: Winsor &amp; Newton Cotman e Professional, "
+            "Van Gogh, Daniel Smith, Schmincke Horadam, Maimeri Blu. Dati solo dalle pagine ufficiali, con il link "
+            "e la data di controllo su ogni riga; e perché lo stesso nome nasconde pigmenti diversi."
+        ),
+        "badge": ["6 serie", "6 colori di base", "fonte ufficiale su ogni riga", "stesso nome, pigmenti diversi"],
+        "script_genera": DATI_DIR / "marche" / "genera-marche.py",
+        "html_generato": DATI_DIR / "marche" / "marche.html",
     },
 ]
 

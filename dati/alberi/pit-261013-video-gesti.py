@@ -549,17 +549,20 @@ def parte_colori(a, e):
         rif = {c["id"]: c for c in json.load(open(p_col, encoding="utf-8"))["colori"]}
         for c in tav:
             r = rif.get(c["id"])
-            if not r or (r["pigmento"], r["numero"], r["nome_cotman"]) != (c["pigmento"], c["numero"], c["cotman"]):
+            if not r or (r["nome"], r["pigmento"], r.get("trasparenza_tubetto")) != (c["nome"], c["pigmento"], c.get("trasparenza_tubetto")):
                 raise SystemExit(f"tavolozza: {c['id']} diverso da dati/colori/tavolozza.json")
     nomi = {c["id"]: c["nome"] for c in tav}
-    righe_tav = "".join(
-        f'<li><b>{e(c["nome"])}</b>: Cotman n. {e(c["numero"])} {e(c["cotman"])}, pigmento <b>{e(c["pigmento"])}</b>, '
-        f'{e(c["trasparenza"])}{(" (" + e(c["nota"]) + ")") if c.get("nota") else ""}</li>' for c in tav)
-    sei_colori = (f'<div class="sei-colori"><b>I 6 colori di base</b> (tubetti Winsor &amp; Newton Cotman, '
-                  f'<a href="{e(a["tavolozza_fonte"])}" target="_blank" rel="noopener">tabella ufficiale</a>):'
+    def riga_tav(c):
+        sigla = f' ({e(c["sigla"])})' if c.get("sigla") else ""
+        tras = f'; nel tubetto della tavolozza: {e(c["trasparenza_tubetto"])}' if c.get("trasparenza_tubetto") else ""
+        nota = f' ({e(c["nota"])})' if c.get("nota") else ""
+        return f'<li><b>{e(c["nome"])}</b>{sigla}: pigmento <b>{e(c["pigmento"])}</b>{tras}{nota}</li>'
+    righe_tav = "".join(riga_tav(c) for c in tav)
+    sei_colori = (f'<div class="sei-colori"><b>I 6 colori di base</b> (nome comune e pigmento):'
                   f'<ul class="tav">{righe_tav}</ul>'
-                  f'<p class="rimando">Teoria, schede dei tubetti e calcolatore di miscele: '
-                  f'<a href="../colori/">Teoria dei colori</a> · <a href="../colori/#calcolatore">calcolatore</a>.</p></div>')
+                  f'<p class="rimando">Teoria, schede dei colori e calcolatore di miscele: '
+                  f'<a href="../colori/">Teoria dei colori</a> · <a href="../colori/#calcolatore">calcolatore</a>. '
+                  f'I tubetti corrispondenti, marca per marca: <a href="../marche/">Marche e tubetti</a>.</p></div>')
 
     def riquadro(r, classe):
         voci = "".join(f'<li><b>{e(k)}</b>: {e(v)}</li>' for k, v in r["voci"])
@@ -578,7 +581,7 @@ def parte_colori(a, e):
         if x.get("mix"):
             lk = link(x["mix"], "prova nel calcolatore")
         else:
-            lk = " · ".join(link([m], f"{nomi[m[0]].split(' (')[0].lower()} nel calcolatore") for m in x.get("mix_separati", []))
+            lk = " · ".join(link([m], f"{nomi[m[0]].lower()} nel calcolatore") for m in x.get("mix_separati", []))
         nota = f' {e(x["nota"])}' if x.get("nota") else ""
         righe.append(f'<tr><td class="m">{e(x["m"])}</td><td><b>{e(x["nome"])}</b><br>{e(x["ricetta"])}'
                      f'<br><span class="cons">Consistenza: <b>{e(x["consistenza"])}</b></span>'
