@@ -37,7 +37,7 @@
       "paragrafi": [
         "Nell'acquerello il bianco è la carta. Un velo di colore trasparente lascia passare la luce, che arriva alla carta, rimbalza e riattraversa il velo: per schiarire si aggiunge acqua, così sulla carta arriva meno pigmento.",
         "<b>Consistenze e carta.</b> Le tre consistenze della miscela (tè, latte, miele), gli stati della carta (asciutta, umida, bagnata e i momenti di mezzo) e come abbinarli sono spiegati nella sezione <a href=\"../principi/#consistenze\">Principi generali</a>, con le fonti.",
-        "<b>Mescolare o velare.</b> Si può mescolare in tavolozza, e allora i pigmenti stanno nello stesso strato; oppure velare, cioè stendere un colore sopra un altro già asciutto, così la luce passa per due filtri uno sopra l'altro. Con pigmenti trasparenti i due risultati si somigliano, ma non sono uguali. Con quelli opachi, come il ceruleo Cotman e la terra d'ombra bruciata della tavolozza, lo strato sopra copre di più e l'ordine delle velature cambia il risultato.",
+        "<b>Mescolare o velare.</b> Si può mescolare in tavolozza, e allora i pigmenti stanno nello stesso strato; oppure velare, cioè stendere un colore sopra un altro già asciutto, così la luce passa per due filtri uno sopra l'altro. Con pigmenti trasparenti i due risultati si somigliano, ma non sono uguali. Con quelli opachi, come il ceruleo e la terra d'ombra bruciata nel tubetto della tavolozza, lo strato sopra copre di più e l'ordine delle velature cambia il risultato.",
         "<b>Granulazione.</b> Alcuni pigmenti, come l'oltremare PB29, si depositano negli avvallamenti della carta e lasciano una trama a puntini. È uno degli effetti che nessun calcolatore vede."
       ],
       "fonti": ["handprint-mescolanza", "handprint-wcolor"]
@@ -45,12 +45,12 @@
     {
       "id": "tavolozza",
       "breve": "La tavolozza",
-      "titolo": "4. La mia tavolozza: sei tubetti Cotman",
+      "titolo": "4. La mia tavolozza: sei colori di base",
       "paragrafi": [
-        "Sono i sei colori di base degli esercizi sugli alberi, nei tubetti Winsor &amp; Newton Cotman. Conta il <b>pigmento</b>, cioè la sigla del Colour Index scritta sull'etichetta (PY = giallo, PB = blu, PR = rosso, PBr = bruno): lo stesso nome commerciale, con un'altra marca o un'altra serie, può nascondere un pigmento diverso.",
+        "Sono i sei colori di base degli esercizi sugli alberi, indicati col nome comune e il pigmento. Conta il <b>pigmento</b>, cioè la sigla del Colour Index scritta sull'etichetta (PY = giallo, PB = blu, PR = rosso, PBr = bruno): lo stesso nome commerciale, con un'altra marca o un'altra serie, può nascondere un pigmento diverso. Il ceruleo (PB15) della tavolozza, per esempio, è un blu ftalo schiarito e non il ceruleo vero (PB35). I tubetti corrispondenti, marca per marca, con le fonti ufficiali, sono nella sezione <a href=\"../marche/\">Marche e tubetti</a>.",
         "I riquadri colorati sono <b>provvisori</b>: valori scelti a occhio per far funzionare il calcolatore, non misure dei tuoi tubetti. Vanno sostituiti con la taratura sulle prove (vedi il calcolatore)."
       ],
-      "fonti": ["cotman", "cotman-cremisi"]
+      "fonti": ["marche"]
     },
     {
       "id": "calcolatore",
@@ -81,8 +81,7 @@
     "handprint-ruota": {"testo": "Bruce MacEvoy, handprint.com: mixing with a color wheel (the color wheel fallacy)", "url": "https://www.handprint.com/HP/WCL/color14.html"},
     "handprint-wcolor": {"testo": "Bruce MacEvoy, handprint.com: color theory, indice", "url": "https://www.handprint.com/HP/WCL/wcolor.html"},
     "wiki-km": {"testo": "Kubelka-Munk theory, Wikipedia (inglese)", "url": "https://en.wikipedia.org/wiki/Kubelka%E2%80%93Munk_theory"},
-    "cotman": {"testo": "Winsor &amp; Newton, Cotman Watercolour: tabella dei colori e dei pigmenti", "url": "https://www.winsornewton.com/pages/cotman-watercolour"},
-    "cotman-cremisi": {"testo": "Winsor &amp; Newton, Cotman Alizarin Crimson Hue: formula attuale PR179 (il tubetto della tavolozza è della formula precedente, PR206)", "url": "https://www.winsornewton.com/en-ca/products/cotman-watercolour-alizarin-crimson-hue"},
+    "marche": {"testo": "sezione Marche e tubetti del Quaderno, con la fonte ufficiale e la data di controllo di ogni riga", "url": "../marche/"},
     "spectraljs": {"testo": "Ronald van Wijnen, spectral.js (licenza MIT): tabelle spettrali usate dal calcolatore", "url": "https://github.com/rvanwijnen/spectral.js"},
     "oklab": {"testo": "Björn Ottosson, OKLab: lo spazio colore usato per misurare la distanza fra due colori", "url": "https://bottosson.github.io/posts/oklab/"},
     "munsell-renotation": {"testo": "colour-science: conversione della renotation di Munsell (usata per la tabella delle tinte)", "url": "https://www.colour-science.org/"},

@@ -16,10 +16,14 @@ Istruzioni per gli agenti che lavorano su questo repository, nel workspace di Sa
   - `genera-principi.py`: il generatore della pagina (comando `pagina`); si ferma se una frase non ha fonte, se una fonte manca o non è citata, o se un testo contiene «da verificare».
 - `dati/colori/`, la sezione Teoria dei colori:
   - `teoria-colori.json`: testi dei 5 capitoli, limiti del calcolatore e fonti;
-  - `tavolozza.json`: i 6 tubetti Cotman, con colori sRGB provvisori da sostituire con la taratura sulle prove di Sandro;
+  - `tavolozza.json`: i 6 colori di base col nome comune e il pigmento (senza marche), con colori sRGB provvisori da sostituire con la taratura sulle prove di Sandro; nomi e pigmenti devono restare uguali a quelli della tavolozza in `dati/alberi/`, e il generatore degli alberi lo controlla;
   - `munsell-tinte.json`: tabella delle 40 tinte Munsell per la notazione approssimata;
   - `calcolatore.js` e `interfaccia.js`: il calcolatore di miscele, JavaScript puro scritto per il Quaderno; `spettri-spectraljs.js`: tabelle spettrali di spectral.js (licenza MIT, testo nel file);
   - `genera-teoria-colori.py`: il generatore della pagina (comando `pagina`), che mette tutto dentro un solo html.
+- `dati/marche/`, la sezione Marche e tubetti:
+  - `marche.json`: per ogni serie, il tubetto corrispondente a ognuno dei 6 colori di base (nome commerciale, numero o SKU, pigmenti, trasparenza), con la pagina ufficiale e la data di controllo su ogni riga;
+  - `genera-marche.py`: il generatore della pagina (comando `pagina`); si ferma se una riga non ha fonte o data, se il colore non è nella tavolozza, se a una serie manca un colore o se un testo contiene «da verificare».
+- I nomi delle marche stanno solo in `dati/marche/`: nelle altre sezioni i colori si chiamano col nome comune e il pigmento.
 - `scripts/genera-sito.py`: genera `site/` (home e sezioni) dai soli file del repository.
 - `site/` e le pagine html dentro `dati/` sono generate e restano fuori da git.
 
