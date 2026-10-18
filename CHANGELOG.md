@@ -2,6 +2,12 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-18 - GBOT-app-acquerello - Niente merge automatico della sessione cloud
+
+- In `CLAUDE.md` tolta la regola per cui la sessione cloud unisce da sé le pull request: su decisione di Sandro, l'unione su `main`, che pubblica il sito, si fa solo con il suo ok esplicito per quella pull request. Chiude così la prossima azione lasciata aperta il 2026-10-16.
+
+-- GBOT-app-acquerello
+
 ## 2026-10-16 - CC - Pubblicazione automatica da GitHub
 
 - Token Cloudflare «github-actions-app-acquerello», col solo permesso Cloudflare Pages: Edit sull'account del progetto, creato da Claude su Chrome e passato a GitHub dagli appunti senza mai mostrarlo. Prima di salvarlo è stato verificato: attivo, e in grado di leggere il progetto Pages `app-acquerello`.
