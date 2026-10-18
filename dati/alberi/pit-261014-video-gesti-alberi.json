@@ -7,7 +7,7 @@
   "esercizi": [
    {
     "titolo": "Si parte da 6 colori di base",
-    "testo": "Tutti gli esercizi partono da 6 soli colori: Giallo limone, Ceruleo (blu ceruleo), Cremisi d'alizarina, Terra di Siena bruciata (TSB), Terra d'ombra bruciata (TOB) e Blu oltremare (BO). Mescolandoli si ottengono le 12 miscele indicate nei passi con le sigle da M1 a M12."
+    "testo": "Tutti gli esercizi partono da 6 soli colori, tubetti Winsor & Newton Cotman: Giallo limone, Ceruleo (blu ceruleo), Cremisi d'alizarina, Terra di Siena bruciata (TSB), Terra d'ombra bruciata (TOB) e Blu oltremare (BO). Mescolandoli si ottengono le 12 miscele indicate nei passi con le sigle da M1 a M12. Pigmenti, nomi Cotman e un calcolatore per provare le miscele a schermo stanno nella sezione Teoria dei colori."
    },
    {
     "titolo": "Non c'è un solo modo: i video mostrano varie possibilità",
@@ -23,75 +23,324 @@
    }
   ],
   "tavolozza": [
-   "Giallo limone",
-   "Ceruleo (blu ceruleo)",
-   "Cremisi d'alizarina",
-   "Terra di Siena bruciata (TSB)",
-   "Terra d'ombra bruciata (TOB)",
-   "Blu oltremare (BO)"
+   {
+    "id": "giallo",
+    "nome": "Giallo limone",
+    "cotman": "Lemon Yellow Hue",
+    "numero": "346",
+    "pigmento": "PY175",
+    "trasparenza": "trasparente"
+   },
+   {
+    "id": "ceruleo",
+    "nome": "Ceruleo (blu ceruleo)",
+    "cotman": "Cerulean Blue Hue",
+    "numero": "139",
+    "pigmento": "PB15",
+    "trasparenza": "opaco",
+    "nota": "blu ftalo schiarito, non il ceruleo vero (PB35); tinge molto"
+   },
+   {
+    "id": "cremisi",
+    "nome": "Cremisi d'alizarina",
+    "cotman": "Alizarin Crimson Hue",
+    "numero": "3",
+    "pigmento": "PR206",
+    "trasparenza": "trasparente",
+    "nota": "PR206 sull'etichetta del tubetto (formula vecchia); la formula attuale Winsor & Newton è PR179"
+   },
+   {
+    "id": "siena",
+    "nome": "Terra di Siena bruciata (TSB)",
+    "cotman": "Burnt Sienna",
+    "numero": "74",
+    "pigmento": "PR101",
+    "trasparenza": "trasparente"
+   },
+   {
+    "id": "ombra",
+    "nome": "Terra d'ombra bruciata (TOB)",
+    "cotman": "Burnt Umber",
+    "numero": "76",
+    "pigmento": "PBr7 + PY42",
+    "trasparenza": "opaco"
+   },
+   {
+    "id": "oltremare",
+    "nome": "Blu oltremare (BO)",
+    "cotman": "Ultramarine",
+    "numero": "660",
+    "pigmento": "PB29",
+    "trasparenza": "trasparente",
+    "nota": "granuloso"
+   }
   ],
   "miscele": [
    {
     "m": "M1",
     "nome": "verde giallo",
-    "ricetta": "giallo limone + punta di ceruleo"
+    "ricetta": "giallo limone con una punta di ceruleo",
+    "consistenza": "latte",
+    "pigmenti": "giallo limone PY175, ceruleo PB15",
+    "nota": "Il ceruleo Cotman tinge molto: aggiungilo davvero un tocco alla volta.",
+    "mix": [
+     [
+      "giallo",
+      10
+     ],
+     [
+      "ceruleo",
+      1
+     ]
+    ]
    },
    {
     "m": "M2",
     "nome": "verde medio",
-    "ricetta": "giallo limone + oltremare (BO)"
+    "ricetta": "giallo limone + un po' di oltremare (BO)",
+    "consistenza": "tè per gli abeti lontani dello sfondo, latte per i rami al sole",
+    "pigmenti": "giallo limone PY175, oltremare PB29",
+    "mix": [
+     [
+      "giallo",
+      10
+     ],
+     [
+      "oltremare",
+      4
+     ]
+    ]
    },
    {
     "m": "M3",
     "nome": "verde scuro",
-    "ricetta": "oltremare (BO) + giallo limone + Siena bruciata (TSB)"
+    "ricetta": "oltremare (BO) + giallo limone in quantità simile, con poco Siena bruciata (TSB) per spegnere il verde",
+    "consistenza": "miele su carta asciutta, latte quando si appoggia su un colore ancora bagnato",
+    "pigmenti": "oltremare PB29, giallo limone PY175, Siena bruciata PR101",
+    "mix": [
+     [
+      "oltremare",
+      10
+     ],
+     [
+      "giallo",
+      10
+     ],
+     [
+      "siena",
+      3
+     ]
+    ]
    },
    {
     "m": "M4",
     "nome": "verde-blu d'ombra",
-    "ricetta": "oltremare (BO) + ombra bruciata (TOB) + poco giallo"
+    "ricetta": "oltremare (BO) + un po' di ombra bruciata (TOB), con poco giallo limone",
+    "consistenza": "miele",
+    "pigmenti": "oltremare PB29, ombra bruciata PBr7 + PY42, giallo limone PY175",
+    "mix": [
+     [
+      "oltremare",
+      10
+     ],
+     [
+      "ombra",
+      4
+     ],
+     [
+      "giallo",
+      3
+     ]
+    ]
    },
    {
     "m": "M5",
     "nome": "arancio",
-    "ricetta": "giallo limone + Siena bruciata (TSB)"
+    "ricetta": "giallo limone + un po' di Siena bruciata (TSB)",
+    "consistenza": "latte; tè per il velo bagnato su bagnato delle latifoglie brinate, dove il Siena è solo poco",
+    "pigmenti": "giallo limone PY175, Siena bruciata PR101",
+    "mix": [
+     [
+      "giallo",
+      10
+     ],
+     [
+      "siena",
+      4
+     ]
+    ]
    },
    {
     "m": "M6",
     "nome": "rame",
-    "ricetta": "Siena bruciata (TSB) + cremisi"
+    "ricetta": "Siena bruciata (TSB) + poco cremisi",
+    "consistenza": "latte, lasciato cadere sul bagnato",
+    "pigmenti": "Siena bruciata PR101, cremisi PR206",
+    "mix": [
+     [
+      "siena",
+      10
+     ],
+     [
+      "cremisi",
+      3
+     ]
+    ]
    },
    {
     "m": "M7",
     "nome": "rosso cupo",
-    "ricetta": "cremisi + ombra bruciata (TOB)"
+    "ricetta": "cremisi + un po' di ombra bruciata (TOB)",
+    "consistenza": "miele",
+    "pigmenti": "cremisi PR206, ombra bruciata PBr7 + PY42",
+    "mix": [
+     [
+      "cremisi",
+      10
+     ],
+     [
+      "ombra",
+      4
+     ]
+    ]
    },
    {
     "m": "M8",
     "nome": "viola",
-    "ricetta": "oltremare (BO) + cremisi"
+    "ricetta": "oltremare (BO) + un po' di cremisi",
+    "consistenza": "miele",
+    "pigmenti": "oltremare PB29, cremisi PR206",
+    "nota": "Il cremisi tinge molto: aggiungilo poco alla volta.",
+    "mix": [
+     [
+      "oltremare",
+      10
+     ],
+     [
+      "cremisi",
+      4
+     ]
+    ]
    },
    {
     "m": "M9",
     "nome": "grigio-lilla",
-    "ricetta": "ceruleo + cremisi, molto diluiti"
+    "ricetta": "cremisi con una punta di ceruleo, molto diluiti",
+    "consistenza": "tè",
+    "pigmenti": "cremisi PR206, ceruleo PB15",
+    "nota": "Domina il cremisi perché il ceruleo Cotman tinge molto più forte: a parti uguali il blu coprirebbe il lilla.",
+    "mix": [
+     [
+      "cremisi",
+      10
+     ],
+     [
+      "ceruleo",
+      1
+     ]
+    ]
    },
    {
     "m": "M10",
     "nome": "scuro",
-    "ricetta": "oltremare (BO) + ombra bruciata (TOB) + punta di cremisi"
+    "ricetta": "oltremare (BO) + ombra bruciata (TOB) in quantità simile, con una punta di cremisi",
+    "consistenza": "latte per rami e ombra di riva sul bagnato, più densa (verso il miele) per le foglie scure",
+    "pigmenti": "oltremare PB29, ombra bruciata PBr7 + PY42, cremisi PR206",
+    "mix": [
+     [
+      "oltremare",
+      10
+     ],
+     [
+      "ombra",
+      10
+     ],
+     [
+      "cremisi",
+      1
+     ]
+    ]
    },
    {
     "m": "M11",
     "nome": "grigio caldo",
-    "ricetta": "oltremare (BO) + Siena bruciata (TSB), diluito"
+    "ricetta": "Siena bruciata (TSB) + un po' di oltremare (BO)",
+    "consistenza": "latte",
+    "pigmenti": "Siena bruciata PR101, oltremare PB29",
+    "nota": "Con più oltremare il grigio si raffredda: per il lato in ombra del tronco se ne mette di più.",
+    "mix": [
+     [
+      "siena",
+      10
+     ],
+     [
+      "oltremare",
+      4
+     ]
+    ]
    },
    {
     "m": "M12",
     "nome": "azzurri",
-    "ricetta": "ceruleo in basso e nell'acqua, oltremare (BO) in alto"
+    "ricetta": "non è una miscela ma due colori separati: oltremare (BO) in alto, ceruleo in basso e nell'acqua, lasciati fondere sul bagnato",
+    "consistenza": "tè, tutti e due",
+    "pigmenti": "oltremare PB29, ceruleo PB15",
+    "mix_separati": [
+     [
+      "oltremare",
+      1
+     ],
+     [
+      "ceruleo",
+      1
+     ]
+    ]
    }
-  ]
+  ],
+  "tavolozza_fonte": "https://www.winsornewton.com/pages/cotman-watercolour",
+  "dosi": {
+   "titolo": "Come leggere le dosi (una convenzione, non un dato)",
+   "testo": "Le miscele sono una proposta e non vengono dai video, e nessuno dei materiali dà quantità. Per leggerle usiamo questa convenzione, che vale solo come punto di partenza da verificare sul foglietto: si prepara sempre prima il colore che domina (il primo scritto) e poi si aggiunge l'altro poco alla volta.",
+   "voci": [
+    [
+     "punta",
+     "un tocco con la punta del pennello piccolo (n. 2) ogni 4-5 cariche di pennello medio del colore base"
+    ],
+    [
+     "poco",
+     "circa una carica del secondo colore ogni 3-4 del colore base"
+    ],
+    [
+     "un po'",
+     "circa una carica ogni 2-3"
+    ],
+    [
+     "A + B senza altre parole",
+     "quantità simili, partendo da A e correggendo a occhio"
+    ]
+   ],
+   "chiusura": "La consistenza è quella della scala tè, latte, miele: tè molta acqua e poco pigmento, latte medio, miele poca acqua e molto pigmento. Viene dalle schede dei video, dove l'autore stende lo stesso tipo di colore. La miscela vera è quella della tua prova riuscita: fotografala e tienila come campione."
+  },
+  "prove": {
+   "titolo": "Le tre prove per ogni miscela",
+   "testo": "Sul foglietto delle miscele, una riga per miscela con tre campioni affiancati:",
+   "voci": [
+    [
+     "meno",
+     "metà della quantità indicata per il colore secondario (per «punta» mezzo tocco, per «poco» una carica ogni 6-8)"
+    ],
+    [
+     "come scritto",
+     "la convenzione qui sopra"
+    ],
+    [
+     "di più",
+     "il doppio del secondario"
+    ]
+   ],
+   "chiusura": "Ogni campione si stende alla consistenza indicata e si sfuma con acqua pulita verso il tè, così si vede la miscela anche diluita. Sotto ogni campione scrivi a matita il numero della prova; la prova che funziona per l'albero diventa la miscela vera."
+  },
+  "calcolatore_nota": "Il collegamento «prova nel calcolatore» apre il mescolatore della sezione Teoria dei colori con quei tubetti già scelti. Le parti traducono la convenzione delle dosi (colore base 10 parti, punta 1, poco 3, un po' 4, quantità simili 10): sono un punto di partenza, e l'anteprima è una stima a schermo con colori dei tubetti ancora provvisori."
  },
  "alberi": [
   {
@@ -101,17 +350,17 @@
    "colori": [
     {
      "m": "M1",
-     "ricetta": "giallo limone + punta di ceruleo",
+     "ricetta": "giallo limone con una punta di ceruleo, al latte (al tè per il velo di fondo)",
      "per": "luce nei rami o velo di fondo"
     },
     {
      "m": "M3",
-     "ricetta": "oltremare (BO) + giallo limone + Siena bruciata (TSB)",
+     "ricetta": "oltremare (BO) + giallo limone, poco Siena bruciata (TSB), al miele",
      "per": "i coni"
     },
     {
      "m": "M4",
-     "ricetta": "oltremare (BO) + ombra bruciata (TOB) + poco giallo",
+     "ricetta": "oltremare (BO) + un po' di ombra bruciata (TOB), poco giallo, al miele",
      "per": "le ombre"
     }
    ],
@@ -180,17 +429,17 @@
    "colori": [
     {
      "m": "M2",
-     "ricetta": "giallo limone + oltremare (BO)",
+     "ricetta": "giallo limone + un po' di oltremare (BO), al latte",
      "per": "i rami al sole"
     },
     {
      "m": "M3",
-     "ricetta": "oltremare (BO) + giallo limone + Siena bruciata (TSB)",
+     "ricetta": "oltremare (BO) + giallo limone, poco Siena bruciata (TSB), al miele",
      "per": "i rami in ombra"
     },
     {
      "m": "M5 e M11",
-     "ricetta": "giallo limone + Siena bruciata (TSB); oltremare (BO) + Siena bruciata (TSB)",
+     "ricetta": "giallo limone + un po' di Siena bruciata (TSB); Siena bruciata (TSB) + un po' di oltremare (BO); tutti e due al latte",
      "per": "il tronco, chiaro e scuro"
     }
    ],
@@ -259,17 +508,17 @@
    "colori": [
     {
      "m": "M5",
-     "ricetta": "giallo limone + Siena bruciata (TSB)",
+     "ricetta": "giallo limone + un po' di Siena bruciata (TSB), al latte",
      "per": "la prima stesura"
     },
     {
      "m": "M6",
-     "ricetta": "Siena bruciata (TSB) + cremisi",
+     "ricetta": "Siena bruciata (TSB) + poco cremisi, al latte",
      "per": "il centro"
     },
     {
      "m": "M7",
-     "ricetta": "cremisi + ombra bruciata (TOB)",
+     "ricetta": "cremisi + un po' di ombra bruciata (TOB), al miele",
      "per": "sotto e negli incavi"
     }
    ],
@@ -338,22 +587,22 @@
    "colori": [
     {
      "m": "M5",
-     "ricetta": "giallo limone + Siena bruciata (TSB)",
+     "ricetta": "giallo limone + un po' di Siena bruciata (TSB), al latte",
      "per": "la base calda"
     },
     {
      "m": "M6",
-     "ricetta": "Siena bruciata (TSB) + cremisi",
+     "ricetta": "Siena bruciata (TSB) + poco cremisi, al latte",
      "per": "il blocco"
     },
     {
      "m": "M7",
-     "ricetta": "cremisi + ombra bruciata (TOB)",
+     "ricetta": "cremisi + un po' di ombra bruciata (TOB), al miele",
      "per": "la fascia alla base"
     },
     {
      "m": "M4",
-     "ricetta": "oltremare (BO) + ombra bruciata (TOB) + poco giallo",
+     "ricetta": "oltremare (BO) + un po' di ombra bruciata (TOB), poco giallo, al miele",
      "per": "la cupola scura"
     }
    ],
@@ -422,17 +671,17 @@
    "colori": [
     {
      "m": "M5",
-     "ricetta": "giallo limone + Siena bruciata (TSB), con più giallo",
+     "ricetta": "giallo limone + poco Siena bruciata (TSB), al tè",
      "per": "il velo in luce"
     },
     {
      "m": "M9",
-     "ricetta": "ceruleo + cremisi, molto diluiti",
+     "ricetta": "cremisi con una punta di ceruleo, al tè",
      "per": "il velo in basso"
     },
     {
      "m": "M8",
-     "ricetta": "oltremare (BO) + cremisi",
+     "ricetta": "oltremare (BO) + un po' di cremisi, al miele",
      "per": "la massa in ombra"
     }
    ],
@@ -510,12 +759,12 @@
    "colori": [
     {
      "m": "M10",
-     "ricetta": "oltremare (BO) + ombra bruciata (TOB) + punta di cremisi",
+     "ricetta": "oltremare (BO) + ombra bruciata (TOB), punta di cremisi, al latte per i rami, verso il miele per le foglie",
      "per": "rami e foglie"
     },
     {
      "m": "M4",
-     "ricetta": "oltremare (BO) + ombra bruciata (TOB) + poco giallo",
+     "ricetta": "oltremare (BO) + un po' di ombra bruciata (TOB), poco giallo, al miele",
      "per": "le foglie viste di faccia"
     },
     {
@@ -587,12 +836,12 @@
     },
     {
      "m": "M10",
-     "ricetta": "oltremare (BO) + ombra bruciata (TOB) + punta di cremisi",
+     "ricetta": "oltremare (BO) + ombra bruciata (TOB), punta di cremisi, al latte",
      "per": "lo scuro subito sotto la riva"
     },
     {
      "m": "M12",
-     "ricetta": "ceruleo e oltremare (BO)",
+     "ricetta": "oltremare (BO) e ceruleo separati, al tè",
      "per": "l'acqua chiara"
     }
    ],
