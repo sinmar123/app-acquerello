@@ -36,12 +36,11 @@
       "titolo": "3. L'acquerello: acqua, carta, velature",
       "paragrafi": [
         "Nell'acquerello il bianco è la carta. Un velo di colore trasparente lascia passare la luce, che arriva alla carta, rimbalza e riattraversa il velo: per schiarire si aggiunge acqua, così sulla carta arriva meno pigmento.",
-        "<b>La diluizione: tè, latte, miele.</b> Il corso di Watercolor Fanatic (lezione 4) descrive la consistenza della miscela con tre parole facili da ricordare: <b>tè</b>, molta acqua e poco pigmento, per veli chiari; <b>latte</b>, consistenza media; <b>miele</b>, poca acqua e molto pigmento, per i colori pieni e gli scuri. Nelle schede dei video della sezione Alberi le stesse tre consistenze compaiono come «molto diluito», «medio» e «denso».",
-        "<b>La carta.</b> Su carta asciutta il segno resta dove lo metti e ha bordi netti; su carta umida il colore si allarga un poco e i bordi si ammorbidiscono; su carta bagnata il colore si espande e si fonde da solo con quelli vicini.",
+        "<b>Consistenze e carta.</b> Le tre consistenze della miscela (tè, latte, miele), gli stati della carta (asciutta, umida, bagnata e i momenti di mezzo) e come abbinarli sono spiegati nella sezione <a href=\"../principi/#consistenze\">Principi generali</a>, con le fonti.",
         "<b>Mescolare o velare.</b> Si può mescolare in tavolozza, e allora i pigmenti stanno nello stesso strato; oppure velare, cioè stendere un colore sopra un altro già asciutto, così la luce passa per due filtri uno sopra l'altro. Con pigmenti trasparenti i due risultati si somigliano, ma non sono uguali. Con quelli opachi, come il ceruleo Cotman e la terra d'ombra bruciata della tavolozza, lo strato sopra copre di più e l'ordine delle velature cambia il risultato.",
         "<b>Granulazione.</b> Alcuni pigmenti, come l'oltremare PB29, si depositano negli avvallamenti della carta e lasciano una trama a puntini. È uno degli effetti che nessun calcolatore vede."
       ],
-      "fonti": ["watercolor-fanatic", "handprint-mescolanza", "handprint-wcolor"]
+      "fonti": ["handprint-mescolanza", "handprint-wcolor"]
     },
     {
       "id": "tavolozza",
@@ -82,7 +81,6 @@
     "handprint-ruota": {"testo": "Bruce MacEvoy, handprint.com: mixing with a color wheel (the color wheel fallacy)", "url": "https://www.handprint.com/HP/WCL/color14.html"},
     "handprint-wcolor": {"testo": "Bruce MacEvoy, handprint.com: color theory, indice", "url": "https://www.handprint.com/HP/WCL/wcolor.html"},
     "wiki-km": {"testo": "Kubelka-Munk theory, Wikipedia (inglese)", "url": "https://en.wikipedia.org/wiki/Kubelka%E2%80%93Munk_theory"},
-    "watercolor-fanatic": {"testo": "Corso Watercolor Fanatic, lezione 4 (appunti di Sandro)", "url": ""},
     "cotman": {"testo": "Winsor &amp; Newton, Cotman Watercolour: tabella dei colori e dei pigmenti", "url": "https://www.winsornewton.com/pages/cotman-watercolour"},
     "cotman-cremisi": {"testo": "Winsor &amp; Newton, Cotman Alizarin Crimson Hue: formula attuale PR179 (il tubetto della tavolozza è della formula precedente, PR206)", "url": "https://www.winsornewton.com/en-ca/products/cotman-watercolour-alizarin-crimson-hue"},
     "spectraljs": {"testo": "Ronald van Wijnen, spectral.js (licenza MIT): tabelle spettrali usate dal calcolatore", "url": "https://github.com/rvanwijnen/spectral.js"},

@@ -118,7 +118,7 @@ CALCOLATORE_HTML = """
     <div class="camp-grande" id="mcamp"></div>
     <div class="esito-txt" id="mtxt"></div>
   </div>
-  <div class="striscia-tit">Striscia di diluizione, dal miele al tè (velo sul bianco della carta)</div>
+  <div class="striscia-tit">Striscia di diluizione, dal miele al tè (velo sul bianco della carta) · <a href="../principi/#consistenze">le tre consistenze</a></div>
   <div class="striscia" id="mstriscia"></div>
 </div>
 
