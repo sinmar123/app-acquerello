@@ -31,7 +31,21 @@ SEZIONI = [
         "badge": ["7 esercizi A5", "6 colori · 12 miscele", "39 estratti video", "7 infografiche in 4 fasi"],
         "script_genera": DATI_DIR / "alberi" / "pit-261013-video-gesti.py",
         "html_generato": DATI_DIR / "alberi" / "pit-261014-video-gesti-alberi.html",
-    }
+    },
+    {
+        "slug": "colori",
+        "numero": "2",
+        "titolo": "Teoria dei colori per l'acquerello",
+        "sottotitolo": "Munsell, luce e pigmento, acqua e carta, la tavolozza Cotman e un calcolatore di miscele",
+        "descrizione": (
+            "Tinta, valore e croma secondo Munsell; perché i pigmenti non si mescolano come le luci; "
+            "diluizione tè, latte, miele e velature; le schede dei sei tubetti Cotman; un calcolatore "
+            "che mescola i tubetti in parti intere e cerca la miscela per un colore scelto, tutto nel browser."
+        ),
+        "badge": ["5 capitoli", "6 tubetti Cotman", "calcolatore di miscele", "stime da verificare sul foglietto"],
+        "script_genera": DATI_DIR / "colori" / "genera-teoria-colori.py",
+        "html_generato": DATI_DIR / "colori" / "teoria-colori.html",
+    },
 ]
 
 
@@ -127,7 +141,7 @@ footer{{text-align:center;padding:18px;font-size:.8rem;color:#7a6f5d;border-top:
     {cards_html}
   </div>
 </main>
-<footer>Quaderno di studio ad acquerello · Aggiornato al 15 ottobre 2026</footer>
+<footer>Quaderno di studio ad acquerello · Aggiornato al 18 ottobre 2026</footer>
 </body>
 </html>
 """
