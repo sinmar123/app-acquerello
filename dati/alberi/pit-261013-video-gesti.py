@@ -58,12 +58,18 @@ def mmss(s):
     return f"{s // 60:02d}:{s % 60:02d}"
 
 def passi_con_video(d):
-    # Sigla del passo: albero e numero d'ordine del passo nella versione breve (A1-3 = terzo passo di A1).
+    tab = leggi_tabella()
     for t in d["alberi"]:
         s, nome = t["voce"].split(" ", 1)
-        for n, p in enumerate(t["passi"], 1):
-            if p.get("video"):
-                yield f"{s}-{n}", nome, p
+        if "modalita" in t:
+            for m in t["modalita"]:
+                for seg in m.get("segmenti", []):
+                    r = tab.get(seg, {})
+                    yield seg, nome, {"testo": m["proposta"], "video": {"id": r.get("video", ""), "minuto": r.get("minuto_scheda", "")}}
+        else:
+            for n, p in enumerate(t.get("passi", []), 1):
+                if p.get("video"):
+                    yield f"{s}-{n}", nome, p
 
 def principale(sigla):
     # «A5-6b» è il secondo pezzo del passo A5-6, per i passi che contengono due gesti.
@@ -149,8 +155,14 @@ def finestra(vid, t0, durata, passo, cartella, lato=400):
     raise RuntimeError(f"ffmpeg {vid} {t0}: {r.stderr[-300:]}")
 
 def testo_passo(d, sigla):
-    s, n = principale(sigla).split("-")
+    s = principale(sigla).split("-")[0]
     t = next(t for t in d["alberi"] if t["voce"].split()[0] == s)
+    if "modalita" in t:
+        for m in t["modalita"]:
+            if sigla in m.get("segmenti", []):
+                return m["proposta"]
+        return t["descrizione"]
+    n = principale(sigla).split("-")[1]
     return t["passi"][int(n) - 1]["testo"]
 
 def foglio(sigla, vid, t0, durata, passo, testo, nome, col=4, lato=400, titolo=None):
@@ -413,11 +425,12 @@ def pagina():
     mancano, video_usati = [], []
     cartella_strisce = os.path.join(LAVORO, "strisce")
 
-    def scatola(sigla, p):
+    def scatola(sigla, p=None):
         r = tab.get(sigla)
         if not r or not r["inizio"] or not r["fine"]:
             mancano.append(sigla)
-            vid, i0 = p["video"]["id"], sec(p["video"]["minuto"])
+            vid = (r or {}).get("video") or (p or {}).get("video", {}).get("id", "")
+            i0 = sec((r or {}).get("minuto_scheda") or (p or {}).get("video", {}).get("minuto", "00:00"))
             i1 = i0 + 20
         else:
             vid, i0, i1 = r["video"], sec(r["inizio"]), sec(r["fine"])
@@ -430,7 +443,7 @@ def pagina():
         riga_trad = (f'<p class="traduzione muto">{e(trad)}</p>' if trad.startswith("(") else
                      f'<p class="traduzione"><b>Nel video dice:</b> «{e(trad)}»</p>') if trad else ""
         yt = f"https://www.youtube.com/watch?v={vid}&t={i0}s"
-        return (f'<div class="video" data-passo="{e(sigla)}" data-id="{e(vid)}" data-inizio="{i0}" data-fine="{i1}">'
+        return (f'<div class="video" id="{e(sigla)}" data-passo="{e(sigla)}" data-id="{e(vid)}" data-inizio="{i0}" data-fine="{i1}">'
                 f'<button class="guarda" type="button"><span class="tri">▶</span><span class="lab">Guarda il gesto'
                 + (f': {e(etichetta)}' if etichetta else '') +
                 f'</span><small>{i1 - i0} s · {e(canale)}</small></button>'
@@ -449,43 +462,58 @@ def pagina():
     spec_info.loader.exec_module(mod_info)
 
     sezioni, indice, elenco = [], [], []
+    tot_modalita = 0
     for k, t in enumerate(d["alberi"], 1):
         s, nome = t["voce"].split(" ", 1)
+        n_mod = len(t.get("modalita", []))
+        tot_modalita += n_mod
         indice.append(f'<a href="#{s}">{e(t.get("breve", nome))}</a>')
-        elenco.append(f'<li><a href="#{s}">{e(nome)}</a></li>')
-        if t.get("ritaglio"):
-            rt = t["ritaglio"]
-            p_ill = os.path.join(QUI, "illustrazioni", rt["file"])
-            im_rt = Image.open(p_ill) if os.path.exists(p_ill) else c.apri(rt["file"])
-            if rt.get("box"):
-                im_rt = im_rt.crop(tuple(rt["box"]))
-            src_rt = c.jpeg(im_rt, 1000, 80)
-            figura = (f'<div class="figura"><figure class="fig-dettaglio"><img src="{src_rt}" alt="{e(rt.get("didascalia", nome))}">'
-                      f'<figcaption>{e(rt.get("didascalia", "Dettaglio ad acquerello."))}</figcaption></figure></div>')
-        elif t.get("illustrazione"):
+        elenco.append(f'<li><a href="#{s}"><b>{e(nome)}</b> <span class="cnt-mod">({n_mod} modalità nei video)</span></a></li>')
+        if t.get("illustrazione"):
             il = t["illustrazione"]
-            ill = c.jpeg(Image.open(os.path.join(QUI, "illustrazioni", il["file"])), 700, 72)
+            ill = c.jpeg(Image.open(os.path.join(QUI, "illustrazioni", il["file"])), 1000, 82)
             figura = (f'<div class="figura"><figure><img src="{ill}" alt="{e(il["didascalia"])}"><figcaption>{e(il["didascalia"])}</figcaption></figure></div>')
         else:
             figura = ""
-        colori = " · ".join(f'<b>{e(x["m"])}</b> {e(x["ricetta"])}, {e(x["per"])}' for x in t["colori"])
-        pennelli = f'<p class="pennelli"><b>Pennelli:</b> {e(t["pennelli"])}</p>' if t.get("pennelli") else ""
-        foglietto = f'<div class="foglietto"><b>Esercizio sul foglietto A5:</b> {e(t["foglietto"])}</div>' if t.get("foglietto") else ""
-        passi = []
-        for n, p in enumerate(t["passi"], 1):
-            sigla = f"{s}-{n}"
-            tag = '<span class="tag prop">proposta</span>' if p.get("proposta") else ""
-            if p.get("video"):
-                corpo = scatola(sigla, p) + "".join(scatola(x, p) for x in sorted(tab) if x != sigla and principale(x) == sigla)
-            else:
-                corpo = '<p class="senza">Senza video.</p>'
-            passi.append(f'<li class="passo{" con-video" if p.get("video") else ""}" id="{sigla}">'
-                         f'<p class="testo">{pill(p.get("carta"))} {e(p["testo"])} {tag}</p>{corpo}</li>')
-        blocco_coda = mod_info.rendi_infografica(s, t, e, pill)
+
+        blocco_colori = ""
+        if t.get("colori_studio"):
+            blocco_colori += f'<p class="colori studio"><b>🎨 Colori in studio (proposta libera):</b> {e(t["colori_studio"])}</p>'
+        if t.get("colori_aperto"):
+            blocco_colori += f'<p class="colori aperto"><b>🎒 All\'aperto (coi <a href="#miscele">6 colori di base</a>):</b> {e(t["colori_aperto"])}</p>'
+        elif t.get("colori"):
+            colori = " · ".join(f'<b>{e(x["m"])}</b> {e(x["ricetta"])}, {e(x["per"])}' for x in t["colori"])
+            blocco_colori += f'<p class="colori"><b>Colori:</b> {colori}</p>'
+
+        pennelli = f'<p class="pennelli"><b>🖌 Pennelli e attrezzi:</b> {e(t["pennelli"])}</p>' if t.get("pennelli") else ""
+        foglietto = f'<div class="foglietto"><b>📄 Come esercitarsi sul foglietto A5:</b> {e(t["foglietto"])}</div>' if t.get("foglietto") else ""
+
+        schede_mod = []
+        for m in t.get("modalita", []):
+            id_mod = m["id"]
+            info_svg = mod_info.rendi_infografica_modalita(id_mod, e, pill)
+            players = "".join(scatola(seg) for seg in m.get("segmenti", []))
+            schede_mod.append(
+                f'<article class="modalita-card" id="{e(id_mod)}">'
+                f'<div class="mod-head">'
+                f'<h3>{e(m["titolo"])}</h3>'
+                f'<span class="mod-autore">Video: {e(m["autore"])}</span>'
+                f'</div>'
+                f'<p class="mod-proposta"><b>Cosa propone il video:</b> {e(m["proposta"])}</p>'
+                f'<div class="mod-meta">'
+                f'<p><b>🎨 Colori usati nel video:</b> {e(m["colori_video"])}</p>'
+                f'<p><b>🖌 Pennelli e attrezzi nel video:</b> {e(m["pennelli_video"])}</p>'
+                f'</div>'
+                f'{info_svg}'
+                f'<div class="mod-videos">{players}</div>'
+                f'</article>'
+            )
+
+        blocco_coda = mod_info.rendi_coda_albero(t, e)
         sezioni.append(f'<section class="albero" id="{s}"><h2><span class="sig">{k}</span> {e(nome)}</h2>'
                        f'<p class="dove">{e(t["descrizione"])}</p>{figura}'
-                       f'<p class="colori"><b>Colori:</b> {colori}</p>{pennelli}{foglietto}'
-                       f'<ol class="passi">{"".join(passi)}</ol>{blocco_coda}</section>')
+                       f'{blocco_colori}{pennelli}{foglietto}'
+                       f'<div class="modalita-lista">{"".join(schede_mod)}</div>{blocco_coda}</section>')
 
     esercizi = "".join(f'<li><b>{e(x["titolo"])}.</b> {e(x["testo"])}</li>' for x in a.get("esercizi", []))
     if a.get("principi"):
@@ -502,30 +530,31 @@ def pagina():
 <div id="avviso" hidden></div>
 <section class="intro">
 <div class="guida">
-<h3>Come funziona questo tutorial</h3>
+<h3>Come funziona questa sezione</h3>
 <ul class="come">{esercizi}</ul>
 </div>
-<details class="miscele-box" id="miscele"><summary>I 6 colori di base e le 12 miscele (M1-M12) da provare sul primo foglietto</summary>
+<details class="miscele-box" id="miscele"><summary>All'aperto (en plein air): i 6 colori di base e le 12 miscele (M1-M12) per dipingere con una scatola leggera</summary>
+<p class="nota-studio-aperto">In studio puoi usare liberamente tutti i tubetti indicati nelle singole modalità; quando invece dipingi all'aperto o vuoi esercitarti a ricavare tutto da pochi tubetti, questa tavolozza da 6 colori ti permette di preparare tutte le tinte:</p>
 {sei_colori}
 {riquadri}
 <table class="mix">{miscele}</table></details>
 <div class="uso-video">
-<h3>Come seguire i passi e usare i video</h3>
-<p class="legenda"><b>Stato del foglietto a inizio passo:</b> {pill('bagnata')} lucida d'acqua, il colore corre · {pill('umida')} opaca, i bordi si fondono · {pill('asciutta')} il tratto resta netto. <a href="../principi/#carta-umidita">Gli stati della carta, momenti di mezzo compresi, nei Principi generali</a>.</p>
+<h3>Come leggere le infografiche e usare i video</h3>
+<p class="legenda"><b>Stato della carta nelle fasi dell'infografica:</b> {pill('bagnata')} lucida d'acqua, il colore corre · {pill('umida')} opaca, i bordi si fondono · {pill('asciutta')} il tratto resta netto. <a href="../principi/#carta-umidita">Gli stati della carta, momenti di mezzo compresi, nei Principi generali</a>.</p>
 <ul class="come">
-<li>Tocca <b>▶ Guarda il gesto</b>: il video parte nel punto giusto e si ferma da solo dopo 7-27 secondi.</li>
-<li><b>Da capo</b> fa ripartire il pezzo, <b>Lento</b> lo porta a metà velocità per studiare il movimento della mano, <b>Ripeti</b> lo ripete in continuo mentre provi sul foglietto.</li>
+<li>Ogni modalità presenta prima <b>cosa propone l'autore</b> (approccio, colori e pennelli), poi l'<b>infografica in 3 fasi</b> costruita su quel video e infine il <b>lettore video</b>.</li>
+<li>Tocca <b>▶ Guarda il gesto</b>: il video parte nel punto giusto e si ferma da solo alla fine del passaggio.</li>
+<li><b>Da capo</b> fa ripartire l'estratto, <b>Lento</b> lo porta a metà velocità per studiare il movimento della mano, <b>Ripeti</b> lo ripete in continuo mentre provi sul foglietto.</li>
 <li><b>YouTube ↗</b> apre lo stesso punto nell'app o nel sito di YouTube.</li>
-<li>Ogni pezzo mostra il gesto sul soggetto scelto dall'autore del video: dove si scosta dal passo in qualcosa che conta, lo avvisa una riga in corsivo sotto il pulsante. Il cartellino <span class="tag prop">proposta</span> segnala un adattamento.</li>
 </ul>
 </div>
-<h3>I sette esercizi</h3>
+<h3>I sei esempi di alberi e arbusti ({tot_modalita} modalità nei video)</h3>
 <ol class="alberi">{"".join(elenco)}</ol>
 </section>
 {"".join(sezioni)}
 <footer><h2>I video</h2><p>I video restano dei loro autori: la pagina li mostra col lettore di YouTube, senza copiarli. Grazie a:</p>
 <ul class="crediti">{crediti}</ul>
-<p>Le immagini di riferimento in testa a ciascun esercizio e le infografiche in 4 fasi sono state create apposta per questa guida; tocca qualsiasi immagine per ingrandirla e scorrerla con le frecce.</p></footer>"""
+<p>Gli studi ad acquerello su foglietto A5 in testa a ciascun esempio e le 24 infografiche in 3 fasi dedicate a ciascun video sono stati realizzati per questa guida; tocca qualsiasi immagine per ingrandirla.</p></footer>"""
     html_ = f"""<!doctype html>
 <html lang="it"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -592,7 +621,7 @@ def parte_colori(a, e):
 CSS = """
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; scroll-padding-top: 52px; }
-body { margin: 0 auto; max-width: 760px; padding: 0 14px 40px; font-family: system-ui, 'Segoe UI', Roboto, Arial, sans-serif;
+body { margin: 0 auto; max-width: 820px; padding: 0 14px 40px; font-family: system-ui, 'Segoe UI', Roboto, Arial, sans-serif;
        font-size: 17px; line-height: 1.45; color: #1f1f1f; background: #fbfaf7; }
 h1 { font-size: 1.45em; line-height: 1.2; margin: 18px 0 4px; color: #2c4f3a; }
 h2 { font-size: 1.3em; margin: 0 0 4px; color: #2c4f3a; }
@@ -612,9 +641,12 @@ nav.salti a { flex: none; text-decoration: none; color: #2c4f3a; border: 1px sol
 .intro ul.come { padding-left: 20px; margin: 6px 0 0; } .intro li { margin-bottom: 6px; }
 figure { margin: 0; } figure img { width: 100%; height: auto; display: block; border-radius: 6px; cursor: zoom-in; }
 figcaption { font-size: .85em; color: #555; margin-top: 3px; }
-ol.alberi { columns: 2; column-gap: 2.2em; padding-left: 20px; margin: 6px 0 12px; } ol.alberi li { break-inside: avoid; } ol.alberi a { color: inherit; text-decoration: none; }
+ol.alberi { columns: 2; column-gap: 2.2em; padding-left: 20px; margin: 6px 0 12px; } ol.alberi li { break-inside: avoid; margin-bottom: 4px; } ol.alberi a { color: inherit; text-decoration: none; }
+.cnt-mod { font-size: .84em; color: #4a6353; font-weight: 400; }
+@media (max-width: 600px) { ol.alberi { columns: 1; } }
 details { margin: 12px 0; background: #f1efe8; border-radius: 8px; padding: 9px 12px; border: 1px solid #dfd9cc; }
 summary { font-weight: 600; cursor: pointer; color: #2c4f3a; }
+.nota-studio-aperto { margin: 8px 0 6px; font-size: .92em; color: #333; }
 .sei-colori { margin: 8px 0; font-size: .95em; } .sei-colori ul.tav { margin: 4px 0; padding-left: 20px; } .sei-colori li { margin-bottom: 2px; }
 .rimando { margin: 6px 0; font-size: .92em; } .rimando a, a.calc { color: #2c6a4a; font-weight: 600; }
 .dosi, .prove { background: #fff8ea; border-left: 4px solid #c87a28; border-radius: 6px; padding: 7px 10px; margin: 8px 0; font-size: .9em; color: #3a2a10; }
@@ -624,37 +656,41 @@ summary { font-weight: 600; cursor: pointer; color: #2c4f3a; }
 .cons, .pigm { font-size: .88em; color: #3d352b; } a.calc { font-size: .85em; }
 table.mix { border-collapse: collapse; width: 100%; } table.mix td { border-bottom: 1px solid #d8e2da; padding: 5px 6px; vertical-align: top; }
 td.m { font-weight: 700; color: #2c4f3a; width: 3em; }
-section.albero { border-top: 3px solid #3d6b4f; padding-top: 14px; margin-top: 26px; }
+section.albero { border-top: 3px solid #3d6b4f; padding-top: 14px; margin-top: 28px; }
 .figura { margin-bottom: 10px; } .figura img { width: 100%; height: auto; }
-.colori, .pennelli { font-size: .9em; background: #f1efe8; border-radius: 8px; padding: 7px 10px; margin: 6px 0; }
-.foglietto { font-size: .92em; background: #eef4ef; border-left: 4px solid #3d6b4f; border-radius: 6px; padding: 8px 10px; margin: 8px 0 10px; }
-.proposta-info { background: #eef4ef; border: 2px solid #3d6b4f; border-radius: 12px; padding: 14px 14px 12px; margin-top: 16px; }
-.proposta-head { margin-bottom: 12px; border-bottom: 1px solid #c5d7ca; padding-bottom: 8px; }
-.proposta-head h3 { margin: 0 0 4px; font-size: 1.12em; color: #1f3c2b; }
-.proposta-head p { margin: 0; font-size: .92em; color: #354a3d; }
-.fasi-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-@media (max-width: 560px) { .fasi-grid { grid-template-columns: 1fr; } }
-.fase-card { background: #fff; border: 1px solid #c9d8cd; border-radius: 10px; padding: 10px 12px; display: flex; flex-direction: column; gap: 6px; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
-.fase-testa { display: flex; align-items: center; gap: 8px; }
-.fase-num { flex: none; width: 26px; height: 26px; border-radius: 50%; background: #2c4f3a; color: #fff; font-weight: 700; font-size: .9em; display: inline-flex; align-items: center; justify-content: center; }
-.fase-tit { font-weight: 700; font-size: .96em; color: #1f3c2b; line-height: 1.25; }
-.fase-svg svg { width: 100%; height: auto; display: block; border-radius: 6px; }
-.fase-meta { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; font-size: .84em; color: #444; }
-.fase-pen { background: #f3f1ea; border: 1px solid #ded8c8; border-radius: 7px; padding: 1px 7px; font-weight: 600; color: #3a3222; }
-.fase-chips { display: flex; flex-wrap: wrap; gap: 5px; }
-.chip-col { display: inline-flex; align-items: center; gap: 5px; font-size: .8em; background: #f8f6f0; border: 1px solid #dcd6c8; border-radius: 12px; padding: 1px 8px; color: #2b2b2b; font-weight: 600; }
-.chip-col .dot { width: 11px; height: 11px; border-radius: 50%; border: 1px solid rgba(0,0,0,.25); flex: none; }
-.fase-txt { margin: 2px 0 0; font-size: .9em; line-height: 1.4; color: #222; }
-.info-coda { margin-top: 12px; display: flex; flex-direction: column; gap: 6px; }
-.info-check { font-size: .88em; border-radius: 8px; padding: 7px 10px; line-height: 1.38; }
-.info-check.ok { background: #ffffff; border-left: 4px solid #3d6b4f; color: #1f3c2b; }
-.info-check.att { background: #fff8ea; border-left: 4px solid #c87a28; color: #4a3010; }
-ol.passi { padding-left: 0; list-style: none; counter-reset: passo; }
-li.passo { counter-increment: passo; position: relative; padding: 10px 0 12px 36px; border-bottom: 1px solid #e3e0d8; }
-li.passo::before { content: counter(passo); position: absolute; left: 0; top: 10px; width: 26px; height: 26px; border-radius: 50%;
-                   background: #3d6b4f; color: #fff; font-weight: 700; text-align: center; line-height: 26px; font-size: .9em; }
-.testo { margin: 0 0 8px; }
-.senza { margin: 0; font-size: .85em; color: #666; font-style: italic; }
+.colori, .pennelli { font-size: .92em; background: #f1efe8; border-radius: 8px; padding: 8px 11px; margin: 6px 0; }
+.colori.studio { background: #fffdf6; border-left: 4px solid #c87a28; border-top: 1px solid #e8dec8; border-right: 1px solid #e8dec8; border-bottom: 1px solid #e8dec8; }
+.colori.aperto { background: #f3f7f4; border-left: 4px solid #3d6b4f; border-top: 1px solid #d4e2d8; border-right: 1px solid #d4e2d8; border-bottom: 1px solid #d4e2d8; }
+.colori a { color: #2c6a4a; font-weight: 600; }
+.foglietto { font-size: .92em; background: #eef4ef; border-left: 4px solid #3d6b4f; border-radius: 6px; padding: 8px 10px; margin: 8px 0 14px; }
+.modalita-lista { display: flex; flex-direction: column; gap: 18px; margin-top: 14px; }
+.modalita-card { background: #ffffff; border: 1.5px solid #cbd9cf; border-radius: 12px; padding: 14px 15px; box-shadow: 0 2px 6px rgba(0,0,0,.04); }
+.mod-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; flex-wrap: wrap; border-bottom: 1px solid #e1eae3; padding-bottom: 8px; margin-bottom: 9px; }
+.mod-head h3 { margin: 0; font-size: 1.08em; color: #1f3c2b; }
+.mod-autore { font-size: .82em; font-weight: 600; color: #2c4f3a; background: #e8f1eb; border: 1px solid #bdd3c3; border-radius: 999px; padding: 2px 10px; white-space: nowrap; }
+.mod-proposta { margin: 0 0 8px; font-size: .95em; color: #222; }
+.mod-meta { background: #f8f6f0; border: 1px solid #e5dfd2; border-radius: 8px; padding: 8px 11px; margin-bottom: 11px; font-size: .88em; color: #333; }
+.mod-meta p { margin: 3px 0; }
+.mod-info { background: #eef4ef; border: 1px solid #c5d7ca; border-radius: 10px; padding: 10px 11px 11px; margin-bottom: 11px; }
+.mod-info-tit { font-weight: 700; font-size: .9em; color: #1f3c2b; margin-bottom: 8px; }
+.fasi-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.fasi-grid.tre { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 680px) { .fasi-grid, .fasi-grid.tre { grid-template-columns: 1fr; } }
+.fase-card { background: #fff; border: 1px solid #c9d8cd; border-radius: 9px; padding: 9px 10px; display: flex; flex-direction: column; gap: 5px; box-shadow: 0 1px 2px rgba(0,0,0,.03); }
+.fase-testa { display: flex; align-items: center; gap: 7px; }
+.fase-num { flex: none; width: 24px; height: 24px; border-radius: 50%; background: #2c4f3a; color: #fff; font-weight: 700; font-size: .85em; display: inline-flex; align-items: center; justify-content: center; }
+.fase-tit { font-weight: 700; font-size: .92em; color: #1f3c2b; line-height: 1.22; }
+.fase-svg svg { width: 100%; height: auto; display: block; border-radius: 5px; }
+.fase-meta { display: flex; align-items: center; gap: 5px; flex-wrap: wrap; font-size: .8em; color: #444; }
+.fase-pen { background: #f3f1ea; border: 1px solid #ded8c8; border-radius: 6px; padding: 1px 6px; font-weight: 600; color: #3a3222; }
+.fase-chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.chip-col { display: inline-flex; align-items: center; gap: 4px; font-size: .76em; background: #f8f6f0; border: 1px solid #dcd6c8; border-radius: 12px; padding: 1px 7px; color: #2b2b2b; font-weight: 600; }
+.chip-col .dot { width: 10px; height: 10px; border-radius: 50%; border: 1px solid rgba(0,0,0,.25); flex: none; }
+.fase-txt { margin: 2px 0 0; font-size: .86em; line-height: 1.36; color: #222; }
+.info-coda { margin-top: 14px; display: flex; flex-direction: column; gap: 6px; }
+.info-check { font-size: .9em; border-radius: 8px; padding: 8px 11px; line-height: 1.4; }
+.info-check.ok { background: #ffffff; border: 1px solid #c9d8cd; border-left: 4px solid #3d6b4f; color: #1f3c2b; }
+.info-check.att { background: #fff8ea; border: 1px solid #ecd9b5; border-left: 4px solid #c87a28; color: #4a3010; }
 .pill { display: inline-block; font-size: .78em; border-radius: 8px; padding: 0 7px; vertical-align: 1px; }
 .pill.bagnata { background: #4f86c6; color: #fff; } .pill.umida { background: #a9cbee; color: #123; }
 .pill.asciutta { background: #e6d7b0; color: #3a3020; }
