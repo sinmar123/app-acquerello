@@ -5,10 +5,10 @@ Istruzioni per gli agenti che lavorano su questo repository, nel workspace di Sa
 ## Che cosa c'è
 
 - `dati/<sezione>/`: i sorgenti di ogni sezione del sito. Per `alberi`:
-  - `pit-261014-video-gesti-alberi.json`: testi della pagina, alberi, passi, colori e miscele;
-  - `pit-261013-video-gesti-segmenti.csv`: gli estratti dei video, un pezzo per riga con inizio e fine;
+  - `pit-261014-video-gesti-alberi.json`: testi della pagina, i 6 esempi di alberi e arbusti, le 24 modalità video, le proposte di colore (libere in studio, 6 colori di base e 12 miscele all'aperto);
+  - `pit-261013-video-gesti-segmenti.csv`: i 31 estratti dei video, un pezzo per riga con inizio e fine;
   - `pit-261013-alberi-selezione-video*.csv`: canale e titolo dei video scelti;
-  - `pit-261015-infografiche.py`: le infografiche in 4 fasi in fondo a ogni albero;
+  - `pit-261015-infografiche.py`: le 24 infografiche SVG in 3 fasi dedicate a ciascuna modalità video;
   - `pit-261013-video-gesti.py`: il generatore della pagina (comando `pagina`) e gli strumenti di studio dei video;
   - `illustrazioni/`: le immagini della pagina, fatte con Nano Banana da `pit-261013-illustrazioni.py`.
 - `dati/principi/`, la sezione Principi generali, prima nell'indice:

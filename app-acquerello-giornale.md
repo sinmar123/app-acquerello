@@ -13,6 +13,7 @@ Le voci di giornale di questo progetto sono registrate in `diario/voci/` con `pr
 
 | Data | Ora | Agente | Tipo | Cosa ho fatto | Ore |
 |---|---|---|---|---|---|
+| 2026-10-19 | 08:15 | AGY | studio | Rifacimento completo della sezione Alberi (/alberi/): sganciata la sezione dall'immagine del lago e rimosso A7 (riflessi), sostituiti i ritagli fotografici con i 6 studi autonomi su foglietto A5 (A1-A6), strutturato ogni albero per modalità video (24 modalità su 31 estratti video, rimossi i duplicati A2-4, A2-5, A4-2) con infografica SVG dedicata in 3 fasi per ciascun video (72 vignette SVG totali) e indicazioni sui colori liberi da studio affiancate alla tavolozza ridotta per l'aperto. Aperta PR #12 su GitHub con CI verde. |  |
 | 2026-10-18 | 16:51 | GBOT-app-acquerello | studio | Chiusura giornata 18/10: sezioni Principi, Alberi rivista, Teoria dei colori con calcolatore, Marche; consegne per il prossimo agente nel CHANGELOG |  |
 | 2026-10-18 | 16:39 | GBOT-app-acquerello | studio | Colori senza marche in Alberi e Teoria dei colori (nome comune e pigmento: cremisi PR206, ceruleo PB15 blu ftalo) e nuova sezione Marche e tubetti con sei serie da pagine ufficiali, fonte e data su ogni riga; ramo gbot/marche sopra gbot/principi, pull request aperta senza unione |  |
 | 2026-10-18 | 16:32 | GBOT-app-acquerello | studio | Nuova sezione Principi generali, prima nell'indice: consistenze te/latte/miele, stati della carta e momenti di mezzo, pennello e carta, bordi, asciugatura, tipi di carta, ogni frase con la fonte; rimandi da Alberi e Teoria dei colori, tolto 'fredda' dalla legenda; pull request aperta senza unione |  |
@@ -24,6 +25,6 @@ Le voci di giornale di questo progetto sono registrate in `diario/voci/` con `pr
 | 2026-10-16 | 14:09 | CC | studio | Riordino come per le NTC: GitHub copia principale. Il sito si genera dai soli file del repository, coi sorgenti degli alberi in dati/alberi e le pagine identiche byte per byte a quelle pubblicate; istruzioni per gli agenti cloud (AGENTS.md, CLAUDE.md, .claude/settings.json), prompt di avvio e workflow Sito, con il controllo costruisci verde sulla PR 1 e su main. Pubblicazione da GitHub ferma finché manca la chiave Cloudflare |  |
 | 2026-10-15 | 18:06 | AGY | studio | Creata app-acquerello con repo privato GitHub sinmar123/app-acquerello e pubblicato il sito statico multi-sezione su Cloudflare Pages (app-acquerello.pages.dev), con la prima sezione /alberi/ |  |
 
-10 voci registrate, nessuna con le ore compilate.
+11 voci registrate, nessuna con le ore compilate.
 
 <!-- voci-fine -->
