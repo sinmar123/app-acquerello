@@ -35,14 +35,14 @@ SEZIONI = [
     {
         "slug": "alberi",
         "numero": "2",
-        "titolo": "Alberi ad acquerello: i gesti nei video",
-        "sottotitolo": "Sette esercizi su foglietti A5 partendo da 6 colori di base e 12 miscele",
+        "titolo": "Alberi ad acquerello: esempi, modalità e gesti nei video",
+        "sottotitolo": "Sei esempi di alberi e arbusti con 24 modalità nei video, un'infografica per ciascun video e colori liberi in studio o 6 all'aperto",
         "descrizione": (
-            "Abeti fitti, abeti vecchi, faggi, siepi d'autunno, latifoglie brinate, arbusti in controluce "
-            "e riflessi nell'acqua: 35 passi con 39 estratti video al secondo esatto del gesto, "
-            "traduzione in italiano del parlato e infografica riepilogativa in 4 fasi."
+            "Abeti e conifere in gruppo, abeti alti e radi contro il cielo, chiome tonde d'autunno, siepi e cespugli, "
+            "alberi invernali con fusti chiari e brina, rami sottili e foglie brinate in primo piano: per ciascun esempio "
+            "i video propongono diverse modalità di sviluppo, ognuna spiegata da un'infografica in 3 fasi e da 31 estratti video al secondo esatto."
         ),
-        "badge": ["7 esercizi A5", "6 colori · 12 miscele", "39 estratti video", "7 infografiche in 4 fasi"],
+        "badge": ["6 esempi di alberi", "24 modalità e infografiche", "31 estratti video", "colori liberi in studio · 6 all'aperto"],
         "script_genera": DATI_DIR / "alberi" / "pit-261013-video-gesti.py",
         "html_generato": DATI_DIR / "alberi" / "pit-261014-video-gesti-alberi.html",
     },
@@ -163,13 +163,13 @@ footer{{text-align:center;padding:18px;font-size:.8rem;color:#7a6f5d;border-top:
 </header>
 <main>
   <div class="intro-note">
-    Raccolta in crescita di quaderni operativi per esercitarsi ad acquerello: ogni sezione affronta un tema con tavolozza ridotta, estratti video mirati al singolo gesto e schede riepilogative passo per passo.
+    Raccolta in crescita di quaderni operativi per esercitarsi ad acquerello: ogni sezione affronta un tema con proposte di colore libere per lo studio e tavolozza ridotta da 6 colori per l'aperto, estratti video mirati al singolo gesto e infografiche passo per passo.
   </div>
   <div class="grid">
     {cards_html}
   </div>
 </main>
-<footer>Quaderno di studio ad acquerello · Aggiornato al 18 ottobre 2026</footer>
+<footer>Quaderno di studio ad acquerello · Aggiornato al 19 ottobre 2026</footer>
 </body>
 </html>
 """
