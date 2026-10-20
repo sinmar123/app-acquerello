@@ -574,6 +574,8 @@ main{{max-width:820px;margin:0 auto;padding:22px 14px 12px}}
 .come-funziona{{background:#fffdf8;border:1px solid #dfd5c3;border-top:4px solid #263529;border-radius:12px;padding:18px 20px;margin-bottom:24px;box-shadow:0 2px 8px rgba(31,28,23,.05)}}
 .come-funziona h2{{margin:0 0 8px;font-size:1.18rem;color:#263529}}
 .come-funziona p{{margin:0 0 12px;font-size:.92rem;color:#363027}}
+.cf-origine{{background:#eef4ef;border:1px solid #cadbce;border-left:4px solid #263529;border-radius:8px;padding:12px 14px;margin:0 0 14px;font-size:.91rem;color:#263529}}
+.cf-origine strong{{color:#1b2b20}}
 .cf-passi{{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0 14px}}
 @media(max-width:640px){{.cf-passi{{grid-template-columns:1fr}}}}
 .cf-passo{{background:#f7f2e7;border:1px solid #e2d7c5;border-radius:8px;padding:10px 12px;font-size:.88rem;color:#2e2820}}
@@ -611,10 +613,13 @@ footer a{{color:#5a4d3b}}
   <p>Repertorio analitico di procedimenti esecutivi, dinamica acqua-pigmento, colorimetria e soggetti pittorici</p>
 </header>
 <main>
-  <section class="come-funziona" aria-label="Struttura e metodo di consultazione">
-    <h2>Struttura e metodo di consultazione</h2>
+  <section class="come-funziona" aria-label="Origine del progetto, struttura e metodo di consultazione">
+    <h2>Origine del progetto, struttura e metodo di consultazione</h2>
+    <div class="cf-origine">
+      <strong>Acquerello e intelligenza artificiale:</strong> questo lavoro nasce dal duplice interesse dell'autore per la pittura ad acquerello e per i sistemi di intelligenza artificiale. Nello studio pratico della tecnica pittorica è emerso come gli strumenti di IA possano costituire un ausilio metodologico efficace anche per l'apprendimento di una disciplina artistica tradizionale: chi studia oggi l'acquerello dispone su YouTube di migliaia di ore di dimostrazioni filmate di valore, ma disperse e prive di un indice sistematico. Il sito può quindi essere letto anche come un tentativo di ordinare e rendere consultabile quella vasta produzione audiovisiva con l'ausilio dell'IA, impiegata per selezionare i passaggi significativi, indicizzarli al secondo esatto, porre a confronto le soluzioni di autori diversi e sintetizzarle in tavole sinottiche a tre fasi.
+    </div>
     <p>
-      Questo repertorio raccoglie e sistematizza i procedimenti fondamentali della pittura ad acquerello per la <strong>sperimentazione diretta su campioni di studio</strong> (formato consigliato A5 in puro cotone, 300 g/m²).
+      Il repertorio sistematizza i procedimenti fondamentali per la <strong>sperimentazione diretta su campioni di studio</strong> (formato consigliato A5 in puro cotone, 300 g/m²).
       Ogni affermazione tecnica, sequenza gestuale o dato merceologico è ricondotto a una fonte documentale verificabile secondo un percorso articolato in cinque sezioni:
     </p>
     <div class="cf-passi">

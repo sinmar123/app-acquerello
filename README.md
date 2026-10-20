@@ -2,6 +2,8 @@
 
 Repertorio tecnico-didattico ad accesso aperto dedicato allo studio sistematico della pittura ad acquerello: principi idrodinamici, morfologia ed esecuzione degli alberi con tavole sinottiche e analisi dei gesti nei video, colorimetria e simulatore spettrale, merceologia dei pigmenti.
 
+Il progetto nasce dal duplice interesse dell'autore per la pittura ad acquerello e per i sistemi di intelligenza artificiale: nello studio pratico della tecnica è emerso come l'IA possa costituire un ausilio metodologico efficace anche per ordinare, indicizzare al secondo e porre a confronto la vastissima produzione di dimostrazioni filmate disponibile su YouTube, codificandola in schede comparative e tavole sinottiche a tre fasi.
+
 - **Sito online:** [https://app-acquerello.pages.dev](https://app-acquerello.pages.dev)
 - **Repository GitHub:** [https://github.com/sinmar123/app-acquerello](https://github.com/sinmar123/app-acquerello)
 - **Licenza:** [CC BY 4.0 per testi, dati e illustrazioni · MIT per il codice](LICENSE)
