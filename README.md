@@ -6,7 +6,7 @@ Repertorio tecnico-didattico ad accesso aperto dedicato allo studio sistematico 
 - **Repository GitHub:** [https://github.com/sinmar123/app-acquerello](https://github.com/sinmar123/app-acquerello)
 - **Licenza:** [CC BY 4.0 per testi, dati e illustrazioni · MIT per il codice](LICENSE)
 
-Il repository è autonomo: contiene tutti i file di dati, le tavole sinottiche SVG, le illustrazioni e gli script necessari a generare l'intero sito. Chiunque può proporre rettifiche, integrazioni documentali o nuovi riferimenti video tramite il modulo in calce a ogni pagina del sito oppure secondo le indicazioni di [`CONTRIBUTING.md`](CONTRIBUTING.md).
+Il repository è autonomo: contiene tutti i file di dati, le tavole sinottiche SVG, le illustrazioni e gli script necessari a generare l'intero sito. **Il repertorio è in fase di sviluppo e progressiva estensione:** accanto alle sezioni teorico-metodologiche generali (*Principi tecnici*, *Colorimetria*, *Merceologia*), il modulo sulla *Morfologia degli alberi* è il primo pubblicato in quanto primo argomento affrontato nel corso di studio; seguiranno progressivamente nuove monografie dedicate agli altri temi classici dell'acquerello (cieli e formazioni nuvolose, elementi botanici e fiori, specchi d'acqua e riflessi, masse rocciose e architetture). Chiunque può proporre rettifiche, integrazioni documentali o nuovi riferimenti video tramite il modulo in calce a ogni pagina del sito oppure secondo le indicazioni di [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ## Sezioni attive
 
