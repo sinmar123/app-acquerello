@@ -1,6 +1,6 @@
 {
-  "nota": "I sei colori di base, col nome comune e il pigmento: i tubetti corrispondenti, marca per marca, sono in dati/marche/marche.json. Il pigmento del cremisi (PR206) viene dall'etichetta del tubetto di Sandro. trasparenza_tubetto c'è solo dove serve alla pratica (velature) ed è quella del tubetto della tavolozza. I colori sRGB e la forza di tintura sono valori INDICATIVI E PROVVISORI scelti a occhio per far funzionare il calcolatore: non sono misure. Vanno sostituiti con la taratura sulle prove di Sandro (campione pieno di ogni tubetto, fotografato o misurato).",
-  "fonte_colori": "provvisori, stima a occhio del colore pieno su carta bianca; da tarare sulle prove di Sandro",
+  "nota": "I sei colori di base, col nome comune e il pigmento: i tubetti corrispondenti, marca per marca, sono in dati/marche/marche.json. Il pigmento del cremisi (PR206) viene dall'etichetta del tubetto usato negli esercizi. trasparenza_tubetto c'è solo dove serve alla pratica (velature) ed è quella del tubetto della tavolozza. I colori sRGB e la forza di tintura sono valori INDICATIVI E PROVVISORI scelti a occhio per far funzionare il calcolatore: non sono misure. Vanno sostituiti con la taratura su prove reali su carta (campione pieno di ogni tubetto, fotografato o misurato).",
+  "fonte_colori": "provvisori, stima a occhio del colore pieno su carta bianca; da tarare su prove reali su carta",
   "data": "2026-10-18",
   "carta": {"nome": "carta bianca", "srgb": "#FBF8F0", "fonte": "provvisorio: bianco carta caldo indicativo"},
   "colori": [

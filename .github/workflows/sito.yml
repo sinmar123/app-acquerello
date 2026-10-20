@@ -40,7 +40,7 @@ jobs:
 
   # Pubblicazione su Cloudflare Pages: parte solo quando nel repository sono impostati la variabile
   # PUBBLICA_CLOUDFLARE = si e i secret CLOUDFLARE_API_TOKEN e CLOUDFLARE_ACCOUNT_ID. Finché mancano,
-  # si pubblica dal W520 con npm run deploy.
+  # si pubblica in locale con npm run deploy.
   pubblica:
     if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && vars.PUBBLICA_CLOUDFLARE == 'si'
     needs: costruisci
