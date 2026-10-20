@@ -33,7 +33,9 @@ Lo script:
 2. la copia in `site/<sezione>/index.html` aggiungendo la barra superiore e la casella per i suggerimenti;
 3. genera la home `site/index.html`.
 
-La cartella `site/` e le pagine HTML generate dentro `dati/` sono escluse da Git (`.gitignore`). La funzione Cloudflare Pages `functions/api/suggerimento.js` riceve i suggerimenti inviati dalla casella del sito e apre una Issue pubblica etichettata `suggerimento-dal-sito` sul repository GitHub.
+La cartella `site/` e le pagine HTML generate dentro `dati/` sono escluse da Git (`.gitignore`). Le funzioni Cloudflare Pages in `functions/api/` gestiscono:
+- `functions/api/chat.js`: l'assistente didattico sull'acquerello basato su **Gemini 4 Argon** (`gemini-4-argon`), con accesso tramite email e limite di 5 domande gratuite per utente salvato sul database Cloudflare D1 (`wrangler.toml`);
+- `functions/api/suggerimento.js`: l'invio dei suggerimenti dalla casella pubblica del sito come Issue etichettata `suggerimento-dal-sito` sul repository GitHub.
 
 ## Come contribuire
 

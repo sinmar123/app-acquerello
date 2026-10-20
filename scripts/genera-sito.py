@@ -100,7 +100,7 @@ def miniatura_data_uri(percorso: pathlib.Path, larghezza: int = 720, qualita: in
     return f"data:image/jpeg;base64,{b64}"
 
 
-def blocco_casella_suggerimenti(sezione_predefinita: str, pagina_path: str) -> str:
+def blocco_chat_e_suggerimenti(sezione_predefinita: str, pagina_path: str) -> str:
     opts = []
     for opz in OPZIONI_SEZIONE:
         sel = " selected" if opz == sezione_predefinita else ""
@@ -109,9 +109,11 @@ def blocco_casella_suggerimenti(sezione_predefinita: str, pagina_path: str) -> s
 
     return f"""
 <style>
-.sugg-wrap{{max-width:820px;margin:28px auto 18px;padding:0 14px;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}}
-.sugg-box{{background:#fffdf8;border:1px solid #d8ccb8;border-left:4px solid #2f5e4e;border-radius:10px;padding:18px 20px;box-shadow:0 2px 8px rgba(31,28,23,.05);color:#1f1c17}}
-.sugg-box h2{{margin:0 0 6px;font-size:1.15rem;color:#263529}}
+.sugg-wrap{{max-width:820px;margin:24px auto 18px;padding:0 14px;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}}
+.sugg-box,.chat-box{{background:#fffdf8;border:1px solid #d8ccb8;border-left:4px solid #2f5e4e;border-radius:10px;padding:18px 20px;box-shadow:0 2px 8px rgba(31,28,23,.05);color:#1f1c17;margin-bottom:22px}}
+.chat-box{{border-left-color:#8c4a27}}
+.sugg-box h2,.chat-box h2{{margin:0 0 6px;font-size:1.15rem;color:#263529}}
+.chat-box h2{{color:#6b3418}}
 .sugg-sub{{margin:0 0 14px;font-size:.9rem;color:#4a4236;line-height:1.45}}
 .sugg-grid{{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}}
 @media(max-width:600px){{.sugg-grid{{grid-template-columns:1fr}}}}
@@ -124,6 +126,8 @@ def blocco_casella_suggerimenti(sezione_predefinita: str, pagina_path: str) -> s
 .sugg-actions{{display:flex;flex-wrap:wrap;align-items:center;gap:12px}}
 .sugg-btn{{background:#263529;color:#f7f2e7;border:0;border-radius:7px;padding:9px 16px;font:inherit;font-size:.9rem;font-weight:600;cursor:pointer}}
 .sugg-btn:hover{{background:#1c281f}}
+.sugg-btn.arancio{{background:#8c4a27}}
+.sugg-btn.arancio:hover{{background:#6b3418}}
 .sugg-btn:disabled{{opacity:.6;cursor:wait}}
 .sugg-link-gh{{font-size:.82rem;color:#5c5142;text-decoration:none}}
 .sugg-link-gh:hover{{text-decoration:underline}}
@@ -131,7 +135,69 @@ def blocco_casella_suggerimenti(sezione_predefinita: str, pagina_path: str) -> s
 .sugg-esito.ok{{display:block;background:#e6f4ea;border:1px solid #a8dab5;color:#135225}}
 .sugg-esito.err{{display:block;background:#fce8e6;border:1px solid #f5c2c0;color:#7a1c18}}
 .sugg-hp{{position:absolute;left:-9999px;opacity:0;pointer-events:none;height:0;overflow:hidden}}
+.chat-login-row{{display:flex;flex-wrap:wrap;gap:10px;align-items:center}}
+.chat-login-row input{{flex:1;min-width:220px;font:inherit;font-size:.92rem;padding:8px 11px;border:1px solid #c9bba3;border-radius:6px;background:#fff}}
+.chat-barra-stato{{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px;background:#f5efe2;border:1px solid #dfd3be;border-radius:7px;padding:8px 12px;margin-bottom:12px;font-size:.84rem}}
+.chat-badge-quota{{font-weight:700;color:#6b3418;padding:2px 8px;border-radius:999px;border:1px solid #d5b8a3;background:#fff8f3}}
+.chat-esempi{{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}}
+.chat-chip{{background:#f3ece0;border:1px solid #d8ccb8;color:#3d352b;border-radius:999px;padding:4px 10px;font:inherit;font-size:.79rem;cursor:pointer;text-align:left}}
+.chat-chip:hover{{background:#e6dbc8}}
+.chat-messaggi{{max-height:360px;overflow-y:auto;border:1px solid #e2d7c5;border-radius:8px;background:#faf6ee;padding:12px;margin-bottom:12px;display:none;flex-direction:column;gap:10px}}
+.chat-msg{{padding:10px 12px;border-radius:8px;font-size:.9rem;line-height:1.5;max-width:92%}}
+.chat-msg.utente{{align-self:flex-end;background:#263529;color:#f7f2e7}}
+.chat-msg.ai{{align-self:flex-start;background:#ffffff;border:1px solid #dfd5c3;color:#1f1c17}}
+.chat-msg.ai p{{margin:0 0 8px}}
+.chat-msg.ai p:last-child{{margin-bottom:0}}
+.chat-input-row{{display:flex;gap:8px;align-items:flex-end}}
+.chat-input-row textarea{{flex:1;font:inherit;font-size:.92rem;padding:8px 10px;border:1px solid #c9bba3;border-radius:6px;min-height:54px;max-height:140px;resize:vertical;background:#fff}}
+.chat-nota-privacy{{margin:8px 0 0;font-size:.78rem;color:#6b5e4c}}
 </style>
+
+<section id="assistente-ai" class="sugg-wrap" aria-label="Assistente AI sull'acquerello">
+  <div class="chat-box" data-pagina="{pagina_path}">
+    <h2>🎨 Chiedi all'assistente di acquerello (Gemini 4 Argon)</h2>
+    <p class="sugg-sub">
+      Hai un dubbio su come mescolare due colori, quanta acqua tenere nel pennello, come evitare le fioriture o come eseguire uno degli esercizi?
+      Inserisci la tua email per fare fino a <strong>5 domande gratuite</strong> all'assistente AI istruito sui contenuti di questo quaderno.
+    </p>
+
+    <div id="chat-step-email">
+      <form id="form-chat-login" class="chat-login-row">
+        <input id="chat-email-input" type="email" required maxlength="120" placeholder="La tua email (es. nome@esempio.it)" autocomplete="email">
+        <button type="submit" class="sugg-btn arancio" id="chat-login-btn">Entra nella chat (5 domande)</button>
+      </form>
+      <p class="chat-nota-privacy">
+        L'email serve solo a contare le 5 domande gratuite associate al tuo indirizzo: non inviamo newsletter né cediamo l'indirizzo a terzi.
+      </p>
+    </div>
+
+    <div id="chat-step-conversazione" style="display:none">
+      <div class="chat-barra-stato">
+        <span>Accesso con: <strong id="chat-email-attiva"></strong> · <button type="button" id="chat-cambia-email" style="background:none;border:0;color:#6b4226;text-decoration:underline;cursor:pointer;font:inherit;padding:0">cambia email</button></span>
+        <span class="chat-badge-quota" id="chat-quota-label">Domande disponibili: 5 su 5</span>
+      </div>
+
+      <div class="chat-esempi" id="chat-esempi-wrap">
+        <span style="font-size:.79rem;color:#6b5e4c;align-self:center;margin-right:2px">Prova a chiedere:</span>
+        <button type="button" class="chat-chip">Perché mi vengono le macchie a cavolfiore quando aggiungo colore?</button>
+        <button type="button" class="chat-chip">Come ottengo un verde scuro per gli abeti coi 6 colori di base?</button>
+        <button type="button" class="chat-chip">Qual è il momento giusto per buttare il sale sulla carta?</button>
+      </div>
+
+      <div id="chat-messaggi" class="chat-messaggi" aria-live="polite"></div>
+
+      <form id="form-chat-domanda">
+        <div class="chat-input-row">
+          <textarea id="chat-domanda-input" required minlength="4" maxlength="1000" placeholder="Scrivi qui la tua domanda sull'acquerello..."></textarea>
+          <button type="submit" class="sugg-btn arancio" id="chat-invia-btn">Chiedi</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="chat-esito-err" class="sugg-esito err" role="alert" style="display:none"></div>
+  </div>
+</section>
+
 <section id="suggerimenti" class="sugg-wrap" aria-label="Invia un suggerimento">
   <div class="sugg-box">
     <h2>💬 Suggerisci una modifica, una correzione o un video</h2>
@@ -181,6 +247,184 @@ def blocco_casella_suggerimenti(sezione_predefinita: str, pagina_path: str) -> s
 </section>
 <script>
 (function(){{
+  // --- 1. GESTIONE CHAT AI (GEMINI 4 ARGON, 5 DOMANDE PER EMAIL) ---
+  var STORAGE_KEY = "acquerello_chat_email";
+  var stepEmail = document.getElementById("chat-step-email");
+  var stepConv = document.getElementById("chat-step-conversazione");
+  var formLogin = document.getElementById("form-chat-login");
+  var inputEmail = document.getElementById("chat-email-input");
+  var btnLogin = document.getElementById("chat-login-btn");
+  var labelEmail = document.getElementById("chat-email-attiva");
+  var btnCambia = document.getElementById("chat-cambia-email");
+  var labelQuota = document.getElementById("chat-quota-label");
+  var boxMessaggi = document.getElementById("chat-messaggi");
+  var formDomanda = document.getElementById("form-chat-domanda");
+  var inputDomanda = document.getElementById("chat-domanda-input");
+  var btnInvia = document.getElementById("chat-invia-btn");
+  var boxErr = document.getElementById("chat-esito-err");
+  var chatBox = document.querySelector(".chat-box");
+  var paginaCorrente = (chatBox && chatBox.getAttribute("data-pagina")) || window.location.pathname;
+  var emailAttiva = "";
+  var storiaSessione = [];
+
+  function formattaTestoAi(testo) {{
+    var esc = testo
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+    esc = esc.replace(/\\*\\*(.+?)\\*\\*/g, "<strong>$1</strong>");
+    esc = esc.replace(/\\*(.+?)\\*/g, "<em>$1</em>");
+    var blocchi = esc.split(/\\n\\n+/);
+    return blocchi.map(function(b) {{
+      return "<p>" + b.replace(/\\n/g, "<br>") + "</p>";
+    }}).join("");
+  }}
+
+  function aggiornaStatoUi(dati) {{
+    labelEmail.textContent = dati.email;
+    labelQuota.textContent = "Domande disponibili: " + dati.rimanenti + " su " + dati.limite;
+    if (dati.rimanenti <= 0) {{
+      inputDomanda.disabled = true;
+      btnInvia.disabled = true;
+      inputDomanda.placeholder = "Hai esaurito le 5 domande gratuite per questa email.";
+    }} else {{
+      inputDomanda.disabled = false;
+      btnInvia.disabled = false;
+      inputDomanda.placeholder = "Scrivi qui la tua domanda sull'acquerello...";
+    }}
+  }}
+
+  async function verificaEmail(email, silenzioso) {{
+    if (!silenzioso) {{
+      boxErr.style.display = "none";
+      btnLogin.disabled = true;
+      btnLogin.textContent = "Verifica...";
+    }}
+    try {{
+      var r = await fetch("/api/chat", {{
+        method: "POST",
+        headers: {{"Content-Type": "application/json"}},
+        body: JSON.stringify({{ azione: "stato", email: email }})
+      }});
+      var risp = await r.json();
+      if (!r.ok || !risp.ok) {{
+        throw new Error((risp && risp.errore) || "Email non valida.");
+      }}
+      emailAttiva = risp.email;
+      try {{ localStorage.setItem(STORAGE_KEY, emailAttiva); }} catch(e) {{}}
+      stepEmail.style.display = "none";
+      stepConv.style.display = "block";
+      aggiornaStatoUi(risp);
+    }} catch (err) {{
+      if (!silenzioso) {{
+        boxErr.textContent = err.message || "Impossibile accedere alla chat.";
+        boxErr.style.display = "block";
+      }}
+    }} finally {{
+      if (!silenzioso) {{
+        btnLogin.disabled = false;
+        btnLogin.textContent = "Entra nella chat (5 domande)";
+      }}
+    }}
+  }}
+
+  if (formLogin) {{
+    formLogin.addEventListener("submit", function(ev) {{
+      ev.preventDefault();
+      var em = inputEmail.value.trim();
+      if (em) verificaEmail(em, false);
+    }});
+  }}
+
+  if (btnCambia) {{
+    btnCambia.addEventListener("click", function() {{
+      emailAttiva = "";
+      try {{ localStorage.removeItem(STORAGE_KEY); }} catch(e) {{}}
+      stepConv.style.display = "none";
+      stepEmail.style.display = "block";
+      boxErr.style.display = "none";
+      inputEmail.focus();
+    }});
+  }}
+
+  document.querySelectorAll(".chat-chip").forEach(function(chip) {{
+    chip.addEventListener("click", function() {{
+      if (!inputDomanda.disabled) {{
+        inputDomanda.value = chip.textContent;
+        inputDomanda.focus();
+      }}
+    }});
+  }});
+
+  if (formDomanda) {{
+    formDomanda.addEventListener("submit", async function(ev) {{
+      ev.preventDefault();
+      var testoDomanda = inputDomanda.value.trim();
+      if (!testoDomanda || !emailAttiva) return;
+      boxErr.style.display = "none";
+
+      boxMessaggi.style.display = "flex";
+      var divU = document.createElement("div");
+      divU.className = "chat-msg utente";
+      divU.textContent = testoDomanda;
+      boxMessaggi.appendChild(divU);
+
+      var divAttesa = document.createElement("div");
+      divAttesa.className = "chat-msg ai";
+      divAttesa.innerHTML = "<em>Gemini 4 Argon sta preparando la risposta...</em>";
+      boxMessaggi.appendChild(divAttesa);
+      boxMessaggi.scrollTop = boxMessaggi.scrollHeight;
+
+      inputDomanda.value = "";
+      btnInvia.disabled = true;
+      btnInvia.textContent = "Attendi...";
+
+      try {{
+        var r = await fetch("/api/chat", {{
+          method: "POST",
+          headers: {{"Content-Type": "application/json"}},
+          body: JSON.stringify({{
+            azione: "chiedi",
+            email: emailAttiva,
+            domanda: testoDomanda,
+            pagina: paginaCorrente,
+            storia: storiaSessione
+          }})
+        }});
+        var risp = await r.json();
+        if (!r.ok || !risp.ok) {{
+          boxMessaggi.removeChild(divAttesa);
+          if (risp && typeof risp.rimanenti === "number") {{
+            aggiornaStatoUi({{ email: emailAttiva, rimanenti: risp.rimanenti, limite: risp.limite || 5 }});
+          }}
+          throw new Error((risp && risp.errore) || "Errore durante la richiesta.");
+        }}
+        divAttesa.innerHTML = formattaTestoAi(risp.risposta);
+        storiaSessione.push({{ ruolo: "user", testo: testoDomanda }});
+        storiaSessione.push({{ ruolo: "model", testo: risp.risposta }});
+        aggiornaStatoUi({{ email: emailAttiva, rimanenti: risp.rimanenti, limite: risp.limite }});
+        boxMessaggi.scrollTop = boxMessaggi.scrollHeight;
+      }} catch (err) {{
+        boxErr.textContent = err.message || "Errore di comunicazione con l'assistente.";
+        boxErr.style.display = "block";
+      }} finally {{
+        if (!inputDomanda.disabled) {{
+          btnInvia.disabled = false;
+        }}
+        btnInvia.textContent = "Chiedi";
+      }}
+    }});
+  }}
+
+  try {{
+    var salvata = localStorage.getItem(STORAGE_KEY);
+    if (salvata) {{
+      inputEmail.value = salvata;
+      verificaEmail(salvata, true);
+    }}
+  }} catch(e) {{}}
+
+  // --- 2. GESTIONE CASELLA SUGGERIMENTI PUBBLICI ---
   var form = document.getElementById("form-suggerimento");
   if (!form) return;
   var btn = document.getElementById("sugg-submit");
@@ -237,13 +481,15 @@ def inietta_elementi_comuni(html: str, sezione_predefinita: str, pagina_path: st
         'font-size:.86rem;display:flex;justify-content:center;gap:18px;flex-wrap:wrap">'
         '<a href="../" style="color:#6b4226;text-decoration:none;font-weight:600">'
         '← Tutte le guide di acquerello</a>'
+        '<a href="#assistente-ai" style="color:#8c4a27;text-decoration:none;font-weight:600">'
+        '🎨 Chiedi all\'assistente AI</a>'
         '<a href="#suggerimenti" style="color:#2f5e4e;text-decoration:none;font-weight:600">'
-        '💬 Suggerisci una modifica o un video</a></div>\n'
+        '💬 Suggerisci una modifica</a></div>\n'
     )
     if 'href="../"' not in html:
         html = html.replace("<body>", "<body>\n" + barra, 1)
 
-    blocco = blocco_casella_suggerimenti(sezione_predefinita, pagina_path)
+    blocco = blocco_chat_e_suggerimenti(sezione_predefinita, pagina_path)
     if 'id="suggerimenti"' not in html:
         if "<footer" in html:
             html = html.replace("<footer", blocco + "\n<footer", 1)
@@ -276,7 +522,7 @@ def genera_home(sezioni_pronte: list[dict]) -> str:
         )
 
     cards_html = "\n".join(cards)
-    blocco_sugg = blocco_casella_suggerimenti("Generale / Nuovo argomento", "/")
+    blocco_sugg = blocco_chat_e_suggerimenti("Generale / Nuovo argomento", "/")
     return f"""<!doctype html>
 <html lang="it">
 <head>
@@ -290,8 +536,18 @@ body{{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
 .testa h1{{margin:0 0 6px;font-size:1.45rem;letter-spacing:.01em}}
 .testa p{{margin:0 auto;max-width:640px;font-size:.95rem;color:#d8dfd5}}
 main{{max-width:820px;margin:0 auto;padding:22px 14px 12px}}
-.intro-note{{background:#fffdf8;border:1px solid #dfd5c3;border-left:4px solid #263529;border-radius:8px;padding:12px 15px;margin-bottom:20px;font-size:.92rem;color:#3d352b}}
-.intro-note a{{color:#2f5e4e;font-weight:600}}
+.come-funziona{{background:#fffdf8;border:1px solid #dfd5c3;border-top:4px solid #263529;border-radius:12px;padding:18px 20px;margin-bottom:24px;box-shadow:0 2px 8px rgba(31,28,23,.05)}}
+.come-funziona h2{{margin:0 0 8px;font-size:1.18rem;color:#263529}}
+.come-funziona p{{margin:0 0 12px;font-size:.92rem;color:#363027}}
+.cf-passi{{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0 14px}}
+@media(max-width:640px){{.cf-passi{{grid-template-columns:1fr}}}}
+.cf-passo{{background:#f7f2e7;border:1px solid #e2d7c5;border-radius:8px;padding:10px 12px;font-size:.88rem;color:#2e2820}}
+.cf-passo strong{{display:block;color:#263529;margin-bottom:3px;font-size:.92rem}}
+.cf-strumenti{{display:flex;flex-wrap:wrap;gap:10px;padding-top:10px;border-top:1px solid #e9e0cf;font-size:.87rem}}
+.cf-link{{display:inline-flex;align-items:center;gap:5px;padding:6px 12px;border-radius:7px;font-weight:600;text-decoration:none}}
+.cf-link.chat{{background:#fdf3ec;border:1px solid #e2bfa8;color:#6b3418}}
+.cf-link.sugg{{background:#eef6f2;border:1px solid #b8d8c8;color:#1e4638}}
+.sezioni-tit{{margin:0 0 12px;font-size:1.12rem;color:#263529}}
 .grid{{display:grid;grid-template-columns:1fr;gap:18px}}
 .card{{background:#fffdf8;border:1px solid #dfd5c3;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(31,28,23,.06);transition:transform .15s ease,box-shadow .15s ease}}
 .card:hover{{transform:translateY(-2px);box-shadow:0 6px 18px rgba(31,28,23,.12)}}
@@ -315,10 +571,37 @@ footer a{{color:#5a4d3b}}
   <p>Guide pratiche per studiare i gesti, le miscele e i passaggi su foglietti di prova</p>
 </header>
 <main>
-  <div class="intro-note">
-    Raccolta aperta e in crescita di quaderni operativi per esercitarsi ad acquerello: ogni sezione affronta un tema con proposte di colore libere per lo studio e tavolozza ridotta da 6 colori per l'aperto, estratti video mirati al singolo gesto e infografiche passo per passo.
-    In fondo a ogni pagina puoi <a href="#suggerimenti">inviare un suggerimento o segnalare un video</a>.
-  </div>
+  <section class="come-funziona" aria-label="Come funziona questo sito">
+    <h2>Come funziona questo sito</h2>
+    <p>
+      Questo non è un manuale da leggere tutto d'un fiato, ma un <strong>quaderno pratico da tenere sul tavolo mentre dipingi</strong>.
+      Prendi un piccolo foglietto di carta da acquerello (formato A5, meglio 100% cotone) e prova un solo gesto o una sola miscela alla volta, seguendo questi quattro passi:
+    </p>
+    <div class="cf-passi">
+      <div class="cf-passo">
+        <strong>1. Capire acqua e carta (Principi)</strong>
+        Impara a riconoscere a occhio le 3 densità del colore sulla tavolozza (<em>tè, latte, miele</em>) e il momento esatto in cui il foglio perde il lucido dell'acqua (<em>carta asciutta, umida opaca, bagnata</em>) per evitare macchie involontarie.
+      </div>
+      <div class="cf-passo">
+        <strong>2. Provare i gesti passo passo (Alberi)</strong>
+        Per ogni soggetto trovi più modalità tratte da lezioni video su YouTube: guarda l'infografica in 3 fasi per capire pennello, stato della carta e colori, poi premi sul pulsante del video che si apre <em>al secondo esatto</em> del gesto.
+      </div>
+      <div class="cf-passo">
+        <strong>3. Mescolare i colori (Teoria e calcolatore)</strong>
+        In studio puoi usare tutti i colori che hai; se invece vuoi dipingere all'aperto o iniziare con pochi tubetti, scopri la tavolozza ridotta da 6 colori e usa il calcolatore nel browser per simulare le miscele.
+      </div>
+      <div class="cf-passo">
+        <strong>4. Leggere l'etichetta dei tubetti (Marche)</strong>
+        Due tubetti con lo stesso nome commerciale possono contenere pigmenti del tutto diversi: la tabella confronta le sigle dei pigmenti (es. PB29, PR101) nelle principali marche in commercio.
+      </div>
+    </div>
+    <div class="cf-strumenti">
+      <a class="cf-link chat" href="#assistente-ai">🎨 Hai un dubbio mentre dipingi? Chiedi all'assistente AI (5 domande gratuite) ↓</a>
+      <a class="cf-link sugg" href="#suggerimenti">💬 Vuoi segnalare un video o una correzione? Usa la casella in fondo ↓</a>
+    </div>
+  </section>
+
+  <h2 class="sezioni-tit">Le sezioni del quaderno</h2>
   <div class="grid">
     {cards_html}
   </div>
