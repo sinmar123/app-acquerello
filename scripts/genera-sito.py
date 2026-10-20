@@ -38,14 +38,14 @@ SEZIONI = [
         "numero": "2",
         "nome_form": "Alberi",
         "titolo": "Morfologia degli alberi: studio analitico delle sequenze esecutive",
-        "sottotitolo": "Sei tipologie arboree analizzate attraverso 24 procedure comparative, schemi operativi in 3 fasi e 31 estratti video indicizzati",
+        "sottotitolo": "Primo modulo monografico del repertorio: sei tipologie arboree analizzate attraverso 24 procedure comparative, schemi operativi in 3 fasi e 31 estratti video indicizzati",
         "descrizione": (
-            "Macchie di conifere in controluce, abeti isolati a ramificazione radiale, chiome decidue nel cromatismo autunnale, "
-            "masse arbustive di margine, fusti spogli invernali a risparmio del bianco e rami in primo piano: per ciascun soggetto "
-            "vengono messe a confronto più soluzioni tecniche, documentate da tavole sinottiche in tre stadi operativi, ricette "
+            "Primo tema monografico affrontato nel percorso di studio: macchie di conifere in controluce, abeti isolati a ramificazione radiale, "
+            "chiome decidue nel cromatismo autunnale, masse arbustive di margine, fusti spogli invernali a risparmio del bianco e rami in primo piano. "
+            "Per ciascun soggetto vengono messe a confronto più soluzioni tecniche, documentate da tavole sinottiche in tre stadi operativi, ricette "
             "cromatiche per tavolozza estesa o ridotta a sei pigmenti e rinvii al secondo esatto delle dimostrazioni video."
         ),
-        "badge": ["6 tipologie arboree", "24 sequenze operative", "31 riferimenti temporali", "tavolozza estesa o a 6 pigmenti"],
+        "badge": ["1° modulo monografico", "6 tipologie arboree", "24 sequenze operative", "31 riferimenti temporali"],
         "script_genera": DATI_DIR / "alberi" / "pit-261013-video-gesti.py",
         "html_generato": DATI_DIR / "alberi" / "pit-261014-video-gesti-alberi.html",
     },
@@ -551,6 +551,11 @@ main{{max-width:820px;margin:0 auto;padding:22px 14px 12px}}
 .cf-link{{display:inline-flex;align-items:center;gap:5px;padding:6px 12px;border-radius:7px;font-weight:600;text-decoration:none}}
 .cf-link.chat{{background:#fdf3ec;border:1px solid #e2bfa8;color:#6b3418}}
 .cf-link.sugg{{background:#eef6f2;border:1px solid #b8d8c8;color:#1e4638}}
+.cf-sviluppo{{background:#f4efe4;border:1px solid #d8ccb8;border-left:4px solid #8c4a27;border-radius:8px;padding:11px 14px;margin:0 0 14px;font-size:.89rem;color:#2e2820}}
+.cf-sviluppo strong{{color:#6b3418}}
+.in-sviluppo-box{{margin-top:22px;background:#fffdf8;border:1px dashed #c8bba4;border-radius:12px;padding:16px 18px}}
+.in-sviluppo-box h3{{margin:0 0 6px;font-size:1.02rem;color:#263529}}
+.in-sviluppo-box p{{margin:0 0 10px;font-size:.89rem;color:#4a4033}}
 .sezioni-tit{{margin:0 0 12px;font-size:1.12rem;color:#263529}}
 .grid{{display:grid;grid-template-columns:1fr;gap:18px}}
 .card{{background:#fffdf8;border:1px solid #dfd5c3;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(31,28,23,.06);transition:transform .15s ease,box-shadow .15s ease}}
@@ -587,8 +592,8 @@ footer a{{color:#5a4d3b}}
         Valutazione visiva e tattile dei tre gradi di concentrazione del pigmento sulla tavolozza (<em>tè, latte, miele</em>) e degli stadi di evaporazione del velo d'acqua sulla carta (<em>superficie asciutta, umida opaca, bagnata</em>), condizione essenziale per governare la fusione o prevenire i riflussi capillari.
       </div>
       <div class="cf-passo">
-        <strong>2. Scomposizione delle sequenze esecutive (Alberi)</strong>
-        Ogni tipologia arborea è analizzata attraverso più varianti procedurali tratte da dimostrazioni filmate: una tavola sinottica in tre fasi codifica pennello, stato di umidità della carta e miscela cromatica, mentre i rimandi temporali aprono il filmato originale al secondo esatto dell'esecuzione.
+        <strong>2. Scomposizione delle sequenze esecutive (Moduli monografici)</strong>
+        Ciascun soggetto pittorico è analizzato attraverso più varianti procedurali tratte da dimostrazioni filmate: una tavola sinottica in tre fasi codifica pennello, stato di umidità della carta e miscela cromatica, mentre i rimandi temporali aprono il filmato originale al secondo esatto dell'esecuzione.
       </div>
       <div class="cf-passo">
         <strong>3. Colorimetria e simulazione delle miscele (Colori)</strong>
@@ -599,16 +604,33 @@ footer a{{color:#5a4d3b}}
         Poiché la medesima denominazione commerciale può corrispondere a formulazioni differenti, le tabelle mettono a confronto i codici internazionali del <em>Colour Index</em> (es. PB29, PR101, PY150) e il grado di trasparenza dichiarato nei cataloghi ufficiali di sei linee produttive.
       </div>
     </div>
+    <div class="cf-sviluppo">
+      <strong>Repertorio in fase di sviluppo e progressiva estensione:</strong> l'opera si articola in sezioni teorico-metodologiche generali (<em>Principi tecnici</em>, <em>Colorimetria</em>, <em>Merceologia</em>) e in <strong>moduli monografici per soggetto</strong>. Il modulo dedicato alla <em>Morfologia degli alberi</em> è il primo pubblicato in quanto primo argomento affrontato nel percorso di studio; seguiranno progressivamente ulteriori sezioni monografiche dedicate agli altri temi classici dell'acquerello (<strong>cieli e formazioni nuvolose</strong>, <strong>elementi botanici e fiori</strong>, <strong>specchi d'acqua e riflessi</strong>, <strong>masse rocciose e architetture</strong>).
+    </div>
     <div class="cf-strumenti">
       <a class="cf-link chat" href="#assistente-ai">🎨 Quesiti operativi: consulta l'assistente tecnico AI (5 domande gratuite) ↓</a>
       <a class="cf-link sugg" href="#suggerimenti">💬 Contributi e rettifiche: trasmetti una segnalazione documentata ↓</a>
     </div>
   </section>
 
-  <h2 class="sezioni-tit">Sezioni del repertorio</h2>
+  <h2 class="sezioni-tit">Sezioni pubblicate</h2>
   <div class="grid">
     {cards_html}
   </div>
+
+  <section class="in-sviluppo-box" aria-label="Prossimi moduli monografici in preparazione">
+    <h3>Prossimi moduli monografici in programma</h3>
+    <p>
+      Dopo il primo modulo applicativo dedicato agli <strong>alberi e alle masse arbustive</strong> (tema d'apertura del corso), il repertorio verrà esteso con nuove monografie strutturate secondo il medesimo protocollo analitico (tavole sinottiche in tre stadi operativi, doppia formulazione cromatica e rimandi temporizzati ai filmati dimostrativi):
+    </p>
+    <div class="pills" style="margin-bottom:0">
+      <span class="pill">Cieli, velature atmosferiche e formazioni nuvolose</span>
+      <span class="pill">Morfologia botanica e fiori</span>
+      <span class="pill">Specchi d'acqua, increspature e riflessi</span>
+      <span class="pill">Masse rocciose, rilievi e terreni</span>
+      <span class="pill">Architetture, murature storiche e scorci urbani</span>
+    </div>
+  </section>
 </main>
 {blocco_sugg}
 <footer>
