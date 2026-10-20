@@ -5,7 +5,7 @@
  "sottotitolo": "Controllo del rapporto acqua-pigmento, grado di umidità della carta e tecniche di stesura.",
  "introduzione": [
   "Questa sezione raccoglie i criteri operativi ricorrenti nella letteratura didattica e nelle dimostrazioni filmate del repertorio. Ogni enunciato riporta in apice il rimando all'elenco delle fonti in calce alla pagina, con collegamento diretto al passaggio temporale del filmato o alla lezione di riferimento.",
-  "Le sequenze esecutive applicate ai soggetti arborei sono raccolte nella sezione <a href=\"../alberi/\">Alberi</a>; le proprietà ottiche dei pigmenti, la composizione della tavolozza ristretta e il simulatore di miscelazione con scala di diluizione sono trattati nella sezione <a href=\"../colori/\">Teoria dei colori</a>."
+  "L'assetto di lavoro in studio e all'aperto (con il protocollo sui campioni A5 e il prontuario delle 12 miscele) è esposto nella sezione <a href=\"../studio-plein-air/\">Studio ed en plein air</a>; le sequenze esecutive per tema pittorico sono raccolte nella sezione <a href=\"../soggetti/\">Soggetti pittorici</a> (a partire dal modulo <a href=\"../alberi/\">S1 · Alberi</a>); le proprietà ottiche dei pigmenti e il simulatore spettrale sono trattati nella sezione <a href=\"../colori/\">Colorimetria applicata</a>."
  ],
  "nota_fonti": "I riferimenti ai filmati provengono dalle schede analitiche redatte per la sezione Alberi, basate sulla trascrizione delle indicazioni tecniche e sull'osservazione diretta della stesura; ciascun collegamento apre il filmato all'istante temporale pertinente. I restanti rimandi fanno riferimento alle dispense dei corsi indicati.",
  "capitoli": [
@@ -508,32 +508,32 @@
  ],
  "fonti": {
   "wf4": {
-   "testo": "Corso Watercolor Fanatic, lezione 4 «The Three Common Watercolor Mixtures and How to Use Them!» (dispense di studio): classificazione in «'tè' (lavaggio leggero con più acqua che pigmento), 'latte' (lavaggio medio con acqua e pigmento bilanciati) e 'miele' (lavaggio spesso con più pigmento che acqua)»; principio di «abbinare l'umidità del pennello e della pittura alla condizione della carta»; uso del pennello scarico per «assorbire l'acqua in eccesso dalla carta»",
-   "url": "https://www.youtube.com/@WatercolorFanatic"
+   "testo": "Robert Joyner (già canale Watercolor Fanatic), serie «Back To Basics», lezione 4 «The Three Common Watercolor Mixtures and How to Use Them!» (dispense di studio; sul canale attuale dell'autore vedi «How To Mix Watercolor the Right Way»): classificazione in «'tè' (lavaggio leggero con più acqua che pigmento), 'latte' (lavaggio medio con acqua e pigmento bilanciati) e 'miele' (lavaggio spesso con più pigmento che acqua)»; principio di «abbinare l'umidità del pennello e della pittura alla condizione della carta»; uso del pennello scarico per «assorbire l'acqua in eccesso dalla carta»",
+   "url": "https://www.youtube.com/watch?v=jWJvOV24ftY"
   },
   "wf5": {
-   "testo": "Corso Watercolor Fanatic, lezione 5 «Blending Watercolor Wash Techniques» (dispense di studio): essiccazione mediante «l'aria naturale, il phon o il sole» evitando «che il flusso d'aria alteri la distribuzione del pigmento»; velature sovrapposte «applicate dopo l'asciugatura del precedente»",
-   "url": "https://www.youtube.com/@WatercolorFanatic"
+   "testo": "Robert Joyner (già canale Watercolor Fanatic), serie «Back To Basics», lezione 5 «Blending Watercolor Wash Techniques» (dispense di studio; sul canale attuale dell'autore vedi «Learn How This Technique Can Improve Your Watercolors»): essiccazione mediante «l'aria naturale, il phon o il sole» evitando «che il flusso d'aria alteri la distribuzione del pigmento»; velature sovrapposte «applicate dopo l'asciugatura del precedente»",
+   "url": "https://www.youtube.com/watch?v=62t3oGplSIE"
   },
   "wf6": {
-   "testo": "Corso Watercolor Fanatic, lezione 6 (dispense di studio): prima stesura con «lavaggio leggero (tinta da tè)»; passaggi successivi con «un mix più denso di colore (miscela lattea) che non si diffonde tanto»; drenaggio dell'eccesso idrico con «un pennello pulito»; lavorazione in condizione «semi-umida» della carta",
-   "url": "https://www.youtube.com/@WatercolorFanatic"
+   "testo": "Robert Joyner (già canale Watercolor Fanatic), serie «Back To Basics», lezione 6 sulle tecniche bagnato su bagnato (dispense di studio; sul canale attuale dell'autore vedi «Loose Watercolor Street Scene (Let the Wash Lead)»): prima stesura con «lavaggio leggero (tinta da tè)»; passaggi successivi con «un mix più denso di colore (miscela lattea) che non si diffonde tanto»; drenaggio dell'eccesso idrico con «un pennello pulito»; lavorazione in condizione «semi-umida» della carta",
+   "url": "https://www.youtube.com/watch?v=as4p09ekLrY"
   },
   "wf7": {
-   "testo": "Corso Watercolor Fanatic, lezione 7 (dispense di studio): «Tutti i colori aggiunti devono avere una consistenza simile in termini di rapporto acqua-pigmento, per assicurare un lavaggio uniforme senza dominanze cromatiche eccessive»; cautela nell'uso ravvicinato del phon per prevenire i «cauliflowers»",
-   "url": "https://www.youtube.com/@WatercolorFanatic"
+   "testo": "Robert Joyner (già canale Watercolor Fanatic), serie «Back To Basics», lezione 7 sul controllo delle lavature bagnato su bagnato (dispense di studio; sul canale attuale dell'autore vedi «How I Paint Loose Watercolor Landscapes»): «Tutti i colori aggiunti devono avere una consistenza simile in termini di rapporto acqua-pigmento, per assicurare un lavaggio uniforme senza dominanze cromatiche eccessive»; cautela nell'uso ravvicinato del phon per prevenire i «cauliflowers»",
+   "url": "https://www.youtube.com/watch?v=vK9F0fFtDqU"
   },
   "wf8": {
-   "testo": "Corso Watercolor Fanatic, lezione 8 (dispense di studio): stesura su asciutto per «applicazioni di colore nette e precise»; stesura bagnato su bagnato in cui «carta e pennello sono bagnati, permettendo al colore applicato di diffondersi liberamente»; uso di «pittura più spessa per creare bordi duri»",
-   "url": "https://www.youtube.com/@WatercolorFanatic"
+   "testo": "Robert Joyner (già canale Watercolor Fanatic), serie «Back To Basics», lezione 8 «3 Beginner Watercolor Techniques You Should Know» (dispense di studio; canale ufficiale dell'autore @crafted_by_robert): stesura su asciutto per «applicazioni di colore nette e precise»; stesura bagnato su bagnato in cui «carta e pennello sono bagnati, permettendo al colore applicato di diffondersi liberamente»; uso di «pittura più spessa per creare bordi duri»",
+   "url": "https://www.youtube.com/@crafted_by_robert"
   },
   "wf-fiori": {
-   "testo": "Corso Watercolor Fanatic, «Try This Loose Watercolor Flower Painting» (dispense di studio): impiego di miscele concentrate «con meno acqua e più pigmento»; tamponamento perimetrale per «impedire che si formi un accumulo di pigmento ai bordi causato dal nastro adesivo»",
-   "url": "https://www.youtube.com/@WatercolorFanatic"
+   "testo": "Robert Joyner (già canale Watercolor Fanatic), «Try This Loose Watercolor Flower Painting» / «Wet-in-Wet Watercolor Flowers Tutorial (Loose Floral Painting)»: impiego di miscele concentrate «con meno acqua e più pigmento»; tamponamento perimetrale per «impedire che si formi un accumulo di pigmento ai bordi causato dal nastro adesivo»",
+   "url": "https://www.youtube.com/watch?v=U-cV9mfPde8"
   },
   "mow": {
-   "testo": "The Mind of Watercolor, «Are You Still Making These 3 Watercolor Control Mistakes?» (dispense di studio): transizione rapida «da un pennello saturato ad uno quasi asciutto»; regolazione della carica con «spugne, asciugamani e carta assorbente»; preparazione di un volume adeguato di miscela",
-   "url": "https://www.youtube.com/@mindofwatercolor"
+   "testo": "The Mind of Watercolor (Steve Mitchell), «Are You Still Making These 3 Watercolor Control Mistakes?»: transizione rapida «da un pennello saturato ad uno quasi asciutto»; regolazione della carica con «spugne, asciugamani e carta assorbente»; preparazione di un volume adeguato di miscela",
+   "url": "https://www.youtube.com/watch?v=xSp2qNBvMSo"
   },
   "carta": {
    "testo": "Analisi tecnica dei supporti cartacei (dispense di studio): confronto tra finiture hot press, cold press e rough; grammature da 300 e 640 g/m² rispetto all'imbarcamento della 190 g/m²; assenza di standardizzazione tra cartiere; influenza della collatura sulla rimozione del pigmento per sollevamento",
@@ -632,8 +632,8 @@
    "url": "../alberi/"
   },
   "alberi-foglietti": {
-   "testo": "Sezione Alberi del repertorio: protocollo di studio su campioni in formato A5 di cotone 300 g/m²",
-   "url": "../alberi/"
+   "testo": "Sezione Pittura in studio ed en plein air del repertorio: protocollo di sperimentazione su campioni in formato A5 di cotone 300 g/m²",
+   "url": "../studio-plein-air/#protocollo-a5"
   },
   "alberi-a1-3": {
    "testo": "Sezione Alberi del repertorio, soggetto A1 (Modalità 2, estratto A1-3): scarico del pennello su panno assorbente prima del sollevamento tonale (Paul Clark)",
