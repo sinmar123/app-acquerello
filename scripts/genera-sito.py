@@ -613,10 +613,10 @@ footer a{{color:#5a4d3b}}
   <p>Repertorio analitico di procedimenti esecutivi, dinamica acqua-pigmento, colorimetria e soggetti pittorici</p>
 </header>
 <main>
-  <section class="come-funziona" aria-label="Origine del progetto, struttura e metodo di consultazione">
-    <h2>Origine del progetto, struttura e metodo di consultazione</h2>
+  <section class="come-funziona" aria-label="Struttura e metodo di consultazione">
+    <h2>Struttura e metodo di consultazione</h2>
     <div class="cf-origine">
-      <strong>Acquerello e intelligenza artificiale:</strong> questo lavoro nasce dal duplice interesse dell'autore per la pittura ad acquerello e per i sistemi di intelligenza artificiale. Nello studio pratico della tecnica pittorica è emerso come gli strumenti di IA possano costituire un ausilio metodologico efficace anche per l'apprendimento di una disciplina artistica tradizionale: chi studia oggi l'acquerello dispone su YouTube di migliaia di ore di dimostrazioni filmate di valore, ma disperse e prive di un indice sistematico. Il sito può quindi essere letto anche come un tentativo di ordinare e rendere consultabile quella vasta produzione audiovisiva con l'ausilio dell'IA, impiegata per selezionare i passaggi significativi, indicizzarli al secondo esatto, porre a confronto le soluzioni di autori diversi e sintetizzarle in tavole sinottiche a tre fasi.
+      <strong>Nota di metodo:</strong> questo quaderno nasce dallo studio pratico dell'acquerello e da una difficoltà concreta di chi oggi impara o approfondisce la tecnica: su YouTube esiste una quantità sterminata di buone dimostrazioni filmate, ma dispersa in centinaia di ore di video privi di indice e difficili da consultare quando si è al tavolo da lavoro. Chi cura queste pagine si occupa anche di intelligenza artificiale e ha provato a metterla al servizio di uno studio interamente manuale come semplice strumento di spoglio e di ordinamento: per passare in rassegna i filmati, isolare i passaggi esecutivi e le mescole, confrontare le soluzioni di autori diversi e ricondurre ogni sequenza al minuto e secondo esatto del video originale.
     </div>
     <p>
       Il repertorio sistematizza i procedimenti fondamentali per la <strong>sperimentazione diretta su campioni di studio</strong> (formato consigliato A5 in puro cotone, 300 g/m²).
