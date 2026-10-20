@@ -34,20 +34,19 @@ SEZIONI = [
         "html_generato": DATI_DIR / "principi" / "principi.html",
     },
     {
-        "slug": "alberi",
+        "slug": "studio-plein-air",
         "numero": "2",
-        "nome_form": "Alberi",
-        "titolo": "Morfologia degli alberi: studio analitico delle sequenze esecutive",
-        "sottotitolo": "Primo modulo monografico del repertorio: sei tipologie arboree analizzate attraverso 24 procedure comparative, schemi operativi in 3 fasi e 31 estratti video indicizzati",
+        "nome_form": "Studio ed en plein air",
+        "titolo": "Pittura in studio ed en plein air: metodo, dotazione e tavolozze",
+        "sottotitolo": "Differenze operative tra banco di studio e pittura all'aperto, protocollo su campioni A5 e prontuario delle 12 miscele (M1-M12)",
         "descrizione": (
-            "Primo tema monografico affrontato nel percorso di studio: macchie di conifere in controluce, abeti isolati a ramificazione radiale, "
-            "chiome decidue nel cromatismo autunnale, masse arbustive di margine, fusti spogli invernali a risparmio del bianco e rami in primo piano. "
-            "Per ciascun soggetto vengono messe a confronto più soluzioni tecniche, documentate da tavole sinottiche in tre stadi operativi, ricette "
-            "cromatiche per tavolozza estesa o ridotta a sei pigmenti e rinvii al secondo esatto delle dimostrazioni video."
+            "Confronto sistematico tra l'esecuzione in ambiente controllato (tavolozza estesa con pigmenti di comodità, tempi di evaporazione "
+            "distesi, dotazione strumentale completa) e la pratica all'aperto en plein air (sintesi rapida, selezione ristretta a 6 pigmenti "
+            "fondamentali, prontuario completo delle 12 miscele M1-M12 e protocollo di verifica su campioni in formato A5)."
         ),
-        "badge": ["1° modulo monografico", "6 tipologie arboree", "24 sequenze operative", "31 riferimenti temporali"],
-        "script_genera": DATI_DIR / "alberi" / "pit-261013-video-gesti.py",
-        "html_generato": DATI_DIR / "alberi" / "pit-261014-video-gesti-alberi.html",
+        "badge": ["studio vs plein air", "protocollo campioni A5", "tavolozza estesa e a 6 pigmenti", "prontuario 12 miscele"],
+        "script_genera": DATI_DIR / "studio-plein-air" / "genera-studio-plein-air.py",
+        "html_generato": DATI_DIR / "studio-plein-air" / "studio-plein-air.html",
     },
     {
         "slug": "colori",
@@ -81,14 +80,43 @@ SEZIONI = [
         "script_genera": DATI_DIR / "marche" / "genera-marche.py",
         "html_generato": DATI_DIR / "marche" / "marche.html",
     },
+    {
+        "slug": "soggetti",
+        "numero": "5",
+        "nome_form": "Soggetti (Alberi, Nuvole, Fiori...)",
+        "titolo": "Repertorio dei soggetti pittorici: monografie esecutive e analisi dei gesti",
+        "sottotitolo": "Sezione in progressiva estensione: 1. Alberi e masse arbustive (attivo) · 2. Cieli e nuvole · 3. Fiori e botanica · 4. Acqua e riflessi · 5. Rocce · 6. Architetture",
+        "descrizione": (
+            "Raccolta delle monografie operative dedicate ai singoli soggetti affrontati nel percorso di studio. Il modulo inaugurale "
+            "è dedicato alla Morfologia degli alberi (6 tipologie arboree, 24 procedure comparative, 72 stadi in tavola sinottica SVG e "
+            "31 estratti video al secondo); i moduli successivi su formazioni nuvolose, fiori, specchi d'acqua, rilievi rocciosi e architetture "
+            "sono in fase di progressivo inserimento."
+        ),
+        "badge": ["S1 Alberi (pubblicato)", "S2 Cieli e nuvole (in prep.)", "S3 Fiori (in prep.)", "S4-S6 Acqua, Rocce, Architetture"],
+        "script_genera": DATI_DIR / "soggetti" / "genera-soggetti.py",
+        "html_generato": DATI_DIR / "soggetti" / "soggetti.html",
+    },
+    {
+        "slug": "alberi",
+        "in_home": False,
+        "numero": "5.1",
+        "nome_form": "Soggetti (Alberi, Nuvole, Fiori...)",
+        "titolo": "Soggetto S1 · Morfologia degli alberi",
+        "sottotitolo": "Sei tipologie arboree analizzate attraverso 24 procedure comparative",
+        "descrizione": "",
+        "badge": [],
+        "script_genera": DATI_DIR / "alberi" / "pit-261013-video-gesti.py",
+        "html_generato": DATI_DIR / "alberi" / "pit-261014-video-gesti-alberi.html",
+    },
 ]
 
 OPZIONI_SEZIONE = [
     "Generale / Nuovo argomento",
     "Principi",
-    "Alberi",
+    "Studio ed en plein air",
     "Teoria dei colori",
     "Confronto marche",
+    "Soggetti (Alberi, Nuvole, Fiori...)",
 ]
 
 
@@ -505,23 +533,26 @@ def inietta_elementi_comuni(html: str, sezione_predefinita: str, pagina_path: st
 def genera_home(sezioni_pronte: list[dict]) -> str:
     cards = []
     for s in sezioni_pronte:
+        if not s.get("in_home", True):
+            continue
         badges = "".join(f'<span class="pill">{b}</span>' for b in s.get("badge", []))
+        extra_btn = ""
+        if s["slug"] == "soggetti":
+            extra_btn = ' <a class="btn sec" href="./alberi/">Apri subito S1 · Alberi →</a>'
         cards.append(
             f"""<article class="card">
-  <a class="card-link" href="./{s['slug']}/">
-    <div class="card-body">
-      <div class="card-head">
-        <span class="sig">{s['numero']}</span>
-        <div>
-          <h2>{s['titolo']}</h2>
-          <p class="card-sub">{s['sottotitolo']}</p>
-        </div>
+  <div class="card-body">
+    <div class="card-head">
+      <span class="sig">{s['numero']}</span>
+      <div>
+        <h2><a class="card-tit-link" href="./{s['slug']}/">{s['titolo']}</a></h2>
+        <p class="card-sub">{s['sottotitolo']}</p>
       </div>
-      <p class="card-desc">{s['descrizione']}</p>
-      <div class="pills">{badges}</div>
-      <span class="btn">Consulta la sezione →</span>
     </div>
-  </a>
+    <p class="card-desc">{s['descrizione']}</p>
+    <div class="pills">{badges}</div>
+    <div class="btn-row"><a class="btn" href="./{s['slug']}/">Consulta la sezione →</a>{extra_btn}</div>
+  </div>
 </article>"""
         )
 
@@ -553,14 +584,12 @@ main{{max-width:820px;margin:0 auto;padding:22px 14px 12px}}
 .cf-link.sugg{{background:#eef6f2;border:1px solid #b8d8c8;color:#1e4638}}
 .cf-sviluppo{{background:#f4efe4;border:1px solid #d8ccb8;border-left:4px solid #8c4a27;border-radius:8px;padding:11px 14px;margin:0 0 14px;font-size:.89rem;color:#2e2820}}
 .cf-sviluppo strong{{color:#6b3418}}
-.in-sviluppo-box{{margin-top:22px;background:#fffdf8;border:1px dashed #c8bba4;border-radius:12px;padding:16px 18px}}
-.in-sviluppo-box h3{{margin:0 0 6px;font-size:1.02rem;color:#263529}}
-.in-sviluppo-box p{{margin:0 0 10px;font-size:.89rem;color:#4a4033}}
 .sezioni-tit{{margin:0 0 12px;font-size:1.12rem;color:#263529}}
 .grid{{display:grid;grid-template-columns:1fr;gap:18px}}
 .card{{background:#fffdf8;border:1px solid #dfd5c3;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(31,28,23,.06);transition:transform .15s ease,box-shadow .15s ease}}
 .card:hover{{transform:translateY(-2px);box-shadow:0 6px 18px rgba(31,28,23,.12)}}
-.card-link{{display:block;color:inherit;text-decoration:none}}
+.card-tit-link{{color:inherit;text-decoration:none}}
+.card-tit-link:hover{{text-decoration:underline}}
 .card-body{{padding:16px 18px 18px}}
 .card-head{{display:flex;align-items:flex-start;gap:12px;margin-bottom:8px}}
 .sig{{display:inline-flex;align-items:center;justify-content:center;min-width:32px;height:32px;border-radius:8px;background:#263529;color:#f7f2e7;font-weight:700;font-size:.95rem;margin-top:2px}}
@@ -569,7 +598,9 @@ main{{max-width:820px;margin:0 auto;padding:22px 14px 12px}}
 .card-desc{{margin:10px 0 12px;font-size:.92rem;color:#363027}}
 .pills{{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}}
 .pill{{background:#efe6d5;color:#4f3d27;border:1px solid #d8ccb8;border-radius:999px;padding:3px 10px;font-size:.78rem;font-weight:600}}
-.btn{{display:inline-block;background:#263529;color:#f7f2e7;padding:8px 14px;border-radius:8px;font-size:.88rem;font-weight:600}}
+.btn-row{{display:flex;flex-wrap:wrap;gap:10px;align-items:center}}
+.btn{{display:inline-block;background:#263529;color:#f7f2e7;padding:8px 14px;border-radius:8px;font-size:.88rem;font-weight:600;text-decoration:none}}
+.btn.sec{{background:#eef4ef;color:#263529;border:1px solid #9ab5a3}}
 footer{{text-align:center;padding:18px;font-size:.82rem;color:#7a6f5d;border-top:1px solid #e5dccb;margin-top:24px}}
 footer a{{color:#5a4d3b}}
 </style>
@@ -577,35 +608,35 @@ footer a{{color:#5a4d3b}}
 <body>
 <header class="testa">
   <h1>Quaderno tecnico di acquerello</h1>
-  <p>Repertorio analitico di procedimenti esecutivi, dinamica acqua-pigmento, colorimetria e materiali</p>
+  <p>Repertorio analitico di procedimenti esecutivi, dinamica acqua-pigmento, colorimetria e soggetti pittorici</p>
 </header>
 <main>
   <section class="come-funziona" aria-label="Struttura e metodo di consultazione">
     <h2>Struttura e metodo di consultazione</h2>
     <p>
       Questo repertorio raccoglie e sistematizza i procedimenti fondamentali della pittura ad acquerello per la <strong>sperimentazione diretta su campioni di studio</strong> (formato consigliato A5 in puro cotone, 300 g/m²).
-      Ogni affermazione tecnica, sequenza gestuale o dato merceologico è ricondotto a una fonte documentale verificabile secondo un percorso articolato in quattro ambiti:
+      Ogni affermazione tecnica, sequenza gestuale o dato merceologico è ricondotto a una fonte documentale verificabile secondo un percorso articolato in cinque sezioni:
     </p>
     <div class="cf-passi">
       <div class="cf-passo">
         <strong>1. Controllo di acqua e supporto (Principi)</strong>
-        Valutazione visiva e tattile dei tre gradi di concentrazione del pigmento sulla tavolozza (<em>tè, latte, miele</em>) e degli stadi di evaporazione del velo d'acqua sulla carta (<em>superficie asciutta, umida opaca, bagnata</em>), condizione essenziale per governare la fusione o prevenire i riflussi capillari.
+        Valutazione dei tre gradi di concentrazione del pigmento sulla tavolozza (<em>tè, latte, miele</em>) e degli stadi di evaporazione del velo d'acqua sulla carta (<em>superficie asciutta, umida satinata, bagnata</em>), per governare la fusione o prevenire i riflussi capillari.
       </div>
       <div class="cf-passo">
-        <strong>2. Scomposizione delle sequenze esecutive (Moduli monografici)</strong>
-        Ciascun soggetto pittorico è analizzato attraverso più varianti procedurali tratte da dimostrazioni filmate: una tavola sinottica in tre fasi codifica pennello, stato di umidità della carta e miscela cromatica, mentre i rimandi temporali aprono il filmato originale al secondo esatto dell'esecuzione.
+        <strong>2. Assetto operativo (Studio ed en plein air)</strong>
+        Differenze metodologiche tra il lavoro in studio (tavolozza estesa, dotazione completa, protocollo dei campioni A5) e la pittura all'aperto (sintesi rapida, tavolozza ristretta a 6 pigmenti e prontuario delle 12 miscele M1-M12).
       </div>
       <div class="cf-passo">
-        <strong>3. Colorimetria e simulazione delle miscele (Colori)</strong>
-        Esame del sistema Munsell, dell'ottica degli strati trasparenti e della tavolozza ristretta a sei pigmenti monopigmento (coppia caldo/freddo per ciascun primario), affiancato da un calcolatore spettrale basato sul modello di Kubelka-Munk per la stima delle proporzioni in parti intere.
+        <strong>3. Colorimetria e merceologia (Sezioni 3 e 4)</strong>
+        Spazio cromatico di Munsell, ottica delle velature, calcolatore spettrale Kubelka-Munk e confronto chimico tra sei serie commerciali tramite i codici del <em>Colour Index</em>.
       </div>
       <div class="cf-passo">
-        <strong>4. Identificazione chimica dei tubetti (Marche)</strong>
-        Poiché la medesima denominazione commerciale può corrispondere a formulazioni differenti, le tabelle mettono a confronto i codici internazionali del <em>Colour Index</em> (es. PB29, PR101, PY150) e il grado di trasparenza dichiarato nei cataloghi ufficiali di sei linee produttive.
+        <strong>4. Monografie esecutive (Soggetti pittorici)</strong>
+        Analisi dei singoli temi pittorici (alberi, nuvole, fiori, acqua, rocce, architetture) attraverso più varianti procedurali, tavole sinottiche in tre fasi e rimandi al secondo esatto delle dimostrazioni filmate.
       </div>
     </div>
     <div class="cf-sviluppo">
-      <strong>Repertorio in fase di sviluppo e progressiva estensione:</strong> l'opera si articola in sezioni teorico-metodologiche generali (<em>Principi tecnici</em>, <em>Colorimetria</em>, <em>Merceologia</em>) e in <strong>moduli monografici per soggetto</strong>. Il modulo dedicato alla <em>Morfologia degli alberi</em> è il primo pubblicato in quanto primo argomento affrontato nel percorso di studio; seguiranno progressivamente ulteriori sezioni monografiche dedicate agli altri temi classici dell'acquerello (<strong>cieli e formazioni nuvolose</strong>, <strong>elementi botanici e fiori</strong>, <strong>specchi d'acqua e riflessi</strong>, <strong>masse rocciose e architetture</strong>).
+      <strong>Repertorio in fase di sviluppo:</strong> la sezione <strong>5. Soggetti pittorici</strong> si apre con il modulo completo dedicato alla <em>Morfologia degli alberi</em>, primo argomento affrontato nel corso di studio; seguiranno progressivamente le monografie dedicate a <strong>cieli e formazioni nuvolose</strong>, <strong>fiori ed elementi botanici</strong>, <strong>specchi d'acqua e riflessi</strong>, <strong>masse rocciose</strong> e <strong>architetture</strong>.
     </div>
     <div class="cf-strumenti">
       <a class="cf-link chat" href="#assistente-ai">🎨 Quesiti operativi: consulta l'assistente tecnico AI (5 domande gratuite) ↓</a>
@@ -613,24 +644,10 @@ footer a{{color:#5a4d3b}}
     </div>
   </section>
 
-  <h2 class="sezioni-tit">Sezioni pubblicate</h2>
+  <h2 class="sezioni-tit">Sezioni del repertorio</h2>
   <div class="grid">
     {cards_html}
   </div>
-
-  <section class="in-sviluppo-box" aria-label="Prossimi moduli monografici in preparazione">
-    <h3>Prossimi moduli monografici in programma</h3>
-    <p>
-      Dopo il primo modulo applicativo dedicato agli <strong>alberi e alle masse arbustive</strong> (tema d'apertura del corso), il repertorio verrà esteso con nuove monografie strutturate secondo il medesimo protocollo analitico (tavole sinottiche in tre stadi operativi, doppia formulazione cromatica e rimandi temporizzati ai filmati dimostrativi):
-    </p>
-    <div class="pills" style="margin-bottom:0">
-      <span class="pill">Cieli, velature atmosferiche e formazioni nuvolose</span>
-      <span class="pill">Morfologia botanica e fiori</span>
-      <span class="pill">Specchi d'acqua, increspature e riflessi</span>
-      <span class="pill">Masse rocciose, rilievi e terreni</span>
-      <span class="pill">Architetture, murature storiche e scorci urbani</span>
-    </div>
-  </section>
 </main>
 {blocco_sugg}
 <footer>

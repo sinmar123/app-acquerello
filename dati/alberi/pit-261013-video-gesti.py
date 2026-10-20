@@ -431,9 +431,9 @@ def pagina():
 
         blocco_colori = ""
         if t.get("colori_studio"):
-            blocco_colori += f'<p class="colori studio"><b>🎨 Tavolozza estesa da studio:</b> {e(t["colori_studio"])}</p>'
+            blocco_colori += f'<p class="colori studio"><b>🎨 <a href="../studio-plein-air/#tavolozza-studio" style="color:inherit">Tavolozza estesa da studio</a>:</b> {e(t["colori_studio"])}</p>'
         if t.get("colori_aperto"):
-            blocco_colori += f'<p class="colori aperto"><b>🎒 Tavolozza ristretta (<a href="#miscele">6 pigmenti di base</a>):</b> {e(t["colori_aperto"])}</p>'
+            blocco_colori += f'<p class="colori aperto"><b>🎒 <a href="../studio-plein-air/#miscele" style="color:inherit">Tavolozza en plein air (6 pigmenti)</a>:</b> {e(t["colori_aperto"])}</p>'
         elif t.get("colori"):
             colori = " · ".join(f'<b>{e(x["m"])}</b> {e(x["ricetta"])}, {e(x["per"])}' for x in t["colori"])
             blocco_colori += f'<p class="colori"><b>Formulazioni cromatiche:</b> {colori}</p>'
@@ -471,7 +471,7 @@ def pagina():
     esercizi = "".join(f'<li><b>{e(x["titolo"])}.</b> {e(x["testo"])}</li>' for x in a.get("esercizi", []))
     if a.get("principi"):
         pr = a["principi"]
-        esercizi = (f'<li><b>{e(pr["titolo"])}.</b> {e(pr["testo"])} <a href="{e(pr["href"])}">{e(pr["link"])}</a>.</li>'
+        esercizi = (f'<li><b>{e(pr["titolo"])}.</b> {e(pr["testo"])} <a href="{e(pr["href"])}">{e(pr["link"])}</a> · <a href="../studio-plein-air/">2. Pittura in studio ed en plein air</a> · <a href="../soggetti/">5. Tutti i soggetti pittorici</a>.</li>'
                     + esercizi)
     miscele, sei_colori, riquadri = parte_colori(a, e)
     crediti = "".join(f'<li><a href="https://www.youtube.com/watch?v={e(v)}" target="_blank" rel="noopener">'
@@ -479,15 +479,15 @@ def pagina():
                       for v in video_usati)
     corpo = f"""<header class="testa"><h1>{e(a["titolo"])}</h1>
 <p class="sotto">{e(a["sottotitolo"])}</p></header>
-<nav class="salti">{"".join(indice)}</nav>
+<nav class="salti"><a href="../soggetti/">← Tutti i soggetti</a>{"".join(indice)}</nav>
 <div id="avviso" hidden></div>
 <section class="intro">
 <div class="guida">
 <h3>Inquadramento metodologico</h3>
 <ul class="come">{esercizi}</ul>
 </div>
-<details class="miscele-box" id="miscele"><summary>Sistema cromatico per pittura all'aperto (en plein air): i 6 pigmenti di base e il prontuario delle 12 miscele (M1-M12)</summary>
-<p class="nota-studio-aperto">Per l'attività in studio è possibile attingere all'intera gamma di pigmenti indicata nelle singole schede; per l'esecuzione en plein air o per lo studio rigoroso della sintesi sottrattiva, la selezione ristretta a 6 pigmenti consente di formulare l'intero spettro di verdi, bruni e grigi atmosferici:</p>
+<details class="miscele-box" id="miscele"><summary>Consultazione rapida: i 6 pigmenti e le 12 miscele (M1-M12) — vedi sezione completa «Studio ed en plein air»</summary>
+<p class="nota-studio-aperto">Per la trattazione integrale del metodo di lavoro in studio e all'aperto, della dotazione e del protocollo sui campioni A5 consulta la sezione <a href="../studio-plein-air/"><b>2. Pittura in studio ed en plein air</b></a>. Di seguito il riepilogo operativo delle 12 miscele (M1-M12):</p>
 {sei_colori}
 {riquadri}
 <table class="mix">{miscele}</table></details>

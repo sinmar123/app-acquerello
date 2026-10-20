@@ -1,0 +1,56 @@
+{
+  "titolo": "Pittura in studio ed en plein air: metodo operativo, dotazione e assetto della tavolozza",
+  "sottotitolo": "Confronto metodologico tra il lavoro analitico in studio e la sintesi esecutiva all'aperto, protocollo di sperimentazione su campioni in formato A5, tavolozza estesa e prontuario delle 12 miscele con la selezione ristretta a 6 pigmenti.",
+  "introduzione": [
+    "L'organizzazione del lavoro ad acquerello muta sensibilmente a seconda che l'esecuzione avvenga nell'ambiente controllato dello studio oppure dal vero all'aperto (en plein air). Le variabili ambientali — temperatura, umidità relativa, ventilazione e incidenza diretta della luce solare — modificano in modo drastico la cinetica di evaporazione dell'acqua dalla carta, imponendo scelte differenti sia nella dotazione strumentale sia nella composizione della tavolozza.",
+    "Questa sezione definisce i due assetti operativi adottati nelle schede monografiche dei Soggetti pittorici, illustra il protocollo di verifica preliminare su campioni in formato A5 e raccoglie il prontuario completo delle 12 miscele fondamentali (M1-M12) ottenibili con la tavolozza ridotta a 6 pigmenti."
+  ],
+  "confronto": [
+    {
+      "aspetto": "Cinetica di asciugatura e gestione dell'umidità",
+      "studio": "Temperatura e umidità stabili; assenza di correnti d'aria. Il velo d'acqua evapora con gradualità prevedibile, consentendo stesure bagnato su bagnato complesse, passaggi multipli nella fase di carta umida satinata e l'impiego di supporti di grande formato fissati su tavola inclinata.",
+      "plein_air": "Evaporazione accelerata dal vento e dall'irraggiamento solare, oppure rallentata dall'umidità atmosferica. Richiede decisioni rapide, stesure sintetiche in pochi passaggi, uso prevalente di formati contenuti (A5 o quarto di foglio) e controllo costante del riflesso speculare."
+    },
+    {
+      "aspetto": "Configurazione della tavolozza",
+      "studio": "Tavolozza estesa da banco (14-24 godet o pozzetti per tubetto): affianca ai primari caldi e freddi una serie di pigmenti monopigmento di comodità (verdi di ftalocianina e perilene, ocre, terre naturali, indaco, turchese di cobalto, grigio di Payne) per preparare rapidamente campiture abbondanti e preservare la massima saturazione.",
+      "plein_air": "Tavolozza compatta da campagna ristretta a 6 pigmenti fondamentali (Giallo limone PY175, Blu ceruleo/ftalo PB15 o PB35, Cremisi PR206/PV19, Terra di Siena bruciata PR101, Terra d'ombra bruciata PBr7+PY42, Blu oltremare PB29): riduce l'ingombro e garantisce una coerenza armonica immediata tra tutte le mescolanze."
+    },
+    {
+      "aspetto": "Dotazione di pennelli e accessori",
+      "studio": "Serie completa: pennelli tondi a grande serbatoio (mop o vajo n. 10-14), tondi sintetici o misti a punta coesa (n. 6-10), pennelli a setola lunga (rigger n. 1-4), piatti per ammorbidimento e lifting, pennello a ventaglio, spugna marina, tiralinee con fluido mascherante, cloruro di sodio, tessera rigida per sgraffito e asciugacapelli.",
+      "plein_air": "Dotazione essenziale da tasca: un tondo medio-grande con buona ritenzione idrica e punta fine (n. 8-10), un rigger per le ramificazioni e gli accenti lineari, un piccolo piatto sintetico o l'angolo di una tessera rigida, carta assorbente e borraccia d'acqua con spruzzatore."
+    },
+    {
+      "aspetto": "Finalità didattica nei moduli del repertorio",
+      "studio": "Riproduzione fedele delle procedure mostrate nei filmati didattici, sperimentando anche i pigmenti specifici impiegati dai singoli autori.",
+      "plein_air": "Addestramento rigoroso alla sintesi sottrattiva: ottenere qualsiasi tono vegetale, atmosferico o d'ombra bilanciando unicamente i 6 pigmenti di base secondo il prontuario M1-M12."
+    }
+  ],
+  "capitoli": [
+    {
+      "id": "protocollo-a5",
+      "titolo": "1. Protocollo di sperimentazione su campioni in formato A5",
+      "paragrafi": [
+        "Prima di affrontare una composizione completa, lo studio metodico di ciascun soggetto (un gruppo di conifere, una formazione nuvolosa, una corolla botanica) risulta più efficace se condotto su campioni ridotti in formato A5 (circa 14,8 × 21 cm), ricavabili sezionando in otto parti uguali un foglio intero 56 × 76 cm oppure in quattro parti un foglio 30 × 40 cm di carta 100% cotone da 300 g/m² a grana fina (cold press).",
+        "Il formato ridotto circoscrive l'estensione fisica della campitura: il tempo richiesto per stendere la lavatura è inferiore al tempo di evaporazione del velo superficiale, permettendo di concentrare l'attenzione esclusivamente sul rapporto acqua-pigmento (tè, latte, miele) e sull'individuazione del momento esatto di perdita del lucido (carta umida satinata). Ciascun campione viene fissato su un pannello rigido impermeabile mediante nastro di carta su tutti i quattro lati: oltre a contenere l'ondulazione delle fibre, la rimozione del nastro a lavoro asciutto restituisce un margine bianco netto che agevola la lettura dei valori tonali."
+      ]
+    },
+    {
+      "id": "tavolozza-studio",
+      "titolo": "2. Assetto in studio: la tavolozza estesa e i pigmenti di comodità",
+      "paragrafi": [
+        "Nel lavoro di studio — e nell'analisi delle dimostrazioni filmate raccolte nei moduli dei Soggetti — gli autori impiegano frequentemente pigmenti già formulati o terre specifiche accanto alla triade primaria. L'uso di un pigmento singolo o di una miscela di fabbrica bilanciata consente infatti di depositare sulla carta un tono già pronto alla consistenza desiderata (specialmente quando occorre una miscela densa a «miele» per intervenire entro pochi secondi su una campitura umida che sta perdendo il lucido).",
+        "I principali pigmenti complementari ricorrenti nelle schede da studio del repertorio sono: Ocra gialla (PY43) e Terra di Siena naturale (PBr7) per le velature calde di fondo e i fusti illuminati; Verde vescica (Sap Green), Verde oliva e Verde di perilene (PBk31) per le masse fogliari; Turchese di cobalto (PB28/PG50) e Blu di Prussia (PB27) per le velature fredde e le conifere in lontananza; Indaco, Grigio di Payne e Seppia per l'abbattimento rapido del valore tonale nelle ombre profonde e nei controluce."
+      ]
+    },
+    {
+      "id": "tavolozza-plein-air",
+      "titolo": "3. Assetto en plein air: la tavolozza ristretta a 6 pigmenti e le 12 miscele (M1-M12)",
+      "paragrafi": [
+        "Quando si dipinge all'aperto o si desidera padroneggiare a fondo i rapporti di mescolanza senza dipendere da decine di tubetti, una selezione ristretta a 6 pigmenti (tre primari più le due terre classiche e la distinzione tra blu freddo ftalo/ceruleo e blu caldo oltremare) copre l'intero spazio cromatico necessario al paesaggio e allo studio botanico.",
+        "Poiché ogni verde, viola, arancio o grigio neutro nasce dalla combinazione dei medesimi sei componenti, tutte le zone del dipinto condividono le stesse lunghezze d'onda di riflettanza residua, garantendo un'armonia cromatica naturale e priva di dissonanze."
+      ]
+    }
+  ]
+}

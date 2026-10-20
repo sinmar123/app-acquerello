@@ -1,0 +1,73 @@
+{
+  "titolo": "Repertorio dei soggetti pittorici: monografie esecutive e analisi dei gesti",
+  "sottotitolo": "Sezione monografica in progressiva estensione dedicata ai singoli temi classici dell'acquerello. Ciascun soggetto viene scomposto in tipologie morfologiche, tavole sinottiche in tre stadi operativi e dimostrazioni filmate indicizzate al secondo.",
+  "introduzione": [
+    "Accanto alle quattro sezioni trasversali (Principi tecnici, Studio ed en plein air, Colorimetria applicata, Merceologia e marche), questa sezione raccoglie i moduli monografici dedicati ai singoli soggetti pittorici affrontati progressivamente nel percorso di studio.",
+    "Il repertorio è in fase di sviluppo: il primo modulo pubblicato riguarda la Morfologia degli alberi e delle masse arbustive, in quanto primo argomento affrontato nel corso. I moduli successivi — dedicati a cieli e formazioni nuvolose, fiori ed elementi botanici, specchi d'acqua, masse rocciose e architetture — vengono redatti secondo il medesimo protocollo analitico."
+  ],
+  "soggetti": [
+    {
+      "codice": "S1",
+      "stato": "pubblicato",
+      "etichetta_stato": "Modulo attivo · 1° tema del corso",
+      "titolo": "Alberi, conifere e masse arbustive",
+      "sottotitolo": "6 tipologie arboree · 24 procedure comparative · 72 stadi in tavola sinottica SVG · 31 estratti video al secondo",
+      "href": "../alberi/",
+      "descrizione": "Primo soggetto affrontato nel percorso didattico. Analizza la costruzione volumetrica e luminosa della vegetazione arborea indipendentemente dal contesto paesaggistico, mettendo a confronto più soluzioni esecutive per ciascuna morfologia, con doppia formulazione cromatica (tavolozza estesa da studio e tavolozza ristretta a 6 pigmenti).",
+      "sottovoci": [
+        {"sigla": "A1", "titolo": "Macchie di conifere e abeti per piani", "href": "../alberi/#A1"},
+        {"sigla": "A2", "titolo": "Abeti ad alto fusto a ramificazione radiale", "href": "../alberi/#A2"},
+        {"sigla": "A3", "titolo": "Chiome decidue nel cromatismo autunnale", "href": "../alberi/#A3"},
+        {"sigla": "A4", "titolo": "Quinte arbustive, siepi e cespugli nel paesaggio", "href": "../alberi/#A4"},
+        {"sigla": "A5", "titolo": "Fusti spogli, betulle e alberi invernali a risparmio del bianco", "href": "../alberi/#A5"},
+        {"sigla": "A6", "titolo": "Ramificazioni sottili e fogliame brinato in primo piano", "href": "../alberi/#A6"}
+      ],
+      "badge": ["6 tipologie", "24 tavole SVG in 3 fasi", "31 estratti video", "Studio ed en plein air"]
+    },
+    {
+      "codice": "S2",
+      "stato": "in_programma",
+      "etichetta_stato": "Modulo in preparazione",
+      "titolo": "Cieli, velature atmosferiche e formazioni nuvolose",
+      "sottotitolo": "Lavature graduate, cumuli per risparmio e asportazione a umido (lifting), cieli crepuscolari e fronti temporaleschi",
+      "descrizione": "Controllo delle grandi campiture su supporto inclinato: stesura graduata (graded wash) su carta asciutta e bagnata; modellazione dei cumuli per risparmio del bianco della carta o per sollevamento del pigmento con pennello scarico e carta assorbente; transizioni calde-fredde all'orizzonte senza ingrigimento o formazione di verdi indesiderati; stratificazione bagnato su umido dei fronti nuvolosi densi.",
+      "badge": ["Lavature graduate", "Lifting a umido", "Transizioni calde-fredde", "Bagnato su bagnato"]
+    },
+    {
+      "codice": "S3",
+      "stato": "in_programma",
+      "etichetta_stato": "Modulo in preparazione",
+      "titolo": "Morfologia botanica, corolle e fiori",
+      "sottotitolo": "Velature trasparenti sui petali, alternanza di margini netti e fusi (lost and found), sintesi degli steli e del fogliame",
+      "descrizione": "Esecuzione del soggetto floreale dal vero e in sintesi pittorica: preservazione della luminosità del supporto nelle corolle chiare, gestione dei rossi e dei violetti di chinacridone ad alto croma, fusione selettiva alla base del calice in fase di carta umida satinata e costruzione in negativo degli steli e delle foglie in controluce.",
+      "badge": ["Velature ad alto croma", "Bordi lost and found", "Pittura in negativo", "Sintesi botanica"]
+    },
+    {
+      "codice": "S4",
+      "stato": "in_programma",
+      "etichetta_stato": "Modulo in preparazione",
+      "titolo": "Specchi d'acqua, increspature e riflessi",
+      "sottotitolo": "Riflessi verticali su acqua ferma, pennello scarico (drybrush) per il riverbero solare, onde e corsi d'acqua",
+      "descrizione": "Leggi ottiche e resa pittorica delle superfici acquatiche: compressione dei valori tonali nei riflessi rispetto agli elementi reali (i chiari si scuriscono, gli scuri si schiariscono), introduzione delle masse riflesse su campitura umida a perdita di lucido, interruzione con righe orizzontali a secco e sfruttamento della grana ruvida della carta per la luce radente.",
+      "badge": ["Riflessi bagnato su umido", "Drybrush su grana", "Compressione dei valori", "Acqua ferma e mossa"]
+    },
+    {
+      "codice": "S5",
+      "stato": "in_programma",
+      "etichetta_stato": "Modulo in preparazione",
+      "titolo": "Masse rocciose, rilievi montuosi e terreni",
+      "sottotitolo": "Sfaccettatura plastica dei piani di frattura, granulazione minerale, sgraffito e prospettiva aerea delle quinte lontane",
+      "descrizione": "Costruzione strutturale di rocce, scogliere e catene montuose: definizione netta tra piani in luce e piani in ombra mediante pennellate piatte angolose, impiego mirato della flocculazione e granulazione (oltremare e terre bruciate) per la tessitura lapidea, incisioni a umido per le fessurazioni e raffreddamento progressivo dei profili montuosi in lontananza.",
+      "badge": ["Piani di frattura", "Granulazione controllata", "Sgraffito", "Prospettiva atmosferica"]
+    },
+    {
+      "codice": "S6",
+      "stato": "in_programma",
+      "etichetta_stato": "Modulo in preparazione",
+      "titolo": "Architetture, murature storiche e scorci urbani",
+      "sottotitolo": "Unificazione delle ombre portate, tessitura degli intonaci ed equilibrio tra struttura geometrica e sintesi pittorica",
+      "descrizione": "Rappresentazione di edifici rurali, borghi e quinte architettoniche: prima lavatura calda di fondo per la luce solare, connessione di tutte le ombre proprie e portate in un'unica forma continua a consistenza «latte», resa materica di pietre e intonaci per velature granulate e spruzzi controllati, inserimento finale degli accenti scuri a consistenza «miele».",
+      "badge": ["Connessione delle ombre", "Tessiture murarie", "Luce e controluce", "Accenti finali"]
+    }
+  ]
+}
