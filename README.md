@@ -1,22 +1,22 @@
 # Quaderno di acquerello (`app-acquerello`)
 
-Sito statico aperto di guide pratiche, miscele, gesti nei video ed esercizi su foglietti di prova per chi studia l'acquerello.
+Repertorio tecnico-didattico ad accesso aperto dedicato allo studio sistematico della pittura ad acquerello: principi idrodinamici, morfologia ed esecuzione degli alberi con tavole sinottiche e analisi dei gesti nei video, colorimetria e simulatore spettrale, merceologia dei pigmenti.
 
 - **Sito online:** [https://app-acquerello.pages.dev](https://app-acquerello.pages.dev)
 - **Repository GitHub:** [https://github.com/sinmar123/app-acquerello](https://github.com/sinmar123/app-acquerello)
 - **Licenza:** [CC BY 4.0 per testi, dati e illustrazioni · MIT per il codice](LICENSE)
 
-Il repository è autonomo: contiene tutti i file di dati, le infografiche SVG, le illustrazioni e gli script necessari a generare l'intero sito. Chiunque può proporre correzioni, nuove marche, nuovi esempi o nuove sezioni direttamente tramite la casella in fondo a ogni pagina del sito oppure secondo le indicazioni di [`CONTRIBUTING.md`](CONTRIBUTING.md).
+Il repository è autonomo: contiene tutti i file di dati, le tavole sinottiche SVG, le illustrazioni e gli script necessari a generare l'intero sito. Chiunque può proporre rettifiche, integrazioni documentali o nuovi riferimenti video tramite il modulo in calce a ogni pagina del sito oppure secondo le indicazioni di [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ## Sezioni attive
 
 | Percorso | Sezione | Sorgenti |
 |----------|---------|----------|
-| `/` (`site/index.html`) | Indice generale del Quaderno di acquerello | `scripts/genera-sito.py` |
-| `/principi/` (`site/principi/index.html`) | **1. Principi generali: acqua, colore e carta** (tè, latte, miele; stati della carta e momenti di mezzo; pennello e carta; bordi, asciugatura, tipi di carta; ogni frase con la fonte, video aperti al minuto) | `dati/principi/` |
-| `/alberi/` (`site/alberi/index.html`) | **2. Alberi ad acquerello: esempi, modalità e gesti nei video** (6 esempi di alberi e arbusti, 24 modalità nei video con un'infografica SVG in 3 fasi per ciascun video, 31 estratti video, proposte di colore libere per lo studio e tavolozza da 6 colori e 12 miscele per l'aperto) | `dati/alberi/` |
-| `/colori/` (`site/colori/index.html`) | **3. Teoria dei colori per l'acquerello** (Munsell, luce e pigmento, velature, schede dei 6 colori della tavolozza ridotta col nome comune e il pigmento, calcolatore di miscele in JavaScript che gira nel browser) | `dati/colori/` |
-| `/marche/` (`site/marche/index.html`) | **4. Marche e tubetti** (i 6 colori della tavolozza ridotta in sei serie: Winsor & Newton Cotman e Professional, Van Gogh, Daniel Smith, Schmincke Horadam, Maimeri Blu; dati solo da pagine ufficiali, con link e data su ogni riga; stesso nome, pigmenti diversi) | `dati/marche/` |
+| `/` (`site/index.html`) | Indice generale e metodo di consultazione del Quaderno di acquerello | `scripts/genera-sito.py` |
+| `/principi/` (`site/principi/index.html`) | **1. Principi generali: diluizioni, stati igrometrici della carta e controllo dei margini** (scala tè, latte, miele; stati della carta e fasi di transizione; bilancio idrico pennello-supporto; gestione dei bordi, asciugatura, caratteristiche delle carte; apparato di 33 fonti con rimandi al minuto) | `dati/principi/` |
+| `/alberi/` (`site/alberi/index.html`) | **2. Morfologia ed esecuzione degli alberi: prontuario delle miscele e analisi dei gesti** (6 tipologie arboree e vegetazionali, 24 modalità esecutive con tavola sinottica SVG in 3 fasi per ciascun video, 31 estratti video indicizzati, tavolozza estesa da studio e tavolozza essenziale a 6 pigmenti e 12 miscele `M1`-`M12`) | `dati/alberi/` |
+| `/colori/` (`site/colori/index.html`) | **3. Teoria del colore, ottica dei pigmenti e calcolatore di miscele** (spazio colorimetrico di Munsell, sintesi sottrattiva, velature e granulazione, schede tecniche dei 6 pigmenti di base col codice Colour Index, simulatore spettrale Kubelka-Munk in JavaScript) | `dati/colori/` |
+| `/marche/` (`site/marche/index.html`) | **4. Merceologia e comparazione delle serie commerciali** (i 6 pigmenti della tavolozza essenziale messi a confronto in sei serie: Winsor & Newton Cotman e Professional, Van Gogh, Daniel Smith, Schmincke Horadam, Maimeri Blu; dati da schede ufficiali con link e data di verifica; analisi della variabilità formulativa) | `dati/marche/` |
 
 ## Generare il sito in locale
 

@@ -1,14 +1,14 @@
 {
- "data": "2026-10-18",
- "nota": "Dati dei tubetti presi solo dalle pagine ufficiali dei produttori, con il link e la data di controllo su ogni riga. I colori (id e nome comune) vengono da dati/colori/tavolozza.json. GBOT-app-acquerello, 18/10/2026.",
- "titolo": "Marche e tubetti: i sei colori di base nei negozi",
- "sottotitolo": "Per ogni colore della tavolozza, il tubetto corrispondente in sei serie: nome commerciale, numero, pigmenti e trasparenza, dalle pagine ufficiali dei produttori",
+ "data": "2026-10-20",
+ "nota": "Specifiche tecniche rilevate dai cataloghi ufficiali dei produttori, con collegamento diretto e data di verifica per ogni voce. Le sei voci di base provengono da dati/colori/tavolozza.json.",
+ "titolo": "Merceologia dei pigmenti e confronto tra serie commerciali",
+ "sottotitolo": "Corrispondenza tra i sei pigmenti della tavolozza ristretta e le formulazioni in commercio: denominazione, codice serie, Colour Index e grado di trasparenza dichiarati dai produttori",
  "introduzione": [
-  "Le schede del Quaderno indicano i colori della tavolozza ridotta col nome comune e col pigmento, per esempio «blu oltremare (PB29)». Il pigmento è la sigla del Colour Index stampata sull'etichetta: PY per i gialli, PR per i rossi, PB per i blu, PBr per i bruni. È questa sigla che decide come si comporta il colore, non il nome sul tubetto.",
-  "Qui trovi lo stesso colore in sei serie di cinque marche, con i dati presi dalle pagine ufficiali dei produttori. Prima di comprare un colore, guarda il pigmento: due tubetti con lo stesso nome possono avere pigmenti diversi, e due tubetti con nomi diversi possono avere lo stesso pigmento.",
-  "I produttori a volte cambiano la formula senza cambiare il nome: il cremisi Cotman usato negli esercizi ha PR206 sull'etichetta, mentre la formula di oggi sul sito è PR179. Conta sempre l'etichetta del tubetto che hai in mano."
+  "Nelle schede del repertorio ciascun colore della tavolozza ristretta è identificato dalla denominazione tradizionale affiancata dal codice internazionale del Colour Index — ad esempio «Blu oltremare (PB29)» — stampato sull'etichetta del tubetto o del godet (PY = Pigment Yellow, PR = Pigment Red, PB = Pigment Blue, PBr = Pigment Brown). Le proprietà ottiche, il potere colorante e il comportamento in miscela dipendono esclusivamente dalla natura chimica del pigmento identificato da tale sigla, non dalla denominazione commerciale.",
+  "Le tabelle seguenti mettono a confronto i sei colori di base in sei linee produttive appartenenti a cinque case costruttrici, riportando i dati estratti dalle schede tecniche ufficiali. L'esame comparativo evidenzia come la medesima denominazione tradizionale possa corrispondere a principi coloranti diversi e, viceversa, come lo stesso pigmento venga commercializzato sotto nomi differenti.",
+  "Le case produttrici possono inoltre aggiornare nel tempo la formulazione chimica di un colore mantenendo invariati nome e numero di catalogo: l'Alizarin Crimson Hue (n. 3) della serie Winsor & Newton Cotman impiegato nelle prove del repertorio riporta sull'etichetta il pigmento PR206, mentre la formulazione attualmente a catalogo utilizza il pigmento PR179. Fa pertanto sempre fede la sigla del Colour Index impressa sul singolo esemplare."
  ],
- "criterio": "Oltre alla serie degli esercizi (Cotman) e alla serie superiore della stessa marca, ci sono le marche confrontate nel video «Best Brand to Fill Watercolour Pans», raccolto nei materiali del Quaderno: Daniel Smith, Schmincke, Van Gogh e Maimeri Blu. Per ogni colore c'è il tubetto col nome più vicino; quando la serie ne ha due (per esempio il ceruleo vero e un'imitazione), ci sono tutti e due.",
+ "criterio": "Accanto alla serie da studio adottata come riferimento operativo (Winsor & Newton Cotman) e alla linea professionale della medesima casa (Winsor & Newton Professional), la rassegna include le quattro serie messe a confronto nell'analisi comparativa «Best Brand to Fill Watercolour Pans»: Daniel Smith Extra Fine, Schmincke Horadam, Royal Talens Van Gogh e Maimeri Blu. Per ciascuna voce della tavolozza è riportato il tubetto corrispondente per denominazione o composizione; qualora il catalogo contempli sia il pigmento storico autentico sia un'imitazione o variante formulativa, vengono documentate entrambe le opzioni.",
  "criterio_fonte": "https://www.youtube.com/watch?v=F-wkzt94-OA",
  "trasparenza": {
   "T": "trasparente",
@@ -16,13 +16,13 @@
   "SO": "semicoprente",
   "O": "coprente"
  },
- "nota_trasparenza": "Trasparenza come la dichiara il produttore, tradotta: trasparente, semitrasparente, semicoprente, coprente (cioè opaco). «Granulante» solo dove la pagina ufficiale lo dice.",
+ "nota_trasparenza": "Il grado di trasparenza riporta la classificazione dichiarata dal produttore: trasparente, semitrasparente, semicoprente, coprente (opaco). L'indicatore «granulante» è apposto nei soli casi in cui la scheda tecnica ufficiale attesti esplicitamente la granulazione del colore.",
  "marche": [
   {
    "id": "wn-cotman",
    "marca": "Winsor & Newton",
    "serie": "Cotman",
-   "nota": "È la serie da studio presa a riferimento per la tavolozza ridotta a sei colori del Quaderno.",
+   "nota": "Linea da studio adottata come riferimento di base per la tavolozza ristretta a sei pigmenti del repertorio.",
    "fonte_generale": "https://www.winsornewton.com/pages/cotman-watercolour",
    "righe": [
     {
@@ -49,7 +49,7 @@
      "numero": "3",
      "pigmenti": "PR179",
      "trasparenza": "T",
-     "nota": "PR179 è la formula di oggi sul sito; sull'etichetta del tubetto usato negli esercizi c'è PR206, la formula precedente (etichetta controllata il 18/10/2026).",
+     "nota": "Il catalogo vigente dichiara il pigmento PR179; il lotto impiegato nelle esercitazioni del repertorio riporta sull'etichetta la precedente formulazione a base di PR206 (verifica effettuata il 18/10/2026).",
      "fonte": "https://www.winsornewton.com/en-ca/products/cotman-watercolour-alizarin-crimson-hue",
      "controllato": "2026-10-18"
     },
@@ -87,7 +87,7 @@
    "id": "wn-professional",
    "marca": "Winsor & Newton",
    "serie": "Professional",
-   "nota": "La serie superiore della stessa marca.",
+   "nota": "Linea extra-fine professionale della medesima casa produttrice.",
    "fonte_generale": "https://www.winsornewton.com/pages/professional-watercolour",
    "righe": [
     {
@@ -101,7 +101,7 @@
     },
     {
      "colore": "ceruleo",
-     "variante": "ceruleo vero",
+     "variante": "ceruleo autentico (stagno-cobalto)",
      "nome_commerciale": "Cerulean Blue",
      "numero": "137",
      "pigmenti": "PB35",
@@ -121,12 +121,12 @@
     },
     {
      "colore": "cremisi",
-     "variante": "alizarina vera",
+     "variante": "alizarina storica",
      "nome_commerciale": "Alizarin Crimson",
      "numero": "4",
      "pigmenti": "PR83",
      "trasparenza": "T",
-     "nota": "Resistenza alla luce sul sito: «Moderately Durable».",
+     "nota": "Solidità alla luce dichiarata dal produttore: «Moderately Durable» (pigmento fugace rispetto ai sostituti moderni).",
      "fonte": "https://www.winsornewton.com/en-ca/products/professional-watercolour-alizarin-crimson",
      "controllato": "2026-10-18"
     },
@@ -186,7 +186,7 @@
     },
     {
      "colore": "cremisi",
-     "assente": "Nella pagina ufficiale dei tubetti da 10 ml non c'è un colore chiamato alizarina o cremisi.",
+     "assente": "Il catalogo ufficiale dei tubetti da 10 ml non comprende alcuna referenza denominata Alizarin o Crimson.",
      "fonte": "https://www.royaltalens.com/products/van-gogh-watercolour-tube-10-ml",
      "controllato": "2026-10-18"
     },
@@ -223,7 +223,7 @@
    "id": "daniel-smith",
    "marca": "Daniel Smith",
    "serie": "Extra Fine",
-   "nota": "Sulle pagine ufficiali c'è solo il codice SKU, non un numero di colore breve: in tabella va lo SKU.",
+   "nota": "La documentazione ufficiale identifica ciascuna referenza tramite codice articolo (SKU) a nove cifre anziché tramite numero progressivo breve.",
    "fonte_generale": "https://danielsmith.com/",
    "righe": [
     {
@@ -237,7 +237,7 @@
     },
     {
      "colore": "ceruleo",
-     "variante": "ceruleo vero",
+     "variante": "ceruleo autentico (stagno-cobalto)",
      "nome_commerciale": "Cerulean Blue",
      "sku": "284600206",
      "pigmenti": "PB35",
@@ -248,7 +248,7 @@
     },
     {
      "colore": "ceruleo",
-     "variante": "ceruleo di cromo",
+     "variante": "ceruleo al cromo-cobalto",
      "nome_commerciale": "Cerulean Blue Chromium",
      "sku": "284600021",
      "pigmenti": "PB36",
@@ -267,12 +267,12 @@
     },
     {
      "colore": "cremisi",
-     "variante": "alizarina vera",
+     "variante": "alizarina storica",
      "nome_commerciale": "Alizarin Crimson",
      "sku": "284600004",
      "pigmenti": "PR83",
      "trasparenza": "T",
-     "nota": "Resistenza alla luce sul sito: «IV – Fugitive».",
+     "nota": "Solidità alla luce dichiarata dal produttore: «IV – Fugitive».",
      "fonte": "https://danielsmith.com/color-stories/watercolors/alizarin-crimson-watercolor/",
      "controllato": "2026-10-18"
     },
@@ -311,7 +311,7 @@
    "id": "schmincke",
    "marca": "Schmincke",
    "serie": "HORADAM Aquarell",
-   "nota": "Il numero a tre cifre è quello del colore; sul sito il codice articolo è 14 seguito dal numero (per esempio 14483).",
+   "nota": "Il codice a tre cifre identifica la tinta; nei listini commerciali è preceduto dal prefisso di formato 14 (es. 14483).",
    "fonte_generale": "https://www.schmincke.de/en/produkte/aquarell/horadam-aquarell",
    "righe": [
     {
@@ -325,7 +325,7 @@
     },
     {
      "colore": "giallo",
-     "variante": "altro pigmento",
+     "variante": "formulazione alternativa (arilide)",
      "nome_commerciale": "lemon yellow",
      "numero": "215",
      "pigmenti": "PY3",
@@ -335,7 +335,7 @@
     },
     {
      "colore": "ceruleo",
-     "variante": "imitazione",
+     "variante": "imitazione (ftalocianina)",
      "nome_commerciale": "cerulean blue hue",
      "numero": "481",
      "pigmenti": "PW4, PB15:3",
@@ -345,7 +345,7 @@
     },
     {
      "colore": "ceruleo",
-     "variante": "ceruleo vero",
+     "variante": "ceruleo autentico (stagno-cobalto)",
      "nome_commerciale": "cobalt azure",
      "numero": "483",
      "pigmenti": "PB35",
@@ -365,7 +365,7 @@
     },
     {
      "colore": "cremisi",
-     "variante": "alizarina vera",
+     "variante": "alizarina storica",
      "nome_commerciale": "alizarin crimson",
      "numero": "357",
      "pigmenti": "PR83:1",
@@ -407,7 +407,7 @@
    "id": "maimeri-blu",
    "marca": "Maimeri",
    "serie": "Maimeri Blu",
-   "nota": "Sul sito la coprenza è un'icona, letta con la legenda della pagina («trasparente», «semicoprente», «coprente»).",
+   "nota": "Il grado di coprenza è indicato nelle schede ufficiali mediante simbologia grafica normalizzata (trasparente, semicoprente, coprente).",
    "fonte_generale": "https://www.maimeri.it/it/categorie/acquerello/maimeri-blu/",
    "righe": [
     {
@@ -430,7 +430,7 @@
     },
     {
      "colore": "ceruleo",
-     "variante": "ceruleo vero",
+     "variante": "ceruleo autentico (stagno-cobalto)",
      "nome_commerciale": "Celeste ceruleo",
      "numero": "417",
      "pigmenti": "PB35",
@@ -449,7 +449,7 @@
     },
     {
      "colore": "cremisi",
-     "variante": "altro pigmento",
+     "variante": "formulazione alternativa (perilene)",
      "nome_commerciale": "Lacca cremisi",
      "numero": "174",
      "pigmenti": "PR149",
@@ -489,7 +489,7 @@
  ],
  "stesso_nome": [
   {
-   "testo": "<b>Cremisi.</b> L'alizarina vera è il PR83: Winsor &amp; Newton Professional Alizarin Crimson (resistenza alla luce «Moderately Durable»), Daniel Smith Alizarin Crimson («IV – Fugitive»), Schmincke alizarin crimson (PR83:1). Le versioni «permanenti» e le imitazioni usano altri pigmenti: PR179 (Cotman Alizarin Crimson Hue nella formula di oggi, Winsor &amp; Newton Professional Permanent Alizarin Crimson, Maimeri Blu Lacca di garanza permanente scura), PR177 + PV19 + PR149 (Daniel Smith Permanent Alizarin Crimson) o PV19 + PR179 (Schmincke madder red dark). Il cremisi della tavolozza ha PR206 sull'etichetta: stesso nome e stesso numero (3) del Cotman in vendita oggi, che però è PR179.",
+   "testo": "<b>Cremisi e Alizarina.</b> La lacca di alizarina storica corrisponde al pigmento PR83 (o PR83:1), tuttora presente in Winsor &amp; Newton Professional <i>Alizarin Crimson</i> (solidità «Moderately Durable»), Daniel Smith <i>Alizarin Crimson</i> («IV – Fugitive») e Schmincke <i>alizarin crimson</i>. Per ovviare alla scarsa resistenza fotochimica del PR83, le versioni «permanenti» e le serie da studio impiegano pigmenti organici moderni ad alta stabilità: perilene PR179 (Winsor &amp; Newton Cotman nella formulazione attuale, Winsor &amp; Newton Professional <i>Permanent Alizarin Crimson</i>, Maimeri Blu <i>Lacca di garanza permanente scura</i>), miscele ternarie PR177 + PV19 + PR149 (Daniel Smith <i>Permanent Alizarin Crimson</i>) oppure chinacridone e perilene PV19 + PR179 (Schmincke <i>madder red dark</i>). Il tubetto Cotman n. 3 impiegato negli esercizi del repertorio appartiene invece alla precedente formulazione monopigmento a base di chinacridone PR206.",
    "marche": [
     "wn-cotman",
     "wn-professional",
@@ -499,7 +499,7 @@
    ]
   },
   {
-   "testo": "<b>Ceruleo.</b> Il ceruleo vero è il PB35, e granula: Winsor &amp; Newton Professional Cerulean Blue, Daniel Smith Cerulean Blue, Schmincke cobalt azure, Maimeri Blu Celeste ceruleo. Le imitazioni (<i>hue</i>) usano il blu ftalo: PB15 (Cotman Cerulean Blue Hue, il ceruleo della tavolozza), PB15 + PW6 (Van Gogh Cerulean Blue (Phthalo)), PW4 + PB15:3 (Schmincke cerulean blue hue). Maimeri Blu chiama «Blu ceruleo» un PB36 e riserva il PB35 al «Celeste ceruleo».",
+   "testo": "<b>Blu ceruleo.</b> Il ceruleo autentico è uno stannato di cobalto (PB35), pigmento inorganico granulante a moderato potere colorante: è impiegato in Winsor &amp; Newton Professional <i>Cerulean Blue</i>, Daniel Smith <i>Cerulean Blue</i>, Schmincke <i>cobalt azure</i> e Maimeri Blu <i>Celeste ceruleo</i>. Le versioni da studio o sostitutive (<i>Hue</i>) ricorrono invece alla ftalocianina di rame, molto più intensa e non granulante: PB15 puro (Cotman <i>Cerulean Blue Hue</i>), PB15 + bianco di titanio PW6 (Van Gogh <i>Cerulean Blue Phthalo</i>) o PW4 + PB15:3 (Schmincke <i>cerulean blue hue</i>). Infine, l'alluminato di cobalto-cromo (PB36) è adottato da Maimeri Blu per il <i>Blu ceruleo</i> n. 368 e da Daniel Smith per il <i>Cerulean Blue Chromium</i>.",
    "marche": [
     "wn-professional",
     "daniel-smith",
@@ -510,7 +510,7 @@
    ]
   },
   {
-   "testo": "<b>Terra di Siena bruciata.</b> È PR101 per Winsor &amp; Newton, Van Gogh e Schmincke (che aggiunge PBk9), ma PBr7 per Daniel Smith e Maimeri Blu.",
+   "testo": "<b>Terra di Siena bruciata.</b> Viene formulata con ossido di ferro rosso sintetico (PR101) in Winsor &amp; Newton (Cotman e Professional), Van Gogh e Schmincke (che vi associa nero d'avorio PBk9), mentre Daniel Smith e Maimeri Blu impiegano ossido di ferro bruno naturale calcinato (PBr7).",
    "marche": [
     "wn-cotman",
     "wn-professional",
@@ -521,7 +521,7 @@
    ]
   },
   {
-   "testo": "<b>Giallo limone.</b> È PY175 per Cotman, Winsor &amp; Newton Professional (Winsor Lemon), Daniel Smith, Maimeri Blu e Schmincke chromium yellow hue lemon, ma il «lemon yellow» di Schmincke è PY3 e il giallo limone di Van Gogh è PY184.",
+   "testo": "<b>Giallo limone.</b> Il benzimidazolone PY175 accomuna Winsor &amp; Newton Cotman, Winsor &amp; Newton Professional (<i>Winsor Lemon</i>), Daniel Smith, Maimeri Blu e Schmincke <i>chromium yellow hue lemon</i> (n. 211); tuttavia Schmincke commercializza come <i>lemon yellow</i> (n. 215) l'arilide PY3, mentre Royal Talens Van Gogh adotta il vanadato di bismuto PY184.",
    "marche": [
     "wn-cotman",
     "wn-professional",
@@ -532,7 +532,7 @@
    ]
   },
   {
-   "testo": "<b>Terra d'ombra bruciata.</b> Cambia da marca a marca: PBr7 + PY42 (Cotman), PBr7 + PR101 + PY42 (Winsor &amp; Newton Professional), PBr7 da solo (Van Gogh, Daniel Smith, Schmincke, Maimeri Blu).",
+   "testo": "<b>Terra d'ombra bruciata.</b> È costituita da PBr7 monopigmento in Van Gogh, Daniel Smith, Schmincke e Maimeri Blu, mentre nelle due linee Winsor &amp; Newton è ottenuta mediante miscela composita: PBr7 + PY42 nella serie Cotman, PBr7 + PR101 + PY42 nella serie Professional.",
    "marche": [
     "wn-cotman",
     "wn-professional",
@@ -543,13 +543,13 @@
    ]
   },
   {
-   "testo": "<b>Oltremare.</b> È PB29 in tutte le serie della tabella, ma lo Schmincke «ultramarine blue» 496 è PB29 + PB15: anche qui il nome da solo non basta.",
+   "testo": "<b>Blu oltremare.</b> Tutte le sei referenze principali esaminate utilizzano il polisolfuro di alluminosilicato sodico (PB29) puro; si segnala tuttavia che nel catalogo Schmincke Horadam la voce affine <i>ultramarine blue</i> (n. 496) contiene un'aggiunta di ftalocianina PB15.",
    "marche": [
     "schmincke"
    ]
   },
   {
-   "testo": "<b>La trasparenza cambia anche nella stessa marca.</b> La terra d'ombra bruciata è coprente nella serie Cotman e trasparente nella Professional; il ceruleo Cotman (PB15) è coprente, quello Van Gogh (PB15 + PW6) è dichiarato trasparente.",
+   "testo": "<b>Divergenze nel grado di trasparenza.</b> Anche a parità di denominazione o di pigmento principale, la macinazione e gli additivi disperdenti modificano l'opacità: la Terra d'ombra bruciata è classificata coprente nella linea Cotman e trasparente nella linea Professional; analogamente, l'imitazione di Ceruleo su base PB15 è dichiarata coprente in Cotman e trasparente in Van Gogh.",
    "marche": [
     "wn-cotman",
     "wn-professional",
@@ -559,7 +559,7 @@
  ],
  "etichetta": [
   {
-   "testo": "<b>pigmento</b>: il Colour Index, cioè lettere e numero (per esempio PB29);",
+   "testo": "<b>Codice Colour Index dei pigmenti</b>: sigla alfanumerica internazionale (es. PB29, PR101) che identifica univocamente la specie chimica e rivela immediatamente se il colore è monopigmento o composito;",
    "marche": [
     "wn-cotman",
     "van-gogh",
@@ -569,7 +569,7 @@
    ]
   },
   {
-   "testo": "<b>numero del colore</b> (Daniel Smith dà lo SKU);",
+   "testo": "<b>Numero identificativo di serie o codice SKU</b>: distingue senza ambiguità la referenza all'interno del catalogo del produttore;",
    "marche": [
     "wn-cotman",
     "van-gogh",
@@ -579,7 +579,7 @@
    ]
   },
   {
-   "testo": "<b>trasparenza</b>;",
+   "testo": "<b>Grado di trasparenza / coprenza</b>: espresso tramite simbolo geometrico (quadrato vuoto, barrato o pieno) o dicitura testuale, essenziale per prevedere il comportamento nelle velature sovrapposte;",
    "marche": [
     "wn-cotman",
     "van-gogh",
@@ -589,7 +589,7 @@
    ]
   },
   {
-   "testo": "<b>resistenza alla luce</b>, con diciture diverse da marca a marca: Winsor &amp; Newton usa le classi I e II e le diciture «Permanent» ed «Extremely Permanent» (e «Moderately Durable» per l'Alizarin Crimson); Royal Talens usa +++; Daniel Smith usa I-IV («IV – Fugitive» per l'Alizarin Crimson).",
+   "testo": "<b>Solidità alla luce (lightfastness)</b>: espressa secondo scale proprietarie o norme ASTM: Winsor &amp; Newton adotta le classi AA/A (I/II, «Extremely Permanent» / «Permanent», oltre a «Moderately Durable» per il PR83), Royal Talens impiega la scala a crocette (+++), Daniel Smith utilizza le classi romane I–IV («IV – Fugitive» per il PR83).",
    "marche": [
     "wn-cotman",
     "wn-professional",

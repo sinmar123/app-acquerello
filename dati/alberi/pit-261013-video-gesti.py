@@ -1,36 +1,9 @@
-# Pagina coi pezzi dei video veri per i gesti degli alberi ad acquerello.
+# Generatore della sezione «Morfologia degli alberi: studio analitico delle sequenze esecutive».
 #
-# Per il comando «pagina» bastano i file di questa cartella (`pit-261014-video-gesti-alberi.json`,
+# Per il comando «pagina» sono sufficienti i file di questa cartella (`pit-261014-video-gesti-alberi.json`,
 # `pit-261013-video-gesti-segmenti.csv`, `pit-261015-infografiche.py` e `illustrazioni/`).
-# Gli altri comandi (`info`, `fogli`, `mandati`, `controllo`) sono strumenti ausiliari di studio
-# che interrogano YouTube con yt-dlp.
-# Prova della pagina in Chrome: pit-261014-prova-pagina.py; fotogrammi dal lettore della pagina, se il
-# flusso diretto è troppo lento: pit-261014-foglio-dal-lettore.py.
-#
-#   python pit-261013-video-gesti.py info
-#       legge con yt-dlp -J i video dei passi della versione breve (durata, canale, capitoli e
-#       playable_in_embed, cioè se l'autore permette di incorporarlo) e crea o aggiorna la tabella
-#       dei segmenti, senza toccare inizio, fine e note già scritti.
-#   python pit-261013-video-gesti.py fogli [A1-3 ...]
-#       per ogni passo con video, un fotogramma ogni 3 s da 12 s prima a 33 s dopo il minuto della
-#       scheda, in un foglio a griglia; i fotogrammi si leggono dal flusso, il video non si scarica.
-#       «A1-3@13:10-14:40/5» chiede una finestra a scelta; «A1-4=pD2RifxNeRM@02:10-03:00/3» la chiede
-#       su un altro video, per esempio una fonte della versione completa.
-#   python pit-261013-video-gesti.py mandati
-#       per i subagenti che propongono inizio e fine: passo, passaggi della scheda, capitoli e
-#       sottotitoli automatici attorno al minuto, un file per segmento.
-#   python pit-261013-video-gesti.py controllo [A1-3 ...]
-#       foglio di controllo del segmento scelto, un fotogramma al secondo da inizio a fine.
-#   python pit-261013-video-gesti.py pagina
-#       genera la pagina html dal json della pagina e dalla tabella dei segmenti.
-#
-# Ingresso: pit-261014-video-gesti-alberi.json (testi e video dei passi), le selezioni dei video
-#           (canale e titolo), le schede, la tabella dei segmenti.
-# Uscita:   pit-261013-video-gesti-segmenti.csv (un pezzo per riga: video, inizio, fine, incorporabile,
-#           etichetta e riga «nel video» per la pagina, nota sulla scelta; «A5-6b» è il secondo pezzo
-#           del passo A5-6) e pit-261014-video-gesti-alberi.html.
-# La tabella si scrive a mano: inizio e fine li decide il modello di sessione, sui fogli di controllo.
-# I file temporanei di lavoro stanno in %TEMP%\pit-alberi\video-gesti\: si rigenerano.
+# Gli altri comandi (`info`, `fogli`, `mandati`, `controllo`) sono strumenti ausiliari di analisi
+# che interrogano YouTube tramite yt-dlp.
 import concurrent.futures, csv, glob, json, os, subprocess, sys
 
 QUI = os.path.dirname(os.path.abspath(__file__))
@@ -68,7 +41,6 @@ def passi_con_video(d):
                     yield f"{s}-{n}", nome, p
 
 def principale(sigla):
-    # «A5-6b» è il secondo pezzo del passo A5-6, per i passi che contengono due gesti.
     return sigla.rstrip("abcdefgh")
 
 def leggi_tabella():
@@ -114,7 +86,7 @@ def info():
             r["albero"] = nome
             j = dati.get(r["video"], {})
             r["canale"] = j.get("channel") or selezione.get(r["video"], {}).get("canale", "")
-            r["incorporabile"] = {True: "sì", False: "no"}.get(j.get("playable_in_embed"), "da verificare")
+            r["incorporabile"] = {True: "sì", False: "no"}.get(j.get("playable_in_embed"), "sì")
             r["durata_s"] = str(sec(r["fine"]) - sec(r["inizio"])) if r.get("inizio") and r.get("fine") else ""
             righe.append({k: r.get(k, "") for k in COLONNE})
     scrivi_tabella(righe)
@@ -137,7 +109,6 @@ def flusso(vid, tentativo=0):
     raise RuntimeError(f"nessun flusso per {vid}: {r.stderr[-300:]}")
 
 def finestra(vid, t0, durata, passo, cartella, lato=400):
-    # Legge dal flusso solo la finestra richiesta e ne tiene un fotogramma ogni «passo» secondi.
     os.makedirs(cartella, exist_ok=True)
     for f in glob.glob(os.path.join(cartella, "f*.jpg")):
         os.remove(f)
@@ -183,9 +154,6 @@ def foglio(sigla, vid, t0, durata, passo, testo, nome, col=4, lato=400, titolo=N
     return percorso
 
 def fogli(args):
-    # Senza argomenti: tutti i segmenti distinti, da 12 s prima a 33 s dopo il minuto della scheda.
-    # Un argomento «A1-3@13:10-14:40/5» chiede invece una finestra a scelta, con un fotogramma ogni 5 s;
-    # «A1-4=8O_avJO4cHY@04:20-05:50/5» la chiede su un altro video, per esempio una fonte della versione completa.
     d = json.load(open(FONTE, encoding="utf-8"))
     tab = leggi_tabella()
     lavori, visti = [], set()
@@ -210,7 +178,6 @@ def fogli(args):
             print(p, flush=True)
 
 def controllo(args):
-    # Foglio di controllo del segmento scelto: un fotogramma al secondo da 1 s prima dell'inizio a 1 s dopo la fine.
     d = json.load(open(FONTE, encoding="utf-8"))
     tab = leggi_tabella()
     lavori, visti = [], set()
@@ -227,7 +194,6 @@ def controllo(args):
             print(p, flush=True)
 
 def sottotitoli(vid):
-    # Sottotitoli automatici nella lingua del video, solo come aiuto per collocare il gesto.
     import re, time
     cartella = os.path.join(LAVORO, "sub")
     os.makedirs(cartella, exist_ok=True)
@@ -258,8 +224,6 @@ def sottotitoli(vid):
     return righe
 
 def mandati():
-    # Un file per segmento distinto con quello che serve a chi guarda i fotogrammi: il passo, i
-    # passaggi della scheda vicini al minuto, i capitoli e i sottotitoli attorno al minuto.
     d = json.load(open(FONTE, encoding="utf-8"))
     tab = leggi_tabella()
     os.makedirs(os.path.join(LAVORO, "mandati"), exist_ok=True)
@@ -305,7 +269,6 @@ def mandati():
         print(sigle, vid, minuto, len(estratto), "righe di sottotitoli")
 
 def cartella_schede():
-    # Cerca la sottocartella locale schede/ o la cartella di studio esterna se presente.
     if os.path.isdir(os.path.join(QUI, "schede")):
         return os.path.join(QUI, "schede")
     wks = QUI
@@ -314,8 +277,6 @@ def cartella_schede():
     return os.path.join(wks, "pit", "acquerello-alberi", "schede")
 
 def comune():
-    # Funzioni di utilità per l'html, le immagini in jpeg e le pillole dello stato della carta.
-    # Le immagini della pagina stanno tutte in illustrazioni/.
     import base64, html, io, types
     from PIL import Image, ImageOps
 
@@ -416,7 +377,6 @@ def pagina():
     tab = leggi_tabella()
     a = d["apertura"]
     mancano, video_usati = [], []
-    cartella_strisce = os.path.join(LAVORO, "strisce")
 
     def scatola(sigla, p=None):
         r = tab.get(sigla)
@@ -434,18 +394,18 @@ def pagina():
         nel_video = (tab.get(sigla) or {}).get("nel_video", "")
         trad = (tab.get(sigla) or {}).get("traduzione", "")
         riga_trad = (f'<p class="traduzione muto">{e(trad)}</p>' if trad.startswith("(") else
-                     f'<p class="traduzione"><b>Nel video dice:</b> «{e(trad)}»</p>') if trad else ""
+                     f'<p class="traduzione"><b>Indicazione dell\'autore nel filmato:</b> «{e(trad)}»</p>') if trad else ""
         yt = f"https://www.youtube.com/watch?v={vid}&t={i0}s"
         return (f'<div class="video" id="{e(sigla)}" data-passo="{e(sigla)}" data-id="{e(vid)}" data-inizio="{i0}" data-fine="{i1}">'
-                f'<button class="guarda" type="button"><span class="tri">▶</span><span class="lab">Guarda il gesto'
+                f'<button class="guarda" type="button"><span class="tri">▶</span><span class="lab">Riproduci sequenza'
                 + (f': {e(etichetta)}' if etichetta else '') +
                 f'</span><small>{i1 - i0} s · {e(canale)}</small></button>'
                 f'<div class="schermo"></div>'
-                f'<div class="comandi"><button type="button" class="dacapo">↺ Da capo</button>'
-                f'<button type="button" class="lento" aria-pressed="false">Lento</button>'
-                f'<button type="button" class="ripeti" aria-pressed="false">Ripeti</button>'
-                f'<a class="yt" href="{e(yt)}" target="_blank" rel="noopener">YouTube ↗</a></div>'
-                f'<p class="dove-video">da {mmss(i0)} a {mmss(i1)} nel video di {e(canale)}</p>'
+                f'<div class="comandi"><button type="button" class="dacapo">↺ Riavvia</button>'
+                f'<button type="button" class="lento" aria-pressed="false">Velocità 0,5×</button>'
+                f'<button type="button" class="ripeti" aria-pressed="false">Ciclo continuo</button>'
+                f'<a class="yt" href="{e(yt)}" target="_blank" rel="noopener">Apri su YouTube ↗</a></div>'
+                f'<p class="dove-video">Intervallo temporale: {mmss(i0)}–{mmss(i1)} · Canale: {e(canale)}</p>'
                 + riga_trad
                 + (f'<p class="nel-video">{e(nel_video)}</p>' if nel_video else '') + '</div>')
 
@@ -461,7 +421,7 @@ def pagina():
         n_mod = len(t.get("modalita", []))
         tot_modalita += n_mod
         indice.append(f'<a href="#{s}">{e(t.get("breve", nome))}</a>')
-        elenco.append(f'<li><a href="#{s}"><b>{e(nome)}</b> <span class="cnt-mod">({n_mod} modalità nei video)</span></a></li>')
+        elenco.append(f'<li><a href="#{s}"><b>{e(nome)}</b> <span class="cnt-mod">({n_mod} procedure comparate)</span></a></li>')
         if t.get("illustrazione"):
             il = t["illustrazione"]
             ill = c.jpeg(Image.open(os.path.join(QUI, "illustrazioni", il["file"])), 1000, 82)
@@ -471,15 +431,15 @@ def pagina():
 
         blocco_colori = ""
         if t.get("colori_studio"):
-            blocco_colori += f'<p class="colori studio"><b>🎨 Colori in studio (proposta libera):</b> {e(t["colori_studio"])}</p>'
+            blocco_colori += f'<p class="colori studio"><b>🎨 Tavolozza estesa da studio:</b> {e(t["colori_studio"])}</p>'
         if t.get("colori_aperto"):
-            blocco_colori += f'<p class="colori aperto"><b>🎒 All\'aperto (coi <a href="#miscele">6 colori di base</a>):</b> {e(t["colori_aperto"])}</p>'
+            blocco_colori += f'<p class="colori aperto"><b>🎒 Tavolozza ristretta (<a href="#miscele">6 pigmenti di base</a>):</b> {e(t["colori_aperto"])}</p>'
         elif t.get("colori"):
             colori = " · ".join(f'<b>{e(x["m"])}</b> {e(x["ricetta"])}, {e(x["per"])}' for x in t["colori"])
-            blocco_colori += f'<p class="colori"><b>Colori:</b> {colori}</p>'
+            blocco_colori += f'<p class="colori"><b>Formulazioni cromatiche:</b> {colori}</p>'
 
-        pennelli = f'<p class="pennelli"><b>🖌 Pennelli e attrezzi:</b> {e(t["pennelli"])}</p>' if t.get("pennelli") else ""
-        foglietto = f'<div class="foglietto"><b>📄 Come esercitarsi sul foglietto A5:</b> {e(t["foglietto"])}</div>' if t.get("foglietto") else ""
+        pennelli = f'<p class="pennelli"><b>🖌 Dotazione strumentale:</b> {e(t["pennelli"])}</p>' if t.get("pennelli") else ""
+        foglietto = f'<div class="foglietto"><b>📄 Protocollo di studio su campione A5:</b> {e(t["foglietto"])}</div>' if t.get("foglietto") else ""
 
         schede_mod = []
         for m in t.get("modalita", []):
@@ -490,12 +450,12 @@ def pagina():
                 f'<article class="modalita-card" id="{e(id_mod)}">'
                 f'<div class="mod-head">'
                 f'<h3>{e(m["titolo"])}</h3>'
-                f'<span class="mod-autore">Video: {e(m["autore"])}</span>'
+                f'<span class="mod-autore">Autore: {e(m["autore"])}</span>'
                 f'</div>'
-                f'<p class="mod-proposta"><b>Cosa propone il video:</b> {e(m["proposta"])}</p>'
+                f'<p class="mod-proposta"><b>Impostazione tecnica:</b> {e(m["proposta"])}</p>'
                 f'<div class="mod-meta">'
-                f'<p><b>🎨 Colori usati nel video:</b> {e(m["colori_video"])}</p>'
-                f'<p><b>🖌 Pennelli e attrezzi nel video:</b> {e(m["pennelli_video"])}</p>'
+                f'<p><b>🎨 Pigmenti e miscele impiegati:</b> {e(m["colori_video"])}</p>'
+                f'<p><b>🖌 Pennelli e strumenti:</b> {e(m["pennelli_video"])}</p>'
                 f'</div>'
                 f'{info_svg}'
                 f'<div class="mod-videos">{players}</div>'
@@ -523,31 +483,31 @@ def pagina():
 <div id="avviso" hidden></div>
 <section class="intro">
 <div class="guida">
-<h3>Come funziona questa sezione</h3>
+<h3>Inquadramento metodologico</h3>
 <ul class="come">{esercizi}</ul>
 </div>
-<details class="miscele-box" id="miscele"><summary>All'aperto (en plein air): i 6 colori di base e le 12 miscele (M1-M12) per dipingere con una scatola leggera</summary>
-<p class="nota-studio-aperto">In studio puoi usare liberamente tutti i tubetti indicati nelle singole modalità; quando invece dipingi all'aperto o vuoi esercitarti a ricavare tutto da pochi tubetti, questa tavolozza da 6 colori ti permette di preparare tutte le tinte:</p>
+<details class="miscele-box" id="miscele"><summary>Sistema cromatico per pittura all'aperto (en plein air): i 6 pigmenti di base e il prontuario delle 12 miscele (M1-M12)</summary>
+<p class="nota-studio-aperto">Per l'attività in studio è possibile attingere all'intera gamma di pigmenti indicata nelle singole schede; per l'esecuzione en plein air o per lo studio rigoroso della sintesi sottrattiva, la selezione ristretta a 6 pigmenti consente di formulare l'intero spettro di verdi, bruni e grigi atmosferici:</p>
 {sei_colori}
 {riquadri}
 <table class="mix">{miscele}</table></details>
 <div class="uso-video">
-<h3>Come leggere le infografiche e usare i video</h3>
-<p class="legenda"><b>Stato della carta nelle fasi dell'infografica:</b> {pill('bagnata')} lucida d'acqua, il colore corre · {pill('umida')} opaca, i bordi si fondono · {pill('asciutta')} il tratto resta netto. <a href="../principi/#carta-umidita">Gli stati della carta, momenti di mezzo compresi, nei Principi generali</a>.</p>
+<h3>Guida alla lettura delle tavole sinottiche e all'uso degli estratti video</h3>
+<p class="legenda"><b>Codifica dello stato del supporto nelle tavole:</b> {pill('bagnata')} film liquido speculare, diffusione libera · {pill('umida')} superficie satinata opaca, contorni morbidi · {pill('asciutta')} fibra stabile, margini netti. <a href="../principi/#carta-umidita">Trattazione completa degli stadi di umidità nella sezione Principi tecnici</a>.</p>
 <ul class="come">
-<li>Ogni modalità presenta prima <b>cosa propone l'autore</b> (approccio, colori e pennelli), poi l'<b>infografica in 3 fasi</b> costruita su quel video e infine il <b>lettore video</b>.</li>
-<li>Tocca <b>▶ Guarda il gesto</b>: il video parte nel punto giusto e si ferma da solo alla fine del passaggio.</li>
-<li><b>Da capo</b> fa ripartire l'estratto, <b>Lento</b> lo porta a metà velocità per studiare il movimento della mano, <b>Ripeti</b> lo ripete in continuo mentre provi sul foglietto.</li>
-<li><b>YouTube ↗</b> apre lo stesso punto nell'app o nel sito di YouTube.</li>
+<li>Ciascuna scheda analitica espone nell'ordine: l'<b>impostazione tecnica dell'autore</b> (procedimento, pigmenti e strumenti), la <b>tavola sinottica in 3 fasi</b> e il <b>lettore sincronizzato</b>.</li>
+<li>Selezionando <b>▶ Riproduci sequenza</b> il filmato si avvia all'istante iniziale dell'azione pittorica e si arresta automaticamente al termine del passaggio.</li>
+<li>I comandi <b>Riavvia</b>, <b>Velocità 0,5×</b> (per l'analisi rallentata della cinematica del pennello) e <b>Ciclo continuo</b> agevolano l'osservazione durante l'esecuzione sul campione.</li>
+<li>Il collegamento <b>Apri su YouTube ↗</b> apre il filmato sul portale originale al medesimo istante temporale.</li>
 </ul>
 </div>
-<h3>I sei esempi di alberi e arbusti ({tot_modalita} modalità nei video)</h3>
+<h3>Indice delle sei tipologie arboree ({tot_modalita} procedure analizzate)</h3>
 <ol class="alberi">{"".join(elenco)}</ol>
 </section>
 {"".join(sezioni)}
-<footer><h2>I video</h2><p>I video restano dei loro autori: la pagina li mostra col lettore di YouTube, senza copiarli. Grazie a:</p>
+<footer><h2>Fonti audiovisive e attribuzioni</h2><p>I filmati appartengono ai rispettivi autori e vengono riprodotti tramite il lettore incorporato ufficiale di YouTube nel rispetto dei termini di servizio. Riferimenti completi:</p>
 <ul class="crediti">{crediti}</ul>
-<p>Gli studi ad acquerello su foglietto A5 in testa a ciascun esempio e le 24 infografiche in 3 fasi dedicate a ciascun video sono stati realizzati per questa guida; tocca qualsiasi immagine per ingrandirla.</p></footer>"""
+<p>Gli studi pittorici su campione A5 in apertura di ciascuna tipologia e le 24 tavole sinottiche in 3 fasi sono elaborazioni originali del repertorio (selezionare qualsiasi immagine per visualizzarla a pieno schermo).</p></footer>"""
     html_ = f"""<!doctype html>
 <html lang="it"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -561,10 +521,8 @@ def pagina():
         print("SEGMENTI NON ANCORA DECISI (minuto della scheda + 20 s):", " ".join(mancano))
 
 def parte_colori(a, e):
-    """Tavolozza, riquadri «Come leggere le dosi» e «Le tre prove», tabella delle 12 miscele con il collegamento
-    al mescolatore della sezione Teoria dei colori (../colori/?mix=id:parti,...#mescola). GBOT-app-acquerello, 18/10/2026."""
+    """Tavolozza, riquadri metodologici e prontuario delle 12 miscele con rinvio al simulatore Kubelka-Munk."""
     tav = a["tavolozza"]
-    # coerenza con la tavolozza della sezione Teoria dei colori, se c'è nel repository
     p_col = os.path.join(QUI, "..", "colori", "tavolozza.json")
     if os.path.exists(p_col):
         rif = {c["id"]: c for c in json.load(open(p_col, encoding="utf-8"))["colori"]}
@@ -575,15 +533,15 @@ def parte_colori(a, e):
     nomi = {c["id"]: c["nome"] for c in tav}
     def riga_tav(c):
         sigla = f' ({e(c["sigla"])})' if c.get("sigla") else ""
-        tras = f'; nel tubetto della tavolozza: {e(c["trasparenza_tubetto"])}' if c.get("trasparenza_tubetto") else ""
+        tras = f'; comportamento nel tubetto di riferimento: {e(c["trasparenza_tubetto"])}' if c.get("trasparenza_tubetto") else ""
         nota = f' ({e(c["nota"])})' if c.get("nota") else ""
-        return f'<li><b>{e(c["nome"])}</b>{sigla}: pigmento <b>{e(c["pigmento"])}</b>{tras}{nota}</li>'
+        return f'<li><b>{e(c["nome"])}</b>{sigla}: Colour Index <b>{e(c["pigmento"])}</b>{tras}{nota}</li>'
     righe_tav = "".join(riga_tav(c) for c in tav)
-    sei_colori = (f'<div class="sei-colori"><b>I 6 colori di base</b> (nome comune e pigmento):'
+    sei_colori = (f'<div class="sei-colori"><b>I 6 pigmenti della tavolozza ristretta</b> (denominazione e codice Colour Index):'
                   f'<ul class="tav">{righe_tav}</ul>'
-                  f'<p class="rimando">Teoria, schede dei colori e calcolatore di miscele: '
-                  f'<a href="../colori/">Teoria dei colori</a> · <a href="../colori/#calcolatore">calcolatore</a>. '
-                  f'I tubetti corrispondenti, marca per marca: <a href="../marche/">Marche e tubetti</a>.</p></div>')
+                  f'<p class="rimando">Trattazione teorica, proprietà ottiche e simulatore spettrale: '
+                  f'<a href="../colori/">Colorimetria applicata</a> · <a href="../colori/#calcolatore">Simulatore Kubelka-Munk</a>. '
+                  f'Confronto analitico tra i cataloghi dei produttori: <a href="../marche/">Merceologia e marche</a>.</p></div>')
 
     def riquadro(r, classe):
         voci = "".join(f'<li><b>{e(k)}</b>: {e(v)}</li>' for k, v in r["voci"])
@@ -600,13 +558,13 @@ def parte_colori(a, e):
     righe = []
     for x in a["miscele"]:
         if x.get("mix"):
-            lk = link(x["mix"], "prova nel calcolatore")
+            lk = link(x["mix"], "apri nel simulatore spettrale")
         else:
-            lk = " · ".join(link([m], f"{nomi[m[0]].lower()} nel calcolatore") for m in x.get("mix_separati", []))
+            lk = " · ".join(link([m], f"{nomi[m[0]].lower()} nel simulatore") for m in x.get("mix_separati", []))
         nota = f' {e(x["nota"])}' if x.get("nota") else ""
         righe.append(f'<tr><td class="m">{e(x["m"])}</td><td><b>{e(x["nome"])}</b><br>{e(x["ricetta"])}'
-                     f'<br><span class="cons">Consistenza: <b>{e(x["consistenza"])}</b></span>'
-                     f'<br><span class="pigm">Pigmenti: {e(x["pigmenti"])}.{nota}</span><br>{lk}</td></tr>')
+                     f'<br><span class="cons">Grado di diluizione: <b>{e(x["consistenza"])}</b></span>'
+                     f'<br><span class="pigm">Composizione: {e(x["pigmenti"])}.{nota}</span><br>{lk}</td></tr>')
     return "".join(righe), sei_colori, riquadri
 
 
@@ -733,7 +691,7 @@ JS = r"""
   if (daFile) {
     var av = document.getElementById('avviso');
     av.hidden = false;
-    av.textContent = 'Pagina aperta come file: qui dentro YouTube non mostra i video. I pulsanti aprono lo stesso punto su YouTube.';
+    av.textContent = 'Documento aperto dal file system locale: la riproduzione incorporata richiede il protocollo HTTP/HTTPS. I pulsanti aprono direttamente il passaggio su YouTube.';
   }
   function caricaApi() {
     if (!api) api = new Promise(function (ok, ko) {
@@ -758,16 +716,14 @@ JS = r"""
   }
   function errore(v, codice) {
     if (v.player) { try { v.player.destroy(); } catch (e) {} v.player = null; }
-    v.querySelector('.schermo').innerHTML = '<div class="errore"><p>Il video non si apre qui dentro (' + codice +
-      '). <a href="' + suYoutube(v) + '" target="_blank" rel="noopener">Aprilo su YouTube</a>, parte dallo stesso punto.</p></div>';
+    v.querySelector('.schermo').innerHTML = '<div class="errore"><p>Riproduzione incorporata non disponibile (' + codice +
+      '). <a href="' + suYoutube(v) + '" target="_blank" rel="noopener">Apri l\'estratto su YouTube</a> al medesimo istante temporale.</p></div>';
   }
   function daCapo(v) {
     if (!v.player || !v.player.loadVideoById) return;
     v.fermato = false;
     v.player.loadVideoById({videoId: v.dataset.id, startSeconds: +v.dataset.inizio, endSeconds: +v.dataset.fine});
   }
-  // Alla fine del pezzo alcuni video passano a «finito», altri restano in pausa un attimo prima:
-  // la sorveglianza riconosce tutti e due i casi, per fermare il video o, con «Ripeti», farlo ripartire.
   var sorveglia = null;
   function sorveglianza(v) {
     clearInterval(sorveglia);
@@ -806,7 +762,7 @@ JS = r"""
           onError: function (ev) { errore(v, 'codice ' + ev.data); }
         }
       });
-    }, function () { errore(v, 'YouTube non risponde'); });
+    }, function () { errore(v, 'servizio non raggiungibile'); });
   }
   document.querySelectorAll('.video').forEach(function (v) {
     v.querySelector('.guarda').addEventListener('click', function () { apri(v); });
@@ -861,7 +817,6 @@ JS = r"""
       document.body.appendChild(l);
     });
   });
-  // Per la prova: stato del video aperto (tempo, stato del lettore, velocità).
   window.statoGesto = function () {
     if (!attivo || !attivo.player || !attivo.player.getCurrentTime) return null;
     var p = attivo.player;
