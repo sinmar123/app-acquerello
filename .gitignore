@@ -7,3 +7,5 @@ node_modules/
 *.pyc
 __pycache__/
 .DS_Store
+_index-app-acquerello.md
+app-acquerello-giornale.md

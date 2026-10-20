@@ -1,14 +1,13 @@
 # Foglio di controllo ricavato dal lettore di YouTube dentro la pagina dei gesti (14/10/2026).
 # Allarga la finestra di un pezzo, lo fa scorrere in Chrome e fotografa lo schermo del video una
 # volta al secondo, in un foglio a griglia come quelli di «controllo» di pit-261013-video-gesti.py.
-# Serve quando il flusso diretto (yt-dlp e ffmpeg) è troppo lento: sul W520, il 14/10, alcuni video
-# non davano un fotogramma in mezz'ora, mentre nel lettore scorrevano senza intoppi.
+# Serve quando il flusso diretto (yt-dlp e ffmpeg) è troppo lento rispetto al lettore incorporato.
 #
 #   python -m http.server 8765 --bind 127.0.0.1 --directory dati/alberi      (dalla radice del repository, in un'altra finestra)
 #   uv run --with playwright --with pillow python dati/alberi/pit-261014-foglio-dal-lettore.py http://127.0.0.1:8765/pit-261014-video-gesti-alberi.html A1-1 82 110 foglio.jpg
 #
 # PEZZO è la sigla di un pezzo già nella pagina (ne usa il video); DA e A sono i secondi della
-# finestra da guardare, anche fuori dal pezzo. Il foglio va scritto fuori dal workspace.
+# finestra da guardare, anche fuori dal pezzo. Il foglio va scritto in una cartella temporanea.
 import io, sys, time
 from PIL import Image, ImageDraw, ImageFont
 from playwright.sync_api import sync_playwright

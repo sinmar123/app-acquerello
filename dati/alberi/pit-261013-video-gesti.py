@@ -1,13 +1,9 @@
 # Pagina coi pezzi dei video veri per i gesti degli alberi ad acquerello.
 #
-# Dal 16/10/2026 lo script sta nel repository app-acquerello (dati/alberi/), che è la copia principale:
-# per «pagina» bastano i file di questa cartella. Gli altri comandi usano yt-dlp, YouTube e le schede
-# dei video, che restano nel workspace di Sandro (pit/acquerello-alberi/schede/): girano dal W520.
-#
-# Dal 14/10/2026 la pagina è un tutorial sugli alberi, senza il corso: niente stampa della prima prova
-# né ritagli, nessun passo attribuito a Irene, e i quattro passi che venivano dalla sua demo hanno un
-# video. Il contenuto sta in pit-261014-video-gesti-alberi.json, ricavato dalla versione breve del 13/10,
-# che resta per i pdf. La pagina del 13/10, legata alla prima prova, sta in old/ e non si rigenera più.
+# Per il comando «pagina» bastano i file di questa cartella (`pit-261014-video-gesti-alberi.json`,
+# `pit-261013-video-gesti-segmenti.csv`, `pit-261015-infografiche.py` e `illustrazioni/`).
+# Gli altri comandi (`info`, `fogli`, `mandati`, `controllo`) sono strumenti ausiliari di studio
+# che interrogano YouTube con yt-dlp.
 # Prova della pagina in Chrome: pit-261014-prova-pagina.py; fotogrammi dal lettore della pagina, se il
 # flusso diretto è troppo lento: pit-261014-foglio-dal-lettore.py.
 #
@@ -34,7 +30,7 @@
 #           etichetta e riga «nel video» per la pagina, nota sulla scelta; «A5-6b» è il secondo pezzo
 #           del passo A5-6) e pit-261014-video-gesti-alberi.html.
 # La tabella si scrive a mano: inizio e fine li decide il modello di sessione, sui fogli di controllo.
-# I file di lavoro stanno in %TEMP%\pit-alberi\video-gesti\ (fuori dal workspace): si rigenerano.
+# I file temporanei di lavoro stanno in %TEMP%\pit-alberi\video-gesti\: si rigenerano.
 import concurrent.futures, csv, glob, json, os, subprocess, sys
 
 QUI = os.path.dirname(os.path.abspath(__file__))
@@ -309,8 +305,7 @@ def mandati():
         print(sigle, vid, minuto, len(estratto), "righe di sottotitoli")
 
 def cartella_schede():
-    # Le schede dei video stanno con lo studio, nel workspace: <workspace>/pit/acquerello-alberi/schede/.
-    # Il repository è in <workspace>/software/applicazioni-github/app-acquerello/, cinque livelli sotto.
+    # Cerca la sottocartella locale schede/ o la cartella di studio esterna se presente.
     if os.path.isdir(os.path.join(QUI, "schede")):
         return os.path.join(QUI, "schede")
     wks = QUI
@@ -319,10 +314,8 @@ def cartella_schede():
     return os.path.join(wks, "pit", "acquerello-alberi", "schede")
 
 def comune():
-    # Testo protetto per l'html, immagini in jpeg e pillole della carta. Fino al 16/10/2026 venivano dallo
-    # script del tutorial completo, pit-261013-impagina-tutorial.py, che resta nel workspace per i pdf:
-    # qui sono ricopiate uguali, perché la pagina si generi coi soli file del repository. Le immagini
-    # della pagina stanno tutte in illustrazioni/.
+    # Funzioni di utilità per l'html, le immagini in jpeg e le pillole dello stato della carta.
+    # Le immagini della pagina stanno tutte in illustrazioni/.
     import base64, html, io, types
     from PIL import Image, ImageOps
 

@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """Genera il sito statico delle guide di acquerello in site/ dai sorgenti delle sezioni in dati/<sezione>/.
 
-Dal 16/10/2026 il repository basta a se stesso: GitHub è la copia principale e i sorgenti delle pagine
-non si copiano più da pit/acquerello-* del workspace, dove restano lo studio e i pdf."""
+Il repository è autonomo: contiene tutti i file di dati, le infografiche e gli script necessari a generare le pagine."""
 import base64
 import io
 import pathlib
@@ -169,7 +168,7 @@ footer{{text-align:center;padding:18px;font-size:.8rem;color:#7a6f5d;border-top:
     {cards_html}
   </div>
 </main>
-<footer>Quaderno di studio ad acquerello · Aggiornato al 19 ottobre 2026</footer>
+<footer>Quaderno di studio ad acquerello · Aggiornato al 20 ottobre 2026</footer>
 </body>
 </html>
 """
