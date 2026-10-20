@@ -2,30 +2,26 @@
  "data": "2026-10-20",
  "nota": "Sezione Morfologia degli alberi: 6 tipologie arboree e arbustive analizzate attraverso 24 procedure dimostrative, ciascuna corredata da tavola sinottica SVG in 3 fasi e doppia formulazione cromatica (tavolozza estesa da studio e tavolozza ristretta a 6 pigmenti per pittura en plein air).",
  "apertura": {
-  "titolo": "Morfologia degli alberi: studio analitico delle sequenze esecutive",
-  "sottotitolo": "Primo modulo monografico del repertorio (in fase di sviluppo ed estensione), dedicato al primo tema affrontato nel percorso di studio: la rappresentazione di alberi, filari e masse arbustive articolata su sei soggetti archetipici. Per ciascuna tipologia sono poste a confronto più soluzioni procedurali tratte da dimostrazioni filmate, documentate da schemi sinottici in tre fasi e da formulazioni cromatiche per tavolozza estesa o ristretta a sei pigmenti.",
+  "titolo": "Soggetto S1 · Morfologia degli alberi: studio analitico delle sequenze esecutive",
+  "sottotitolo": "Primo modulo della sezione «Soggetti pittorici», dedicato al tema inaugurale del corso di studio: la rappresentazione di alberi, filari e masse arbustive articolata su sei soggetti archetipici, con 24 procedure comparative, schemi sinottici in tre fasi e 31 estratti video indicizzati.",
   "principi": {
-   "titolo": "Fondamenti propedeutici",
-   "testo": "La classificazione dei gradi di diluizione (tè, latte, miele), gli stadi di umidità della fibra cartacea e l'equilibrio idrodinamico tra pennello e supporto sono trattati nella sezione preliminare:",
-   "link": "Principi tecnici",
+   "titolo": "Fondamenti propedeutici e assetto di lavoro",
+   "testo": "I gradi di diluizione (tè, latte, miele) e gli stadi di umidità della carta sono esposti nella sezione preliminare, mentre la distinzione metodologica tra lavoro in studio e pittura en plein air (con il protocollo su campioni A5 e il prontuario delle miscele M1-M12) è trattata nella seconda sezione:",
+   "link": "1. Principi tecnici",
    "href": "../principi/"
   },
   "esercizi": [
    {
-    "titolo": "Primo modulo tematico del corso e piano di sviluppo del repertorio",
-    "testo": "Questa sezione inaugura le monografie operative del Quaderno in quanto gli alberi e le masse vegetali hanno costituito il primo argomento affrontato nel corso di studio. La struttura botanica e pittorica delle sei tipologie selezionate (macchie di conifere per piani, abeti ad alto fusto a palchi distanziati, chiome decidue nel cromatismo autunnale, quinte arbustive e siepi di margine, fusti spogli invernali a risparmio del bianco, ramificazioni e fogliame brinato in primo piano) copre le principali casistiche di portamento, distanza prospettica e conduzione della luce; secondo il medesimo impianto analitico seguiranno ulteriori sezioni monografiche dedicate agli altri temi classici dell'acquerello (cieli e formazioni nuvolose, fiori ed elementi botanici, specchi d'acqua e riflessi, rocce e architetture)."
+    "titolo": "Collocazione nel Repertorio dei soggetti pittorici",
+    "testo": "Questo modulo fa parte della sezione «Soggetti pittorici» (../soggetti/) ed è stato redatto per primo in quanto gli alberi e le masse vegetali hanno costituito il tema d'apertura del corso. Le sei tipologie selezionate (macchie di conifere per piani, abeti ad alto fusto a palchi distanziati, chiome decidue nel cromatismo autunnale, quinte arbustive e siepi di margine, fusti spogli invernali a risparmio del bianco, ramificazioni e fogliame brinato in primo piano) coprono le principali casistiche di portamento, distanza prospettica e conduzione della luce."
    },
    {
     "titolo": "Analisi comparativa delle procedure e tavole sinottiche",
     "testo": "Ogni soggetto viene affrontato attraverso molteplici varianti tecniche (24 procedure complessive), ciascuna riferita a una specifica dimostrazione video: la scheda riporta l'impostazione metodologica dell'autore, i pigmenti e i pennelli impiegati, una tavola grafica in tre stadi operativi codificata sul filmato e il lettore sincronizzato al secondo esatto dell'azione pittorica."
    },
    {
-    "titolo": "Doppia impostazione cromatica: tavolozza estesa da studio e selezione a 6 pigmenti",
-    "testo": "Per il lavoro in studio viene indicata una gamma estesa che recepisce i pigmenti specifici adottati dai singoli autori (tra cui verde vescica, verde oliva, verde oro chinacridone, terra di Siena naturale e bruciata, ocra gialla, rosso inglese, turchese di cobalto, blu ftalo, blu cobalto, blu di Prussia, indaco, grigio di Payne, seppia). Per la pratica all'aperto (en plein air) o per lo studio rigoroso della miscelazione sottrattiva, il pannello espandibile sottostante codifica la tavolozza ristretta a 6 pigmenti e le 12 miscele derivate (M1-M12). L'inquadramento teorico e il simulatore Kubelka-Munk sono consultabili nella sezione Colorimetria applicata; le corrispondenze commerciali nella sezione Merceologia e marche."
-   },
-   {
-    "titolo": "Protocollo di sperimentazione su campioni A5 e dotazione strumentale",
-    "testo": "Si raccomanda di eseguire gli studi su campioni in formato A5 di carta 100% cotone da 300 g/m² a grana fina (ottenibili sezionando in otto parti un foglio 30 × 40 cm), vincolati al supporto rigido con nastro di carta. La dotazione comprende un pennello tondo di grande serbatoio (n. 10-12), un tondo medio a punta coesa (n. 6-8), un pennello a setola lunga (rigger o liner n. 1-4) e, per le tecniche speciali documentate, spugna marina naturale, pennello a ventaglio (fan brush), tiralinee per fluido di mascheratura con gomma crêpe, tessera polimerica rigida per incisione a umido, cloruro di sodio a granulometria fine e tessuto assorbente."
+    "titolo": "Indicazioni cromatiche per studio ed en plein air",
+    "testo": "Ciascuna tipologia riporta sia la formulazione per tavolozza estesa da studio sia le sigle del prontuario ristretto a 6 pigmenti (M1-M12) per la pratica en plein air. La trattazione completa dei due assetti operativi, della dotazione strumentale e del protocollo sui campioni A5 è consultabile nella sezione dedicata «Pittura in studio ed en plein air» (../studio-plein-air/)."
    }
   ],
   "tavolozza": [
