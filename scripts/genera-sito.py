@@ -21,14 +21,15 @@ SEZIONI = [
         "slug": "principi",
         "numero": "1",
         "nome_form": "Principi",
-        "titolo": "Principi generali: acqua, colore e carta",
-        "sottotitolo": "Da leggere prima degli esercizi: le tre consistenze, gli stati della carta e come abbinarli",
+        "titolo": "Principi tecnici: diluizione del pigmento e stati del supporto",
+        "sottotitolo": "Controllo del rapporto acqua-pigmento, grado di umidità della carta e tecniche di stesura",
         "descrizione": (
-            "Tè, latte e miele; carta asciutta, umida, bagnata e i momenti di mezzo, riconoscibili dal lucido dell'acqua; "
-            "come abbinare il pennello alla carta, fioriture comprese; bordi netti e morbidi, asciugatura, "
-            "carta hot press, cold press e rough. Ogni frase con la sua fonte, dai corsi e dai video al minuto giusto."
+            "Classificazione operativa della diluizione sulla tavolozza (tè, latte, miele); fasi di asciugatura del supporto "
+            "individuate tramite la riflessione speculare del velo d'acqua; equilibrio idrodinamico tra carica del pennello e "
+            "umidità della fibra per prevenire o governare i riflussi (backruns); gestione dei margini, proprietà fisiche delle "
+            "carte (satinata, grana fina, ruvida) e correzioni a umido o a secco. Ogni indicazione è corredata dal riferimento puntuale alla fonte."
         ),
-        "badge": ["8 capitoli", "tè · latte · miele", "stati della carta", "ogni frase con la fonte"],
+        "badge": ["8 capitoli", "diluizione e supporto", "controllo dei riflussi", "riferimenti verificati"],
         "script_genera": DATI_DIR / "principi" / "genera-principi.py",
         "html_generato": DATI_DIR / "principi" / "principi.html",
     },
@@ -36,14 +37,15 @@ SEZIONI = [
         "slug": "alberi",
         "numero": "2",
         "nome_form": "Alberi",
-        "titolo": "Alberi ad acquerello: esempi, modalità e gesti nei video",
-        "sottotitolo": "Sei esempi di alberi e arbusti con 24 modalità nei video, un'infografica per ciascun video e colori liberi in studio o 6 all'aperto",
+        "titolo": "Morfologia degli alberi: studio analitico delle sequenze esecutive",
+        "sottotitolo": "Sei tipologie arboree analizzate attraverso 24 procedure comparative, schemi operativi in 3 fasi e 31 estratti video indicizzati",
         "descrizione": (
-            "Abeti e conifere in gruppo, abeti alti e radi contro il cielo, chiome tonde d'autunno, siepi e cespugli, "
-            "alberi invernali con fusti chiari e brina, rami sottili e foglie brinate in primo piano: per ciascun esempio "
-            "i video propongono diverse modalità di sviluppo, ognuna spiegata da un'infografica in 3 fasi e da 31 estratti video al secondo esatto."
+            "Macchie di conifere in controluce, abeti isolati a ramificazione radiale, chiome decidue nel cromatismo autunnale, "
+            "masse arbustive di margine, fusti spogli invernali a risparmio del bianco e rami in primo piano: per ciascun soggetto "
+            "vengono messe a confronto più soluzioni tecniche, documentate da tavole sinottiche in tre stadi operativi, ricette "
+            "cromatiche per tavolozza estesa o ridotta a sei pigmenti e rinvii al secondo esatto delle dimostrazioni video."
         ),
-        "badge": ["6 esempi di alberi", "24 modalità e infografiche", "31 estratti video", "colori liberi in studio · 6 all'aperto"],
+        "badge": ["6 tipologie arboree", "24 sequenze operative", "31 riferimenti temporali", "tavolozza estesa o a 6 pigmenti"],
         "script_genera": DATI_DIR / "alberi" / "pit-261013-video-gesti.py",
         "html_generato": DATI_DIR / "alberi" / "pit-261014-video-gesti-alberi.html",
     },
@@ -51,14 +53,15 @@ SEZIONI = [
         "slug": "colori",
         "numero": "3",
         "nome_form": "Teoria dei colori",
-        "titolo": "Teoria dei colori per l'acquerello",
-        "sottotitolo": "Munsell, luce e pigmento, velature, i sei colori di base e un calcolatore di miscele",
+        "titolo": "Colorimetria applicata e ottica della velatura",
+        "sottotitolo": "Spazio cromatico di Munsell, sintesi sottrattiva, comportamento ottico dei pigmenti e simulatore Kubelka-Munk",
         "descrizione": (
-            "Tinta, valore e croma secondo Munsell; perché i pigmenti non si mescolano come le luci; "
-            "mescolare o velare; le schede dei sei colori della tavolozza ridotta, col nome comune e il pigmento; un calcolatore "
-            "che mescola i tubetti in parti intere e cerca la miscela per un colore scelto, tutto nel browser."
+            "Coordinate di tinta, valore e croma nel sistema Munsell; assorbimento selettivo e diffusione luminosa nello strato pittorico "
+            "fino al supporto cartaceo; differenze ottiche tra miscelazione fisica su tavolozza e sovrapposizione per velatura trasparente; "
+            "criteri di composizione della tavolozza ristretta a sei monopigmento (coppia caldo/freddo per primario) e calcolatore "
+            "interattivo delle miscele basato sul modello spettrale di Kubelka-Munk."
         ),
-        "badge": ["5 capitoli", "6 colori di base", "calcolatore di miscele", "stime da verificare sul foglietto"],
+        "badge": ["5 capitoli", "6 pigmenti primari", "modello Kubelka-Munk", "simulatore spettrale"],
         "script_genera": DATI_DIR / "colori" / "genera-teoria-colori.py",
         "html_generato": DATI_DIR / "colori" / "teoria-colori.html",
     },
@@ -66,14 +69,15 @@ SEZIONI = [
         "slug": "marche",
         "numero": "4",
         "nome_form": "Confronto marche",
-        "titolo": "Marche e tubetti",
-        "sottotitolo": "I sei colori di base nelle serie in commercio: nome del tubetto, numero, pigmento e trasparenza",
+        "titolo": "Merceologia dei pigmenti e confronto tra serie commerciali",
+        "sottotitolo": "Corrispondenze nel Colour Index, trasparenza dichiarata e variabilità formulativa tra sei linee produttive",
         "descrizione": (
-            "Per ognuno dei sei colori della tavolozza ridotta, il tubetto corrispondente in sei serie: Winsor &amp; Newton Cotman e Professional, "
-            "Van Gogh, Daniel Smith, Schmincke Horadam, Maimeri Blu. Dati solo dalle pagine ufficiali, con il link "
-            "e la data di controllo su ogni riga; e perché lo stesso nome nasconde pigmenti diversi."
+            "Tabella comparativa dei sei pigmenti della tavolozza ridotta nelle serie Winsor &amp; Newton (Cotman e Professional), "
+            "Royal Talens Van Gogh, Daniel Smith Extra Fine, Schmincke Horadam e Maimeri Blu. Tutti i dati sono rilevati dai "
+            "cataloghi tecnici ufficiali dei produttori e illustrano le divergenze di composizione chimica tra tubetti commercializzati "
+            "con la medesima denominazione tradizionale."
         ),
-        "badge": ["6 serie", "6 colori di base", "fonte ufficiale su ogni riga", "stesso nome, pigmenti diversi"],
+        "badge": ["6 serie commerciali", "sigle Colour Index", "fonti tecniche ufficiali", "lettura dell'etichetta"],
         "script_genera": DATI_DIR / "marche" / "genera-marche.py",
         "html_generato": DATI_DIR / "marche" / "marche.html",
     },
@@ -153,43 +157,43 @@ def blocco_chat_e_suggerimenti(sezione_predefinita: str, pagina_path: str) -> st
 .chat-nota-privacy{{margin:8px 0 0;font-size:.78rem;color:#6b5e4c}}
 </style>
 
-<section id="assistente-ai" class="sugg-wrap" aria-label="Assistente AI sull'acquerello">
+<section id="assistente-ai" class="sugg-wrap" aria-label="Consulenza tecnica AI sull'acquerello">
   <div class="chat-box" data-pagina="{pagina_path}">
-    <h2>🎨 Chiedi all'assistente di acquerello (Gemini 4 Argon)</h2>
+    <h2>🎨 Assistente tecnico di studio (Gemini 4 Argon)</h2>
     <p class="sugg-sub">
-      Hai un dubbio su come mescolare due colori, quanta acqua tenere nel pennello, come evitare le fioriture o come eseguire uno degli esercizi?
-      Inserisci la tua email per fare fino a <strong>5 domande gratuite</strong> all'assistente AI istruito sui contenuti di questo quaderno.
+      Per approfondimenti operativi sul bilanciamento idrico tra pennello e supporto, sulla formulazione delle miscele, sulla prevenzione dei riflussi o sull'esecuzione delle sequenze illustrate:
+      inserendo il proprio indirizzo email è possibile sottoporre fino a <strong>5 quesiti gratuiti</strong> al modello linguistico configurato sulla base documentale di questo repertorio.
     </p>
 
     <div id="chat-step-email">
       <form id="form-chat-login" class="chat-login-row">
-        <input id="chat-email-input" type="email" required maxlength="120" placeholder="La tua email (es. nome@esempio.it)" autocomplete="email">
-        <button type="submit" class="sugg-btn arancio" id="chat-login-btn">Entra nella chat (5 domande)</button>
+        <input id="chat-email-input" type="email" required maxlength="120" placeholder="Indirizzo email (es. nome@dominio.it)" autocomplete="email">
+        <button type="submit" class="sugg-btn arancio" id="chat-login-btn">Accedi al servizio (5 quesiti)</button>
       </form>
       <p class="chat-nota-privacy">
-        L'email serve solo a contare le 5 domande gratuite associate al tuo indirizzo: non inviamo newsletter né cediamo l'indirizzo a terzi.
+        L'indirizzo email viene impiegato esclusivamente per la contabilizzazione della quota di 5 quesiti associata all'utente: non vengono effettuate iscrizioni a liste di distribuzione né cessioni a terzi.
       </p>
     </div>
 
     <div id="chat-step-conversazione" style="display:none">
       <div class="chat-barra-stato">
-        <span>Accesso con: <strong id="chat-email-attiva"></strong> · <button type="button" id="chat-cambia-email" style="background:none;border:0;color:#6b4226;text-decoration:underline;cursor:pointer;font:inherit;padding:0">cambia email</button></span>
-        <span class="chat-badge-quota" id="chat-quota-label">Domande disponibili: 5 su 5</span>
+        <span>Sessione attiva: <strong id="chat-email-attiva"></strong> · <button type="button" id="chat-cambia-email" style="background:none;border:0;color:#6b4226;text-decoration:underline;cursor:pointer;font:inherit;padding:0">modifica indirizzo</button></span>
+        <span class="chat-badge-quota" id="chat-quota-label">Quesiti disponibili: 5 su 5</span>
       </div>
 
       <div class="chat-esempi" id="chat-esempi-wrap">
-        <span style="font-size:.79rem;color:#6b5e4c;align-self:center;margin-right:2px">Prova a chiedere:</span>
-        <button type="button" class="chat-chip">Perché mi vengono le macchie a cavolfiore quando aggiungo colore?</button>
-        <button type="button" class="chat-chip">Come ottengo un verde scuro per gli abeti coi 6 colori di base?</button>
-        <button type="button" class="chat-chip">Qual è il momento giusto per buttare il sale sulla carta?</button>
+        <span style="font-size:.79rem;color:#6b5e4c;align-self:center;margin-right:2px">Quesiti di esempio:</span>
+        <button type="button" class="chat-chip">Quale squilibrio idrico provoca i riflussi a cavolfiore durante una seconda stesura?</button>
+        <button type="button" class="chat-chip">Come si formula un verde profondo per le conifere in ombra con i 6 pigmenti di base?</button>
+        <button type="button" class="chat-chip">In quale stadio di umidità della carta va applicato il sale per ottenere la cristallizzazione radiale?</button>
       </div>
 
       <div id="chat-messaggi" class="chat-messaggi" aria-live="polite"></div>
 
       <form id="form-chat-domanda">
         <div class="chat-input-row">
-          <textarea id="chat-domanda-input" required minlength="4" maxlength="1000" placeholder="Scrivi qui la tua domanda sull'acquerello..."></textarea>
-          <button type="submit" class="sugg-btn arancio" id="chat-invia-btn">Chiedi</button>
+          <textarea id="chat-domanda-input" required minlength="4" maxlength="1000" placeholder="Formula qui il quesito tecnico sull'acquerello..."></textarea>
+          <button type="submit" class="sugg-btn arancio" id="chat-invia-btn">Invia</button>
         </div>
       </form>
     </div>
@@ -198,12 +202,12 @@ def blocco_chat_e_suggerimenti(sezione_predefinita: str, pagina_path: str) -> st
   </div>
 </section>
 
-<section id="suggerimenti" class="sugg-wrap" aria-label="Invia un suggerimento">
+<section id="suggerimenti" class="sugg-wrap" aria-label="Invio contributi e rettifiche">
   <div class="sugg-box">
-    <h2>💬 Suggerisci una modifica, una correzione o un video</h2>
+    <h2>💬 Invio di contributi tecnici, rettifiche o riferimenti video</h2>
     <p class="sugg-sub">
-      Hai trovato un refuso, conosci un bel passaggio in un video su YouTube (magari indicando il minuto esatto) o vuoi proporre un'aggiunta?
-      Scrivilo qui sotto senza bisogno di conoscere GitHub o il codice: se la proposta è valida la inseriamo nel quaderno.
+      Per segnalare imprecisioni, proporre integrazioni documentali o indicare passaggi dimostrativi rilevanti all'interno di video didattici su YouTube (specificando il minutaggio di inizio e fine):
+      il modulo seguente trasmette direttamente la segnalazione al registro pubblico del progetto, dove viene sottoposta a verifica redazionale prima dell'eventuale recepimento.
     </p>
     <form id="form-suggerimento" data-pagina="{pagina_path}">
       <div class="sugg-hp" aria-hidden="true">
@@ -211,35 +215,35 @@ def blocco_chat_e_suggerimenti(sezione_predefinita: str, pagina_path: str) -> st
       </div>
       <div class="sugg-grid">
         <div class="sugg-field" style="margin-bottom:0">
-          <label for="sugg-sezione">Sezione</label>
+          <label for="sugg-sezione">Sezione di riferimento</label>
           <select id="sugg-sezione" name="sezione">
             {options_html}
           </select>
         </div>
         <div class="sugg-field" style="margin-bottom:0">
-          <label for="sugg-firma">Il tuo nome o soprannome (facoltativo)</label>
-          <input id="sugg-firma" name="firma" type="text" maxlength="60" placeholder="Lascia vuoto per restare anonimo">
+          <label for="sugg-firma">Autore della segnalazione (facoltativo)</label>
+          <input id="sugg-firma" name="firma" type="text" maxlength="60" placeholder="Lasciare vuoto per invio anonimo">
         </div>
       </div>
       <div class="sugg-field" style="margin-top:12px">
-        <label for="sugg-titolo">Titolo breve *</label>
-        <input id="sugg-titolo" name="titolo" type="text" required minlength="4" maxlength="120" placeholder="Es. Nuovo video sul pino marittimo / Correzione su un pigmento">
+        <label for="sugg-titolo">Oggetto sintetico *</label>
+        <input id="sugg-titolo" name="titolo" type="text" required minlength="4" maxlength="120" placeholder="Es. Riferimento video sulla chioma del pino marittimo / Rettifica sigla Colour Index">
       </div>
       <div class="sugg-field">
-        <label for="sugg-testo">Il tuo suggerimento *</label>
-        <textarea id="sugg-testo" name="testo" required minlength="10" maxlength="3500" placeholder="Descrivi la proposta o la correzione. Se segnali un video YouTube, incolla il link e indica da che minuto a che minuto si vede il passaggio utile."></textarea>
+        <label for="sugg-testo">Descrizione dettagliata *</label>
+        <textarea id="sugg-testo" name="testo" required minlength="10" maxlength="3500" placeholder="Esporre la proposta o la rettifica. Nel caso di un riferimento video su YouTube, riportare l'URL e l'intervallo temporale esatto (mm:ss) della sequenza esecutiva."></textarea>
       </div>
       <div class="sugg-avviso">
-        <strong>Avviso sulla pubblicazione:</strong> non serve registrarsi né avere un account.
-        Premendo <em>Invia suggerimento</em>, il testo che hai scritto e l'eventuale nome o soprannome
-        <strong>saranno pubblicati pubblicamente</strong> nella bacheca aperta delle
+        <strong>Informativa sulla pubblicazione:</strong> l'invio non richiede registrazione.
+        Selezionando <em>Trasmetti contributo</em>, il testo inserito e l'eventuale nominativo indicato
+        <strong>vengono resi pubblici</strong> nel registro aperto delle
         <a href="https://github.com/sinmar123/app-acquerello/issues" target="_blank" rel="noopener">segnalazioni del progetto su GitHub</a>
-        (sotto licenza aperta CC BY 4.0) per essere valutati e integrati nel sito.
-        <strong>Non inserire indirizzi email, numeri di telefono o altri dati personali riservati.</strong>
+        (con licenza Creative Commons CC BY 4.0) ai fini della revisione tecnica e dell'aggiornamento del repertorio.
+        <strong>Non inserire indirizzi di posta elettronica, recapiti telefonici o altri dati personali riservati.</strong>
       </div>
       <div class="sugg-actions">
-        <button type="submit" class="sugg-btn" id="sugg-submit">Invia suggerimento</button>
-        <a class="sugg-link-gh" href="https://github.com/sinmar123/app-acquerello/issues" target="_blank" rel="noopener">Vedi le segnalazioni già pubblicate →</a>
+        <button type="submit" class="sugg-btn" id="sugg-submit">Trasmetti contributo</button>
+        <a class="sugg-link-gh" href="https://github.com/sinmar123/app-acquerello/issues" target="_blank" rel="noopener">Consulta il registro delle segnalazioni pubblicate →</a>
       </div>
       <div id="sugg-esito" class="sugg-esito" role="status" aria-live="polite"></div>
     </form>
@@ -247,7 +251,7 @@ def blocco_chat_e_suggerimenti(sezione_predefinita: str, pagina_path: str) -> st
 </section>
 <script>
 (function(){{
-  // --- 1. GESTIONE CHAT AI (GEMINI 4 ARGON, 5 DOMANDE PER EMAIL) ---
+  // --- 1. GESTIONE CHAT AI (GEMINI 4 ARGON, 5 QUESITI PER EMAIL) ---
   var STORAGE_KEY = "acquerello_chat_email";
   var stepEmail = document.getElementById("chat-step-email");
   var stepConv = document.getElementById("chat-step-conversazione");
@@ -282,15 +286,15 @@ def blocco_chat_e_suggerimenti(sezione_predefinita: str, pagina_path: str) -> st
 
   function aggiornaStatoUi(dati) {{
     labelEmail.textContent = dati.email;
-    labelQuota.textContent = "Domande disponibili: " + dati.rimanenti + " su " + dati.limite;
+    labelQuota.textContent = "Quesiti disponibili: " + dati.rimanenti + " su " + dati.limite;
     if (dati.rimanenti <= 0) {{
       inputDomanda.disabled = true;
       btnInvia.disabled = true;
-      inputDomanda.placeholder = "Hai esaurito le 5 domande gratuite per questa email.";
+      inputDomanda.placeholder = "Quota di 5 quesiti gratuiti esaurita per questo indirizzo email.";
     }} else {{
       inputDomanda.disabled = false;
       btnInvia.disabled = false;
-      inputDomanda.placeholder = "Scrivi qui la tua domanda sull'acquerello...";
+      inputDomanda.placeholder = "Formula qui il quesito tecnico sull'acquerello...";
     }}
   }}
 
@@ -308,7 +312,7 @@ def blocco_chat_e_suggerimenti(sezione_predefinita: str, pagina_path: str) -> st
       }});
       var risp = await r.json();
       if (!r.ok || !risp.ok) {{
-        throw new Error((risp && risp.errore) || "Email non valida.");
+        throw new Error((risp && risp.errore) || "Indirizzo email non valido.");
       }}
       emailAttiva = risp.email;
       try {{ localStorage.setItem(STORAGE_KEY, emailAttiva); }} catch(e) {{}}
@@ -317,13 +321,13 @@ def blocco_chat_e_suggerimenti(sezione_predefinita: str, pagina_path: str) -> st
       aggiornaStatoUi(risp);
     }} catch (err) {{
       if (!silenzioso) {{
-        boxErr.textContent = err.message || "Impossibile accedere alla chat.";
+        boxErr.textContent = err.message || "Impossibile avviare la sessione.";
         boxErr.style.display = "block";
       }}
     }} finally {{
       if (!silenzioso) {{
         btnLogin.disabled = false;
-        btnLogin.textContent = "Entra nella chat (5 domande)";
+        btnLogin.textContent = "Accedi al servizio (5 quesiti)";
       }}
     }}
   }}
@@ -371,13 +375,13 @@ def blocco_chat_e_suggerimenti(sezione_predefinita: str, pagina_path: str) -> st
 
       var divAttesa = document.createElement("div");
       divAttesa.className = "chat-msg ai";
-      divAttesa.innerHTML = "<em>Gemini 4 Argon sta preparando la risposta...</em>";
+      divAttesa.innerHTML = "<em>Elaborazione della risposta tecnica in corso (Gemini 4 Argon)...</em>";
       boxMessaggi.appendChild(divAttesa);
       boxMessaggi.scrollTop = boxMessaggi.scrollHeight;
 
       inputDomanda.value = "";
       btnInvia.disabled = true;
-      btnInvia.textContent = "Attendi...";
+      btnInvia.textContent = "Attendere...";
 
       try {{
         var r = await fetch("/api/chat", {{
@@ -397,7 +401,7 @@ def blocco_chat_e_suggerimenti(sezione_predefinita: str, pagina_path: str) -> st
           if (risp && typeof risp.rimanenti === "number") {{
             aggiornaStatoUi({{ email: emailAttiva, rimanenti: risp.rimanenti, limite: risp.limite || 5 }});
           }}
-          throw new Error((risp && risp.errore) || "Errore durante la richiesta.");
+          throw new Error((risp && risp.errore) || "Errore durante l'elaborazione della richiesta.");
         }}
         divAttesa.innerHTML = formattaTestoAi(risp.risposta);
         storiaSessione.push({{ ruolo: "user", testo: testoDomanda }});
@@ -405,13 +409,13 @@ def blocco_chat_e_suggerimenti(sezione_predefinita: str, pagina_path: str) -> st
         aggiornaStatoUi({{ email: emailAttiva, rimanenti: risp.rimanenti, limite: risp.limite }});
         boxMessaggi.scrollTop = boxMessaggi.scrollHeight;
       }} catch (err) {{
-        boxErr.textContent = err.message || "Errore di comunicazione con l'assistente.";
+        boxErr.textContent = err.message || "Errore di comunicazione con il servizio.";
         boxErr.style.display = "block";
       }} finally {{
         if (!inputDomanda.disabled) {{
           btnInvia.disabled = false;
         }}
-        btnInvia.textContent = "Chiedi";
+        btnInvia.textContent = "Invia";
       }}
     }});
   }}
@@ -442,7 +446,7 @@ def blocco_chat_e_suggerimenti(sezione_predefinita: str, pagina_path: str) -> st
       pagina: form.getAttribute("data-pagina") || window.location.pathname
     }};
     btn.disabled = true;
-    btn.textContent = "Invio in corso...";
+    btn.textContent = "Trasmissione in corso...";
     try {{
       var r = await fetch("/api/suggerimento", {{
         method: "POST",
@@ -452,7 +456,7 @@ def blocco_chat_e_suggerimenti(sezione_predefinita: str, pagina_path: str) -> st
       var risp = await r.json();
       if (r.ok && risp.ok) {{
         esito.className = "sugg-esito ok";
-        esito.innerHTML = 'Grazie! La tua segnalazione (<strong>#' + risp.numero + '</strong>) è stata pubblicata: <a href="' + risp.url + '" target="_blank" rel="noopener">aprila su GitHub</a>.';
+        esito.innerHTML = 'Segnalazione registrata (<strong>#' + risp.numero + '</strong>): <a href="' + risp.url + '" target="_blank" rel="noopener">consulta la scheda su GitHub</a>.';
         form.titolo.value = "";
         form.testo.value = "";
       }} else {{
@@ -463,11 +467,11 @@ def blocco_chat_e_suggerimenti(sezione_predefinita: str, pagina_path: str) -> st
       var ghUrl = "https://github.com/sinmar123/app-acquerello/issues/new?title=" +
         encodeURIComponent("[Suggerimento · " + dati.sezione + "] " + dati.titolo) +
         "&body=" + encodeURIComponent(dati.testo);
-      esito.innerHTML = (err.message || "Impossibile inviare direttamente.") +
-        ' Puoi comunque <a href="' + ghUrl + '" target="_blank" rel="noopener">inviare la segnalazione su GitHub da questo link precompilato</a>.';
+      esito.innerHTML = (err.message || "Impossibile completare la trasmissione automatica.") +
+        ' È possibile <a href="' + ghUrl + '" target="_blank" rel="noopener">inviare la segnalazione su GitHub tramite questo collegamento precompilato</a>.';
     }} finally {{
       btn.disabled = false;
-      btn.textContent = "Invia suggerimento";
+      btn.textContent = "Trasmetti contributo";
     }}
   }});
 }})();
@@ -480,11 +484,11 @@ def inietta_elementi_comuni(html: str, sezione_predefinita: str, pagina_path: st
         '<div style="background:#efe6d5;border-bottom:1px solid #d8ccb8;padding:6px 14px;'
         'font-size:.86rem;display:flex;justify-content:center;gap:18px;flex-wrap:wrap">'
         '<a href="../" style="color:#6b4226;text-decoration:none;font-weight:600">'
-        '← Tutte le guide di acquerello</a>'
+        '← Indice generale del repertorio</a>'
         '<a href="#assistente-ai" style="color:#8c4a27;text-decoration:none;font-weight:600">'
-        '🎨 Chiedi all\'assistente AI</a>'
+        '🎨 Assistente tecnico AI</a>'
         '<a href="#suggerimenti" style="color:#2f5e4e;text-decoration:none;font-weight:600">'
-        '💬 Suggerisci una modifica</a></div>\n'
+        '💬 Invia un contributo</a></div>\n'
     )
     if 'href="../"' not in html:
         html = html.replace("<body>", "<body>\n" + barra, 1)
@@ -515,7 +519,7 @@ def genera_home(sezioni_pronte: list[dict]) -> str:
       </div>
       <p class="card-desc">{s['descrizione']}</p>
       <div class="pills">{badges}</div>
-      <span class="btn">Apri la sezione →</span>
+      <span class="btn">Consulta la sezione →</span>
     </div>
   </a>
 </article>"""
@@ -528,13 +532,13 @@ def genera_home(sezioni_pronte: list[dict]) -> str:
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Quaderno di acquerello - Guide pratiche ed esercizi</title>
+<title>Quaderno tecnico di acquerello - Repertorio di studio, colorimetria ed esecuzione</title>
 <style>
 *{{box-sizing:border-box}}
 body{{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:#faf6ee;color:#1f1c17;line-height:1.5}}
 .testa{{padding:28px 18px 22px;background:#263529;color:#f7f2e7;text-align:center}}
 .testa h1{{margin:0 0 6px;font-size:1.45rem;letter-spacing:.01em}}
-.testa p{{margin:0 auto;max-width:640px;font-size:.95rem;color:#d8dfd5}}
+.testa p{{margin:0 auto;max-width:680px;font-size:.95rem;color:#d8dfd5}}
 main{{max-width:820px;margin:0 auto;padding:22px 14px 12px}}
 .come-funziona{{background:#fffdf8;border:1px solid #dfd5c3;border-top:4px solid #263529;border-radius:12px;padding:18px 20px;margin-bottom:24px;box-shadow:0 2px 8px rgba(31,28,23,.05)}}
 .come-funziona h2{{margin:0 0 8px;font-size:1.18rem;color:#263529}}
@@ -567,49 +571,49 @@ footer a{{color:#5a4d3b}}
 </head>
 <body>
 <header class="testa">
-  <h1>Quaderno di acquerello</h1>
-  <p>Guide pratiche per studiare i gesti, le miscele e i passaggi su foglietti di prova</p>
+  <h1>Quaderno tecnico di acquerello</h1>
+  <p>Repertorio analitico di procedimenti esecutivi, dinamica acqua-pigmento, colorimetria e materiali</p>
 </header>
 <main>
-  <section class="come-funziona" aria-label="Come funziona questo sito">
-    <h2>Come funziona questo sito</h2>
+  <section class="come-funziona" aria-label="Struttura e metodo di consultazione">
+    <h2>Struttura e metodo di consultazione</h2>
     <p>
-      Questo non è un manuale da leggere tutto d'un fiato, ma un <strong>quaderno pratico da tenere sul tavolo mentre dipingi</strong>.
-      Prendi un piccolo foglietto di carta da acquerello (formato A5, meglio 100% cotone) e prova un solo gesto o una sola miscela alla volta, seguendo questi quattro passi:
+      Questo repertorio raccoglie e sistematizza i procedimenti fondamentali della pittura ad acquerello per la <strong>sperimentazione diretta su campioni di studio</strong> (formato consigliato A5 in puro cotone, 300 g/m²).
+      Ogni affermazione tecnica, sequenza gestuale o dato merceologico è ricondotto a una fonte documentale verificabile secondo un percorso articolato in quattro ambiti:
     </p>
     <div class="cf-passi">
       <div class="cf-passo">
-        <strong>1. Capire acqua e carta (Principi)</strong>
-        Impara a riconoscere a occhio le 3 densità del colore sulla tavolozza (<em>tè, latte, miele</em>) e il momento esatto in cui il foglio perde il lucido dell'acqua (<em>carta asciutta, umida opaca, bagnata</em>) per evitare macchie involontarie.
+        <strong>1. Controllo di acqua e supporto (Principi)</strong>
+        Valutazione visiva e tattile dei tre gradi di concentrazione del pigmento sulla tavolozza (<em>tè, latte, miele</em>) e degli stadi di evaporazione del velo d'acqua sulla carta (<em>superficie asciutta, umida opaca, bagnata</em>), condizione essenziale per governare la fusione o prevenire i riflussi capillari.
       </div>
       <div class="cf-passo">
-        <strong>2. Provare i gesti passo passo (Alberi)</strong>
-        Per ogni soggetto trovi più modalità tratte da lezioni video su YouTube: guarda l'infografica in 3 fasi per capire pennello, stato della carta e colori, poi premi sul pulsante del video che si apre <em>al secondo esatto</em> del gesto.
+        <strong>2. Scomposizione delle sequenze esecutive (Alberi)</strong>
+        Ogni tipologia arborea è analizzata attraverso più varianti procedurali tratte da dimostrazioni filmate: una tavola sinottica in tre fasi codifica pennello, stato di umidità della carta e miscela cromatica, mentre i rimandi temporali aprono il filmato originale al secondo esatto dell'esecuzione.
       </div>
       <div class="cf-passo">
-        <strong>3. Mescolare i colori (Teoria e calcolatore)</strong>
-        In studio puoi usare tutti i colori che hai; se invece vuoi dipingere all'aperto o iniziare con pochi tubetti, scopri la tavolozza ridotta da 6 colori e usa il calcolatore nel browser per simulare le miscele.
+        <strong>3. Colorimetria e simulazione delle miscele (Colori)</strong>
+        Esame del sistema Munsell, dell'ottica degli strati trasparenti e della tavolozza ristretta a sei pigmenti monopigmento (coppia caldo/freddo per ciascun primario), affiancato da un calcolatore spettrale basato sul modello di Kubelka-Munk per la stima delle proporzioni in parti intere.
       </div>
       <div class="cf-passo">
-        <strong>4. Leggere l'etichetta dei tubetti (Marche)</strong>
-        Due tubetti con lo stesso nome commerciale possono contenere pigmenti del tutto diversi: la tabella confronta le sigle dei pigmenti (es. PB29, PR101) nelle principali marche in commercio.
+        <strong>4. Identificazione chimica dei tubetti (Marche)</strong>
+        Poiché la medesima denominazione commerciale può corrispondere a formulazioni differenti, le tabelle mettono a confronto i codici internazionali del <em>Colour Index</em> (es. PB29, PR101, PY150) e il grado di trasparenza dichiarato nei cataloghi ufficiali di sei linee produttive.
       </div>
     </div>
     <div class="cf-strumenti">
-      <a class="cf-link chat" href="#assistente-ai">🎨 Hai un dubbio mentre dipingi? Chiedi all'assistente AI (5 domande gratuite) ↓</a>
-      <a class="cf-link sugg" href="#suggerimenti">💬 Vuoi segnalare un video o una correzione? Usa la casella in fondo ↓</a>
+      <a class="cf-link chat" href="#assistente-ai">🎨 Quesiti operativi: consulta l'assistente tecnico AI (5 domande gratuite) ↓</a>
+      <a class="cf-link sugg" href="#suggerimenti">💬 Contributi e rettifiche: trasmetti una segnalazione documentata ↓</a>
     </div>
   </section>
 
-  <h2 class="sezioni-tit">Le sezioni del quaderno</h2>
+  <h2 class="sezioni-tit">Sezioni del repertorio</h2>
   <div class="grid">
     {cards_html}
   </div>
 </main>
 {blocco_sugg}
 <footer>
-  Quaderno di studio ad acquerello · Progetto aperto su <a href="https://github.com/sinmar123/app-acquerello" target="_blank" rel="noopener">GitHub</a>
-  (testi e schede <a href="https://creativecommons.org/licenses/by/4.0/deed.it" target="_blank" rel="noopener">CC BY 4.0</a>, codice MIT)
+  Quaderno tecnico di acquerello · Progetto documentale aperto su <a href="https://github.com/sinmar123/app-acquerello" target="_blank" rel="noopener">GitHub</a>
+  (testi e tavole <a href="https://creativecommons.org/licenses/by/4.0/deed.it" target="_blank" rel="noopener">CC BY 4.0</a>, codice MIT)
 </footer>
 </body>
 </html>

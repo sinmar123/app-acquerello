@@ -1,4 +1,4 @@
-// Interfaccia del calcolatore (GBOT-app-acquerello, 18/10/2026). Usa Acq (calcolatore.js), TAVOLOZZA e MUNSELL.
+// Interfaccia del simulatore spettrale. Usa Acq (calcolatore.js), TAVOLOZZA e MUNSELL.
 (function () {
   'use strict';
   if (typeof document === 'undefined') return;
@@ -7,31 +7,31 @@
   var COL = Acq.colori();
   var DILUIZIONI = [
     { q: 1, nome: 'miele' }, { q: 0.6, nome: 'latte' }, { q: 0.35, nome: 'latte chiaro' },
-    { q: 0.2, nome: 'tè' }, { q: 0.1, nome: 'tè leggero' }, { q: 0.05, nome: 'velo' }
+    { q: 0.2, nome: 'tè' }, { q: 0.1, nome: 'tè leggero' }, { q: 0.05, nome: 'velatura' }
   ];
   function nomeDiluizione(q) { for (var i = 0; i < DILUIZIONI.length; i++) if (DILUIZIONI[i].q === q) return DILUIZIONI[i].nome; return ''; }
   function $(id) { return document.getElementById(id); }
   function hex(R) { return Acq.aHex(Acq.aSrgb(R)); }
   function ricetta(lista) {
-    if (lista.length === 1) return 'solo ' + lista[0].col.nome.charAt(0).toLowerCase() + lista[0].col.nome.slice(1) + ' (' + lista[0].col.pigmento + ')';
-    return lista.map(function (x) { return x.parti + ' ' + (x.parti === 1 ? 'parte' : 'parti') + ' di ' + x.col.nome.charAt(0).toLowerCase() + x.col.nome.slice(1) + ' (' + x.col.pigmento + ')'; }).join(' + ');
+    if (lista.length === 1) return 'pigmento puro: ' + lista[0].col.nome + ' (' + lista[0].col.pigmento + ')';
+    return lista.map(function (x) { return x.parti + ' ' + (x.parti === 1 ? 'parte' : 'parti') + ' di ' + x.col.nome + ' (' + x.col.pigmento + ')'; }).join(' + ');
   }
 
-  // --- Mescola ---
+  // --- Simulazione diretta ---
   var sel = [$('mc1'), $('mc2'), $('mc3')], parti = [$('mp1'), $('mp2'), $('mp3')];
   sel.forEach(function (s, i) {
-    if (i === 2) { var o = document.createElement('option'); o.value = ''; o.textContent = '(nessun terzo colore)'; s.appendChild(o); }
+    if (i === 2) { var o = document.createElement('option'); o.value = ''; o.textContent = '(nessun terzo pigmento)'; s.appendChild(o); }
     COL.forEach(function (c) { var o = document.createElement('option'); o.value = c.id; o.textContent = c.nome + ' (' + c.pigmento + ')'; s.appendChild(o); });
   });
   sel[0].value = 'giallo'; sel[1].value = 'oltremare'; sel[2].value = '';
-  // parametro nell'indirizzo: ?mix=giallo:10,ceruleo:1 precompila il mescolatore (usato dalla sezione Alberi)
+  // parametro nell'indirizzo: ?mix=giallo:10,ceruleo:1 precompila il simulatore (usato dalla sezione Alberi)
   (function () {
     var m = /[?&]mix=([^&#]*)/.exec(window.location.search);
     if (!m) return;
     var voci = decodeURIComponent(m[1]).split(',').map(function (v) { var p = v.split(':'); return { id: p[0], parti: parseInt(p[1], 10) || 1 }; })
       .filter(function (v) { return Acq.colore(v.id); }).slice(0, 3);
     if (!voci.length) return;
-    if (voci.length === 1) voci.push({ id: voci[0].id, parti: voci[0].parti }); // un solo tubetto: stesso colore anche nella seconda riga
+    if (voci.length === 1) voci.push({ id: voci[0].id, parti: voci[0].parti });
     [0, 1, 2].forEach(function (k) {
       var v = voci[k];
       sel[k].value = v ? v.id : '';
@@ -55,8 +55,8 @@
     if (!lista.length) return;
     var R = Acq.mescola(lista), m = Acq.munsell(R);
     $('mcamp').style.background = hex(R);
-    $('mtxt').innerHTML = '<span class="ric">' + ricetta(lista) + '</span><br>Anteprima a schermo: ' + hex(R) +
-      '<br>Munsell approssimato: <b>' + m.testo + '</b> (valore ' + m.valore.toFixed(1).replace('.', ',') + ' su 10)';
+    $('mtxt').innerHTML = '<span class="ric">' + ricetta(lista) + '</span><br>Rappresentazione sRGB: ' + hex(R) +
+      '<br>Notazione Munsell stimata: <b>' + m.testo + '</b> (valore ' + m.valore.toFixed(1).replace('.', ',') + ' / 10)';
     var s = '';
     DILUIZIONI.forEach(function (d) {
       var Rq = d.q === 1 ? R : Acq.diluisci(R, d.q);
@@ -67,32 +67,32 @@
   sel.concat(parti).forEach(function (el) { el.addEventListener('input', aggiornaMix); el.addEventListener('change', aggiornaMix); });
   aggiornaMix();
 
-  // --- Trova la miscela ---
+  // --- Ricerca inversa ---
   function giudizio(d) {
-    if (d <= 0.03) return '<span class="vicino si">molto vicino</span>';
-    if (d <= 0.07) return '<span class="vicino quasi">abbastanza vicino</span>';
-    return '<span class="vicino no">lontano: forse fuori dalla portata dei sei tubetti</span>';
+    if (d <= 0.03) return '<span class="vicino si">corrispondenza elevata</span>';
+    if (d <= 0.07) return '<span class="vicino quasi">approssimazione accettabile</span>';
+    return '<span class="vicino no">scostamento elevato (probabilmente esterno al gamut dei 6 pigmenti)</span>';
   }
   function cerca() {
     var obj = $('tobj').value, dil = $('tdil').checked;
-    $('tris').innerHTML = '<p class="aiuto">Calcolo in corso...</p>';
+    $('tris').innerHTML = '<p class="aiuto">Elaborazione spettrale in corso...</p>';
     setTimeout(function () {
       var ris = Acq.cerca(obj, 10, 5, dil), h = '';
       ris.forEach(function (r, i) {
         var m = Acq.munsell(r.R);
-        h += '<div class="prop"><div class="coppia"><div style="background:' + obj + '" title="obiettivo"></div><div style="background:' + hex(r.R) + '" title="proposta"></div></div>' +
+        h += '<div class="prop"><div class="coppia"><div style="background:' + obj + '" title="colore obiettivo"></div><div style="background:' + hex(r.R) + '" title="formulazione stimata"></div></div>' +
           '<div class="prop-txt"><b>' + (i + 1) + '.</b> <b class="ric">' + ricetta(r.lista) + '</b>' +
-          (dil ? '<br>consistenza: <b>' + nomeDiluizione(r.q) + '</b>' : '') +
-          '<br>distanza OKLab ' + r.d.toFixed(3).replace('.', ',') + ', ' + giudizio(r.d) + ' · Munsell circa ' + m.testo +
-          '<br><button class="usa" type="button" data-i="' + i + '">Apri nel mescolatore</button></div></div>';
+          (dil ? '<br>grado di diluizione: <b>' + nomeDiluizione(r.q) + '</b>' : '') +
+          '<br>scostamento ΔE (OKLab): ' + r.d.toFixed(3).replace('.', ',') + ' — ' + giudizio(r.d) + ' · Munsell stimato: ' + m.testo +
+          '<br><button class="usa" type="button" data-i="' + i + '">Carica nel simulatore</button></div></div>';
       });
-      $('tris').innerHTML = h + '<p class="aiuto">A sinistra di ogni coppia il colore scelto, a destra la proposta. Sono stime: provale sul foglietto in tre dosi (meno, come scritto, di più).</p>';
+      $('tris').innerHTML = h + '<p class="aiuto">In ciascun riquadro: a sinistra il colore obiettivo selezionato, a destra la stima spettrale della miscela. Si raccomanda di verificare la proporzione su campione di carta variando gradualmente il componente dominante.</p>';
       Array.prototype.forEach.call(document.querySelectorAll('#tris .usa'), function (b) {
         b.addEventListener('click', function () {
           var r = ris[parseInt(b.getAttribute('data-i'), 10)];
           [0, 1, 2].forEach(function (k) {
             var x = r.lista[k];
-            if (!x && k === 1) x = r.lista[0]; // un solo tubetto: stesso colore anche nella seconda riga
+            if (!x && k === 1) x = r.lista[0];
             sel[k].value = x ? x.col.id : '';
             if (x) parti[k].value = x.parti;
           });

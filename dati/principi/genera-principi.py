@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Genera la pagina della sezione «Principi generali» del Quaderno di acquerello.
+"""Genera la pagina della sezione «Principi tecnici» del Quaderno di acquerello.
 
 Uso: python genera-principi.py pagina
 
 Legge i testi e le fonti da principi.json e scrive principi.html accanto a sé, una pagina sola con
 tutto dentro. scripts/genera-sito.py la copia in site/principi/index.html.
 Controlli: ogni frase ha almeno una fonte, ogni fonte citata esiste, ogni fonte del json è citata,
-nessun testo contiene «da verificare». GBOT-app-acquerello, 18/10/2026."""
+nessun testo contiene «da verificare»."""
 import html
 import json
 import pathlib
@@ -53,15 +53,18 @@ class Fonti:
             if f.get("url"):
                 esterno = f["url"].startswith("http")
                 attr = ' target="_blank" rel="noopener"' if esterno else ""
-                testo += f' <a href="{e(f["url"])}"{attr}>{"apri" if esterno else "nel Quaderno"}</a>'
+                testo += f' <a href="{e(f["url"])}"{attr}>{"apri fonte" if esterno else "nel repertorio"}</a>'
             voci.append(f'<li id="f{n}">{testo}</li>')
         return '<ol class="fonti">' + "".join(voci) + "</ol>"
 
 
 def svg_consistenze():
-    """Tre campioni indicativi dello stesso blu a tre diluizioni: uno schema, non una misura."""
-    campioni = [("tè", "più acqua che pigmento", 0.22), ("latte", "acqua e pigmento in equilibrio", 0.55),
-                ("miele", "più pigmento che acqua", 0.92)]
+    """Tre campioni indicativi dello stesso blu a tre diluizioni."""
+    campioni = [
+        ("tè (molto diluito)", "prevalenza di veicolo acquoso", 0.22),
+        ("latte (medio)", "equilibrio acqua-pigmento", 0.55),
+        ("miele (denso)", "alta concentrazione pigmentaria", 0.92),
+    ]
     pezzi = []
     for i, (nome, sotto, alfa) in enumerate(campioni):
         x = 10 + i * 230
@@ -69,16 +72,20 @@ def svg_consistenze():
                      f'<rect x="{x + 12}" y="22" width="186" height="56" rx="8" fill="#283A9E" fill-opacity="{alfa}"/>'
                      f'<text x="{x + 105}" y="112" text-anchor="middle" class="t1">{e(nome)}</text>'
                      f'<text x="{x + 105}" y="132" text-anchor="middle" class="t2">{e(sotto)}</text>')
-    return ('<figure class="schema"><svg viewBox="0 0 700 142" role="img" aria-label="Tè, latte e miele: tre consistenze dello stesso colore">'
-            + "".join(pezzi) + '</svg><figcaption>Schema indicativo: lo stesso blu al tè, al latte e al miele. '
-            'Non è una misura: le consistenze si provano sul foglietto.</figcaption></figure>')
+    return ('<figure class="schema"><svg viewBox="0 0 700 142" role="img" aria-label="Tè, latte e miele: tre gradi di diluizione dello stesso pigmento">'
+            + "".join(pezzi) + '</svg><figcaption>Rappresentazione schematica dei tre gradi di concentrazione del medesimo pigmento blu '
+            '(tè, latte, miele) su fondo cartaceo bianco.</figcaption></figure>')
 
 
 def svg_carta():
     """Scala dell'umidità della carta, da bagnata ad asciutta, con il lucido che si spegne."""
-    stati = [("bagnata", "lucida", "tè o latte", 0.85), ("lucido che sparisce", "il riflesso si spegne", "più denso", 0.45),
-             ("umida, opaca", "niente riflesso", "miele", 0.0), ("quasi asciutta", "", "pennello quasi asciutto", 0.0),
-             ("asciutta", "", "qualsiasi", 0.0)]
+    stati = [
+        ("bagnata", "riflesso continuo", "tè o latte", 0.85),
+        ("calo del lucido", "riflesso in attenuazione", "medio-denso / sale", 0.45),
+        ("umida opaca", "satinata senza riflesso", "miele / spatola", 0.0),
+        ("quasi asciutta", "fibra fredda", "lifting / incisione", 0.0),
+        ("asciutta", "fibra stabile", "velature / drybrush", 0.0),
+    ]
     fondo = ["#cfdbe6", "#dbe3ea", "#e6e9ea", "#efeee9", "#FBF8F0"]
     pezzi = ['<defs><linearGradient id="luce" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/>'
              '<stop offset=".5" stop-color="#fff" stop-opacity="1"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs>']
@@ -94,11 +101,10 @@ def svg_carta():
     pezzi.append('<path d="M10 152 H684" stroke="#3d6b4f" stroke-width="2" marker-end="url(#freccia)"/>'
                  '<defs><marker id="freccia" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">'
                  '<path d="M0,0 L8,4 L0,8 Z" fill="#3d6b4f"/></marker></defs>'
-                 '<text x="347" y="170" text-anchor="middle" class="t2">la carta asciuga: meno acqua sul foglio, colore più denso nel pennello</text>')
-    return ('<figure class="schema"><svg viewBox="0 0 700 176" role="img" aria-label="Gli stati della carta, da bagnata ad asciutta">'
-            + "".join(pezzi) + '</svg><figcaption>Schema: gli stati della carta dal bagnato all\'asciutto, '
-            'col riflesso dell\'acqua che si spegne e il colore adatto sotto ogni stato (in verde). '
-            'I dettagli e le fonti sono nel testo.</figcaption></figure>')
+                 '<text x="347" y="170" text-anchor="middle" class="t2">progressione dell\'asciugatura: al ridursi dell\'acqua nel supporto deve aumentare la densità della miscela sul pennello</text>')
+    return ('<figure class="schema"><svg viewBox="0 0 700 176" role="img" aria-label="Stadi di umidità del supporto cartaceo">'
+            + "".join(pezzi) + '</svg><figcaption>Progressione degli stadi di asciugatura del supporto: variazione del riflesso speculare '
+            'e corrispondente concentrazione richiesta alla miscela (in verde) per prevenire riflussi.</figcaption></figure>')
 
 
 SVG = {"consistenze": svg_consistenze, "carta": svg_carta}
@@ -125,8 +131,8 @@ sup.rif { font-size: .68em; color: #555; white-space: nowrap; } sup.rif a { text
 .pill.bagnata { background: #2f6f9f; } .pill.umida { background: #6b8fa8; } .pill.asciutta { background: #a07a4a; }
 figure { margin: 12px 0; } figcaption { font-size: .85em; color: #555; margin-top: 4px; }
 .schema svg { width: 100%; display: block; }
-.schema .t1 { font-size: 15px; font-weight: 700; fill: #2c4f3a; } .schema .t2 { font-size: 12px; fill: #555; }
-.schema .t3 { font-size: 12px; font-weight: 600; fill: #2c6a4a; }
+.schema .t1 { font-size: 14px; font-weight: 700; fill: #2c4f3a; } .schema .t2 { font-size: 11.5px; fill: #555; }
+.schema .t3 { font-size: 11.5px; font-weight: 600; fill: #2c6a4a; }
 table.riass { width: 100%; border-collapse: collapse; font-size: .88em; }
 table.riass th, table.riass td { border: 1px solid #d8d2c4; padding: 5px 6px; vertical-align: top; text-align: left; }
 table.riass th { background: #eef4ef; color: #2c4f3a; }
@@ -194,10 +200,10 @@ def pagina():
 <nav class="salti">{salti}</nav>
 <div class="intro">{intro}</div>
 {chr(10).join(sezioni)}
-<h2 class="fonti-tit" id="fonti">Fonti</h2>
+<h2 class="fonti-tit" id="fonti">Apparato delle fonti</h2>
 <p class="nota-fonti">{e(d['nota_fonti'])}</p>
 {F.elenco()}
-<footer>Quaderno di acquerello · Principi generali · testi del {e(data)}.</footer>
+<footer>Quaderno tecnico di acquerello · Sezione 1: Principi tecnici · Revisione del {e(data)}.</footer>
 </body>
 </html>
 """
