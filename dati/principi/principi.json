@@ -59,7 +59,7 @@
     },
     {
      "tipo": "p",
-     "testo": "Nelle schede dei video della sezione Alberi le stesse tre consistenze si chiamano «molto diluito», «medio» e «denso».",
+     "testo": "Nelle schede di studio della sezione Alberi le stesse tre consistenze sono indicate come «molto diluito», «medio» e «denso».",
      "fonti": [
       "schede-campi"
      ]
@@ -80,7 +80,7 @@
    "blocchi": [
     {
      "tipo": "p",
-     "testo": "Lo stesso colore si comporta in modo diverso secondo quanta acqua c'è già sulla carta. Le schede dei video della sezione Alberi segnano, per ogni passo, uno di tre stati:",
+     "testo": "Lo stesso colore si comporta in modo diverso secondo quanta acqua c'è già sulla carta. Nelle infografiche e nelle schede della sezione Alberi ogni fase indica uno di tre stati:",
      "fonti": [
       "wf4",
       "schede-campi"
@@ -227,7 +227,7 @@
        ]
       },
       {
-       "testo": "Spugne, asciugamani e carta assorbente servono a regolare l'acqua nel pennello e sulla carta. Prima di sollevare il colore si asciuga il pennello: lo fa per esempio Paul Clark nel passo A1-3 della sezione Alberi.",
+       "testo": "Spugne, asciugamani e carta assorbente servono a regolare l'acqua nel pennello e sulla carta. Prima di sollevare il colore si asciuga il pennello: lo fa per esempio Paul Clark nell'esempio A1 (Modalità 2, estratto A1-3) della sezione Alberi.",
        "fonti": [
         "mow",
         "alberi-a1-3"
@@ -509,31 +509,31 @@
  "fonti": {
   "wf4": {
    "testo": "Corso Watercolor Fanatic, lezione 4 «The Three Common Watercolor Mixtures and How to Use Them!» (appunti di studio): «'tè' (lavaggio leggero con più acqua che pigmento), 'latte' (lavaggio medio con acqua e pigmento bilanciati) e 'miele' (lavaggio spesso con più pigmento che acqua)»; «abbinare l'umidità del pennello e della pittura alla condizione della carta»; «Utilizzare un pennello più asciutto può aiutare ad assorbire l'acqua in eccesso dalla carta»",
-   "url": ""
+   "url": "https://www.youtube.com/@WatercolorFanatic"
   },
   "wf5": {
    "testo": "Corso Watercolor Fanatic, lezione 5 «Blending Watercolor Wash Techniques» (appunti di studio): asciugare con «l'aria naturale, il phon o il sole» evitando «che il flusso d'aria alteri la distribuzione del pigmento»; strati «applicati dopo l'asciugatura del precedente»",
-   "url": ""
+   "url": "https://www.youtube.com/@WatercolorFanatic"
   },
   "wf6": {
    "testo": "Corso Watercolor Fanatic, lezione 6 (appunti di studio): «lavaggio leggero (tinta da tè)»; «un mix più denso di colore (miscela lattea) che non si diffonde tanto»; se l'acqua è eccessiva «la asciuga leggermente con un pennello pulito»; «una condizione \"semi-umida\" della carta»",
-   "url": ""
+   "url": "https://www.youtube.com/@WatercolorFanatic"
   },
   "wf7": {
    "testo": "Corso Watercolor Fanatic, lezione 7 (appunti di studio): «Tutti i colori aggiunti devono avere una consistenza simile in termini di rapporto acqua-pigmento, per assicurare un lavaggio uniforme senza dominanze cromatiche eccessive»; col phon «non avvicinarsi troppo» per evitare i «cauliflowers»",
-   "url": ""
+   "url": "https://www.youtube.com/@WatercolorFanatic"
   },
   "wf8": {
    "testo": "Corso Watercolor Fanatic, lezione 8 (appunti di studio): umido su secco, «colore puro su carta asciutta [...] applicazioni di colore nette e precise»; umido su umido, «Entrambi la carta e il pennello sono bagnati, permettendo al colore applicato di diffondersi liberamente»; «pittura più spessa per creare bordi duri»",
-   "url": ""
+   "url": "https://www.youtube.com/@WatercolorFanatic"
   },
   "wf-fiori": {
    "testo": "Corso Watercolor Fanatic, «Try This Loose Watercolor Flower Painting» (appunti di studio): «miscele \"latte\", con meno acqua e più pigmento»; asciugare i bordi del foglio per «impedire che si formi un accumulo di pigmento ai bordi causato dal nastro adesivo»",
-   "url": ""
+   "url": "https://www.youtube.com/@WatercolorFanatic"
   },
   "mow": {
    "testo": "The Mind of Watercolor, «Are You Still Making These 3 Watercolor Control Mistakes?» (appunti di studio): «passare rapidamente da un pennello saturato ad uno quasi asciutto»; «spugne, asciugamani e carta assorbente»; «Non essere parsimoniosi con il pigmento»",
-   "url": ""
+   "url": "https://www.youtube.com/@mindofwatercolor"
   },
   "carta": {
    "testo": "Video sulla scelta della carta (appunti di studio): hot press, cold press e rough; 300 e 640 g/m²; la carta da 190 g/m² «si increspa notevolmente»; «non esiste uno standard» fra le marche; la colla «influisce notevolmente sulla capacità di sollevamento»",
@@ -624,19 +624,19 @@
    "url": "https://www.youtube.com/watch?v=yG56Y0AcUVU&t=40s"
   },
   "schede-carte": {
-   "testo": "Schede dei video della sezione Alberi: carta «a grana fine (cold pressed)» (Lois & Morgaine Davidson Art, The Mind of Watercolor) e «a grana ruvida (rough)» (Karen Rice Art)",
-   "url": ""
+   "testo": "Schede di studio per la sezione Alberi: carta «a grana fine (cold pressed)» (Lois & Morgaine Davidson Art, The Mind of Watercolor) e «a grana ruvida (rough)» (Karen Rice Art)",
+   "url": "../alberi/"
   },
   "schede-campi": {
-   "testo": "Schede dei video della sezione Alberi: per ogni passo lo stato della carta (asciutta, umida, bagnata) e la consistenza del colore (molto diluito, medio, denso)",
-   "url": ""
+   "testo": "Infografiche e schede di studio della sezione Alberi: per ogni fase lo stato della carta (asciutta, umida, bagnata) e la consistenza del colore (molto diluito, medio, denso)",
+   "url": "../alberi/"
   },
   "alberi-foglietti": {
    "testo": "Sezione Alberi del Quaderno, «Lavora su piccoli fogli A5»",
    "url": "../alberi/"
   },
   "alberi-a1-3": {
-   "testo": "Sezione Alberi del Quaderno, passo A1-3: Paul Clark asciuga il pennello per sollevare un po' di colore",
+   "testo": "Sezione Alberi del Quaderno, esempio A1 (Modalità 2, estratto A1-3): Paul Clark asciuga il pennello per sollevare un po' di colore",
    "url": "../alberi/#A1-3"
   }
  }

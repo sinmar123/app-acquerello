@@ -4,11 +4,13 @@ Il **Quaderno di acquerello** (`https://app-acquerello.pages.dev`) è un progett
 
 ## 1. Segnalazioni e proposte (senza programmare)
 
-Se vuoi proporre un miglioramento senza toccare il codice, apri una **Issue** su GitHub indicando:
+Se vuoi proporre un miglioramento senza toccare il codice, puoi farlo in due modi:
 
-- **Per un nuovo video o modalità di esercizio:** l'indirizzo del video YouTube, il minuto di inizio e fine del passaggio interessante, i colori e i pennelli usati dall'autore e cosa mostra il gesto.
-- **Per una nuova serie nella sezione Marche e tubetti:** il nome della serie e, per ciascuno dei 6 colori di base, il link alla pagina ufficiale del produttore da cui risultano nome commerciale, numero, codice pigmento (Colour Index) e trasparenza.
-- **Per una correzione ai testi o alle ricette:** la sezione, il punto preciso e la fonte di riferimento.
+1. **Direttamente dal sito (`https://app-acquerello.pages.dev#suggerimenti`):** in fondo a ogni pagina c'è la casella *«Suggerisci una modifica, una correzione o un video»*, che non richiede registrazione né un account GitHub e pubblica direttamente la segnalazione nell'elenco aperto del progetto.
+2. **Aprendo una Issue su GitHub:** indicando:
+   - **Per un nuovo video o modalità di esercizio:** l'indirizzo del video YouTube, il minuto di inizio e fine del passaggio interessante, i colori e i pennelli usati dall'autore e cosa mostra il gesto.
+   - **Per una nuova serie nella sezione Marche e tubetti:** il nome della serie e, per ciascuno dei 6 colori di base, il link alla pagina ufficiale del produttore da cui risultano nome commerciale, numero, codice pigmento (Colour Index) e trasparenza.
+   - **Per una correzione ai testi o alle ricette:** la sezione, il punto preciso e la fonte di riferimento.
 
 ## 2. Modifiche dirette tramite Pull Request
 
@@ -34,7 +36,7 @@ I generatori Python controllano automaticamente la coerenza dei dati e bloccano 
 
 ## 4. Licenza dei contributi
 
-Inviando un contributo a questo repository (tramite Pull Request, Issue o altra comunicazione), dichiari di avere il diritto di inviarlo e accetti che il contributo:
+Inviando un contributo a questo repository (tramite la casella pubblica sul sito, Pull Request, Issue o altra comunicazione), dichiari di avere il diritto di inviarlo e accetti che il contributo:
 
 1. sia rilasciato con le licenze aperte del progetto indicate nel file [`LICENSE`](LICENSE) (**MIT** per il codice sorgente, **CC BY 4.0** per i testi, i dati, le schede e le illustrazioni);
 2. possa essere utilizzato, adattato, pubblicato e integrato senza limiti di tempo o di territorio dal curatore del progetto (`sinmar123`) anche nella versione ospitata dell'applicazione web e in eventuali funzionalità, moduli o servizi aggiuntivi futuri, gratuiti o in abbonamento.

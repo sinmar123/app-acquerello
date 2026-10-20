@@ -2,11 +2,21 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-20 - AGY - Casella pubblica per i suggerimenti, sblocco indicizzazione e pulizia di coerenza
+
+- **Casella suggerimenti sul sito (`functions/api/suggerimento.js` + `scripts/genera-sito.py`)**: aggiunto in fondo a tutte le pagine del sito il modulo pubblico *«Suggerisci una modifica, una correzione o un video»* con filtro anti-spam, oscuramento automatico di eventuali indirizzi email inseriti per errore e avviso esplicito prima dell'invio che la segnalazione sarà pubblicata nella bacheca aperta delle Issue di GitHub (`suggerimento-dal-sito`, sotto licenza CC BY 4.0). Configurato il secret `GITHUB_SUGGERIMENTI_TOKEN` su Cloudflare Pages.
+- **Indicizzazione e pulizia file**: rimosso `<meta name="robots" content="noindex,nofollow">` da tutte le 5 pagine del sito; rimossi gli 8 PNG obsoleti (`pit-261015-riferimento-A1..A7.png` e `pit-261013-illustrazione-A7-tavola-inclinata.png`) e ripulito `dati/alberi/pit-261013-illustrazioni.py`; eliminati i vecchi rami secondari `gbot/*`.
+- **Allineamento testi tra le sezioni**: aggiornati i rimandi tra `dati/principi/principi.json`, `dati/colori/teoria-colori.json`, `dati/marche/marche.json` e la nuova struttura della sezione *Alberi* (esempi e modalità, tavolozza ridotta da 6 colori, nota sulla taratura del calcolatore); corretto il refuso `scurisci` -> `scurisco` in `A4-1` (`dati/alberi/pit-261013-video-gesti-segmenti.csv`).
+- Prossima azione: taratura su prove reali dei 6 colori di `dati/colori/tavolozza.json` e valutazione degli eventuali suggerimenti inviati dal sito.
+
+-- AGY
+
 ## 2026-10-20 - AGY - Preparazione del repository per l'apertura pubblica su GitHub
 
 - Aggiunti `LICENSE` (CC BY 4.0 per testi, dati, schede e illustrazioni; MIT per il codice Python e JavaScript) e `CONTRIBUTING.md` con le regole editoriali e le istruzioni per contribuire tramite Issue o Pull Request.
 - Aggiornati `README.md`, `AGENTS.md`, `CLAUDE.md` e `app-acquerello-261016-prompt-avvio-agente.md` per la consultazione pubblica; rimossi dai file di dati e dagli script i riferimenti all'ambiente locale di lavoro.
 - Esclusi dal tracciamento Git i file di indice e giornale dell'ambiente locale (`.gitignore`).
+- Prossima azione: revisione generale dei testi e apertura della casella suggerimenti.
 
 -- AGY
 
