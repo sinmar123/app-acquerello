@@ -16,7 +16,11 @@
         "La notazione si scrive <b>tinta valore/croma</b>: per esempio <b>5PB 3/10</b> è un blu violaceo scuro e intenso, <b>10YR 7/4</b> un ocra chiaro e smorzato.",
         "Per chi dipinge, il valore è la misura che conta di più: se i valori sono giusti, il disegno regge anche con tinte approssimate. Nell'acquerello il valore si alza con l'acqua, non col bianco."
       ],
-      "fonti": ["wiki-munsell", "briggs", "handprint-valore"]
+      "fonti": [
+        "wiki-munsell",
+        "briggs",
+        "handprint-valore"
+      ]
     },
     {
       "id": "luce",
@@ -28,7 +32,13 @@
         "<b>Perché la ruota dei colori non basta.</b> Il colore che vediamo è un riassunto: due pigmenti che sembrano uguali possono assorbire in modo diverso le varie lunghezze d'onda, e allora si mescolano in modo diverso. Bruce MacEvoy (handprint.com) lo chiama l'errore della ruota dei colori: la posizione di un pigmento sulla ruota non predice con sicurezza cosa darà in miscela, né quanto la miscela perderà di intensità. Conviene sempre provare sul foglietto.",
         "<b>Il modello del calcolatore.</b> La teoria di Kubelka e Munk (1931) descrive uno strato di colore con due grandezze per ogni lunghezza d'onda: quanto assorbe (K) e quanto diffonde (S). Nella versione più semplice, «a una costante», di ogni pigmento basta il rapporto K/S: il K/S di una miscela è la media dei K/S dei componenti, pesata con le quantità. Il calcolatore fa questo conto su 38 bande dello spettro, da 380 a 750 nanometri, e poi riconverte in un colore per lo schermo."
       ],
-      "fonti": ["wiki-additiva", "wiki-sottrattiva", "handprint-mescolanza", "handprint-ruota", "wiki-km"]
+      "fonti": [
+        "wiki-additiva",
+        "wiki-sottrattiva",
+        "handprint-mescolanza",
+        "handprint-ruota",
+        "wiki-km"
+      ]
     },
     {
       "id": "acquerello",
@@ -40,17 +50,22 @@
         "<b>Mescolare o velare.</b> Si può mescolare in tavolozza, e allora i pigmenti stanno nello stesso strato; oppure velare, cioè stendere un colore sopra un altro già asciutto, così la luce passa per due filtri uno sopra l'altro. Con pigmenti trasparenti i due risultati si somigliano, ma non sono uguali. Con quelli opachi, come il ceruleo e la terra d'ombra bruciata nel tubetto della tavolozza, lo strato sopra copre di più e l'ordine delle velature cambia il risultato.",
         "<b>Granulazione.</b> Alcuni pigmenti, come l'oltremare PB29, si depositano negli avvallamenti della carta e lasciano una trama a puntini. È uno degli effetti che nessun calcolatore vede."
       ],
-      "fonti": ["handprint-mescolanza", "handprint-wcolor"]
+      "fonti": [
+        "handprint-mescolanza",
+        "handprint-wcolor"
+      ]
     },
     {
       "id": "tavolozza",
       "breve": "La tavolozza",
-      "titolo": "4. La mia tavolozza: sei colori di base",
+      "titolo": "4. La tavolozza ridotta: sei colori di base",
       "paragrafi": [
-        "Sono i sei colori di base degli esercizi sugli alberi, indicati col nome comune e il pigmento. Conta il <b>pigmento</b>, cioè la sigla del Colour Index scritta sull'etichetta (PY = giallo, PB = blu, PR = rosso, PBr = bruno): lo stesso nome commerciale, con un'altra marca o un'altra serie, può nascondere un pigmento diverso. Il ceruleo (PB15) della tavolozza, per esempio, è un blu ftalo schiarito e non il ceruleo vero (PB35). I tubetti corrispondenti, marca per marca, con le fonti ufficiali, sono nella sezione <a href=\"../marche/\">Marche e tubetti</a>.",
+        "Sono i sei colori della tavolozza ridotta proposta nel Quaderno (utile per dipingere all'aperto o per iniziare con pochi tubetti), indicati col nome comune e il pigmento. Conta il <b>pigmento</b>, cioè la sigla del Colour Index scritta sull'etichetta (PY = giallo, PB = blu, PR = rosso, PBr = bruno): lo stesso nome commerciale, con un'altra marca o un'altra serie, può nascondere un pigmento diverso. Il ceruleo (PB15) della tavolozza, per esempio, è un blu ftalo schiarito e non il ceruleo vero (PB35). I tubetti corrispondenti, marca per marca, con le fonti ufficiali, sono nella sezione <a href=\"../marche/\">Marche e tubetti</a>.",
         "I riquadri colorati sono <b>provvisori</b>: valori scelti a occhio per far funzionare il calcolatore, non misure dei tuoi tubetti. Vanno sostituiti con la taratura sulle prove (vedi il calcolatore)."
       ],
-      "fonti": ["marche"]
+      "fonti": [
+        "marche"
+      ]
     },
     {
       "id": "calcolatore",
@@ -67,24 +82,72 @@
         "Le parti sono quantità uguali di colore preso dal tubetto o dal pozzetto, non di miscela già diluita. La corrispondenza fra i passi della striscia e tè, latte, miele è una convenzione del Quaderno.",
         "La notazione Munsell è approssimata: il valore viene da L*, tinta e croma da una tabella della renotation di Munsell calcolata a valore 5 e croma 6, e lontano da lì l'errore cresce."
       ],
-      "taratura": "Per tarare: stendi ogni tubetto pieno (miele) su un pezzo della stessa carta, fotografalo alla luce del giorno accanto a un cartoncino bianco, oppure misuralo con un colorimetro, e scrivi i sei valori sRGB in <code>dati/colori/tavolozza.json</code> al posto di quelli provvisori. Il campo <code>forza</code> serve a correggere un tubetto che in miscela si rivela più forte o più debole del previsto.",
-      "fonti": ["spectraljs", "oklab", "wiki-km", "munsell-renotation", "artistassist"]
+      "taratura": "Per chi scarica il codice del progetto e vuole tarare il calcolatore sui propri tubetti: stendi ogni tubetto pieno (miele) su un pezzo della stessa carta, fotografalo alla luce del giorno accanto a un cartoncino bianco, oppure misuralo con un colorimetro, e sostituisci i sei valori sRGB in <code>dati/colori/tavolozza.json</code>. Il campo <code>forza</code> serve a correggere un tubetto che in miscela si rivela più forte o più debole del previsto.",
+      "fonti": [
+        "spectraljs",
+        "oklab",
+        "wiki-km",
+        "munsell-renotation",
+        "artistassist"
+      ]
     }
   ],
   "fonti": {
-    "wiki-munsell": {"testo": "Munsell color system, Wikipedia (inglese)", "url": "https://en.wikipedia.org/wiki/Munsell_color_system"},
-    "briggs": {"testo": "David Briggs, The Dimensions of Colour: hue, value, chroma", "url": "http://www.huevaluechroma.com/011.php"},
-    "handprint-valore": {"testo": "Bruce MacEvoy, handprint.com: tonal value", "url": "https://www.handprint.com/HP/WCL/color11.html"},
-    "wiki-additiva": {"testo": "Sintesi additiva, Wikipedia", "url": "https://it.wikipedia.org/wiki/Sintesi_additiva"},
-    "wiki-sottrattiva": {"testo": "Sintesi sottrattiva, Wikipedia", "url": "https://it.wikipedia.org/wiki/Sintesi_sottrattiva"},
-    "handprint-mescolanza": {"testo": "Bruce MacEvoy, handprint.com: additive &amp; subtractive color mixing", "url": "https://www.handprint.com/HP/WCL/color5.html"},
-    "handprint-ruota": {"testo": "Bruce MacEvoy, handprint.com: mixing with a color wheel (the color wheel fallacy)", "url": "https://www.handprint.com/HP/WCL/color14.html"},
-    "handprint-wcolor": {"testo": "Bruce MacEvoy, handprint.com: color theory, indice", "url": "https://www.handprint.com/HP/WCL/wcolor.html"},
-    "wiki-km": {"testo": "Kubelka-Munk theory, Wikipedia (inglese)", "url": "https://en.wikipedia.org/wiki/Kubelka%E2%80%93Munk_theory"},
-    "marche": {"testo": "sezione Marche e tubetti del Quaderno, con la fonte ufficiale e la data di controllo di ogni riga", "url": "../marche/"},
-    "spectraljs": {"testo": "Ronald van Wijnen, spectral.js (licenza MIT): tabelle spettrali usate dal calcolatore", "url": "https://github.com/rvanwijnen/spectral.js"},
-    "oklab": {"testo": "Björn Ottosson, OKLab: lo spazio colore usato per misurare la distanza fra due colori", "url": "https://bottosson.github.io/posts/oklab/"},
-    "munsell-renotation": {"testo": "colour-science: conversione della renotation di Munsell (usata per la tabella delle tinte)", "url": "https://www.colour-science.org/"},
-    "artistassist": {"testo": "ArtistAssistApp, app gratuita esterna per miscele ad acquerello (solo collegamento)", "url": "https://artistassistapp.com/en/"}
+    "wiki-munsell": {
+      "testo": "Munsell color system, Wikipedia (inglese)",
+      "url": "https://en.wikipedia.org/wiki/Munsell_color_system"
+    },
+    "briggs": {
+      "testo": "David Briggs, The Dimensions of Colour: hue, value, chroma",
+      "url": "http://www.huevaluechroma.com/011.php"
+    },
+    "handprint-valore": {
+      "testo": "Bruce MacEvoy, handprint.com: tonal value",
+      "url": "https://www.handprint.com/HP/WCL/color11.html"
+    },
+    "wiki-additiva": {
+      "testo": "Sintesi additiva, Wikipedia",
+      "url": "https://it.wikipedia.org/wiki/Sintesi_additiva"
+    },
+    "wiki-sottrattiva": {
+      "testo": "Sintesi sottrattiva, Wikipedia",
+      "url": "https://it.wikipedia.org/wiki/Sintesi_sottrattiva"
+    },
+    "handprint-mescolanza": {
+      "testo": "Bruce MacEvoy, handprint.com: additive &amp; subtractive color mixing",
+      "url": "https://www.handprint.com/HP/WCL/color5.html"
+    },
+    "handprint-ruota": {
+      "testo": "Bruce MacEvoy, handprint.com: mixing with a color wheel (the color wheel fallacy)",
+      "url": "https://www.handprint.com/HP/WCL/color14.html"
+    },
+    "handprint-wcolor": {
+      "testo": "Bruce MacEvoy, handprint.com: color theory, indice",
+      "url": "https://www.handprint.com/HP/WCL/wcolor.html"
+    },
+    "wiki-km": {
+      "testo": "Kubelka-Munk theory, Wikipedia (inglese)",
+      "url": "https://en.wikipedia.org/wiki/Kubelka%E2%80%93Munk_theory"
+    },
+    "marche": {
+      "testo": "sezione Marche e tubetti del Quaderno, con la fonte ufficiale e la data di controllo di ogni riga",
+      "url": "../marche/"
+    },
+    "spectraljs": {
+      "testo": "Ronald van Wijnen, spectral.js (licenza MIT): tabelle spettrali usate dal calcolatore",
+      "url": "https://github.com/rvanwijnen/spectral.js"
+    },
+    "oklab": {
+      "testo": "Björn Ottosson, OKLab: lo spazio colore usato per misurare la distanza fra due colori",
+      "url": "https://bottosson.github.io/posts/oklab/"
+    },
+    "munsell-renotation": {
+      "testo": "colour-science: conversione della renotation di Munsell (usata per la tabella delle tinte)",
+      "url": "https://www.colour-science.org/"
+    },
+    "artistassist": {
+      "testo": "ArtistAssistApp, app gratuita esterna per miscele ad acquerello (solo collegamento)",
+      "url": "https://artistassistapp.com/en/"
+    }
   }
 }

@@ -552,7 +552,6 @@ def pagina():
 <html lang="it"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<meta name="robots" content="noindex, nofollow">
 <title>{e(a["titolo"])}</title>
 <style>{CSS}</style></head>
 <body>{corpo}<script>{JS}</script></body></html>"""

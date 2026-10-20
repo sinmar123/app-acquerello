@@ -4,7 +4,7 @@
  "titolo": "Marche e tubetti: i sei colori di base nei negozi",
  "sottotitolo": "Per ogni colore della tavolozza, il tubetto corrispondente in sei serie: nome commerciale, numero, pigmenti e trasparenza, dalle pagine ufficiali dei produttori",
  "introduzione": [
-  "Gli esercizi del Quaderno chiamano i colori col nome comune e col pigmento, per esempio «blu oltremare (PB29)». Il pigmento è la sigla del Colour Index stampata sull'etichetta: PY per i gialli, PR per i rossi, PB per i blu, PBr per i bruni. È questa sigla che decide come si comporta il colore, non il nome sul tubetto.",
+  "Le schede del Quaderno indicano i colori della tavolozza ridotta col nome comune e col pigmento, per esempio «blu oltremare (PB29)». Il pigmento è la sigla del Colour Index stampata sull'etichetta: PY per i gialli, PR per i rossi, PB per i blu, PBr per i bruni. È questa sigla che decide come si comporta il colore, non il nome sul tubetto.",
   "Qui trovi lo stesso colore in sei serie di cinque marche, con i dati presi dalle pagine ufficiali dei produttori. Prima di comprare un colore, guarda il pigmento: due tubetti con lo stesso nome possono avere pigmenti diversi, e due tubetti con nomi diversi possono avere lo stesso pigmento.",
   "I produttori a volte cambiano la formula senza cambiare il nome: il cremisi Cotman usato negli esercizi ha PR206 sull'etichetta, mentre la formula di oggi sul sito è PR179. Conta sempre l'etichetta del tubetto che hai in mano."
  ],
@@ -22,7 +22,7 @@
    "id": "wn-cotman",
    "marca": "Winsor & Newton",
    "serie": "Cotman",
-   "nota": "È la serie dei tubetti usati negli esercizi del Quaderno.",
+   "nota": "È la serie da studio presa a riferimento per la tavolozza ridotta a sei colori del Quaderno.",
    "fonte_generale": "https://www.winsornewton.com/pages/cotman-watercolour",
    "righe": [
     {
