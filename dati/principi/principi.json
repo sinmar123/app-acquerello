@@ -1,13 +1,13 @@
 {
  "data": "2026-10-18",
- "nota": "Testi della sezione Principi generali, dalla proposta approvata da Sandro il 18/10/2026. Ogni affermazione ha le sue fonti; ciò che non aveva fonte è rimasto fuori. GBOT-app-acquerello.",
+ "nota": "Testi della sezione Principi generali (18/10/2026). Ogni affermazione ha le sue fonti; ciò che non aveva fonte è rimasto fuori.",
  "titolo": "Principi generali: acqua, colore e carta",
  "sottotitolo": "Le tre consistenze della miscela, gli stati della carta e come abbinarli, prima di ogni esercizio.",
  "introduzione": [
-  "Prima degli esercizi, poche regole che tornano in tutti i video e nei corsi raccolti per il Quaderno. Ogni frase ha un numero che rimanda alle fonti in fondo alla pagina: gli appunti di Sandro sui corsi e i video della sezione Alberi, aperti al minuto giusto.",
+  "Prima degli esercizi, poche regole che tornano in tutti i video e nei corsi raccolti per il Quaderno. Ogni frase ha un numero che rimanda alle fonti in fondo alla pagina: gli appunti sui corsi e i video della sezione Alberi, aperti al minuto giusto.",
   "Gli esercizi sono nella sezione <a href=\"../alberi/\">Alberi</a>; i pigmenti, la tavolozza e il calcolatore di miscele, con la striscia di diluizione dal miele al tè, nella sezione <a href=\"../colori/\">Teoria dei colori</a>."
  ],
- "nota_fonti": "Le citazioni dei video vengono dalle schede di studio preparate per la sezione Alberi, riassunti del parlato e del gesto controllati a campione: il collegamento apre il video al minuto indicato, per controllare. Le citazioni dei corsi vengono dagli appunti di Sandro.",
+ "nota_fonti": "Le citazioni dei video vengono dalle schede di studio preparate per la sezione Alberi, riassunti del parlato e del gesto controllati a campione: il collegamento apre il video al minuto indicato, per controllare. Le citazioni dei corsi vengono dagli appunti di studio delle lezioni.",
  "capitoli": [
   {
    "id": "consistenze",
@@ -508,35 +508,35 @@
  ],
  "fonti": {
   "wf4": {
-   "testo": "Corso Watercolor Fanatic, lezione 4 «The Three Common Watercolor Mixtures and How to Use Them!» (appunti di Sandro): «'tè' (lavaggio leggero con più acqua che pigmento), 'latte' (lavaggio medio con acqua e pigmento bilanciati) e 'miele' (lavaggio spesso con più pigmento che acqua)»; «abbinare l'umidità del pennello e della pittura alla condizione della carta»; «Utilizzare un pennello più asciutto può aiutare ad assorbire l'acqua in eccesso dalla carta»",
+   "testo": "Corso Watercolor Fanatic, lezione 4 «The Three Common Watercolor Mixtures and How to Use Them!» (appunti di studio): «'tè' (lavaggio leggero con più acqua che pigmento), 'latte' (lavaggio medio con acqua e pigmento bilanciati) e 'miele' (lavaggio spesso con più pigmento che acqua)»; «abbinare l'umidità del pennello e della pittura alla condizione della carta»; «Utilizzare un pennello più asciutto può aiutare ad assorbire l'acqua in eccesso dalla carta»",
    "url": ""
   },
   "wf5": {
-   "testo": "Corso Watercolor Fanatic, lezione 5 «Blending Watercolor Wash Techniques» (appunti di Sandro): asciugare con «l'aria naturale, il phon o il sole» evitando «che il flusso d'aria alteri la distribuzione del pigmento»; strati «applicati dopo l'asciugatura del precedente»",
+   "testo": "Corso Watercolor Fanatic, lezione 5 «Blending Watercolor Wash Techniques» (appunti di studio): asciugare con «l'aria naturale, il phon o il sole» evitando «che il flusso d'aria alteri la distribuzione del pigmento»; strati «applicati dopo l'asciugatura del precedente»",
    "url": ""
   },
   "wf6": {
-   "testo": "Corso Watercolor Fanatic, lezione 6 (appunti di Sandro): «lavaggio leggero (tinta da tè)»; «un mix più denso di colore (miscela lattea) che non si diffonde tanto»; se l'acqua è eccessiva «la asciuga leggermente con un pennello pulito»; «una condizione \"semi-umida\" della carta»",
+   "testo": "Corso Watercolor Fanatic, lezione 6 (appunti di studio): «lavaggio leggero (tinta da tè)»; «un mix più denso di colore (miscela lattea) che non si diffonde tanto»; se l'acqua è eccessiva «la asciuga leggermente con un pennello pulito»; «una condizione \"semi-umida\" della carta»",
    "url": ""
   },
   "wf7": {
-   "testo": "Corso Watercolor Fanatic, lezione 7 (appunti di Sandro): «Tutti i colori aggiunti devono avere una consistenza simile in termini di rapporto acqua-pigmento, per assicurare un lavaggio uniforme senza dominanze cromatiche eccessive»; col phon «non avvicinarsi troppo» per evitare i «cauliflowers»",
+   "testo": "Corso Watercolor Fanatic, lezione 7 (appunti di studio): «Tutti i colori aggiunti devono avere una consistenza simile in termini di rapporto acqua-pigmento, per assicurare un lavaggio uniforme senza dominanze cromatiche eccessive»; col phon «non avvicinarsi troppo» per evitare i «cauliflowers»",
    "url": ""
   },
   "wf8": {
-   "testo": "Corso Watercolor Fanatic, lezione 8 (appunti di Sandro): umido su secco, «colore puro su carta asciutta [...] applicazioni di colore nette e precise»; umido su umido, «Entrambi la carta e il pennello sono bagnati, permettendo al colore applicato di diffondersi liberamente»; «pittura più spessa per creare bordi duri»",
+   "testo": "Corso Watercolor Fanatic, lezione 8 (appunti di studio): umido su secco, «colore puro su carta asciutta [...] applicazioni di colore nette e precise»; umido su umido, «Entrambi la carta e il pennello sono bagnati, permettendo al colore applicato di diffondersi liberamente»; «pittura più spessa per creare bordi duri»",
    "url": ""
   },
   "wf-fiori": {
-   "testo": "Corso Watercolor Fanatic, «Try This Loose Watercolor Flower Painting» (appunti di Sandro): «miscele \"latte\", con meno acqua e più pigmento»; asciugare i bordi del foglio per «impedire che si formi un accumulo di pigmento ai bordi causato dal nastro adesivo»",
+   "testo": "Corso Watercolor Fanatic, «Try This Loose Watercolor Flower Painting» (appunti di studio): «miscele \"latte\", con meno acqua e più pigmento»; asciugare i bordi del foglio per «impedire che si formi un accumulo di pigmento ai bordi causato dal nastro adesivo»",
    "url": ""
   },
   "mow": {
-   "testo": "The Mind of Watercolor, «Are You Still Making These 3 Watercolor Control Mistakes?» (appunti di Sandro): «passare rapidamente da un pennello saturato ad uno quasi asciutto»; «spugne, asciugamani e carta assorbente»; «Non essere parsimoniosi con il pigmento»",
+   "testo": "The Mind of Watercolor, «Are You Still Making These 3 Watercolor Control Mistakes?» (appunti di studio): «passare rapidamente da un pennello saturato ad uno quasi asciutto»; «spugne, asciugamani e carta assorbente»; «Non essere parsimoniosi con il pigmento»",
    "url": ""
   },
   "carta": {
-   "testo": "Video sulla scelta della carta (appunti di Sandro): hot press, cold press e rough; 300 e 640 g/m²; la carta da 190 g/m² «si increspa notevolmente»; «non esiste uno standard» fra le marche; la colla «influisce notevolmente sulla capacità di sollevamento»",
+   "testo": "Video sulla scelta della carta (appunti di studio): hot press, cold press e rough; 300 e 640 g/m²; la carta da 190 g/m² «si increspa notevolmente»; «non esiste uno standard» fra le marche; la colla «influisce notevolmente sulla capacità di sollevamento»",
    "url": "https://www.youtube.com/watch?v=D_AnLl0PMlo"
   },
   "julie-lucida": {

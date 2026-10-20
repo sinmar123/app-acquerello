@@ -2,10 +2,7 @@
 #   python pit-261013-illustrazioni.py [A1 A3 ...]               (illustrazioni dei gesti, solo da testo)
 #   python pit-261013-illustrazioni.py --riferimenti [A1 A3 ...] (7 immagini iniziali della pagina, da ritaglio + testo)
 # SUFFISSO=-v2 nell'ambiente per non sovrascrivere. Salva PNG in illustrazioni/ e registra i token usati.
-# Dal 16/10/2026 sta nel repository app-acquerello (dati/alberi/): le foto da ritagliare restano nel
-# workspace di Sandro, pit/acquerello-corso-avanzato-2026-27/schizzi+foto/, e la chiave di Gemini sul
-# W520, quindi le illustrazioni si generano solo da lì. Le copie in pit/acquerello-alberi/illustrazioni/
-# servono ai pdf: un'illustrazione nuova per la pagina nasce qui.
+# Genera le illustrazioni nella sottocartella illustrazioni/ usando l'API Gemini (variabile GEMINI_API_KEY).
 import base64, io, json, os, sys, time, urllib.error, urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from PIL import Image, ImageOps
@@ -15,7 +12,7 @@ URL = f"https://generativelanguage.googleapis.com/v1beta/models/{MODELLO}:genera
 QUI = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(QUI, "illustrazioni")
 _WKS = QUI
-for _ in range(5):  # dati/alberi -> dati -> app-acquerello -> applicazioni-github -> software -> workspace
+for _ in range(5):
     _WKS = os.path.dirname(_WKS)
 FOTO = os.path.join(_WKS, "pit", "acquerello-corso-avanzato-2026-27", "schizzi+foto")
 REG = os.path.join(os.environ.get("TEMP", "."), "pit-alberi", "tutorial", "illustra-registro.jsonl")
