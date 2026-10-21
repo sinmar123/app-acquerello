@@ -2,6 +2,15 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-21 - GBOT-acquerello - Home: il Quaderno come cantiere aperto, in continua evoluzione
+
+- Nella home (`scripts/genera-sito.py`, riquadro «Come è organizzato il Quaderno») il paragrafo d'apertura dice che il Quaderno è diviso, per ora, in cinque sezioni. Il riquadro sullo stato del lavoro diventa «Un cantiere aperto, in continua evoluzione»: per ora le sezioni sono cinque, altre se ne aggiungeranno e quelle esistenti vengono riviste e ampliate man mano che lo studio procede. Testo approvato dal curatore il 21/10/2026.
+- Il riquadro `.cf-sviluppo` è più in evidenza: bordo sinistro più largo, sfondo caldo tenue, titolo su una riga propria e un po' più grande.
+- `README.md` allineato: il Quaderno è presentato come cantiere aperto, in continua evoluzione.
+- Prossima azione: taratura dei sei colori su campioni reali.
+
+-- GBOT-acquerello
+
 ## 2026-10-21 - CC - Chat: risposte senza trattino lungo
 
 - Le istruzioni della chat (`scripts/genera-sito.py`, rigenerate in `lib/prompt-chat.js`) chiedono di non usare il trattino lungo e di fare gli incisi con virgole, due punti o parentesi, come vuole `CONTRIBUTING.md` § 3 per i testi del sito. La domanda di prova sul sito pubblicato aveva ricevuto una risposta col trattino lungo; con le istruzioni nuove, tre domande inviate direttamente a Gemini ne hanno ricevute zero.

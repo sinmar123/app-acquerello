@@ -631,8 +631,8 @@ main{{max-width:820px;margin:0 auto;padding:22px 14px 12px}}
 .cf-link{{display:inline-flex;align-items:center;gap:5px;padding:6px 12px;border-radius:7px;font-weight:600;text-decoration:none}}
 .cf-link.chat{{background:#fdf3ec;border:1px solid #e2bfa8;color:#6b3418}}
 .cf-link.sugg{{background:#eef6f2;border:1px solid #b8d8c8;color:#1e4638}}
-.cf-sviluppo{{background:#f4efe4;border:1px solid #d8ccb8;border-left:4px solid #8c4a27;border-radius:8px;padding:11px 14px;margin:0 0 14px;font-size:.89rem;color:#2e2820}}
-.cf-sviluppo strong{{color:#6b3418}}
+.cf-sviluppo{{background:#fbf0e3;border:1px solid #e3c6a8;border-left:6px solid #8c4a27;border-radius:8px;padding:14px 16px;margin:0 0 16px;font-size:.92rem;color:#2e2820;box-shadow:0 1px 4px rgba(140,74,39,.08)}}
+.cf-sviluppo strong{{display:block;margin:0 0 4px;font-size:1.06rem;letter-spacing:.01em;color:#6b3418}}
 .sezioni-tit{{margin:0 0 12px;font-size:1.12rem;color:#263529}}
 .grid{{display:grid;grid-template-columns:1fr;gap:18px}}
 .card{{background:#fffdf8;border:1px solid #dfd5c3;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(31,28,23,.06);transition:transform .15s ease,box-shadow .15s ease}}
@@ -666,13 +666,14 @@ footer a{{color:#5a4d3b}}
       <strong>Nota di metodo:</strong> chi oggi apprende una disciplina pratica dispone di una documentazione vastissima, distribuita tra manuali, schede tecniche e centinaia di ore di dimostrazioni filmate; la vera difficoltà sta nel ricondurre una materia tanto dispersa a un criterio ordinato e consultabile mentre si lavora. Gli strumenti di intelligenza artificiale permettono di compiere a monte questo lavoro di spoglio, confronto e classificazione, restituendo al momento opportuno il dato che serve per guidare la mano ed esercitarsi con maggiore sicurezza. Questo quaderno nasce dall'applicazione di tale approccio allo studio dell'acquerello: sistematizza il comportamento di acqua, carta e pigmenti, scompone e indicizza al secondo le sequenze esecutive nei video didattici e affianca al tavolo da lavoro strumenti di riscontro immediato, dal calcolatore colorimetrico all'assistente tecnico integrato nelle pagine.
     </div>
     <p>
-      Il Quaderno raccoglie i procedimenti di base da provare su piccoli fogli di studio (A5, cotone 300 g/m²) ed è diviso in
-      cinque sezioni. Nei Principi e nelle Marche ogni affermazione rimanda alla sua fonte; negli Alberi ogni modalità rimanda
+      Il Quaderno raccoglie i procedimenti di base da provare su piccoli fogli di studio (A5, cotone 300 g/m²) ed è diviso,
+      per ora, in cinque sezioni. Nei Principi e nelle Marche ogni affermazione rimanda alla sua fonte; negli Alberi ogni modalità rimanda
       al video da cui è tratta.
     </p>
     <div class="cf-sviluppo">
-      <strong>Il Quaderno è in fase di sviluppo:</strong> la sezione 5, Soggetti, si apre con il modulo sugli alberi;
-      gli altri moduli sono in preparazione.
+      <strong>Un cantiere aperto, in continua evoluzione.</strong> Il Quaderno è in costruzione: per ora conta cinque sezioni,
+      altre se ne aggiungeranno e quelle esistenti vengono riviste e ampliate man mano che lo studio procede.
+      La sezione 5, Soggetti, si apre con il modulo sugli alberi; gli altri moduli sono in preparazione.
     </div>
     <div class="cf-strumenti">
       <a class="cf-link chat" href="#assistente-ai">🎨 Domande sull'acquerello: l'assistente basato sull'IA (5 a settimana) ↓</a>
