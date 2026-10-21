@@ -2,7 +2,7 @@
 
 Repertorio tecnico-didattico ad accesso aperto dedicato allo studio sistematico della pittura ad acquerello: principi idrodinamici, morfologia ed esecuzione degli alberi con tavole sinottiche e analisi dei gesti nei video, colorimetria e simulatore spettrale, merceologia dei pigmenti.
 
-Il quaderno nasce dallo studio pratico dell'acquerello e dall'esigenza di classificare la vastissima quantità di informazioni oggi disponibili (manuali, corsi, schede tecniche dei pigmenti e, come caso emblematico, centinaia di ore di dimostrazioni filmate su YouTube): gli strumenti di intelligenza artificiale sono impiegati qui al servizio di uno studio manuale sia per ordinare e incrociare le fonti, sia per fornire risposte mirate e immediate quando si presenta un problema operativo davanti al foglio.
+Lo studio di una tecnica o di un «saper fare» manuale è oggi agevolato dall'enorme quantità di informazioni disponibili, ma richiede strumenti capaci di organizzarle e di restituire l'indicazione giusta nel momento in cui ci si esercita: questo quaderno applica l'intelligenza artificiale allo studio dell'acquerello per classificare in modo rigoroso le fonti (manuali, schede chimiche, dimostrazioni filmate su YouTube indicizzate al secondo) e offrire un riscontro immediato davanti al foglio.
 
 - **Sito online:** [https://app-acquerello.pages.dev](https://app-acquerello.pages.dev)
 - **Repository GitHub:** [https://github.com/sinmar123/app-acquerello](https://github.com/sinmar123/app-acquerello)
