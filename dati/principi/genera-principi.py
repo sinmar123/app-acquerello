@@ -133,7 +133,8 @@ figure { margin: 12px 0; } figcaption { font-size: .85em; color: #555; margin-to
 .schema svg { width: 100%; display: block; }
 .schema .t1 { font-size: 14px; font-weight: 700; fill: #2c4f3a; } .schema .t2 { font-size: 11.5px; fill: #555; }
 .schema .t3 { font-size: 11.5px; font-weight: 600; fill: #2c6a4a; }
-table.riass { width: 100%; border-collapse: collapse; font-size: .88em; }
+.tab { overflow-x: auto; }
+table.riass { width: 100%; min-width: 520px; border-collapse: collapse; font-size: .88em; }
 table.riass th, table.riass td { border: 1px solid #d8d2c4; padding: 5px 6px; vertical-align: top; text-align: left; }
 table.riass th { background: #eef4ef; color: #2c4f3a; }
 .fonti-tit { margin-top: 30px; }
@@ -177,7 +178,7 @@ def pagina():
                         controlla_testo(x, f"{dove}, riga {j + 1}")
                     celle = "".join(f"<td>{e(x)}</td>" for x in r["celle"])
                     righe.append(f'<tr>{celle}<td>{F.rif(r["fonti"], f"{dove}, riga {j + 1}")}</td></tr>')
-                corpo.append(f'<table class="riass"><tr>{testa}</tr>{"".join(righe)}</table>')
+                corpo.append(f'<div class="tab"><table class="riass"><tr>{testa}</tr>{"".join(righe)}</table></div>')
             else:
                 raise SystemExit(f"principi: blocco di tipo sconosciuto in {dove}")
         corpo.append("</section>")

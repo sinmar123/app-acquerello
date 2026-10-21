@@ -50,21 +50,28 @@
     });
     return lista;
   }
+  // diluizione della proposta caricata dalla ricerca inversa; torna al colore pieno (miele)
+  // appena si cambiano a mano pigmenti o parti
+  var diluizioneScelta = 1;
   function aggiornaMix() {
     var lista = leggiMix();
     if (!lista.length) return;
-    var R = Acq.mescola(lista), m = Acq.munsell(R);
-    $('mcamp').style.background = hex(R);
-    $('mtxt').innerHTML = '<span class="ric">' + ricetta(lista) + '</span><br>Rappresentazione sRGB: ' + hex(R) +
+    var R = Acq.mescola(lista);
+    var Rs = diluizioneScelta === 1 ? R : Acq.diluisci(R, diluizioneScelta), m = Acq.munsell(Rs);
+    $('mcamp').style.background = hex(Rs);
+    $('mtxt').innerHTML = '<span class="ric">' + ricetta(lista) + '</span>' +
+      (diluizioneScelta === 1 ? '' : '<br>Grado di diluizione della proposta: <b>' + nomeDiluizione(diluizioneScelta) + '</b>') +
+      '<br>Rappresentazione sRGB: ' + hex(Rs) +
       '<br>Notazione Munsell stimata: <b>' + m.testo + '</b> (valore ' + m.valore.toFixed(1).replace('.', ',') + ' / 10)';
     var s = '';
     DILUIZIONI.forEach(function (d) {
       var Rq = d.q === 1 ? R : Acq.diluisci(R, d.q);
-      s += '<div class="passo" style="background:' + hex(Rq) + '" title="' + d.nome + ': ' + Acq.munsell(Rq).testo + '"><span>' + d.nome + '</span></div>';
+      s += '<div class="passo' + (d.q === diluizioneScelta ? ' scelto' : '') + '" style="background:' + hex(Rq) + '" title="' + d.nome + ': ' + Acq.munsell(Rq).testo + '"><span>' + d.nome + '</span></div>';
     });
     $('mstriscia').innerHTML = s;
   }
-  sel.concat(parti).forEach(function (el) { el.addEventListener('input', aggiornaMix); el.addEventListener('change', aggiornaMix); });
+  function aggiornaAMano() { diluizioneScelta = 1; aggiornaMix(); }
+  sel.concat(parti).forEach(function (el) { el.addEventListener('input', aggiornaAMano); el.addEventListener('change', aggiornaAMano); });
   aggiornaMix();
 
   // --- Ricerca inversa ---
@@ -77,7 +84,7 @@
     var obj = $('tobj').value, dil = $('tdil').checked;
     $('tris').innerHTML = '<p class="aiuto">Elaborazione spettrale in corso...</p>';
     setTimeout(function () {
-      var ris = Acq.cerca(obj, 10, 5, dil), h = '';
+      var ris = Acq.cerca(obj, 10, 5, dil, DILUIZIONI.map(function (d) { return d.q; })), h = '';
       ris.forEach(function (r, i) {
         var m = Acq.munsell(r.R);
         h += '<div class="prop"><div class="coppia"><div style="background:' + obj + '" title="colore obiettivo"></div><div style="background:' + hex(r.R) + '" title="formulazione stimata"></div></div>' +
@@ -96,6 +103,7 @@
             sel[k].value = x ? x.col.id : '';
             if (x) parti[k].value = x.parti;
           });
+          diluizioneScelta = r.q;
           aggiornaMix();
           $('mescola').scrollIntoView({ behavior: 'smooth' });
         });

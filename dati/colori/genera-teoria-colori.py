@@ -177,6 +177,8 @@ figure { margin: 12px 0; } figcaption { font-size: .85em; color: #555; margin-to
 .striscia { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0; border-radius: 6px; overflow: hidden; border: 1px solid #d8d2c4; margin-top: 4px; }
 .passo { min-height: 54px; display: flex; align-items: flex-end; justify-content: center; }
 .passo span { font-size: .7em; background: rgba(255,255,255,.85); border-radius: 4px; padding: 0 4px; margin-bottom: 3px; color: #333; }
+.passo.scelto { outline: 3px solid #1f3c2b; outline-offset: -3px; }
+.passo.scelto span { font-weight: 700; }
 .riga-trova { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; font-size: .92em; }
 .riga-trova input[type=color] { width: 54px; height: 34px; vertical-align: middle; border: 1px solid #999; padding: 0; background: none; }
 .riga-trova button, .usa { background: #2c4f3a; color: #fff; border: 0; border-radius: 8px; padding: 6px 14px; font-weight: 600; font-size: .95em; cursor: pointer; }

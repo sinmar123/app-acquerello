@@ -115,10 +115,12 @@ var Acq = (function () {
 
   // ricerca a forza bruta: coppie e terne dei 6 colori, parti intere da 1 a max, senza doppioni proporzionali
   function mcd(a, b) { return b ? mcd(b, a % b) : a; }
-  function cerca(hexObiettivo, max, quanti, usaDiluizione) {
+  // livelli: le frazioni di pigmento della striscia di diluizione (1 = miele); l'interfaccia passa
+  // le stesse della striscia, così la proposta trovata si ritrova nella striscia
+  function cerca(hexObiettivo, max, quanti, usaDiluizione, livelli) {
     var obj = oklabHex(hexObiettivo), ris = [], n = COL.length;
     max = max || 10; quanti = quanti || 5;
-    var diluizioni = usaDiluizione ? [1, 0.6, 0.35, 0.2, 0.1] : [1];
+    var diluizioni = usaDiluizione ? (livelli || [1, 0.6, 0.35, 0.2, 0.1, 0.05]) : [1];
     function prova(lista) {
       var R = mescola(lista);
       diluizioni.forEach(function (q) {

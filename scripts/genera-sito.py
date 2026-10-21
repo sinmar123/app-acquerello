@@ -2,13 +2,12 @@
 """Genera il sito statico delle guide di acquerello in site/ dai sorgenti delle sezioni in dati/<sezione>/.
 
 Il repository è autonomo: contiene tutti i file di dati, le infografiche e gli script necessari a generare le pagine."""
-import base64
-import io
+import json
 import pathlib
+import re
+import shutil
 import subprocess
 import sys
-
-from PIL import Image
 
 sys.stdout.reconfigure(encoding="utf-8")
 
@@ -107,6 +106,8 @@ SEZIONI = [
         "badge": [],
         "script_genera": DATI_DIR / "alberi" / "pit-261013-video-gesti.py",
         "html_generato": DATI_DIR / "alberi" / "pit-261014-video-gesti-alberi.html",
+        # figure salvate accanto alla pagina dal generatore, da copiare con lei
+        "cartelle": [DATI_DIR / "alberi" / "immagini"],
     },
 ]
 
@@ -119,17 +120,59 @@ OPZIONI_SEZIONE = [
     "Soggetti (Alberi, Nuvole, Fiori...)",
 ]
 
+FUNZIONE_SUGGERIMENTI = APP_DIR / "functions" / "api" / "suggerimento.js"
 
-def miniatura_data_uri(percorso: pathlib.Path, larghezza: int = 720, qualita: int = 80) -> str:
-    if not percorso.exists():
-        return ""
-    im = Image.open(percorso).convert("RGB")
-    if im.width > larghezza:
-        im = im.resize((larghezza, int(im.height * larghezza / im.width)), Image.LANCZOS)
-    buf = io.BytesIO()
-    im.save(buf, format="JPEG", quality=qualita, optimize=True)
-    b64 = base64.b64encode(buf.getvalue()).decode("ascii")
-    return f"data:image/jpeg;base64,{b64}"
+
+def controlla_funzione_suggerimenti():
+    """Il menu del modulo e le pagine del sito devono coincidere con gli elenchi che la funzione accetta:
+    una voce che manca di là viene rifiutata dal server, e la segnalazione va persa."""
+    sorgente = FUNZIONE_SUGGERIMENTI.read_text(encoding="utf-8")
+
+    def elenco(nome):
+        m = re.search(rf"const {nome} = (\[.*?\]);", sorgente, re.S)
+        if not m:
+            raise SystemExit(f"genera-sito: {nome} non trovato in {FUNZIONE_SUGGERIMENTI.name}")
+        return json.loads(m.group(1))
+
+    pagine = ["/"] + [f"/{s['slug']}/" for s in SEZIONI]
+    for nome, atteso in (("SEZIONI_VALIDE", OPZIONI_SEZIONE), ("PAGINE_VALIDE", pagine)):
+        trovato = elenco(nome)
+        if trovato != atteso:
+            raise SystemExit(f"genera-sito: {nome} di {FUNZIONE_SUGGERIMENTI.name} è {trovato}, il sito usa {atteso}")
+    for s in SEZIONI:
+        if s.get("nome_form") not in OPZIONI_SEZIONE:
+            raise SystemExit(f"genera-sito: la sezione {s['slug']} preseleziona «{s.get('nome_form')}», che il menu non ha")
+
+
+# Parole dei nomi di serie troppo comuni per cercarle nei testi («Professional», «Extra Fine»,
+# «Aquarell», il «Blu» di Maimeri Blu): della serie resta solo la parte distintiva.
+PAROLE_GENERICHE = {"professional", "extra", "fine", "aquarell", "blu"}
+
+
+def controlla_marche_fuori_sezione():
+    """Marche e serie commerciali stanno solo in dati/marche/ (CONTRIBUTING.md § 3): altrove i colori
+    si chiamano col nome comune e il codice Colour Index. Cerca i nomi di marche.json in tutti gli
+    altri sorgenti delle sezioni."""
+    marche = json.loads((DATI_DIR / "marche" / "marche.json").read_text(encoding="utf-8"))["marche"]
+    nomi = {"winsor"}
+    for m in marche:
+        nomi.add(m["marca"].lower())
+        parole_marca = set(m["marca"].lower().split())
+        distintiva = " ".join(p for p in m["serie"].lower().split() if p not in PAROLE_GENERICHE and p not in parole_marca)
+        if distintiva:
+            nomi.add(distintiva)
+    trovati = []
+    for p in sorted(DATI_DIR.rglob("*")):
+        if p.suffix not in {".json", ".csv", ".py", ".js"} or "marche" in p.parts or "spettri" in p.name:
+            continue
+        for n, riga in enumerate(p.read_text(encoding="utf-8").splitlines(), 1):
+            basso = riga.lower()
+            for nome in nomi:
+                if re.search(rf"(?<![a-z]){re.escape(nome)}(?![a-z])", basso):
+                    trovati.append(f"{p.relative_to(APP_DIR).as_posix()}:{n} «{nome}»")
+    if trovati:
+        raise SystemExit("genera-sito: nomi di marche fuori dalla sezione Marche:\n  " + "\n  ".join(trovati))
+
 
 
 def blocco_chat_e_suggerimenti(sezione_predefinita: str, pagina_path: str) -> str:
@@ -665,6 +708,8 @@ footer a{{color:#5a4d3b}}
 
 
 def main():
+    controlla_funzione_suggerimenti()
+    controlla_marche_fuori_sezione()
     SITE_DIR.mkdir(parents=True, exist_ok=True)
     sezioni_pronte = []
 
@@ -687,6 +732,10 @@ def main():
         )
         dest_html = dest_dir / "index.html"
         dest_html.write_text(html_completo, encoding="utf-8")
+        for cartella in s.get("cartelle", []):
+            if not cartella.is_dir():
+                raise FileNotFoundError(f"Cartella da pubblicare non trovata: {cartella}")
+            shutil.copytree(cartella, dest_dir / cartella.name, dirs_exist_ok=True)
         print(f"[{s['slug']}] Scritto {dest_html.relative_to(APP_DIR)} ({dest_html.stat().st_size // 1024} KB)")
 
         sezioni_pronte.append(dict(s))

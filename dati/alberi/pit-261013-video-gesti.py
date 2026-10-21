@@ -289,6 +289,16 @@ def comune():
         im.save(b, "JPEG", quality=q)
         return "data:image/jpeg;base64," + base64.b64encode(b.getvalue()).decode()
 
+    def jpeg_file(im, nome, lato=1000, q=82):
+        """Salva l'immagine in immagini/ accanto alla pagina invece di incorporarla: la pagina resta
+        leggera e il browser scarica le figure solo quando ci si arriva (loading="lazy").
+        scripts/genera-sito.py copia la cartella in site/alberi/immagini/."""
+        im = im.convert("RGB")
+        im.thumbnail((lato, lato))
+        os.makedirs(os.path.join(QUI, "immagini"), exist_ok=True)
+        im.save(os.path.join(QUI, "immagini", nome), "JPEG", quality=q, optimize=True, progressive=True)
+        return f"immagini/{nome}", im.width, im.height
+
     def apri(nome):
         return ImageOps.exif_transpose(Image.open(os.path.join(QUI, "illustrazioni", nome)))
 
@@ -296,7 +306,7 @@ def comune():
         c = (carta or "").strip().lower()
         return f'<span class="pill {e(c)}">{e(c)}</span>' if c in ("bagnata", "umida", "asciutta") else ""
 
-    return types.SimpleNamespace(e=e, jpeg=jpeg, apri=apri, pillola=pillola)
+    return types.SimpleNamespace(e=e, jpeg=jpeg, jpeg_file=jpeg_file, apri=apri, pillola=pillola)
 
 def tempi_striscia(r, i0, i1):
     if r and r.get("quadri"):
@@ -424,8 +434,10 @@ def pagina():
         elenco.append(f'<li><a href="#{s}"><b>{e(nome)}</b> <span class="cnt-mod">({n_mod} procedure comparate)</span></a></li>')
         if t.get("illustrazione"):
             il = t["illustrazione"]
-            ill = c.jpeg(Image.open(os.path.join(QUI, "illustrazioni", il["file"])), 1000, 82)
-            figura = (f'<div class="figura"><figure><img src="{ill}" alt="{e(il["didascalia"])}"><figcaption>{e(il["didascalia"])}</figcaption></figure></div>')
+            nome_jpg = os.path.splitext(il["file"])[0] + ".jpg"
+            ill, lar, alt = c.jpeg_file(Image.open(os.path.join(QUI, "illustrazioni", il["file"])), nome_jpg)
+            figura = (f'<div class="figura"><figure><img src="{ill}" width="{lar}" height="{alt}" loading="lazy" decoding="async" '
+                      f'alt="{e(il["didascalia"])}"><figcaption>{e(il["didascalia"])}</figcaption></figure></div>')
         else:
             figura = ""
 

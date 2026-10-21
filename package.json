@@ -4,6 +4,6 @@
   "description": "Sito statico delle guide pratiche di acquerello su Cloudflare Pages",
   "scripts": {
     "genera": "python scripts/genera-sito.py",
-    "deploy": "git pull --ff-only && python scripts/genera-sito.py && npx --yes wrangler pages deploy site --project-name app-acquerello --branch main"
+    "deploy": "python scripts/pubblica-locale.py"
   }
 }
