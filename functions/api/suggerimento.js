@@ -27,6 +27,9 @@ const PAGINE_VALIDE = [
 const LIMITE_IP_GIORNALIERO = 5;
 const LIMITE_GIORNALIERO = 30;
 const BYTE_MASSIMI = 8000;
+// La tabella dei contatori è la stessa di chat.js, che vi tiene anche i contatori settimanali
+// (col lunedì come giorno): le due funzioni la puliscono con la stessa regola.
+const GIORNI_CONSERVAZIONE = 14;
 
 function oscuraEmail(str) {
   return String(str || "").replace(
@@ -157,8 +160,8 @@ export async function onRequestPost(context) {
     );
   }
   if (complessivo.n === 1) {
-    const treGiorniFa = new Date(Date.now() - 3 * 86400 * 1000).toISOString().slice(0, 10);
-    await db.prepare("DELETE FROM contatori WHERE giorno < ?").bind(treGiorniFa).run();
+    const soglia = new Date(Date.now() - (GIORNI_CONSERVAZIONE - 1) * 86400 * 1000).toISOString().slice(0, 10);
+    await db.prepare("DELETE FROM contatori WHERE giorno < ?").bind(soglia).run();
   }
 
   const corpo = [

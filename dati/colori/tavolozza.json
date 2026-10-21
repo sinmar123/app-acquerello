@@ -5,10 +5,10 @@
   "carta": {"nome": "carta bianca", "srgb": "#FBF8F0", "fonte": "provvisorio: bianco carta caldo indicativo"},
   "colori": [
     {"id": "giallo", "nome": "Giallo limone", "pigmento": "PY175", "note": "giallo freddo", "srgb": "#F5E446", "forza": 1.0, "stato": "provvisorio"},
-    {"id": "ceruleo", "nome": "Ceruleo", "pigmento": "PB15", "trasparenza_tubetto": "opaco", "note": "blu ftalo schiarito, non il ceruleo vero (PB35); tinge molto", "srgb": "#2A7FC0", "forza": 1.0, "stato": "provvisorio"},
-    {"id": "cremisi", "nome": "Cremisi", "pigmento": "PR206", "note": "lo stesso nome commerciale, in altre marche o in altre formule, può avere un altro pigmento: vedi la sezione Marche e tubetti", "srgb": "#8E1C34", "nota_srgb": "provvisorio, a occhio, come gli altri: era un cremisi generico, non un campione del tubetto, quindi non è stato ritoccato; si corregge con la taratura sul tubetto PR206", "forza": 1.0, "stato": "provvisorio"},
-    {"id": "siena", "nome": "Terra di Siena bruciata", "pigmento": "PR101", "note": "TSB", "srgb": "#964628", "forza": 1.0, "stato": "provvisorio"},
-    {"id": "ombra", "nome": "Terra d'ombra bruciata", "pigmento": "PBr7 + PY42", "trasparenza_tubetto": "opaco", "note": "TOB", "srgb": "#5F412D", "forza": 1.0, "stato": "provvisorio"},
-    {"id": "oltremare", "nome": "Blu oltremare", "pigmento": "PB29", "note": "BO; granuloso", "srgb": "#283A9E", "forza": 1.0, "stato": "provvisorio"}
+    {"id": "ceruleo", "nome": "Ceruleo", "pigmento": "PB15", "trasparenza_tubetto": "opaco", "note": "imitazione a base di blu ftalo, non il ceruleo vero (PB35); tinge molto", "srgb": "#2A7FC0", "forza": 1.0, "stato": "provvisorio"},
+    {"id": "cremisi", "nome": "Cremisi", "pigmento": "PR206", "note": "pigmento letto sull'etichetta del tubetto usato negli esercizi", "srgb": "#8E1C34", "nota_srgb": "provvisorio, a occhio, come gli altri: era un cremisi generico, non un campione del tubetto, quindi non è stato ritoccato; si corregge con la taratura sul tubetto PR206", "forza": 1.0, "stato": "provvisorio"},
+    {"id": "siena", "nome": "Terra di Siena bruciata", "pigmento": "PR101", "note": "sigla nelle ricette: TSB", "srgb": "#964628", "forza": 1.0, "stato": "provvisorio"},
+    {"id": "ombra", "nome": "Terra d'ombra bruciata", "pigmento": "PBr7 + PY42", "trasparenza_tubetto": "opaco", "note": "sigla nelle ricette: TOB", "srgb": "#5F412D", "forza": 1.0, "stato": "provvisorio"},
+    {"id": "oltremare", "nome": "Blu oltremare", "pigmento": "PB29", "note": "sigla nelle ricette: BO; granulante", "srgb": "#283A9E", "forza": 1.0, "stato": "provvisorio"}
   ]
 }

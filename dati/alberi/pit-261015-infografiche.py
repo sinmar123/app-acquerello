@@ -5,6 +5,7 @@
 COLORI_HEX = {
     "giallo_limone": ("#ebd834", "giallo limone / cadmio"),
     "verde_oro": ("#b8c93a", "verde oro"),
+    "oro_chinacridone": ("#c47f17", "oro chinacridone"),
     "verde_chiaro": ("#7cb356", "verde chiaro"),
     "verde_oliva": ("#6b8238", "verde oliva / vescica"),
     "verde_bosco": ("#2b5b3c", "verde medio / scuro"),
@@ -50,7 +51,7 @@ INFOGRAFICHE = {
                 "carta": "asciutta",
                 "colori": ["ombra_bruc", "verde_bosco"],
                 "attrezzo": "Tondo n. 6 (di punta)",
-                "testo": "Traccia un asse discontinuo leggero, parti dalla cima con piccoli tratti stretti a V rivolti in su e scendi con tocchi minuti di punta.",
+                "testo": "Si traccia un asse leggero e discontinuo. Si parte dalla cima con piccoli tratti stretti a V, rivolti verso l'alto, e si scende con tocchi minuti di punta.",
                 "svg": svg_wrap(
                     '<line x1="110" y1="18" x2="110" y2="124" stroke="#7a5c43" stroke-width="1.5" stroke-dasharray="5,5"/>'
                     '<path d="M110,18 L105,11 M110,18 L115,11 M110,25 L103,18 M110,25 L117,18" stroke="#2b5b3c" stroke-width="2.2" stroke-linecap="round"/>'
@@ -62,7 +63,7 @@ INFOGRAFICHE = {
                 "carta": "asciutta",
                 "colori": ["verde_bosco"],
                 "attrezzo": "Tondo n. 6 (di fianco)",
-                "testo": "Scendi più rapidamente dalla cima tenendo il pennello inclinato e premendo il fianco a zig-zag asimmetrico, allargando verso la base.",
+                "testo": "Si scende più rapidamente dalla cima con il pennello inclinato, premendo il fianco a zig-zag asimmetrico e allargando verso la base.",
                 "svg": svg_wrap(
                     '<line x1="110" y1="16" x2="110" y2="124" stroke="#7a5c43" stroke-width="1.4" stroke-dasharray="4,5"/>'
                     '<path d="M110,16 L106,10 M110,16 L114,10" stroke="#2b5b3c" stroke-width="2.2" stroke-linecap="round"/>'
@@ -74,7 +75,7 @@ INFOGRAFICHE = {
                 "carta": "asciutta",
                 "colori": ["verde_chiaro", "verde_bosco", "seppia"],
                 "attrezzo": "Tondo n. 6",
-                "testo": "Dipingi prima la fila di abeti lontani molto diluiti, lasciali asciugare del tutto e sovrapponi davanti gli abeti medi e scuri.",
+                "testo": "Si dipinge prima la fila di abeti lontani molto diluiti, la si lascia asciugare del tutto e davanti si sovrappongono gli abeti medi e scuri.",
                 "svg": svg_wrap(
                     '<polygon points="48,28 28,118 68,118" fill="#8abf6e" opacity="0.55"/>'
                     '<polygon points="92,22 70,118 114,118" fill="#8abf6e" opacity="0.55"/>'
@@ -94,7 +95,7 @@ INFOGRAFICHE = {
                 "carta": "asciutta",
                 "colori": ["cobalto", "giallo_limone"],
                 "attrezzo": "Tondo n. 12",
-                "testo": "Traccia una linea centrale e imposta in pochi secondi la sagoma del cono sui due lati, tirando fuori qualche punta col pennello.",
+                "testo": "Si traccia una linea centrale e si imposta in pochi secondi la sagoma del cono sui due lati, tirando verso l'esterno qualche punta col pennello.",
                 "svg": svg_wrap(
                     '<line x1="110" y1="14" x2="110" y2="122" stroke="#2f6f5e" stroke-width="2.5"/>'
                     '<path d="M110,14 L72,114 L148,114 Z" fill="#3b7a68" opacity="0.85"/>'
@@ -102,11 +103,11 @@ INFOGRAFICHE = {
                 ),
             },
             {
-                "titolo": "Sollevare la luce a sinistra",
+                "titolo": "Luce sollevata a sinistra",
                 "carta": "umida",
                 "colori": ["acqua"],
                 "attrezzo": "Pennello pulito e asciugato",
-                "testo": "Mentre il cono è ancora umido, asciuga il pennello su un fazzoletto e togli colore sul lato sinistro per aprire la luce.",
+                "testo": "Mentre il cono è ancora umido, si asciuga il pennello su un fazzoletto e si solleva il colore sul lato sinistro per aprire la luce.",
                 "svg": svg_wrap(
                     '<circle cx="30" cy="26" r="10" fill="#f4d03f"/>'
                     '<path d="M110,14 L72,114 L148,114 Z" fill="#3b7a68" opacity="0.85"/>'
@@ -119,7 +120,7 @@ INFOGRAFICHE = {
                 "carta": "umida",
                 "colori": ["indaco", "cobalto"],
                 "attrezzo": "Tondo n. 12",
-                "testo": "Lascia cadere un tono scuro sul lato destro in ombra; dietro, aggiungi abeti più piccoli con un grigio-azzurro molto diluito.",
+                "testo": "Si lascia cadere un tono scuro sul lato destro, in ombra; dietro si aggiungono abeti più piccoli con un grigio-azzurro molto diluito.",
                 "svg": svg_wrap(
                     '<polygon points="56,34 38,114 74,114" fill="#8fa8b8" opacity="0.55"/>'
                     '<polygon points="166,30 148,114 184,114" fill="#8fa8b8" opacity="0.55"/>'
@@ -131,14 +132,14 @@ INFOGRAFICHE = {
         ],
     },
     "A1-M3": {
-        "titolo": "Infografica del video: abete sciolto fondendo verde oro, blu ftalo e rosso a umido",
+        "titolo": "Infografica del video: abete sciolto, con verde oro, blu ftalo e rosso fusi a umido",
         "fasi": [
             {
                 "titolo": "Rami sciolti in turchese e ftalo",
                 "carta": "asciutta",
                 "colori": ["turchese_cob", "blu_ftalo"],
                 "attrezzo": "Tondo in martora n. 7",
-                "testo": "Parti dalla cima sottile e scendi con pennellate sciolte verso l'esterno alternando turchese di cobalto e blu ftalo.",
+                "testo": "Si parte dalla cima sottile e si scende con pennellate sciolte verso l'esterno, alternando turchese di cobalto e blu ftalo.",
                 "svg": svg_wrap(
                     '<path d="M110,14 L110,124" stroke="#1b4965" stroke-width="2"/>'
                     '<path d="M110,20 Q96,28 88,30 M110,24 Q124,32 132,34 M110,38 Q90,48 76,50 M110,42 Q128,52 142,54" stroke="#38a3a5" stroke-width="4.5" fill="none" stroke-linecap="round"/>'
@@ -146,11 +147,11 @@ INFOGRAFICHE = {
                 ),
             },
             {
-                "titolo": "Fondere il verde oro nei rami umidi",
+                "titolo": "Verde oro fuso nei rami umidi",
                 "carta": "umida",
                 "colori": ["verde_oro"],
                 "attrezzo": "Tondo n. 7",
-                "testo": "Mentre i rami blu-verdi sono ancora umidi, tocca le zone in luce con il verde oro lasciando che si espanda da solo.",
+                "testo": "Mentre i rami blu-verdi sono ancora umidi, si toccano le zone in luce con il verde oro e lo si lascia espandere da sé.",
                 "svg": svg_wrap(
                     '<path d="M110,14 L66,112 L154,112 Z" fill="#28666e" opacity="0.8"/>'
                     '<ellipse cx="94" cy="48" rx="16" ry="10" fill="#c5d63a" opacity="0.85"/>'
@@ -163,7 +164,7 @@ INFOGRAFICHE = {
                 "carta": "umida",
                 "colori": ["blu_ftalo", "cadmio_arancio"],
                 "attrezzo": "Tondo n. 7",
-                "testo": "Appoggia il blu-verde denso sotto i rami e tocca il tronco con rosso o arancio di cadmio, che col verde crea un bruno scuro neutro.",
+                "testo": "Si appoggia il blu-verde denso sotto i rami. Il tronco si tocca con rosso o arancio di cadmio, che col verde dà un bruno scuro neutro.",
                 "svg": svg_wrap(
                     '<path d="M110,14 L66,112 L154,112 Z" fill="#28666e" opacity="0.82"/>'
                     '<ellipse cx="90" cy="62" rx="18" ry="14" fill="#c5d63a" opacity="0.8"/>'
@@ -174,14 +175,14 @@ INFOGRAFICHE = {
         ],
     },
     "A1-M4": {
-        "titolo": "Infografica del video: segnare il tronco e i rami solo a brevi tratti nei varchi",
+        "titolo": "Infografica del video: tronco e rami segnati solo a brevi tratti nei varchi",
         "fasi": [
             {
                 "titolo": "Chioma con piccoli varchi aperti",
                 "carta": "asciutta",
                 "colori": ["verde_bosco"],
                 "attrezzo": "Tondo medio",
-                "testo": "Quando dipingi la chioma, lascia qua e là piccoli spazi bianchi irregolari fra i palchi di rami, soprattutto nella metà bassa.",
+                "testo": "Quando si dipinge la chioma, si lasciano in punti sparsi piccoli spazi bianchi irregolari fra i palchi di rami, soprattutto nella metà bassa.",
                 "svg": svg_wrap(
                     '<path d="M110,14 L64,108 L156,108 Z" fill="#2b5b3c"/>'
                     '<ellipse cx="108" cy="48" rx="9" ry="6" fill="#fcfaf4"/>'
@@ -193,7 +194,7 @@ INFOGRAFICHE = {
                 "carta": "asciutta",
                 "colori": ["siena_nat", "siena_bruc"],
                 "attrezzo": "Tondo piccolo n. 2",
-                "testo": "A chioma asciutta, accenna la base del tronco sotto l'albero e prosegui verso l'alto solo con brevi segmenti dentro i varchi.",
+                "testo": "A chioma asciutta si accenna la base del tronco sotto l'albero e si prosegue verso l'alto solo con brevi segmenti dentro i varchi.",
                 "svg": svg_wrap(
                     '<path d="M110,14 L64,108 L156,108 Z" fill="#2b5b3c"/>'
                     '<ellipse cx="108" cy="48" rx="9" ry="6" fill="#fcfaf4"/>'
@@ -208,7 +209,7 @@ INFOGRAFICHE = {
                 "carta": "asciutta",
                 "colori": ["siena_bruc", "oltremare"],
                 "attrezzo": "Tondo piccolo n. 2",
-                "testo": "Scurisci il lato destro dei tratti di tronco con bruno scuro (Siena bruciata + oltremare) e accenna due rametti che reggono la chioma.",
+                "testo": "Si scurisce il lato destro dei tratti di tronco con bruno scuro (Siena bruciata + oltremare) e si accennano due rametti che reggono la chioma.",
                 "svg": svg_wrap(
                     '<path d="M110,14 L64,108 L156,108 Z" fill="#2b5b3c"/>'
                     '<ellipse cx="108" cy="48" rx="9" ry="6" fill="#fcfaf4"/>'
@@ -228,11 +229,11 @@ INFOGRAFICHE = {
         "titolo": "Infografica del video: prima i ciuffi tamponati, poi il tronco e i rami col rigger",
         "fasi": [
             {
-                "titolo": "Tamponare i ciuffi staccati",
+                "titolo": "Ciuffi staccati e tamponati",
                 "carta": "umida",
                 "colori": ["verde_bosco", "ombra_bruc"],
                 "attrezzo": "Tondo medio",
-                "testo": "Con colore denso e poca acqua tampona macchie irregolari di fogliame, più piccole in alto e più larghe in basso, lasciando il chiaro in mezzo.",
+                "testo": "Sulla carta inumidita, con colore denso e poca acqua, si tamponano macchie irregolari di fogliame, più piccole in alto e più larghe in basso, lasciando il chiaro in mezzo.",
                 "svg": svg_wrap(
                     '<rect x="6" y="6" width="208" height="128" rx="4" fill="#d8eaf7"/>'
                     '<g fill="#2b5b3c">'
@@ -244,11 +245,11 @@ INFOGRAFICHE = {
                 ),
             },
             {
-                "titolo": "Tirare tronco e rami col rigger",
+                "titolo": "Tronco e rami tirati col rigger",
                 "carta": "asciutta",
                 "colori": ["ombra_bruc"],
                 "attrezzo": "Rigger / liner sottile",
-                "testo": "Quando i ciuffi sono asciutti, appoggia il rigger alla base e tira il tronco verso l'alto, più largo sotto e sottilissimo in cima, collegando i rami.",
+                "testo": "Quando i ciuffi sono asciutti, si appoggia il rigger alla base e si tira il tronco verso l'alto, più largo sotto e sottilissimo in cima, collegando i rami.",
                 "svg": svg_wrap(
                     '<rect x="6" y="6" width="208" height="128" rx="4" fill="#d8eaf7"/>'
                     '<path d="M108,128 L110,16" stroke="#4f3728" stroke-width="3" stroke-linecap="round"/>'
@@ -266,7 +267,7 @@ INFOGRAFICHE = {
                 "carta": "asciutta",
                 "colori": ["verde_bosco", "indaco"],
                 "attrezzo": "Tondo n. 6",
-                "testo": "Aggiungi un tocco scuro nella parte inferiore di ciascun ciuffo per dare volume e stendi una breve ombra orizzontale alla base del tronco.",
+                "testo": "Si aggiunge un tocco scuro nella parte inferiore di ciascun ciuffo per dare volume e si stende una breve ombra orizzontale alla base del tronco.",
                 "svg": svg_wrap(
                     '<rect x="6" y="6" width="208" height="128" rx="4" fill="#d8eaf7"/>'
                     '<path d="M108,126 L110,16" stroke="#4f3728" stroke-width="3" stroke-linecap="round"/>'
@@ -289,11 +290,11 @@ INFOGRAFICHE = {
         "titolo": "Infografica del video: tronco sottile, rami singoli distanziati e aghi fini",
         "fasi": [
             {
-                "titolo": "Il tronco lungo e sottile",
+                "titolo": "Tronco lungo e sottile",
                 "carta": "asciutta",
-                "colori": ["ombra_bruc", "verde_bosco"],
+                "colori": ["verde_bosco"],
                 "attrezzo": "Liner / tondo n. 0-1",
-                "testo": "Su carta asciutta traccia una linea verticale sottilissima, lasciando scoperto il terzo inferiore del fusto come negli abeti alti di bosco.",
+                "testo": "Su carta asciutta si traccia una linea verticale sottilissima, lasciando scoperto il terzo inferiore del fusto, come nelle conifere alte di bosco.",
                 "svg": svg_wrap(
                     '<path d="M110,128 L110,14" stroke="#4f3728" stroke-width="2.4" stroke-linecap="round"/>'
                 ),
@@ -303,7 +304,7 @@ INFOGRAFICHE = {
                 "carta": "asciutta",
                 "colori": ["verde_bosco"],
                 "attrezzo": "Liner / tondo n. 0-1",
-                "testo": "Nella parte alta tira linee singole ben separate fra loro, leggermente piegate verso il basso e via via più lunghe scendendo.",
+                "testo": "Nella parte alta si tirano linee singole ben separate fra loro, leggermente piegate verso il basso e via via più lunghe scendendo.",
                 "svg": svg_wrap(
                     '<path d="M110,128 L110,14" stroke="#4f3728" stroke-width="2.4" stroke-linecap="round"/>'
                     '<g stroke="#2b5b3c" stroke-width="2" stroke-linecap="round">'
@@ -319,7 +320,7 @@ INFOGRAFICHE = {
                 "carta": "asciutta",
                 "colori": ["verde_bosco", "verde_chiaro"],
                 "attrezzo": "Liner / tondo n. 0-1",
-                "testo": "Aggiungi corti tratti rapidi lungo ciascun ramo per suggerire gli aghi, senza mai chiudere gli spazi chiari tra un palco e l'altro.",
+                "testo": "Si aggiungono corti tratti rapidi lungo ciascun ramo per suggerire gli aghi, senza mai chiudere gli spazi chiari tra un palco e l'altro.",
                 "svg": svg_wrap(
                     '<path d="M110,128 L110,14" stroke="#4f3728" stroke-width="2.4" stroke-linecap="round"/>'
                     '<g stroke="#2b5b3c" stroke-width="2.2" stroke-linecap="round">'
@@ -342,18 +343,18 @@ INFOGRAFICHE = {
                 "carta": "asciutta",
                 "colori": ["verde_bosco"],
                 "attrezzo": "Piatto 3/8\" o tondo",
-                "testo": "Parti dalla cima con un tocco verticale minimo e inizia a scendere appoggiando l'angolo del pennello con piccoli tocchi staccati.",
+                "testo": "Si parte dalla cima con un tocco verticale minimo e si inizia la discesa appoggiando l'angolo del pennello con piccoli tocchi staccati.",
                 "svg": svg_wrap(
                     '<rect x="6" y="6" width="208" height="128" rx="4" fill="#d8eaf7"/>'
                     '<path d="M110,14 L110,26 M106,28 L114,30 M100,38 L108,40 M112,42 L122,44" stroke="#2b5b3c" stroke-width="3.5" stroke-linecap="round"/>'
                 ),
             },
             {
-                "titolo": "Saltellare da un lato all'altro",
+                "titolo": "Tocchi saltellati da un lato all'altro",
                 "carta": "asciutta",
                 "colori": ["verde_bosco"],
                 "attrezzo": "Piatto 3/8\" o tondo",
-                "testo": "Appoggia e spingi appena il pennello a scatti irregolari alternando sinistra e destra, allargando i palchi e lasciando passare il cielo.",
+                "testo": "Si appoggia il pennello e lo si spinge appena, a scatti irregolari, alternando sinistra e destra; si allargano i palchi e si lascia passare il cielo.",
                 "svg": svg_wrap(
                     '<rect x="6" y="6" width="208" height="128" rx="4" fill="#d8eaf7"/>'
                     '<g stroke="#2b5b3c" stroke-width="4.5" stroke-linecap="round">'
@@ -367,7 +368,7 @@ INFOGRAFICHE = {
                 "carta": "umida",
                 "colori": ["oltremare", "ombra_bruc"],
                 "attrezzo": "Piatto 3/8\" o tondo",
-                "testo": "Mentre il verde è ancora fresco, tocca la parte inferiore dei palchi e il lato in ombra con blu oltremare e terra d'ombra bruciata.",
+                "testo": "Mentre il verde è ancora fresco, si toccano la parte inferiore dei palchi e il lato in ombra con blu oltremare e terra d'ombra bruciata.",
                 "svg": svg_wrap(
                     '<rect x="6" y="6" width="208" height="128" rx="4" fill="#d8eaf7"/>'
                     '<line x1="110" y1="24" x2="110" y2="126" stroke="#4f3728" stroke-width="2.5"/>'
@@ -386,25 +387,25 @@ INFOGRAFICHE = {
     # A3 - CHIOME TONDE D'AUTUNNO (5 modalità)
     # =========================================================================
     "A3-M1": {
-        "titolo": "Infografica del video: muovere la pancia del pennello in tondo dal centro al bordo",
+        "titolo": "Infografica del video: pancia del pennello mossa in tondo, dal centro al bordo",
         "fasi": [
             {
-                "titolo": "Appoggiare la pancia al centro",
+                "titolo": "Pancia del pennello al centro",
                 "carta": "asciutta",
                 "colori": ["giallo_limone", "siena_nat"],
                 "attrezzo": "Tondo grande n. 10",
-                "testo": "Appoggia la pancia del pennello grande ben carico al centro del lobo della chioma, evitando di stampare tocchi rigidi e ripetuti.",
+                "testo": "Si appoggia la pancia del pennello grande, ben carico, al centro del lobo della chioma, evitando di stampare tocchi rigidi e ripetuti.",
                 "svg": svg_wrap(
                     '<circle cx="110" cy="68" r="24" fill="#e59a28" opacity="0.88"/>'
                     '<path d="M98,68 A12,12 0 1,1 122,68" fill="none" stroke="#9e4726" stroke-width="2" stroke-dasharray="3,2"/>'
                 ),
             },
             {
-                "titolo": "Girare in tondo verso il bordo",
+                "titolo": "Movimento in tondo verso il bordo",
                 "carta": "asciutta",
                 "colori": ["siena_nat", "siena_bruc"],
                 "attrezzo": "Tondo grande n. 10",
-                "testo": "Muovi il pennello in tondo verso l'esterno: scaricandosi sulla carta, lascia da solo il profilo frastagliato delle foglie e qualche vuoto.",
+                "testo": "Si muove il pennello in tondo verso l'esterno: scaricandosi sulla carta, lascia da sé il profilo frastagliato delle foglie e qualche vuoto.",
                 "svg": svg_wrap(
                     '<circle cx="84" cy="66" r="34" fill="#e59a28" opacity="0.85"/>'
                     '<circle cx="134" cy="64" r="36" fill="#d98224" opacity="0.85"/>'
@@ -417,7 +418,7 @@ INFOGRAFICHE = {
                 "carta": "umida",
                 "colori": ["siena_bruc", "oltremare"],
                 "attrezzo": "Tondo medio n. 6",
-                "testo": "Sulla chioma ancora umida appoggia sotto i lobi e sul lato in ombra un bruno scuro (terra di Siena bruciata + blu oltremare).",
+                "testo": "Sulla chioma ancora umida si appoggia sotto i lobi e sul lato in ombra un bruno scuro (terra di Siena bruciata + blu oltremare).",
                 "svg": svg_wrap(
                     '<circle cx="84" cy="64" r="34" fill="#e59a28" opacity="0.85"/>'
                     '<circle cx="134" cy="62" r="36" fill="#d98224" opacity="0.85"/>'
@@ -428,14 +429,14 @@ INFOGRAFICHE = {
         ],
     },
     "A3-M2": {
-        "titolo": "Infografica del video: chioma bagnato su bagnato con gocce d'arancio e rosso nel giallo",
+        "titolo": "Infografica del video: chioma bagnato su bagnato, con gocce d'arancio e di rosso nel giallo",
         "fasi": [
             {
-                "titolo": "La base gialla ben bagnata",
-                "carta": "bagnata",
+                "titolo": "Base gialla carica d'acqua",
+                "carta": "asciutta",
                 "colori": ["giallo_limone"],
                 "attrezzo": "Piatto medio o tondo",
-                "testo": "Stendi una forma tondeggiante e mossa di giallo o arancio molto chiaro con abbondante acqua, lasciando qualche piccolo varco bianco.",
+                "testo": "Su carta asciutta si stende una forma tondeggiante e mossa di giallo o arancio molto chiaro, ben carica d'acqua, lasciando qualche piccolo varco bianco.",
                 "svg": svg_wrap(
                     '<circle cx="86" cy="64" r="34" fill="#ebd834" opacity="0.8"/>'
                     '<circle cx="132" cy="62" r="36" fill="#ebd834" opacity="0.8"/>'
@@ -448,7 +449,7 @@ INFOGRAFICHE = {
                 "carta": "bagnata",
                 "colori": ["cadmio_arancio", "siena_bruc"],
                 "attrezzo": "Tondo medio",
-                "testo": "Subito, nella base ancora lucida d'acqua, lascia cadere gocce di arancio e terra di Siena bruciata al centro, lasciandole espandere da sole.",
+                "testo": "Subito, nella base ancora lucida d'acqua, si lasciano cadere gocce di arancio e terra di Siena bruciata al centro, e le si lascia espandere da sé.",
                 "svg": svg_wrap(
                     '<circle cx="86" cy="64" r="34" fill="#ebd834" opacity="0.8"/>'
                     '<circle cx="132" cy="62" r="36" fill="#ebd834" opacity="0.8"/>'
@@ -462,7 +463,7 @@ INFOGRAFICHE = {
                 "carta": "umida",
                 "colori": ["cremisi", "seppia"],
                 "attrezzo": "Tondo fine n. 2",
-                "testo": "Picchietta rosso scuro lungo il bordo basso dei lobi e tira sotto il tronco e i rami sottili in seppia.",
+                "testo": "Si picchietta il rosso scuro lungo il bordo basso dei lobi e sotto si tirano il tronco e i rami sottili in seppia.",
                 "svg": svg_wrap(
                     '<circle cx="86" cy="62" r="34" fill="#ebd834" opacity="0.8"/>'
                     '<circle cx="132" cy="60" r="36" fill="#ebd834" opacity="0.8"/>'
@@ -478,11 +479,11 @@ INFOGRAFICHE = {
         "titolo": "Infografica del video: chioma tamponata con la spugna naturale e scuri a umido",
         "fasi": [
             {
-                "titolo": "Tamponare l'arancio con la spugna",
+                "titolo": "Arancio tamponato con la spugna",
                 "carta": "asciutta",
                 "colori": ["cadmio_arancio"],
                 "attrezzo": "Spugna naturale marina",
-                "testo": "Inumidisci e strizza la spugna naturale, intingila nell'arancio vivo e tampona sulla carta per creare una trama ariosa di fogliame.",
+                "testo": "Si inumidisce e si strizza la spugna naturale, la si intinge nell'arancio vivo e si tampona sulla carta per creare una trama ariosa di fogliame.",
                 "svg": svg_wrap(
                     '<g fill="#e58728" opacity="0.85">'
                     '<circle cx="78" cy="54" r="14"/><circle cx="98" cy="44" r="16"/><circle cx="124" cy="48" r="15"/>'
@@ -492,10 +493,10 @@ INFOGRAFICHE = {
             },
             {
                 "titolo": "Primo rosso sul lato in ombra",
-                "carta": "umida",
+                "carta": "bagnata",
                 "colori": ["cremisi"],
                 "attrezzo": "Spugna naturale marina",
-                "testo": "Mentre l'arancio è ancora umido, tampona con la spugna un rosso più profondo nella parte bassa e sul lato destro della chioma.",
+                "testo": "Mentre l'arancio è ancora bagnato, si tampona con la spugna un rosso più profondo nella parte bassa e sul lato destro della chioma.",
                 "svg": svg_wrap(
                     '<g fill="#e58728" opacity="0.85">'
                     '<circle cx="78" cy="54" r="14"/><circle cx="98" cy="44" r="16"/><circle cx="124" cy="48" r="15"/>'
@@ -507,11 +508,11 @@ INFOGRAFICHE = {
                 ),
             },
             {
-                "titolo": "Scuri col tondo n. 12 (+15%)",
-                "carta": "umida",
+                "titolo": "Scuri nella chioma bagnata e rami col rigger",
+                "carta": "bagnata",
                 "colori": ["ombra_bruc", "cremisi"],
                 "attrezzo": "Tondo n. 12 + rigger n. 3",
-                "testo": "Col tondo n. 12 lascia cadere nell'umido dei toni bruno-rossi molto scuri (asciugando schiariscono almeno del 15%) e tocca i bordi di punta.",
+                "testo": "Col tondo n. 12 si lasciano cadere nella chioma ancora bagnata toni bruno-rossi molto scuri e se ne toccano appena i bordi di punta. Col rigger n. 3 si tirano poi i rami.",
                 "svg": svg_wrap(
                     '<g fill="#e58728" opacity="0.85">'
                     '<circle cx="78" cy="54" r="14"/><circle cx="98" cy="44" r="16"/><circle cx="124" cy="48" r="15"/>'
@@ -529,14 +530,14 @@ INFOGRAFICHE = {
         ],
     },
     "A3-M4": {
-        "titolo": "Infografica del video: accostare a fresco le chiome calde d'autunno e i verdi scuri",
+        "titolo": "Infografica del video: chiome calde d'autunno e verdi scuri accostati a fresco",
         "fasi": [
             {
                 "titolo": "Masse calde in terra di Siena",
-                "carta": "asciutta",
+                "carta": "bagnata",
                 "colori": ["siena_nat", "oltremare"],
                 "attrezzo": "Tondo medio",
-                "testo": "Imposta i gruppi di chiome autunnali con terra di Siena naturale ammorbidita da una punta di blu oltremare, tenendo la luce a sinistra.",
+                "testo": "Si bagna con acqua pulita la sagoma delle chiome, poi vi si lasciano cadere la terra di Siena naturale e una punta di blu oltremare, tenendo la luce a sinistra.",
                 "svg": svg_wrap(
                     '<circle cx="68" cy="68" r="32" fill="#d48c2a" opacity="0.85"/>'
                     '<circle cx="104" cy="64" r="34" fill="#c97a26" opacity="0.85"/>'
@@ -547,7 +548,7 @@ INFOGRAFICHE = {
                 "carta": "umida",
                 "colori": ["verde_bosco", "oltremare"],
                 "attrezzo": "Tondo medio",
-                "testo": "Mentre il bordo destro delle chiome calde è ancora umido, appoggia a fianco il verde scuro (Siena + più oltremare) perché si fonda sul confine.",
+                "testo": "Mentre il bordo destro delle chiome calde è ancora umido, si appoggia a fianco il verde scuro (Siena + più oltremare) perché si fonda sul confine.",
                 "svg": svg_wrap(
                     '<circle cx="68" cy="68" r="32" fill="#d48c2a" opacity="0.85"/>'
                     '<circle cx="104" cy="64" r="34" fill="#c97a26" opacity="0.85"/>'
@@ -556,11 +557,11 @@ INFOGRAFICHE = {
                 ),
             },
             {
-                "titolo": "Tocchi di rosso inglese e bordi",
+                "titolo": "Rosso inglese e bordi sgranati",
                 "carta": "umida",
                 "colori": ["rosso_inglese", "verde_bosco"],
                 "attrezzo": "Pennello sagomato / tondo",
-                "testo": "Aggiungi qualche tocco caldo di rosso inglese nel fogliame e sgrana il contorno esterno per mantenere i bordi morbidi e frastagliati.",
+                "testo": "Si aggiunge qualche tocco caldo di rosso inglese nel fogliame e si sgrana il contorno esterno, per mantenere i bordi morbidi e frastagliati.",
                 "svg": svg_wrap(
                     '<circle cx="68" cy="68" r="32" fill="#d48c2a" opacity="0.85"/>'
                     '<circle cx="104" cy="64" r="34" fill="#c97a26" opacity="0.85"/>'
@@ -572,25 +573,25 @@ INFOGRAFICHE = {
         ],
     },
     "A3-M5": {
-        "titolo": "Infografica del video: scalfire i rami nel colore umido con l'angolo della tessera",
+        "titolo": "Infografica del video: rami scalfiti nel colore umido con l'angolo della tessera",
         "fasi": [
             {
-                "titolo": "Stendere il colore e mettere in piano",
+                "titolo": "Stesura del colore e tavola in piano",
                 "carta": "umida",
                 "colori": ["siena_bruc", "indaco", "seppia"],
-                "attrezzo": "Tondo grande",
-                "testo": "Stendi i toni caldi e scuri del fogliame e, appena il colore è sceso dove vuoi, rimetti la tavola in piano sul tavolo perché non coli più.",
+                "attrezzo": "Pennellessa piatta (mottler)",
+                "testo": "Si stendono i toni caldi e scuri del fogliame. Appena il colore è sceso dove serve, si rimette la tavola in piano sul tavolo perché non coli più.",
                 "svg": svg_wrap(
                     '<ellipse cx="110" cy="68" rx="68" ry="38" fill="#8c4a27" opacity="0.85"/>'
                     '<ellipse cx="122" cy="78" rx="52" ry="26" fill="#3b2d26" opacity="0.8"/>'
                 ),
             },
             {
-                "titolo": "Trascinare l'angolo della tessera",
+                "titolo": "Angolo della tessera nel colore umido",
                 "carta": "umida",
                 "colori": ["seppia"],
                 "attrezzo": "Tessera di plastica",
-                "testo": "Impugna una tessera rigida di plastica e trascina lo spigolo con piccoli scatti rapidi dentro il colore umido per far nascere i rami.",
+                "testo": "Si impugna una tessera rigida di plastica e se ne trascina lo spigolo con piccoli scatti rapidi dentro il colore umido, per ricavare i rami.",
                 "svg": svg_wrap(
                     '<ellipse cx="110" cy="68" rx="68" ry="38" fill="#8c4a27" opacity="0.85"/>'
                     '<ellipse cx="122" cy="78" rx="52" ry="26" fill="#3b2d26" opacity="0.8"/>'
@@ -603,7 +604,7 @@ INFOGRAFICHE = {
                 "carta": "umida",
                 "colori": ["siena_bruc"],
                 "attrezzo": "Tessera di plastica",
-                "testo": "Se incidi sul molto bagnato il solco raccoglie il pigmento e viene scuro; se aspetti che perda il lucido, sposta il colore e apre fili chiari.",
+                "testo": "Sul molto bagnato il solco raccoglie il pigmento e diventa scuro. Se si attende che la carta perda il lucido, il colore si sposta e si aprono fili chiari.",
                 "svg": svg_wrap(
                     '<ellipse cx="110" cy="68" rx="68" ry="38" fill="#8c4a27" opacity="0.85"/>'
                     '<ellipse cx="122" cy="78" rx="52" ry="26" fill="#3b2d26" opacity="0.8"/>'
@@ -621,11 +622,11 @@ INFOGRAFICHE = {
         "titolo": "Infografica del video: siepe autunnale a tocchi caldi con rosso inglese e base scura",
         "fasi": [
             {
-                "titolo": "La siepe in giallo limone e Siena",
+                "titolo": "Siepe in giallo limone e Siena",
                 "carta": "asciutta",
                 "colori": ["giallo_limone", "siena_nat"],
                 "attrezzo": "Tondo n. 6",
-                "testo": "Con giallo limone e terra di Siena naturale (più carichi di quelli del prato) stendi a piccoli tocchi la fascia bassa della siepe.",
+                "testo": "Con giallo limone e terra di Siena naturale (più carichi di quelli del prato) si stende a piccoli tocchi la fascia bassa della siepe.",
                 "svg": svg_wrap(
                     '<rect x="24" y="52" width="172" height="36" rx="10" fill="#d98a26" opacity="0.88"/>'
                 ),
@@ -635,7 +636,7 @@ INFOGRAFICHE = {
                 "carta": "umida",
                 "colori": ["rosso_inglese"],
                 "attrezzo": "Tondo n. 6",
-                "testo": "Mentre la striscia della siepe è ancora umida, tocca qua e là con rosso inglese per variare il tono e scaldare il fogliame.",
+                "testo": "Mentre la striscia della siepe è ancora umida, la si tocca in alcuni punti con rosso inglese, per variare il tono e scaldare il fogliame.",
                 "svg": svg_wrap(
                     '<rect x="24" y="52" width="172" height="36" rx="10" fill="#d98a26" opacity="0.88"/>'
                     '<ellipse cx="64" cy="68" rx="22" ry="11" fill="#b5482a" opacity="0.85"/>'
@@ -648,7 +649,7 @@ INFOGRAFICHE = {
                 "carta": "umida",
                 "colori": ["ombra_bruc", "oltremare"],
                 "attrezzo": "Tondo n. 6",
-                "testo": "Appoggia lungo il piede della siepe una miscela scura di terra d'ombra bruciata e blu oltremare per ancorarla al campo.",
+                "testo": "Si appoggia lungo il piede della siepe una miscela scura di terra d'ombra bruciata e blu oltremare, per ancorarla al campo, e la si tampona con un pennello a setole corte e rigide.",
                 "svg": svg_wrap(
                     '<rect x="16" y="86" width="188" height="36" rx="4" fill="#e8e2b8" opacity="0.6"/>'
                     '<rect x="24" y="52" width="172" height="36" rx="10" fill="#d98a26" opacity="0.88"/>'
@@ -667,7 +668,7 @@ INFOGRAFICHE = {
                 "carta": "asciutta",
                 "colori": ["verde_oliva", "verde_chiaro"],
                 "attrezzo": "Tondo piccolo (di lato)",
-                "testo": "Dipingi la sagoma della siepe con tocchi mossi usando il lato del pennello, passando dal chiaro in alto al tono medio al centro.",
+                "testo": "Si dipinge la sagoma della siepe con tocchi mossi, usando il lato del pennello, e si passa dal chiaro in alto al tono medio al centro.",
                 "svg": svg_wrap(
                     '<rect x="26" y="46" width="168" height="40" rx="10" fill="#7cb356" opacity="0.82"/>'
                     '<rect x="28" y="60" width="164" height="24" rx="6" fill="#5c8a3c" opacity="0.85"/>'
@@ -678,18 +679,18 @@ INFOGRAFICHE = {
                 "carta": "umida",
                 "colori": ["verde_bosco", "ombra_bruc"],
                 "attrezzo": "Tondo piccolo",
-                "testo": "Appoggia un tono denso e scuro lungo la base della siepe per creare la rientranza d'ombra dove i rami toccano il terreno.",
+                "testo": "Si appoggia un tono denso e scuro lungo la base della siepe per creare la rientranza d'ombra dove i rami toccano il terreno.",
                 "svg": svg_wrap(
                     '<rect x="26" y="46" width="168" height="40" rx="10" fill="#6b9e48" opacity="0.85"/>'
                     '<rect x="28" y="76" width="164" height="10" rx="4" fill="#1e3d28"/>'
                 ),
             },
             {
-                "titolo": "Sciogliere a tratti col piatto umido",
+                "titolo": "Scioglimento a tratti col piatto umido",
                 "carta": "umida",
                 "colori": ["acqua"],
                 "attrezzo": "Piatto medio-piccolo umido",
-                "testo": "Subito, mentre lo scuro è umido, passa un pennello piatto pulito e umido in 2-3 punti per scioglierlo dolcemente verso il prato davanti.",
+                "testo": "Subito, mentre lo scuro è umido, si passa un pennello piatto pulito e umido in 2-3 punti per scioglierlo dolcemente verso il prato davanti.",
                 "svg": svg_wrap(
                     '<rect x="16" y="84" width="188" height="40" rx="4" fill="#dce8c8" opacity="0.65"/>'
                     '<rect x="26" y="46" width="168" height="40" rx="10" fill="#6b9e48" opacity="0.85"/>'
@@ -701,24 +702,24 @@ INFOGRAFICHE = {
         ],
     },
     "A4-M3": {
-        "titolo": "Infografica del video: costruire il cespuglio a cupola per strati dal chiaro allo scuro",
+        "titolo": "Infografica del video: cespuglio a cupola costruito per strati, dal chiaro allo scuro",
         "fasi": [
             {
-                "titolo": "La prima macchia chiara al sole",
+                "titolo": "Prima macchia chiara al sole",
                 "carta": "asciutta",
                 "colori": ["giallo_limone", "oltremare"],
                 "attrezzo": "Tondo n. 4-6",
-                "testo": "Imposta la forma raccolta a cupola partendo dal verde-giallo più chiaro nella parte alta illuminata dal sole.",
+                "testo": "Si imposta la forma raccolta a cupola partendo dal verde-giallo più chiaro, nella parte alta illuminata dal sole.",
                 "svg": svg_wrap(
                     '<path d="M52,104 Q110,20 168,104 Z" fill="#a8c948" opacity="0.88"/>'
                 ),
             },
             {
-                "titolo": "I verdi medi per il volume",
+                "titolo": "Verdi medi per il volume",
                 "carta": "umida",
                 "colori": ["verde_bosco"],
                 "attrezzo": "Tondo n. 4-6",
-                "testo": "Aggiungi nella zona centrale e bassa un verde medio più ricco di blu oltremare, lasciando scoperti i bordi superiori chiari.",
+                "testo": "Si aggiunge nella zona centrale e bassa un verde medio più ricco di blu oltremare, lasciando scoperti i bordi superiori chiari.",
                 "svg": svg_wrap(
                     '<path d="M52,104 Q110,20 168,104 Z" fill="#a8c948" opacity="0.88"/>'
                     '<path d="M56,104 Q110,44 164,104 Z" fill="#4e8742" opacity="0.9"/>'
@@ -729,7 +730,7 @@ INFOGRAFICHE = {
                 "carta": "umida",
                 "colori": ["verde_bosco", "cremisi"],
                 "attrezzo": "Tondo fine n. 2",
-                "testo": "Chiudi la base e gli incavi interni con un verde scurissimo spento con una punta di rosso, e accenna piccoli tocchi sul contorno.",
+                "testo": "Si chiudono la base e gli incavi interni con un verde scurissimo spento con una punta di rosso, e si accennano piccoli tocchi sul contorno.",
                 "svg": svg_wrap(
                     '<path d="M52,104 Q110,20 168,104 Z" fill="#a8c948" opacity="0.88"/>'
                     '<path d="M56,104 Q110,44 164,104 Z" fill="#4e8742" opacity="0.9"/>'
@@ -741,25 +742,25 @@ INFOGRAFICHE = {
         ],
     },
     "A4-M4": {
-        "titolo": "Infografica del video: staccare le chiome chiare dipingendo lo scuro dietro in negativo",
+        "titolo": "Infografica del video: chiome chiare staccate con lo scuro dipinto dietro in negativo",
         "fasi": [
             {
-                "titolo": "Dipingere prima le chiome chiare",
+                "titolo": "Chiome chiare dipinte prima",
                 "carta": "asciutta",
                 "colori": ["giallo_limone", "cadmio_arancio"],
                 "attrezzo": "Calligrafico / tondo medio",
-                "testo": "Stendi liberamente le masse chiare (giallo limone, ocra e arancio) dove andranno i cespugli al sole, e lasciale asciugare del tutto.",
+                "testo": "Si stendono liberamente le masse chiare (giallo limone, ocra e arancio) dove andranno i cespugli al sole, e si lasciano asciugare del tutto.",
                 "svg": svg_wrap(
                     '<circle cx="78" cy="76" r="28" fill="#ebd834" opacity="0.88"/>'
                     '<circle cx="132" cy="72" r="32" fill="#e59a28" opacity="0.88"/>'
                 ),
             },
             {
-                "titolo": "Contornare in negativo col fondo scuro",
+                "titolo": "Contorno in negativo col fondo scuro",
                 "carta": "asciutta",
                 "colori": ["oltremare", "verde_bosco", "indaco"],
                 "attrezzo": "Calligrafico a punta tonda",
-                "testo": "Con un tono scuro dipingi lo sfondo girando con la punta attorno al profilo frastagliato delle chiome chiare già asciutte.",
+                "testo": "Con un tono scuro si dipinge lo sfondo, girando con la punta attorno al profilo frastagliato delle chiome chiare già asciutte.",
                 "svg": svg_wrap(
                     '<rect x="18" y="18" width="95" height="90" rx="6" fill="#1f3b34"/>'
                     '<circle cx="78" cy="76" r="28" fill="#ebd834"/>'
@@ -771,7 +772,7 @@ INFOGRAFICHE = {
                 "carta": "asciutta",
                 "colori": ["seppia"],
                 "attrezzo": "Tondo fine",
-                "testo": "Completa lo scuro tutto intorno finché il cespuglio chiaro balza in avanti per contrasto, e aggiungi pochi rametti sottili alla base.",
+                "testo": "Si completa lo scuro tutto intorno, finché il cespuglio chiaro si stacca in avanti per contrasto, e si aggiungono pochi rametti sottili alla base.",
                 "svg": svg_wrap(
                     '<rect x="18" y="18" width="184" height="92" rx="6" fill="#1f3b34"/>'
                     '<circle cx="78" cy="76" r="28" fill="#ebd834"/>'
@@ -789,7 +790,7 @@ INFOGRAFICHE = {
                 "carta": "asciutta",
                 "colori": ["giallo_limone", "prussia"],
                 "attrezzo": "Tondo grande",
-                "testo": "Imposta il prato in primo piano sotto le siepi con una velatura leggerissima e pulita, senza dettagli che rubino l'occhio.",
+                "testo": "Si imposta il prato in primo piano, sotto le siepi, con un velo leggerissimo e pulito, senza dettagli che attirino lo sguardo.",
                 "svg": svg_wrap(
                     '<rect x="24" y="34" width="172" height="36" rx="8" fill="#6b8238"/>'
                     '<rect x="14" y="70" width="192" height="54" rx="4" fill="#d8e6b8" opacity="0.75"/>'
@@ -800,7 +801,7 @@ INFOGRAFICHE = {
                 "carta": "umida",
                 "colori": ["oltremare", "lilla"],
                 "attrezzo": "Tondo medio",
-                "testo": "Mentre il prato è ancora umido, appoggia subito sotto gli alberi e le siepi una striscia orizzontale di blu oltremare o grigio-lilla.",
+                "testo": "Mentre il prato è ancora umido, si appoggia subito sotto gli alberi e le siepi una striscia orizzontale di blu oltremare o grigio-lilla.",
                 "svg": svg_wrap(
                     '<rect x="24" y="34" width="172" height="36" rx="8" fill="#6b8238"/>'
                     '<rect x="14" y="70" width="192" height="54" rx="4" fill="#d8e6b8" opacity="0.75"/>'
@@ -812,7 +813,7 @@ INFOGRAFICHE = {
                 "carta": "umida",
                 "colori": ["ombra_bruc"],
                 "attrezzo": "Tondo medio",
-                "testo": "Lascia che l'ombra fredda si ammorbidisca da sola nel prato umido e aggiungi solo una traccia leggera per il terreno o il sentiero.",
+                "testo": "L'ombra fredda si lascia ammorbidire da sé nel prato umido; si aggiunge solo una traccia leggera per il terreno o il sentiero.",
                 "svg": svg_wrap(
                     '<rect x="24" y="34" width="172" height="36" rx="8" fill="#6b8238"/>'
                     '<rect x="14" y="70" width="192" height="54" rx="4" fill="#d8e6b8" opacity="0.75"/>'
@@ -830,21 +831,21 @@ INFOGRAFICHE = {
         "titolo": "Infografica dei video: fusti sottili col mascherante, rimozione e ombra su un lato",
         "fasi": [
             {
-                "titolo": "Tracciare i fusti col tiralinee",
+                "titolo": "Fusti tracciati col tiralinee",
                 "carta": "asciutta",
                 "colori": ["mascherante"],
                 "attrezzo": "Tiralinee",
-                "testo": "Sulla carta asciutta intingi il tiralinee nel liquido mascherante e traccia fusti sottilissimi e biforcati a Y; attendi che asciughi del tutto.",
+                "testo": "Sulla carta asciutta si intinge il tiralinee nel liquido mascherante e si tracciano fusti sottilissimi e biforcati a Y; si attende che asciughi del tutto.",
                 "svg": svg_wrap(
                     '<path d="M76,128 L80,22 M78,68 L96,34 M142,128 L138,26 M140,72 L122,40" stroke="#5bc0de" stroke-width="3.2" stroke-linecap="round"/>'
                 ),
             },
             {
-                "titolo": "Togliere il mascherante a secco",
+                "titolo": "Rimozione del mascherante a secco",
                 "carta": "asciutta",
                 "colori": ["lilla", "oltremare"],
                 "attrezzo": "Gomma crêpe",
-                "testo": "Solo quando le velature di sfondo sono completamente asciutte, strofina la gomma crêpe per scoprire i fusti bianchi netti.",
+                "testo": "Solo quando le velature di sfondo sono completamente asciutte si strofina la gomma crêpe, per scoprire i fusti bianchi e netti.",
                 "svg": svg_wrap(
                     '<rect x="14" y="14" width="192" height="112" rx="6" fill="#6c6486" opacity="0.75"/>'
                     '<path d="M76,128 L80,22 M78,68 L96,34" stroke="#fcfaf4" stroke-width="4" stroke-linecap="round"/>'
@@ -854,10 +855,10 @@ INFOGRAFICHE = {
             },
             {
                 "titolo": "Ombra su un solo lato del fusto",
-                "carta": "asciutta",
+                "carta": "bagnata",
                 "colori": ["lilla", "cobalto"],
-                "attrezzo": "Tondo n. 8 scarico d'acqua",
-                "testo": "Scarica il pennello su un fazzoletto e passa un filetto grigio-azzurro lungo un solo bordo del fusto bianco per dargli forma cilindrica.",
+                "attrezzo": "Tondo n. 12 scarico d'acqua",
+                "testo": "Si stende acqua pulita sul fusto bianco, si scarica il pennello su un fazzoletto e si passa un filetto grigio-azzurro lungo un solo bordo, sfumandolo verso il centro per dare al fusto forma cilindrica.",
                 "svg": svg_wrap(
                     '<rect x="14" y="14" width="192" height="112" rx="6" fill="#6c6486" opacity="0.75"/>'
                     '<path d="M76,128 L80,22 M78,68 L96,34 M142,128 L138,26 M140,72 L122,40" stroke="#fcfaf4" stroke-width="4.5" stroke-linecap="round"/>'
@@ -867,14 +868,14 @@ INFOGRAFICHE = {
         ],
     },
     "A5-M2": {
-        "titolo": "Infografica del video: tronchi dritti protetti col nastro e velature fuse sul bagnato",
+        "titolo": "Infografica del video: tronchi dritti protetti col nastro e veli fusi sul bagnato",
         "fasi": [
             {
-                "titolo": "Striscioline di nastro di carta",
+                "titolo": "Strisce sottili di nastro di carta",
                 "carta": "asciutta",
                 "colori": ["nastro"],
                 "attrezzo": "Nastro di carta strappato",
-                "testo": "Taglia o strappa striscioline sottili di nastro di carta e falle aderire bene sulla carta asciutta per riservare i tronchi dritti.",
+                "testo": "Si tagliano o si strappano strisce sottili di nastro di carta e si fanno aderire bene sulla carta asciutta, per riservare i tronchi dritti.",
                 "svg": svg_wrap(
                     '<rect x="64" y="16" width="10" height="110" fill="#e2d9c5" stroke="#b5a88c" stroke-width="1"/>'
                     '<rect x="106" y="14" width="12" height="112" fill="#e2d9c5" stroke="#b5a88c" stroke-width="1"/>'
@@ -884,9 +885,9 @@ INFOGRAFICHE = {
             {
                 "titolo": "Veli gialli e oro sul foglio bagnato",
                 "carta": "bagnata",
-                "colori": ["giallo_limone", "verde_oro", "verde_oliva"],
+                "colori": ["giallo_limone", "oro_chinacridone", "verde_oliva"],
                 "attrezzo": "Tondo grande n. 14",
-                "testo": "Bagna il foglio passando sopra il nastro e stendi bagnato su bagnato un velo giallo, macchie di oro e tocchi di verde vescica.",
+                "testo": "Si bagna il foglio passando sopra il nastro e si stendono bagnato su bagnato un velo giallo, macchie di oro chinacridone e tocchi di verde vescica.",
                 "svg": svg_wrap(
                     '<rect x="14" y="14" width="192" height="64" rx="6" fill="#ebd834" opacity="0.5"/>'
                     '<ellipse cx="70" cy="48" rx="42" ry="22" fill="#e59a28" opacity="0.55"/>'
@@ -897,11 +898,11 @@ INFOGRAFICHE = {
                 ),
             },
             {
-                "titolo": "Blu-viola in basso e via il nastro",
+                "titolo": "Blu-viola in basso e nastro rimosso",
                 "carta": "bagnata",
                 "colori": ["lilla", "turchese_cob", "siena_bruc"],
                 "attrezzo": "Tondo n. 14 + tondo n. 2",
-                "testo": "Inserisci i toni blu-viola, turchesi e ruggine in basso lasciandoli fondere sopra i tronchi protetti; a carta asciutta solleva il nastro.",
+                "testo": "Si inseriscono i toni blu-viola, turchesi e ruggine in basso, lasciandoli fondere sopra i tronchi protetti; a carta asciutta si solleva il nastro.",
                 "svg": svg_wrap(
                     '<rect x="14" y="14" width="192" height="58" rx="6" fill="#e59a28" opacity="0.45"/>'
                     '<rect x="14" y="60" width="192" height="66" rx="6" fill="#7c729c" opacity="0.65"/>'
@@ -916,11 +917,11 @@ INFOGRAFICHE = {
         "titolo": "Infografica del video: la trama della brina col sale fino sparso sul colore umido",
         "fasi": [
             {
-                "titolo": "Lavatura fredda invernale",
+                "titolo": "Velo freddo invernale",
                 "carta": "bagnata",
                 "colori": ["indaco", "ombra_bruc"],
                 "attrezzo": "Pennellessa piatta (hake)",
-                "testo": "Stendi una velatura morbida con grigio di Payne, indaco e un tocco di terra d'ombra bruciata per l'atmosfera invernale delle chiome.",
+                "testo": "Si stende un velo morbido con grigio di Payne, indaco e un tocco di terra d'ombra bruciata, per l'atmosfera invernale delle chiome.",
                 "svg": svg_wrap(
                     '<rect x="16" y="16" width="188" height="108" rx="8" fill="#5c687c" opacity="0.75"/>'
                 ),
@@ -930,7 +931,7 @@ INFOGRAFICHE = {
                 "carta": "umida",
                 "colori": ["sale"],
                 "attrezzo": "Pizzico di sale da cucina",
-                "testo": "Non buttare il sale sull'acqua lucida (si scioglierebbe): aspetta che la carta diventi opaca e umida, poi spargi un pizzico di sale fino.",
+                "testo": "Il sale non va gettato sull'acqua lucida (si scioglierebbe): si attende che la carta diventi opaca e umida, poi si sparge un pizzico di sale fino.",
                 "svg": svg_wrap(
                     '<rect x="16" y="16" width="188" height="108" rx="8" fill="#5c687c" opacity="0.75"/>'
                     '<g fill="#ffffff">'
@@ -945,7 +946,7 @@ INFOGRAFICHE = {
                 "carta": "asciutta",
                 "colori": ["indaco"],
                 "attrezzo": "Mano asciutta",
-                "testo": "Lascia asciugare senza toccare finché il sale apre i cristalli chiari; solo a foglio completamente asciutto spazzola via i grani.",
+                "testo": "Si lascia asciugare senza toccare finché il sale apre i cristalli chiari; solo a foglio completamente asciutto si spazzolano via i grani.",
                 "svg": svg_wrap(
                     '<rect x="16" y="16" width="188" height="108" rx="8" fill="#5c687c" opacity="0.75"/>'
                     '<g fill="#eef3f8" opacity="0.9">'
@@ -964,19 +965,19 @@ INFOGRAFICHE = {
                 "titolo": "Scuro in negativo fra i rami",
                 "carta": "asciutta",
                 "colori": ["verde_bosco", "oltremare", "indaco"],
-                "attrezzo": "Tondo n. 6 a punta",
-                "testo": "Con una miscela scura e fredda dipingi gli spazi vuoti attorno ai fusti e ai rami chiari per farli emergere per contrasto.",
+                "attrezzo": "Tondo fine a punta",
+                "testo": "Con una miscela scura e fredda si dipingono gli spazi vuoti attorno ai fusti e ai rami chiari, per farli emergere per contrasto.",
                 "svg": svg_wrap(
                     '<path d="M56,118 Q62,64 110,64 Q158,64 164,118 Z" fill="#1d3d3d"/>'
                     '<path d="M88,124 L90,34 M89,76 L72,50 M130,124 L128,38 M129,78 L146,52" stroke="#fcfaf4" stroke-width="4" stroke-linecap="round"/>'
                 ),
             },
             {
-                "titolo": "Toccare il bordo con acqua pulita",
+                "titolo": "Bordo toccato con acqua pulita",
                 "carta": "umida",
                 "colori": ["acqua"],
                 "attrezzo": "Tondo pulito con acqua",
-                "testo": "Subito, prima che il contorno esterno della massa scura si asciughi, sfioralo con un pennello carico di sola acqua pulita.",
+                "testo": "Subito, prima che il contorno esterno della massa scura si asciughi, lo si sfiora con un pennello carico di sola acqua pulita.",
                 "svg": svg_wrap(
                     '<path d="M48,72 Q110,42 172,72" stroke="#85bce8" stroke-width="8" fill="none" stroke-linecap="round" opacity="0.65"/>'
                     '<path d="M56,118 Q62,64 110,64 Q158,64 164,118 Z" fill="#1d3d3d"/>'
@@ -988,7 +989,7 @@ INFOGRAFICHE = {
                 "carta": "umida",
                 "colori": ["verde_bosco"],
                 "attrezzo": "Tondo fine n. 2-4",
-                "testo": "Il colore corre nell'acqua creando un passaggio soffice verso l'alto, mentre il bordo contro i fusti bianchi resta netto.",
+                "testo": "Il colore si espande nell'acqua e crea un passaggio sfumato verso l'alto, mentre il bordo contro i fusti bianchi resta netto.",
                 "svg": svg_wrap(
                     '<path d="M42,118 Q54,40 110,44 Q166,40 178,118 Z" fill="#5c8a7e" opacity="0.45"/>'
                     '<path d="M56,118 Q62,68 110,68 Q158,68 164,118 Z" fill="#1d3d3d" opacity="0.9"/>'
@@ -998,14 +999,14 @@ INFOGRAFICHE = {
         ],
     },
     "A5-M5": {
-        "titolo": "Infografica del video: aprire un velo di rametti spogli col pennello a ventaglio",
+        "titolo": "Infografica del video: trama leggera di rametti spogli col pennello a ventaglio",
         "fasi": [
             {
                 "titolo": "Ventaglio quasi asciutto a pettine",
                 "carta": "asciutta",
                 "colori": ["seppia"],
                 "attrezzo": "Pennello a ventaglio piccolo",
-                "testo": "Intingi il piccolo pennello a ventaglio in un tono scuro (seppia) e scarica l'acqua perché le setole restino ben separate a pettine.",
+                "testo": "Si intinge il piccolo pennello a ventaglio nel seppia diluito e si scarica l'acqua, perché le setole restino ben separate a pettine.",
                 "svg": svg_wrap(
                     '<path d="M110,96 L82,58 M110,96 L94,52 M110,96 L110,48 M110,96 L126,52 M110,96 L138,58" stroke="#2e241f" stroke-width="2" stroke-linecap="round"/>'
                     '<rect x="105" y="96" width="10" height="26" rx="2" fill="#8c6239"/>'
@@ -1016,7 +1017,7 @@ INFOGRAFICHE = {
                 "carta": "asciutta",
                 "colori": ["seppia"],
                 "attrezzo": "Pennello a ventaglio piccolo",
-                "testo": "Sfiora la carta asciutta con movimenti rapidi ad arco per creare in pochi secondi la nuvola fine dei rametti periferici.",
+                "testo": "Si sfiora la carta asciutta con movimenti rapidi ad arco, per creare in pochi secondi la trama fine dei rametti periferici.",
                 "svg": svg_wrap(
                     '<g stroke="#2e241f" stroke-width="1.2" stroke-dasharray="3,2" fill="none">'
                     '<path d="M48,68 Q78,34 112,52"/><path d="M54,74 Q82,42 116,58"/>'
@@ -1026,11 +1027,11 @@ INFOGRAFICHE = {
                 ),
             },
             {
-                "titolo": "Collegare tronco e rami col rigger",
+                "titolo": "Tronco e rami collegati col rigger",
                 "carta": "asciutta",
                 "colori": ["seppia"],
                 "attrezzo": "Rigger sottile",
-                "testo": "Con il rigger tira dal basso il tronco e i rami principali portandoli a raccordarsi dentro la trama leggera lasciata dal ventaglio.",
+                "testo": "Con il rigger si tirano dal basso il tronco e i rami principali, fino a raccordarli dentro la trama leggera lasciata dal ventaglio.",
                 "svg": svg_wrap(
                     '<g stroke="#2e241f" stroke-width="1.2" stroke-dasharray="3,2" fill="none">'
                     '<path d="M48,68 Q78,34 112,52"/><path d="M54,74 Q82,42 116,58"/>'
@@ -1047,14 +1048,14 @@ INFOGRAFICHE = {
     # A6 - RAMI SOTTILI E FOGLIE BRINATE IN PRIMO PIANO (2 modalità)
     # =========================================================================
     "A6-M1": {
-        "titolo": "Infografica del video: tirare e intrecciare i rami sottili dal basso verso l'alto",
+        "titolo": "Infografica del video: rami sottili tirati e intrecciati dal basso verso l'alto",
         "fasi": [
             {
-                "titolo": "Rami principali dal basso in su",
+                "titolo": "Rami principali dal basso in alto",
                 "carta": "asciutta",
                 "colori": ["ombra_bruc", "seppia"],
                 "attrezzo": "Tondo a punta fine n. 6 o rigger",
-                "testo": "Appoggia il pennello alla base e tira i fusti principali verso l'alto, alleggerendo la pressione per assottigliare la linea.",
+                "testo": "Si appoggia il pennello alla base e si tirano i fusti principali verso l'alto, alleggerendo la pressione per assottigliare la linea.",
                 "svg": svg_wrap(
                     '<path d="M58,128 Q78,78 96,24 M136,128 Q124,78 142,26" stroke="#4f3728" stroke-width="3" fill="none" stroke-linecap="round"/>'
                 ),
@@ -1064,18 +1065,18 @@ INFOGRAFICHE = {
                 "carta": "asciutta",
                 "colori": ["ombra_bruc"],
                 "attrezzo": "Tondo a punta fine n. 6",
-                "testo": "Fai nascere dai rami principali delle biforcazioni strette a V e a Y, variando l'inclinazione e lo spessore a ogni snodo.",
+                "testo": "Dai rami principali si fanno partire biforcazioni strette a V e a Y, variando l'inclinazione e lo spessore a ogni snodo.",
                 "svg": svg_wrap(
                     '<path d="M58,128 Q78,78 96,24 M136,128 Q124,78 142,26" stroke="#4f3728" stroke-width="3" fill="none" stroke-linecap="round"/>'
                     '<path d="M76,82 L54,42 M86,56 L112,28 M130,84 L110,44 M134,58 L162,32" stroke="#4f3728" stroke-width="2" fill="none" stroke-linecap="round"/>'
                 ),
             },
             {
-                "titolo": "Incroci naturali e punte capillari",
+                "titolo": "Incroci naturali e punte finissime",
                 "carta": "asciutta",
                 "colori": ["ombra_bruc"],
                 "attrezzo": "Punta finissima del pennello",
-                "testo": "Aggiungi rami centrali che si incrociano e si sovrappongono agli altri (in natura non si scansano), finendo sulle cime a filo.",
+                "testo": "Si aggiungono rami centrali che si incrociano e si sovrappongono agli altri (in natura i rami non si evitano), terminando le cime a filo.",
                 "svg": svg_wrap(
                     '<path d="M58,128 Q78,78 96,24 M136,128 Q124,78 142,26" stroke="#4f3728" stroke-width="3" fill="none" stroke-linecap="round"/>'
                     '<path d="M76,82 L54,42 M86,56 L112,28 M130,84 L110,44 M134,58 L162,32" stroke="#4f3728" stroke-width="2" fill="none" stroke-linecap="round"/>'
@@ -1088,11 +1089,11 @@ INFOGRAFICHE = {
         "titolo": "Infografica dei video: foglie scure col filo bianco di brina e bordo ammorbidito",
         "fasi": [
             {
-                "titolo": "Risparmiare il filo bianco sottile",
+                "titolo": "Risparmio del filo bianco sottile",
                 "carta": "asciutta",
-                "colori": ["siena_bruc", "prussia", "mascherante"],
+                "colori": ["siena_bruc", "prussia", "cremisi", "mascherante"],
                 "attrezzo": "Tondo n. 4 (o tiralinee)",
-                "testo": "Dipingi la foglia un lobo alla volta lasciando un filo bianco sottilissimo tra i lobi o sul bordo alto (oppure proteggilo prima col tiralinee).",
+                "testo": "Si dipinge la foglia un lobo alla volta, risparmiando un filo bianco sottilissimo tra i lobi o sul bordo alto (oppure lo si protegge prima col tiralinee).",
                 "svg": svg_wrap(
                     '<rect x="6" y="6" width="208" height="128" rx="4" fill="#d9ecfa"/>'
                     '<path d="M44,116 Q98,74 166,34" stroke="#2e241f" stroke-width="2.4" fill="none" stroke-linecap="round"/>'
@@ -1104,9 +1105,9 @@ INFOGRAFICHE = {
             {
                 "titolo": "Accento scuro nella foglia umida",
                 "carta": "umida",
-                "colori": ["prussia", "cremisi"],
+                "colori": ["prussia"],
                 "attrezzo": "Tondo a punta n. 4",
-                "testo": "Mentre il lobo della foglia è ancora umido, tocca il centro e la base con blu di Prussia denso per dare profondità, senza coprire il filo bianco.",
+                "testo": "Mentre il lobo della foglia è ancora umido, si toccano il centro e la base con blu di Prussia denso per dare profondità, senza coprire il filo bianco.",
                 "svg": svg_wrap(
                     '<rect x="6" y="6" width="208" height="128" rx="4" fill="#d9ecfa"/>'
                     '<path d="M44,116 Q98,74 166,34" stroke="#2e241f" stroke-width="2.4" fill="none" stroke-linecap="round"/>'
@@ -1116,11 +1117,11 @@ INFOGRAFICHE = {
                 ),
             },
             {
-                "titolo": "Ammorbidire col pennello umido",
+                "titolo": "Fili ammorbiditi col pennello umido",
                 "carta": "asciutta",
                 "colori": ["acqua"],
                 "attrezzo": "Tondo pulito appena umido",
-                "testo": "A foglia asciutta (e tolto l'eventuale mascherante), sfiora i fili bianchi con un pennello pulito e appena umido per legare la brina alla foglia.",
+                "testo": "A foglia asciutta (e tolto l'eventuale mascherante) si sfiorano i fili bianchi con un pennello pulito e appena umido, per legare la brina alla foglia.",
                 "svg": svg_wrap(
                     '<rect x="6" y="6" width="208" height="128" rx="4" fill="#d9ecfa"/>'
                     '<path d="M44,116 Q98,74 166,34" stroke="#2e241f" stroke-width="2.4" fill="none" stroke-linecap="round"/>'
@@ -1169,7 +1170,7 @@ def rendi_infografica_modalita(id_mod, e, pill):
 def rendi_coda_albero(t, e):
     coda = []
     if t.get("controllo"):
-        coda.append(f'<div class="info-check ok"><b>✓ Cosa controllare sul foglietto:</b> {e(t["controllo"])}</div>')
+        coda.append(f'<div class="info-check ok"><b>✓ Che cosa controllare sul foglietto:</b> {e(t["controllo"])}</div>')
     if t.get("attenzione"):
         att = " · ".join(e(x) for x in t["attenzione"])
         coda.append(f'<div class="info-check att"><b>⚠ Da evitare:</b> {att}</div>')

@@ -32,17 +32,17 @@ def parte_colori(a):
 
     def riga_tav(c):
         sigla = f' ({e(c["sigla"])})' if c.get("sigla") else ""
-        tras = f'; comportamento nel tubetto di riferimento: {e(c["trasparenza_tubetto"])}' if c.get("trasparenza_tubetto") else ""
+        tras = f'; nel tubetto della tavolozza: {e(c["trasparenza_tubetto"])}' if c.get("trasparenza_tubetto") else ""
         nota = f' ({e(c["nota"])})' if c.get("nota") else ""
-        return f'<li><b>{e(c["nome"])}</b>{sigla}: Colour Index <b>{e(c["pigmento"])}</b>{tras}{nota}</li>'
+        return f'<li><b>{e(c["nome"])}</b>{sigla}: pigmento <b>{e(c["pigmento"])}</b>{tras}{nota}</li>'
 
     righe_tav = "".join(riga_tav(c) for c in tav)
     sei_colori = (
-        f'<div class="sei-colori"><h4>I 6 pigmenti della tavolozza ristretta da campagna (en plein air)</h4>'
+        f'<div class="sei-colori"><h4>I sei colori della tavolozza ridotta</h4>'
         f'<ul class="tav">{righe_tav}</ul>'
-        f'<p class="rimando">Proprietà ottiche e simulatore spettrale: '
-        f'<a href="../colori/">Colorimetria applicata</a> · <a href="../colori/#calcolatore">Simulatore Kubelka-Munk</a>. '
-        f'Corrispondenze tra i cataloghi dei produttori: <a href="../marche/">Merceologia e marche</a>.</p></div>'
+        f'<p class="rimando">Teoria e calcolatore: '
+        f'<a href="../colori/">Teoria dei colori</a> · <a href="../colori/#calcolatore">Calcolatore di miscele</a>. '
+        f'I tubetti marca per marca: <a href="../marche/">Marche e tubetti</a>.</p></div>'
     )
 
     def riquadro(r, classe):
@@ -71,16 +71,16 @@ def parte_colori(a):
     righe = []
     for x in a["miscele"]:
         if x.get("mix"):
-            lk = link(x["mix"], "apri nel simulatore spettrale")
+            lk = link(x["mix"], "prova nel calcolatore")
         else:
             lk = " · ".join(
-                link([m], f"{nomi[m[0]].lower()} nel simulatore") for m in x.get("mix_separati", [])
+                link([m], f"{nomi[m[0]].lower()} nel calcolatore") for m in x.get("mix_separati", [])
             )
         nota = f' {e(x["nota"])}' if x.get("nota") else ""
         righe.append(
             f'<tr id="{e(x["m"])}"><td class="m">{e(x["m"])}</td><td><b>{e(x["nome"])}</b><br>{e(x["ricetta"])}'
-            f'<br><span class="cons">Grado di diluizione: <b>{e(x["consistenza"])}</b></span>'
-            f'<br><span class="pigm">Composizione: {e(x["pigmenti"])}.{nota}</span><br>{lk}</td></tr>'
+            f'<br><span class="cons">Consistenza: <b>{e(x["consistenza"])}</b></span>'
+            f'<br><span class="pigm">Pigmenti: {e(x["pigmenti"])}.{nota}</span><br>{lk}</td></tr>'
         )
     return "".join(righe), sei_colori, riquadri
 
@@ -147,7 +147,7 @@ def pagina():
         if c["id"] == "tavolozza-plein-air":
             extra = (
                 f'{sei_colori_html}'
-                f'<div id="miscele"><h3>Prontuario delle 12 miscele fondamentali (M1-M12)</h3>'
+                f'<div id="miscele"><h3>Le 12 miscele (M1-M12)</h3>'
                 f'{riquadri_html}'
                 f'<table class="mix">{miscele_html}</table></div>'
             )
@@ -164,23 +164,23 @@ def pagina():
   <p class="sotto">{e(d["sottotitolo"])}</p>
 </header>
 <nav class="salti">
-  <a href="#confronto">Confronto Studio / Plein air</a>
-  <a href="#protocollo-a5">Campioni A5</a>
-  <a href="#tavolozza-studio">Tavolozza da studio</a>
-  <a href="#tavolozza-plein-air">Tavolozza 6 pigmenti</a>
-  <a href="#miscele">12 Miscele (M1-M12)</a>
+  <a href="#confronto">Studio e aperto</a>
+  <a href="#protocollo-a5">Foglietti A5</a>
+  <a href="#tavolozza-studio">Tavolozza estesa</a>
+  <a href="#tavolozza-plein-air">Sei colori</a>
+  <a href="#miscele">12 miscele</a>
 </nav>
 <div class="intro-box">{intro_p}</div>
 
 <section class="cap" id="confronto">
-  <h2>Quadro sinottico: lavoro in studio ed esecuzione en plein air</h2>
+  <h2>Studio e aperto a confronto</h2>
   <div class="tab-wrap">
     <table class="confronto">
       <thead>
         <tr>
-          <th>Variabile operativa</th>
-          <th>🎨 Assetto in studio</th>
-          <th>🎒 Assetto all'aperto (en plein air)</th>
+          <th>Aspetto</th>
+          <th>🎨 In studio</th>
+          <th>🎒 All'aperto (en plein air)</th>
         </tr>
       </thead>
       <tbody>{righe_conf}</tbody>
@@ -191,7 +191,7 @@ def pagina():
 {"".join(cap_html)}
 
 <footer>
-  <p>Collegamenti rapidi alle altre sezioni: <a href="../principi/">1. Principi tecnici</a> · <a href="../colori/">3. Colorimetria e calcolatore</a> · <a href="../marche/">4. Merceologia e marche</a> · <a href="../soggetti/">5. Soggetti pittorici (Alberi, Nuvole, Fiori...)</a>.</p>
+  <p>Le altre sezioni: <a href="../principi/">1. Principi generali</a> · <a href="../colori/">3. Teoria dei colori</a> · <a href="../marche/">4. Marche e tubetti</a> · <a href="../soggetti/">5. Soggetti</a>.</p>
 </footer>
 </body></html>"""
 

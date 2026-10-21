@@ -9,6 +9,9 @@ sys.stdout.reconfigure(encoding="utf-8")
 
 QUI = os.path.dirname(os.path.abspath(__file__))
 FONTE = os.path.join(QUI, "soggetti.json")
+# I nomi degli esempi di un modulo pubblicato si leggono dai dati del modulo: così la sezione
+# Soggetti non può dare a un esempio un nome diverso da quello della sua pagina.
+MODULI = {"alberi": (os.path.join(QUI, "..", "alberi", "pit-261014-video-gesti-alberi.json"), "../alberi/")}
 PAGINA = os.path.join(QUI, "soggetti.html")
 
 e = lambda t: html.escape(str(t or ""))
@@ -55,6 +58,15 @@ footer { margin-top: 28px; border-top: 1px solid #ddd; padding-top: 12px; font-s
 """
 
 
+def sottovoci_da(modulo):
+    percorso, href = MODULI[modulo]
+    voci = []
+    for t in json.load(open(percorso, encoding="utf-8"))["alberi"]:
+        sigla, nome = t["voce"].split(" ", 1)
+        voci.append({"sigla": sigla, "titolo": nome, "href": f"{href}#{sigla}"})
+    return voci
+
+
 def pagina():
     d = json.load(open(FONTE, encoding="utf-8"))
     intro_p = "".join(f"<p>{e(p)}</p>" for p in d["introduzione"])
@@ -65,16 +77,18 @@ def pagina():
         cls = "attivo" if attivo else "prog"
         badges = "".join(f'<span class="pill">{e(b)}</span>' for b in s.get("badge", []))
         blocco_sottovoci = ""
+        if s.get("sottovoci_da"):
+            s["sottovoci"] = sottovoci_da(s["sottovoci_da"])
         if s.get("sottovoci"):
             voci = "".join(
                 f'<li><a href="{e(v["href"])}"><b>{e(v["sigla"])}</b> · {e(v["titolo"])}</a></li>'
                 for v in s["sottovoci"]
             )
             blocco_sottovoci = (
-                f'<div class="sottovoci"><h3>Tipologie analizzate nel modulo:</h3><ul>{voci}</ul></div>'
+                f'<div class="sottovoci"><h3>Gli esempi del modulo:</h3><ul>{voci}</ul></div>'
             )
         pulsante = (
-            f'<a class="btn" href="{e(s["href"])}">Apri il modulo monografico completo →</a>'
+            f'<a class="btn" href="{e(s["href"])}">Apri il modulo →</a>'
             if s.get("href")
             else ""
         )
@@ -107,7 +121,7 @@ def pagina():
 <div class="intro-box">{intro_p}</div>
 <div class="grid-soggetti">{"".join(cards)}</div>
 <footer>
-  <p>Per l'impostazione del lavoro in studio o all'aperto e il prontuario delle 12 miscele consulta <a href="../studio-plein-air/">2. Pittura in studio ed en plein air</a>. Altre sezioni: <a href="../principi/">1. Principi tecnici</a> · <a href="../colori/">3. Colorimetria e calcolatore</a> · <a href="../marche/">4. Merceologia e marche</a>.</p>
+  <p>Il lavoro in studio e all'aperto e il prontuario delle 12 miscele sono nella sezione <a href="../studio-plein-air/">2. Studio ed en plein air</a>. Le altre sezioni: <a href="../principi/">1. Principi generali</a> · <a href="../colori/">3. Teoria dei colori</a> · <a href="../marche/">4. Marche e tubetti</a>.</p>
 </footer>
 </body></html>"""
 

@@ -4,10 +4,10 @@
  "titolo": "Principi generali: acqua, colore e carta",
  "sottotitolo": "Le tre consistenze della miscela, gli stati della carta e come abbinarli, prima di ogni esercizio.",
  "introduzione": [
-  "Prima degli esercizi, le regole che tornano in tutti i video e nei corsi raccolti per il Quaderno. Ogni frase ha un numero che rimanda alle fonti in fondo alla pagina: gli appunti di studio dei corsi e i video della sezione Alberi, aperti al minuto indicato.",
+  "Questa sezione raccoglie le regole che ricorrono nei video e nei corsi esaminati per il Quaderno. Ogni paragrafo rimanda con un numero alle fonti in fondo alla pagina: gli appunti di studio dei corsi e i video della sezione Alberi, che si aprono al minuto indicato.",
   "Il metodo di lavoro in studio e all'aperto, con i foglietti A5 e le 12 miscele, è nella sezione <a href=\"../studio-plein-air/\">Studio ed en plein air</a>; gli esercizi per soggetto sono nella sezione <a href=\"../soggetti/\">Soggetti</a>, a cominciare dagli <a href=\"../alberi/\">Alberi</a>; i pigmenti, la tavolozza e il calcolatore di miscele, con la striscia di diluizione dal miele al tè, nella sezione <a href=\"../colori/\">Teoria dei colori</a>."
  ],
- "nota_fonti": "Le citazioni dei video vengono dalle schede di studio preparate per la sezione Alberi, riassunti del parlato e del gesto controllati a campione: il collegamento apre il video al minuto indicato, per controllare. Le citazioni dei corsi vengono dagli appunti di studio delle lezioni.",
+ "nota_fonti": "Le citazioni dei video provengono dalle schede di studio preparate per la sezione Alberi: sono riassunti del parlato e del gesto, controllati a campione, e il collegamento apre il video al minuto indicato per la verifica. Le citazioni dei corsi provengono dagli appunti di studio delle lezioni.",
  "capitoli": [
   {
    "id": "consistenze",
@@ -16,7 +16,7 @@
    "blocchi": [
     {
      "tipo": "p",
-     "testo": "Ogni miscela si prepara a una di tre consistenze, che il corso di Watercolor Fanatic chiama con tre parole facili da ricordare:",
+     "testo": "Il corso di Watercolor Fanatic distingue tre consistenze della miscela e le indica con tre parole facili da ricordare:",
      "fonti": [
       "wf4"
      ]
@@ -25,19 +25,19 @@
      "tipo": "lista",
      "voci": [
       {
-       "testo": "<b>tè</b>: un velo leggero, più acqua che pigmento;",
+       "testo": "<b>tè</b>: un velo leggero, con più acqua che pigmento;",
        "fonti": [
         "wf4"
        ]
       },
       {
-       "testo": "<b>latte</b>: una via di mezzo, acqua e pigmento in equilibrio;",
+       "testo": "<b>latte</b>: una consistenza intermedia, con acqua e pigmento in equilibrio;",
        "fonti": [
         "wf4"
        ]
       },
       {
-       "testo": "<b>miele</b>: un velo spesso, più pigmento che acqua.",
+       "testo": "<b>miele</b>: un velo denso, con più pigmento che acqua.",
        "fonti": [
         "wf4"
        ]
@@ -50,7 +50,7 @@
     },
     {
      "tipo": "p",
-     "testo": "Ogni consistenza dà trasparenza e trama diverse e serve in un momento diverso del lavoro. Negli esempi del corso il primo velo è «una tinta da tè», i dettagli si fanno «con una miscela lattea» che si allarga meno, e foglie e ombre con miscele «latte», «con meno acqua e più pigmento».",
+     "testo": "Ogni consistenza dà una trasparenza e una trama diverse e serve in una fase diversa del lavoro. Negli esempi di Robert Joyner il primo velo è una «tinta da tè» e i dettagli si eseguono con una «miscela lattea», che si allarga meno; foglie e ombre si dipingono con miscele «latte», «con meno acqua e più pigmento».",
      "fonti": [
       "wf4",
       "wf6",
@@ -59,7 +59,7 @@
     },
     {
      "tipo": "p",
-     "testo": "<b>Tutti i colori di un velo con la stessa consistenza.</b> Quando in un velo bagnato su bagnato si aggiungono colori diversi, devono avere tutti un rapporto acqua-pigmento simile: così il velo resta uniforme e nessun colore prende il sopravvento.",
+     "testo": "<b>Stessa consistenza per tutti i colori di un velo.</b> Quando in un velo bagnato su bagnato si introducono colori diversi, tutti devono avere un rapporto simile fra acqua e pigmento: così il velo resta uniforme e nessun colore prevale sugli altri.",
      "fonti": [
       "wf7"
      ]
@@ -69,7 +69,7 @@
   {
    "id": "carta-umidita",
    "breve": "Carta asciutta, umida, bagnata",
-   "titolo": "2. Gli stati della carta: asciutta, umida, bagnata e i momenti di mezzo",
+   "titolo": "2. Gli stati della carta: asciutta, umida, bagnata e i momenti intermedi",
    "blocchi": [
     {
      "tipo": "p",
@@ -83,14 +83,14 @@
      "tipo": "lista",
      "voci": [
       {
-       "testo": "<span class=\"pill bagnata\">bagnata</span> la carta è stata bagnata con acqua pulita e il colore si allarga liberamente: serve per sfondi e passaggi morbidi. La superficie è lucida in modo uniforme, ma senza pozzanghere.",
+       "testo": "<span class=\"pill bagnata\">bagnata</span> la carta è stata bagnata con acqua pulita e il colore si espande liberamente: serve per i fondi e i passaggi morbidi. La superficie è lucida in modo uniforme, senza pozzanghere.",
        "fonti": [
         "wf8",
         "julie-lucida"
        ]
       },
       {
-       "testo": "<span class=\"pill umida\">umida</span> negli esempi dei video è la carta che ha perso il lucido ma non è ancora asciutta: il colore si fonde ancora, ma si allarga meno che sul bagnato. Questa è una descrizione ricavata dagli esempi, non una definizione dei materiali.",
+       "testo": "<span class=\"pill umida\">umida</span> negli esempi dei video è la carta che ha perso il lucido ma non è ancora asciutta. Il colore si fonde ancora con il fondo, ma si espande meno che sul bagnato. La definizione è ricavata dagli esempi, non dalle schede dei produttori.",
        "fonti": [
         "gaivelen-graffio",
         "norris",
@@ -98,7 +98,7 @@
        ]
       },
       {
-       "testo": "<span class=\"pill asciutta\">asciutta</span> il colore si posa su carta non bagnata e i bordi restano netti e precisi: serve per dettagli, ombre e trame su un velo già asciutto.",
+       "testo": "<span class=\"pill asciutta\">asciutta</span> il colore si posa su carta non bagnata e i bordi restano netti e precisi: serve per i dettagli, le ombre e le trame su un velo già asciutto.",
        "fonti": [
         "wf8"
        ]
@@ -107,7 +107,7 @@
     },
     {
      "tipo": "p",
-     "testo": "Fra bagnata e asciutta i video indicano alcuni <b>momenti di mezzo</b>, tutti legati al lucido dell'acqua sulla carta:",
+     "testo": "Fra la carta bagnata e quella asciutta i video indicano alcuni <b>momenti intermedi</b>, tutti riconoscibili dal lucido dell'acqua sulla carta:",
      "fonti": [
       "kersey",
       "gaivelen-graffio",
@@ -118,7 +118,7 @@
      "tipo": "lista",
      "voci": [
       {
-       "testo": "<b>il lucido sta sparendo</b>: è il momento per mettere un colore denso sul fondo inumidito. Il sale si sparge appena il lucido è sparito, e da quel momento la carta riceve il colore senza sbavature eccessive.",
+       "testo": "<b>il lucido sta sparendo</b>: è il momento per deporre un colore denso sul fondo inumidito; quando il lucido scompare, la carta riceve il colore senza sbavature eccessive. Il sale si sparge appena il lucido è sparito.",
        "fonti": [
         "kersey",
         "davidson",
@@ -126,7 +126,7 @@
        ]
       },
       {
-       "testo": "<b>umida e opaca</b>, senza più lucido: è il momento per incidere la carta con la spatola, o per le fioriture volute. Il corso di Watercolor Fanatic la chiama «semi-umida», ideale per lo strato successivo senza che il colore si allarghi troppo.",
+       "testo": "<b>umida e opaca</b>, senza più lucido: è il momento per incidere la carta con la spatola o per provocare le fioriture volute. Il corso di Watercolor Fanatic la chiama «semi-umida» e la indica come la condizione adatta allo strato successivo, perché il colore non si allarga troppo.",
        "fonti": [
         "gaivelen-graffio",
         "julie-fior",
@@ -134,7 +134,7 @@
        ]
       },
       {
-       "testo": "<b>quasi asciutta</b>: per sollevare le luci col pennello quasi asciutto, o per incidere segni chiari più netti con una tessera di plastica.",
+       "testo": "<b>quasi asciutta</b>: si sollevano le luci col pennello quasi asciutto, o si incidono segni chiari più netti con una tessera di plastica.",
        "fonti": [
         "norris-faggio-luci",
         "davidson-betulle"
@@ -145,26 +145,17 @@
     {
      "tipo": "svg",
      "nome": "carta"
-    },
-    {
-     "tipo": "p",
-     "testo": "I momenti si riconoscono a occhio dal riflesso della luce sul foglio: la carta bagnata luccica, quella umida no.",
-     "fonti": [
-      "clark-d",
-      "davidson",
-      "gaivelen-graffio"
-     ]
     }
    ]
   },
   {
    "id": "abbinare",
    "breve": "Pennello e carta",
-   "titolo": "3. Abbinare il pennello alla carta",
+   "titolo": "3. Acqua nel pennello e acqua nella carta",
    "blocchi": [
     {
      "tipo": "p",
-     "testo": "Il principio che torna in tutti i materiali è far corrispondere l'acqua nel pennello e nel colore a quella già presente sulla carta.",
+     "testo": "Il principio che ricorre nei materiali esaminati è far corrispondere la quantità d'acqua nel pennello e nella miscela a quella già presente sulla carta.",
      "fonti": [
       "wf4"
      ]
@@ -173,14 +164,14 @@
      "tipo": "lista",
      "voci": [
       {
-       "testo": "<b>Colore più bagnato della carta: fioriture.</b> Se un colore più acquoso arriva su un velo che sta asciugando, si formano i «cavolfiori», cioè fioriture (in inglese <i>backrun</i> o <i>bloom</i>) dai bordi frastagliati. Per evitarli si abbina l'umidità di pennello e colore a quella della carta.",
+       "testo": "<b>Pennello più bagnato della carta: le fioriture.</b> Quando una miscela più acquosa raggiunge una campitura che sta asciugando, il colore si espande verso l'esterno in modo incontrollato e forma le fioriture a «cavolfiore», dal bordo frastagliato (in inglese <i>backrun</i> o <i>bloom</i>). Si evitano dosando l'acqua del pennello e della miscela sullo stato della carta.",
        "fonti": [
         "wf4",
         "webber-fior"
        ]
       },
       {
-       "testo": "<b>Le fioriture si possono anche cercare apposta</b>: gocce d'acqua pulita o di colore molto acquoso su un velo umido, oppure bianco molto acquoso su un fondo che ha già cominciato ad asciugare. Se sul foglio resta una pozzanghera, il colore si diluisce e la fioritura non si forma.",
+       "testo": "<b>Le fioriture volute.</b> Le stesse fioriture si possono provocare apposta, con gocce d'acqua pulita o di colore molto acquoso su un velo umido, oppure con bianco molto acquoso su un fondo che ha già cominciato ad asciugare. Se sul foglio resta una pozzanghera, il colore si diluisce e la fioritura non si forma.",
        "fonti": [
         "clark-p",
         "webber-fior",
@@ -188,14 +179,14 @@
        ]
       },
       {
-       "testo": "<b>Sul bagnato e sull'umido, colore più denso.</b> Le miscele al miele si possono mettere su un velo umido senza che si allarghino troppo; quelle al tè o al latte vanno usate con cautela, perché il colore non sanguini e non si mescoli più del voluto. Lo stesso vale per le chiome su carta umida: con troppa acqua nel colore la macchia si allarga oltre il voluto, e il colore va tenuto denso.",
+       "testo": "<b>Sull'umido, colore più denso.</b> Le miscele al miele si possono deporre su un velo umido senza che si allarghino troppo; quelle al tè o al latte vanno usate con cautela, perché il colore non sbavi e non si mescoli più del voluto. Lo stesso vale per le chiome su carta umida: con troppa acqua nella miscela la macchia si espande oltre il voluto, e il colore va tenuto denso.",
        "fonti": [
         "wf4",
         "norris"
        ]
       },
       {
-       "testo": "<b>Il pennello assorbe, non solo stende.</b> Un pennello più asciutto toglie l'acqua in più dalla carta; un pennello pulito e scarico, a volte detto «assetato», solleva il colore fresco per aprire le luci.",
+       "testo": "<b>Il pennello toglie acqua, oltre a stenderla.</b> Un pennello più asciutto assorbe l'acqua in eccesso dalla carta; un pennello pulito e scarico, detto a volte «assetato» (<i>thirsty brush</i>), solleva il colore fresco per aprire le luci.",
        "fonti": [
         "wf4",
         "drawpaint-cactus"
@@ -214,7 +205,7 @@
      "tipo": "lista",
      "voci": [
       {
-       "testo": "La quantità d'acqua nel pennello e sulla carta cambia di continuo: si passa presto da un pennello carico a uno quasi asciutto.",
+       "testo": "La quantità d'acqua nel pennello e sulla carta va regolata di continuo, passando rapidamente da un pennello carico a uno quasi asciutto.",
        "fonti": [
         "mow"
        ]
@@ -227,19 +218,13 @@
        ]
       },
       {
-       "testo": "Il colore va preparato in quantità sufficiente: se ci si ferma a mescolarne altro, il velo viene disomogeneo.",
+       "testo": "Il colore va preparato in quantità sufficiente: se ci si deve fermare a mescolarne altro, il velo risulta disomogeneo.",
        "fonti": [
         "mow"
        ]
       },
       {
-       "testo": "Se sulla carta c'è troppa acqua, la si asciuga leggermente con un pennello pulito: le forme restano definite ma morbide.",
-       "fonti": [
-        "wf6"
-       ]
-      },
-      {
-       "testo": "Un pennello che trattiene troppa acqua, usato sul bagnato, rischia di «annegare» il pigmento; e troppa acqua quando si ammorbidiscono le riserve bianche allaga il foglio.",
+       "testo": "Un pennello che trattiene troppa acqua, usato sul bagnato, rischia di «annegare» il pigmento; allo stesso modo, troppa acqua mentre si ammorbidiscono le riserve bianche allaga il foglio.",
        "fonti": [
         "gaivelen-acqua",
         "dewinton"
@@ -264,7 +249,7 @@
        ]
       },
       {
-       "testo": "<b>Bordi morbidi</b>: colore su carta bagnata o ancora umida. Nei video i bordi morbidi danno il volume tondo di una chioma.",
+       "testo": "<b>Bordi morbidi</b>: colore su carta bagnata o ancora umida. Nei video sono i bordi morbidi a dare il volume tondo di una chioma.",
        "fonti": [
         "norris-faggio-morbidi",
         "webber-morbidi",
@@ -279,7 +264,7 @@
        ]
       },
       {
-       "testo": "<b>Il tempo conta</b>: se si lavora troppo lentamente sul bagnato la carta asciuga e restano bordi duri non voluti; le luci dello studio la asciugano in fretta.",
+       "testo": "<b>I tempi di lavoro</b>: se si lavora troppo lentamente sul bagnato, la carta asciuga e restano bordi duri non voluti; le lampade dello studio accelerano l'asciugatura.",
        "fonti": [
         "drawpaint"
        ]
@@ -297,19 +282,19 @@
      "tipo": "lista",
      "voci": [
       {
-       "testo": "Si può lasciar asciugare all'aria, col phon o al sole, facendo attenzione che il getto d'aria non sposti il pigmento.",
+       "testo": "Si può lasciare asciugare all'aria, col phon o al sole, facendo attenzione che il getto d'aria non sposti il pigmento.",
        "fonti": [
         "wf5"
        ]
       },
       {
-       "testo": "Il phon tenuto troppo vicino a un velo bagnato può far nascere i cavolfiori.",
+       "testo": "Il phon tenuto troppo vicino a un velo bagnato può provocare le fioriture a cavolfiore.",
        "fonti": [
         "wf7"
        ]
       },
       {
-       "testo": "Per velare, lo strato sotto deve essere asciutto, così il colore nuovo non lo disturba.",
+       "testo": "Per una velatura lo strato sottostante deve essere asciutto, perché il colore nuovo non lo smuova.",
        "fonti": [
         "wf5",
         "wf8"
@@ -321,12 +306,12 @@
   },
   {
    "id": "carta-tipi",
-   "breve": "Grana e peso",
-   "titolo": "7. La carta: grana, peso, colla",
+   "breve": "Grana e grammatura",
+   "titolo": "7. La carta: grana, grammatura, collatura",
    "blocchi": [
     {
      "tipo": "p",
-     "testo": "<b>Tre superfici.</b>",
+     "testo": "<b>Tre finiture.</b>",
      "fonti": [
       "carta"
      ]
@@ -335,13 +320,13 @@
      "tipo": "lista",
      "voci": [
       {
-       "testo": "<b>hot press</b>: liscia, con bordi nitidi, adatta al dettaglio (per esempio l'illustrazione botanica); asciuga più in fretta e fa risaltare la granulazione;",
+       "testo": "<b>hot press</b> (pressata a caldo): liscia, dà bordi nitidi ed è adatta al dettaglio, per esempio all'illustrazione botanica; asciuga più in fretta e fa risaltare la granulazione;",
        "fonti": [
         "carta"
        ]
       },
       {
-       "testo": "<b>cold press</b>: la più usata e versatile, e la più facile da controllare per chi comincia, nei veli e nella distribuzione del pigmento; nelle schede di studio dei video è detta «a grana fine»;",
+       "testo": "<b>cold press</b> (pressata a freddo): la più usata e versatile, e per chi comincia la più facile da controllare nei veli e nella distribuzione del pigmento; nelle schede di studio dei video è detta «a grana fine»;",
        "fonti": [
         "carta",
         "schede-carte"
@@ -359,7 +344,7 @@
     },
     {
      "tipo": "p",
-     "testo": "<b>Le finiture non sono uniformi</b>: cambiano da marca a marca, e anche due hot press della stessa marca possono essere diverse.",
+     "testo": "<b>Le finiture non sono standard</b>: cambiano da una marca all'altra, e anche due hot press della stessa marca possono differire.",
      "fonti": [
       "carta"
      ]
@@ -389,7 +374,7 @@
     },
     {
      "tipo": "p",
-     "testo": "<b>Colla.</b> La carta contiene una colla che limita l'assorbimento di acqua e pigmento. La quantità cambia da marca a marca e decide molto di quanto colore si riesce a sollevare.",
+     "testo": "<b>Collatura.</b> La carta contiene una colla che ne limita l'assorbimento di acqua e pigmento. La quantità di colla cambia da una marca all'altra e incide molto sulla possibilità di sollevare il colore.",
      "fonti": [
       "carta"
      ]
@@ -412,10 +397,10 @@
     {
      "tipo": "tabella",
      "intestazione": [
-      "Carta",
-      "Che aspetto ha",
-      "Colore adatto",
-      "Cosa ottieni"
+      "Stato della carta",
+      "Aspetto",
+      "Consistenza adatta",
+      "Risultato"
      ],
      "righe": [
       {
@@ -423,7 +408,7 @@
         "bagnata",
         "lucida, senza pozzanghere",
         "tè o latte, tutti a consistenza simile",
-        "il colore si allarga e si fonde: fondi, passaggi morbidi"
+        "il colore si espande e si fonde: fondi e passaggi morbidi"
        ],
        "fonti": [
         "wf8",
@@ -447,9 +432,9 @@
       {
        "celle": [
         "umida, opaca",
-        "niente riflesso",
+        "nessun riflesso",
         "miele",
-        "si fonde ancora, ma si allarga poco; incisioni con la spatola"
+        "il colore si fonde ancora ma si allarga poco; incisioni con la spatola"
        ],
        "fonti": [
         "wf4",

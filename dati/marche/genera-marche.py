@@ -175,18 +175,18 @@ def pagina():
 <p class="sotto">{e(d['sottotitolo'])}</p></header>
 <nav class="salti">{salti}</nav>
 <div class="intro" id="apertura">{intro}
-<p>{e(d['criterio'])} <a href="{e(d['criterio_fonte'])}" target="_blank" rel="noopener">Il video</a>.</p></div>
+<p>{e(d['criterio'])} <a href="{e(d['criterio_fonte'])}" target="_blank" rel="noopener">Il video su YouTube ↗</a></p></div>
 <p class="legenda">{e(d['nota_trasparenza'])} I nomi comuni e i pigmenti della tavolozza sono quelli della sezione
 <a href="../colori/#tavolozza">Teoria dei colori</a>.</p>
 {chr(10).join(sezioni)}
 <section class="cap" id="stesso-nome"><h2>Stesso nome, pigmenti diversi</h2>
 <p>Esempi presi dalle tabelle qui sopra; tra parentesi quadre le serie da cui vengono.</p><ul class="voci">{stesso}</ul></section>
 <section class="cap" id="etichetta"><h2>Cosa guardare sull'etichetta</h2>
-<p>Le voci che le pagine ufficiali usate qui riportano per ogni colore:</p><ul class="voci">{etich}</ul></section>
+<p>Le voci che le pagine ufficiali usate qui riportano:</p><ul class="voci">{etich}</ul></section>
 <section class="cap" id="fonti"><h2>Fonti</h2>
 <p>Ogni riga delle tabelle ha il link alla pagina ufficiale del tubetto e la data di controllo. Le tabelle generali:</p>
 <ol class="fonti">{fonti}</ol></section>
-<footer>Quaderno di acquerello · Marche e tubetti · dati controllati il {e(data_it(d['data']))}.</footer>
+<footer>Quaderno di acquerello · Marche e tubetti · testi del {e(data_it(d['data']))}.</footer>
 </body>
 </html>
 """

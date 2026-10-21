@@ -1,63 +1,27 @@
-// Cloudflare Pages Function: Assistente di studio sull'acquerello basato su Gemini 4 Argon
-// Accesso tramite email con limite di 5 domande gratuite per utente (salvate su Cloudflare D1).
+// Cloudflare Pages Function: assistente del Quaderno di acquerello basato su Gemini.
+// Senza email e senza archivio: 5 domande a settimana per connessione e un tetto complessivo
+// giornaliero, contati su D1 con un'impronta dell'indirizzo IP calcolata con una chiave segreta.
+// Domande e risposte non si conservano. Il prompt di sistema si genera dai dati del sito
+// (scripts/genera-sito.py scrive lib/prompt-chat.js).
+
+import { PROMPT_SISTEMA } from "../../lib/prompt-chat.js";
 
 const MODELLO = "gemini-4-argon";
-const LIMITE_DEFAULT = 5;
-const LIMITE_IP_GIORNALIERO = 10;
+const LIMITE_SETTIMANALE = 5;
+const LIMITE_GIORNALIERO = 50;
+const BYTE_MASSIMI = 12000;
+const GIORNI_CONSERVAZIONE = 14;
 
-const DOMINI_BLOCCATI = new Set([
-  "mailinator.com",
-  "tempmail.com",
-  "10minutemail.com",
-  "guerrillamail.com",
-  "yopmail.com",
-  "trashmail.com",
-  "sharklasers.com",
-  "example.com",
-  "test.com",
-]);
-
-const PROMPT_SISTEMA = `Sei il consulente tecnico-didattico del «Quaderno di acquerello» (https://app-acquerello.pages.dev), un repertorio metodologico ad accesso aperto — in fase di sviluppo e progressiva estensione — dedicato allo studio sistematico della pittura ad acquerello su formati di studio ridotti (A5, 148 × 210 mm).
-
-Conosci in dettaglio l'impianto teorico e operativo del Quaderno:
-1. Sezione «Principi generali» (/principi/):
-   - I 3 gradi di diluizione della miscela in tavolozza (scala di Zbukvic): «tè» (elevata frazione acquosa e minima concentrazione di pigmento, per campiture atmosferiche, cieli e prime velature di fondo), «latte» (rapporto equilibrato fra acqua e legante/pigmento, scorrevole ma coprente, per i valori tonali intermedi e la definizione delle masse), «miele» o burro ammorbidito (minima frazione d'acqua e massima densità di pigmento, per gli accenti scuri finali, le ramificazioni e per intervenire su supporto umido senza innescare riflussi d'acqua).
-   - I 3 stati igrometrici della carta in cotone (300 g/m²): «bagnata» (velo d'acqua superficiale continuo a riflessione speculare, privo di ristagni localizzati), «umida» (fase di transizione in cui il riflesso speculare è appena scomparso e la superficie appare satinata e fredda al tatto: finestra operativa ottimale per depositare miscele dense a margini morbidi, applicare cloruro di sodio o incidere a sgraffito), «asciutta» (fibre stabilizzate, per velature a bordi netti e stesure a pennello scarico / drybrush).
-   - Principio idrodinamico contro le fioriture (riflussi / backruns): non introdurre mai su una campitura in fase di asciugatura un pennello con carica idrica superiore a quella del supporto; su carta umida si interviene esclusivamente con miscela più concentrata (consistenza «latte» o «miele») o con pennello parzialmente scaricato su carta assorbente.
-
-2. Sezione «Pittura in studio ed en plein air» (/studio-plein-air/):
-   - Confronto operativo tra lavoro in studio (cinetica di asciugatura controllata, tavolozza estesa da banco con pigmenti di comodità pronti come verde vescica, verde oliva, ocra gialla PY43, terra di Siena naturale PBr7, turchese di cobalto, blu di Prussia PB27, indaco, grigio di Payne, seppia; dotazione completa di pennelli e strumenti) e pittura all'aperto en plein air (evaporazione rapida, sintesi esecutiva, dotazione tascabile e tavolozza ristretta a 6 pigmenti).
-   - Protocollo di sperimentazione su campioni in formato A5 (148 × 210 mm, 100% cotone 300 g/m² grana fina, vincolati con nastro di carta su tutti i quattro lati).
-   - Prontuario completo delle 12 miscele fondamentali (M1..M12) ottenibili dai 6 pigmenti di base e protocollo delle 3 prove di bilanciamento.
-
-3. Sezione «Teoria del colore, ottica dei pigmenti e calcolatore» (/colori/):
-   - Spazio colorimetrico di Munsell: Tinta (Hue), Valore tonale (Value, governato nell'acquerello dalla diluizione e dalla riflettanza della carta bianca), Croma (Chroma / saturazione).
-   - Sintesi sottrattiva e modello di Kubelka-Munk: la miscelazione fisica di più pigmenti riduce la riflettanza selettiva e abbassa il croma; per preservare la luminosità è spesso preferibile la sovrapposizione ottica per velature trasparenti su strato asciutto.
-   - Tavolozza essenziale a 6 pigmenti (configurazione per lo studio dal vero e il controllo rigoroso delle mescolanze), identificati sempre tramite denominazione tecnica e codice Colour Index:
-     1) Giallo limone (PY175, benzimidazolone semitrasparente a dominante fredda)
-     2) Blu ceruleo / ftalo sostituto (PB15 nelle serie studio, oppure PB35/PB36 nelle serie professionali, granitura e potere tingente differenti)
-     3) Cremisi / Rosso profondo (PR206, PV19 o PR179, carminio/perilene trasparente)
-     4) Terra di Siena bruciata (PR101, ossido di ferro sintetico trasparente a dominante arancio-mattone)
-     5) Terra d'ombra bruciata (PBr7 o PBr7+PY42, ossido di ferro bruno che in combinazione complementare con l'oltremare genera grigi neutri e neri cromatici profondi)
-     6) Blu oltremare (PB29, alluminosilicato complesso a dominante caldo-violacea, fortemente granulante)
-
-4. Sezione «Merceologia e comparazione delle serie commerciali» (/marche/):
-   - Analisi comparativa tra Winsor & Newton Cotman, Winsor & Newton Professional, Royal Talens Van Gogh, Daniel Smith Extra Fine, Schmincke Horadam e Maimeri Blu: la scelta tecnica si fonda sul codice del pigmento (Colour Index: PY, PR, PB, PBr, PG, PV), sul grado di trasparenza, sulla solidità alla luce (ASTM) e sul comportamento di granulazione, mai sulla sola denominazione commerciale.
-
-5. Sezione «Repertorio dei soggetti pittorici» (/soggetti/) e modulo «S1 · Morfologia degli alberi» (/alberi/):
-   - Raccoglie le monografie dedicate ai singoli temi pittorici affrontati nel corso. Il primo modulo completo pubblicato è «S1 · Alberi, conifere e masse arbustive» (/alberi/, primo argomento affrontato nel corso), mentre i moduli successivi in preparazione riguardano «S2 · Cieli e formazioni nuvolose», «S3 · Morfologia botanica e fiori», «S4 · Specchi d'acqua e riflessi», «S5 · Masse rocciose e rilievi», «S6 · Architetture e scorci urbani».
-   - Il modulo S1 (/alberi/) analizza 6 tipologie arboree e vegetazionali articolate in 24 modalità esecutive tratte da dimostrazioni filmate (ciascuna corredata da tavola sinottica in 3 fasi e rimando temporizzato al secondo esatto):
-     * A1: Abeti e conifere in quinte compatte (costruzione a spina di pesce col ventre del pennello tondo, apertura a ventaglio della punta tra le dita per texture frastagliate, impiego del pennello a ventaglio, profilatura in negativo dei fusti chiari).
-     * A2: Conifere d'alto fusto a chioma rada (stratificazione di palchi orizzontali distanziati lasciando visibile il fondo atmosferico, tocco di piatto con pennello tondo, stesura a pennello scarico di fianco sulla grana della carta, estrazione del fusto per asportazione d'umidità con l'angolo del pennello piatto).
-     * A3: Latifoglie a chioma espansa in veste autunnale (fusione bagnato su bagnato dal giallo limone alla terra di Siena bruciata su fondo pre-inumidito o internamente alla sagoma umida, risalto per contrasto simultaneo contro quinte scure di conifere, incisione dei fusti per sgraffito con spigolo rigido).
-     * A4: Quinte arbustive, siepi e cespugli nel paesaggio (fascia cromatica autunnale ancorata a un'ombra basale scura, raccordo selettivo del margine inferiore col pennello piatto umido verso il piano erboso, modellazione volumetrica a cupola per velature successive, isolamento in negativo delle fronde illuminate, ombra portata fredda sul terreno).
-     * A5: Fusti spogli, betulle e ramificazioni invernali (riserva dei fusti sottili tramite tiralinee e fluido mascherante con ombreggiatura cilindrica monolaterale, riserva rettilinea mediante nastro di carta strappato longitudinalmente, tessitura cristallina per cristallizzazione salina su campitura satinata, modellazione per risparmio in negativo sfumata con acqua pura, velatura di ramificazioni minute col pennello a ventaglio).
-     * A6: Ramificazioni minute e fogliame brinato in primo piano (tracciamento dei rami dal basso verso l'alto con riduzione progressiva della pressione e biforcazioni ad angolo acuto, campitura delle foglie a contrasto con risparmio di un lembo chiaro marginale ammorbidito a pennello umido).
-
-Criteri di redazione delle risposte:
-- Rispondi SEMPRE in italiano con un registro tecnico-didattico professionale, preciso, sobrio e autorevole, privo di espressioni colloquiali o infantili.
-- Mantieni le risposte concise e strutturate (circa 120-220 parole), fornendo indicazioni esecutive verificabili sul formato di studio A5: grado di diluizione (tè, latte, miele), stato igrometrico del supporto (bagnato, umido satinato, asciutto), tipologia di pennello, dinamica del gesto e codici Colour Index dei pigmenti coinvolti.
-- Rispondi ESCLUSIVAMENTE a quesiti attinenti alla pittura ad acquerello, al disegno preparatorio, alla colorimetria, ai materiali pittorici (carta, pennelli, pigmenti, leganti) o alla consultazione di questo repertorio. Qualora l'utente ponga domande estranee alla disciplina pittorica, declina con una formula breve e formale ricordando l'ambito specialistico dell'assistente.`;
+// Gli stessi indirizzi delle pagine del sito: scripts/genera-sito.py si ferma se non coincidono.
+const PAGINE_VALIDE = [
+  "/",
+  "/principi/",
+  "/studio-plein-air/",
+  "/colori/",
+  "/marche/",
+  "/soggetti/",
+  "/alberi/"
+];
 
 function rispostaJson(dati, stato = 200) {
   return new Response(JSON.stringify(dati), {
@@ -69,262 +33,202 @@ function rispostaJson(dati, stato = 200) {
   });
 }
 
-function validaEmail(emailRaw) {
-  const email = String(emailRaw || "").trim().toLowerCase();
-  if (email.length < 6 || email.length > 120) return null;
-  const re = /^[a-z0-9._%+-]+@([a-z0-9.-]+\.[a-z]{2,})$/;
-  const m = email.match(re);
-  if (!m) return null;
-  const dominio = m[1];
-  if (DOMINI_BLOCCATI.has(dominio)) return null;
-  return email;
+function esadecimale(buffer) {
+  return Array.from(new Uint8Array(buffer), (b) => b.toString(16).padStart(2, "0")).join("");
 }
 
-async function hashTesto(str) {
-  const buf = new TextEncoder().encode(str);
-  const digest = await crypto.subtle.digest("SHA-256", buf);
-  return Array.from(new Uint8Array(digest))
-    .slice(0, 12)
-    .map((b) => b.toString(16).padStart(2, "0"))
-    .join("");
+async function sha256(testo) {
+  return esadecimale(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(testo)));
 }
 
-async function assicuraTabelle(db) {
-  await db
-    .prepare(
-      `CREATE TABLE IF NOT EXISTS utenti_chat (
-        email TEXT PRIMARY KEY,
-        domande_usate INTEGER NOT NULL DEFAULT 0,
-        limite_domande INTEGER NOT NULL DEFAULT 5,
-        primo_accesso TEXT NOT NULL,
-        ultimo_accesso TEXT NOT NULL
-      )`
-    )
+async function chiaveHmac(segreto) {
+  return crypto.subtle.importKey(
+    "raw",
+    new TextEncoder().encode("firma-cronologia|" + segreto),
+    { name: "HMAC", hash: "SHA-256" },
+    false,
+    ["sign"]
+  );
+}
+
+// Firma di una coppia domanda-risposta: il browser la rimanda con la cronologia, e il server
+// accetta come risposte del modello solo quelle che ha firmato lui.
+async function firma(chiave, domanda, risposta) {
+  const dati = new TextEncoder().encode(domanda + "\u0000" + risposta);
+  return esadecimale(await crypto.subtle.sign("HMAC", chiave, dati));
+}
+
+// Lunedì della settimana corrente (UTC), che fa da chiave del periodo settimanale.
+function settimana(adesso) {
+  const d = new Date(Date.UTC(adesso.getUTCFullYear(), adesso.getUTCMonth(), adesso.getUTCDate()));
+  d.setUTCDate(d.getUTCDate() - ((d.getUTCDay() + 6) % 7));
+  return d.toISOString().slice(0, 10);
+}
+
+async function conCreazione(db, eseguiQuery) {
+  try {
+    return await eseguiQuery();
+  } catch (err) {
+    if (!/no such table/i.test(String(err && err.message))) throw err;
+    await db
+      .prepare(
+        "CREATE TABLE IF NOT EXISTS contatori (chiave TEXT NOT NULL, giorno TEXT NOT NULL, " +
+          "n INTEGER NOT NULL, PRIMARY KEY (chiave, giorno))"
+      )
+      .run();
+    return await eseguiQuery();
+  }
+}
+
+// Incrementa il contatore solo se è sotto il limite, in una sola istruzione: due richieste
+// simultanee non possono superarlo. Restituisce null quando il limite è raggiunto.
+function incrementa(db, chiave, periodo, limite) {
+  const sql =
+    "INSERT INTO contatori (chiave, giorno, n) VALUES (?, ?, 1) " +
+    "ON CONFLICT (chiave, giorno) DO UPDATE SET n = n + 1 WHERE n < ? RETURNING n";
+  return conCreazione(db, () => db.prepare(sql).bind(chiave, periodo, limite).first());
+}
+
+function rilascia(db, chiave, periodo) {
+  return db
+    .prepare("UPDATE contatori SET n = n - 1 WHERE chiave = ? AND giorno = ? AND n > 0")
+    .bind(chiave, periodo)
     .run();
-  await db
-    .prepare(
-      `CREATE TABLE IF NOT EXISTS messaggi_chat (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        email TEXT NOT NULL,
-        ip_hash TEXT,
-        pagina TEXT,
-        domanda TEXT NOT NULL,
-        risposta TEXT NOT NULL,
-        token_in INTEGER,
-        token_out INTEGER,
-        creato_il TEXT NOT NULL
-      )`
-    )
-    .run();
+}
+
+async function usate(db, chiave, periodo) {
+  const riga = await conCreazione(db, () =>
+    db.prepare("SELECT n FROM contatori WHERE chiave = ? AND giorno = ?").bind(chiave, periodo).first()
+  );
+  return riga ? riga.n : 0;
+}
+
+// Cancella i contatori con più di GIORNI_CONSERVAZIONE giorni. La tabella è la stessa di
+// suggerimento.js, che la pulisce con la stessa regola. Il «giorno» dei contatori settimanali è il
+// lunedì: con la soglia a 13 giorni nessuna riga resta oltre 14 giorni dalla sua creazione.
+function cancellaVecchi(db, adesso) {
+  const soglia = new Date(adesso.getTime() - (GIORNI_CONSERVAZIONE - 1) * 86400 * 1000).toISOString().slice(0, 10);
+  return conCreazione(db, () => db.prepare("DELETE FROM contatori WHERE giorno < ?").bind(soglia).run());
 }
 
 export async function onRequestPost(context) {
   const db = context.env.DB;
   const apiKey = context.env.GEMINI_API_KEY;
-
-  if (!db) {
-    return rispostaJson(
-      { ok: false, errore: "Database della chat non ancora collegato sul server." },
-      503
-    );
+  if (!db || !apiKey) {
+    return rispostaJson({ ok: false, errore: "L'assistente non è configurato sul server." }, 503);
   }
 
+  const grezzo = await context.request.text();
+  if (grezzo.length > BYTE_MASSIMI) {
+    return rispostaJson({ ok: false, errore: "Richiesta troppo lunga." }, 413);
+  }
   let body;
   try {
-    body = await context.request.json();
+    body = JSON.parse(grezzo);
   } catch {
+    body = null;
+  }
+  if (!body || typeof body !== "object" || Array.isArray(body)) {
     return rispostaJson({ ok: false, errore: "Formato della richiesta non valido." }, 400);
   }
 
-  const email = validaEmail(body.email);
-  if (!email) {
-    return rispostaJson(
-      { ok: false, errore: "Inserisci un indirizzo email valido per accedere alla chat." },
-      400
-    );
+  const adesso = new Date();
+  const periodo = settimana(adesso);
+  const giorno = adesso.toISOString().slice(0, 10);
+  const ip = context.request.headers.get("CF-Connecting-IP") || "locale";
+  const sale = context.env.SALE_IP || "chat:" + apiKey;
+  const chiaveIp = "chat-ip:" + (await sha256(`${sale}|${periodo}|${ip}`)).slice(0, 24);
+
+  if (body.azione === "stato") {
+    // Lo stato si chiede a ogni pagina aperta: è il momento della pulizia.
+    await cancellaVecchi(db, adesso);
+    const n = await usate(db, chiaveIp, periodo);
+    return rispostaJson({ ok: true, limite: LIMITE_SETTIMANALE, rimanenti: Math.max(0, LIMITE_SETTIMANALE - n) });
   }
-
-  await assicuraTabelle(db);
-  const oraIso = new Date().toISOString();
-
-  // Recupera o crea la scheda dell'utente
-  let utente = await db
-    .prepare("SELECT email, domande_usate, limite_domande FROM utenti_chat WHERE email = ?")
-    .bind(email)
-    .first();
-
-  if (!utente) {
-    await db
-      .prepare(
-        "INSERT INTO utenti_chat (email, domande_usate, limite_domande, primo_accesso, ultimo_accesso) VALUES (?, 0, ?, ?, ?)"
-      )
-      .bind(email, LIMITE_DEFAULT, oraIso, oraIso)
-      .run();
-    utente = { email, domande_usate: 0, limite_domande: LIMITE_DEFAULT };
-  } else {
-    await db
-      .prepare("UPDATE utenti_chat SET ultimo_accesso = ? WHERE email = ?")
-      .bind(oraIso, email)
-      .run();
-  }
-
-  const azione = String(body.azione || "chiedi");
-  if (azione === "stato") {
-    const rimanenti = Math.max(0, utente.limite_domande - utente.domande_usate);
-    return rispostaJson({
-      ok: true,
-      email: utente.email,
-      usate: utente.domande_usate,
-      limite: utente.limite_domande,
-      rimanenti,
-    });
-  }
-
-  // Azione: chiedi una domanda a Gemini 4 Argon
-  if (!apiKey) {
-    return rispostaJson(
-      { ok: false, errore: "Chiave del modello AI non configurata sul server." },
-      503
-    );
-  }
-
-  if (utente.domande_usate >= utente.limite_domande) {
-    return rispostaJson(
-      {
-        ok: false,
-        esaurite: true,
-        usate: utente.domande_usate,
-        limite: utente.limite_domande,
-        rimanenti: 0,
-        errore:
-          "Sono stati utilizzati tutti i 5 quesiti gratuiti associati a questo indirizzo email. Tutte le sezioni del repertorio e il simulatore colorimetrico restano liberamente consultabili.",
-      },
-      429
-    );
+  if (body.azione !== "chiedi") {
+    return rispostaJson({ ok: false, errore: "Azione non valida." }, 400);
   }
 
   const domanda = String(body.domanda || "").trim().slice(0, 1000);
   if (domanda.length < 4) {
-    return rispostaJson(
-      { ok: false, errore: "Formula un quesito più circostanziato (almeno 4 caratteri)." },
-      400
-    );
+    return rispostaJson({ ok: false, errore: "Scrivi una domanda un po' più precisa (almeno 4 caratteri)." }, 400);
   }
+  const paginaRaw = String(body.pagina || "/").trim();
+  const pagina = PAGINE_VALIDE.includes(paginaRaw) ? paginaRaw : "/";
 
-  // Controllo anti-abuso per IP nelle ultime 24 ore
-  const ipRaw = context.request.headers.get("CF-Connecting-IP") || "local";
-  const ipHash = await hashTesto("acquerello-ip-" + ipRaw);
-  const ieriIso = new Date(Date.now() - 86400 * 1000).toISOString();
-  const contaIp = await db
-    .prepare("SELECT COUNT(*) AS n FROM messaggi_chat WHERE ip_hash = ? AND creato_il > ?")
-    .bind(ipHash, ieriIso)
-    .first();
-
-  if (contaIp && contaIp.n >= LIMITE_IP_GIORNALIERO) {
+  // Prima si prenota la domanda, poi si chiama il modello: se la chiamata fallisce la si restituisce.
+  const perIp = await incrementa(db, chiaveIp, periodo, LIMITE_SETTIMANALE);
+  if (!perIp) {
     return rispostaJson(
       {
         ok: false,
-        errore:
-          "È stato raggiunto il limite giornaliero di domande da questa connessione. Riprova domani.",
+        rimanenti: 0,
+        limite: LIMITE_SETTIMANALE,
+        errore: `Le ${LIMITE_SETTIMANALE} domande di questa settimana sono esaurite: si rinnovano il lunedì. Le sezioni del Quaderno e il calcolatore restano liberamente consultabili.`,
       },
       429
     );
   }
+  const complessivo = await incrementa(db, "chat-globale", giorno, LIMITE_GIORNALIERO);
+  if (!complessivo) {
+    await rilascia(db, chiaveIp, periodo);
+    return rispostaJson(
+      { ok: false, errore: "L'assistente ha raggiunto il numero massimo di domande per oggi: riprova domani." },
+      429
+    );
+  }
+  if (complessivo.n === 1) {
+    await cancellaVecchi(db, adesso);
+  }
 
-  // Costruisce i messaggi con eventuale breve cronologia della sessione (max 4 turni precedenti)
+  // Cronologia: al massimo le ultime due coppie domanda-risposta, e solo se firmate dal server.
+  const hmac = await chiaveHmac(context.env.CHIAVE_FIRMA || apiKey);
   const contents = [];
-  if (Array.isArray(body.storia)) {
-    for (const turno of body.storia.slice(-4)) {
-      if (turno && (turno.ruolo === "user" || turno.ruolo === "model") && turno.testo) {
-        contents.push({
-          role: turno.ruolo,
-          parts: [{ text: String(turno.testo).slice(0, 1200) }],
-        });
-      }
+  const storia = Array.isArray(body.storia) ? body.storia.slice(-2) : [];
+  for (const coppia of storia) {
+    if (!coppia || typeof coppia !== "object") continue;
+    const d = String(coppia.domanda || "").slice(0, 1000);
+    const r = String(coppia.risposta || "").slice(0, 4000);
+    if (!d || !r || String(coppia.firma || "") !== (await firma(hmac, d, r))) continue;
+    contents.push({ role: "user", parts: [{ text: d }] }, { role: "model", parts: [{ text: r }] });
+  }
+  contents.push({ role: "user", parts: [{ text: `[Pagina visitata: ${pagina}]\nDomanda: ${domanda}` }] });
+
+  let risposta = "";
+  try {
+    const geminiRes = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${MODELLO}:generateContent`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "x-goog-api-key": apiKey },
+      body: JSON.stringify({
+        systemInstruction: { parts: [{ text: PROMPT_SISTEMA }] },
+        contents,
+        generationConfig: { thinkingConfig: { thinkingLevel: "low" }, maxOutputTokens: 2048 },
+      }),
+    });
+    if (geminiRes.ok) {
+      const dati = await geminiRes.json();
+      const parti = (((dati.candidates || [])[0] || {}).content || {}).parts || [];
+      risposta = parti.filter((p) => p.text && !p.thought).map((p) => p.text).join("").trim();
     }
+  } catch {
+    risposta = "";
   }
-  const pagina = String(body.pagina || "/").slice(0, 80);
-  contents.push({
-    role: "user",
-    parts: [{ text: `[Pagina visitata: ${pagina}]\nDomanda: ${domanda}` }],
-  });
-
-  const urlGemini = `https://generativelanguage.googleapis.com/v1beta/models/${MODELLO}:generateContent`;
-  const geminiRes = await fetch(urlGemini, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "x-goog-api-key": apiKey,
-    },
-    body: JSON.stringify({
-      systemInstruction: { parts: [{ text: PROMPT_SISTEMA }] },
-      contents,
-      generationConfig: {
-        thinkingConfig: { thinkingLevel: "low" },
-        maxOutputTokens: 2048,
-      },
-    }),
-  });
-
-  if (!geminiRes.ok) {
-    return rispostaJson(
-      {
-        ok: false,
-        errore:
-          "L'assistente AI non è riuscito a rispondere in questo momento. La domanda non è stata scalata dal tuo conteggio: riprova tra poco.",
-      },
-      502
-    );
-  }
-
-  const datiGemini = await geminiRes.json();
-  const parti =
-    ((datiGemini.candidates || [])[0] &&
-      datiGemini.candidates[0].content &&
-      datiGemini.candidates[0].content.parts) ||
-    [];
-  const pezziTesto = [];
-  for (const p of parti) {
-    if (p.text && !p.thought) {
-      pezziTesto.push(p.text);
-    }
-  }
-  const risposta = pezziTesto.join("").trim();
   if (!risposta) {
+    await rilascia(db, chiaveIp, periodo);
+    await rilascia(db, "chat-globale", giorno);
     return rispostaJson(
-      {
-        ok: false,
-        errore: "Risposta vuota dal modello. La domanda non è stata scalata.",
-      },
+      { ok: false, errore: "L'assistente non è riuscito a rispondere in questo momento. La domanda non è stata conteggiata: riprova tra poco." },
       502
     );
   }
 
-  const uso = datiGemini.usageMetadata || {};
-  const tokenIn = uso.promptTokenCount || 0;
-  const tokenOut = (uso.candidatesTokenCount || 0) + (uso.thoughtsTokenCount || 0);
-
-  // Aggiorna contatore e salva il messaggio su D1
-  const nuoveUsate = utente.domande_usate + 1;
-  await db
-    .prepare("UPDATE utenti_chat SET domande_usate = ?, ultimo_accesso = ? WHERE email = ?")
-    .bind(nuoveUsate, oraIso, email)
-    .run();
-
-  await db
-    .prepare(
-      "INSERT INTO messaggi_chat (email, ip_hash, pagina, domanda, risposta, token_in, token_out, creato_il) VALUES (?, ?, ?, ?, ?, ?, ?, ?)"
-    )
-    .bind(email, ipHash, pagina, domanda, risposta, tokenIn, tokenOut, oraIso)
-    .run();
-
-  const rimanenti = Math.max(0, utente.limite_domande - nuoveUsate);
   return rispostaJson({
     ok: true,
     modello: MODELLO,
+    domanda,
     risposta,
-    usate: nuoveUsate,
-    limite: utente.limite_domande,
-    rimanenti,
+    firma: await firma(hmac, domanda, risposta),
+    limite: LIMITE_SETTIMANALE,
+    rimanenti: Math.max(0, LIMITE_SETTIMANALE - perIp.n),
   });
 }

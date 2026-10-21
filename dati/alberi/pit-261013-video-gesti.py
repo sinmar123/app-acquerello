@@ -445,7 +445,7 @@ def pagina():
         nel_video = (tab.get(sigla) or {}).get("nel_video", "")
         trad = (tab.get(sigla) or {}).get("traduzione", "")
         riga_trad = (f'<p class="traduzione muto">{e(trad)}</p>' if trad.startswith("(") else
-                     f'<p class="traduzione"><b>L\'autore, in sintesi:</b> {e(trad)}</p>') if trad else ""
+                     f'<p class="traduzione"><b>Dal video, in sintesi:</b> {e(trad)}</p>') if trad else ""
         yt = f"https://www.youtube.com/watch?v={vid}&t={i0}s"
         return (f'<div class="video" id="{e(sigla)}" data-passo="{e(sigla)}" data-id="{e(vid)}" data-inizio="{i0}" data-fine="{i1}">'
                 f'<button class="guarda" type="button"><span class="tri">▶</span><span class="lab">Guarda il gesto'
@@ -540,7 +540,7 @@ def pagina():
 <ul class="come">{esercizi}</ul>
 </div>
 <details class="miscele-box" id="miscele"><summary>All'aperto (en plein air): i 6 colori di base e le 12 miscele (M1-M12) per dipingere con una scatola leggera</summary>
-<p class="nota-studio-aperto">In studio si possono usare liberamente i tubetti indicati nelle singole modalità; all'aperto, o per esercitarsi a ricavare tutto da pochi tubetti, bastano i 6 colori di base e le 12 miscele qui sotto, con cui si preparano i verdi, i bruni e i grigi degli esempi. Il metodo completo, coi foglietti A5, è nella sezione <a href="../studio-plein-air/">Studio ed en plein air</a>.</p>
+<p class="nota-studio-aperto">All'aperto, o per esercitarsi a ricavare tutto da pochi tubetti, bastano i 6 colori di base e le 12 miscele qui sotto, con cui si preparano i verdi, i bruni e i grigi degli esempi. Il metodo completo, coi foglietti A5, è nella sezione <a href="../studio-plein-air/">Studio ed en plein air</a>.</p>
 {sei_colori}
 {riquadri}
 <table class="mix">{miscele}</table></details>
@@ -548,11 +548,10 @@ def pagina():
 <h3>Come leggere le infografiche e usare i video</h3>
 <p class="legenda"><b>Stato della carta nelle fasi dell'infografica:</b> {pill('bagnata')} lucida d'acqua, il colore corre · {pill('umida')} opaca, i bordi si fondono · {pill('asciutta')} il tratto resta netto. <a href="../principi/#carta-umidita">Gli stati della carta, momenti di mezzo compresi, nei Principi generali</a>.</p>
 <ul class="come">
-<li>Ogni modalità presenta prima <b>cosa propone l'autore</b> (approccio, colori e pennelli), poi l'<b>infografica in 3 fasi</b> costruita su quel video e infine il <b>lettore video</b>.</li>
-<li>Tocca <b>▶ Guarda il gesto</b>: il video parte nel punto giusto e si ferma da solo alla fine del passaggio.</li>
-<li><b>Da capo</b> fa ripartire l'estratto, <b>Lento</b> lo porta a metà velocità per studiare il movimento della mano, <b>Ripeti</b> lo ripete in continuo mentre provi sul foglietto.</li>
+<li><b>▶ Guarda il gesto</b> fa partire il video nel punto giusto e lo ferma da solo alla fine del passaggio.</li>
+<li><b>Da capo</b> fa ripartire l'estratto, <b>Lento</b> lo porta a metà velocità per studiare il movimento della mano, <b>Ripeti</b> lo ripete in continuo mentre si prova sul foglietto.</li>
 <li><b>YouTube ↗</b> apre lo stesso punto nell'app o nel sito di YouTube.</li>
-<li>Le righe <b>L'autore, in sintesi</b> riassumono in italiano quello che l'autore dice in quel passaggio: sono sintesi preparate con l'aiuto dell'intelligenza artificiale, non trascrizioni, e la fonte resta il video.</li>
+<li>Le righe <b>Dal video, in sintesi</b> riassumono in italiano quello che l'autore o l'autrice dice in quel passaggio: sono sintesi preparate con l'aiuto dell'intelligenza artificiale, non trascrizioni, e la fonte resta il video.</li>
 </ul>
 </div>
 <h3>I sei esempi di alberi e arbusti ({tot_modalita} modalità nei video)</h3>
@@ -561,7 +560,7 @@ def pagina():
 {"".join(sezioni)}
 <footer><h2>I video</h2><p>I video restano dei loro autori: la pagina li mostra col lettore di YouTube, senza copiarli. Grazie a:</p>
 <ul class="crediti">{crediti}</ul>
-<p>Le illustrazioni in testa a ciascun esempio sono generate con l'intelligenza artificiale (Nano Banana 2.1, modello di Google) per mostrare il gesto: non sono acquerelli dipinti a mano né fotogrammi dei video. Le 24 infografiche in 3 fasi sono disegnate per questa guida, una per ogni modalità. Tocca un'illustrazione per ingrandirla.</p></footer>"""
+<p>Le illustrazioni in testa a ciascun esempio sono generate con l'intelligenza artificiale (Nano Banana 2.1, modello di Google) per mostrare il gesto: non sono acquerelli dipinti a mano né fotogrammi dei video. Le 24 infografiche in 3 fasi sono disegnate per questa guida, una per ogni modalità. Le illustrazioni si ingrandiscono con un tocco.</p></footer>"""
     html_ = f"""<!doctype html>
 <html lang="it"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">

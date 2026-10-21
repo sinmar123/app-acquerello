@@ -11,7 +11,7 @@ import sys
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
 
-WRANGLER = "wrangler@4.141.0"
+WRANGLER = "wrangler@4.151.3"
 
 
 def git(*argomenti):

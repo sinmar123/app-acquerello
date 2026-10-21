@@ -1,20 +1,20 @@
 {
-  "data": "2026-10-18",
+  "data": "2026-10-21",
   "nota": "Testi della sezione Teoria dei colori. Ogni affermazione rimanda alle fonti elencate in fondo; i testi delle fonti sono citati e collegati, non copiati. I campi possono contenere semplici tag html (b, i, a, br).",
   "titolo": "Teoria dei colori per l'acquerello",
-  "sottotitolo": "Tinta, valore e croma secondo Munsell, perché i pigmenti non si mescolano come le luci, cosa cambia con l'acqua e la carta, i sei tubetti della tavolozza e un calcolatore di miscele che gira tutto nel browser.",
+  "sottotitolo": "Tinta, valore e croma secondo Munsell; perché i pigmenti non si mescolano come le luci; il ruolo dell'acqua e della carta; i sei colori della tavolozza ridotta e un calcolatore di miscele.",
   "capitoli": [
     {
       "id": "munsell",
       "breve": "Munsell",
       "titolo": "1. Tinta, valore, croma",
       "paragrafi": [
-        "Albert Munsell (1858-1918), pittore e insegnante di Boston, propose nel 1905 (<i>A Color Notation</i>) di descrivere ogni colore di un oggetto con tre misure indipendenti, scelte in modo che passi uguali si vedano come differenze uguali. Il suo atlante del 1915 fu rivisto nel 1943 dalla Optical Society of America (la «renotation»), che lo collegò alla colorimetria della CIE: è la base delle edizioni di oggi.",
-        "<b>Tinta</b> (hue): la famiglia del colore. Munsell usa 5 tinte principali, rosso R, giallo Y, verde G, blu B, porpora P, e 5 intermedie, YR, GY, BG, PB, RP. Ognuna si divide in passi (2,5, 5, 7,5, 10): nell'atlante le tinte sono 40.",
-        "<b>Valore</b> (value): quanto il colore è chiaro o scuro, da 0 (nero ideale) a 10 (bianco ideale). I grigi si scrivono N1, N2... N9. Il valore Munsell corrisponde circa alla chiarezza CIELAB L* divisa per 10: un grigio N5 ha L* intorno a 50.",
-        "<b>Croma</b> (chroma): quanto il colore si stacca dal grigio dello stesso valore. Un grigio ha croma 0; non c'è un massimo fisso, perché il croma più alto che si può ottenere cambia da tinta a tinta e da valore a valore. Per questo il «solido» di Munsell non è una sfera ma una forma irregolare, e ogni tavolozza ne copre solo una parte.",
-        "La notazione si scrive <b>tinta valore/croma</b>: per esempio <b>5PB 3/10</b> è un blu violaceo scuro e intenso, <b>10YR 7/4</b> un ocra chiaro e smorzato.",
-        "Per chi dipinge, il valore è la misura che conta di più: se i valori sono giusti, il disegno regge anche con tinte approssimate. Nell'acquerello il valore si alza con l'acqua, non col bianco."
+        "Albert Munsell (1858-1918), pittore e insegnante di Boston, propose nel 1905 (<i>A Color Notation</i>) di descrivere il colore di ogni oggetto con tre grandezze indipendenti, scelte in modo che passi uguali corrispondano a differenze percepite uguali. Il suo atlante del 1915 fu rivisto nel 1943 dalla Optical Society of America (la «renotation»), che lo collegò alla colorimetria della CIE: è la base delle edizioni attuali.",
+        "<b>Tinta</b> (hue): la famiglia del colore. Munsell usa 5 tinte principali, rosso R, giallo Y, verde G, blu B, porpora P, e 5 intermedie, YR, GY, BG, PB, RP. Ciascuna si divide in quattro passi (2,5, 5, 7,5, 10), per un totale di 40 tinte nell'atlante.",
+        "<b>Valore</b> (value): quanto il colore è chiaro o scuro, da 0 (nero ideale) a 10 (bianco ideale). I grigi si indicano con N1, N2... N9. Il valore Munsell corrisponde all'incirca alla chiarezza CIELAB L* divisa per 10: un grigio N5 ha L* intorno a 50.",
+        "<b>Croma</b> (chroma): quanto il colore si discosta dal grigio dello stesso valore. Un grigio ha croma 0; un massimo fisso non esiste, perché il croma più alto ottenibile cambia da tinta a tinta e da valore a valore. Per questo il «solido» di Munsell ha una forma irregolare, e ogni tavolozza ne copre solo una parte.",
+        "La notazione si scrive <b>tinta valore/croma</b>: <b>5PB 3/10</b>, per esempio, è un blu violaceo scuro e intenso, <b>10YR 7/4</b> un ocra chiaro e smorzato.",
+        "Per chi dipinge il valore è la grandezza più importante: con i valori giusti l'immagine resta leggibile anche se le tinte sono approssimate. Nell'acquerello il valore si alza aggiungendo acqua, non bianco."
       ],
       "fonti": [
         "wiki-munsell",
@@ -27,10 +27,10 @@
       "breve": "Luce e pigmento",
       "titolo": "2. Luce e pigmento",
       "paragrafi": [
-        "<b>Mescolanza additiva</b>: le luci colorate si sommano. Su uno schermo rosso, verde e blu accesi insieme danno il bianco, rosso e verde danno il giallo. Più luce si aggiunge, più il risultato è chiaro.",
-        "<b>Mescolanza sottrattiva</b>: un pigmento assorbe una parte della luce e rimanda il resto. Mescolando due pigmenti, ognuno toglie la sua parte, e torna all'occhio solo la luce che nessuno dei due ha assorbito. Il risultato è più scuro dei due colori di partenza e di solito meno intenso.",
-        "<b>Perché la ruota dei colori non basta.</b> Il colore che vediamo è un riassunto: due pigmenti che sembrano uguali possono assorbire in modo diverso le varie lunghezze d'onda, e allora si mescolano in modo diverso. Bruce MacEvoy (handprint.com) lo chiama l'errore della ruota dei colori: la posizione di un pigmento sulla ruota non predice con sicurezza cosa darà in miscela, né quanto la miscela perderà di intensità. Conviene sempre provare sul foglietto.",
-        "<b>Il modello del calcolatore.</b> La teoria di Kubelka e Munk (1931) descrive uno strato di colore con due grandezze per ogni lunghezza d'onda: quanto assorbe (K) e quanto diffonde (S). Nella versione più semplice, «a una costante», di ogni pigmento basta il rapporto K/S: il K/S di una miscela è la media dei K/S dei componenti, pesata con le quantità. Il calcolatore fa questo conto su 38 bande dello spettro, da 380 a 750 nanometri, e poi riconverte in un colore per lo schermo."
+        "<b>Mescolanza additiva</b>: le luci colorate si sommano. Su uno schermo, rosso, verde e blu accesi insieme danno il bianco; rosso e verde danno il giallo. Ogni luce aggiunta schiarisce il risultato.",
+        "<b>Mescolanza sottrattiva</b>: un pigmento assorbe una parte della luce e rinvia il resto. In una miscela ciascun pigmento sottrae la propria parte, e all'occhio torna solo la luce che nessuno dei due ha assorbito: il risultato è più scuro del più chiaro dei due colori e, di solito, meno intenso.",
+        "<b>I limiti della ruota dei colori.</b> Il colore percepito è una sintesi: due pigmenti che appaiono uguali possono assorbire in modo diverso le varie lunghezze d'onda, e quindi comportarsi in modo diverso in miscela. Bruce MacEvoy (handprint.com) parla dell'errore della ruota dei colori: la posizione di un pigmento sulla ruota non predice con sicurezza il risultato della miscela, né quanto la miscela perderà d'intensità. La prova sul foglietto resta indispensabile.",
+        "<b>Il modello del calcolatore.</b> La teoria di Kubelka e Munk (1931) descrive uno strato di colore con due grandezze per ogni lunghezza d'onda: l'assorbimento (K) e la diffusione (S). Nella versione più semplice, detta «a una costante», di ogni pigmento basta il rapporto K/S, e il K/S di una miscela è la media dei K/S dei componenti pesata con le quantità. Il calcolatore esegue questo conto su 38 bande dello spettro, da 380 a 750 nanometri, con la correzione delle quantità descritta sotto il calcolatore, e riconverte il risultato in un colore per lo schermo."
       ],
       "fonti": [
         "wiki-additiva",
@@ -45,10 +45,10 @@
       "breve": "L'acquerello",
       "titolo": "3. L'acquerello: acqua, carta, velature",
       "paragrafi": [
-        "Nell'acquerello il bianco è la carta. Un velo di colore trasparente lascia passare la luce, che arriva alla carta, rimbalza e riattraversa il velo: per schiarire si aggiunge acqua, così sulla carta arriva meno pigmento.",
-        "<b>Consistenze e carta.</b> Le tre consistenze della miscela (tè, latte, miele), gli stati della carta (asciutta, umida, bagnata e i momenti di mezzo) e come abbinarli sono spiegati nella sezione <a href=\"../principi/#consistenze\">Principi generali</a>, con le fonti.",
-        "<b>Mescolare o velare.</b> Si può mescolare in tavolozza, e allora i pigmenti stanno nello stesso strato; oppure velare, cioè stendere un colore sopra un altro già asciutto, così la luce passa per due filtri uno sopra l'altro. Con pigmenti trasparenti i due risultati si somigliano, ma non sono uguali. Con quelli opachi, come il ceruleo e la terra d'ombra bruciata nel tubetto della tavolozza, lo strato sopra copre di più e l'ordine delle velature cambia il risultato.",
-        "<b>Granulazione.</b> Alcuni pigmenti, come l'oltremare PB29, si depositano negli avvallamenti della carta e lasciano una trama a puntini. È uno degli effetti che nessun calcolatore vede."
+        "Nell'acquerello il bianco è quello della carta. Un velo di colore trasparente lascia passare la luce, che raggiunge la carta, viene riflessa e riattraversa il velo: per schiarire si aggiunge acqua, così sulla carta si deposita meno pigmento.",
+        "<b>Consistenze e carta.</b> Le tre consistenze della miscela (tè, latte, miele), gli stati della carta (asciutta, umida, bagnata e i momenti intermedi) e il modo di abbinarli sono trattati nella sezione <a href=\"../principi/#consistenze\">Principi generali</a>, con le fonti.",
+        "<b>Mescolare o velare.</b> Mescolando in tavolozza, i pigmenti stanno nello stesso strato; velando, cioè stendendo un colore sopra un altro già asciutto, la luce attraversa due filtri sovrapposti. Con pigmenti trasparenti i due risultati si somigliano, senza essere uguali. Con quelli opachi, come il ceruleo e la terra d'ombra bruciata della tavolozza, lo strato superiore copre di più e l'ordine delle velature cambia il risultato.",
+        "<b>Granulazione.</b> Alcuni pigmenti, come l'oltremare PB29, si depositano negli avvallamenti della carta e lasciano una trama a puntini, che il calcolatore non riproduce."
       ],
       "fonti": [
         "handprint-mescolanza",
@@ -60,8 +60,8 @@
       "breve": "La tavolozza",
       "titolo": "4. La tavolozza ridotta: sei colori di base",
       "paragrafi": [
-        "Sono i sei colori della tavolozza ridotta proposta nel Quaderno (utile per dipingere all'aperto o per iniziare con pochi tubetti), indicati col nome comune e il pigmento. Conta il <b>pigmento</b>, cioè la sigla del Colour Index scritta sull'etichetta (PY = giallo, PB = blu, PR = rosso, PBr = bruno): lo stesso nome commerciale, con un'altra marca o un'altra serie, può nascondere un pigmento diverso. Il ceruleo (PB15) della tavolozza, per esempio, è un blu ftalo schiarito e non il ceruleo vero (PB35). I tubetti corrispondenti, marca per marca, con le fonti ufficiali, sono nella sezione <a href=\"../marche/\">Marche e tubetti</a>.",
-        "I riquadri colorati sono <b>provvisori</b>: valori scelti a occhio per far funzionare il calcolatore, non misure dei tuoi tubetti. Vanno sostituiti con la taratura sulle prove (vedi il calcolatore)."
+        "Sono i sei colori della tavolozza ridotta proposta dal Quaderno, utile per dipingere all'aperto o per cominciare con pochi tubetti, indicati con il nome comune e il pigmento. Ciò che conta è il <b>pigmento</b>, cioè la sigla del Colour Index stampata sull'etichetta (PY giallo, PB blu, PR rosso, PBr bruno): lo stesso nome commerciale, in un'altra marca o in un'altra serie, può corrispondere a un pigmento diverso. I tubetti corrispondenti, marca per marca e con le fonti ufficiali, sono nella sezione <a href=\"../marche/\">Marche e tubetti</a>.",
+        "I riquadri colorati sono <b>provvisori</b>: valori scelti a occhio per far funzionare il calcolatore, non misure dei tubetti. Vanno sostituiti con la taratura sulle prove, descritta sotto il calcolatore."
       ],
       "fonti": [
         "marche"
@@ -72,17 +72,17 @@
       "breve": "Calcolatore",
       "titolo": "5. Calcolatore di miscele",
       "paragrafi": [
-        "Tre strumenti che girano tutti nel browser, senza collegamenti esterni: <b>mescola</b> due o tre tubetti in parti intere e guarda l'anteprima con la sua striscia di diluizione; <b>trova la miscela</b> per un colore scelto col selettore; leggi per ogni risultato la <b>notazione Munsell approssimata</b>."
+        "Due strumenti, che funzionano interamente nel browser e senza collegamenti esterni. <b>Mescola</b> combina due o tre tubetti in parti intere e mostra l'anteprima con la striscia di diluizione; <b>trova la miscela</b> cerca le combinazioni più vicine a un colore scelto col selettore. Per ogni risultato è indicata anche la <b>notazione Munsell approssimata</b>."
       ],
       "limiti": [
         "È una <b>stima da verificare sul foglietto</b>, non una ricetta.",
-        "Vale solo per i tubetti <b>tarati</b>. Oggi i colori dei sei tubetti sono provvisori, quindi anche i risultati lo sono.",
+        "Vale solo per tubetti <b>tarati</b>: oggi i colori dei sei tubetti sono provvisori, e lo sono anche i risultati.",
         "Diluizione, granulazione, tipo di carta, carta asciutta o bagnata e ordine delle velature cambiano il risultato; il calcolatore considera solo la mescolanza in tavolozza e, nella striscia, il velo sul bianco della carta.",
-        "Lo schermo non è la carta: luminosità, taratura del monitor e luce della stanza cambiano quello che vedi.",
-        "Le parti sono quantità uguali di colore preso dal tubetto o dal pozzetto, non di miscela già diluita. La corrispondenza fra i passi della striscia e tè, latte, miele è una convenzione del Quaderno.",
-        "La notazione Munsell è approssimata: il valore viene da L*, tinta e croma da una tabella della renotation di Munsell calcolata a valore 5 e croma 6, e lontano da lì l'errore cresce."
+        "Lo schermo non è la carta: luminosità e taratura del monitor e luce dell'ambiente cambiano ciò che si vede.",
+        "Le parti indicano quantità uguali di colore preso dal tubetto o dal pozzetto, non di miscela già diluita. Il calcolatore le pesa anche con la luminosità di ciascun colore: con spettri ricavati dai colori dello schermo, i colori scuri coprirebbero quelli chiari più di quanto accade sulla carta. È una scelta del modello, da rivedere con la taratura. La corrispondenza fra i passi della striscia e tè, latte, miele è una convenzione del Quaderno.",
+        "La notazione Munsell è approssimata: il valore deriva da L*, tinta e croma da una tabella della renotation di Munsell calcolata a valore 5 e croma 6, e lontano da quei valori l'errore cresce."
       ],
-      "taratura": "Per chi scarica il codice del progetto e vuole tarare il calcolatore sui propri tubetti: stendi ogni tubetto pieno (miele) su un pezzo della stessa carta, fotografalo alla luce del giorno accanto a un cartoncino bianco, oppure misuralo con un colorimetro, e sostituisci i sei valori sRGB in <code>dati/colori/tavolozza.json</code>. Il campo <code>forza</code> serve a correggere un tubetto che in miscela si rivela più forte o più debole del previsto.",
+      "taratura": "Taratura sui propri tubetti, per chi scarica il codice del progetto: ogni colore si stende pieno (miele) su un pezzo della stessa carta e si fotografa alla luce del giorno accanto a un cartoncino bianco, oppure si misura con un colorimetro; i sei valori sRGB si sostituiscono poi in <code>dati/colori/tavolozza.json</code>. Il campo <code>forza</code> corregge un tubetto che in miscela si rivela più forte o più debole del previsto.",
       "fonti": [
         "spectraljs",
         "oklab",
@@ -134,7 +134,7 @@
       "url": "../marche/"
     },
     "spectraljs": {
-      "testo": "Ronald van Wijnen, spectral.js (licenza MIT): tabelle spettrali usate dal calcolatore",
+      "testo": "Ronald van Wijnen, spectral.js: tabelle spettrali usate dal calcolatore",
       "url": "https://github.com/rvanwijnen/spectral.js"
     },
     "oklab": {

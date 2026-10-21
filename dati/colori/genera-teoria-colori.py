@@ -110,7 +110,7 @@ def schede_tavolozza(tav):
 CALCOLATORE_HTML = """
 <div class="strum" id="mescola">
   <h3>Mescola</h3>
-  <p class="aiuto">Scegli due o tre tubetti e le parti di ognuno (da 1 a 10).</p>
+  <p class="aiuto">Si scelgono due o tre tubetti e le parti di ognuno (da 1 a 10).</p>
   <div class="righe-mix">
     <div class="riga-mix"><select id="mc1"></select><input id="mp1" type="number" min="1" max="10" value="1"> parti</div>
     <div class="riga-mix"><select id="mc2"></select><input id="mp2" type="number" min="1" max="10" value="1"> parti</div>
@@ -120,13 +120,13 @@ CALCOLATORE_HTML = """
     <div class="camp-grande" id="mcamp"></div>
     <div class="esito-txt" id="mtxt"></div>
   </div>
-  <div class="striscia-tit">Striscia di diluizione, dal miele al tè (velo sul bianco della carta) · <a href="../principi/#consistenze">le tre consistenze</a></div>
+  <div class="striscia-tit">Striscia di diluizione in sei passi, dal miele al velo più leggero, sul bianco della carta · <a href="../principi/#consistenze">le tre consistenze</a></div>
   <div class="striscia" id="mstriscia"></div>
 </div>
 
 <div class="strum" id="trova">
   <h3>Trova la miscela</h3>
-  <p class="aiuto">Scegli il colore che vuoi ottenere: il calcolatore prova tutte le combinazioni di uno, due o tre tubetti con parti da 1 a 10 e mostra le 5 più vicine, misurando la distanza nello spazio OKLab.</p>
+  <p class="aiuto">Si sceglie il colore da ottenere: il calcolatore prova tutte le combinazioni di uno, due o tre tubetti con parti da 1 a 10 e mostra le 5 più vicine, misurando la distanza nello spazio OKLab.</p>
   <div class="riga-trova">
     <label>Colore obiettivo <input id="tobj" type="color" value="#6b8e23"></label>
     <label class="spunta"><input id="tdil" type="checkbox" checked> considera anche la diluizione</label>
