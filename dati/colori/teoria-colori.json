@@ -13,7 +13,8 @@
           "testo": "Albert Munsell (1858-1918), pittore e insegnante di Boston, propose nel 1905 (<i>A Color Notation</i>) di descrivere il colore di ogni oggetto con tre grandezze indipendenti, scelte in modo che passi uguali corrispondano a differenze percepite uguali. Il suo atlante del 1915 fu rivisto nel 1943 dalla Optical Society of America (la «renotation»), che lo collegò alla colorimetria della CIE: è la base delle edizioni attuali.",
           "fonti": [
             "briggs",
-            "wiki-munsell"
+            "wiki-munsell",
+            "wiki-albert-munsell"
           ]
         },
         {
@@ -44,7 +45,7 @@
           ]
         },
         {
-          "testo": "Per chi dipinge il valore è la grandezza più importante: con i valori giusti l'immagine resta leggibile anche se le tinte sono approssimate. Nell'acquerello il valore si alza aggiungendo acqua, non bianco.",
+          "testo": "Per chi dipinge il valore è la grandezza più importante: con i valori giusti l'immagine resta leggibile anche se le tinte sono approssimate. Nell'acquerello il valore si alza aggiungendo acqua.",
           "fonti": [
             "handprint-valore",
             "handprint-mescolanza"
@@ -92,23 +93,22 @@
       "titolo": "3. L'acquerello: acqua, carta, velature",
       "paragrafi": [
         {
-          "testo": "Nell'acquerello il bianco è quello della carta. Un velo di colore trasparente lascia passare la luce, che raggiunge la carta, viene riflessa e riattraversa il velo: per schiarire si aggiunge acqua, così sulla carta si deposita meno pigmento.",
+          "testo": "Nell'acquerello il bianco è quello della carta: per schiarire si aggiunge acqua, così sulla carta si deposita meno pigmento.",
           "fonti": [
             "handprint-mescolanza",
-            "wiki-km"
+            "handprint-valore"
           ]
         },
         "<b>Consistenze e carta.</b> Le tre consistenze della miscela (tè, latte, miele), gli stati della carta (asciutta, umida, bagnata e i momenti intermedi) e il modo di abbinarli sono trattati nella sezione <a href=\"../principi/#consistenze\">Principi generali</a>, con le fonti.",
         {
-          "testo": "<b>Mescolare o velare.</b> Mescolando in tavolozza, i pigmenti stanno nello stesso strato; velando, cioè stendendo un colore sopra un altro già asciutto, la luce attraversa due filtri sovrapposti. Con pigmenti trasparenti i due risultati si somigliano, senza essere uguali. Con quelli opachi, come il ceruleo e la terra d'ombra bruciata della tavolozza, lo strato superiore copre di più e l'ordine delle velature cambia il risultato.",
+          "testo": "<b>Mescolare o velare.</b> Mescolando in tavolozza, i pigmenti stanno nello stesso strato; velando, cioè stendendo un colore sopra un altro già asciutto, la luce attraversa due filtri sovrapposti. Con i pigmenti opachi lo strato superiore copre di più e l'ordine delle velature cambia il risultato.",
           "fonti": [
             "handprint-mescolanza",
-            "handprint-ruota",
-            "marche"
+            "handprint-ruota"
           ]
         },
         {
-          "testo": "<b>Granulazione.</b> Alcuni pigmenti, come l'oltremare PB29, si depositano negli avvallamenti della carta e lasciano una trama a puntini, che il calcolatore non riproduce.",
+          "testo": "<b>Granulazione.</b> Alcuni pigmenti sono granulanti: l'oltremare PB29 è indicato così in quattro delle sei serie della sezione Marche e tubetti. Il calcolatore non riproduce la granulazione.",
           "fonti": [
             "marche"
           ]
@@ -160,7 +160,7 @@
           ]
         },
         {
-          "testo": "Le parti indicano quantità uguali di colore preso dal tubetto o dal pozzetto, non di miscela già diluita. Il calcolatore le pesa anche con la luminosità di ciascun colore: con spettri ricavati dai colori dello schermo, i colori scuri coprirebbero quelli chiari più di quanto accade sulla carta. È una scelta del modello, da rivedere con la taratura. La corrispondenza fra i passi della striscia e tè, latte, miele è una convenzione del Quaderno.",
+          "testo": "Le parti indicano quantità uguali di colore preso dal tubetto o dal pozzetto, non di miscela già diluita. Il calcolatore le pesa anche con la luminosità di ciascun colore. È una scelta del modello, da rivedere con la taratura. La corrispondenza fra i passi della striscia e tè, latte, miele è una convenzione del Quaderno.",
           "fonti": [
             "spectraljs"
           ]
@@ -186,6 +186,10 @@
     "wiki-munsell": {
       "testo": "Munsell color system, Wikipedia (inglese)",
       "url": "https://en.wikipedia.org/wiki/Munsell_color_system"
+    },
+    "wiki-albert-munsell": {
+      "testo": "Albert Henry Munsell, Wikipedia (inglese)",
+      "url": "https://en.wikipedia.org/wiki/Albert_Henry_Munsell"
     },
     "briggs": {
       "testo": "David Briggs, The Dimensions of Colour: hue, value, chroma",
