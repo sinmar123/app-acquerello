@@ -4,9 +4,10 @@
 Uso: python genera-principi.py pagina
 
 Legge i testi e le fonti da principi.json e scrive principi.html accanto a sé, una pagina sola con
-tutto dentro. scripts/genera-sito.py la copia in site/principi/index.html.
+tutto dentro. scripts/genera-sito.py la copia in site/principi/index.html. Le fonti sono elencate in
+fondo a ogni capitolo, numerate da 1 in ogni capitolo (scripts/rimandi_fonti.py).
 Controlli: ogni frase ha almeno una fonte, ogni fonte citata esiste, ogni fonte del json è citata,
-nessun testo contiene «da verificare». GBOT-app-acquerello, 18/10/2026."""
+nessun testo contiene «da verificare». GBOT-app-acquerello, 18/10/2026; fonti per capitolo CC, 21/10/2026."""
 import html
 import json
 import pathlib
@@ -16,46 +17,12 @@ sys.stdout.reconfigure(encoding="utf-8")
 
 QUI = pathlib.Path(__file__).resolve().parent
 USCITA = QUI / "principi.html"
+sys.path.insert(0, str(QUI.parent.parent / "scripts"))
+import rimandi_fonti  # noqa: E402
 
 
 def e(testo):
     return html.escape(str(testo), quote=True)
-
-
-class Fonti:
-    """Numera le fonti nell'ordine in cui compaiono nella pagina."""
-
-    def __init__(self, fonti):
-        self.fonti = fonti
-        self.ordine = []
-
-    def rif(self, chiavi, dove):
-        if not chiavi:
-            raise SystemExit(f"principi: frase senza fonte in {dove}")
-        nums = []
-        for k in chiavi:
-            if k not in self.fonti:
-                raise SystemExit(f"principi: fonte «{k}» non definita ({dove})")
-            if k not in self.ordine:
-                self.ordine.append(k)
-            nums.append(self.ordine.index(k) + 1)
-        link = ", ".join(f'<a href="#f{n}">{n}</a>' for n in sorted(set(nums)))
-        return f'<sup class="rif">[{link}]</sup>'
-
-    def elenco(self):
-        mancano = [k for k in self.fonti if k not in self.ordine]
-        if mancano:
-            raise SystemExit(f"principi: fonti mai citate: {', '.join(mancano)}")
-        voci = []
-        for n, k in enumerate(self.ordine, 1):
-            f = self.fonti[k]
-            testo = e(f["testo"])
-            if f.get("url"):
-                esterno = f["url"].startswith("http")
-                attr = ' target="_blank" rel="noopener"' if esterno else ""
-                testo += f' <a href="{e(f["url"])}"{attr}>{"apri" if esterno else "nel Quaderno"}</a>'
-            voci.append(f'<li id="f{n}">{testo}</li>')
-        return '<ol class="fonti">' + "".join(voci) + "</ol>"
 
 
 def svg_consistenze():
@@ -71,7 +38,7 @@ def svg_consistenze():
                      f'<text x="{x + 105}" y="132" text-anchor="middle" class="t2">{e(sotto)}</text>')
     return ('<figure class="schema"><svg viewBox="0 0 700 142" role="img" aria-label="Tè, latte e miele: tre consistenze dello stesso colore">'
             + "".join(pezzi) + '</svg><figcaption>Schema indicativo: lo stesso blu al tè, al latte e al miele. '
-            'Non è una misura: le consistenze si provano sul foglietto.</figcaption></figure>')
+            'Non è una misura: le consistenze si provano su carta.</figcaption></figure>')
 
 
 def svg_carta():
@@ -120,7 +87,6 @@ nav.salti a { flex: none; text-decoration: none; color: #2c4f3a; border: 1px sol
 .intro p { margin: 4px 0; }
 section.cap { border-top: 3px solid #3d6b4f; padding-top: 14px; margin-top: 26px; }
 ul.voci { padding-left: 20px; } ul.voci li { margin-bottom: 6px; }
-sup.rif { font-size: .68em; color: #555; white-space: nowrap; } sup.rif a { text-decoration: none; }
 .pill { display: inline-block; font-size: .78em; font-weight: 700; border-radius: 10px; padding: 0 8px; margin-right: 4px; color: #fff; }
 .pill.bagnata { background: #2f6f9f; } .pill.umida { background: #6b8fa8; } .pill.asciutta { background: #a07a4a; }
 figure { margin: 12px 0; } figcaption { font-size: .85em; color: #555; margin-top: 4px; }
@@ -131,12 +97,9 @@ figure { margin: 12px 0; } figcaption { font-size: .85em; color: #555; margin-to
 table.riass { width: 100%; min-width: 520px; border-collapse: collapse; font-size: .88em; }
 table.riass th, table.riass td { border: 1px solid #d8d2c4; padding: 5px 6px; vertical-align: top; text-align: left; }
 table.riass th { background: #eef4ef; color: #2c4f3a; }
-.fonti-tit { margin-top: 30px; }
-ol.fonti { font-size: .85em; color: #444; padding-left: 26px; } ol.fonti li { margin-bottom: 5px; }
-ol.fonti li:target { background: #fff3cd; }
-.nota-fonti { font-size: .85em; color: #555; background: #f1efe8; border-radius: 8px; padding: 7px 10px; }
+.intro p.nota-fonti { font-size: .88em; color: #555; }
 footer { margin-top: 30px; font-size: .8em; color: #666; border-top: 1px solid #e3e0d8; padding-top: 10px; }
-"""
+""" + rimandi_fonti.CSS
 
 
 def controlla_testo(t, dove):
@@ -146,10 +109,10 @@ def controlla_testo(t, dove):
 
 def pagina():
     d = json.loads((QUI / "principi.json").read_text(encoding="utf-8"))
-    F = Fonti(d["fonti"])
     salti = "".join(f'<a href="#{c["id"]}">{e(c["breve"])}</a>' for c in d["capitoli"])
-    sezioni = []
+    sezioni, citate = [], set()
     for c in d["capitoli"]:
+        F = rimandi_fonti.Capitolo(c["id"], d["fonti"], "principi")
         corpo = [f'<section class="cap" id="{c["id"]}"><h2>{e(c["titolo"])}</h2>']
         for i, b in enumerate(c["blocchi"]):
             dove = f'{c["id"]}, blocco {i + 1}'
@@ -175,11 +138,16 @@ def pagina():
                 corpo.append(f'<div class="tab"><table class="riass"><tr>{testa}</tr>{"".join(righe)}</table></div>')
             else:
                 raise SystemExit(f"principi: blocco di tipo sconosciuto in {dove}")
+        corpo.append(F.elenco())
         corpo.append("</section>")
         sezioni.append("\n".join(corpo))
+        citate.update(F.ordine)
+    mancano = [k for k in d["fonti"] if k not in citate]
+    if mancano:
+        raise SystemExit(f"principi: fonti mai citate: {', '.join(mancano)}")
     for p in d["introduzione"]:
         controlla_testo(p, "introduzione")
-    intro = "".join(f"<p>{p}</p>" for p in d["introduzione"])
+    intro = "".join(f"<p>{p}</p>" for p in d["introduzione"]) + f'<p class="nota-fonti">{e(d["nota_fonti"])}</p>'
     data = "/".join(reversed(d["data"].split("-")))
     pagina_html = f"""<!doctype html>
 <html lang="it">
@@ -195,15 +163,13 @@ def pagina():
 <nav class="salti">{salti}</nav>
 <div class="intro">{intro}</div>
 {chr(10).join(sezioni)}
-<h2 class="fonti-tit" id="fonti">Fonti</h2>
-<p class="nota-fonti">{e(d['nota_fonti'])}</p>
-{F.elenco()}
 <footer>Quaderno di acquerello · Principi generali · testi del {e(data)}.</footer>
+{rimandi_fonti.JS}
 </body>
 </html>
 """
     USCITA.write_text(pagina_html, encoding="utf-8")
-    print(f"pagina: {USCITA} {USCITA.stat().st_size / 1024:.0f} KB, {len(F.ordine)} fonti")
+    print(f"pagina: {USCITA} {USCITA.stat().st_size / 1024:.0f} KB, {len(citate)} fonti")
 
 
 if __name__ == "__main__":

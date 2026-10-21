@@ -7,7 +7,9 @@ Legge i testi (teoria-colori.json), la tavolozza (tavolozza.json), la tabella de
 (munsell-tinte.json) e il codice del calcolatore (spettri-spectraljs.js, calcolatore.js, interfaccia.js)
 e scrive teoria-colori.html accanto a sé, una pagina sola con tutto dentro: niente collegamenti
 a file o librerie esterne. scripts/genera-sito.py la copia in site/colori/index.html.
-GBOT-app-acquerello, 18/10/2026."""
+Un paragrafo è una stringa, o un oggetto con il testo e le fonti che lo sostengono: le fonti si numerano
+e si elencano in fondo a ogni capitolo (scripts/rimandi_fonti.py), e ogni fonte del json deve essere citata.
+GBOT-app-acquerello, 18/10/2026; rimandi per paragrafo CC, 21/10/2026."""
 import html
 import json
 import math
@@ -18,6 +20,8 @@ sys.stdout.reconfigure(encoding="utf-8")
 
 QUI = pathlib.Path(__file__).resolve().parent
 USCITA = QUI / "teoria-colori.html"
+sys.path.insert(0, str(QUI.parent.parent / "scripts"))
+import rimandi_fonti  # noqa: E402
 
 
 def leggi_json(nome):
@@ -79,17 +83,9 @@ def ruota_tinte(tinte):
             "R, YR, Y, GY, G, BG, B, PB, P, RP.</figcaption></figure>")
 
 
-def elenco_fonti(chiavi, fonti):
-    voci = []
-    for k in chiavi:
-        f = fonti[k]
-        if f["url"]:
-            voci.append(f'<a href="{e(f["url"])}" target="_blank" rel="noopener">{f["testo"]}</a>')
-        else:
-            voci.append(f["testo"])
-    if not voci:
-        return ""
-    return '<p class="fonti-cap">Fonti: ' + "; ".join(voci) + ".</p>"
+def testo_e_fonti(voce):
+    """Un paragrafo, una voce dei limiti o la nota sulla taratura: stringa senza fonte, o {testo, fonti}."""
+    return (voce, []) if isinstance(voce, str) else (voce["testo"], voce["fonti"])
 
 
 def schede_tavolozza(tav):
@@ -126,7 +122,7 @@ CALCOLATORE_HTML = """
 
 <div class="strum" id="trova">
   <h3>Trova la miscela</h3>
-  <p class="aiuto">Si sceglie il colore da ottenere: il calcolatore prova tutte le combinazioni di uno, due o tre tubetti con parti da 1 a 10 e mostra le 5 più vicine, misurando la distanza nello spazio OKLab.</p>
+  <p class="aiuto">Si sceglie il colore da ottenere: il calcolatore prova tutte le combinazioni di uno, due o tre tubetti con parti da 1 a 10 e mostra le 5 più vicine, misurando la distanza nello spazio OKLab.{rif_oklab}</p>
   <div class="riga-trova">
     <label>Colore obiettivo <input id="tobj" type="color" value="#6b8e23"></label>
     <label class="spunta"><input id="tdil" type="checkbox" checked> considera anche la diluizione</label>
@@ -152,7 +148,6 @@ nav.salti { position: sticky; top: 0; z-index: 5; display: flex; gap: 6px; overf
 nav.salti a { flex: none; text-decoration: none; color: #2c4f3a; border: 1px solid #3d6b4f; border-radius: 16px;
               padding: 3px 12px; font-weight: 600; }
 section.cap { border-top: 3px solid #3d6b4f; padding-top: 14px; margin-top: 26px; }
-.fonti-cap { font-size: .85em; color: #555; background: #f1efe8; border-radius: 8px; padding: 7px 10px; }
 figure { margin: 12px 0; } figcaption { font-size: .85em; color: #555; margin-top: 4px; }
 .valori { display: grid; grid-template-columns: repeat(9, 1fr); border-radius: 6px; overflow: hidden; border: 1px solid #d8d2c4; }
 .val { padding: 14px 0; text-align: center; font-size: .8em; font-weight: 600; }
@@ -191,7 +186,7 @@ figure { margin: 12px 0; } figcaption { font-size: .85em; color: #555; margin-to
 .vicino { font-weight: 600; } .vicino.si { color: #2c6a4a; } .vicino.quasi { color: #8a6a10; } .vicino.no { color: #a33; }
 code { background: #f1efe8; border-radius: 4px; padding: 0 4px; font-size: .9em; }
 footer { margin-top: 30px; font-size: .8em; color: #666; border-top: 1px solid #e3e0d8; padding-top: 10px; }
-"""
+""" + rimandi_fonti.CSS
 
 
 def pagina():
@@ -201,22 +196,34 @@ def pagina():
     fonti = testi["fonti"]
 
     salti = "".join(f'<a href="#{c["id"]}">{e(c["breve"])}</a>' for c in testi["capitoli"])
-    sezioni = []
+    sezioni, citate = [], set()
     for c in testi["capitoli"]:
+        F = rimandi_fonti.Capitolo(c["id"], fonti, "teoria-colori", testo_html=True)
+
+        def con_rimando(voce, dove):
+            testo, chiavi = testo_e_fonti(voce)
+            return testo + F.rif(chiavi, f'{c["id"]}, {dove}', obbligatorio=False)
+
         corpo = [f'<section class="cap" id="{c["id"]}"><h2>{e(c["titolo"])}</h2>']
-        corpo += [f"<p>{p}</p>" for p in c["paragrafi"]]
+        corpo += [f"<p>{con_rimando(p, f'paragrafo {i}')}</p>" for i, p in enumerate(c["paragrafi"], 1)]
         if c["id"] == "munsell":
             corpo.append(scala_valori())
             corpo.append(ruota_tinte(mun["tinte"]))
         if c["id"] == "tavolozza":
             corpo.append(schede_tavolozza(tav))
         if c["id"] == "calcolatore":
-            corpo.append('<div class="avviso"><b>Prima di usarlo.</b><ul>' + "".join(f"<li>{x}</li>" for x in c["limiti"]) + "</ul></div>")
-            corpo.append(CALCOLATORE_HTML)
-            corpo.append(f'<p class="aiuto">{c["taratura"]}</p>')
-        corpo.append(elenco_fonti(c["fonti"], fonti))
+            corpo.append('<div class="avviso"><b>Prima di usarlo.</b><ul>'
+                         + "".join(f"<li>{con_rimando(x, f'limite {i}')}</li>" for i, x in enumerate(c["limiti"], 1)) + "</ul></div>")
+            # la frase su OKLab sta nel codice del calcolatore, e la sua fonte con lei
+            corpo.append(CALCOLATORE_HTML.format(rif_oklab=F.rif(["oklab", "spectraljs"], "calcolatore, Trova la miscela")))
+            corpo.append(f'<p class="aiuto">{con_rimando(c["taratura"], "taratura")}</p>')
+        corpo.append(F.elenco())
         corpo.append("</section>")
         sezioni.append("\n".join(corpo))
+        citate.update(F.ordine)
+    mancano = [k for k in fonti if k not in citate]
+    if mancano:
+        raise SystemExit(f"teoria-colori: fonti mai citate: {', '.join(mancano)}")
 
     dati_js = ("var TAVOLOZZA = " + json.dumps(tav, ensure_ascii=False) + ";\n"
                "var MUNSELL = " + json.dumps(mun, ensure_ascii=False) + ";\n")
@@ -241,6 +248,7 @@ def pagina():
 <script>
 {script}
 </script>
+{rimandi_fonti.JS}
 </body>
 </html>
 """

@@ -4,8 +4,8 @@
  "titolo": "Principi generali: acqua, colore e carta",
  "sottotitolo": "Le tre consistenze della miscela, gli stati della carta e come abbinarli, prima di ogni esercizio.",
  "introduzione": [
-  "Questa sezione raccoglie le regole che ricorrono nei video e nei corsi esaminati per il Quaderno. Ogni paragrafo rimanda con un numero alle fonti in fondo alla pagina: gli appunti di studio dei corsi e i video della sezione Alberi, che si aprono al minuto indicato.",
-  "Il metodo di lavoro in studio e all'aperto, con i foglietti A5 e le 12 miscele, è nella sezione <a href=\"../studio-plein-air/\">Studio ed en plein air</a>; gli esercizi per soggetto sono nella sezione <a href=\"../soggetti/\">Soggetti</a>, a cominciare dagli <a href=\"../alberi/\">Alberi</a>; i pigmenti, la tavolozza e il calcolatore di miscele, con la striscia di diluizione dal miele al tè, nella sezione <a href=\"../colori/\">Teoria dei colori</a>."
+  "Questa sezione raccoglie le regole che ricorrono nei video e nei corsi esaminati per il Quaderno. Ogni paragrafo rimanda con un numero alle fonti elencate in fondo al capitolo: gli appunti di studio dei corsi e i video della sezione Alberi, che si aprono al minuto indicato.",
+  "Il lavoro in studio e all'aperto, con la tavolozza ridotta e le 12 miscele, è trattato nella sezione <a href=\"../studio-plein-air/\">Studio ed en plein air</a>; gli esercizi per soggetto sono nella sezione <a href=\"../soggetti/\">Soggetti</a>, a cominciare dagli <a href=\"../alberi/\">Alberi</a>; i pigmenti, la tavolozza e il calcolatore di miscele, con la striscia di diluizione dal miele al tè, nella sezione <a href=\"../colori/\">Teoria dei colori</a>."
  ],
  "nota_fonti": "Le citazioni dei video provengono dalle schede di studio preparate per la sezione Alberi: sono riassunti del parlato e del gesto, controllati a campione, e il collegamento apre il video al minuto indicato per la verifica. Le citazioni dei corsi provengono dagli appunti di studio delle lezioni.",
  "capitoli": [
@@ -381,9 +381,8 @@
     },
     {
      "tipo": "p",
-     "testo": "<b>La carta del Quaderno.</b> Per gli esercizi il Quaderno usa cotone 300 g/m² a grana fine, in foglietti A5 fissati col nastro di carta. I bordi del foglio vanno asciugati col fazzoletto: vicino al nastro l'acqua si accumula e lascia un deposito di pigmento.",
+     "testo": "<b>La carta del Quaderno.</b> Per gli esercizi il Quaderno usa carta di cotone da 300 g/m² a grana fine, fissata con il nastro di carta. I bordi del foglio vanno asciugati col fazzoletto: vicino al nastro l'acqua si accumula e lascia un deposito di pigmento.",
      "fonti": [
-      "alberi-foglietti",
       "wf-fiori"
      ]
     }
@@ -608,10 +607,6 @@
   "schede-campi": {
    "testo": "Infografiche della sezione Alberi: per ogni fase lo stato della carta (asciutta, umida, bagnata)",
    "url": "../alberi/"
-  },
-  "alberi-foglietti": {
-   "testo": "Sezione Studio ed en plein air del Quaderno, «Il protocollo dei foglietti A5»",
-   "url": "../studio-plein-air/#protocollo-a5"
   },
   "alberi-a1-3": {
    "testo": "Sezione Alberi del Quaderno, esempio A1 (Modalità 2, estratto A1-3): Paul Clark asciuga il pennello per sollevare un po' di colore",

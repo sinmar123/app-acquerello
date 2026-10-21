@@ -492,7 +492,7 @@ def pagina():
             blocco_colori += f'<p class="colori"><b>Colori:</b> {colori}</p>'
 
         pennelli = f'<p class="pennelli"><b>🖌 Pennelli e attrezzi:</b> {e(t["pennelli"])}</p>' if t.get("pennelli") else ""
-        foglietto = f'<div class="foglietto"><b>📄 Come esercitarsi sul foglietto A5:</b> {e(t["foglietto"])}</div>' if t.get("foglietto") else ""
+        esercizio = f'<div class="esercizio"><b>📄 Come esercitarsi:</b> {e(t["esercizio"])}</div>' if t.get("esercizio") else ""
 
         schede_mod = []
         for m in t.get("modalita", []):
@@ -518,7 +518,7 @@ def pagina():
         blocco_coda = mod_info.rendi_coda_albero(t, e)
         sezioni.append(f'<section class="albero" id="{s}"><h2><span class="sig">{k}</span> {e(nome)}</h2>'
                        f'<p class="dove">{e(t["descrizione"])}</p>{figura}'
-                       f'{blocco_colori}{pennelli}{foglietto}'
+                       f'{blocco_colori}{pennelli}{esercizio}'
                        f'<div class="modalita-lista">{"".join(schede_mod)}</div>{blocco_coda}</section>')
 
     esercizi = "".join(f'<li><b>{e(x["titolo"])}.</b> {e(x["testo"])}</li>' for x in a.get("esercizi", []))
@@ -540,7 +540,7 @@ def pagina():
 <ul class="come">{esercizi}</ul>
 </div>
 <details class="miscele-box" id="miscele"><summary>All'aperto (en plein air): i 6 colori di base e le 12 miscele (M1-M12) per dipingere con una scatola leggera</summary>
-<p class="nota-studio-aperto">All'aperto, o per esercitarsi a ricavare tutto da pochi tubetti, bastano i 6 colori di base e le 12 miscele qui sotto, con cui si preparano i verdi, i bruni e i grigi degli esempi. Il metodo completo, coi foglietti A5, è nella sezione <a href="../studio-plein-air/">Studio ed en plein air</a>.</p>
+<p class="nota-studio-aperto">All'aperto, o per esercitarsi a ricavare tutto da pochi tubetti, bastano i 6 colori di base e le 12 miscele qui sotto, con cui si preparano i verdi, i bruni e i grigi degli esempi. Il confronto fra il lavoro in studio e all'aperto è nella sezione <a href="../studio-plein-air/">Studio ed en plein air</a>.</p>
 {sei_colori}
 {riquadri}
 <table class="mix">{miscele}</table></details>
@@ -549,7 +549,7 @@ def pagina():
 <p class="legenda"><b>Stato della carta nelle fasi dell'infografica:</b> {pill('bagnata')} lucida d'acqua, il colore corre · {pill('umida')} opaca, i bordi si fondono · {pill('asciutta')} il tratto resta netto. <a href="../principi/#carta-umidita">Gli stati della carta, momenti di mezzo compresi, nei Principi generali</a>.</p>
 <ul class="come">
 <li><b>▶ Guarda il gesto</b> fa partire il video nel punto giusto e lo ferma da solo alla fine del passaggio.</li>
-<li><b>Da capo</b> fa ripartire l'estratto, <b>Lento</b> lo porta a metà velocità per studiare il movimento della mano, <b>Ripeti</b> lo ripete in continuo mentre si prova sul foglietto.</li>
+<li><b>Da capo</b> fa ripartire l'estratto, <b>Lento</b> lo porta a metà velocità per studiare il movimento della mano, <b>Ripeti</b> lo ripete in continuo mentre si prova sulla carta.</li>
 <li><b>YouTube ↗</b> apre lo stesso punto nell'app o nel sito di YouTube.</li>
 <li>Le righe <b>Dal video, in sintesi</b> riassumono in italiano quello che l'autore o l'autrice dice in quel passaggio: sono sintesi preparate con l'aiuto dell'intelligenza artificiale, non trascrizioni, e la fonte resta il video.</li>
 </ul>
@@ -667,7 +667,7 @@ section.albero { border-top: 3px solid #3d6b4f; padding-top: 14px; margin-top: 2
 .colori.studio { background: #fffdf6; border-left: 4px solid #c87a28; border-top: 1px solid #e8dec8; border-right: 1px solid #e8dec8; border-bottom: 1px solid #e8dec8; }
 .colori.aperto { background: #f3f7f4; border-left: 4px solid #3d6b4f; border-top: 1px solid #d4e2d8; border-right: 1px solid #d4e2d8; border-bottom: 1px solid #d4e2d8; }
 .colori a { color: #2c6a4a; font-weight: 600; }
-.foglietto { font-size: .92em; background: #eef4ef; border-left: 4px solid #3d6b4f; border-radius: 6px; padding: 8px 10px; margin: 8px 0 14px; }
+.esercizio { font-size: .92em; background: #eef4ef; border-left: 4px solid #3d6b4f; border-radius: 6px; padding: 8px 10px; margin: 8px 0 14px; }
 .modalita-lista { display: flex; flex-direction: column; gap: 18px; margin-top: 14px; }
 .modalita-card { background: #ffffff; border: 1.5px solid #cbd9cf; border-radius: 12px; padding: 14px 15px; box-shadow: 0 2px 6px rgba(0,0,0,.04); }
 .mod-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; flex-wrap: wrap; border-bottom: 1px solid #e1eae3; padding-bottom: 8px; margin-bottom: 9px; }

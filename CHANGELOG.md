@@ -2,6 +2,19 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-21 - CC - Barra delle sezioni, home «in costruzione», fonti per capitolo, via i foglietti A5
+
+- **Barra delle sezioni** (`scripts/genera-sito.py`): in cima a ogni pagina, home compresa, con le cinque sezioni e S1 Alberi, l'assistente e i suggerimenti. Resta visibile scorrendo; sul telefono è una riga sola che scorre di lato e mostra la voce della pagina aperta. L'indice dei capitoli di ogni sezione scende sotto la barra.
+- **Home**: la nota di metodo resta com'è. Al posto del paragrafo coi fogli A5 e del riquadro «in fase di sviluppo» c'è il riquadro «Il Quaderno è in costruzione», con quello che la versione attuale mette a disposizione, testo approvato dal curatore il 21/10/2026. Le schede delle sezioni hanno il titolo e una riga, e S1 Alberi compare sotto Soggetti. Sostituisce la PR #28, chiusa senza unione.
+- **Titolo**: la sezione 3 si chiama «Teoria dei colori», senza «per l'acquerello».
+- **Fonti per capitolo** (`scripts/rimandi_fonti.py`, nuovo): in Principi e Teoria dei colori le fonti sono elencate in fondo a ogni capitolo, una per riga e numerate da 1; il numero nel testo porta alla fonte e la freccia riporta al testo. Nei Principi l'elenco unico di 33 fonti diventa 55 voci distribuite negli 8 capitoli. In Teoria dei colori ogni paragrafo prende i rimandi alle fonti che lo sostengono, controllate sulle pagine delle fonti (13 su 13); escono quattro fonti che non sostenevano nessun paragrafo: le due voci di Wikipedia italiana, che sono pagine di disambiguazione, l'indice di handprint.com e ArtistAssistApp. Le affermazioni rimaste senza fonte sono elencate in `lavoro/app-acquerello-261021-verifica-fonti-teoria-colori.md` (solo locale).
+- **Via i foglietti A5**: esce da Studio ed en plein air il capitolo «Il metodo dei foglietti A5», e i due successivi diventano 1 e 2; esce dai Principi la fonte che lo citava. Negli Alberi i sei riquadri diventano «Come esercitarsi», senza formato (campo `esercizio` al posto di `foglietto`), e «Che cosa controllare sul foglietto» diventa «nella prova»; altrove «sul foglietto» diventa «su carta». Nei Principi resta la carta del Quaderno, cotone 300 g/m² a grana fine, senza formato. Allineati il prompt della chat, README, AGENTS e CONTRIBUTING.
+- **Leggibilità**: l'indice Gulpease non conta più gli elenchi delle fonti, che citano titoli e passi nella lingua originale e ora si ripetono nei capitoli. Valori: principi 68, studio-plein-air 62, colori 74, marche 59, soggetti 66, alberi 72.
+- Controlli: generazione senza errori; i 442 collegamenti interni del sito generato portano a una pagina e a un'ancora esistenti; nessun «foglietto» nei sorgenti e nelle pagine; prova in Chrome a larghezza di telefono e di computer.
+- Prossima azione: decisione del curatore sulle affermazioni di Teoria dei colori senza fonte; taratura dei sei colori su campioni reali.
+
+-- CC
+
 ## 2026-10-21 - CC - Chat: risposte senza trattino lungo
 
 - Le istruzioni della chat (`scripts/genera-sito.py`, rigenerate in `lib/prompt-chat.js`) chiedono di non usare il trattino lungo e di fare gli incisi con virgole, due punti o parentesi, come vuole `CONTRIBUTING.md` § 3 per i testi del sito. La domanda di prova sul sito pubblicato aveva ricevuto una risposta col trattino lungo; con le istruzioni nuove, tre domande inviate direttamente a Gemini ne hanno ricevute zero.

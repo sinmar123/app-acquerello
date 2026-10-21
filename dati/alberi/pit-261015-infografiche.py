@@ -1170,7 +1170,7 @@ def rendi_infografica_modalita(id_mod, e, pill):
 def rendi_coda_albero(t, e):
     coda = []
     if t.get("controllo"):
-        coda.append(f'<div class="info-check ok"><b>✓ Che cosa controllare sul foglietto:</b> {e(t["controllo"])}</div>')
+        coda.append(f'<div class="info-check ok"><b>✓ Che cosa controllare nella prova:</b> {e(t["controllo"])}</div>')
     if t.get("attenzione"):
         att = " · ".join(e(x) for x in t["attenzione"])
         coda.append(f'<div class="info-check att"><b>⚠ Da evitare:</b> {att}</div>')
