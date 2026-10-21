@@ -2,6 +2,13 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-21 - CC - Chat: risposte senza trattino lungo
+
+- Le istruzioni della chat (`scripts/genera-sito.py`, rigenerate in `lib/prompt-chat.js`) chiedono di non usare il trattino lungo e di fare gli incisi con virgole, due punti o parentesi, come vuole `CONTRIBUTING.md` § 3 per i testi del sito. La domanda di prova sul sito pubblicato aveva ricevuto una risposta col trattino lungo; con le istruzioni nuove, tre domande inviate direttamente a Gemini ne hanno ricevute zero.
+- Prossima azione: taratura dei sei colori su campioni reali.
+
+-- CC
+
 ## 2026-10-21 - CC - Sistemata generale dopo la contro-analisi: testi del 20/10 mattina in registro da manuale tecnico, chat senza email, funzioni del server protette
 
 Contro-analisi dello stato di `main` al commit 41b4640: prima lettura di Claude Code, tre revisori esterni indipendenti (Grok, Codex e Gemini) e arbitrato di Fable, 59 rilievi. Le correzioni seguono le decisioni del curatore del 21/10/2026.
