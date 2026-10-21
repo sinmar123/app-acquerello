@@ -326,7 +326,7 @@ def blocco_chat_e_suggerimenti(sezione_predefinita: str, pagina_path: str) -> st
       Domande sulla tecnica dell'acquerello, sui colori e sui materiali, o su come usare il Quaderno. Le risposte sono generate
       da un modello di intelligenza artificiale, Gemini 4 Argon di Google, istruito con un riassunto del Quaderno: possono
       contenere errori, e fa fede il testo delle sezioni. Ogni connessione dispone di <strong>5 domande a settimana</strong>;
-      quando in un giorno le domande di tutti arrivano a 50, la chat riprende il giorno dopo.
+      quando in un giorno le domande di tutti arrivano a 10, la chat riprende il giorno dopo.
     </p>
     <div class="chat-barra-stato">
       <span>Non serve registrarsi.</span>
@@ -348,7 +348,7 @@ def blocco_chat_e_suggerimenti(sezione_predefinita: str, pagina_path: str) -> st
     <div id="chat-esito-err" class="sugg-esito err" role="alert"></div>
     <details class="chat-nota-privacy">
       <summary>Informativa sul trattamento dei dati della chat</summary>
-      <p>Titolare del trattamento è il curatore del Quaderno (account GitHub sinmar123), che si contatta aprendo una
+      <p>Titolare del trattamento è Alessandro Sanvitale, curatore del Quaderno (account GitHub sinmar123), che si contatta aprendo una
       <a href="{REPO_URL}/issues" target="_blank" rel="noopener">segnalazione sul repository del progetto</a>.
       La domanda scritta nella chat viene inviata a Google tramite l'API Gemini al solo scopo di generare la risposta,
       insieme alle due domande e risposte precedenti della stessa conversazione e all'indirizzo della pagina consultata,

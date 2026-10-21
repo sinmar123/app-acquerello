@@ -8,7 +8,7 @@ import { PROMPT_SISTEMA } from "../../lib/prompt-chat.js";
 
 const MODELLO = "gemini-4-argon";
 const LIMITE_SETTIMANALE = 5;
-const LIMITE_GIORNALIERO = 50;
+const LIMITE_GIORNALIERO = 10;
 const BYTE_MASSIMI = 12000;
 const GIORNI_CONSERVAZIONE = 14;
 

@@ -45,7 +45,7 @@ Lo script:
 
 Due funzioni Cloudflare Pages in `functions/api/`, con il database D1 `app-acquerello` (`wrangler.toml`):
 
-- `chat.js`: l'assistente sull'acquerello basato su **Gemini 4 Argon** (`gemini-4-argon`), istruito con `lib/prompt-chat.js`. Non chiede l'email e non conserva né le domande né le risposte: concede 5 domande a settimana per connessione, con un tetto di 50 domande al giorno in tutto, contate su D1 con un'impronta dell'indirizzo IP calcolata con una chiave segreta e cancellata entro 14 giorni. La cronologia della conversazione torna dal browser firmata dal server, che scarta le risposte non sue. Segreti: `GEMINI_API_KEY` (obbligatorio), `SALE_IP` e `CHIAVE_FIRMA` (facoltativi).
+- `chat.js`: l'assistente sull'acquerello basato su **Gemini 4 Argon** (`gemini-4-argon`), istruito con `lib/prompt-chat.js`. Non chiede l'email e non conserva né le domande né le risposte: concede 5 domande a settimana per connessione, con un tetto di 10 domande al giorno in tutto, contate su D1 con un'impronta dell'indirizzo IP calcolata con una chiave segreta e cancellata entro 14 giorni. La cronologia della conversazione torna dal browser firmata dal server, che scarta le risposte non sue. Segreti: `GEMINI_API_KEY` (obbligatorio), `SALE_IP` e `CHIAVE_FIRMA` (facoltativi).
 - `suggerimento.js`: apre una Issue etichettata `suggerimento-dal-sito` sul repository con il segreto `GITHUB_SUGGERIMENTI_TOKEN`. Accetta solo le sezioni del menu e le pagine del sito, oscura gli indirizzi email, neutralizza le menzioni `@utente` e concede 5 invii al giorno per connessione e 30 in tutto, contati come le domande della chat, sulla stessa tabella di D1 (segreto facoltativo `SALE_IP`).
 
 ## Controllo automatico e pubblicazione

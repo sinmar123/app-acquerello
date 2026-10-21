@@ -36,7 +36,4 @@ I generatori controllano la coerenza dei dati e fermano la generazione se una re
 
 ## 4. Licenza dei contributi
 
-Inviando un contributo a questo repository (tramite la casella pubblica sul sito, pull request, Issue o altra comunicazione), dichiari di avere il diritto di inviarlo e accetti che il contributo:
-
-1. sia rilasciato con le licenze aperte del progetto indicate nel file [`LICENSE`](LICENSE) (**MIT** per il codice sorgente, **CC BY 4.0** per i testi, i dati, le schede e le illustrazioni);
-2. possa essere utilizzato, adattato, pubblicato e integrato senza limiti di tempo o di territorio dal curatore del progetto (`sinmar123`) anche nella versione ospitata dell'applicazione web e in eventuali funzionalità, moduli o servizi aggiuntivi futuri, gratuiti o in abbonamento.
+Inviando un contributo a questo repository (tramite la casella pubblica sul sito, pull request, Issue o altra comunicazione), dichiari di avere il diritto di inviarlo e accetti che sia rilasciato con le licenze aperte del progetto indicate nel file [`LICENSE`](LICENSE): **MIT** per il codice sorgente, **CC BY 4.0** per i testi, i dati, le schede e le illustrazioni.

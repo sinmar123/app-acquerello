@@ -394,7 +394,7 @@ INFOGRAFICHE = {
                 "carta": "asciutta",
                 "colori": ["giallo_limone", "siena_nat"],
                 "attrezzo": "Tondo grande n. 10",
-                "testo": "Si appoggia la pancia del pennello grande, ben carico, al centro del lobo della chioma, evitando di stampare tocchi rigidi e ripetuti.",
+                "testo": "Si appoggia la pancia del pennello grande, ben carico, al centro del lobo della chioma.",
                 "svg": svg_wrap(
                     '<circle cx="110" cy="68" r="24" fill="#e59a28" opacity="0.88"/>'
                     '<path d="M98,68 A12,12 0 1,1 122,68" fill="none" stroke="#9e4726" stroke-width="2" stroke-dasharray="3,2"/>'
@@ -931,7 +931,7 @@ INFOGRAFICHE = {
                 "carta": "umida",
                 "colori": ["sale"],
                 "attrezzo": "Pizzico di sale da cucina",
-                "testo": "Il sale non va gettato sull'acqua lucida (si scioglierebbe): si attende che la carta diventi opaca e umida, poi si sparge un pizzico di sale fino.",
+                "testo": "Si attende che la carta diventi opaca e umida, poi si sparge un pizzico di sale fino.",
                 "svg": svg_wrap(
                     '<rect x="16" y="16" width="188" height="108" rx="8" fill="#5c687c" opacity="0.75"/>'
                     '<g fill="#ffffff">'
@@ -1076,7 +1076,7 @@ INFOGRAFICHE = {
                 "carta": "asciutta",
                 "colori": ["ombra_bruc"],
                 "attrezzo": "Punta finissima del pennello",
-                "testo": "Si aggiungono rami centrali che si incrociano e si sovrappongono agli altri (in natura i rami non si evitano), terminando le cime a filo.",
+                "testo": "Si aggiungono rami centrali che si incrociano e si sovrappongono agli altri, terminando le cime a filo.",
                 "svg": svg_wrap(
                     '<path d="M58,128 Q78,78 96,24 M136,128 Q124,78 142,26" stroke="#4f3728" stroke-width="3" fill="none" stroke-linecap="round"/>'
                     '<path d="M76,82 L54,42 M86,56 L112,28 M130,84 L110,44 M134,58 L162,32" stroke="#4f3728" stroke-width="2" fill="none" stroke-linecap="round"/>'
