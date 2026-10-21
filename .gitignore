@@ -1,6 +1,8 @@
 site/
 # pagina di ogni sezione, generata accanto ai suoi sorgenti e copiata in site/ da scripts/genera-sito.py
 dati/**/*.html
+# figure della pagina Alberi, ricavate dalle illustrazioni dal generatore
+dati/alberi/immagini/
 node_modules/
 .wrangler/
 .dev.vars
@@ -9,3 +11,5 @@ __pycache__/
 .DS_Store
 _index-app-acquerello.md
 app-acquerello-giornale.md
+# analisi e revisioni di lavoro, solo locali
+lavoro/

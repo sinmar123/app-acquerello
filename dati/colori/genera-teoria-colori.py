@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
-"""Genera la pagina della sezione «Colorimetria applicata e ottica della velatura» del Quaderno di acquerello.
+"""Genera la pagina della sezione «Teoria dei colori» del Quaderno di acquerello.
 
 Uso: python genera-teoria-colori.py pagina
 
 Legge i testi (teoria-colori.json), la tavolozza (tavolozza.json), la tabella delle tinte Munsell
 (munsell-tinte.json) e il codice del calcolatore (spettri-spectraljs.js, calcolatore.js, interfaccia.js)
 e scrive teoria-colori.html accanto a sé, una pagina sola con tutto dentro: niente collegamenti
-a file o librerie esterne. scripts/genera-sito.py la copia in site/colori/index.html."""
+a file o librerie esterne. scripts/genera-sito.py la copia in site/colori/index.html.
+GBOT-app-acquerello, 18/10/2026."""
 import html
 import json
 import math
@@ -49,7 +50,7 @@ def scala_valori():
         testo = "#fff" if v < 6 else "#1f1f1f"
         celle.append(f'<div class="val" style="background:{col};color:{testo}">N{v}</div>')
     return ('<figure class="scala"><div class="valori">' + "".join(celle) + "</div>"
-            "<figcaption>Scala acromatica dei valori Munsell da N1 a N9 a intervalli percettivamente uniformi (conversione sRGB su illuminante D65).</figcaption></figure>")
+            "<figcaption>Scala dei valori da N1 a N9: passi che l'occhio vede uguali (a schermo è indicativa).</figcaption></figure>")
 
 
 def ruota_tinte(tinte):
@@ -72,9 +73,9 @@ def ruota_tinte(tinte):
             pezzi.append(f'<text x="{x:.1f}" y="{y:.1f}" text-anchor="middle" dominant-baseline="middle">{e(t["tinta"][1:])}</text>')
     pezzi.append(f'<text x="{cx}" y="{cy - 6}" text-anchor="middle" class="centro">40 tinte</text>')
     pezzi.append(f'<text x="{cx}" y="{cy + 12}" text-anchor="middle" class="centro">valore 6, croma 6</text>')
-    return ('<figure class="ruota"><svg viewBox="-6 -6 272 272" role="img" aria-label="Circuito delle 40 tinte Munsell">'
-            + "".join(pezzi) + "</svg><figcaption>Circuito delle 40 tinte Munsell normalizzate a valore 6 e croma 6 "
-            "(dati Munsell Renotation 1943; resa sRGB indicativa). In senso orario dall'alto: "
+    return ('<figure class="ruota"><svg viewBox="-6 -6 272 272" role="img" aria-label="Ruota delle 40 tinte Munsell">'
+            + "".join(pezzi) + "</svg><figcaption>Le 40 tinte di Munsell allo stesso valore (6) e croma (6), "
+            "dalla renotation del 1943; i colori a schermo sono indicativi. Partendo dall'alto, in senso orario: "
             "R, YR, Y, GY, G, BG, B, PB, P, RP.</figcaption></figure>")
 
 
@@ -88,18 +89,18 @@ def elenco_fonti(chiavi, fonti):
             voci.append(f["testo"])
     if not voci:
         return ""
-    return '<p class="fonti-cap">Riferimenti: ' + "; ".join(voci) + ".</p>"
+    return '<p class="fonti-cap">Fonti: ' + "; ".join(voci) + ".</p>"
 
 
 def schede_tavolozza(tav):
     carte = []
     for c in tav["colori"]:
-        tras = f" · comportamento nel tubetto di riferimento: {e(c['trasparenza_tubetto'])}" if c.get("trasparenza_tubetto") else ""
+        tras = f" · nel tubetto della tavolozza: {e(c['trasparenza_tubetto'])}" if c.get("trasparenza_tubetto") else ""
         carte.append(f"""<div class="tubo">
-  <div class="tubo-camp" style="background:{e(c['srgb'])}"><span>riferimento</span></div>
+  <div class="tubo-camp" style="background:{e(c['srgb'])}"><span>provvisorio</span></div>
   <div class="tubo-txt">
     <b>{e(c['nome'])}</b><br>
-    Colour Index: <b>{e(c['pigmento'])}</b>{tras}<br>
+    Pigmento <b>{e(c['pigmento'])}</b>{tras}<br>
     <span class="nota-tubo">{e(c['note'])}</span>
   </div>
 </div>""")
@@ -108,8 +109,8 @@ def schede_tavolozza(tav):
 
 CALCOLATORE_HTML = """
 <div class="strum" id="mescola">
-  <h3>Simulazione diretta della miscela</h3>
-  <p class="aiuto">Selezionare due o tre pigmenti della tavolozza e impostare le rispettive aliquote in parti intere (da 1 a 10).</p>
+  <h3>Mescola</h3>
+  <p class="aiuto">Si scelgono due o tre tubetti e le parti di ognuno (da 1 a 10).</p>
   <div class="righe-mix">
     <div class="riga-mix"><select id="mc1"></select><input id="mp1" type="number" min="1" max="10" value="1"> parti</div>
     <div class="riga-mix"><select id="mc2"></select><input id="mp2" type="number" min="1" max="10" value="1"> parti</div>
@@ -119,17 +120,17 @@ CALCOLATORE_HTML = """
     <div class="camp-grande" id="mcamp"></div>
     <div class="esito-txt" id="mtxt"></div>
   </div>
-  <div class="striscia-tit">Scala di diluizione su supporto cartaceo bianco (dalla concentrazione a miele al velo acquoso) · <a href="../principi/#consistenze">gradi di diluizione</a></div>
+  <div class="striscia-tit">Striscia di diluizione in sei passi, dal miele al velo più leggero, sul bianco della carta · <a href="../principi/#consistenze">le tre consistenze</a></div>
   <div class="striscia" id="mstriscia"></div>
 </div>
 
 <div class="strum" id="trova">
-  <h3>Ricerca inversa della formulazione</h3>
-  <p class="aiuto">Impostare il colore obiettivo: l'algoritmo valuta le combinazioni di uno, due o tre pigmenti (in rapporti da 1 a 10) ed elenca le 5 formulazioni a minore distanza percettiva nello spazio colorimetrico OKLab.</p>
+  <h3>Trova la miscela</h3>
+  <p class="aiuto">Si sceglie il colore da ottenere: il calcolatore prova tutte le combinazioni di uno, due o tre tubetti con parti da 1 a 10 e mostra le 5 più vicine, misurando la distanza nello spazio OKLab.</p>
   <div class="riga-trova">
     <label>Colore obiettivo <input id="tobj" type="color" value="#6b8e23"></label>
-    <label class="spunta"><input id="tdil" type="checkbox" checked> includi i gradi di diluizione</label>
-    <button id="tvai" type="button">Calcola formulazioni</button>
+    <label class="spunta"><input id="tdil" type="checkbox" checked> considera anche la diluizione</label>
+    <button id="tvai" type="button">Cerca</button>
   </div>
   <div id="tris"></div>
 </div>
@@ -177,6 +178,8 @@ figure { margin: 12px 0; } figcaption { font-size: .85em; color: #555; margin-to
 .striscia { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0; border-radius: 6px; overflow: hidden; border: 1px solid #d8d2c4; margin-top: 4px; }
 .passo { min-height: 54px; display: flex; align-items: flex-end; justify-content: center; }
 .passo span { font-size: .7em; background: rgba(255,255,255,.85); border-radius: 4px; padding: 0 4px; margin-bottom: 3px; color: #333; }
+.passo.scelto { outline: 3px solid #1f3c2b; outline-offset: -3px; }
+.passo.scelto span { font-weight: 700; }
 .riga-trova { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; font-size: .92em; }
 .riga-trova input[type=color] { width: 54px; height: 34px; vertical-align: middle; border: 1px solid #999; padding: 0; background: none; }
 .riga-trova button, .usa { background: #2c4f3a; color: #fff; border: 0; border-radius: 8px; padding: 6px 14px; font-weight: 600; font-size: .95em; cursor: pointer; }
@@ -208,7 +211,7 @@ def pagina():
         if c["id"] == "tavolozza":
             corpo.append(schede_tavolozza(tav))
         if c["id"] == "calcolatore":
-            corpo.append('<div class="avviso"><b>Avvertenze metodologiche e limiti del modello:</b><ul>' + "".join(f"<li>{x}</li>" for x in c["limiti"]) + "</ul></div>")
+            corpo.append('<div class="avviso"><b>Prima di usarlo.</b><ul>' + "".join(f"<li>{x}</li>" for x in c["limiti"]) + "</ul></div>")
             corpo.append(CALCOLATORE_HTML)
             corpo.append(f'<p class="aiuto">{c["taratura"]}</p>')
         corpo.append(elenco_fonti(c["fonti"], fonti))
@@ -233,8 +236,8 @@ def pagina():
 <p class="sotto">{e(testi['sottotitolo'])}</p></header>
 <nav class="salti">{salti}</nav>
 {chr(10).join(sezioni)}
-<footer>Quaderno tecnico di acquerello · Sezione 3: Colorimetria applicata · Revisione del {e('/'.join(reversed(testi['data'].split('-'))))}. Il simulatore impiega le matrici spettrali di
-<a href="https://github.com/rvanwijnen/spectral.js" target="_blank" rel="noopener">spectral.js</a> di Ronald van Wijnen (licenza MIT, riportata nel sorgente della pagina).</footer>
+<footer>Quaderno di acquerello · Teoria dei colori · testi del {e('/'.join(reversed(testi['data'].split('-'))))}. Il calcolatore usa le tabelle spettrali di
+<a href="https://github.com/rvanwijnen/spectral.js" target="_blank" rel="noopener">spectral.js</a> di Ronald van Wijnen (licenza MIT, testo della licenza nel codice della pagina); il resto del codice è scritto per il Quaderno.</footer>
 <script>
 {script}
 </script>

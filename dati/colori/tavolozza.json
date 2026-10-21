@@ -1,14 +1,14 @@
 {
-  "nota": "I sei pigmenti della tavolozza ristretta, con denominazione comune e codice Colour Index: le corrispondenze per serie commerciale sono in dati/marche/marche.json. I valori sRGB e il potere colorante relativo sono valori convenzionali non calibrati impiegati dal simulatore spettrale.",
-  "fonte_colori": "riferimenti sRGB convenzionali del tono a piena saturazione su carta bianca; calibrabili su campioni reali",
-  "data": "2026-10-20",
-  "carta": {"nome": "carta bianca", "srgb": "#FBF8F0", "fonte": "riferimento sRGB per supporto in cotone a punto di bianco caldo"},
+  "nota": "I sei colori di base, col nome comune e il pigmento: i tubetti corrispondenti, marca per marca, sono in dati/marche/marche.json. Il pigmento del cremisi (PR206) viene dall'etichetta del tubetto usato negli esercizi. trasparenza_tubetto c'è solo dove serve alla pratica (velature) ed è quella del tubetto della tavolozza. I colori sRGB e la forza di tintura sono valori INDICATIVI E PROVVISORI scelti a occhio per far funzionare il calcolatore: non sono misure. Vanno sostituiti con la taratura su prove reali su carta (campione pieno di ogni tubetto, fotografato o misurato).",
+  "fonte_colori": "provvisori, stima a occhio del colore pieno su carta bianca; da tarare su prove reali su carta",
+  "data": "2026-10-18",
+  "carta": {"nome": "carta bianca", "srgb": "#FBF8F0", "fonte": "provvisorio: bianco carta caldo indicativo"},
   "colori": [
-    {"id": "giallo", "nome": "Giallo limone", "pigmento": "PY175", "note": "Primario giallo a dominante fredda (benzimidazolone), trasparente e ad alta resistenza alla luce", "srgb": "#F5E446", "forza": 1.0, "stato": "riferimento"},
-    {"id": "ceruleo", "nome": "Ceruleo", "pigmento": "PB15", "trasparenza_tubetto": "opaco", "note": "Imitazione a base di ftalocianina di rame schiarita (distinta dal ceruleo di cobalto PB35); elevato potere colorante", "srgb": "#2A7FC0", "forza": 1.0, "stato": "riferimento"},
-    {"id": "cremisi", "nome": "Cremisi", "pigmento": "PR206", "note": "Rosso profondo a tendenza violacea (chinacridone); la formulazione varia sensibilmente tra i produttori (cfr. sezione Marche)", "srgb": "#8E1C34", "nota_srgb": "valore sRGB convenzionale di riferimento per il pigmento PR206", "forza": 1.0, "stato": "riferimento"},
-    {"id": "siena", "nome": "Terra di Siena bruciata", "pigmento": "PR101", "note": "Ossido di ferro rosso sintetico trasparente (sigla nelle ricette: TSB), fondamentale per la neutralizzazione dei blu e dei verdi", "srgb": "#964628", "forza": 1.0, "stato": "riferimento"},
-    {"id": "ombra", "nome": "Terra d'ombra bruciata", "pigmento": "PBr7 + PY42", "trasparenza_tubetto": "opaco", "note": "Ossido di ferro bruno calcinato combinato con ossido giallo (sigla nelle ricette: TOB); essenziale per i neutri scuri con il Blu oltremare", "srgb": "#5F412D", "forza": 1.0, "stato": "riferimento"},
-    {"id": "oltremare", "nome": "Blu oltremare", "pigmento": "PB29", "note": "Alluminosilicato di sodio solforato a dominante calda violacea (sigla: BO); marcata sedimentazione granulante nelle cavità della carta", "srgb": "#283A9E", "forza": 1.0, "stato": "riferimento"}
+    {"id": "giallo", "nome": "Giallo limone", "pigmento": "PY175", "note": "giallo freddo", "srgb": "#F5E446", "forza": 1.0, "stato": "provvisorio"},
+    {"id": "ceruleo", "nome": "Ceruleo", "pigmento": "PB15", "trasparenza_tubetto": "opaco", "note": "imitazione a base di blu ftalo, non il ceruleo vero (PB35); tinge molto", "srgb": "#2A7FC0", "forza": 1.0, "stato": "provvisorio"},
+    {"id": "cremisi", "nome": "Cremisi", "pigmento": "PR206", "note": "pigmento letto sull'etichetta del tubetto usato negli esercizi", "srgb": "#8E1C34", "nota_srgb": "provvisorio, a occhio, come gli altri: era un cremisi generico, non un campione del tubetto, quindi non è stato ritoccato; si corregge con la taratura sul tubetto PR206", "forza": 1.0, "stato": "provvisorio"},
+    {"id": "siena", "nome": "Terra di Siena bruciata", "pigmento": "PR101", "note": "sigla nelle ricette: TSB", "srgb": "#964628", "forza": 1.0, "stato": "provvisorio"},
+    {"id": "ombra", "nome": "Terra d'ombra bruciata", "pigmento": "PBr7 + PY42", "trasparenza_tubetto": "opaco", "note": "sigla nelle ricette: TOB", "srgb": "#5F412D", "forza": 1.0, "stato": "provvisorio"},
+    {"id": "oltremare", "nome": "Blu oltremare", "pigmento": "PB29", "note": "sigla nelle ricette: BO; granulante", "srgb": "#283A9E", "forza": 1.0, "stato": "provvisorio"}
   ]
 }

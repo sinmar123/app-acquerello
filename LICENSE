@@ -9,7 +9,7 @@ sorgente (script di generazione in Python e calcolatore in JavaScript).
 1. Testi, dati, schede didattiche, infografiche e illustrazioni (CC BY 4.0)
 
 I testi delle guide, le tabelle e i file di dati in `dati/`, le infografiche SVG
-e le illustrazioni originali del progetto sono distribuiti con la licenza:
+e le illustrazioni del progetto sono distribuiti con la licenza:
 
     Creative Commons Attribuzione 4.0 Internazionale (CC BY 4.0)
     https://creativecommons.org/licenses/by/4.0/legalcode.it
@@ -20,6 +20,12 @@ anche per scopi commerciali, a condizione di:
   https://github.com/sinmar123/app-acquerello»);
 - inserire un collegamento alla licenza CC BY 4.0;
 - indicare se sono state apportate modifiche.
+
+Le sei illustrazioni della sezione Alberi (`dati/alberi/illustrazioni/`) sono
+generate con l'intelligenza artificiale (Nano Banana 2.1, modello di Google) su
+descrizioni scritte per il Quaderno: non sono acquerelli dipinti a mano né
+fotogrammi dei video. Sono distribuite alle stesse condizioni, nei limiti in cui
+la legge le tutela.
 
 2. Video di terzi e marchi citati
 
@@ -33,7 +39,8 @@ scopo informativo e didattico, con rimando alle schede tecniche ufficiali.
 
 Gli script Python (`scripts/`, `dati/**/*.py`) e il codice JavaScript
 (`dati/colori/*.js`, incluse le tabelle spettrali di `spectral.js` in
-`dati/colori/spettri-spectraljs.js`) sono distribuiti con licenza MIT:
+`dati/colori/spettri-spectraljs.js`, `functions/` e `lib/`) sono distribuiti
+con licenza MIT:
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
