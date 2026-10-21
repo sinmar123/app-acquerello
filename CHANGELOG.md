@@ -2,6 +2,15 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-21 - CC - Chat: le 12 miscele M1-M12 nel prompt
+
+- Il prompt della chat (`genera_prompt_chat` in `scripts/genera-sito.py`, rigenerato in `lib/prompt-chat.js`) aveva i sei colori ma non le miscele, e alla domanda sull'abete in ombra il modello aveva proposto una ricetta sua invece della M4. Ora riporta le 12 miscele con ricetta, consistenza e note, lette da `apertura.miscele` del json degli Alberi, e la convenzione delle dosi da `apertura.dosi`; una riga chiede di indicare la miscela del Quaderno, con sigla e nome, prima di eventuali varianti. Il prompt passa da 6.232 a 8.831 caratteri.
+- Prova con quattro domande dirette a `gemini-4-argon`, con le impostazioni della funzione: l'abete in ombra riceve M4 e M3, il verde scuro per le conifere in ombra M3 e M4, i tronchi in ombra degli alberi invernali M10 e M11, il cielo freddo di fondo M12; dosi coerenti con la convenzione del sito, nessun trattino lungo.
+- Principi: la frase di 58 parole dell'introduzione, che elencava tre rimandi separati da punti e virgola, diventa tre frasi.
+- Prossima azione: unione della PR dopo il via del curatore; taratura dei sei colori su campioni reali.
+
+-- CC
+
 ## 2026-10-21 - CC - Barra delle sezioni, home «in costruzione», fonti per capitolo, via i foglietti A5
 
 - **Barra delle sezioni** (`scripts/genera-sito.py`): in cima a ogni pagina, home compresa, con le cinque sezioni e S1 Alberi, l'assistente e i suggerimenti. Resta visibile scorrendo; sul telefono è una riga sola che scorre di lato e mostra la voce della pagina aperta. L'indice dei capitoli di ogni sezione scende sotto la barra.

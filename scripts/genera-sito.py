@@ -176,8 +176,8 @@ def controlla_marche_fuori_sezione():
 
 def genera_prompt_chat():
     """Scrive lib/prompt-chat.js col prompt di sistema della chat, ricavato dai dati del sito: sezioni,
-    consistenze e stati della carta dei Principi, tavolozza, esempi e modalità degli Alberi, moduli in
-    preparazione. Così la chat non può contraddire le pagine con dati scritti a mano."""
+    consistenze e stati della carta dei Principi, tavolozza, le 12 miscele con la convenzione delle dosi,
+    esempi e modalità degli Alberi, moduli in preparazione. Così la chat non può contraddire le pagine con dati scritti a mano."""
     principi = json.loads((DATI_DIR / "principi" / "principi.json").read_text(encoding="utf-8"))
     tavolozza = json.loads((DATI_DIR / "colori" / "tavolozza.json").read_text(encoding="utf-8"))
     alberi = json.loads((DATI_DIR / "alberi" / "pit-261014-video-gesti-alberi.json").read_text(encoding="utf-8"))
@@ -196,6 +196,14 @@ def genera_prompt_chat():
         + (f", {c['trasparenza_tubetto']} nel tubetto della tavolozza" if c.get("trasparenza_tubetto") else "")
         + f"); {c['note']}"
         for c in tavolozza["colori"])
+    dosi = alberi["apertura"]["dosi"]
+    convenzione = "; ".join(f"«{k}», {v}" for k, v in dosi["voci"])
+    miscele = []
+    for m in alberi["apertura"]["miscele"]:
+        # le sigle dei tubetti fra parentesi, (BO) (TSB) (TOB), servono nella tabella del sito e non nel prompt
+        ricetta = re.sub(r"\s*\((?:BO|TSB|TOB)\)", "", m["ricetta"])
+        nota = f" {m['nota']}" if m.get("nota") else ""
+        miscele.append(f"- {m['m']} {m['nome']}: {ricetta}. Consistenza: {m['consistenza']}.{nota}")
     esempi = []
     for t in alberi["alberi"]:
         sigla, nome = t["voce"].split(" ", 1)
@@ -226,6 +234,9 @@ La regola di fondo:
 La tavolozza ridotta a sei colori (i colori del calcolatore sono provvisori, stimati a occhio):
 {colori}
 
+Le 12 miscele della tavolozza ridotta, M1-M12 ({SITO_URL}/studio-plein-air/#miscele). {dosi['testo']} Le dosi: {convenzione}.
+{chr(10).join(miscele)}
+
 Il modulo S1, alberi, siepi e arbusti ({SITO_URL}/alberi/), con le modalità tratte dai video:
 {chr(10).join(esempi)}
 
@@ -235,6 +246,7 @@ Come rispondere:
 - In italiano, col registro di un buon manuale tecnico: termini esatti, frasi chiare, niente parlato e niente paroloni. Di norma fra 120 e 220 parole.
 - Niente trattino lungo: per gli incisi si usano le virgole, i due punti o le parentesi.
 - Indica la sezione del Quaderno che tratta l'argomento, con il suo indirizzo.
+- Se una miscela M1-M12 ottiene il colore richiesto, indicala con sigla e nome prima di eventuali varianti.
 - Non inventare fonti, autori, video, citazioni, sigle di pigmenti o numeri. Se il Quaderno non tratta un punto, dillo, e suggerisci una prova su carta.
 - Ricorda che l'esito va sempre verificato sulla carta: le risposte sono una guida, non una regola.
 - Rispondi solo sui temi indicati all'inizio; per il resto declina in una frase.
