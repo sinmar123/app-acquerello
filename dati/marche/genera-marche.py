@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Genera la pagina della sezione «Merceologia dei pigmenti e confronto tra serie commerciali» del Quaderno di acquerello.
+"""Genera la pagina della sezione «Marche e tubetti» del Quaderno di acquerello.
 
 Uso: python genera-marche.py pagina
 
@@ -7,7 +7,7 @@ Legge marche.json e i sei colori di base da ../colori/tavolozza.json e scrive ma
 scripts/genera-sito.py la copia in site/marche/index.html.
 Controlli: ogni riga ha un colore della tavolozza, una fonte ufficiale (link) e la data di controllo;
 ogni serie copre tutti e sei i colori; i rimandi dei capitoli puntano a serie esistenti; nessun testo
-contiene «da verificare»."""
+contiene «da verificare». GBOT-app-acquerello, 18/10/2026."""
 import html
 import json
 import pathlib
@@ -135,8 +135,8 @@ def pagina():
                 c = colori[cid]
                 var = f'<span class="var">{e(r["variante"])}</span>' if r.get("variante") else ""
                 col = f'<td>{e(c["nome"])} ({e(c["pigmento"])}){var}</td>'
-                fonte = (f'<td class="fonte"><a href="{e(r["fonte"])}" target="_blank" rel="noopener">scheda tecnica</a>'
-                         f'<br><small>verificata il {e(data_it(r["controllato"]))}</small></td>')
+                fonte = (f'<td class="fonte"><a href="{e(r["fonte"])}" target="_blank" rel="noopener">pagina ufficiale</a>'
+                         f'<br><small>controllata il {e(data_it(r["controllato"]))}</small></td>')
                 if "assente" in r:
                     righe.append(f'<tr>{col}<td class="assente" colspan="4">{e(r["assente"])}</td>{fonte}</tr>')
                     continue
@@ -145,21 +145,21 @@ def pagina():
                 num = e(r.get("numero") or r.get("sku"))
                 righe.append(f'<tr>{col}<td><b>{e(r["nome_commerciale"])}</b>{nota}</td><td>{num}</td>'
                              f'<td class="pig">{e(r["pigmenti"])}</td><td>{e(d["trasparenza"][r["trasparenza"]])}{gran}</td>{fonte}</tr>')
-        n_tit = "SKU" if any(r.get("sku") for r in m["righe"]) else "Cod."
+        n_tit = "SKU" if any(r.get("sku") for r in m["righe"]) else "N."
         nota = f'<p class="nota-serie">{e(m["nota"])}</p>' if m.get("nota") else ""
         sezioni.append(
             f'<section class="cap" id="{e(m["id"])}"><h2>{e(titoli[m["id"]])}</h2>{nota}'
-            f'<div class="tab"><table class="tub"><tr><th>Voce della tavolozza</th><th>Denominazione a catalogo</th><th>{n_tit}</th>'
-            f'<th>Colour Index</th><th>Grado di trasparenza</th><th>Documentazione</th></tr>{"".join(righe)}</table></div>'
+            f'<div class="tab"><table class="tub"><tr><th>Colore della tavolozza</th><th>Tubetto</th><th>{n_tit}</th>'
+            f'<th>Pigmenti</th><th>Trasparenza</th><th>Fonte</th></tr>{"".join(righe)}</table></div>'
             f'<p class="nota-serie"><a href="{e(m["fonte_generale"])}" target="_blank" '
-            f'rel="noopener">Catalogo generale della serie</a> sul sito ufficiale del produttore.</p></section>')
+            f'rel="noopener">Tabella generale della serie</a> sul sito del produttore.</p></section>')
     stesso = "".join(f'<li>{v["testo"]}{rimandi(v["marche"])}</li>' for v in d["stesso_nome"])
     etich = "".join(f'<li>{v["testo"]}{rimandi(v["marche"])}</li>' for v in d["etichetta"])
-    salti = ('<a href="#apertura">Premessa</a>' + "".join(f'<a href="#{e(m["id"])}">{e(titoli[m["id"]])}</a>' for m in d["marche"])
-             + '<a href="#stesso-nome">Variabilità formulativa</a><a href="#etichetta">Parametri di etichetta</a><a href="#fonti">Fonti</a>')
+    salti = ('<a href="#apertura">Apertura</a>' + "".join(f'<a href="#{e(m["id"])}">{e(titoli[m["id"]])}</a>' for m in d["marche"])
+             + '<a href="#stesso-nome">Stesso nome</a><a href="#etichetta">L\'etichetta</a><a href="#fonti">Fonti</a>')
     fonti = "".join(f'<li>{e(titoli[m["id"]])}: <a href="{e(m["fonte_generale"])}" target="_blank" rel="noopener">'
                     f'{e(m["fonte_generale"])}</a></li>' for m in d["marche"])
-    fonti += (f'<li>Analisi comparativa «Best Brand to Fill Watercolour Pans» (selezione delle serie): <a href="{e(d["criterio_fonte"])}" '
+    fonti += (f'<li>Video «Best Brand to Fill Watercolour Pans», per la scelta delle marche: <a href="{e(d["criterio_fonte"])}" '
               f'target="_blank" rel="noopener">{e(d["criterio_fonte"])}</a></li>')
     intro = "".join(f"<p>{e(p)}</p>" for p in d["introduzione"])
     pagina_html = f"""<!doctype html>
@@ -175,18 +175,18 @@ def pagina():
 <p class="sotto">{e(d['sottotitolo'])}</p></header>
 <nav class="salti">{salti}</nav>
 <div class="intro" id="apertura">{intro}
-<p>{e(d['criterio'])} <a href="{e(d['criterio_fonte'])}" target="_blank" rel="noopener">Riferimento video</a>.</p></div>
-<p class="legenda">{e(d['nota_trasparenza'])} Le proprietà ottiche dei sei pigmenti di riferimento sono illustrate nella sezione
-<a href="../colori/#tavolozza">Colorimetria applicata</a>.</p>
+<p>{e(d['criterio'])} <a href="{e(d['criterio_fonte'])}" target="_blank" rel="noopener">Il video</a>.</p></div>
+<p class="legenda">{e(d['nota_trasparenza'])} I nomi comuni e i pigmenti della tavolozza sono quelli della sezione
+<a href="../colori/#tavolozza">Teoria dei colori</a>.</p>
 {chr(10).join(sezioni)}
-<section class="cap" id="stesso-nome"><h2>Variabilità formulativa a parità di denominazione</h2>
-<p>Sintesi delle divergenze chimiche riscontrate nelle tabelle comparative sopra riportate (tra parentesi quadre i rimandi alle serie interessate):</p><ul class="voci">{stesso}</ul></section>
-<section class="cap" id="etichetta"><h2>Parametri tecnici da verificare sull'etichetta</h2>
-<p>Specifiche merceologiche riportate nella documentazione ufficiale dei produttori:</p><ul class="voci">{etich}</ul></section>
-<section class="cap" id="fonti"><h2>Repertorio delle fonti ufficiali</h2>
-<p>Ciascuna voce delle tabelle rimanda alla scheda prodotto specifica e riporta la data di verifica. Cataloghi generali di riferimento:</p>
+<section class="cap" id="stesso-nome"><h2>Stesso nome, pigmenti diversi</h2>
+<p>Esempi presi dalle tabelle qui sopra; tra parentesi quadre le serie da cui vengono.</p><ul class="voci">{stesso}</ul></section>
+<section class="cap" id="etichetta"><h2>Cosa guardare sull'etichetta</h2>
+<p>Le voci che le pagine ufficiali usate qui riportano per ogni colore:</p><ul class="voci">{etich}</ul></section>
+<section class="cap" id="fonti"><h2>Fonti</h2>
+<p>Ogni riga delle tabelle ha il link alla pagina ufficiale del tubetto e la data di controllo. Le tabelle generali:</p>
 <ol class="fonti">{fonti}</ol></section>
-<footer>Quaderno tecnico di acquerello · Sezione 4: Merceologia e marche · Revisione del {e(data_it(d['data']))}.</footer>
+<footer>Quaderno di acquerello · Marche e tubetti · dati controllati il {e(data_it(d['data']))}.</footer>
 </body>
 </html>
 """

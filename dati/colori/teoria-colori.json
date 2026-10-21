@@ -1,20 +1,20 @@
 {
-  "data": "2026-10-20",
-  "nota": "Testi della sezione Colorimetria applicata e ottica della velatura. Ogni affermazione rimanda alle fonti documentali elencate in calce.",
-  "titolo": "Colorimetria applicata e ottica della velatura",
-  "sottotitolo": "Spazio cromatico di Munsell, sintesi sottrattiva, comportamento ottico dello strato trasparente, tavolozza ristretta a sei pigmenti e simulatore spettrale Kubelka-Munk.",
+  "data": "2026-10-18",
+  "nota": "Testi della sezione Teoria dei colori. Ogni affermazione rimanda alle fonti elencate in fondo; i testi delle fonti sono citati e collegati, non copiati. I campi possono contenere semplici tag html (b, i, a, br).",
+  "titolo": "Teoria dei colori per l'acquerello",
+  "sottotitolo": "Tinta, valore e croma secondo Munsell, perché i pigmenti non si mescolano come le luci, cosa cambia con l'acqua e la carta, i sei tubetti della tavolozza e un calcolatore di miscele che gira tutto nel browser.",
   "capitoli": [
     {
       "id": "munsell",
-      "breve": "Sistema Munsell",
-      "titolo": "1. Coordinate del colore: tinta, valore e croma (sistema Munsell)",
+      "breve": "Munsell",
+      "titolo": "1. Tinta, valore, croma",
       "paragrafi": [
-        "Nel 1905 il pittore e didatta statunitense Albert H. Munsell (1858-1918) pubblicò <i>A Color Notation</i>, introducendo un sistema di classificazione razionale basato su tre coordinate percettivamente indipendenti, calibrate in modo che incrementi numerici costanti corrispondano a intervalli visivi uniformi. L'atlante cromatico del 1915 fu sottoposto nel 1943 a revisione strumentale da parte della Optical Society of America (<i>Munsell Renotation</i>), che ne ancorò i campioni allo spazio colorimetrico CIE 1931 costituendo lo standard tuttora vigente.",
-        "<b>Tinta (Hue)</b>: identifica la famiglia spettrale del colore. Il circuito di Munsell è suddiviso in 5 tinte principali equidistanti — rosso (R), giallo (Y), verde (G), blu (B), porpora (P) — e 5 tinte intermedie (YR, GY, BG, PB, RP). Ciascuno dei dieci settori è frazionato in quattro gradi principali (2,5 · 5 · 7,5 · 10), per un totale di 40 tinte di riferimento.",
-        "<b>Valore (Value)</b>: esprime la chiarezza luminosa lungo l'asse acromatico verticale, da 0 (nero assoluto ideale) a 10 (bianco diffondente ideale). L'asse dei grigi neutri è indicato con la sigla N1, N2... N9. In termini colorimetrici, il valore Munsell equivale con buona approssimazione a un decimo della chiarezza psicometrica CIELAB <i>L*</i> (un neutro N5 presenta <i>L*</i> prossimo a 50).",
-        "<b>Croma (Chroma)</b>: misura la purezza o saturazione, ovvero la distanza percettiva dal grigio neutro di pari valore. L'asse acromatico ha croma nullo (0), mentre il limite massimo raggiungibile varia sensibilmente in funzione della tinta e del valore: i gialli raggiungono il massimo croma a valori elevati (7-8), mentre i blu oltremare e i porpora lo raggiungono a valori bassi (3-4). Tale asimmetria conferisce al solido di Munsell una geometria fortemente irregolare.",
-        "La notazione completa si esprime nella forma <b>Tinta Valore/Croma</b>: ad esempio <b>5PB 3/10</b> identifica un blu-violaceo profondo ad alta saturazione, mentre <b>10YR 7/4</b> designa un ocra chiaro a saturazione moderata.",
-        "Nella pratica pittorica il <b>valore tonale</b> rappresenta l'elemento strutturale portante: la leggibilità plastica e spaziale di un dipinto permane anche alterando le tinte, purché i rapporti di chiarezza siano corretti. Nell'acquerello trasparente l'innalzamento del valore non si ottiene con l'aggiunta di pigmento bianco opaco, bensì aumentando la diluizione acquosa per lasciar trasparire la luminanza della carta."
+        "Albert Munsell (1858-1918), pittore e insegnante di Boston, propose nel 1905 (<i>A Color Notation</i>) di descrivere ogni colore di un oggetto con tre misure indipendenti, scelte in modo che passi uguali si vedano come differenze uguali. Il suo atlante del 1915 fu rivisto nel 1943 dalla Optical Society of America (la «renotation»), che lo collegò alla colorimetria della CIE: è la base delle edizioni di oggi.",
+        "<b>Tinta</b> (hue): la famiglia del colore. Munsell usa 5 tinte principali, rosso R, giallo Y, verde G, blu B, porpora P, e 5 intermedie, YR, GY, BG, PB, RP. Ognuna si divide in passi (2,5, 5, 7,5, 10): nell'atlante le tinte sono 40.",
+        "<b>Valore</b> (value): quanto il colore è chiaro o scuro, da 0 (nero ideale) a 10 (bianco ideale). I grigi si scrivono N1, N2... N9. Il valore Munsell corrisponde circa alla chiarezza CIELAB L* divisa per 10: un grigio N5 ha L* intorno a 50.",
+        "<b>Croma</b> (chroma): quanto il colore si stacca dal grigio dello stesso valore. Un grigio ha croma 0; non c'è un massimo fisso, perché il croma più alto che si può ottenere cambia da tinta a tinta e da valore a valore. Per questo il «solido» di Munsell non è una sfera ma una forma irregolare, e ogni tavolozza ne copre solo una parte.",
+        "La notazione si scrive <b>tinta valore/croma</b>: per esempio <b>5PB 3/10</b> è un blu violaceo scuro e intenso, <b>10YR 7/4</b> un ocra chiaro e smorzato.",
+        "Per chi dipinge, il valore è la misura che conta di più: se i valori sono giusti, il disegno regge anche con tinte approssimate. Nell'acquerello il valore si alza con l'acqua, non col bianco."
       ],
       "fonti": [
         "wiki-munsell",
@@ -24,13 +24,13 @@
     },
     {
       "id": "luce",
-      "breve": "Sintesi e spettro",
-      "titolo": "2. Sintesi sottrattiva e comportamento spettrale dei pigmenti",
+      "breve": "Luce e pigmento",
+      "titolo": "2. Luce e pigmento",
       "paragrafi": [
-        "<b>Sintesi additiva</b>: riguarda la sovrapposizione diretta di flussi luminosi emessi da sorgenti primarie. Nei dispositivi di visualizzazione (spazio sRGB), la somma delle radiazioni rossa, verde e blu alla massima intensità genera la percezione del bianco, mentre la somma di luce rossa e verde produce il giallo. Ogni apporto luminoso innalza il valore complessivo.",
-        "<b>Sintesi sottrattiva</b>: governa il comportamento fisico delle materie coloranti deposte su un supporto. Ciascun pigmento agisce come un filtro selettivo che assorbe determinate bande dello spettro visibile e diffonde o trasmette le lunghezze d'onda residue. Quando si mescolano due pigmenti, ciascuno sottrae la propria frazione spettrale: raggiunge l'osservatore soltanto la radiazione risparmiata da entrambi i componenti, con conseguente abbassamento del valore e riduzione del croma.",
-        "<b>Limiti predittivi del cerchio cromatico tradizionale.</b> La sensazione di colore integra l'intera curva di riflettanza spettrale in tre soli stimoli recettoriali: due pigmenti visivamente simili (metameri) possono possedere curve di assorbimento molto diverse e comportarsi in modo divergente quando vengono mescolati. Come documentato da Bruce MacEvoy (<i>handprint.com</i>), la collocazione geometrica di un pigmento su una ruota cromatica bidimensionale non è sufficiente a prevedere la traiettoria esatta né la perdita di saturazione di una miscela reale, rendendo indispensabile la campionatura su carta.",
-        "<b>Modello fisico di Kubelka-Munk (1931).</b> Per descrivere analiticamente il comportamento ottico di uno strato pittorico, la teoria di Paul Kubelka e Franz Munk caratterizza ciascun pigmento in funzione della lunghezza d'onda λ mediante due parametri: il coefficiente di assorbimento <i>K(λ)</i> e il coefficiente di diffusione (scattering) <i>S(λ)</i>. Nell'approssimazione a singola costante, il rapporto <i>K/S</i> di una miscela è dato dalla combinazione lineare dei rapporti <i>K/S</i> dei singoli pigmenti ponderata per le rispettive concentrazioni. Il simulatore integrato in questa pagina esegue il calcolo su 38 bande spettrali tra 380 e 750 nm prima di proiettare la riflettanza risultante nello spazio sRGB."
+        "<b>Mescolanza additiva</b>: le luci colorate si sommano. Su uno schermo rosso, verde e blu accesi insieme danno il bianco, rosso e verde danno il giallo. Più luce si aggiunge, più il risultato è chiaro.",
+        "<b>Mescolanza sottrattiva</b>: un pigmento assorbe una parte della luce e rimanda il resto. Mescolando due pigmenti, ognuno toglie la sua parte, e torna all'occhio solo la luce che nessuno dei due ha assorbito. Il risultato è più scuro dei due colori di partenza e di solito meno intenso.",
+        "<b>Perché la ruota dei colori non basta.</b> Il colore che vediamo è un riassunto: due pigmenti che sembrano uguali possono assorbire in modo diverso le varie lunghezze d'onda, e allora si mescolano in modo diverso. Bruce MacEvoy (handprint.com) lo chiama l'errore della ruota dei colori: la posizione di un pigmento sulla ruota non predice con sicurezza cosa darà in miscela, né quanto la miscela perderà di intensità. Conviene sempre provare sul foglietto.",
+        "<b>Il modello del calcolatore.</b> La teoria di Kubelka e Munk (1931) descrive uno strato di colore con due grandezze per ogni lunghezza d'onda: quanto assorbe (K) e quanto diffonde (S). Nella versione più semplice, «a una costante», di ogni pigmento basta il rapporto K/S: il K/S di una miscela è la media dei K/S dei componenti, pesata con le quantità. Il calcolatore fa questo conto su 38 bande dello spettro, da 380 a 750 nanometri, e poi riconverte in un colore per lo schermo."
       ],
       "fonti": [
         "wiki-additiva",
@@ -42,13 +42,13 @@
     },
     {
       "id": "acquerello",
-      "breve": "Ottica della velatura",
-      "titolo": "3. Ottica dello strato ad acquerello: supporto, velatura e granulazione",
+      "breve": "L'acquerello",
+      "titolo": "3. L'acquerello: acqua, carta, velature",
       "paragrafi": [
-        "Nella pittura ad acquerello priva di biacca la sorgente luminosa interna è costituita dalla riflettanza diffusa della carta bianca. La radiazione incidente attraversa il film pittorico trasparente, viene riflessa dalla cellulosa del supporto e riattraversa una seconda volta lo strato di pigmento prima di emergere verso l'occhio: la regolazione dei chiari avviene quindi riducendo la densità superficiale delle particelle coloranti tramite diluizione con acqua.",
-        "<b>Diluizione e stato di imbibizione del supporto.</b> La classificazione operativa delle tre concentrazioni (tè, latte, miele), gli stadi di asciugatura della fibra cartacea e le leggi di accoppiamento idrodinamico sono esposti nel dettaglio nella sezione <a href=\"../principi/#consistenze\">Principi tecnici</a>.",
-        "<b>Miscelazione fisica su tavolozza e sovrapposizione per velatura (glazing).</b> Quando due pigmenti vengono mescolati sulla tavolozza, le rispettive particelle coesistono nel medesimo strato; nella velatura, invece, un secondo film trasparente viene steso sopra una campitura già perfettamente asciutta, obbligando la luce ad attraversare due filtri ottici distinti in serie. Se entrambi i pigmenti sono trasparenti l'esito cromatico è affine ma la velatura preserva una maggiore luminosità interna; se invece il secondo strato contiene un pigmento semi-opaco od opaco (quali il Ceruleo PB15 formulato con carica coprente o la Terra d'ombra bruciata), la diffusione superficiale prevale sul fondo e l'ordine di sovrapposizione modifica sensibilmente il risultato.",
-        "<b>Sedimentazione e granulazione.</b> I pigmenti inorganici a granulometria maggiore o soggetti a flocculazione in veicolo acquoso (tipicamente il Blu oltremare sintetico PB29 e gli ossidi di ferro naturali) tendono a decantare nelle micro-cavità della carta pressata a freddo o ruvida, generando una tessitura micro-chiaroscurale che nessun modello colorimetrico uniforme può riprodurre a schermo."
+        "Nell'acquerello il bianco è la carta. Un velo di colore trasparente lascia passare la luce, che arriva alla carta, rimbalza e riattraversa il velo: per schiarire si aggiunge acqua, così sulla carta arriva meno pigmento.",
+        "<b>Consistenze e carta.</b> Le tre consistenze della miscela (tè, latte, miele), gli stati della carta (asciutta, umida, bagnata e i momenti di mezzo) e come abbinarli sono spiegati nella sezione <a href=\"../principi/#consistenze\">Principi generali</a>, con le fonti.",
+        "<b>Mescolare o velare.</b> Si può mescolare in tavolozza, e allora i pigmenti stanno nello stesso strato; oppure velare, cioè stendere un colore sopra un altro già asciutto, così la luce passa per due filtri uno sopra l'altro. Con pigmenti trasparenti i due risultati si somigliano, ma non sono uguali. Con quelli opachi, come il ceruleo e la terra d'ombra bruciata nel tubetto della tavolozza, lo strato sopra copre di più e l'ordine delle velature cambia il risultato.",
+        "<b>Granulazione.</b> Alcuni pigmenti, come l'oltremare PB29, si depositano negli avvallamenti della carta e lasciano una trama a puntini. È uno degli effetti che nessun calcolatore vede."
       ],
       "fonti": [
         "handprint-mescolanza",
@@ -57,11 +57,11 @@
     },
     {
       "id": "tavolozza",
-      "breve": "Tavolozza a 6 pigmenti",
-      "titolo": "4. Struttura della tavolozza ristretta a sei pigmenti",
+      "breve": "La tavolozza",
+      "titolo": "4. La tavolozza ridotta: sei colori di base",
       "paragrafi": [
-        "La tavolozza ridotta adottata per la pittura all'aperto e per la sintesi didattica nelle schede del repertorio comprende sei colori selezionati per garantire la copertura delle tinte secondarie e delle terre: ciascuna voce è identificata dalla denominazione tradizionale affiancata dal codice internazionale del <b>Colour Index</b> (PY = <i>Pigment Yellow</i>, PB = <i>Pigment Blue</i>, PR = <i>Pigment Red</i>, PBr = <i>Pigment Brown</i>). Il riferimento chimico univoco è essenziale poiché la medesima dicitura commerciale può celare principi coloranti differenti a seconda del produttore o della fascia di prezzo: ad esempio il «Ceruleo» (PB15) impiegato in questa selezione è una ftalocianina di rame resa coprente, ben distinta dal ceruleo di stagno-cobalto autentico (PB35). La corrispondenza analitica tra le sei serie commerciali è documentata nella sezione <a href=\"../marche/\">Merceologia e marche</a>.",
-        "I campioni sRGB associati alle sei schede costituiscono <b>valori di riferimento non calibrati</b>, introdotti per consentire il funzionamento spettrale del simulatore: per un impiego metrologico sui propri materiali è possibile sostituirli mediante la procedura di taratura descritta in calce al calcolatore."
+        "Sono i sei colori della tavolozza ridotta proposta nel Quaderno (utile per dipingere all'aperto o per iniziare con pochi tubetti), indicati col nome comune e il pigmento. Conta il <b>pigmento</b>, cioè la sigla del Colour Index scritta sull'etichetta (PY = giallo, PB = blu, PR = rosso, PBr = bruno): lo stesso nome commerciale, con un'altra marca o un'altra serie, può nascondere un pigmento diverso. Il ceruleo (PB15) della tavolozza, per esempio, è un blu ftalo schiarito e non il ceruleo vero (PB35). I tubetti corrispondenti, marca per marca, con le fonti ufficiali, sono nella sezione <a href=\"../marche/\">Marche e tubetti</a>.",
+        "I riquadri colorati sono <b>provvisori</b>: valori scelti a occhio per far funzionare il calcolatore, non misure dei tuoi tubetti. Vanno sostituiti con la taratura sulle prove (vedi il calcolatore)."
       ],
       "fonti": [
         "marche"
@@ -69,20 +69,20 @@
     },
     {
       "id": "calcolatore",
-      "breve": "Simulatore di miscele",
-      "titolo": "5. Simulatore spettrale di miscelazione (Kubelka-Munk)",
+      "breve": "Calcolatore",
+      "titolo": "5. Calcolatore di miscele",
       "paragrafi": [
-        "Il modulo interattivo seguente opera interamente nel browser senza dipendenze esterne e articola tre funzioni: <b>simulazione diretta</b> della miscela tra due o tre pigmenti in rapporti interi con generazione della scala di diluizione su carta; <b>ricerca inversa</b> della formulazione più prossima a un colore obiettivo mediante minimizzazione della distanza percettiva nello spazio <i>OKLab</i>; calcolo della <b>notazione Munsell approssimata</b> per ciascun campione generato."
+        "Tre strumenti che girano tutti nel browser, senza collegamenti esterni: <b>mescola</b> due o tre tubetti in parti intere e guarda l'anteprima con la sua striscia di diluizione; <b>trova la miscela</b> per un colore scelto col selettore; leggi per ogni risultato la <b>notazione Munsell approssimata</b>."
       ],
       "limiti": [
-        "I risultati costituiscono una <b>previsione numerica orientativa</b> da sottoporre a verifica mediante stesura su campione di carta.",
-        "L'accuratezza dipende dalla <b>calibrazione radiometrica</b> dei sei colori di partenza, attualmente impostati su valori sRGB convenzionali.",
-        "I fenomeni fisici di granulazione, flocculazione, migrazione capillare, assorbimento della collatura e sovrapposizione per velatura non rientrano nel modello di miscelazione omogenea in strato singolo.",
-        "La resa visiva a monitor (sintesi additiva retroilluminata) differisce intrinsecamente dalla visione in luce riflessa di un supporto cartaceo opaco.",
-        "Le parti indicate rappresentano aliquote ponderali equivalenti di pasta prelevata alla medesima densità (miele); la scansione della striscia di diluizione risponde a una progressione convenzionale.",
-        "La conversione nella notazione di Munsell è ottenuta per interpolazione sulla <i>Renotation</i> a valore 5 e croma 6; agli estremi di chiarezza o saturazione lo scostamento può aumentare."
+        "È una <b>stima da verificare sul foglietto</b>, non una ricetta.",
+        "Vale solo per i tubetti <b>tarati</b>. Oggi i colori dei sei tubetti sono provvisori, quindi anche i risultati lo sono.",
+        "Diluizione, granulazione, tipo di carta, carta asciutta o bagnata e ordine delle velature cambiano il risultato; il calcolatore considera solo la mescolanza in tavolozza e, nella striscia, il velo sul bianco della carta.",
+        "Lo schermo non è la carta: luminosità, taratura del monitor e luce della stanza cambiano quello che vedi.",
+        "Le parti sono quantità uguali di colore preso dal tubetto o dal pozzetto, non di miscela già diluita. La corrispondenza fra i passi della striscia e tè, latte, miele è una convenzione del Quaderno.",
+        "La notazione Munsell è approssimata: il valore viene da L*, tinta e croma da una tabella della renotation di Munsell calcolata a valore 5 e croma 6, e lontano da lì l'errore cresce."
       ],
-      "taratura": "Procedura di calibrazione sui propri materiali (per chi utilizza il repository sorgente): stendere ciascuno dei sei pigmenti alla massima concentrazione (miele) su un foglio della carta in uso, acquisire il campione sotto illuminante diurno D65 accanto a un riferimento neutro o tramite spettrofotometro/colorimetro, quindi aggiornare le esadecimali sRGB in <code>dati/colori/tavolozza.json</code>. Il parametro <code>forza</code> consente di ponderare il potere colorante relativo (tinting strength) qualora un pigmento risulti dominante in miscela.",
+      "taratura": "Per chi scarica il codice del progetto e vuole tarare il calcolatore sui propri tubetti: stendi ogni tubetto pieno (miele) su un pezzo della stessa carta, fotografalo alla luce del giorno accanto a un cartoncino bianco, oppure misuralo con un colorimetro, e sostituisci i sei valori sRGB in <code>dati/colori/tavolozza.json</code>. Il campo <code>forza</code> serve a correggere un tubetto che in miscela si rivela più forte o più debole del previsto.",
       "fonti": [
         "spectraljs",
         "oklab",
@@ -94,15 +94,15 @@
   ],
   "fonti": {
     "wiki-munsell": {
-      "testo": "Munsell color system, Wikipedia (edizione inglese)",
+      "testo": "Munsell color system, Wikipedia (inglese)",
       "url": "https://en.wikipedia.org/wiki/Munsell_color_system"
     },
     "briggs": {
-      "testo": "David Briggs, The Dimensions of Colour: Hue, Value, Chroma",
+      "testo": "David Briggs, The Dimensions of Colour: hue, value, chroma",
       "url": "http://www.huevaluechroma.com/011.php"
     },
     "handprint-valore": {
-      "testo": "Bruce MacEvoy, handprint.com: Tonal Value in Watercolor",
+      "testo": "Bruce MacEvoy, handprint.com: tonal value",
       "url": "https://www.handprint.com/HP/WCL/color11.html"
     },
     "wiki-additiva": {
@@ -114,39 +114,39 @@
       "url": "https://it.wikipedia.org/wiki/Sintesi_sottrattiva"
     },
     "handprint-mescolanza": {
-      "testo": "Bruce MacEvoy, handprint.com: Additive &amp; Subtractive Color Mixing",
+      "testo": "Bruce MacEvoy, handprint.com: additive &amp; subtractive color mixing",
       "url": "https://www.handprint.com/HP/WCL/color5.html"
     },
     "handprint-ruota": {
-      "testo": "Bruce MacEvoy, handprint.com: Mixing with a Color Wheel (The Color Wheel Fallacy)",
+      "testo": "Bruce MacEvoy, handprint.com: mixing with a color wheel (the color wheel fallacy)",
       "url": "https://www.handprint.com/HP/WCL/color14.html"
     },
     "handprint-wcolor": {
-      "testo": "Bruce MacEvoy, handprint.com: Watercolors — Color Theory Overview",
+      "testo": "Bruce MacEvoy, handprint.com: color theory, indice",
       "url": "https://www.handprint.com/HP/WCL/wcolor.html"
     },
     "wiki-km": {
-      "testo": "Kubelka-Munk theory, Wikipedia (edizione inglese)",
+      "testo": "Kubelka-Munk theory, Wikipedia (inglese)",
       "url": "https://en.wikipedia.org/wiki/Kubelka%E2%80%93Munk_theory"
     },
     "marche": {
-      "testo": "Sezione 4 «Merceologia dei pigmenti e confronto tra serie commerciali» del repertorio",
+      "testo": "sezione Marche e tubetti del Quaderno, con la fonte ufficiale e la data di controllo di ogni riga",
       "url": "../marche/"
     },
     "spectraljs": {
-      "testo": "Ronald van Wijnen, spectral.js (licenza MIT): matrici di conversione spettrale Kubelka-Munk",
+      "testo": "Ronald van Wijnen, spectral.js (licenza MIT): tabelle spettrali usate dal calcolatore",
       "url": "https://github.com/rvanwijnen/spectral.js"
     },
     "oklab": {
-      "testo": "Björn Ottosson, A perceptual color space for image processing (OKLab)",
+      "testo": "Björn Ottosson, OKLab: lo spazio colore usato per misurare la distanza fra due colori",
       "url": "https://bottosson.github.io/posts/oklab/"
     },
     "munsell-renotation": {
-      "testo": "Colour Science for Python: dataset Munsell Renotation System",
+      "testo": "colour-science: conversione della renotation di Munsell (usata per la tabella delle tinte)",
       "url": "https://www.colour-science.org/"
     },
     "artistassist": {
-      "testo": "ArtistAssistApp, applicativo esterno per la simulazione di miscele pittoriche",
+      "testo": "ArtistAssistApp, app gratuita esterna per miscele ad acquerello (solo collegamento)",
       "url": "https://artistassistapp.com/en/"
     }
   }
