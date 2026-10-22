@@ -22,7 +22,7 @@ Il repository è autonomo: contiene i dati, le infografiche, le illustrazioni e 
 | `/soggetti/` | **5. Soggetti**: un modulo per tema; `S1` Alberi pubblicato, `S2`-`S6` in preparazione | `dati/soggetti/` |
 | `/alberi/` | **5.1 S1 · Alberi ad acquerello**: 6 esempi, 24 modalità tratte dai video con un'infografica SVG in 3 fasi ciascuna, 31 estratti video | `dati/alberi/` |
 
-Le sei illustrazioni in testa agli esempi degli alberi sono **generate con l'intelligenza artificiale** (Nano Banana 2.1, modello di Google; `dati/alberi/pit-261013-illustrazioni.py`) e lo dicono in didascalia: non sono acquerelli dipinti a mano né fotogrammi dei video. La scheda di S1 nella home ne riprende un ritaglio (A4), dichiarato nel piè di pagina. Le frasi «L'autore, in sintesi» della sezione Alberi riassumono in italiano il parlato dei video, con l'aiuto dell'IA: non sono trascrizioni.
+Le frasi «L'autore, in sintesi» della sezione Alberi riassumono in italiano il parlato dei video, con l'aiuto dell'IA: non sono trascrizioni.
 
 ## Generare il sito in locale
 
@@ -39,7 +39,7 @@ Lo script:
 4. scrive `lib/prompt-chat.js`, il prompt della chat ricavato dai dati del sito;
 5. misura la leggibilità di ogni pagina (indice Gulpease) e si ferma se una pagina scende sotto 52.
 
-`site/`, le pagine HTML generate dentro `dati/` e le figure ridotte in `dati/alberi/immagini/` sono escluse da Git (`.gitignore`); `lib/prompt-chat.js` invece si committa, perché lo usa la funzione della chat.
+`site/` e le pagine HTML generate dentro `dati/` sono escluse da Git (`.gitignore`); `lib/prompt-chat.js` invece si committa, perché lo usa la funzione della chat.
 
 ## Funzioni del server
 

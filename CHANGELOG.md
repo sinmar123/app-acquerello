@@ -2,6 +2,16 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-22 - GBOT-app-acquerello - Via le illustrazioni generate con l'IA
+
+- **Alberi**: escono le sei illustrazioni generate con l'IA (Nano Banana) in testa agli esempi A1-A6, che imitavano un acquerello dipinto. Escono con loro le didascalie «Illustrazione generata con l'IA: ...» (campo `illustrazione` in `dati/alberi/pit-261014-video-gesti-alberi.json`), la lente che le ingrandiva, il caricamento differito e la riduzione in jpg (`dati/alberi/pit-261013-video-gesti.py`). Dal piè di pagina escono le frasi sulle illustrazioni generate con l'IA e «Le illustrazioni si ingrandiscono con un tocco.». Restano le 72 infografiche SVG in 3 fasi.
+- **Home**: la figurina della scheda S1 Alberi non è più il ritaglio di un'illustrazione IA (`home-alberi.webp`) ma un alberello disegnato in SVG come le altre figurine. Esce dal piè di pagina la riga sul ritaglio.
+- **Sorgenti**: escono da Git le sei immagini `dati/alberi/illustrazioni/*.png` e lo script che le generava (`dati/alberi/pit-261013-illustrazioni.py`), recuperabili dalla cronologia. Il flusso `costruisci` non controlla più le immagini degli Alberi.
+- **Documenti**: tolte le frasi sulle illustrazioni IA da `README.md`, `AGENTS.md`, `CONTRIBUTING.md` e `LICENSE`.
+- Restano: schemi e infografiche SVG, la ruota Munsell di Teoria dei colori, i due schemi di Principi, le figurine della home, la tavolozza, le velature CSS della testata e la favicon.
+- Controlli: generazione senza errori, controlli interni superati (Gulpease invariato, Alberi 72). Nessun `<img>` resta nelle pagine; 452 collegamenti interni e ancore verificati senza errori; nessun errore JavaScript in Chrome. Pagina degli Alberi: 216 KB di html senza immagini (prima 222 KB di html più 799 KB di jpg).
+- Prossima azione: unione della PR dopo il via del curatore.
+
 ## 2026-10-22 - GBOT-app-acquerello - Barra delle sezioni su più righe, senza scorrimento di lato
 
 - **Barra delle sezioni** (`STILE_BARRA` e `barra_quaderno` in `scripts/genera-sito.py`): non scorre più di lato. Le voci vanno a capo quando non stanno su una riga (`flex-wrap`), senza altezza fissa; la barra resta fissa in alto e la voce della pagina aperta resta evidenziata. Sul telefono, sotto 600 px, voci e numeri sono più compatti. Esce lo script che faceva scorrere la barra fino alla voce aperta, che sul computer a 800 px tagliava «Quaderno» a sinistra e le ultime voci a destra (segnalazione del curatore del 22/10/2026).

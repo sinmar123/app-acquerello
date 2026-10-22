@@ -31,8 +31,6 @@ jobs:
         run: |
           test -s site/index.html
           for d in dati/*/; do test -s "site/$(basename "$d")/index.html"; done
-          test -s site/alberi/immagini/pit-261013-illustrazione-A1-spina-di-pesce.jpg
-          test -s site/immagini/home-alberi.webp
       - name: Prompt della chat allineato ai dati
         run: |
           git diff --exit-code -- lib/prompt-chat.js || {
