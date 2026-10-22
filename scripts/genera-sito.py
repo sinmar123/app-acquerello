@@ -11,6 +11,7 @@ import pathlib
 import re
 import shutil
 import subprocess
+import urllib.parse
 import sys
 
 sys.stdout.reconfigure(encoding="utf-8")
@@ -620,13 +621,156 @@ IN_COSTRUZIONE = [
 ]
 
 
+# Home: testata ad acquerello, striscia della tavolozza, schede illustrate, nota di metodo da aprire.
+# L'illustrazione della scheda di S1 in home è un ritaglio di una di quelle degli Alberi (generate con l'IA,
+# dati/alberi/illustrazioni/), scelto dove non compaiono mani né pennelli, e si rifà in webp a ogni generazione
+# in site/immagini/.
+ILLUSTRAZIONI_ALBERI = DATI_DIR / "alberi" / "illustrazioni"
+IMMAGINI_HOME = {
+    # nome in site/immagini/: (illustrazione sorgente, ritaglio in px sull'originale 1200 × 896, larghezza in uscita)
+    "home-alberi.webp": ("pit-261013-illustrazione-A4-base-scura.png", (180, 300, 560, 680), 128),
+}
+
+
+def misure_immagine_home(nome: str) -> tuple[int, int]:
+    _, (x0, y0, x1, y1), larghezza = IMMAGINI_HOME[nome]
+    return larghezza, round((y1 - y0) * larghezza / (x1 - x0))
+
+
+def prepara_immagini_home():
+    from PIL import Image
+    cartella = SITE_DIR / "immagini"
+    cartella.mkdir(parents=True, exist_ok=True)
+    for nome, (sorgente, riquadro, _) in IMMAGINI_HOME.items():
+        im = Image.open(ILLUSTRAZIONI_ALBERI / sorgente).convert("RGB").crop(riquadro)
+        im = im.resize(misure_immagine_home(nome), Image.LANCZOS)
+        im.save(cartella / nome, "WEBP", quality=80, method=6)
+        print(f"[home] Scritto site/immagini/{nome} ({(cartella / nome).stat().st_size // 1024} KB)")
+
+
+def colori_tavolozza() -> list[dict]:
+    return json.loads((DATI_DIR / "colori" / "tavolozza.json").read_text(encoding="utf-8"))["colori"]
+
+
+def striscia_tavolozza() -> str:
+    """Le sei macchie dei colori di base, con nome comune e pigmento, dai valori di dati/colori/tavolozza.json."""
+    voci = "".join(
+        f'<li title="{e(c["nome"])} ({e(c["pigmento"])})"><span class="goccia" style="--c:{e(c["srgb"])}"></span>'
+        f'<span class="m-nome">{e(c["nome"])}</span><span class="m-pig">{e(c["pigmento"])}</span></li>'
+        for c in colori_tavolozza())
+    return (f'<section class="tavolozza" aria-label="I sei colori di base"><ul>{voci}</ul>'
+            '<p class="tav-nota">I sei colori di base della tavolozza, col nome comune e il pigmento. '
+            'Le tinte sono indicative, come nel <a href="./colori/#tavolozza">calcolatore</a>.</p></section>')
+
+
+def icona_scheda(slug: str) -> str:
+    """Piccola figura della scheda in home: SVG o CSS, e per gli Alberi il ritaglio di un'illustrazione."""
+    if slug == "principi":  # goccia sulla carta bagnata
+        return ('<svg viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="53" rx="24" ry="6" fill="#7fa3cf" fill-opacity=".35"/>'
+                '<path d="M32 5C25 18 17 27 17 38a15 15 0 0 0 30 0C47 27 39 18 32 5Z" fill="#3f6fb0" fill-opacity=".78"/>'
+                '<ellipse cx="26" cy="37" rx="4" ry="7" fill="#fff" fill-opacity=".45"/></svg>')
+    if slug == "studio-plein-air":  # scatola con i sei godet della tavolozza ridotta
+        godet = "".join(
+            f'<rect x="{11 + (i % 3) * 15}" y="{20 + (i // 3) * 14}" width="12" height="11" rx="2.5" fill="{e(c["srgb"])}" fill-opacity=".88"/>'
+            for i, c in enumerate(colori_tavolozza()[:6]))
+        return ('<svg viewBox="0 0 64 64" aria-hidden="true"><rect x="5" y="14" width="54" height="36" rx="6" fill="#f6f2e9" stroke="#b9b1a3" stroke-width="2"/>'
+                f'{godet}</svg>')
+    if slug == "colori":  # cerchio dei colori
+        return '<span class="ruota" aria-hidden="true"></span>'
+    if slug == "marche":  # tubetto
+        return ('<svg viewBox="0 0 64 64" aria-hidden="true"><g transform="rotate(-28 32 32)">'
+                '<rect x="19" y="5" width="26" height="5" rx="1" fill="#b9b1a3"/>'
+                '<path d="M19 10H45L42 45H22Z" fill="#ece6d9" stroke="#b9b1a3" stroke-width="1.5"/>'
+                '<rect x="20.5" y="20" width="23" height="14" fill="#283A9E" fill-opacity=".85"/>'
+                '<rect x="27" y="45" width="10" height="4" fill="#b9b1a3"/><rect x="24" y="49" width="16" height="10" rx="2" fill="#3b3a36"/>'
+                '</g><circle cx="52" cy="54" r="5" fill="#283A9E" fill-opacity=".55"/></svg>')
+    if slug == "soggetti":  # cielo, nuvola, collina e acqua
+        return ('<svg viewBox="0 0 64 64" aria-hidden="true"><defs><clipPath id="cp-sog"><circle cx="32" cy="32" r="28"/></clipPath></defs>'
+                '<g clip-path="url(#cp-sog)"><rect width="64" height="64" fill="#cfe0ee"/><ellipse cx="24" cy="21" rx="11" ry="5" fill="#fff" fill-opacity=".9"/>'
+                '<path d="M0 42Q18 26 34 38T64 34V64H0Z" fill="#6f8f5a" fill-opacity=".85"/><rect y="46" width="64" height="18" fill="#7fa3cf" fill-opacity=".8"/>'
+                '<path d="M12 51h22M30 56h20" stroke="#fff" stroke-opacity=".7" stroke-width="2" stroke-linecap="round"/></g></svg>')
+    if slug == "alberi":
+        l, a = misure_immagine_home("home-alberi.webp")
+        return f'<img src="immagini/home-alberi.webp" width="{l}" height="{a}" alt="" loading="lazy" decoding="async">'
+    return ""
+
+
+# Grana leggera da carta da acquerello, come rumore SVG in sfondo alla pagina.
+GRANA_CARTA = "url(\"data:image/svg+xml," + urllib.parse.quote(
+    "<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='g'>"
+    "<feTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitch'/>"
+    "<feColorMatrix values='0 0 0 0 .42 0 0 0 0 .35 0 0 0 0 .25 0 0 0 .09 0'/></filter>"
+    "<rect width='100%' height='100%' filter='url(#g)'/></svg>", safe="/:=' ") + "\")"
+
+STILE_HOME = """*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:#faf6ee @GRANA@;color:#1f1c17;line-height:1.5}
+.testa{position:relative;overflow:hidden;background:#f6f1e6;color:#1b2b20;border-bottom:1px solid #e2d8c6}
+.testa::before{content:"";position:absolute;inset:-15%;filter:blur(8px);background:
+ radial-gradient(40% 55% at 14% 28%,rgba(63,111,176,.30),transparent 70%),
+ radial-gradient(32% 48% at 42% 92%,rgba(111,143,90,.28),transparent 72%),
+ radial-gradient(26% 40% at 62% 12%,rgba(150,70,40,.16),transparent 70%),
+ radial-gradient(45% 65% at 88% 55%,rgba(63,111,176,.26),transparent 70%)}
+.testa-in{position:relative;max-width:820px;margin:0 auto;padding:40px 18px 36px}
+.testa h1{margin:0 0 8px;font-family:Georgia,"Times New Roman",serif;font-weight:700;font-size:2.15rem;line-height:1.12;color:#1b2b20}
+.testa p{margin:0;max-width:520px;font-size:1.02rem;color:#2f4236}
+.tavolozza{max-width:820px;margin:0 auto;padding:18px 14px 0}
+.tavolozza ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+.tavolozza li{display:flex;flex-direction:column;align-items:center;text-align:center;font-size:.75rem;line-height:1.25;color:#3d352a}
+.goccia{width:56px;height:40px;margin-bottom:5px;background:radial-gradient(ellipse at 40% 40%,rgba(255,255,255,.22),transparent 65%),var(--c);opacity:.84;
+ border-radius:58% 42% 55% 45%/52% 60% 40% 48%;box-shadow:inset 0 0 3px 1px rgba(0,0,0,.28)}
+.tavolozza li:nth-child(2n) .goccia{border-radius:44% 56% 40% 60%/58% 42% 58% 42%;transform:rotate(4deg)}
+.tavolozza li:nth-child(3n) .goccia{border-radius:62% 38% 50% 50%/45% 55% 45% 55%;transform:rotate(-6deg)}
+.m-pig{font-size:.7rem;color:#7a6f5d}
+.tav-nota{margin:10px 0 0;font-size:.78rem;color:#6b5e4c;text-align:center}
+.tav-nota a{color:#5a4d3b}
+main{max-width:820px;margin:0 auto;padding:18px 14px 12px}
+.cf-origine{background:#eef4ef;border:1px solid #cadbce;border-left:4px solid #263529;border-radius:8px;padding:10px 14px;margin:0 0 16px;font-size:.91rem;color:#263529}
+.cf-origine summary{cursor:pointer;font-weight:700;color:#1b2b20}
+.cf-origine p{margin:8px 0 2px}
+.cf-sviluppo{background:#f4efe4;border:1px solid #d8ccb8;border-left:4px solid #8c4a27;border-radius:8px;padding:12px 16px;margin:0 0 26px;font-size:.92rem;color:#2e2820}
+.cf-sviluppo p{margin:0 0 6px}
+.cf-sviluppo strong{color:#6b3418}
+.cf-sviluppo ul{margin:0;padding-left:20px}
+.cf-sviluppo li{margin:3px 0}
+.cf-sviluppo a{color:#6b3418}
+.sezioni-tit{margin:0 0 12px;font-size:1.12rem;color:#263529}
+.grid{display:grid;grid-template-columns:1fr;gap:10px}
+.card{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;background:#fffdf8;border:1px solid #dfd5c3;border-radius:12px;color:inherit;text-decoration:none;box-shadow:0 2px 8px rgba(31,28,23,.06);transition:transform .15s ease,box-shadow .15s ease}
+.card:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(31,28,23,.12)}
+.card.modulo{margin-left:28px}
+.sig{flex:none;display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:32px;padding:0 5px;border-radius:8px;background:#263529;color:#f7f2e7;font-weight:700;font-size:.95rem}
+.card-txt{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}
+.card-tit{font-size:1.08rem;font-weight:700;color:#1f1c17}
+.card-sub{font-size:.88rem;color:#6b5e4c}
+.card-fig{flex:none;align-self:center;display:flex;align-items:center;justify-content:center;width:60px;height:60px}
+.card-fig svg{width:60px;height:60px;display:block}
+.card-fig img{width:60px;height:60px;display:block;object-fit:cover;border-radius:46% 54% 50% 50%/52% 46% 54% 48%}
+.ruota{display:block;width:54px;height:54px;border-radius:50%;opacity:.85;
+ background:conic-gradient(#f0d53c,#e88d2c,#c8323a,#8e2f78,#3a4fa8,#2a86a0,#4f9a48,#f0d53c);
+ -webkit-mask-image:radial-gradient(circle,transparent 27%,#000 29%);mask-image:radial-gradient(circle,transparent 27%,#000 29%)}
+footer{text-align:center;padding:18px;font-size:.82rem;color:#7a6f5d;border-top:1px solid #e5dccb;margin-top:24px}
+footer a{color:#5a4d3b}
+@media (max-width:560px){
+ .testa-in{padding:26px 16px 22px}
+ .testa h1{font-size:1.55rem}
+ .testa p{font-size:.9rem}
+ .tavolozza ul{grid-template-columns:repeat(3,1fr);row-gap:12px}
+ .card{padding:12px 12px;gap:10px}
+ .card-fig,.card-fig svg,.card-fig img{width:46px;height:46px}
+ .ruota{width:42px;height:42px}
+}
+""".replace("@GRANA@", GRANA_CARTA)
+
+
 def genera_home(sezioni_pronte: list[dict]) -> str:
     schede = []
     for s in sezioni_pronte:
         classe = "card modulo" if s.get("modulo_di") else "card"
+        figura = icona_scheda(s["slug"])
+        figura = f'\n  <span class="card-fig">{figura}</span>' if figura else ""
         schede.append(f"""<a class="{classe}" href="./{s['slug']}/">
   <span class="sig">{s['numero']}</span>
-  <span class="card-txt"><span class="card-tit">{s['titolo']}</span><span class="card-sub">{s['sottotitolo']}</span></span>
+  <span class="card-txt"><span class="card-tit">{s['titolo']}</span><span class="card-sub">{s['sottotitolo']}</span></span>{figura}
 </a>""")
     schede_html = "\n".join(schede)
     voci = "".join(f"<li>{v}{';' if i < len(IN_COSTRUZIONE) - 1 else '.'}</li>" for i, v in enumerate(IN_COSTRUZIONE))
@@ -638,42 +782,21 @@ def genera_home(sezioni_pronte: list[dict]) -> str:
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Quaderno di acquerello</title>
 {testa_comune("Quaderno di acquerello", DESCRIZIONE_HOME, "/")}<style>
-*{{box-sizing:border-box}}
-body{{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:#faf6ee;color:#1f1c17;line-height:1.5}}
-.testa{{padding:26px 18px 22px;background:#263529;color:#f7f2e7;text-align:center;border-top:1px solid #3a4c3e}}
-.testa h1{{margin:0 0 6px;font-size:1.45rem;letter-spacing:.01em}}
-.testa p{{margin:0 auto;max-width:680px;font-size:.95rem;color:#d8dfd5}}
-main{{max-width:820px;margin:0 auto;padding:22px 14px 12px}}
-.cf-origine{{background:#eef4ef;border:1px solid #cadbce;border-left:4px solid #263529;border-radius:8px;padding:12px 14px;margin:0 0 16px;font-size:.91rem;color:#263529}}
-.cf-origine strong{{color:#1b2b20}}
-.cf-sviluppo{{background:#f4efe4;border:1px solid #d8ccb8;border-left:4px solid #8c4a27;border-radius:8px;padding:12px 16px;margin:0 0 26px;font-size:.92rem;color:#2e2820}}
-.cf-sviluppo p{{margin:0 0 6px}}
-.cf-sviluppo strong{{color:#6b3418}}
-.cf-sviluppo ul{{margin:0;padding-left:20px}}
-.cf-sviluppo li{{margin:3px 0}}
-.cf-sviluppo a{{color:#6b3418}}
-.sezioni-tit{{margin:0 0 12px;font-size:1.12rem;color:#263529}}
-.grid{{display:grid;grid-template-columns:1fr;gap:10px}}
-.card{{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;background:#fffdf8;border:1px solid #dfd5c3;border-radius:12px;color:inherit;text-decoration:none;box-shadow:0 2px 8px rgba(31,28,23,.06);transition:transform .15s ease,box-shadow .15s ease}}
-.card:hover{{transform:translateY(-2px);box-shadow:0 6px 18px rgba(31,28,23,.12)}}
-.card.modulo{{margin-left:28px}}
-.sig{{flex:none;display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:32px;padding:0 5px;border-radius:8px;background:#263529;color:#f7f2e7;font-weight:700;font-size:.95rem}}
-.card-txt{{display:flex;flex-direction:column;gap:3px}}
-.card-tit{{font-size:1.08rem;font-weight:700;color:#1f1c17}}
-.card-sub{{font-size:.88rem;color:#6b5e4c}}
-footer{{text-align:center;padding:18px;font-size:.82rem;color:#7a6f5d;border-top:1px solid #e5dccb;margin-top:24px}}
-footer a{{color:#5a4d3b}}
-</style>
+{STILE_HOME}</style>
 {stile_barra("0")}</head>
 <body>
 {barra_quaderno("")}<header class="testa">
-  <h1>Quaderno di acquerello</h1>
-  <p>Appunti di studio dell'acquerello: acqua e carta, colori e tubetti, soggetti ed esercizi tratti dai video</p>
-</header>
-<main>
-  <div class="cf-origine">
-    <strong>Nota di metodo:</strong> chi oggi apprende una disciplina pratica dispone di una documentazione vastissima, distribuita tra manuali, schede tecniche e centinaia di ore di dimostrazioni filmate; la vera difficoltà sta nel ricondurre una materia tanto dispersa a un criterio ordinato e consultabile mentre si lavora. Gli strumenti di intelligenza artificiale permettono di compiere a monte questo lavoro di spoglio, confronto e classificazione, restituendo al momento opportuno il dato che serve per guidare la mano ed esercitarsi con maggiore sicurezza. Questo quaderno nasce dall'applicazione di tale approccio allo studio dell'acquerello: sistematizza il comportamento di acqua, carta e pigmenti, scompone e indicizza al secondo le sequenze esecutive nei video didattici e affianca al tavolo da lavoro strumenti di riscontro immediato, dal calcolatore colorimetrico all'assistente tecnico integrato nelle pagine.
+  <div class="testa-in">
+    <h1>Quaderno di acquerello</h1>
+    <p>Appunti di studio dell'acquerello: acqua e carta, colori e tubetti, soggetti ed esercizi tratti dai video</p>
   </div>
+</header>
+{striscia_tavolozza()}
+<main>
+  <details class="cf-origine">
+    <summary>Nota di metodo</summary>
+    <p>Chi oggi apprende una disciplina pratica dispone di una documentazione vastissima, distribuita tra manuali, schede tecniche e centinaia di ore di dimostrazioni filmate; la vera difficoltà sta nel ricondurre una materia tanto dispersa a un criterio ordinato e consultabile mentre si lavora. Gli strumenti di intelligenza artificiale permettono di compiere a monte questo lavoro di spoglio, confronto e classificazione, restituendo al momento opportuno il dato che serve per guidare la mano ed esercitarsi con maggiore sicurezza. Questo quaderno nasce dall'applicazione di tale approccio allo studio dell'acquerello: sistematizza il comportamento di acqua, carta e pigmenti, scompone e indicizza al secondo le sequenze esecutive nei video didattici e affianca al tavolo da lavoro strumenti di riscontro immediato, dal calcolatore colorimetrico all'assistente tecnico integrato nelle pagine.</p>
+  </details>
   <section class="cf-sviluppo" aria-label="Stato del Quaderno">
     <p><strong>Il Quaderno è in costruzione.</strong> Le sezioni esistenti vengono ampliate progressivamente e altre se ne
     aggiungeranno. Nella versione attuale il Quaderno mette a disposizione:</p>
@@ -688,7 +811,8 @@ footer a{{color:#5a4d3b}}
 {blocco_sugg}
 <footer>
   Quaderno di acquerello · progetto aperto su <a href="{REPO_URL}" target="_blank" rel="noopener">GitHub</a>
-  (testi, dati e illustrazioni <a href="https://creativecommons.org/licenses/by/4.0/deed.it" target="_blank" rel="noopener">CC BY 4.0</a>, codice MIT)
+  (testi, dati e illustrazioni <a href="https://creativecommons.org/licenses/by/4.0/deed.it" target="_blank" rel="noopener">CC BY 4.0</a>, codice MIT)<br>
+  L'immagine della scheda di S1 Alberi è un ritaglio di un'illustrazione della sezione Alberi, generata con l'intelligenza artificiale: non è un acquerello dipinto a mano.
 </footer>
 </body>
 </html>
@@ -757,6 +881,7 @@ def main():
         print(f"[{s['slug']}] Scritto {dest_html.relative_to(APP_DIR).as_posix()} ({dest_html.stat().st_size // 1024} KB)")
         sezioni_pronte.append(dict(s))
 
+    prepara_immagini_home()
     index_html = SITE_DIR / "index.html"
     index_html.write_text(genera_home(sezioni_pronte), encoding="utf-8", newline="\n")
     print(f"[home] Scritto {index_html.relative_to(APP_DIR).as_posix()} ({index_html.stat().st_size // 1024} KB)")
