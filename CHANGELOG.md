@@ -10,7 +10,9 @@ Cronologia delle modifiche. Ordine cronologico inverso.
 - **Documenti**: tolte le frasi sulle illustrazioni IA da `README.md`, `AGENTS.md`, `CONTRIBUTING.md` e `LICENSE`.
 - Restano: schemi e infografiche SVG, la ruota Munsell di Teoria dei colori, i due schemi di Principi, le figurine della home, la tavolozza, le velature CSS della testata e la favicon.
 - Controlli: generazione senza errori, controlli interni superati (Gulpease invariato, Alberi 72). Nessun `<img>` resta nelle pagine; 452 collegamenti interni e ancore verificati senza errori; nessun errore JavaScript in Chrome. Pagina degli Alberi: 216 KB di html senza immagini (prima 222 KB di html più 799 KB di jpg).
-- Prossima azione: unione della PR dopo il via del curatore.
+- **Regola nuova** (`CONTRIBUTING.md` § 3 e `AGENTS.md`), scelta dal curatore il 22/10/2026: «Nel sito non si usano immagini generate con l'IA che imitano un acquerello o un dipinto; sono ammessi solo schemi, infografiche e figure disegnate.»
+- Unita su `main` (PR #32) col via del curatore del 22/10/2026.
+- Prossima azione: taratura dei sei colori su campioni reali.
 
 ## 2026-10-22 - GBOT-app-acquerello - Barra delle sezioni su più righe, senza scorrimento di lato
 

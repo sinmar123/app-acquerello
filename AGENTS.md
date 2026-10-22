@@ -22,6 +22,7 @@ Istruzioni per gli agenti AI che lavorano su questo repository, in locale o in u
 - Si lavora su un ramo e si chiude con una pull request; mai scrivere direttamente su `main`.
 - Unire su `main` vuol dire pubblicare: a ogni modifica di `main` il job «pubblica» di `.github/workflows/sito.yml` manda il sito su Cloudflare Pages.
 - I testi si cambiano nei file `.json` e `.csv` e nei moduli delle infografiche, mai nell'html generato. Prima di cambiare i testi delle guide si porta la proposta al curatore e ci si ferma.
+- Nel sito non si usano immagini generate con l'IA che imitano un acquerello o un dipinto; sono ammessi solo schemi, infografiche e figure disegnate. Regola del curatore del 22/10/2026, in [`CONTRIBUTING.md`](CONTRIBUTING.md) § 3.
 - Il registro dei testi è quello di un manuale tecnico, scelto dal curatore il 21/10/2026: regole in [`CONTRIBUTING.md`](CONTRIBUTING.md) § 3.
 - Dopo ogni modifica si lancia `python scripts/genera-sito.py`, che deve finire senza errori, si controlla la parte cambiata in `site/` e si committa anche `lib/prompt-chat.js` se è cambiato. Su ogni pull request GitHub rifà la generazione nel controllo «costruisci».
 - Nuova sezione: cartella `dati/<tema>/` col suo generatore e i suoi dati, voce nella lista `SEZIONI` di `scripts/genera-sito.py` e negli elenchi `PAGINE_VALIDE` di `functions/api/chat.js` e `functions/api/suggerimento.js`.
