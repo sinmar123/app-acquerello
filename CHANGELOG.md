@@ -9,7 +9,8 @@ Cronologia delle modifiche. Ordine cronologico inverso.
 - **Salti alle ancore**: uno script misura l'altezza reale della barra e dell'indice dei capitoli (`--barra-h`, `--salti-h`) e `scroll-padding-top` ne tiene conto; l'indice dei capitoli scende sotto la barra con `top: var(--barra-h)`. Misura anche la larghezza della barra di scorrimento verticale sul computer (`--sb`), così la barra non provoca scorrimento di lato.
 - **Alberi**: l'etichetta «Video: ...» degli esempi (`.mod-autore` in `dati/alberi/pit-261013-video-gesti.py`) può andare a capo; a 360 px allargava la pagina di 16 px.
 - Controlli: generazione senza errori, controlli interni superati (Gulpease invariato). Prova in Chrome su tutte le sette pagine a 1280, 800, 390 e 360 px, anche con la barra di scorrimento classica di Windows: nessuna voce fuori dallo schermo, nessuno scorrimento di lato; la barra occupa 1 riga a 1280 px, 2 a 800 px, 3 a 390 e 360 px. In Teoria dei colori i salti a tre capitoli portano il titolo sotto la barra e l'indice a tutte le larghezze.
-- Prossima azione: unione della PR dopo il via del curatore; taratura dei sei colori su campioni reali.
+- Unita su `main` col via del curatore del 22/10/2026.
+- Prossima azione: taratura dei sei colori su campioni reali.
 
 -- GBOT-app-acquerello
 
