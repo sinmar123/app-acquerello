@@ -795,7 +795,7 @@ FAVICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
 
 # Indirizzi di sezioni tolte o spostate, rinviati con un 301 dal file site/_redirects di Cloudflare Pages:
 # percorso vecchio, pagina nuova, ancora. La sezione Studio ed en plein air è diventata, il 22/10/2026,
-# l'ultimo capitolo dei Principi generali. main() verifica che l'ancora esista nella pagina generata.
+# il capitolo 8 dei Principi generali. main() verifica che l'ancora esista nella pagina generata.
 REINDIRIZZAMENTI = [
     ("/studio-plein-air", "principi", "studio-aperto"),
     ("/studio-plein-air/", "principi", "studio-aperto"),

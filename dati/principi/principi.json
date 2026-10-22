@@ -1,11 +1,11 @@
 {
  "data": "2026-10-22",
- "nota": "Testi della sezione Principi generali (18/10/2026, rivisti il 21/10/2026). Ogni affermazione ha le sue fonti; ciò che non aveva fonte è rimasto fuori. Il capitolo 9 (22/10/2026) è il testo della sezione Studio ed en plein air, spostato senza riscriverlo: le frasi che non hanno una fonte esterna rimandano alla voce «Testo del Quaderno» delle fonti del capitolo.",
+ "nota": "Testi della sezione Principi generali (18/10/2026, rivisti il 21/10/2026). Ogni affermazione ha le sue fonti; ciò che non aveva fonte è rimasto fuori. Il capitolo 8 (22/10/2026) è il testo della sezione Studio ed en plein air, spostato senza riscriverlo: le frasi che non hanno una fonte esterna rimandano alla voce «Testo del Quaderno» delle fonti del capitolo.",
  "titolo": "Principi generali: acqua, colore e carta",
  "sottotitolo": "Le tre consistenze della miscela, gli stati della carta e come abbinarli, prima di ogni esercizio; il lavoro in studio e all'aperto.",
  "introduzione": [
   "Questa sezione raccoglie le regole che ricorrono nei video e nei corsi esaminati per il Quaderno. Ogni paragrafo rimanda con un numero alle fonti elencate in fondo al capitolo: gli appunti di studio dei corsi e i video della sezione Alberi, che si aprono al minuto indicato.",
-  "Il lavoro in studio e all'aperto, con la tavolozza ridotta e le 12 miscele, è trattato nell'ultimo capitolo, <a href=\"#studio-aperto\">In studio e all'aperto</a>. Gli esercizi per soggetto sono nella sezione <a href=\"../soggetti/\">Soggetti</a>, a cominciare dagli <a href=\"../alberi/\">Alberi</a>. I pigmenti, la tavolozza e il calcolatore di miscele, con la striscia di diluizione dal miele al tè, sono nella sezione <a href=\"../colori/\">Teoria dei colori</a>."
+  "Il lavoro in studio e all'aperto, con la tavolozza ridotta e le 12 miscele, è trattato nel capitolo 8, <a href=\"#studio-aperto\">In studio e all'aperto</a>. Gli esercizi per soggetto sono nella sezione <a href=\"../soggetti/\">Soggetti</a>, a cominciare dagli <a href=\"../alberi/\">Alberi</a>. I pigmenti, la tavolozza e il calcolatore di miscele, con la striscia di diluizione dal miele al tè, sono nella sezione <a href=\"../colori/\">Teoria dei colori</a>."
  ],
  "nota_fonti": "Le citazioni dei video provengono dalle schede di studio preparate per la sezione Alberi: sono riassunti del parlato e del gesto, controllati a campione, e il collegamento apre il video al minuto indicato per la verifica. Le citazioni dei corsi provengono dagli appunti di studio delle lezioni.",
  "capitoli": [
@@ -389,103 +389,9 @@
    ]
   },
   {
-   "id": "riassunto",
-   "breve": "Riassunto",
-   "titolo": "8. Tabella riassuntiva",
-   "blocchi": [
-    {
-     "tipo": "tabella",
-     "intestazione": [
-      "Stato della carta",
-      "Aspetto",
-      "Consistenza adatta",
-      "Risultato"
-     ],
-     "righe": [
-      {
-       "celle": [
-        "bagnata",
-        "lucida, senza pozzanghere",
-        "tè o latte, tutti a consistenza simile",
-        "il colore si espande e si fonde: fondi e passaggi morbidi"
-       ],
-       "fonti": [
-        "wf8",
-        "wf7",
-        "julie-lucida"
-       ]
-      },
-      {
-       "celle": [
-        "il lucido sta sparendo",
-        "il riflesso si spegne",
-        "più denso, verso il miele",
-        "un segno morbido che si allarga poco; il sale appena il lucido è sparito"
-       ],
-       "fonti": [
-        "kersey",
-        "davidson",
-        "clark-d"
-       ]
-      },
-      {
-       "celle": [
-        "umida, opaca",
-        "nessun riflesso",
-        "miele",
-        "il colore si fonde ancora ma si allarga poco; incisioni con la spatola"
-       ],
-       "fonti": [
-        "wf4",
-        "wf6",
-        "gaivelen-graffio",
-        "norris"
-       ]
-      },
-      {
-       "celle": [
-        "quasi asciutta",
-        "",
-        "pennello quasi asciutto o tessera",
-        "luci sollevate, incisioni chiare nette"
-       ],
-       "fonti": [
-        "norris-faggio-luci",
-        "davidson-betulle"
-       ]
-      },
-      {
-       "celle": [
-        "asciutta",
-        "",
-        "qualsiasi, più denso per i dettagli",
-        "bordi netti, velature"
-       ],
-       "fonti": [
-        "wf8",
-        "wf5"
-       ]
-      },
-      {
-       "celle": [
-        "attenzione",
-        "colore più bagnato della carta che sta asciugando",
-        "",
-        "fioriture a cavolfiore"
-       ],
-       "fonti": [
-        "wf4",
-        "webber-fior"
-       ]
-      }
-     ]
-    }
-   ]
-  },
-  {
    "id": "studio-aperto",
    "breve": "Studio e aperto",
-   "titolo": "9. In studio e all'aperto: metodo di lavoro, dotazione e tavolozze",
+   "titolo": "8. In studio e all'aperto: metodo di lavoro, dotazione e tavolozze",
    "blocchi": [
     {
      "tipo": "p",
@@ -600,6 +506,100 @@
      ],
      "fonti_miscele": [
       "alberi-miscele"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "riassunto",
+   "breve": "Riassunto",
+   "titolo": "9. Tabella riassuntiva",
+   "blocchi": [
+    {
+     "tipo": "tabella",
+     "intestazione": [
+      "Stato della carta",
+      "Aspetto",
+      "Consistenza adatta",
+      "Risultato"
+     ],
+     "righe": [
+      {
+       "celle": [
+        "bagnata",
+        "lucida, senza pozzanghere",
+        "tè o latte, tutti a consistenza simile",
+        "il colore si espande e si fonde: fondi e passaggi morbidi"
+       ],
+       "fonti": [
+        "wf8",
+        "wf7",
+        "julie-lucida"
+       ]
+      },
+      {
+       "celle": [
+        "il lucido sta sparendo",
+        "il riflesso si spegne",
+        "più denso, verso il miele",
+        "un segno morbido che si allarga poco; il sale appena il lucido è sparito"
+       ],
+       "fonti": [
+        "kersey",
+        "davidson",
+        "clark-d"
+       ]
+      },
+      {
+       "celle": [
+        "umida, opaca",
+        "nessun riflesso",
+        "miele",
+        "il colore si fonde ancora ma si allarga poco; incisioni con la spatola"
+       ],
+       "fonti": [
+        "wf4",
+        "wf6",
+        "gaivelen-graffio",
+        "norris"
+       ]
+      },
+      {
+       "celle": [
+        "quasi asciutta",
+        "",
+        "pennello quasi asciutto o tessera",
+        "luci sollevate, incisioni chiare nette"
+       ],
+       "fonti": [
+        "norris-faggio-luci",
+        "davidson-betulle"
+       ]
+      },
+      {
+       "celle": [
+        "asciutta",
+        "",
+        "qualsiasi, più denso per i dettagli",
+        "bordi netti, velature"
+       ],
+       "fonti": [
+        "wf8",
+        "wf5"
+       ]
+      },
+      {
+       "celle": [
+        "attenzione",
+        "colore più bagnato della carta che sta asciugando",
+        "",
+        "fioriture a cavolfiore"
+       ],
+       "fonti": [
+        "wf4",
+        "webber-fior"
+       ]
+      }
      ]
     }
    ]

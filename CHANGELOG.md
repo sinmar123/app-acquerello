@@ -2,6 +2,17 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-22 - GBOT-app-acquerello - In studio e all'aperto prima della tabella riassuntiva
+
+- **Principi generali** (`dati/principi/principi.json`): il capitolo «In studio e all'aperto» passa prima della tabella riassuntiva, come chiesto dal curatore il 22/10/2026 alle 20:41. Diventa il capitolo 8 e la tabella il 9; l'indice dei capitoli segue lo stesso ordine (… Grana e grammatura, Studio e aperto, Riassunto). Le ancore restano uguali (`#studio-aperto`, `#riassunto`, `#confronto`, `#tavolozza-studio`, `#tavolozza-plein-air`, `#miscele`, `#M1`-`#M12`) e il rinvio 301 da `/studio-plein-air/` non cambia.
+- **Fonti**: numerate per capitolo da `scripts/rimandi_fonti.py`, restano da 1 a 4 nel capitolo 8 e invariate nella tabella; i Principi restano a 9 capitoli e 36 fonti.
+- **Testi**: «nell'ultimo capitolo» diventa «nel capitolo 8» nell'introduzione dei Principi, nella nota di `principi.json`, in `README.md`, `AGENTS.md`, `genera-principi.py` e in un commento di `genera-sito.py`.
+- Controlli: generazione senza errori, controlli interni superati, Gulpease invariato (Principi 68); 451 collegamenti interni e ancore senza errori, nessun id doppio.
+- Unita su `main` (PR #33) col via del curatore del 22/10/2026.
+- Prossima azione: fonti esterne per le frasi del capitolo 8 che rimandano solo al testo del Quaderno.
+
+-- GBOT-app-acquerello
+
 ## 2026-10-22 - GBOT-app-acquerello - Studio ed en plein air diventa l'ultimo capitolo dei Principi
 
 - **Sezioni**: la sezione *Studio ed en plein air* (`/studio-plein-air/`) non è più una sezione a sé. Il suo testo è ora il capitolo 9 dei *Principi generali*, «In studio e all'aperto: metodo di lavoro, dotazione e tavolozze» (ancora `#studio-aperto`, voce «Studio e aperto» nell'indice dei capitoli), dopo la tabella riassuntiva. Nuovo ordine: 1 Principi generali, 2 Teoria dei colori, 3 Marche e tubetti, 4 Soggetti, 4.1 Alberi, nella barra, nella home, nel modulo dei suggerimenti, nel prompt della chat e nei documenti (decisione del curatore del 22/10/2026).

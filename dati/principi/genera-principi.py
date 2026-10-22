@@ -8,7 +8,7 @@ tutto dentro. scripts/genera-sito.py la copia in site/principi/index.html. Le fo
 fondo a ogni capitolo, numerate da 1 in ogni capitolo (scripts/rimandi_fonti.py).
 Controlli: ogni frase ha almeno una fonte, ogni fonte citata esiste, ogni fonte del json è citata,
 nessun testo contiene «da verificare». GBOT-app-acquerello, 18/10/2026; fonti per capitolo CC, 21/10/2026.
-L'ultimo capitolo, «In studio e all'aperto», viene dalla sezione Studio ed en plein air (22/10/2026): il blocco
+Il capitolo 8, «In studio e all'aperto», viene dalla sezione Studio ed en plein air (22/10/2026): il blocco
 «tavolozza_ridotta» legge i sei colori e le 12 miscele M1-M12 da dati/alberi/pit-261014-video-gesti-alberi.json
 e si ferma se un colore non coincide con dati/colori/tavolozza.json."""
 import html
