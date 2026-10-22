@@ -288,7 +288,7 @@
   ],
   "dosi": {
    "titolo": "Come leggere le dosi (una convenzione per la tavolozza ridotta da esterno)",
-   "testo": "Con la tavolozza ridotta da 6 colori, le ricette M1-M12 seguono questa convenzione pratica, da verificare sul foglietto. Si prepara sempre prima il colore dominante, cioè il primo della ricetta, e poi si aggiunge l'altro poco alla volta.",
+   "testo": "Con la tavolozza ridotta da 6 colori, le ricette M1-M12 seguono questa convenzione pratica, da verificare con una prova su carta. Si prepara sempre prima il colore dominante, cioè il primo della ricetta, e poi si aggiunge l'altro poco alla volta.",
    "voci": [
     [
      "punta",
@@ -316,7 +316,7 @@
   },
   "prove": {
    "titolo": "Le tre prove per ogni miscela",
-   "testo": "Per un foglietto campione destinato alle uscite all'aperto si prova una riga per miscela, con tre campioni affiancati:",
+   "testo": "Per un foglio di campioni da portare nelle uscite all'aperto si prova una riga per miscela, con tre campioni affiancati:",
    "voci": [
     [
      "meno",
@@ -343,7 +343,7 @@
    "colori_studio": "In studio si può usare come base un verde vescica (sap green) o un verde oliva. Le punte al sole si schiariscono con verde oro (green gold), giallo di cadmio o giallo limone. I coni in primo piano e le ombre si scuriscono con blu ftalo, turchese di cobalto, blu oltremare, indaco o seppia. Per il tronco si usano terra di Siena naturale e bruciata.",
    "colori_aperto": "All'aperto coi 6 colori si usano M1 (verde-giallo) per i tocchi di luce, M2 (verde medio al tè) per gli abeti lontani e M3 (verde scuro) per i coni principali. M4 (verde-blu d'ombra) serve per il lato in ombra, M11 (grigio caldo) per il tronco.",
    "pennelli": "Tondo medio con buona punta (n. 6-8, usato di punta o di fianco), tondo grande (n. 10-12, per il cono rapido) e tondo piccolo (n. 2, per i tratti di tronco nei varchi).",
-   "foglietto": "Sul foglietto A5 in orizzontale si provano a sinistra i tre approcci al cono singolo (Modalità 1 di punta/fianco, Modalità 2 per sollevamento, Modalità 3 per fusione a umido di turchese e verde oro). A destra si dipinge un piccolo gruppo su tre piani di profondità.",
+   "esercizio": "Su un foglio in orizzontale si provano a sinistra i tre approcci al cono singolo (Modalità 1 di punta/fianco, Modalità 2 per sollevamento, Modalità 3 per fusione a umido di turchese e verde oro). A destra si dipinge un piccolo gruppo su tre piani di profondità.",
    "modalita": [
     {
      "id": "A1-M1",
@@ -410,7 +410,7 @@
    "colori_studio": "In studio si usa verde vescica o verde bosco, mescolato con terra di Siena bruciata o terra d'ombra bruciata, per i palchi di rami. Blu oltremare + terra d'ombra bruciata (o indaco) servono per i tocchi scuri sotto i ciuffi, terra di Siena bruciata per il tronco illuminato.",
    "colori_aperto": "All'aperto coi 6 colori si usano M12 per l'eventuale cielo di fondo ben asciutto e M2 per i rami in luce. M3 e M4 servono per i palchi in ombra, M5 e M11 per il fusto.",
    "pennelli": "Rigger o liner sottile (n. 0-2, per il tronco alto e i rami fini), tondo medio (n. 6) oppure un piatto piccolo a setole rigide (da 3/8 di pollice) per i tocchi saltellati.",
-   "foglietto": "Si usa un foglietto A5 in verticale, bianco oppure con un velo azzurro già completamente asciutto; per la Modalità 1 la zona della chioma si inumidisce prima, come nel video. Si dipingono tre conifere affiancate, alte 8-10 cm, e su ciascuna si prova una delle tre modalità per confrontare l'effetto.",
+   "esercizio": "Si usa un foglio in verticale, bianco oppure con un velo azzurro già completamente asciutto; per la Modalità 1 la zona della chioma si inumidisce prima, come nel video. Si dipingono tre conifere affiancate, alte 8-10 cm, e su ciascuna si prova una delle tre modalità per confrontare l'effetto.",
    "modalita": [
     {
      "id": "A2-M1",
@@ -463,7 +463,7 @@
    "colori_studio": "In studio si può sfruttare tutta la ricchezza dei pigmenti autunnali. La tavolozza comprende giallo limone o giallo aureolina, giallo e arancio di cadmio, oro chinacridone, terra di Siena naturale e bruciata, rosso inglese (light red), cremisi d'alizarina, seppia, indaco e blu oltremare.",
    "colori_aperto": "All'aperto coi 6 colori si usano M5 (arancio) per la chioma in luce, M6 (rame) calato a fresco nel centro e M7 (rosso cupo) per la base in ombra. M3 (verde scuro) serve per eventuali alberi verdi accostati, M10/M11 per tronchi e rami.",
    "pennelli": "Tondo grande (n. 10-12), piatto medio, pennellessa piatta (mottler), spugna naturale marina, pennello sagomato o dentellato, tondo fine o rigger (n. 2-3) e una tessera rigida di plastica.",
-   "foglietto": "Sul foglietto A5 si provano due chiome tonde affiancate. In una si sperimenta il movimento circolare di pancia (Modalità 1) con le gocce a umido (Modalità 2), nell'altra la spugna naturale (Modalità 3). In basso si aggiunge qualche ramo scalfito con la tessera (Modalità 5).",
+   "esercizio": "Su un foglio si provano due chiome tonde affiancate. In una si sperimenta il movimento circolare di pancia (Modalità 1) con le gocce a umido (Modalità 2), nell'altra la spugna naturale (Modalità 3). In basso si aggiunge qualche ramo scalfito con la tessera (Modalità 5).",
    "modalita": [
     {
      "id": "A3-M1",
@@ -538,7 +538,7 @@
    "colori_studio": "In studio la tavolozza comprende giallo limone o giallo di cadmio, terra di Siena naturale, rosso inglese (light red), verde oliva o verde vescica, blu oltremare, blu di Prussia e terra d'ombra bruciata.",
    "colori_aperto": "All'aperto coi 6 colori si usano M5 e M6 per le siepi calde d'autunno, M1 e M2 per i cespugli e i prati in luce. M3 e M4 servono per i cespugli a cupola e le ombre in negativo, M7 o M10 per la base scura della siepe, M9 per l'ombra fredda sul prato.",
    "pennelli": "Tondo medio (n. 4-6), piatto medio-piccolo pulito e umido (per ammorbidire la base verso il prato) e tondo fine (n. 2).",
-   "foglietto": "Sul foglietto A5 in orizzontale si prova una fascia di siepe, sciogliendo l'ombra bassa in 2-3 punti verso il prato (Modalità 1 e 2). Accanto si prova un cespuglio a cupola (Modalità 3) o in negativo (Modalità 4), e sotto si chiude con la passata leggera sul prato (Modalità 5).",
+   "esercizio": "Su un foglio in orizzontale si prova una fascia di siepe, sciogliendo l'ombra bassa in 2-3 punti verso il prato (Modalità 1 e 2). Accanto si prova un cespuglio a cupola (Modalità 3) o in negativo (Modalità 4), e sotto si chiude con la passata leggera sul prato (Modalità 5).",
    "modalita": [
     {
      "id": "A4-M1",
@@ -613,7 +613,7 @@
    "colori_studio": "In studio la tavolozza comprende blu ftalo, blu cobalto o ceruleo, turchese, oro chinacridone (quinacridone gold), verde vescica, terra di Siena bruciata, grigio di Payne, indaco, blu oltremare e seppia.",
    "colori_aperto": "All'aperto coi 6 colori si usa M5 (arancio molto diluito al tè) per il velo caldo in alto. M9 (grigio-lilla al tè) serve per il velo freddo e per l'ombra sul lato del fusto, M8 (viola) o M4/M10 per la massa scura in negativo dietro i tronchi.",
    "pennelli": "Tiralinee e gomma crêpe (o striscioline di nastro di carta), tondo grande (n. 10-14) o pennellessa piatta per i veli bagnati, piccolo pennello a ventaglio (fan brush), rigger e sale fino da cucina.",
-   "foglietto": "Sul foglietto A5 in verticale si proteggono due fusti col mascherante (Modalità 1) e uno col nastro di carta (Modalità 2). Sopra si stendono i veli fusi sul bagnato; quando sparisce il lucido si mette un pizzico di sale (Modalità 3). A secco si aggiungono lo scuro in negativo (Modalità 4) e i rametti col ventaglio (Modalità 5), poi si tolgono le protezioni e si ombreggia un lato dei fusti.",
+   "esercizio": "Su un foglio in verticale si proteggono due fusti col mascherante (Modalità 1) e uno col nastro di carta (Modalità 2). Sopra si stendono i veli fusi sul bagnato; quando sparisce il lucido si mette un pizzico di sale (Modalità 3). A secco si aggiungono lo scuro in negativo (Modalità 4) e i rametti col ventaglio (Modalità 5), poi si tolgono le protezioni e si ombreggia un lato dei fusti.",
    "modalita": [
     {
      "id": "A5-M1",
@@ -690,7 +690,7 @@
    "colori_studio": "In studio si usano terra d'ombra bruciata o seppia per i rami, e blu di Prussia, terra di Siena bruciata, rosso di cadmio e cremisi d'alizarina per le foglie scure e cangianti. Ceruleo o blu cobalto molto diluito serve per il fondo freddo.",
    "colori_aperto": "All'aperto coi 6 colori si usano M12 (ceruleo/oltremare al tè) per il fondo freddo ben asciutto e M10 (scuro) per i rami sottili e le foglie in controluce. M4 (verde-blu d'ombra) serve per le foglie viste di faccia.",
    "pennelli": "Tondo a punta fine (n. 4-6) o rigger per i rami e le foglie, tiralinee con liquido mascherante (per la variante protetta) e pennello pulito appena umido.",
-   "foglietto": "Sul foglietto A5, con un fondo azzurro chiarissimo già ben asciutto, si tira dal basso una ramificazione intrecciata (Modalità 1) e si aggiungono 6-7 foglie scure. Su metà si prova il filo bianco risparmiato a mano libera tra i lobi, sull'altra metà il filo protetto col tiralinee. Entrambi si ammorbidiscono a secco col pennello umido (Modalità 2).",
+   "esercizio": "Su un foglio con un fondo azzurro chiarissimo già ben asciutto si tira dal basso una ramificazione intrecciata (Modalità 1) e si aggiungono 6-7 foglie scure. Su metà si prova il filo bianco risparmiato a mano libera tra i lobi, sull'altra metà il filo protetto col tiralinee. Entrambi si ammorbidiscono a secco col pennello umido (Modalità 2).",
    "modalita": [
     {
      "id": "A6-M1",

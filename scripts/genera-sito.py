@@ -21,89 +21,68 @@ DATI_DIR = APP_DIR / "dati"
 SITO_URL = "https://app-acquerello.pages.dev"
 REPO_URL = "https://github.com/sinmar123/app-acquerello"
 
+# Le sezioni nell'ordine del sito: «breve» è la voce della barra in cima a ogni pagina, «sottotitolo» la riga
+# della scheda in home e la descrizione per i motori di ricerca; «modulo_di» mette la sezione, nella home,
+# sotto quella che la contiene.
 SEZIONI = [
     {
         "slug": "principi",
         "numero": "1",
+        "breve": "Principi",
         "nome_form": "Principi",
         "titolo": "Principi generali: acqua, colore e carta",
         "sottotitolo": "Le tre consistenze della miscela, gli stati della carta e il rapporto fra pennello e carta, da conoscere prima degli esercizi",
-        "descrizione": (
-            "Tè, latte e miele; la carta asciutta, umida e bagnata e i momenti intermedi, riconoscibili dal lucido dell'acqua; "
-            "il rapporto fra l'acqua del pennello e quella della carta, fioriture comprese; bordi netti e morbidi, asciugatura, "
-            "carte hot press, cold press e rough. Ogni paragrafo rimanda alle sue fonti, dai corsi e dai video al minuto indicato."
-        ),
-        "badge": ["8 capitoli", "tè · latte · miele", "stati della carta", "fonti per ogni paragrafo"],
         "script_genera": DATI_DIR / "principi" / "genera-principi.py",
         "html_generato": DATI_DIR / "principi" / "principi.html",
     },
     {
         "slug": "studio-plein-air",
         "numero": "2",
+        "breve": "Studio ed en plein air",
         "nome_form": "Studio ed en plein air",
         "titolo": "Studio ed en plein air: metodo di lavoro, dotazione e tavolozze",
-        "sottotitolo": "Il lavoro in studio e la pittura all'aperto a confronto, il metodo dei foglietti A5 e le 12 miscele della tavolozza ridotta",
-        "descrizione": (
-            "Che cosa cambia fra lo studio e la pittura dal vero: asciugatura, tavolozza, pennelli e attrezzi. Il metodo dei "
-            "foglietti A5, i colori pronti della tavolozza estesa e i sei colori di base con il prontuario completo delle 12 miscele (M1-M12)."
-        ),
-        "badge": ["studio e aperto", "foglietti A5", "tavolozza estesa e sei colori", "12 miscele"],
+        "sottotitolo": "Il lavoro in studio e la pittura all'aperto a confronto, la tavolozza estesa e la tavolozza ridotta con le sue 12 miscele",
         "script_genera": DATI_DIR / "studio-plein-air" / "genera-studio-plein-air.py",
         "html_generato": DATI_DIR / "studio-plein-air" / "studio-plein-air.html",
     },
     {
         "slug": "colori",
         "numero": "3",
+        "breve": "Teoria dei colori",
         "nome_form": "Teoria dei colori",
-        "titolo": "Teoria dei colori per l'acquerello",
+        "titolo": "Teoria dei colori",
         "sottotitolo": "Munsell, luce e pigmento, velature, i sei colori di base e un calcolatore di miscele",
-        "descrizione": (
-            "Tinta, valore e croma secondo Munsell; perché i pigmenti non si mescolano come le luci; mescolare o velare; "
-            "le schede dei sei colori della tavolozza ridotta, con il nome comune e il pigmento; un calcolatore che mescola "
-            "i tubetti in parti intere e cerca la miscela per un colore scelto, interamente nel browser."
-        ),
-        "badge": ["5 capitoli", "6 colori di base", "calcolatore di miscele", "stime da verificare sul foglietto"],
         "script_genera": DATI_DIR / "colori" / "genera-teoria-colori.py",
         "html_generato": DATI_DIR / "colori" / "teoria-colori.html",
     },
     {
         "slug": "marche",
         "numero": "4",
+        "breve": "Marche e tubetti",
         "nome_form": "Confronto marche",
         "titolo": "Marche e tubetti",
         "sottotitolo": "I sei colori di base nelle serie in commercio: nome del tubetto, numero, pigmento e trasparenza",
-        "descrizione": (
-            "Per ognuno dei sei colori della tavolozza ridotta, il tubetto corrispondente in sei serie: Winsor &amp; Newton Cotman "
-            "e Professional, Van Gogh, Daniel Smith, Schmincke Horadam, Maimeri Blu. Dati tratti solo dalle pagine ufficiali, con il "
-            "collegamento e la data di controllo su ogni riga, e la spiegazione del perché lo stesso nome possa nascondere pigmenti diversi."
-        ),
-        "badge": ["6 serie", "6 colori di base", "fonte ufficiale su ogni riga", "stesso nome, pigmenti diversi"],
         "script_genera": DATI_DIR / "marche" / "genera-marche.py",
         "html_generato": DATI_DIR / "marche" / "marche.html",
     },
     {
         "slug": "soggetti",
         "numero": "5",
+        "breve": "Soggetti",
         "nome_form": "Soggetti (Alberi, Nuvole, Fiori...)",
         "titolo": "Soggetti: un modulo per ogni tema",
         "sottotitolo": "Sezione in crescita: S1 Alberi, siepi e arbusti è pubblicato; in preparazione cieli e nuvole, fiori, acqua e riflessi, rocce, architetture",
-        "descrizione": (
-            "Un modulo per ogni soggetto. Il primo, sugli alberi, raccoglie 6 esempi, 24 modalità tratte dai "
-            "video con un'infografica in 3 fasi ciascuna e 31 estratti video."
-        ),
-        "badge": ["S1 Alberi (pubblicato)", "S2 Cieli e nuvole", "S3 Fiori", "S4-S6 in preparazione"],
         "script_genera": DATI_DIR / "soggetti" / "genera-soggetti.py",
         "html_generato": DATI_DIR / "soggetti" / "soggetti.html",
     },
     {
         "slug": "alberi",
-        "in_home": False,
         "numero": "5.1",
+        "breve": "Alberi",
+        "modulo_di": "soggetti",
         "nome_form": "Soggetti (Alberi, Nuvole, Fiori...)",
         "titolo": "S1 · Alberi ad acquerello",
         "sottotitolo": "Sei esempi di alberi, siepi e arbusti, sviluppati in 24 modalità tratte dai video, con un'infografica in tre fasi per ciascuna",
-        "descrizione": "",
-        "badge": [],
         "script_genera": DATI_DIR / "alberi" / "pit-261013-video-gesti.py",
         "html_generato": DATI_DIR / "alberi" / "pit-261014-video-gesti-alberi.html",
         # figure salvate accanto alla pagina dal generatore, da copiare con lei
@@ -197,8 +176,8 @@ def controlla_marche_fuori_sezione():
 
 def genera_prompt_chat():
     """Scrive lib/prompt-chat.js col prompt di sistema della chat, ricavato dai dati del sito: sezioni,
-    consistenze e stati della carta dei Principi, tavolozza, esempi e modalità degli Alberi, moduli in
-    preparazione. Così la chat non può contraddire le pagine con dati scritti a mano."""
+    consistenze e stati della carta dei Principi, tavolozza, le 12 miscele con la convenzione delle dosi,
+    esempi e modalità degli Alberi, moduli in preparazione. Così la chat non può contraddire le pagine con dati scritti a mano."""
     principi = json.loads((DATI_DIR / "principi" / "principi.json").read_text(encoding="utf-8"))
     tavolozza = json.loads((DATI_DIR / "colori" / "tavolozza.json").read_text(encoding="utf-8"))
     alberi = json.loads((DATI_DIR / "alberi" / "pit-261014-video-gesti-alberi.json").read_text(encoding="utf-8"))
@@ -217,6 +196,14 @@ def genera_prompt_chat():
         + (f", {c['trasparenza_tubetto']} nel tubetto della tavolozza" if c.get("trasparenza_tubetto") else "")
         + f"); {c['note']}"
         for c in tavolozza["colori"])
+    dosi = alberi["apertura"]["dosi"]
+    convenzione = "; ".join(f"«{k}», {v}" for k, v in dosi["voci"])
+    miscele = []
+    for m in alberi["apertura"]["miscele"]:
+        # le sigle dei tubetti fra parentesi, (BO) (TSB) (TOB), servono nella tabella del sito e non nel prompt
+        ricetta = re.sub(r"\s*\((?:BO|TSB|TOB)\)", "", m["ricetta"])
+        nota = f" {m['nota']}" if m.get("nota") else ""
+        miscele.append(f"- {m['m']} {m['nome']}: {ricetta}. Consistenza: {m['consistenza']}.{nota}")
     esempi = []
     for t in alberi["alberi"]:
         sigla, nome = t["voce"].split(" ", 1)
@@ -247,6 +234,9 @@ La regola di fondo:
 La tavolozza ridotta a sei colori (i colori del calcolatore sono provvisori, stimati a occhio):
 {colori}
 
+Le 12 miscele della tavolozza ridotta, M1-M12 ({SITO_URL}/studio-plein-air/#miscele). {dosi['testo']} Le dosi: {convenzione}.
+{chr(10).join(miscele)}
+
 Il modulo S1, alberi, siepi e arbusti ({SITO_URL}/alberi/), con le modalità tratte dai video:
 {chr(10).join(esempi)}
 
@@ -256,7 +246,8 @@ Come rispondere:
 - In italiano, col registro di un buon manuale tecnico: termini esatti, frasi chiare, niente parlato e niente paroloni. Di norma fra 120 e 220 parole.
 - Niente trattino lungo: per gli incisi si usano le virgole, i due punti o le parentesi.
 - Indica la sezione del Quaderno che tratta l'argomento, con il suo indirizzo.
-- Non inventare fonti, autori, video, citazioni, sigle di pigmenti o numeri. Se il Quaderno non tratta un punto, dillo, e suggerisci una prova su un foglietto.
+- Se una miscela M1-M12 ottiene il colore richiesto, indicala con sigla e nome prima di eventuali varianti.
+- Non inventare fonti, autori, video, citazioni, sigle di pigmenti o numeri. Se il Quaderno non tratta un punto, dillo, e suggerisci una prova su carta.
 - Ricorda che l'esito va sempre verificato sulla carta: le risposte sono una guida, non una regola.
 - Rispondi solo sui temi indicati all'inizio; per il resto declina in una frase.
 - Non chiedere dati personali."""
@@ -557,20 +548,56 @@ def testa_comune(titolo, descrizione, pagina_path):
             f'<link rel="icon" href="/favicon.svg" type="image/svg+xml">\n')
 
 
+# Barra delle sezioni in cima a ogni pagina, home compresa, che resta visibile scorrendo; sul telefono è una
+# riga sola che scorre di lato. Nelle sezioni l'indice dei capitoli (nav.salti), fisso anch'esso, scende sotto
+# la barra, e scroll-padding-top tiene sotto le due barre il capitolo o la fonte raggiunti con un collegamento.
+# Il margine allarga la barra fino ai bordi del body, che nelle sezioni ha 14 px di spazio laterale.
+BARRA_ALTEZZA = 42
+STILE_BARRA = """<style id="stile-barra">
+html{scroll-padding-top:%(scorrimento)dpx}
+#barra-quaderno{position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:2px;height:%(altezza)dpx;margin:%(margine)s;
+padding:0 8px;overflow-x:auto;white-space:nowrap;background:#263529;font:600 .84rem/1 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;scrollbar-width:none}
+#barra-quaderno::-webkit-scrollbar{display:none}
+#barra-quaderno a{flex:none;color:#e6ece3;text-decoration:none;padding:7px 9px;border-radius:6px}
+#barra-quaderno a:hover{background:rgba(255,255,255,.12)}
+#barra-quaderno a[aria-current="page"]{background:#f7f2e7;color:#263529}
+#barra-quaderno .bq-n{display:inline-block;margin-right:5px;padding:2px 4px;border-radius:4px;background:rgba(255,255,255,.16);font-size:.76rem}
+#barra-quaderno a[aria-current="page"] .bq-n{background:#263529;color:#f7f2e7}
+#barra-quaderno .bq-spazio{flex:1 0 10px}
+nav.salti{top:%(altezza)dpx}
+</style>
+"""
+
+
+def stile_barra(margine: str) -> str:
+    return STILE_BARRA % {"altezza": BARRA_ALTEZZA, "scorrimento": BARRA_ALTEZZA + 56, "margine": margine}
+
+
+def barra_quaderno(slug_pagina: str) -> str:
+    """La barra con tutte le sezioni; slug_pagina è la sezione aperta, stringa vuota per la home."""
+    radice = "../" if slug_pagina else "./"
+
+    def corrente(slug):
+        return ' aria-current="page"' if slug == slug_pagina else ""
+
+    voci = [f'<a href="{radice}"{corrente("")}>Quaderno</a>']
+    voci += [f'<a href="{radice}{s["slug"]}/"{corrente(s["slug"])}><span class="bq-n">{s["numero"]}</span>{e(s["breve"])}</a>'
+             for s in SEZIONI]
+    voci.append('<span class="bq-spazio"></span><a href="#assistente-ai">🎨 Assistente</a><a href="#suggerimenti">💬 Suggerimenti</a>')
+    # sul telefono porta in vista la voce della pagina aperta, che altrimenti può restare fuori a destra
+    script = ("<script>(function(){var b=document.getElementById('barra-quaderno'),a=b&&b.querySelector('[aria-current]');"
+              "if(a&&b.scrollWidth>b.clientWidth){b.scrollLeft=a.offsetLeft-(b.clientWidth-a.offsetWidth)/2;}})();</script>")
+    return f'<nav id="barra-quaderno" aria-label="Sezioni del Quaderno">{"".join(voci)}</nav>\n{script}\n'
+
+
 def inietta_elementi_comuni(html_pagina: str, sezione: dict, pagina_path: str) -> str:
     if 'name="description"' not in html_pagina:
         m = re.search(r"<title>(.*?)</title>", html_pagina, re.S)
         titolo = html.unescape(m.group(1)) if m else sezione["titolo"]
         html_pagina = html_pagina.replace("</head>", testa_comune(titolo, senza_tag(sezione["sottotitolo"]), pagina_path) + "</head>", 1)
-    barra = (
-        '<div id="barra-quaderno" style="background:#efe6d5;border-bottom:1px solid #d8ccb8;padding:6px 14px;'
-        'font-size:.86rem;display:flex;justify-content:center;gap:18px;flex-wrap:wrap">'
-        '<a href="../" style="color:#6b4226;text-decoration:none;font-weight:600">← Quaderno di acquerello</a>'
-        '<a href="#assistente-ai" style="color:#8c4a27;text-decoration:none;font-weight:600">🎨 Assistente</a>'
-        '<a href="#suggerimenti" style="color:#2f5e4e;text-decoration:none;font-weight:600">💬 Suggerimenti</a></div>\n'
-    )
     if 'id="barra-quaderno"' not in html_pagina:
-        html_pagina = re.sub(r"(<body[^>]*>)", lambda m: m.group(1) + "\n" + barra, html_pagina, count=1)
+        html_pagina = html_pagina.replace("</head>", stile_barra("0 -14px") + "</head>", 1)
+        html_pagina = re.sub(r"(<body[^>]*>)", lambda m: m.group(1) + "\n" + barra_quaderno(sezione["slug"]), html_pagina, count=1)
 
     blocco = blocco_chat_e_suggerimenti(sezione.get("nome_form", OPZIONI_SEZIONE[0]), pagina_path)
     if 'id="suggerimenti"' not in html_pagina:
@@ -581,33 +608,28 @@ def inietta_elementi_comuni(html_pagina: str, sezione: dict, pagina_path: str) -
     return html_pagina
 
 
-def genera_home(sezioni_pronte: list[dict]) -> str:
-    cards = []
-    for s in sezioni_pronte:
-        if not s.get("in_home", True):
-            continue
-        badges = "".join(f'<span class="pill">{b}</span>' for b in s.get("badge", []))
-        extra_btn = ""
-        if s["slug"] == "soggetti":
-            extra_btn = ' <a class="btn sec" href="./alberi/">Apri S1 · Alberi →</a>'
-        cards.append(
-            f"""<article class="card">
-  <div class="card-body">
-    <div class="card-head">
-      <span class="sig">{s['numero']}</span>
-      <div>
-        <h2><a class="card-tit-link" href="./{s['slug']}/">{s['titolo']}</a></h2>
-        <p class="card-sub">{s['sottotitolo']}</p>
-      </div>
-    </div>
-    <p class="card-desc">{s['descrizione']}</p>
-    <div class="pills">{badges}</div>
-    <div class="btn-row"><a class="btn" href="./{s['slug']}/">Apri la sezione →</a>{extra_btn}</div>
-  </div>
-</article>"""
-        )
+# Voci del riquadro «in costruzione» della home, testo approvato dal curatore il 21/10/2026: ogni voce porta
+# alla pagina o allo strumento che nomina.
+IN_COSTRUZIONE = [
+    'i <a href="./principi/">principi generali su acqua, colore e carta</a>, dalle tre consistenze della miscela agli stati della carta',
+    'un <a href="./alberi/">primo modulo di esercizi su alberi, siepi e arbusti</a>, con i passaggi dei video didattici indicati al secondo',
+    'un <a href="./colori/#calcolatore">calcolatore</a> che propone, come stima, la miscela più vicina a un colore dato',
+    "un <a href=\"#assistente-ai\">assistente basato sull'intelligenza artificiale</a> per le domande sulla tecnica, "
+    "con un limite di 5 domande a settimana",
+    'una <a href="#suggerimenti">casella per proporre correzioni, integrazioni e nuovi video</a>',
+]
 
-    cards_html = "\n".join(cards)
+
+def genera_home(sezioni_pronte: list[dict]) -> str:
+    schede = []
+    for s in sezioni_pronte:
+        classe = "card modulo" if s.get("modulo_di") else "card"
+        schede.append(f"""<a class="{classe}" href="./{s['slug']}/">
+  <span class="sig">{s['numero']}</span>
+  <span class="card-txt"><span class="card-tit">{s['titolo']}</span><span class="card-sub">{s['sottotitolo']}</span></span>
+</a>""")
+    schede_html = "\n".join(schede)
+    voci = "".join(f"<li>{v}{';' if i < len(IN_COSTRUZIONE) - 1 else '.'}</li>" for i, v in enumerate(IN_COSTRUZIONE))
     blocco_sugg = blocco_chat_e_suggerimenti(OPZIONI_SEZIONE[0], "/")
     return f"""<!doctype html>
 <html lang="it">
@@ -618,71 +640,49 @@ def genera_home(sezioni_pronte: list[dict]) -> str:
 {testa_comune("Quaderno di acquerello", DESCRIZIONE_HOME, "/")}<style>
 *{{box-sizing:border-box}}
 body{{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:#faf6ee;color:#1f1c17;line-height:1.5}}
-.testa{{padding:28px 18px 22px;background:#263529;color:#f7f2e7;text-align:center}}
+.testa{{padding:26px 18px 22px;background:#263529;color:#f7f2e7;text-align:center;border-top:1px solid #3a4c3e}}
 .testa h1{{margin:0 0 6px;font-size:1.45rem;letter-spacing:.01em}}
 .testa p{{margin:0 auto;max-width:680px;font-size:.95rem;color:#d8dfd5}}
 main{{max-width:820px;margin:0 auto;padding:22px 14px 12px}}
-.come-funziona{{background:#fffdf8;border:1px solid #dfd5c3;border-top:4px solid #263529;border-radius:12px;padding:18px 20px;margin-bottom:24px;box-shadow:0 2px 8px rgba(31,28,23,.05)}}
-.come-funziona h2{{margin:0 0 8px;font-size:1.18rem;color:#263529}}
-.come-funziona p{{margin:0 0 12px;font-size:.92rem;color:#363027}}
-.cf-origine{{background:#eef4ef;border:1px solid #cadbce;border-left:4px solid #263529;border-radius:8px;padding:12px 14px;margin:0 0 14px;font-size:.91rem;color:#263529}}
+.cf-origine{{background:#eef4ef;border:1px solid #cadbce;border-left:4px solid #263529;border-radius:8px;padding:12px 14px;margin:0 0 16px;font-size:.91rem;color:#263529}}
 .cf-origine strong{{color:#1b2b20}}
-.cf-strumenti{{display:flex;flex-wrap:wrap;gap:10px;padding-top:10px;border-top:1px solid #e9e0cf;font-size:.87rem}}
-.cf-link{{display:inline-flex;align-items:center;gap:5px;padding:6px 12px;border-radius:7px;font-weight:600;text-decoration:none}}
-.cf-link.chat{{background:#fdf3ec;border:1px solid #e2bfa8;color:#6b3418}}
-.cf-link.sugg{{background:#eef6f2;border:1px solid #b8d8c8;color:#1e4638}}
-.cf-sviluppo{{background:#f4efe4;border:1px solid #d8ccb8;border-left:4px solid #8c4a27;border-radius:8px;padding:11px 14px;margin:0 0 14px;font-size:.89rem;color:#2e2820}}
+.cf-sviluppo{{background:#f4efe4;border:1px solid #d8ccb8;border-left:4px solid #8c4a27;border-radius:8px;padding:12px 16px;margin:0 0 26px;font-size:.92rem;color:#2e2820}}
+.cf-sviluppo p{{margin:0 0 6px}}
 .cf-sviluppo strong{{color:#6b3418}}
+.cf-sviluppo ul{{margin:0;padding-left:20px}}
+.cf-sviluppo li{{margin:3px 0}}
+.cf-sviluppo a{{color:#6b3418}}
 .sezioni-tit{{margin:0 0 12px;font-size:1.12rem;color:#263529}}
-.grid{{display:grid;grid-template-columns:1fr;gap:18px}}
-.card{{background:#fffdf8;border:1px solid #dfd5c3;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(31,28,23,.06);transition:transform .15s ease,box-shadow .15s ease}}
+.grid{{display:grid;grid-template-columns:1fr;gap:10px}}
+.card{{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;background:#fffdf8;border:1px solid #dfd5c3;border-radius:12px;color:inherit;text-decoration:none;box-shadow:0 2px 8px rgba(31,28,23,.06);transition:transform .15s ease,box-shadow .15s ease}}
 .card:hover{{transform:translateY(-2px);box-shadow:0 6px 18px rgba(31,28,23,.12)}}
-.card-tit-link{{color:inherit;text-decoration:none}}
-.card-tit-link:hover{{text-decoration:underline}}
-.card-body{{padding:16px 18px 18px}}
-.card-head{{display:flex;align-items:flex-start;gap:12px;margin-bottom:8px}}
-.sig{{display:inline-flex;align-items:center;justify-content:center;min-width:32px;height:32px;border-radius:8px;background:#263529;color:#f7f2e7;font-weight:700;font-size:.95rem;margin-top:2px}}
-.card-head h2{{margin:0;font-size:1.18rem;color:#1f1c17}}
-.card-sub{{margin:2px 0 0;font-size:.9rem;color:#6b5e4c;font-weight:500}}
-.card-desc{{margin:10px 0 12px;font-size:.92rem;color:#363027}}
-.pills{{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}}
-.pill{{background:#efe6d5;color:#4f3d27;border:1px solid #d8ccb8;border-radius:999px;padding:3px 10px;font-size:.78rem;font-weight:600}}
-.btn-row{{display:flex;flex-wrap:wrap;gap:10px;align-items:center}}
-.btn{{display:inline-block;background:#263529;color:#f7f2e7;padding:8px 14px;border-radius:8px;font-size:.88rem;font-weight:600;text-decoration:none}}
-.btn.sec{{background:#eef4ef;color:#263529;border:1px solid #9ab5a3}}
+.card.modulo{{margin-left:28px}}
+.sig{{flex:none;display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:32px;padding:0 5px;border-radius:8px;background:#263529;color:#f7f2e7;font-weight:700;font-size:.95rem}}
+.card-txt{{display:flex;flex-direction:column;gap:3px}}
+.card-tit{{font-size:1.08rem;font-weight:700;color:#1f1c17}}
+.card-sub{{font-size:.88rem;color:#6b5e4c}}
 footer{{text-align:center;padding:18px;font-size:.82rem;color:#7a6f5d;border-top:1px solid #e5dccb;margin-top:24px}}
 footer a{{color:#5a4d3b}}
 </style>
-</head>
+{stile_barra("0")}</head>
 <body>
-<header class="testa">
+{barra_quaderno("")}<header class="testa">
   <h1>Quaderno di acquerello</h1>
   <p>Appunti di studio dell'acquerello: acqua e carta, colori e tubetti, soggetti ed esercizi tratti dai video</p>
 </header>
 <main>
-  <section class="come-funziona" aria-label="Come è organizzato il Quaderno">
-    <h2>Come è organizzato il Quaderno</h2>
-    <div class="cf-origine">
-      <strong>Nota di metodo:</strong> chi oggi apprende una disciplina pratica dispone di una documentazione vastissima, distribuita tra manuali, schede tecniche e centinaia di ore di dimostrazioni filmate; la vera difficoltà sta nel ricondurre una materia tanto dispersa a un criterio ordinato e consultabile mentre si lavora. Gli strumenti di intelligenza artificiale permettono di compiere a monte questo lavoro di spoglio, confronto e classificazione, restituendo al momento opportuno il dato che serve per guidare la mano ed esercitarsi con maggiore sicurezza. Questo quaderno nasce dall'applicazione di tale approccio allo studio dell'acquerello: sistematizza il comportamento di acqua, carta e pigmenti, scompone e indicizza al secondo le sequenze esecutive nei video didattici e affianca al tavolo da lavoro strumenti di riscontro immediato, dal calcolatore colorimetrico all'assistente tecnico integrato nelle pagine.
-    </div>
-    <p>
-      Il Quaderno raccoglie i procedimenti di base da provare su piccoli fogli di studio (A5, cotone 300 g/m²) ed è diviso in
-      cinque sezioni. Nei Principi e nelle Marche ogni affermazione rimanda alla sua fonte; negli Alberi ogni modalità rimanda
-      al video da cui è tratta.
-    </p>
-    <div class="cf-sviluppo">
-      <strong>Il Quaderno è in fase di sviluppo:</strong> la sezione 5, Soggetti, si apre con il modulo sugli alberi;
-      gli altri moduli sono in preparazione.
-    </div>
-    <div class="cf-strumenti">
-      <a class="cf-link chat" href="#assistente-ai">🎨 Domande sull'acquerello: l'assistente basato sull'IA (5 a settimana) ↓</a>
-      <a class="cf-link sugg" href="#suggerimenti">💬 Correzioni e proposte: la casella dei suggerimenti ↓</a>
-    </div>
+  <div class="cf-origine">
+    <strong>Nota di metodo:</strong> chi oggi apprende una disciplina pratica dispone di una documentazione vastissima, distribuita tra manuali, schede tecniche e centinaia di ore di dimostrazioni filmate; la vera difficoltà sta nel ricondurre una materia tanto dispersa a un criterio ordinato e consultabile mentre si lavora. Gli strumenti di intelligenza artificiale permettono di compiere a monte questo lavoro di spoglio, confronto e classificazione, restituendo al momento opportuno il dato che serve per guidare la mano ed esercitarsi con maggiore sicurezza. Questo quaderno nasce dall'applicazione di tale approccio allo studio dell'acquerello: sistematizza il comportamento di acqua, carta e pigmenti, scompone e indicizza al secondo le sequenze esecutive nei video didattici e affianca al tavolo da lavoro strumenti di riscontro immediato, dal calcolatore colorimetrico all'assistente tecnico integrato nelle pagine.
+  </div>
+  <section class="cf-sviluppo" aria-label="Stato del Quaderno">
+    <p><strong>Il Quaderno è in costruzione.</strong> Le sezioni esistenti vengono ampliate progressivamente e altre se ne
+    aggiungeranno. Nella versione attuale il Quaderno mette a disposizione:</p>
+    <ul>{voci}</ul>
   </section>
 
   <h2 class="sezioni-tit">Le sezioni</h2>
   <div class="grid">
-    {cards_html}
+    {schede_html}
   </div>
 </main>
 {blocco_sugg}
@@ -693,7 +693,6 @@ footer a{{color:#5a4d3b}}
 </body>
 </html>
 """
-
 
 FAVICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
 <path d="M32 4 C22 20 12 30 12 42 a20 20 0 0 0 40 0 C52 30 42 20 32 4 Z" fill="#283A9E" fill-opacity=".82"/>
@@ -714,8 +713,10 @@ def scrivi_file_di_servizio():
 
 
 def gulpease(html_pagina):
-    """Indice Gulpease dei testi leggibili di una pagina, senza script, stili, svg, chat e suggerimenti."""
+    """Indice Gulpease dei testi leggibili di una pagina, senza script, stili, svg, chat, suggerimenti ed elenchi
+    delle fonti, che citano titoli e passi nella lingua originale e si ripetono in più capitoli."""
     t = re.sub(r'<section id="(assistente-ai|suggerimenti)".*?</section>', " ", html_pagina, flags=re.S)
+    t = re.sub(r'<div class="fonti-cap">.*?</div>', " ", t, flags=re.S)
     t = re.sub(r"<(script|style|svg|nav|footer|table)[^>]*>.*?</\1>", " ", t, flags=re.S)
     t = re.sub(r"<(br|/p|/li|/h[1-6]|/div|/td)[^>]*>", ". ", t)
     t = html.unescape(re.sub(r"<[^>]+>", " ", t))

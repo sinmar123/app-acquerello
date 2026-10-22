@@ -165,7 +165,6 @@ def pagina():
 </header>
 <nav class="salti">
   <a href="#confronto">Studio e aperto</a>
-  <a href="#protocollo-a5">Foglietti A5</a>
   <a href="#tavolozza-studio">Tavolozza estesa</a>
   <a href="#tavolozza-plein-air">Sei colori</a>
   <a href="#miscele">12 miscele</a>

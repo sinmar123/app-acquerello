@@ -1,15 +1,15 @@
 {
   "titolo": "Studio ed en plein air: metodo di lavoro, dotazione e tavolozze",
-  "sottotitolo": "Le differenze fra il lavoro in studio e la pittura all'aperto, il metodo dei foglietti A5, la tavolozza estesa e la tavolozza ridotta a sei colori con le sue 12 miscele.",
+  "sottotitolo": "Le differenze fra il lavoro in studio e la pittura all'aperto, la tavolozza estesa e la tavolozza ridotta a sei colori con le sue 12 miscele.",
   "introduzione": [
     "Il lavoro ad acquerello cambia molto fra lo studio e la pittura dal vero all'aperto (en plein air). All'aperto la temperatura, l'umidità dell'aria, il vento e il sole diretto cambiano la velocità con cui la carta asciuga, e con essa la dotazione e la tavolozza più adatte.",
-    "Questa sezione descrive i due modi di lavorare usati nei moduli dei Soggetti, il metodo dei foglietti A5 e il prontuario completo delle 12 miscele (M1-M12) della tavolozza ridotta a sei colori."
+    "Questa sezione descrive i due modi di lavorare usati nei moduli dei Soggetti e il prontuario completo delle 12 miscele (M1-M12) della tavolozza ridotta a sei colori."
   ],
   "confronto": [
     {
       "aspetto": "Asciugatura e umidità della carta",
       "studio": "Temperatura e umidità stabili, nessuna corrente d'aria: la carta asciuga con tempi prevedibili, e si possono condurre stesure bagnato su bagnato complesse, più passaggi sulla carta umida e fogli di grande formato fissati su una tavola inclinata.",
-      "plein_air": "Il vento e il sole accelerano l'asciugatura, l'umidità dell'aria la rallenta. Servono decisioni rapide, stesure sintetiche in pochi passaggi, formati contenuti (A5, o un quarto del foglio intero di 56 × 76 cm) e un controllo continuo del lucido dell'acqua sulla carta."
+      "plein_air": "Il vento e il sole accelerano l'asciugatura, l'umidità dell'aria la rallenta. Servono decisioni rapide, stesure sintetiche in pochi passaggi, formati contenuti e un controllo continuo del lucido dell'acqua sulla carta."
     },
     {
       "aspetto": "Tavolozza",
@@ -29,16 +29,8 @@
   ],
   "capitoli": [
     {
-      "id": "protocollo-a5",
-      "titolo": "1. Il metodo dei foglietti A5",
-      "paragrafi": [
-        "Prima di una composizione completa, ogni soggetto (un gruppo di conifere, una nuvola, un fiore) si studia meglio su piccoli fogli di formato A5, circa 14,8 × 21 cm. Un foglio di 30 × 40 cm tagliato in quattro dà fogli di 15 × 20 cm, poco più piccoli di un A5; un foglio intero di 56 × 76 cm ne dà sedici di 14 × 19 cm, anch'essi poco più piccoli di un A5. La carta è cotone 100% da 300 g/m² a grana fine (cold press).",
-        "Su un foglio piccolo la campitura si stende prima che la carta cominci ad asciugare, e l'attenzione resta sul rapporto fra acqua e pigmento (tè, latte, miele) e sul momento in cui la carta perde il lucido. Il foglio si fissa con il nastro di carta su tutti e quattro i lati, su una tavoletta rigida che non tema l'acqua: il nastro contiene l'ondulazione della carta e, tolto a lavoro asciutto, lascia un margine bianco netto che aiuta a leggere i valori."
-      ]
-    },
-    {
       "id": "tavolozza-studio",
-      "titolo": "2. In studio: la tavolozza estesa e i colori pronti",
+      "titolo": "1. In studio: la tavolozza estesa e i colori pronti",
       "paragrafi": [
         "Nei video raccolti nei Soggetti gli autori usano spesso, accanto ai primari, colori già pronti e terre particolari. Un pigmento singolo o una miscela di fabbrica permette di deporre subito un tono alla consistenza voluta: è utile soprattutto quando serve una miscela densa, al miele, da mettere in pochi secondi su una campitura che sta perdendo il lucido.",
         "I colori pronti che ricorrono nei video sono, fra gli altri: ocra gialla (PY43 o PY42) e terra di Siena naturale (spesso PBr7) per i veli caldi di fondo e i fusti in luce; verde vescica, verde oliva e verde di perilene (PBk31) per le masse di fogliame; turchese di cobalto (PG50, PB36 o PB28 secondo il produttore) e blu di Prussia (PB27) per i veli freddi e le conifere lontane; indaco, grigio di Payne e seppia per scurire rapidamente le ombre profonde e i controluce. Verde vescica, verde oliva, indaco, grigio di Payne e seppia sono di norma miscele di fabbrica, con pigmenti diversi da una marca all'altra."
@@ -46,7 +38,7 @@
     },
     {
       "id": "tavolozza-plein-air",
-      "titolo": "3. All'aperto: la tavolozza ridotta a sei colori e le 12 miscele (M1-M12)",
+      "titolo": "2. All'aperto: la tavolozza ridotta a sei colori e le 12 miscele (M1-M12)",
       "paragrafi": [
         "All'aperto, o per imparare a mescolare senza dipendere da molti tubetti, bastano sei colori: un giallo, un rosso, due blu, uno freddo (il ceruleo, a base di blu ftalo) e uno caldo (l'oltremare), e due terre. Con questi sei colori si ottengono i verdi, i bruni e i grigi degli esempi; alcuni colori restano fuori dalla loro portata, e il calcolatore lo segnala."
       ]

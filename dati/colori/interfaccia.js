@@ -93,7 +93,7 @@
           '<br>distanza OKLab ' + r.d.toFixed(3).replace('.', ',') + ', ' + giudizio(r.d) + ' · Munsell circa ' + m.testo +
           '<br><button class="usa" type="button" data-i="' + i + '">Apri nel mescolatore</button></div></div>';
       });
-      $('tris').innerHTML = h + '<p class="aiuto">A sinistra di ogni coppia il colore scelto, a destra la proposta. Sono stime: provale sul foglietto in tre dosi (meno, come scritto, di più).</p>';
+      $('tris').innerHTML = h + '<p class="aiuto">A sinistra di ogni coppia il colore scelto, a destra la proposta. Sono stime: vanno provate su carta in tre dosi (meno, come scritto, di più).</p>';
       Array.prototype.forEach.call(document.querySelectorAll('#tris .usa'), function (b) {
         b.addEventListener('click', function () {
           var r = ris[parseInt(b.getAttribute('data-i'), 10)];
