@@ -452,7 +452,7 @@ def pagina():
 
         blocco_colori = ""
         if t.get("colori_studio"):
-            blocco_colori += f'<p class="colori studio"><b>🎨 <a href="../studio-plein-air/#tavolozza-studio" style="color:inherit">Colori in studio</a> (proposta libera):</b> {e(t["colori_studio"])}</p>'
+            blocco_colori += f'<p class="colori studio"><b>🎨 <a href="../principi/#tavolozza-studio" style="color:inherit">Colori in studio</a> (proposta libera):</b> {e(t["colori_studio"])}</p>'
         if t.get("colori_aperto"):
             blocco_colori += f'<p class="colori aperto"><b>🎒 All\'aperto (coi <a href="#miscele">6 colori di base</a>):</b> {e(t["colori_aperto"])}</p>'
         elif t.get("colori"):
@@ -492,7 +492,7 @@ def pagina():
     esercizi = "".join(f'<li><b>{e(x["titolo"])}.</b> {e(x["testo"])}</li>' for x in a.get("esercizi", []))
     if a.get("principi"):
         pr = a["principi"]
-        esercizi = (f'<li><b>{e(pr["titolo"])}.</b> {e(pr["testo"])} <a href="{e(pr["href"])}">{e(pr["link"])}</a> · <a href="../studio-plein-air/">Studio ed en plein air</a> · <a href="../soggetti/">Tutti i soggetti</a>.</li>'
+        esercizi = (f'<li><b>{e(pr["titolo"])}.</b> {e(pr["testo"])} <a href="{e(pr["href"])}">{e(pr["link"])}</a> · <a href="../principi/#studio-aperto">In studio e all\'aperto</a> · <a href="../soggetti/">Tutti i soggetti</a>.</li>'
                     + esercizi)
     miscele, sei_colori, riquadri = parte_colori(a, e)
     crediti = "".join(f'<li><a href="https://www.youtube.com/watch?v={e(v)}" target="_blank" rel="noopener">'
@@ -508,7 +508,7 @@ def pagina():
 <ul class="come">{esercizi}</ul>
 </div>
 <details class="miscele-box" id="miscele"><summary>All'aperto (en plein air): i 6 colori di base e le 12 miscele (M1-M12) per dipingere con una scatola leggera</summary>
-<p class="nota-studio-aperto">All'aperto, o per esercitarsi a ricavare tutto da pochi tubetti, bastano i 6 colori di base e le 12 miscele qui sotto, con cui si preparano i verdi, i bruni e i grigi degli esempi. Il confronto fra il lavoro in studio e all'aperto è nella sezione <a href="../studio-plein-air/">Studio ed en plein air</a>.</p>
+<p class="nota-studio-aperto">All'aperto, o per esercitarsi a ricavare tutto da pochi tubetti, bastano i 6 colori di base e le 12 miscele qui sotto, con cui si preparano i verdi, i bruni e i grigi degli esempi. Il confronto fra il lavoro in studio e all'aperto è nel capitolo <a href="../principi/#studio-aperto">In studio e all'aperto</a> dei Principi generali.</p>
 {sei_colori}
 {riquadri}
 <table class="mix">{miscele}</table></details>

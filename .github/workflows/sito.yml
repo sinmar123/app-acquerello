@@ -31,6 +31,8 @@ jobs:
         run: |
           test -s site/index.html
           for d in dati/*/; do test -s "site/$(basename "$d")/index.html"; done
+          grep -qx "/studio-plein-air/ /principi/#studio-aperto 301" site/_redirects
+          test ! -e site/studio-plein-air
       - name: Prompt della chat allineato ai dati
         run: |
           git diff --exit-code -- lib/prompt-chat.js || {
