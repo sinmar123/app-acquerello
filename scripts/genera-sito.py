@@ -86,8 +86,6 @@ SEZIONI = [
         "sottotitolo": "Sei esempi di alberi, siepi e arbusti, sviluppati in 24 modalità tratte dai video, con un'infografica in tre fasi per ciascuna",
         "script_genera": DATI_DIR / "alberi" / "pit-261013-video-gesti.py",
         "html_generato": DATI_DIR / "alberi" / "pit-261014-video-gesti-alberi.html",
-        # figure salvate accanto alla pagina dal generatore, da copiare con lei
-        "cartelle": [DATI_DIR / "alberi" / "immagini"],
     },
 ]
 
@@ -634,31 +632,7 @@ IN_COSTRUZIONE = [
 ]
 
 
-# Home: testata ad acquerello, striscia della tavolozza, schede illustrate, nota di metodo da aprire.
-# L'illustrazione della scheda di S1 in home è un ritaglio di una di quelle degli Alberi (generate con l'IA,
-# dati/alberi/illustrazioni/), scelto dove non compaiono mani né pennelli, e si rifà in webp a ogni generazione
-# in site/immagini/.
-ILLUSTRAZIONI_ALBERI = DATI_DIR / "alberi" / "illustrazioni"
-IMMAGINI_HOME = {
-    # nome in site/immagini/: (illustrazione sorgente, ritaglio in px sull'originale 1200 × 896, larghezza in uscita)
-    "home-alberi.webp": ("pit-261013-illustrazione-A4-base-scura.png", (180, 300, 560, 680), 128),
-}
-
-
-def misure_immagine_home(nome: str) -> tuple[int, int]:
-    _, (x0, y0, x1, y1), larghezza = IMMAGINI_HOME[nome]
-    return larghezza, round((y1 - y0) * larghezza / (x1 - x0))
-
-
-def prepara_immagini_home():
-    from PIL import Image
-    cartella = SITE_DIR / "immagini"
-    cartella.mkdir(parents=True, exist_ok=True)
-    for nome, (sorgente, riquadro, _) in IMMAGINI_HOME.items():
-        im = Image.open(ILLUSTRAZIONI_ALBERI / sorgente).convert("RGB").crop(riquadro)
-        im = im.resize(misure_immagine_home(nome), Image.LANCZOS)
-        im.save(cartella / nome, "WEBP", quality=80, method=6)
-        print(f"[home] Scritto site/immagini/{nome} ({(cartella / nome).stat().st_size // 1024} KB)")
+# Home: testata ad acquerello, striscia della tavolozza, schede con una figurina in SVG o CSS, nota di metodo da aprire.
 
 
 def colori_tavolozza() -> list[dict]:
@@ -677,7 +651,7 @@ def striscia_tavolozza() -> str:
 
 
 def icona_scheda(slug: str) -> str:
-    """Piccola figura della scheda in home: SVG o CSS, e per gli Alberi il ritaglio di un'illustrazione."""
+    """Piccola figura della scheda in home, disegnata in SVG o CSS."""
     if slug == "principi":  # goccia sulla carta bagnata
         return ('<svg viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="53" rx="24" ry="6" fill="#7fa3cf" fill-opacity=".35"/>'
                 '<path d="M32 5C25 18 17 27 17 38a15 15 0 0 0 30 0C47 27 39 18 32 5Z" fill="#3f6fb0" fill-opacity=".78"/>'
@@ -702,9 +676,8 @@ def icona_scheda(slug: str) -> str:
                 '<g clip-path="url(#cp-sog)"><rect width="64" height="64" fill="#cfe0ee"/><ellipse cx="24" cy="21" rx="11" ry="5" fill="#fff" fill-opacity=".9"/>'
                 '<path d="M0 42Q18 26 34 38T64 34V64H0Z" fill="#6f8f5a" fill-opacity=".85"/><rect y="46" width="64" height="18" fill="#7fa3cf" fill-opacity=".8"/>'
                 '<path d="M12 51h22M30 56h20" stroke="#fff" stroke-opacity=".7" stroke-width="2" stroke-linecap="round"/></g></svg>')
-    if slug == "alberi":
-        l, a = misure_immagine_home("home-alberi.webp")
-        return f'<img src="immagini/home-alberi.webp" width="{l}" height="{a}" alt="" loading="lazy" decoding="async">'
+    if slug == "alberi":  # albero con chioma e tronco
+        return ('<svg viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="57" rx="22" ry="4" fill="#6f8f5a" fill-opacity=".35"/><path d="M30 58V38h4v20Z" fill="#7a5236"/><path d="M32 46l-7-6M32 43l6-5" stroke="#7a5236" stroke-width="2" stroke-linecap="round"/><circle cx="32" cy="25" r="15" fill="#4f7d45" fill-opacity=".85"/><circle cx="21" cy="32" r="10" fill="#6f9a52" fill-opacity=".8"/><circle cx="43" cy="31" r="11" fill="#3f6a3a" fill-opacity=".8"/><circle cx="27" cy="19" r="6" fill="#9cc07a" fill-opacity=".55"/></svg>')
     return ""
 
 
@@ -757,7 +730,6 @@ main{max-width:820px;margin:0 auto;padding:18px 14px 12px}
 .card-sub{font-size:.88rem;color:#6b5e4c}
 .card-fig{flex:none;align-self:center;display:flex;align-items:center;justify-content:center;width:60px;height:60px}
 .card-fig svg{width:60px;height:60px;display:block}
-.card-fig img{width:60px;height:60px;display:block;object-fit:cover;border-radius:46% 54% 50% 50%/52% 46% 54% 48%}
 .ruota{display:block;width:54px;height:54px;border-radius:50%;opacity:.85;
  background:conic-gradient(#f0d53c,#e88d2c,#c8323a,#8e2f78,#3a4fa8,#2a86a0,#4f9a48,#f0d53c);
  -webkit-mask-image:radial-gradient(circle,transparent 27%,#000 29%);mask-image:radial-gradient(circle,transparent 27%,#000 29%)}
@@ -769,7 +741,7 @@ footer a{color:#5a4d3b}
  .testa p{font-size:.9rem}
  .tavolozza ul{grid-template-columns:repeat(3,1fr);row-gap:12px}
  .card{padding:12px 12px;gap:10px}
- .card-fig,.card-fig svg,.card-fig img{width:46px;height:46px}
+ .card-fig,.card-fig svg{width:46px;height:46px}
  .ruota{width:42px;height:42px}
 }
 """.replace("@GRANA@", GRANA_CARTA)
@@ -824,8 +796,7 @@ def genera_home(sezioni_pronte: list[dict]) -> str:
 {blocco_sugg}
 <footer>
   Quaderno di acquerello · progetto aperto su <a href="{REPO_URL}" target="_blank" rel="noopener">GitHub</a>
-  (testi, dati e illustrazioni <a href="https://creativecommons.org/licenses/by/4.0/deed.it" target="_blank" rel="noopener">CC BY 4.0</a>, codice MIT)<br>
-  L'immagine della scheda di S1 Alberi è un ritaglio di un'illustrazione della sezione Alberi, generata con l'intelligenza artificiale: non è un acquerello dipinto a mano.
+  (testi, dati e illustrazioni <a href="https://creativecommons.org/licenses/by/4.0/deed.it" target="_blank" rel="noopener">CC BY 4.0</a>, codice MIT)
 </footer>
 </body>
 </html>
@@ -894,7 +865,6 @@ def main():
         print(f"[{s['slug']}] Scritto {dest_html.relative_to(APP_DIR).as_posix()} ({dest_html.stat().st_size // 1024} KB)")
         sezioni_pronte.append(dict(s))
 
-    prepara_immagini_home()
     index_html = SITE_DIR / "index.html"
     index_html.write_text(genera_home(sezioni_pronte), encoding="utf-8", newline="\n")
     print(f"[home] Scritto {index_html.relative_to(APP_DIR).as_posix()} ({index_html.stat().st_size // 1024} KB)")

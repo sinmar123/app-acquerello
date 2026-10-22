@@ -10,18 +10,19 @@ Istruzioni per gli agenti AI che lavorano su questo repository, in locale o in u
   - `dati/colori/` (**3. Teoria dei colori**): `teoria-colori.json`, `tavolozza.json` (i sei colori di base, coi valori sRGB provvisori del calcolatore), `munsell-tinte.json`, `calcolatore.js`, `interfaccia.js`, `spettri-spectraljs.js` (licenza MIT) e `genera-teoria-colori.py` (comando `pagina`).
   - `dati/marche/` (**4. Marche e tubetti**): `marche.json` (pagina ufficiale e data di controllo su ogni riga) e `genera-marche.py` (comando `pagina`; si ferma se manca la fonte o la data, o se un colore non è nella tavolozza).
   - `dati/soggetti/` (**5. Soggetti**): `soggetti.json` e `genera-soggetti.py` (comando `pagina`), che legge i nomi degli esempi di `S1` dal json degli Alberi.
-  - `dati/alberi/` (**5.1 S1 · Alberi**): `pit-261014-video-gesti-alberi.json` (6 esempi `A1`-`A6`, 24 modalità, tavolozza e miscele), `pit-261013-video-gesti-segmenti.csv` (31 estratti video al secondo), `pit-261013-alberi-selezione-video*.csv`, `pit-261015-infografiche.py` (24 infografiche SVG in 3 fasi), `pit-261013-video-gesti.py` (comando `pagina`), `illustrazioni/` (le sei illustrazioni generate con l'IA da `pit-261013-illustrazioni.py`).
+  - `dati/alberi/` (**5.1 S1 · Alberi**): `pit-261014-video-gesti-alberi.json` (6 esempi `A1`-`A6`, 24 modalità, tavolozza e miscele), `pit-261013-video-gesti-segmenti.csv` (31 estratti video al secondo), `pit-261013-alberi-selezione-video*.csv`, `pit-261015-infografiche.py` (24 infografiche SVG in 3 fasi) e `pit-261013-video-gesti.py` (comando `pagina`).
 - `scripts/genera-sito.py`: genera `site/` dai soli file del repository, inietta la barra delle sezioni, fissa in cima a ogni pagina, la chat e la casella dei suggerimenti, scrive `lib/prompt-chat.js` dai dati e fa i controlli comuni: menu e pagine coincidenti con le funzioni, nessun nome di marca fuori da `dati/marche/`, leggibilità (Gulpease) non sotto 52.
 - `scripts/rimandi_fonti.py`: i rimandi numerati alle fonti, con l'elenco in fondo a ogni capitolo e la freccia che riporta al testo, nello stesso formato per Principi e Teoria dei colori.
 - `functions/api/`: `chat.js` (assistente su `gemini-4-argon`, senza email e senza archivio, 5 domande a settimana per connessione e 10 al giorno in tutto, contate su D1) e `suggerimento.js` (Issue pubbliche dalla casella del sito, 5 invii al giorno per connessione e 30 in tutto).
 - `lib/prompt-chat.js`: prompt di sistema della chat, generato; non si modifica a mano.
-- `site/`, le pagine html generate dentro `dati/` e `dati/alberi/immagini/` restano fuori da git (`.gitignore`).
+- `site/` e le pagine html generate dentro `dati/` restano fuori da git (`.gitignore`).
 
 ## Come si lavora
 
 - Si lavora su un ramo e si chiude con una pull request; mai scrivere direttamente su `main`.
 - Unire su `main` vuol dire pubblicare: a ogni modifica di `main` il job «pubblica» di `.github/workflows/sito.yml` manda il sito su Cloudflare Pages.
 - I testi si cambiano nei file `.json` e `.csv` e nei moduli delle infografiche, mai nell'html generato. Prima di cambiare i testi delle guide si porta la proposta al curatore e ci si ferma.
+- Nel sito non si usano immagini generate con l'IA che imitano un acquerello o un dipinto; sono ammessi solo schemi, infografiche e figure disegnate. Regola del curatore del 22/10/2026, in [`CONTRIBUTING.md`](CONTRIBUTING.md) § 3.
 - Il registro dei testi è quello di un manuale tecnico, scelto dal curatore il 21/10/2026: regole in [`CONTRIBUTING.md`](CONTRIBUTING.md) § 3.
 - Dopo ogni modifica si lancia `python scripts/genera-sito.py`, che deve finire senza errori, si controlla la parte cambiata in `site/` e si committa anche `lib/prompt-chat.js` se è cambiato. Su ogni pull request GitHub rifà la generazione nel controllo «costruisci».
 - Nuova sezione: cartella `dati/<tema>/` col suo generatore e i suoi dati, voce nella lista `SEZIONI` di `scripts/genera-sito.py` e negli elenchi `PAGINE_VALIDE` di `functions/api/chat.js` e `functions/api/suggerimento.js`.

@@ -1,7 +1,7 @@
 # Pagina coi pezzi dei video veri per i gesti degli alberi ad acquerello.
 #
 # Per il comando «pagina» bastano i file di questa cartella (`pit-261014-video-gesti-alberi.json`,
-# `pit-261013-video-gesti-segmenti.csv`, `pit-261015-infografiche.py` e `illustrazioni/`).
+# `pit-261013-video-gesti-segmenti.csv` e `pit-261015-infografiche.py`).
 # Gli altri comandi (`info`, `fogli`, `mandati`, `controllo`) sono strumenti ausiliari di studio
 # che interrogano YouTube con yt-dlp.
 # Prova della pagina in Chrome: pit-261014-prova-pagina.py; fotogrammi dal lettore della pagina, se il
@@ -28,8 +28,7 @@
 #           (canale e titolo), le schede, la tabella dei segmenti.
 # Uscita:   pit-261013-video-gesti-segmenti.csv (un pezzo per riga: video, inizio, fine, incorporabile,
 #           etichetta e riga «nel video» per la pagina, nota sulla scelta; «A5-6b» è il secondo pezzo
-#           del passo A5-6) e pit-261014-video-gesti-alberi.html, con le illustrazioni ridotte in jpg nella
-#           cartella immagini/ accanto (scripts/genera-sito.py la pubblica insieme alla pagina).
+#           del passo A5-6) e pit-261014-video-gesti-alberi.html.
 # La tabella si scrive a mano: inizio e fine li decide il modello di sessione, sui fogli di controllo.
 # I file temporanei di lavoro stanno in %TEMP%\pit-alberi\video-gesti\: si rigenerano.
 import concurrent.futures, csv, glob, json, os, subprocess, sys
@@ -315,38 +314,16 @@ def cartella_schede():
     return os.path.join(wks, "pit", "acquerello-alberi", "schede")
 
 def comune():
-    # Funzioni di utilità per l'html, le immagini in jpeg e le pillole dello stato della carta.
-    # Le immagini della pagina stanno tutte in illustrazioni/.
-    import base64, html, io, types
-    from PIL import Image, ImageOps
+    # Funzioni di utilità per l'html e le pillole dello stato della carta.
+    import html, types
 
     e = lambda t: html.escape(str(t or ""))
-
-    def jpeg(im, lato=1400, q=84):
-        im = im.convert("RGB")
-        im.thumbnail((lato, lato))
-        b = io.BytesIO()
-        im.save(b, "JPEG", quality=q)
-        return "data:image/jpeg;base64," + base64.b64encode(b.getvalue()).decode()
-
-    def jpeg_file(im, nome, lato=1000, q=82):
-        """Salva l'immagine in immagini/ accanto alla pagina invece di incorporarla: la pagina resta
-        leggera e il browser scarica le figure solo quando ci si arriva (loading="lazy").
-        scripts/genera-sito.py copia la cartella in site/alberi/immagini/."""
-        im = im.convert("RGB")
-        im.thumbnail((lato, lato))
-        os.makedirs(os.path.join(QUI, "immagini"), exist_ok=True)
-        im.save(os.path.join(QUI, "immagini", nome), "JPEG", quality=q, optimize=True, progressive=True)
-        return f"immagini/{nome}", im.width, im.height
-
-    def apri(nome):
-        return ImageOps.exif_transpose(Image.open(os.path.join(QUI, "illustrazioni", nome)))
 
     def pillola(carta):
         c = (carta or "").strip().lower()
         return f'<span class="pill {e(c)}">{e(c)}</span>' if c in ("bagnata", "umida", "asciutta") else ""
 
-    return types.SimpleNamespace(e=e, jpeg=jpeg, jpeg_file=jpeg_file, apri=apri, pillola=pillola)
+    return types.SimpleNamespace(e=e, pillola=pillola)
 
 def tempi_striscia(r, i0, i1):
     if r and r.get("quadri"):
@@ -420,7 +397,6 @@ def strisce(url="http://127.0.0.1:8765/pit-261014-video-gesti-alberi.html"):
         b.close()
 
 def pagina():
-    from PIL import Image
     c = comune()
     e, pill = c.e, c.pillola
     d = json.load(open(FONTE, encoding="utf-8"))
@@ -473,14 +449,6 @@ def pagina():
         tot_modalita += n_mod
         indice.append(f'<a href="#{s}">{e(t.get("breve", nome))}</a>')
         elenco.append(f'<li><a href="#{s}"><b>{e(nome)}</b> <span class="cnt-mod">({n_mod} modalità nei video)</span></a></li>')
-        if t.get("illustrazione"):
-            il = t["illustrazione"]
-            nome_jpg = os.path.splitext(il["file"])[0] + ".jpg"
-            ill, lar, alt = c.jpeg_file(Image.open(os.path.join(QUI, "illustrazioni", il["file"])), nome_jpg)
-            figura = (f'<div class="figura"><figure><img src="{ill}" width="{lar}" height="{alt}" loading="lazy" decoding="async" '
-                      f'alt="{e(il["didascalia"])}"><figcaption>{e(il["didascalia"])}</figcaption></figure></div>')
-        else:
-            figura = ""
 
         blocco_colori = ""
         if t.get("colori_studio"):
@@ -517,7 +485,7 @@ def pagina():
 
         blocco_coda = mod_info.rendi_coda_albero(t, e)
         sezioni.append(f'<section class="albero" id="{s}"><h2><span class="sig">{k}</span> {e(nome)}</h2>'
-                       f'<p class="dove">{e(t["descrizione"])}</p>{figura}'
+                       f'<p class="dove">{e(t["descrizione"])}</p>'
                        f'{blocco_colori}{pennelli}{esercizio}'
                        f'<div class="modalita-lista">{"".join(schede_mod)}</div>{blocco_coda}</section>')
 
@@ -560,7 +528,7 @@ def pagina():
 {"".join(sezioni)}
 <footer><h2>I video</h2><p>I video restano dei loro autori: la pagina li mostra col lettore di YouTube, senza copiarli. Grazie a:</p>
 <ul class="crediti">{crediti}</ul>
-<p>Le illustrazioni in testa a ciascun esempio sono generate con l'intelligenza artificiale (Nano Banana 2.1, modello di Google) per mostrare il gesto: non sono acquerelli dipinti a mano né fotogrammi dei video. Le 24 infografiche in 3 fasi sono disegnate per questa guida, una per ogni modalità. Le illustrazioni si ingrandiscono con un tocco.</p></footer>"""
+<p>Le 24 infografiche in 3 fasi sono disegnate per questa guida, una per ogni modalità.</p></footer>"""
     html_ = f"""<!doctype html>
 <html lang="it"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -644,8 +612,6 @@ nav.salti a { flex: none; text-decoration: none; color: #2c4f3a; border: 1px sol
 .uso-video h3 { margin-top: 0; }
 .legenda { margin: 0 0 8px; font-size: .92em; }
 .intro ul.come { padding-left: 20px; margin: 6px 0 0; } .intro li { margin-bottom: 6px; }
-figure { margin: 0; } figure img { width: 100%; height: auto; display: block; border-radius: 6px; cursor: zoom-in; }
-figcaption { font-size: .85em; color: #555; margin-top: 3px; }
 ol.alberi { columns: 2; column-gap: 2.2em; padding-left: 20px; margin: 6px 0 12px; } ol.alberi li { break-inside: avoid; margin-bottom: 4px; } ol.alberi a { color: inherit; text-decoration: none; }
 .cnt-mod { font-size: .84em; color: #4a6353; font-weight: 400; }
 @media (max-width: 600px) { ol.alberi { columns: 1; } }
@@ -662,7 +628,6 @@ summary { font-weight: 600; cursor: pointer; color: #2c4f3a; }
 table.mix { border-collapse: collapse; width: 100%; } table.mix td { border-bottom: 1px solid #d8e2da; padding: 5px 6px; vertical-align: top; }
 td.m { font-weight: 700; color: #2c4f3a; width: 3em; }
 section.albero { border-top: 3px solid #3d6b4f; padding-top: 14px; margin-top: 28px; }
-.figura { margin-bottom: 10px; } .figura img { width: 100%; height: auto; }
 .colori, .pennelli { font-size: .92em; background: #f1efe8; border-radius: 8px; padding: 8px 11px; margin: 6px 0; }
 .colori.studio { background: #fffdf6; border-left: 4px solid #c87a28; border-top: 1px solid #e8dec8; border-right: 1px solid #e8dec8; border-bottom: 1px solid #e8dec8; }
 .colori.aperto { background: #f3f7f4; border-left: 4px solid #3d6b4f; border-top: 1px solid #d4e2d8; border-right: 1px solid #d4e2d8; border-bottom: 1px solid #d4e2d8; }
@@ -731,13 +696,6 @@ button.guarda small { font-weight: 400; opacity: .9; margin-left: auto; }
 .video.aperto .schermo { display: block; } .video.aperto .comandi { display: flex; } .video.aperto .dove-video { display: block; }
 footer { margin-top: 34px; border-top: 3px solid #3d6b4f; padding-top: 12px; font-size: .9em; color: #333; }
 footer ul.crediti { padding-left: 20px; } footer a { color: #2c4f3a; }
-#lente { position: fixed; inset: 0; z-index: 10; background: rgba(0,0,0,.9); display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: zoom-out; user-select: none; }
-#lente img { width: min(90vw, 1080px); height: auto; max-height: 84vh; object-fit: contain; border-radius: 6px; }
-#lente .dida-lente { color: #f5f3ee; font-size: .95em; margin-top: 8px; text-align: center; padding: 0 16px; }
-#lente button.nav { position: fixed; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,.18); color: #fff; border: 1px solid rgba(255,255,255,.4); border-radius: 50%; width: 48px; height: 48px; font-size: 1.8em; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; }
-#lente button.nav:hover { background: rgba(255,255,255,.32); }
-#lente button.nav.sx { left: 16px; }
-#lente button.nav.dx { right: 16px; }
 """
 
 JS = r"""
@@ -833,42 +791,6 @@ JS = r"""
       v.ripeti = !v.ripeti;
       this.setAttribute('aria-pressed', v.ripeti ? 'true' : 'false');
       if (v.ripeti && v.player && v.player.getPlayerState && (v.player.getPlayerState() === 0 || v.fermato)) daCapo(v);
-    });
-  });
-  document.querySelectorAll('figure img').forEach(function (img) {
-    img.addEventListener('click', function () {
-      var striscia = img.closest('.striscia');
-      var lista = striscia ? Array.from(striscia.querySelectorAll('img')) : Array.from(document.querySelectorAll('figure img'));
-      var idx = lista.indexOf(img);
-      var l = document.createElement('div');
-      l.id = 'lente';
-      l.innerHTML = '<button type="button" class="nav sx" aria-label="Precedente">‹</button>' +
-                    '<img alt=""><div class="dida-lente"></div>' +
-                    '<button type="button" class="nav dx" aria-label="Successiva">›</button>';
-      var elImg = l.querySelector('img'), elDida = l.querySelector('.dida-lente');
-      function mostra(i) {
-        idx = (i + lista.length) % lista.length;
-        var corr = lista[idx];
-        elImg.src = corr.src;
-        var fc = corr.parentNode.querySelector('figcaption');
-        var testo = fc ? fc.textContent : (corr.alt || '');
-        elDida.textContent = (lista.length > 1 ? (idx + 1) + ' / ' + lista.length + ' · ' : '') + testo + ' (← → per scorrere, Esc per chiudere)';
-      }
-      function tasto(ev) {
-        if (ev.key === 'ArrowLeft') { ev.preventDefault(); mostra(idx - 1); }
-        else if (ev.key === 'ArrowRight') { ev.preventDefault(); mostra(idx + 1); }
-        else if (ev.key === 'Escape') { ev.preventDefault(); chiudiLente(); }
-      }
-      function chiudiLente() {
-        document.removeEventListener('keydown', tasto);
-        l.remove();
-      }
-      l.querySelector('.sx').addEventListener('click', function (ev) { ev.stopPropagation(); mostra(idx - 1); });
-      l.querySelector('.dx').addEventListener('click', function (ev) { ev.stopPropagation(); mostra(idx + 1); });
-      l.addEventListener('click', chiudiLente);
-      document.addEventListener('keydown', tasto);
-      mostra(idx);
-      document.body.appendChild(l);
     });
   });
   // Per la prova: stato del video aperto (tempo, stato del lettore, velocità).
