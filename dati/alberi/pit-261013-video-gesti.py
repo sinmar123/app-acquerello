@@ -672,7 +672,7 @@ section.albero { border-top: 3px solid #3d6b4f; padding-top: 14px; margin-top: 2
 .modalita-card { background: #ffffff; border: 1.5px solid #cbd9cf; border-radius: 12px; padding: 14px 15px; box-shadow: 0 2px 6px rgba(0,0,0,.04); }
 .mod-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; flex-wrap: wrap; border-bottom: 1px solid #e1eae3; padding-bottom: 8px; margin-bottom: 9px; }
 .mod-head h3 { margin: 0; font-size: 1.08em; color: #1f3c2b; }
-.mod-autore { font-size: .82em; font-weight: 600; color: #2c4f3a; background: #e8f1eb; border: 1px solid #bdd3c3; border-radius: 999px; padding: 2px 10px; white-space: nowrap; }
+.mod-autore { font-size: .82em; font-weight: 600; color: #2c4f3a; background: #e8f1eb; border: 1px solid #bdd3c3; border-radius: 999px; padding: 2px 10px; max-width: 100%; }
 .mod-proposta { margin: 0 0 8px; font-size: .95em; color: #222; }
 .mod-meta { background: #f8f6f0; border: 1px solid #e5dfd2; border-radius: 8px; padding: 8px 11px; margin-bottom: 11px; font-size: .88em; color: #333; }
 .mod-meta p { margin: 3px 0; }
