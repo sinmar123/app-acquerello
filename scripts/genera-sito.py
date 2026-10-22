@@ -622,12 +622,12 @@ IN_COSTRUZIONE = [
 
 
 # Home: testata ad acquerello, striscia della tavolozza, schede illustrate, nota di metodo da aprire.
-# Le due illustrazioni della home sono ritagli di quelle degli Alberi (generate con l'IA, dati/alberi/illustrazioni/),
-# scelti dove non compaiono mani né pennelli, e si rifanno in webp a ogni generazione in site/immagini/.
+# L'illustrazione della scheda di S1 in home è un ritaglio di una di quelle degli Alberi (generate con l'IA,
+# dati/alberi/illustrazioni/), scelto dove non compaiono mani né pennelli, e si rifà in webp a ogni generazione
+# in site/immagini/.
 ILLUSTRAZIONI_ALBERI = DATI_DIR / "alberi" / "illustrazioni"
 IMMAGINI_HOME = {
     # nome in site/immagini/: (illustrazione sorgente, ritaglio in px sull'originale 1200 × 896, larghezza in uscita)
-    "home-testata.webp": ("pit-261013-illustrazione-A2-piani-staccati.png", (350, 80, 835, 820), 360),
     "home-alberi.webp": ("pit-261013-illustrazione-A4-base-scura.png", (180, 300, 560, 680), 128),
 }
 
@@ -710,13 +710,9 @@ body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;b
  radial-gradient(32% 48% at 42% 92%,rgba(111,143,90,.28),transparent 72%),
  radial-gradient(26% 40% at 62% 12%,rgba(150,70,40,.16),transparent 70%),
  radial-gradient(45% 65% at 88% 55%,rgba(63,111,176,.26),transparent 70%)}
-.testa-in{position:relative;max-width:820px;margin:0 auto;padding:24px 18px 20px;display:flex;align-items:center;gap:22px}
-.testa-txt{flex:1;min-width:0}
+.testa-in{position:relative;max-width:820px;margin:0 auto;padding:40px 18px 36px}
 .testa h1{margin:0 0 8px;font-family:Georgia,"Times New Roman",serif;font-weight:700;font-size:2.15rem;line-height:1.12;color:#1b2b20}
-.testa p{margin:0;max-width:460px;font-size:1rem;color:#2f4236}
-.testa-fig{flex:none;margin:0;width:176px;text-align:center}
-.testa-fig img{display:block;width:100%;height:auto;-webkit-mask-image:radial-gradient(ellipse 62% 64% at 50% 50%,#000 42%,transparent 100%);mask-image:radial-gradient(ellipse 62% 64% at 50% 50%,#000 42%,transparent 100%)}
-.testa-fig figcaption{margin-top:2px;font-size:.68rem;line-height:1.2;color:#56655a}
+.testa p{margin:0;max-width:520px;font-size:1.02rem;color:#2f4236}
 .tavolozza{max-width:820px;margin:0 auto;padding:18px 14px 0}
 .tavolozza ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
 .tavolozza li{display:flex;flex-direction:column;align-items:center;text-align:center;font-size:.75rem;line-height:1.25;color:#3d352a}
@@ -755,10 +751,9 @@ main{max-width:820px;margin:0 auto;padding:18px 14px 12px}
 footer{text-align:center;padding:18px;font-size:.82rem;color:#7a6f5d;border-top:1px solid #e5dccb;margin-top:24px}
 footer a{color:#5a4d3b}
 @media (max-width:560px){
- .testa-in{padding:18px 14px 16px;gap:12px}
+ .testa-in{padding:26px 16px 22px}
  .testa h1{font-size:1.55rem}
  .testa p{font-size:.9rem}
- .testa-fig{width:104px}
  .tavolozza ul{grid-template-columns:repeat(3,1fr);row-gap:12px}
  .card{padding:12px 12px;gap:10px}
  .card-fig,.card-fig svg,.card-fig img{width:46px;height:46px}
@@ -780,28 +775,20 @@ def genera_home(sezioni_pronte: list[dict]) -> str:
     schede_html = "\n".join(schede)
     voci = "".join(f"<li>{v}{';' if i < len(IN_COSTRUZIONE) - 1 else '.'}</li>" for i, v in enumerate(IN_COSTRUZIONE))
     blocco_sugg = blocco_chat_e_suggerimenti(OPZIONI_SEZIONE[0], "/")
-    lt, at = misure_immagine_home("home-testata.webp")
     return f"""<!doctype html>
 <html lang="it">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Quaderno di acquerello</title>
-{testa_comune("Quaderno di acquerello", DESCRIZIONE_HOME, "/")}<link rel="preload" as="image" href="immagini/home-testata.webp">
-<style>
+{testa_comune("Quaderno di acquerello", DESCRIZIONE_HOME, "/")}<style>
 {STILE_HOME}</style>
 {stile_barra("0")}</head>
 <body>
 {barra_quaderno("")}<header class="testa">
   <div class="testa-in">
-    <div class="testa-txt">
-      <h1>Quaderno di acquerello</h1>
-      <p>Appunti di studio dell'acquerello: acqua e carta, colori e tubetti, soggetti ed esercizi tratti dai video</p>
-    </div>
-    <figure class="testa-fig">
-      <img src="immagini/home-testata.webp" width="{lt}" height="{at}" alt="Abete su un fondo azzurro sfumato, illustrazione generata con l'IA" decoding="async">
-      <figcaption>Illustrazione generata con l'IA</figcaption>
-    </figure>
+    <h1>Quaderno di acquerello</h1>
+    <p>Appunti di studio dell'acquerello: acqua e carta, colori e tubetti, soggetti ed esercizi tratti dai video</p>
   </div>
 </header>
 {striscia_tavolozza()}
@@ -825,7 +812,7 @@ def genera_home(sezioni_pronte: list[dict]) -> str:
 <footer>
   Quaderno di acquerello · progetto aperto su <a href="{REPO_URL}" target="_blank" rel="noopener">GitHub</a>
   (testi, dati e illustrazioni <a href="https://creativecommons.org/licenses/by/4.0/deed.it" target="_blank" rel="noopener">CC BY 4.0</a>, codice MIT)<br>
-  L'immagine della testata e quella della scheda degli Alberi sono ritagli di due illustrazioni della sezione Alberi, generate con l'intelligenza artificiale: non sono acquerelli dipinti a mano.
+  L'immagine della scheda di S1 Alberi è un ritaglio di un'illustrazione della sezione Alberi, generata con l'intelligenza artificiale: non è un acquerello dipinto a mano.
 </footer>
 </body>
 </html>
