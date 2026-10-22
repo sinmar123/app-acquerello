@@ -2,6 +2,19 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-22 - GBOT-app-acquerello - Home ad acquerello: testata illustrata, tavolozza, schede con figura, nota di metodo da aprire
+
+- **Testata** (`genera_home` in `scripts/genera-sito.py`): al posto della fascia verde piatta, un fondo chiaro con macchie sfumate in CSS e, a destra, l'abete dell'esempio A2 degli Alberi, ritagliato senza il pennello e sfumato ai bordi. Titolo e sottotitolo invariati, in verde scuro su fondo chiaro. La didascalia dice «Illustrazione generata con l'IA» e una riga del piè di pagina dichiara i due ritagli.
+- **Immagini**: `prepara_immagini_home()` ritaglia e riduce in webp, a ogni generazione, due illustrazioni già nel repository: A2 per la testata (360 × 549 px, 29 KB) e A4 per la scheda di S1 (128 × 128 px, 4 KB), in `site/immagini/`. Nessun nuovo file binario nel repository. Il controllo «costruisci» verifica anche `site/immagini/home-testata.webp`.
+- **Tavolozza**: sotto la testata, le sei macchie dei colori di base lette da `dati/colori/tavolozza.json`, con nome comune e pigmento, e una riga che le dichiara indicative, con il rimando al calcolatore.
+- **Schede**: ogni scheda ha una piccola figura in SVG o CSS: una goccia per i Principi, la scatola coi sei godet per Studio ed en plein air, il cerchio dei colori per la Teoria dei colori, un tubetto per Marche e tubetti, cielo, collina e acqua per Soggetti, il ritaglio della siepe A4 per S1 Alberi. Titoli e righe delle schede invariati.
+- **Nota di metodo**: diventa un riquadro chiuso che si apre con un clic su «Nota di metodo». Il testo è lo stesso, con l'iniziale maiuscola perché ora apre il paragrafo.
+- **Sfondo**: grana leggera da carta da acquerello, con un rumore SVG in CSS.
+- Controlli: generazione senza errori; controlli interni superati (funzioni, marche, Gulpease delle sezioni: principi 69, studio-plein-air 62, colori 75, marche 59, soggetti 66, alberi 72); collegamenti e ancore della home verificati; prova in Chrome a 390 e a 1280 px senza scorrimento laterale; barra delle sezioni invariata.
+- Prossima azione: unione della PR dopo il via del curatore; taratura dei sei colori su campioni reali.
+
+-- GBOT-app-acquerello
+
 ## 2026-10-21 - CC - Chat: le 12 miscele M1-M12 nel prompt
 
 - Il prompt della chat (`genera_prompt_chat` in `scripts/genera-sito.py`, rigenerato in `lib/prompt-chat.js`) aveva i sei colori ma non le miscele, e alla domanda sull'abete in ombra il modello aveva proposto una ricetta sua invece della M4. Ora riporta le 12 miscele con ricetta, consistenza e note, lette da `apertura.miscele` del json degli Alberi, e la convenzione delle dosi da `apertura.dosi`; una riga chiede di indicare la miscela del Quaderno, con sigla e nome, prima di eventuali varianti. Il prompt passa da 6.232 a 8.831 caratteri.
