@@ -549,29 +549,40 @@ def testa_comune(titolo, descrizione, pagina_path):
             f'<link rel="icon" href="/favicon.svg" type="image/svg+xml">\n')
 
 
-# Barra delle sezioni in cima a ogni pagina, home compresa, che resta visibile scorrendo; sul telefono è una
-# riga sola che scorre di lato. Nelle sezioni l'indice dei capitoli (nav.salti), fisso anch'esso, scende sotto
-# la barra, e scroll-padding-top tiene sotto le due barre il capitolo o la fonte raggiunti con un collegamento.
-# Il margine allarga la barra fino ai bordi del body, che nelle sezioni ha 14 px di spazio laterale.
+# Barra delle sezioni in cima a ogni pagina, home compresa, che resta visibile scorrendo. Non scorre di lato:
+# quando le voci non stanno su una riga vanno a capo, sul telefono più compatte. Nelle sezioni l'indice dei
+# capitoli (nav.salti), fisso anch'esso, scende sotto la barra. Uno script misura l'altezza reale della barra e
+# dell'indice (--barra-h e --salti-h), così scroll-padding-top tiene sotto le due barre il capitolo o la fonte
+# raggiunti con un collegamento; senza script valgono le altezze di riserva qui sotto. Il margine allarga la
+# barra fino ai bordi della finestra: nelle sezioni il body è centrato e largo al massimo 760-820 px, e --sb
+# (larghezza della barra di scorrimento verticale, misurata dallo script; zero sui dispositivi touch, dove la
+# barra di scorrimento non occupa spazio) evita lo scorrimento di lato.
 BARRA_ALTEZZA = 42
 STILE_BARRA = """<style id="stile-barra">
-html{scroll-padding-top:%(scorrimento)dpx}
-#barra-quaderno{position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:2px;height:%(altezza)dpx;margin:%(margine)s;
-padding:0 8px;overflow-x:auto;white-space:nowrap;background:#263529;font:600 .84rem/1 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;scrollbar-width:none}
-#barra-quaderno::-webkit-scrollbar{display:none}
-#barra-quaderno a{flex:none;color:#e6ece3;text-decoration:none;padding:7px 9px;border-radius:6px}
+:root{--barra-h:%(altezza)dpx;--salti-h:48px}
+html{scroll-padding-top:calc(var(--barra-h) + var(--salti-h) + 8px)}
+#barra-quaderno{position:sticky;top:0;z-index:50;display:flex;flex-wrap:wrap;align-items:center;gap:3px 2px;min-height:%(altezza)dpx;margin:%(margine)s;
+padding:5px 8px;background:#263529;font:600 .84rem/1.15 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+#barra-quaderno a{flex:none;white-space:nowrap;color:#e6ece3;text-decoration:none;padding:6px 9px;border-radius:6px}
 #barra-quaderno a:hover{background:rgba(255,255,255,.12)}
 #barra-quaderno a[aria-current="page"]{background:#f7f2e7;color:#263529}
 #barra-quaderno .bq-n{display:inline-block;margin-right:5px;padding:2px 4px;border-radius:4px;background:rgba(255,255,255,.16);font-size:.76rem}
 #barra-quaderno a[aria-current="page"] .bq-n{background:#263529;color:#f7f2e7}
-#barra-quaderno .bq-spazio{flex:1 0 10px}
-nav.salti{top:%(altezza)dpx}
+#barra-quaderno .bq-spazio{flex:1 0 6px}
+nav.salti{top:var(--barra-h)}
+@media (max-width:600px){
+:root{--barra-h:66px}
+#barra-quaderno{gap:2px 1px;padding:4px 5px;font-size:.76rem}
+#barra-quaderno a{padding:4px 6px}
+#barra-quaderno .bq-n{margin-right:3px;padding:1px 3px;font-size:.68rem}
+#barra-quaderno .bq-spazio{flex:1 0 2px}
+}
 </style>
 """
 
 
 def stile_barra(margine: str) -> str:
-    return STILE_BARRA % {"altezza": BARRA_ALTEZZA, "scorrimento": BARRA_ALTEZZA + 56, "margine": margine}
+    return STILE_BARRA % {"altezza": BARRA_ALTEZZA, "margine": margine}
 
 
 def barra_quaderno(slug_pagina: str) -> str:
@@ -585,9 +596,11 @@ def barra_quaderno(slug_pagina: str) -> str:
     voci += [f'<a href="{radice}{s["slug"]}/"{corrente(s["slug"])}><span class="bq-n">{s["numero"]}</span>{e(s["breve"])}</a>'
              for s in SEZIONI]
     voci.append('<span class="bq-spazio"></span><a href="#assistente-ai">🎨 Assistente</a><a href="#suggerimenti">💬 Suggerimenti</a>')
-    # sul telefono porta in vista la voce della pagina aperta, che altrimenti può restare fuori a destra
-    script = ("<script>(function(){var b=document.getElementById('barra-quaderno'),a=b&&b.querySelector('[aria-current]');"
-              "if(a&&b.scrollWidth>b.clientWidth){b.scrollLeft=a.offsetLeft-(b.clientWidth-a.offsetWidth)/2;}})();</script>")
+    # altezza reale della barra e dell'indice dei capitoli, che cambia quando le voci vanno a capo
+    script = ("<script>(function(){var r=document.documentElement,b=document.getElementById('barra-quaderno');if(!b)return;"
+              "function m(){var s=document.querySelector('nav.salti');r.style.setProperty('--barra-h',b.offsetHeight+'px');"
+              "r.style.setProperty('--salti-h',(s?s.offsetHeight:0)+'px');r.style.setProperty('--sb',(matchMedia('(pointer:coarse)').matches?0:innerWidth-r.clientWidth)+'px');}"
+              "m();addEventListener('load',m);addEventListener('resize',m);if(window.ResizeObserver)new ResizeObserver(m).observe(b);})();</script>")
     return f'<nav id="barra-quaderno" aria-label="Sezioni del Quaderno">{"".join(voci)}</nav>\n{script}\n'
 
 
@@ -597,7 +610,7 @@ def inietta_elementi_comuni(html_pagina: str, sezione: dict, pagina_path: str) -
         titolo = html.unescape(m.group(1)) if m else sezione["titolo"]
         html_pagina = html_pagina.replace("</head>", testa_comune(titolo, senza_tag(sezione["sottotitolo"]), pagina_path) + "</head>", 1)
     if 'id="barra-quaderno"' not in html_pagina:
-        html_pagina = html_pagina.replace("</head>", stile_barra("0 -14px") + "</head>", 1)
+        html_pagina = html_pagina.replace("</head>", stile_barra("0 calc(50% - 50vw + var(--sb, 0px) / 2)") + "</head>", 1)
         html_pagina = re.sub(r"(<body[^>]*>)", lambda m: m.group(1) + "\n" + barra_quaderno(sezione["slug"]), html_pagina, count=1)
 
     blocco = blocco_chat_e_suggerimenti(sezione.get("nome_form", OPZIONI_SEZIONE[0]), pagina_path)
