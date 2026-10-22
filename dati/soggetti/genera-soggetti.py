@@ -121,7 +121,7 @@ def pagina():
 <div class="intro-box">{intro_p}</div>
 <div class="grid-soggetti">{"".join(cards)}</div>
 <footer>
-  <p>Il lavoro in studio e all'aperto e il prontuario delle 12 miscele sono nella sezione <a href="../studio-plein-air/">2. Studio ed en plein air</a>. Le altre sezioni: <a href="../principi/">1. Principi generali</a> · <a href="../colori/">3. Teoria dei colori</a> · <a href="../marche/">4. Marche e tubetti</a>.</p>
+  <p>Il lavoro in studio e all'aperto e il prontuario delle 12 miscele sono nel capitolo <a href="../principi/#studio-aperto">In studio e all'aperto</a> dei Principi generali. Le altre sezioni: <a href="../principi/">1. Principi generali</a> · <a href="../colori/">2. Teoria dei colori</a> · <a href="../marche/">3. Marche e tubetti</a>.</p>
 </footer>
 </body></html>"""
 

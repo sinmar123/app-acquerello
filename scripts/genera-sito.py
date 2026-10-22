@@ -4,7 +4,8 @@
 Il repository è autonomo: contiene tutti i file di dati, le infografiche e gli script necessari a generare
 le pagine. Oltre alle pagine scrive lib/prompt-chat.js, il prompt di sistema della chat ricavato dai dati
 (il controllo «costruisci» del CI verifica che la copia nel repository sia aggiornata), e i file per i
-motori di ricerca (robots.txt, sitemap.xml, favicon.svg)."""
+motori di ricerca (robots.txt, sitemap.xml, favicon.svg) e il file _redirects di Cloudflare Pages coi rinvii
+degli indirizzi vecchi."""
 import html
 import json
 import pathlib
@@ -32,23 +33,13 @@ SEZIONI = [
         "breve": "Principi",
         "nome_form": "Principi",
         "titolo": "Principi generali: acqua, colore e carta",
-        "sottotitolo": "Le tre consistenze della miscela, gli stati della carta e il rapporto fra pennello e carta, da conoscere prima degli esercizi",
+        "sottotitolo": "Le tre consistenze della miscela, gli stati della carta e il rapporto fra pennello e carta, da conoscere prima degli esercizi; il lavoro in studio e all'aperto, con la tavolozza ridotta e le sue 12 miscele",
         "script_genera": DATI_DIR / "principi" / "genera-principi.py",
         "html_generato": DATI_DIR / "principi" / "principi.html",
     },
     {
-        "slug": "studio-plein-air",
-        "numero": "2",
-        "breve": "Studio ed en plein air",
-        "nome_form": "Studio ed en plein air",
-        "titolo": "Studio ed en plein air: metodo di lavoro, dotazione e tavolozze",
-        "sottotitolo": "Il lavoro in studio e la pittura all'aperto a confronto, la tavolozza estesa e la tavolozza ridotta con le sue 12 miscele",
-        "script_genera": DATI_DIR / "studio-plein-air" / "genera-studio-plein-air.py",
-        "html_generato": DATI_DIR / "studio-plein-air" / "studio-plein-air.html",
-    },
-    {
         "slug": "colori",
-        "numero": "3",
+        "numero": "2",
         "breve": "Teoria dei colori",
         "nome_form": "Teoria dei colori",
         "titolo": "Teoria dei colori",
@@ -58,7 +49,7 @@ SEZIONI = [
     },
     {
         "slug": "marche",
-        "numero": "4",
+        "numero": "3",
         "breve": "Marche e tubetti",
         "nome_form": "Confronto marche",
         "titolo": "Marche e tubetti",
@@ -68,7 +59,7 @@ SEZIONI = [
     },
     {
         "slug": "soggetti",
-        "numero": "5",
+        "numero": "4",
         "breve": "Soggetti",
         "nome_form": "Soggetti (Alberi, Nuvole, Fiori...)",
         "titolo": "Soggetti: un modulo per ogni tema",
@@ -78,7 +69,7 @@ SEZIONI = [
     },
     {
         "slug": "alberi",
-        "numero": "5.1",
+        "numero": "4.1",
         "breve": "Alberi",
         "modulo_di": "soggetti",
         "nome_form": "Soggetti (Alberi, Nuvole, Fiori...)",
@@ -97,7 +88,6 @@ DESCRIZIONE_HOME = (
 OPZIONI_SEZIONE = [
     "Generale / Nuovo argomento",
     "Principi",
-    "Studio ed en plein air",
     "Teoria dei colori",
     "Confronto marche",
     "Soggetti (Alberi, Nuvole, Fiori...)",
@@ -233,7 +223,7 @@ La regola di fondo:
 La tavolozza ridotta a sei colori (i colori del calcolatore sono provvisori, stimati a occhio):
 {colori}
 
-Le 12 miscele della tavolozza ridotta, M1-M12 ({SITO_URL}/studio-plein-air/#miscele). {dosi['testo']} Le dosi: {convenzione}.
+Le 12 miscele della tavolozza ridotta, M1-M12 ({SITO_URL}/principi/#miscele). {dosi['testo']} Le dosi: {convenzione}.
 {chr(10).join(miscele)}
 
 Il modulo S1, alberi, siepi e arbusti ({SITO_URL}/alberi/), con le modalità tratte dai video:
@@ -656,12 +646,6 @@ def icona_scheda(slug: str) -> str:
         return ('<svg viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="53" rx="24" ry="6" fill="#7fa3cf" fill-opacity=".35"/>'
                 '<path d="M32 5C25 18 17 27 17 38a15 15 0 0 0 30 0C47 27 39 18 32 5Z" fill="#3f6fb0" fill-opacity=".78"/>'
                 '<ellipse cx="26" cy="37" rx="4" ry="7" fill="#fff" fill-opacity=".45"/></svg>')
-    if slug == "studio-plein-air":  # scatola con i sei godet della tavolozza ridotta
-        godet = "".join(
-            f'<rect x="{11 + (i % 3) * 15}" y="{20 + (i // 3) * 14}" width="12" height="11" rx="2.5" fill="{e(c["srgb"])}" fill-opacity=".88"/>'
-            for i, c in enumerate(colori_tavolozza()[:6]))
-        return ('<svg viewBox="0 0 64 64" aria-hidden="true"><rect x="5" y="14" width="54" height="36" rx="6" fill="#f6f2e9" stroke="#b9b1a3" stroke-width="2"/>'
-                f'{godet}</svg>')
     if slug == "colori":  # cerchio dei colori
         return '<span class="ruota" aria-hidden="true"></span>'
     if slug == "marche":  # tubetto
@@ -809,8 +793,28 @@ FAVICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
 """
 
 
+# Indirizzi di sezioni tolte o spostate, rinviati con un 301 dal file site/_redirects di Cloudflare Pages:
+# percorso vecchio, pagina nuova, ancora. La sezione Studio ed en plein air è diventata, il 22/10/2026,
+# l'ultimo capitolo dei Principi generali. main() verifica che l'ancora esista nella pagina generata.
+REINDIRIZZAMENTI = [
+    ("/studio-plein-air", "principi", "studio-aperto"),
+    ("/studio-plein-air/", "principi", "studio-aperto"),
+    ("/studio-plein-air/index.html", "principi", "studio-aperto"),
+]
+
+
+def controlla_reindirizzamenti():
+    for vecchio, slug, ancora in REINDIRIZZAMENTI:
+        pagina = SITE_DIR / slug / "index.html"
+        if not pagina.exists() or f'id="{ancora}"' not in pagina.read_text(encoding="utf-8"):
+            raise SystemExit(f"genera-sito: il rinvio di {vecchio} porta a /{slug}/#{ancora}, che non esiste")
+
+
 def scrivi_file_di_servizio():
     pagine = ["/"] + [f"/{s['slug']}/" for s in SEZIONI]
+    (SITE_DIR / "_redirects").write_text(
+        "".join(f"{vecchio} /{slug}/#{ancora} 301\n" for vecchio, slug, ancora in REINDIRIZZAMENTI),
+        encoding="utf-8", newline="\n")
     (SITE_DIR / "robots.txt").write_text(
         f"User-agent: *\nAllow: /\nDisallow: /api/\nSitemap: {SITO_URL}/sitemap.xml\n", encoding="utf-8", newline="\n")
     voci = "".join(f"  <url><loc>{SITO_URL}{p}</loc></url>\n" for p in pagine)
@@ -869,6 +873,7 @@ def main():
     index_html.write_text(genera_home(sezioni_pronte), encoding="utf-8", newline="\n")
     print(f"[home] Scritto {index_html.relative_to(APP_DIR).as_posix()} ({index_html.stat().st_size // 1024} KB)")
     scrivi_file_di_servizio()
+    controlla_reindirizzamenti()
     genera_prompt_chat()
 
     print("[leggibilità] Gulpease: " + ", ".join(f"{k} {v}" for k, v in leggibilita.items() if v is not None))

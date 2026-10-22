@@ -8,19 +8,18 @@ Chi oggi apprende una disciplina pratica dispone di una documentazione vastissim
 - **Repository:** [https://github.com/sinmar123/app-acquerello](https://github.com/sinmar123/app-acquerello)
 - **Licenza:** [CC BY 4.0 per testi, dati e illustrazioni · MIT per il codice](LICENSE)
 
-Il repository è autonomo: contiene i dati, le infografiche, le illustrazioni e gli script che generano l'intero sito. **Il Quaderno è in costruzione:** alle sezioni generali (*Principi generali*, *Studio ed en plein air*, *Teoria dei colori*, *Marche e tubetti*) si aggiunge un modulo per ogni soggetto; il primo, sugli alberi, è pubblicato, e seguiranno cieli e nuvole, fiori, acqua e riflessi, rocce, architetture. Correzioni, integrazioni e nuovi video si propongono con la casella in fondo a ogni pagina o secondo [`CONTRIBUTING.md`](CONTRIBUTING.md).
+Il repository è autonomo: contiene i dati, le infografiche, le illustrazioni e gli script che generano l'intero sito. **Il Quaderno è in costruzione:** alle sezioni generali (*Principi generali*, *Teoria dei colori*, *Marche e tubetti*) si aggiunge un modulo per ogni soggetto; il primo, sugli alberi, è pubblicato, e seguiranno cieli e nuvole, fiori, acqua e riflessi, rocce, architetture. Correzioni, integrazioni e nuovi video si propongono con la casella in fondo a ogni pagina o secondo [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ## Sezioni
 
 | Percorso | Sezione | Sorgenti |
 |----------|---------|----------|
 | `/` | Indice e organizzazione del Quaderno | `scripts/genera-sito.py` |
-| `/principi/` | **1. Principi generali: acqua, colore e carta**: tè, latte e miele; carta bagnata, umida, asciutta e i momenti intermedi; acqua nel pennello e acqua nella carta; bordi, asciugatura, carte; 32 fonti, elencate in fondo a ogni capitolo, dai corsi e dai video al minuto indicato | `dati/principi/` |
-| `/studio-plein-air/` | **2. Studio ed en plein air**: il lavoro in studio e all'aperto a confronto, la tavolozza estesa e i sei colori di base con le 12 miscele `M1`-`M12` | `dati/studio-plein-air/` |
-| `/colori/` | **3. Teoria dei colori**: Munsell, luce e pigmento, velature, i sei colori di base col pigmento e un calcolatore di miscele Kubelka-Munk in JavaScript; rimandi alle fonti paragrafo per paragrafo | `dati/colori/` |
-| `/marche/` | **4. Marche e tubetti**: i sei colori di base in sei serie (Winsor & Newton Cotman e Professional, Van Gogh, Daniel Smith, Schmincke Horadam, Maimeri Blu), con pagina ufficiale e data di controllo su ogni riga | `dati/marche/` |
-| `/soggetti/` | **5. Soggetti**: un modulo per tema; `S1` Alberi pubblicato, `S2`-`S6` in preparazione | `dati/soggetti/` |
-| `/alberi/` | **5.1 S1 · Alberi ad acquerello**: 6 esempi, 24 modalità tratte dai video con un'infografica SVG in 3 fasi ciascuna, 31 estratti video | `dati/alberi/` |
+| `/principi/` | **1. Principi generali: acqua, colore e carta**: tè, latte e miele; carta bagnata, umida, asciutta e i momenti intermedi; acqua nel pennello e acqua nella carta; bordi, asciugatura, carte; nell'ultimo capitolo, *In studio e all'aperto* (`#studio-aperto`), il lavoro in studio e all'aperto a confronto, la tavolozza estesa e i sei colori di base con le 12 miscele `M1`-`M12`; 36 fonti, elencate in fondo a ogni capitolo, dai corsi, dai video al minuto indicato e dalle altre sezioni del Quaderno | `dati/principi/` |
+| `/colori/` | **2. Teoria dei colori**: Munsell, luce e pigmento, velature, i sei colori di base col pigmento e un calcolatore di miscele Kubelka-Munk in JavaScript; rimandi alle fonti paragrafo per paragrafo | `dati/colori/` |
+| `/marche/` | **3. Marche e tubetti**: i sei colori di base in sei serie (Winsor & Newton Cotman e Professional, Van Gogh, Daniel Smith, Schmincke Horadam, Maimeri Blu), con pagina ufficiale e data di controllo su ogni riga | `dati/marche/` |
+| `/soggetti/` | **4. Soggetti**: un modulo per tema; `S1` Alberi pubblicato, `S2`-`S6` in preparazione | `dati/soggetti/` |
+| `/alberi/` | **4.1 S1 · Alberi ad acquerello**: 6 esempi, 24 modalità tratte dai video con un'infografica SVG in 3 fasi ciascuna, 31 estratti video | `dati/alberi/` |
 
 Le frasi «L'autore, in sintesi» della sezione Alberi riassumono in italiano il parlato dei video, con l'aiuto dell'IA: non sono trascrizioni.
 

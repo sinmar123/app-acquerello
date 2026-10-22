@@ -1,11 +1,11 @@
 {
- "data": "2026-10-21",
- "nota": "Testi della sezione Principi generali (18/10/2026, rivisti il 21/10/2026). Ogni affermazione ha le sue fonti; ciò che non aveva fonte è rimasto fuori.",
+ "data": "2026-10-22",
+ "nota": "Testi della sezione Principi generali (18/10/2026, rivisti il 21/10/2026). Ogni affermazione ha le sue fonti; ciò che non aveva fonte è rimasto fuori. Il capitolo 9 (22/10/2026) è il testo della sezione Studio ed en plein air, spostato senza riscriverlo: le frasi che non hanno una fonte esterna rimandano alla voce «Testo del Quaderno» delle fonti del capitolo.",
  "titolo": "Principi generali: acqua, colore e carta",
- "sottotitolo": "Le tre consistenze della miscela, gli stati della carta e come abbinarli, prima di ogni esercizio.",
+ "sottotitolo": "Le tre consistenze della miscela, gli stati della carta e come abbinarli, prima di ogni esercizio; il lavoro in studio e all'aperto.",
  "introduzione": [
   "Questa sezione raccoglie le regole che ricorrono nei video e nei corsi esaminati per il Quaderno. Ogni paragrafo rimanda con un numero alle fonti elencate in fondo al capitolo: gli appunti di studio dei corsi e i video della sezione Alberi, che si aprono al minuto indicato.",
-  "Il lavoro in studio e all'aperto, con la tavolozza ridotta e le 12 miscele, è trattato nella sezione <a href=\"../studio-plein-air/\">Studio ed en plein air</a>. Gli esercizi per soggetto sono nella sezione <a href=\"../soggetti/\">Soggetti</a>, a cominciare dagli <a href=\"../alberi/\">Alberi</a>. I pigmenti, la tavolozza e il calcolatore di miscele, con la striscia di diluizione dal miele al tè, sono nella sezione <a href=\"../colori/\">Teoria dei colori</a>."
+  "Il lavoro in studio e all'aperto, con la tavolozza ridotta e le 12 miscele, è trattato nell'ultimo capitolo, <a href=\"#studio-aperto\">In studio e all'aperto</a>. Gli esercizi per soggetto sono nella sezione <a href=\"../soggetti/\">Soggetti</a>, a cominciare dagli <a href=\"../alberi/\">Alberi</a>. I pigmenti, la tavolozza e il calcolatore di miscele, con la striscia di diluizione dal miele al tè, sono nella sezione <a href=\"../colori/\">Teoria dei colori</a>."
  ],
  "nota_fonti": "Le citazioni dei video provengono dalle schede di studio preparate per la sezione Alberi: sono riassunti del parlato e del gesto, controllati a campione, e il collegamento apre il video al minuto indicato per la verifica. Le citazioni dei corsi provengono dagli appunti di studio delle lezioni.",
  "capitoli": [
@@ -481,6 +481,128 @@
      ]
     }
    ]
+  },
+  {
+   "id": "studio-aperto",
+   "breve": "Studio e aperto",
+   "titolo": "9. In studio e all'aperto: metodo di lavoro, dotazione e tavolozze",
+   "blocchi": [
+    {
+     "tipo": "p",
+     "testo": "Il lavoro ad acquerello cambia molto fra lo studio e la pittura dal vero all'aperto (en plein air). All'aperto la temperatura, l'umidità dell'aria, il vento e il sole diretto cambiano la velocità con cui la carta asciuga, e con essa la dotazione e la tavolozza più adatte.",
+     "fonti": [
+      "testo-quaderno"
+     ]
+    },
+    {
+     "tipo": "p",
+     "testo": "Questo capitolo descrive i due modi di lavorare usati nei moduli dei Soggetti e il prontuario completo delle 12 miscele (M1-M12) della tavolozza ridotta a sei colori.",
+     "fonti": [
+      "alberi-studio-aperto",
+      "alberi-miscele"
+     ]
+    },
+    {
+     "tipo": "titoletto",
+     "id": "confronto",
+     "testo": "Studio e aperto a confronto"
+    },
+    {
+     "tipo": "tabella",
+     "intestazione": [
+      "Aspetto",
+      "🎨 In studio",
+      "🎒 All'aperto (en plein air)"
+     ],
+     "righe": [
+      {
+       "celle": [
+        "Asciugatura e umidità della carta",
+        "Temperatura e umidità stabili, nessuna corrente d'aria: la carta asciuga con tempi prevedibili, e si possono condurre stesure bagnato su bagnato complesse, più passaggi sulla carta umida e fogli di grande formato fissati su una tavola inclinata.",
+        "Il vento e il sole accelerano l'asciugatura, l'umidità dell'aria la rallenta. Servono decisioni rapide, stesure sintetiche in pochi passaggi, formati contenuti e un controllo continuo del lucido dell'acqua sulla carta."
+       ],
+       "fonti": [
+        "testo-quaderno"
+       ]
+      },
+      {
+       "celle": [
+        "Tavolozza",
+        "Tavolozza estesa: ai primari caldi e freddi si affiancano colori pronti, sia pigmenti singoli (verdi ftalo e perilene, ocre, terre naturali, turchese di cobalto) sia miscele di fabbrica (indaco, grigio di Payne, verde vescica), che servono a preparare in fretta campiture abbondanti.",
+        "Scatola compatta con i sei colori di base della tavolozza ridotta, elencati più sotto: occupa poco spazio, e tutte le miscele nascono dagli stessi sei colori."
+       ],
+       "fonti": [
+        "testo-quaderno",
+        "tavolozza-colori"
+       ]
+      },
+      {
+       "celle": [
+        "Pennelli e attrezzi",
+        "Tondo grande (n. 10-12), tondo medio a buona punta (n. 6-8), tondo fine o rigger (n. 1-4) e un piatto per bagnare; per le modalità che li usano, spugna naturale, pennello a ventaglio, mascherante con tiralinee e gomma crêpe, tessera di plastica, sale fino, fazzoletti di carta e phon.",
+        "Dotazione essenziale: un tondo medio-grande che trattiene bene l'acqua e ha una buona punta, un rigger per i rami e le linee sottili, un piccolo piatto o una tessera di plastica, carta assorbente e una borraccia d'acqua con spruzzatore."
+       ],
+       "fonti": [
+        "testo-quaderno"
+       ]
+      },
+      {
+       "celle": [
+        "A che cosa serve negli esercizi",
+        "Rifare fedelmente le procedure dei video, anche con i colori usati dai singoli autori.",
+        "Esercitarsi a ricavare i verdi, i grigi atmosferici e le ombre degli esempi dai soli sei colori di base, con il prontuario M1-M12."
+       ],
+       "fonti": [
+        "alberi-studio-aperto",
+        "alberi-miscele"
+       ]
+      }
+     ]
+    },
+    {
+     "tipo": "titoletto",
+     "id": "tavolozza-studio",
+     "testo": "In studio: la tavolozza estesa e i colori pronti"
+    },
+    {
+     "tipo": "p",
+     "testo": "Nei video raccolti nei Soggetti gli autori usano spesso, accanto ai primari, colori già pronti e terre particolari. Un pigmento singolo o una miscela di fabbrica permette di deporre subito un tono alla consistenza voluta: è utile soprattutto quando serve una miscela densa, al miele, da mettere in pochi secondi su una campitura che sta perdendo il lucido.",
+     "fonti": [
+      "testo-quaderno",
+      "alberi-studio-aperto"
+     ]
+    },
+    {
+     "tipo": "p",
+     "testo": "I colori pronti che ricorrono nei video sono, fra gli altri: ocra gialla (PY43 o PY42) e terra di Siena naturale (spesso PBr7) per i veli caldi di fondo e i fusti in luce; verde vescica, verde oliva e verde di perilene (PBk31) per le masse di fogliame; turchese di cobalto (PG50, PB36 o PB28 secondo il produttore) e blu di Prussia (PB27) per i veli freddi e le conifere lontane; indaco, grigio di Payne e seppia per scurire rapidamente le ombre profonde e i controluce. Verde vescica, verde oliva, indaco, grigio di Payne e seppia sono di norma miscele di fabbrica, con pigmenti diversi da una marca all'altra.",
+     "fonti": [
+      "testo-quaderno",
+      "alberi-studio-aperto"
+     ]
+    },
+    {
+     "tipo": "titoletto",
+     "id": "tavolozza-plein-air",
+     "testo": "All'aperto: la tavolozza ridotta a sei colori e le 12 miscele (M1-M12)"
+    },
+    {
+     "tipo": "p",
+     "testo": "All'aperto, o per imparare a mescolare senza dipendere da molti tubetti, bastano sei colori: un giallo, un rosso, due blu, uno freddo (il ceruleo, a base di blu ftalo) e uno caldo (l'oltremare), e due terre. Con questi sei colori si ottengono i verdi, i bruni e i grigi degli esempi; alcuni colori restano fuori dalla loro portata, e il calcolatore lo segnala.",
+     "fonti": [
+      "tavolozza-colori",
+      "testo-quaderno"
+     ]
+    },
+    {
+     "tipo": "tavolozza_ridotta",
+     "fonti_colori": [
+      "tavolozza-colori"
+     ],
+     "fonti_miscele": [
+      "alberi-miscele"
+     ]
+    }
+   ]
   }
  ],
  "fonti": {
@@ -611,6 +733,22 @@
   "alberi-a1-3": {
    "testo": "Sezione Alberi del Quaderno, esempio A1 (Modalità 2, estratto A1-3): Paul Clark asciuga il pennello per sollevare un po' di colore",
    "url": "../alberi/#A1-3"
+  },
+  "testo-quaderno": {
+   "testo": "Testo del Quaderno, già pubblicato il 21/10/2026 nella sezione «Studio ed en plein air» e spostato in questo capitolo il 22/10/2026: sintesi redazionale, senza una fonte esterna citata",
+   "url": ""
+  },
+  "alberi-studio-aperto": {
+   "testo": "Sezione Alberi del Quaderno: per ogni esempio la proposta libera «Colori in studio» e la proposta «All'aperto» coi sei colori di base",
+   "url": "../alberi/"
+  },
+  "tavolozza-colori": {
+   "testo": "Sezione Teoria dei colori del Quaderno, capitolo 4: i sei colori di base della tavolozza ridotta, col pigmento (dati/colori/tavolozza.json), e il calcolatore di miscele",
+   "url": "../colori/#tavolozza"
+  },
+  "alberi-miscele": {
+   "testo": "Sezione Alberi del Quaderno, riquadro «All'aperto (en plein air): i 6 colori di base e le 12 miscele (M1-M12)»: ricette, consistenze, convenzione delle dosi e prove",
+   "url": "../alberi/#miscele"
   }
  }
 }

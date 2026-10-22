@@ -8,7 +8,6 @@ const REPO = "sinmar123/app-acquerello";
 const SEZIONI_VALIDE = [
   "Generale / Nuovo argomento",
   "Principi",
-  "Studio ed en plein air",
   "Teoria dei colori",
   "Confronto marche",
   "Soggetti (Alberi, Nuvole, Fiori...)"
@@ -16,7 +15,6 @@ const SEZIONI_VALIDE = [
 const PAGINE_VALIDE = [
   "/",
   "/principi/",
-  "/studio-plein-air/",
   "/colori/",
   "/marche/",
   "/soggetti/",

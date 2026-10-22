@@ -28,7 +28,7 @@ Il **Quaderno di acquerello** (`https://app-acquerello.pages.dev`) è un progett
 I generatori controllano la coerenza dei dati e fermano la generazione se una regola non è rispettata:
 
 - **Ogni affermazione ha una fonte** nelle sezioni *Principi generali* (`dati/principi/principi.json`, ogni blocco rimanda a una fonte dell'elenco) e *Marche e tubetti* (`dati/marche/marche.json`, ogni tubetto ha il collegamento alla pagina ufficiale e la data di controllo). Non sono ammessi testi con la dicitura «da verificare».
-- **Colori senza marche nelle guide:** in *Principi generali*, *Studio ed en plein air*, *Teoria dei colori*, *Soggetti* e *Alberi* i colori si indicano con il **nome comune e il codice del pigmento** (es. *terra di Siena bruciata (PR101)*, *blu oltremare (PB29)*). Marche e serie commerciali stanno solo in *Marche e tubetti*: `scripts/genera-sito.py` si ferma se ne trova il nome altrove.
+- **Colori senza marche nelle guide:** in *Principi generali*, *Teoria dei colori*, *Soggetti* e *Alberi* i colori si indicano con il **nome comune e il codice del pigmento** (es. *terra di Siena bruciata (PR101)*, *blu oltremare (PB29)*). Marche e serie commerciali stanno solo in *Marche e tubetti*: `scripts/genera-sito.py` si ferma se ne trova il nome altrove.
 - **Nessun fotogramma estratto dai video YouTube:** i passaggi sono spiegati con infografiche SVG in 3 fasi, accanto al lettore ufficiale di YouTube che apre il video al secondo indicato.
 - **Nel sito non si usano immagini generate con l'IA** che imitano un acquerello o un dipinto; sono ammessi solo schemi, infografiche e figure disegnate.
 - **Onestà del dato:** ciò che è stimato, provvisorio o da provare su carta lo resta anche nel testo; un riassunto non si presenta come citazione.

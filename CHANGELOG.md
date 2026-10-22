@@ -2,6 +2,21 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-22 - GBOT-app-acquerello - Studio ed en plein air diventa l'ultimo capitolo dei Principi
+
+- **Sezioni**: la sezione *Studio ed en plein air* (`/studio-plein-air/`) non è più una sezione a sé. Il suo testo è ora il capitolo 9 dei *Principi generali*, «In studio e all'aperto: metodo di lavoro, dotazione e tavolozze» (ancora `#studio-aperto`, voce «Studio e aperto» nell'indice dei capitoli), dopo la tabella riassuntiva. Nuovo ordine: 1 Principi generali, 2 Teoria dei colori, 3 Marche e tubetti, 4 Soggetti, 4.1 Alberi, nella barra, nella home, nel modulo dei suggerimenti, nel prompt della chat e nei documenti (decisione del curatore del 22/10/2026).
+- **Testo**: spostato senza riscriverlo. Cambiano solo «Questa sezione descrive» in «Questo capitolo descrive», i numeri «1.» e «2.» davanti ai due sottotitoli e, nel riquadro delle dosi, il rimando «nei Principi generali» che nella pagina dei Principi diventa «nei capitoli 1 e 2». Escono il sottotitolo della vecchia pagina, che ripeteva l'introduzione, il suo indice e la riga «Le altre sezioni». Gli id `#tavolozza-studio`, `#tavolozza-plein-air`, `#miscele` e `#M1`-`#M12` restano uguali.
+- **Fonti** (`dati/principi/principi.json`, sistema per capitolo di `scripts/rimandi_fonti.py`): il capitolo 9 ha 4 fonti numerate da 1: il testo del Quaderno già pubblicato (sintesi redazionale senza fonte esterna, dichiarata come tale), la sezione Alberi, la tavolozza di Teoria dei colori e il riquadro delle 12 miscele degli Alberi. I Principi passano da 8 a 9 capitoli e da 32 a 36 fonti. Il blocco della tavolozza ridotta con le 12 miscele passa da `dati/studio-plein-air/genera-studio-plein-air.py` a `dati/principi/genera-principi.py`, con lo stesso controllo sulla tavolozza di `dati/colori/tavolozza.json`.
+- **Rinvio**: `scripts/genera-sito.py` scrive `site/_redirects` con un 301 di Cloudflare Pages da `/studio-plein-air`, `/studio-plein-air/` e `/studio-plein-air/index.html` a `/principi/#studio-aperto`, e si ferma se l'ancora non c'è. Il flusso `costruisci` controlla il rinvio e che `site/studio-plein-air` non esista.
+- **Collegamenti**: Alberi (3), Soggetti (1) e l'introduzione dei Principi (1) puntano al nuovo capitolo; nel prompt della chat le 12 miscele sono a `/principi/#miscele`. Teoria dei colori non aveva collegamenti alla sezione. Il sottotitolo dei Principi, nella pagina e nella scheda della home, cita il lavoro in studio e all'aperto. Esce dalla home la figurina dei godet della vecchia scheda; restano la striscia della tavolozza e la ruota di Teoria dei colori.
+- **Funzioni**: «Studio ed en plein air» esce dalle sezioni ammesse dei suggerimenti e `/studio-plein-air/` dalle pagine ammesse della chat e dei suggerimenti.
+- Escono da Git `dati/studio-plein-air/studio-plein-air.json` e `genera-studio-plein-air.py`, recuperabili dalla cronologia.
+- Controlli: generazione senza errori, controlli interni superati (fonti, marche fuori sezione, funzioni). Gulpease: Principi 68, Colori 75, Marche 59, Soggetti 66, Alberi 72. 451 collegamenti interni e ancore verificati senza errori, nessun id doppio.
+- In attesa del via del curatore per l'unione su `main`.
+- Prossima azione: fonti esterne per le frasi del capitolo 9 che rimandano solo al testo del Quaderno.
+
+-- GBOT-app-acquerello
+
 ## 2026-10-22 - GBOT-app-acquerello - Via le illustrazioni generate con l'IA
 
 - **Alberi**: escono le sei illustrazioni generate con l'IA (Nano Banana) in testa agli esempi A1-A6, che imitavano un acquerello dipinto. Escono con loro le didascalie «Illustrazione generata con l'IA: ...» (campo `illustrazione` in `dati/alberi/pit-261014-video-gesti-alberi.json`), la lente che le ingrandiva, il caricamento differito e la riduzione in jpg (`dati/alberi/pit-261013-video-gesti.py`). Dal piè di pagina escono le frasi sulle illustrazioni generate con l'IA e «Le illustrazioni si ingrandiscono con un tocco.». Restano le 72 infografiche SVG in 3 fasi.

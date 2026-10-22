@@ -7,7 +7,10 @@ Legge i testi e le fonti da principi.json e scrive principi.html accanto a sé, 
 tutto dentro. scripts/genera-sito.py la copia in site/principi/index.html. Le fonti sono elencate in
 fondo a ogni capitolo, numerate da 1 in ogni capitolo (scripts/rimandi_fonti.py).
 Controlli: ogni frase ha almeno una fonte, ogni fonte citata esiste, ogni fonte del json è citata,
-nessun testo contiene «da verificare». GBOT-app-acquerello, 18/10/2026; fonti per capitolo CC, 21/10/2026."""
+nessun testo contiene «da verificare». GBOT-app-acquerello, 18/10/2026; fonti per capitolo CC, 21/10/2026.
+L'ultimo capitolo, «In studio e all'aperto», viene dalla sezione Studio ed en plein air (22/10/2026): il blocco
+«tavolozza_ridotta» legge i sei colori e le 12 miscele M1-M12 da dati/alberi/pit-261014-video-gesti-alberi.json
+e si ferma se un colore non coincide con dati/colori/tavolozza.json."""
 import html
 import json
 import pathlib
@@ -17,6 +20,8 @@ sys.stdout.reconfigure(encoding="utf-8")
 
 QUI = pathlib.Path(__file__).resolve().parent
 USCITA = QUI / "principi.html"
+FONTE_ALBERI = QUI.parent / "alberi" / "pit-261014-video-gesti-alberi.json"
+FONTE_TAVOLOZZA = QUI.parent / "colori" / "tavolozza.json"
 sys.path.insert(0, str(QUI.parent.parent / "scripts"))
 import rimandi_fonti  # noqa: E402
 
@@ -70,6 +75,59 @@ def svg_carta():
 
 SVG = {"consistenze": svg_consistenze, "carta": svg_carta}
 
+
+def tavolozza_ridotta(b, F, dove):
+    """I sei colori della tavolozza ridotta e le 12 miscele M1-M12, dai dati della sezione Alberi (riquadro
+    «All'aperto»), con i rimandi al calcolatore della Teoria dei colori."""
+    a = json.loads(FONTE_ALBERI.read_text(encoding="utf-8"))["apertura"]
+    tav = a["tavolozza"]
+    rif = {c["id"]: c for c in json.loads(FONTE_TAVOLOZZA.read_text(encoding="utf-8"))["colori"]}
+    for c in tav:
+        r = rif.get(c["id"])
+        if not r or (r["nome"], r["pigmento"], r.get("trasparenza_tubetto")) != (c["nome"], c["pigmento"], c.get("trasparenza_tubetto")):
+            raise SystemExit(f"principi: tavolozza, {c['id']} diverso da dati/colori/tavolozza.json")
+    nomi = {c["id"]: c["nome"] for c in tav}
+
+    def riga_tav(c):
+        sigla = f' ({e(c["sigla"])})' if c.get("sigla") else ""
+        tras = f'; nel tubetto della tavolozza: {e(c["trasparenza_tubetto"])}' if c.get("trasparenza_tubetto") else ""
+        nota = f' ({e(c["nota"])})' if c.get("nota") else ""
+        return f'<li><b>{e(c["nome"])}</b>{sigla}: pigmento <b>{e(c["pigmento"])}</b>{tras}{nota}</li>'
+
+    sei_colori = (f'<div class="sei-colori"><h4>I sei colori della tavolozza ridotta{F.rif(b["fonti_colori"], f"{dove}, sei colori")}</h4>'
+                  f'<ul class="tav">{"".join(riga_tav(c) for c in tav)}</ul>'
+                  '<p class="rimando">Teoria e calcolatore: <a href="../colori/">Teoria dei colori</a> · '
+                  '<a href="../colori/#calcolatore">Calcolatore di miscele</a>. '
+                  'I tubetti marca per marca: <a href="../marche/">Marche e tubetti</a>.</p></div>')
+
+    def riquadro(r, classe):
+        voci = "".join(f'<li><b>{e(k)}</b>: {e(v)}</li>' for k, v in r["voci"])
+        rim = r.get("rimando")
+        if rim and rim["href"].startswith("../principi/#"):
+            # Nella pagina dei Principi il rimando ai Principi generali diventa un rimando interno ai capitoli 1 e 2.
+            rim = {"testo": rim["testo"], "link": "capitoli 1 e 2", "href": rim["href"][len("../principi/"):]}
+        rimando = f'<p class="rimando">{e(rim["testo"])} <a href="{e(rim["href"])}">{e(rim["link"])}</a>.</p>' if rim else ""
+        return (f'<div class="riquadro {classe}"><h5>{e(r["titolo"])}</h5><p>{e(r["testo"])}</p><ul>{voci}</ul>'
+                f'<p>{e(r["chiusura"])}</p>{rimando}</div>')
+
+    def link(mix, testo):
+        q = ",".join(f"{i}:{n}" for i, n in mix)
+        return f'<a class="calc" href="../colori/?mix={e(q)}#mescola">{e(testo)}</a>'
+
+    righe = []
+    for x in a["miscele"]:
+        if x.get("mix"):
+            lk = link(x["mix"], "prova nel calcolatore")
+        else:
+            lk = " · ".join(link([m], f"{nomi[m[0]].lower()} nel calcolatore") for m in x.get("mix_separati", []))
+        nota = f' {e(x["nota"])}' if x.get("nota") else ""
+        righe.append(f'<tr id="{e(x["m"])}"><td class="m">{e(x["m"])}</td><td><b>{e(x["nome"])}</b><br>{e(x["ricetta"])}'
+                     f'<br><span class="cons">Consistenza: <b>{e(x["consistenza"])}</b></span>'
+                     f'<br><span class="pigm">Pigmenti: {e(x["pigmenti"])}.{nota}</span><br>{lk}</td></tr>')
+    return (f'{sei_colori}<div id="miscele"><h4>Le 12 miscele (M1-M12){F.rif(b["fonti_miscele"], f"{dove}, miscele")}</h4>'
+            f'{riquadro(a["dosi"], "dosi")}{riquadro(a["prove"], "prove")}<p class="nota-calc">{e(a["calcolatore_nota"])}</p>'
+            f'<div class="tab"><table class="mix">{"".join(righe)}</table></div></div>')
+
 CSS = """
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; scroll-padding-top: 52px; }
@@ -98,6 +156,22 @@ table.riass { width: 100%; min-width: 520px; border-collapse: collapse; font-siz
 table.riass th, table.riass td { border: 1px solid #d8d2c4; padding: 5px 6px; vertical-align: top; text-align: left; }
 table.riass th { background: #eef4ef; color: #2c4f3a; }
 .intro p.nota-fonti { font-size: .88em; color: #555; }
+h3 { font-size: 1.1em; margin: 18px 0 6px; color: #2c4f3a; }
+h4 { font-size: 1em; margin: 8px 0 6px; color: #2c4f3a; }
+h5 { font-size: .95em; margin: 4px 0 6px; color: #2c4f3a; }
+.sei-colori, .riquadro { background: #f6f3eb; border: 1px solid #dfd8c8; border-radius: 8px; padding: 11px 14px; margin: 12px 0; font-size: .95em; }
+.sei-colori ul, .riquadro ul { margin: 6px 0; padding-left: 20px; }
+.sei-colori li, .riquadro li { margin-bottom: 4px; }
+.sei-colori p, .riquadro p { margin: 4px 0; }
+.rimando { font-size: .9em; color: #444; margin: 6px 0 0; }
+.nota-calc { font-size: .9em; color: #555; font-style: italic; margin: 10px 0; }
+table.mix { width: 100%; border-collapse: collapse; font-size: .94em; background: #fffdf9; border: 1px solid #dfd8c8; margin-top: 10px; }
+table.mix td { border-top: 1px solid #dfd8c8; padding: 8px 10px; vertical-align: top; }
+table.mix td.m { font-weight: 700; color: #2c4f3a; white-space: nowrap; width: 3.2em; background: #f7f3ea; text-align: center; }
+.cons, .pigm { font-size: .9em; color: #444; }
+a.calc { display: inline-block; margin-top: 3px; font-size: .86em; color: #2c4f3a; text-decoration: none;
+         border: 1px solid #9ab5a3; border-radius: 10px; padding: 1px 9px; background: #eef4ef; }
+a.calc:hover { background: #dfece2; }
 footer { margin-top: 30px; font-size: .8em; color: #666; border-top: 1px solid #e3e0d8; padding-top: 10px; }
 """ + rimandi_fonti.CSS
 
@@ -127,6 +201,11 @@ def pagina():
                 corpo.append('<ul class="voci">' + "".join(voci) + "</ul>")
             elif b["tipo"] == "svg":
                 corpo.append(SVG[b["nome"]]())
+            elif b["tipo"] == "titoletto":
+                controlla_testo(b["testo"], dove)
+                corpo.append(f'<h3 id="{e(b["id"])}">{e(b["testo"])}</h3>')
+            elif b["tipo"] == "tavolozza_ridotta":
+                corpo.append(tavolozza_ridotta(b, F, dove))
             elif b["tipo"] == "tabella":
                 testa = "".join(f"<th>{e(x)}</th>" for x in b["intestazione"]) + "<th>Fonti</th>"
                 righe = []

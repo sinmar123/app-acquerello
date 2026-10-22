@@ -16,7 +16,6 @@ const GIORNI_CONSERVAZIONE = 14;
 const PAGINE_VALIDE = [
   "/",
   "/principi/",
-  "/studio-plein-air/",
   "/colori/",
   "/marche/",
   "/soggetti/",
