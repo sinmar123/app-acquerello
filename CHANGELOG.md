@@ -2,6 +2,27 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-23 - GBOT-app-acquerello - Fonti esterne del capitolo 8
+
+- **Principi generali** (`dati/principi/principi.json`): nel capitolo 8, «In studio e all'aperto», le frasi che citavano solo il testo del Quaderno prendono le pagine approvate da Sandro il 23/10/2026, dove il passo c'è davvero. Il tono resta di proposta. Nessun colore e nessuna miscela nuovi. L'elenco dei colori pronti (ocra, vescica, perilene e gli altri) resta su `alberi-studio-aperto` e, dove il passo non è nella sezione Alberi, sul testo del Quaderno.
+- **Fonti aggiunte** (i Principi passano da 36 a 42 fonti; il capitolo 8 le numera insieme alle quattro già sue):
+  - Bruce MacEvoy, Handprint, «Painting outdoors» (`tech32.html`): vento, temperatura e umidità, asciugatura imprevedibile, controllo del bagnato sulla carta.
+  - Bruce MacEvoy, Handprint, «Wet in wet» (`tech23.html`): il vento accelera l'evaporazione, l'umidità la rallenta, il sole diretto scalda il vapore; sulla carta umida, all'aperto, un colore più concentrato (la sua «creamy dilution»). Nella cella all'aperto della riga sull'asciugatura entra una frase in questo senso. «Cremosa» non è una quarta consistenza del Quaderno.
+  - Andy Griffiths, Solving Watercolour, «Pro Tips For Plein Air Watercolor Painting»: vento e sole asciugano più in fretta; stesure larghe; due o tre pennelli; borraccia; carta assorbente; tavolozze limitate; godet più comodi dei tubetti sui formati piccoli.
+  - Jenna Rainey, «Top Tips for a Successful Plein Air Watercolor Session» (8/5/2026): tavolozza di 4-6 colori; uno o due pennelli; contenitore d'acqua; straccio o carta; niente cavalletto grande; stesure larghe e sciolte. Sostituisce il testo del Quaderno nel paragrafo dei sei colori, accanto alla tavolozza interna.
+  - Cerchio di Giotto, «Come disegnare all'aperto»: lezione di disegno, citata solo sulla riga della dotazione (bottiglietta, carta da cucina, scatola da viaggio).
+  - Felice Feltracco, «Come prepararsi per dipingere en plein air» (`https://www.youtube.com/watch?v=tMUbZh6cCgs`): titolo confermato; in studio luce, tempi e strumenti a portata di mano; all'aperto il sole asciuga la carta troppo in fretta; pochi strumenti e palette compatta. Nel testo della fonte non compare il nome commerciale dei suoi colori.
+- **Restano sul testo del Quaderno**, perché le pagine esterne non le coprono: i pennelli da studio con i numeri, la tavola inclinata e i grandi formati, lo spruzzatore, la tessera, e la frase sul colore denso da deporre mentre il lucido se ne va. L'elenco dei colori pronti (i due paragrafi e la cella «in studio» della riga «Tavolozza») non riceve fonti esterne nuove: resta su `alberi-studio-aperto` e sul testo del Quaderno. La scatola dei sei colori, in quella riga, resta sulla tavolozza interna; Rainey è citata nel paragrafo dei sei colori.
+- **Fuori dal capitolo**, dopo verifica degli URL:
+  - Emmanuele Cammarano: pagine `https://emmanuelecammarano.com/watercolor-tutorial/` e `https://emmanuelecammarano.com/autore/` raggiungibili. La pagina Autore dice che organizza demo e workshop di pittura all'aperto, senza un passo tecnico su dotazione, asciugatura o alberi. I video con titolo confermato (rami di legno, materiali per chi inizia, lezione di paesaggio 2025) non sono tutorial en plein air e non sono già un esempio degli Alberi: non entra una scheda nuova.
+  - Elisa Marianini resta nella selezione Alberi (`https://www.youtube.com/watch?v=NAt3W6NR4ug`, titolo confermato). Nessun rimando nuovo: Feltracco copre già la voce italiana sull'aperto.
+- **Handprint**: il 23/10/2026 il sito risponde con una pagina di controllo automatico e non consegna il testo. I passi citati sono quelli della copia d'archivio degli stessi indirizzi (15/2/2025 per «Painting outdoors», 10/3/2025 per «Wet in wet»), con la revisione dell'8/1/2015 e la firma di Bruce MacEvoy. In fonte resta l'URL pubblico.
+- **Documenti**: `README.md` e `AGENTS.md` passano da 36 a 42 fonti.
+- Controlli: `python3 scripts/genera-sito.py` senza errori. Gulpease invariato (Principi 68, Colori 75, Marche 59, Soggetti 66, Alberi 72). `lib/prompt-chat.js` invariato. In attesa del via del curatore per l'unione su `main`.
+- Prossima azione: via del curatore. Se si vuole una fonte anche per i pennelli da studio, lo spruzzatore o il verde di perilene, serve una pagina che ne parli.
+
+-- GBOT-app-acquerello
+
 ## 2026-10-23 - GBOT-app-acquerello - Capitolo 8 in tono di proposta
 
 - **Principi generali** (`dati/principi/principi.json`): nel capitolo 8, «In studio e all'aperto», le indicazioni che suonavano obbligatorie sono riformulate come proposte, come chiesto da Sandro il 23/10/2026. Stessi fatti, stessi colori, stesse miscele M1-M12, stesse fonti. Nell'introduzione, «è trattato nel capitolo 8» diventa «è proposto nel capitolo 8». La data dei testi in calce alla pagina passa al 23/10/2026.
