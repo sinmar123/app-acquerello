@@ -2,6 +2,29 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-23 - GBOT-app-acquerello - Capitolo 8 in tono di proposta
+
+- **Principi generali** (`dati/principi/principi.json`): nel capitolo 8, «In studio e all'aperto», le indicazioni che suonavano obbligatorie sono riformulate come proposte, come chiesto da Sandro il 23/10/2026. Stessi fatti, stessi colori, stesse miscele M1-M12, stesse fonti. Nell'introduzione, «è trattato nel capitolo 8» diventa «è proposto nel capitolo 8». La data dei testi in calce alla pagina passa al 23/10/2026.
+- **Dosi** (`dati/alberi/pit-261014-video-gesti-alberi.json`): il riquadro «Come leggere le dosi» è letto dal capitolo 8 e compare anche nella sezione Alberi e nel prompt della chat. «Si prepara sempre prima il colore dominante» diventa «Conviene preparare prima il colore dominante». L'ordine della ricetta non cambia. Resta «da verificare sempre sulla carta» nella nota del calcolatore: è l'avvertenza di controllo sulla carta, non un'indicazione di pittura.
+- Frasi del capitolo, prima e dopo:
+  - «la dotazione e la tavolozza più adatte» diventa «Spesso conviene allora rivedere la dotazione e la tavolozza.»
+  - «Questo capitolo descrive» diventa «Questo capitolo propone».
+  - «Temperatura e umidità stabili, nessuna corrente d'aria» diventa «Di solito la temperatura e l'umidità restano stabili, senza corrente d'aria».
+  - «Servono decisioni rapide, stesure sintetiche...» diventa «In molti casi conviene decidere in fretta, con stesure sintetiche...».
+  - «Tavolozza estesa: ... si affiancano colori pronti» diventa «Una proposta è la tavolozza estesa: ... si possono affiancare colori pronti».
+  - «Scatola compatta con i sei colori» diventa «Una proposta è la scatola compatta...».
+  - L'elenco dei pennelli da studio, senza attenuazione, diventa «Si possono tenere un tondo grande...».
+  - «Dotazione essenziale» diventa «Una proposta di dotazione».
+  - «Rifare fedelmente le procedure» diventa «Si possono rifare fedelmente le procedure».
+  - «Esercitarsi a ricavare i verdi» diventa «Si può esercitarsi a ricavare i verdi».
+  - «bastano sei colori» diventa «si possono usare sei colori».
+- Restano com'erano i paragrafi già in tono di proposta («usano spesso», «è utile», «fra gli altri») e i dati delle 12 miscele.
+- Controlli: `python3 scripts/genera-sito.py` senza errori. Gulpease invariato (Principi 68, Colori 75, Marche 59, Soggetti 66, Alberi 72). `lib/prompt-chat.js` rigenerato.
+- In attesa del via del curatore per l'unione su `main`.
+- Prossima azione: fonti esterne per le frasi del capitolo 8 che rimandano solo al testo del Quaderno.
+
+-- GBOT-app-acquerello
+
 ## 2026-10-22 - GBOT-app-acquerello - In studio e all'aperto prima della tabella riassuntiva
 
 - **Principi generali** (`dati/principi/principi.json`): il capitolo «In studio e all'aperto» passa prima della tabella riassuntiva, come chiesto dal curatore il 22/10/2026 alle 20:41. Diventa il capitolo 8 e la tabella il 9; l'indice dei capitoli segue lo stesso ordine (… Grana e grammatura, Studio e aperto, Riassunto). Le ancore restano uguali (`#studio-aperto`, `#riassunto`, `#confronto`, `#tavolozza-studio`, `#tavolozza-plein-air`, `#miscele`, `#M1`-`#M12`) e il rinvio 301 da `/studio-plein-air/` non cambia.
