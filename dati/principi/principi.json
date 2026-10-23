@@ -1,13 +1,13 @@
 {
  "data": "2026-10-23",
- "nota": "Testi della sezione Principi generali (18/10/2026, rivisti il 21/10/2026). Ogni affermazione ha le sue fonti; ciò che non aveva fonte è rimasto fuori. Il capitolo 8 (22/10/2026) è il testo della sezione Studio ed en plein air, spostato allora senza riscriverlo; il 23/10/2026 le indicazioni sono riformulate come proposte, senza contenuti nuovi. Le frasi che non hanno una fonte esterna rimandano alla voce «Testo del Quaderno» delle fonti del capitolo.",
+ "nota": "Testi della sezione Principi generali (18/10/2026, rivisti il 21/10/2026). Ogni affermazione ha le sue fonti; ciò che non aveva fonte è rimasto fuori. Il capitolo 8 (22/10/2026) è il testo della sezione Studio ed en plein air, spostato allora senza riscriverlo; il 23/10/2026 le indicazioni sono riformulate come proposte. Lo stesso giorno, sulle frasi coperte da pagine esterne approvate dal curatore, il rimando al solo testo del Quaderno è stato affiancato o sostituito. Le frasi che non hanno una fonte esterna rimandano ancora alla voce «Testo del Quaderno».",
  "titolo": "Principi generali: acqua, colore e carta",
  "sottotitolo": "Le tre consistenze della miscela, gli stati della carta e come abbinarli, prima di ogni esercizio; il lavoro in studio e all'aperto.",
  "introduzione": [
   "Questa sezione raccoglie le regole che ricorrono nei video e nei corsi esaminati per il Quaderno. Ogni paragrafo rimanda con un numero alle fonti elencate in fondo al capitolo: gli appunti di studio dei corsi e i video della sezione Alberi, che si aprono al minuto indicato.",
   "Il lavoro in studio e all'aperto, con la tavolozza ridotta e le 12 miscele, è proposto nel capitolo 8, <a href=\"#studio-aperto\">In studio e all'aperto</a>. Gli esercizi per soggetto sono nella sezione <a href=\"../soggetti/\">Soggetti</a>, a cominciare dagli <a href=\"../alberi/\">Alberi</a>. I pigmenti, la tavolozza e il calcolatore di miscele, con la striscia di diluizione dal miele al tè, sono nella sezione <a href=\"../colori/\">Teoria dei colori</a>."
  ],
- "nota_fonti": "Le citazioni dei video provengono dalle schede di studio preparate per la sezione Alberi: sono riassunti del parlato e del gesto, controllati a campione, e il collegamento apre il video al minuto indicato per la verifica. Le citazioni dei corsi provengono dagli appunti di studio delle lezioni.",
+ "nota_fonti": "Le citazioni dei video provengono dalle schede di studio preparate per la sezione Alberi: sono riassunti del parlato e del gesto, controllati a campione, e il collegamento apre il video al minuto indicato per la verifica. Le citazioni dei corsi provengono dagli appunti di studio delle lezioni. Nel capitolo 8 alcune frasi rimandano anche a pagine web, con un passo breve letto sulla pagina.",
  "capitoli": [
   {
    "id": "consistenze",
@@ -397,7 +397,10 @@
      "tipo": "p",
      "testo": "Il lavoro ad acquerello cambia molto fra lo studio e la pittura dal vero all'aperto (en plein air). All'aperto la temperatura, l'umidità dell'aria, il vento e il sole diretto cambiano la velocità con cui la carta asciuga. Spesso conviene allora rivedere la dotazione e la tavolozza.",
      "fonti": [
-      "testo-quaderno"
+      "handprint-aperto",
+      "handprint-bagnato",
+      "griffiths-plein",
+      "feltracco-plein"
      ]
     },
     {
@@ -425,10 +428,15 @@
        "celle": [
         "Asciugatura e umidità della carta",
         "Di solito la temperatura e l'umidità restano stabili, senza corrente d'aria: la carta asciuga con tempi prevedibili, e si possono condurre stesure bagnato su bagnato complesse, più passaggi sulla carta umida e fogli di grande formato fissati su una tavola inclinata.",
-        "Il vento e il sole accelerano l'asciugatura, l'umidità dell'aria la rallenta. In molti casi conviene decidere in fretta, con stesure sintetiche in pochi passaggi, formati contenuti e un controllo continuo del lucido dell'acqua sulla carta."
+        "Il vento e il sole accelerano l'asciugatura, l'umidità dell'aria la rallenta. In molti casi conviene decidere in fretta, con stesure sintetiche in pochi passaggi, formati contenuti e un controllo continuo del lucido dell'acqua sulla carta. Sulla carta ancora umida si può usare un colore più concentrato, di consistenza cremosa."
        ],
        "fonti": [
-        "testo-quaderno"
+        "testo-quaderno",
+        "handprint-aperto",
+        "handprint-bagnato",
+        "griffiths-plein",
+        "rainey-plein",
+        "feltracco-plein"
        ]
       },
       {
@@ -439,6 +447,7 @@
        ],
        "fonti": [
         "testo-quaderno",
+        "alberi-studio-aperto",
         "tavolozza-colori"
        ]
       },
@@ -449,7 +458,11 @@
         "Una proposta di dotazione: un tondo medio-grande che trattiene bene l'acqua e ha una buona punta, un rigger per i rami e le linee sottili, un piccolo piatto o una tessera di plastica, carta assorbente e una borraccia d'acqua con spruzzatore."
        ],
        "fonti": [
-        "testo-quaderno"
+        "testo-quaderno",
+        "griffiths-plein",
+        "rainey-plein",
+        "giotto-dotazione",
+        "feltracco-plein"
        ]
       },
       {
@@ -496,7 +509,7 @@
      "testo": "All'aperto, o per imparare a mescolare senza dipendere da molti tubetti, si possono usare sei colori: un giallo, un rosso, due blu, uno freddo (il ceruleo, a base di blu ftalo) e uno caldo (l'oltremare), e due terre. Con questi sei colori si ottengono i verdi, i bruni e i grigi degli esempi; alcuni colori restano fuori dalla loro portata, e il calcolatore lo segnala.",
      "fonti": [
       "tavolozza-colori",
-      "testo-quaderno"
+      "rainey-plein"
      ]
     },
     {
@@ -735,8 +748,32 @@
    "url": "../alberi/#A1-3"
   },
   "testo-quaderno": {
-   "testo": "Testo del Quaderno, già pubblicato il 21/10/2026 nella sezione «Studio ed en plein air», spostato in questo capitolo il 22/10/2026 e riformulato come proposta il 23/10/2026, senza contenuti nuovi: sintesi redazionale, senza una fonte esterna citata",
+   "testo": "Testo del Quaderno, già pubblicato il 21/10/2026 nella sezione «Studio ed en plein air», spostato in questo capitolo il 22/10/2026 e riformulato come proposta il 23/10/2026. Resta sulle frasi per cui, al 23/10/2026, non c'è una pagina esterna che copra il passo: sintesi redazionale, dichiarata come tale",
    "url": ""
+  },
+  "handprint-aperto": {
+   "testo": "Bruce MacEvoy, Handprint, «Painting outdoors» (revisione dell'8/1/2015): «Even a moderate breeze will tug at the paper, blow dust or sand in the paints, whip drops of liquid out of your brush, and cause washes to dry unpredictably»; «Variations of temperature and humidity are the most subtle hazards to your painting»; «anything that accelerates or slows that process can really throw your painting off rhythm»; «continually check the surface wetness of the paper by touch or appearance»",
+   "url": "https://www.handprint.com/HP/WCL/tech32.html"
+  },
+  "handprint-bagnato": {
+   "testo": "Bruce MacEvoy, Handprint, «Wet in wet» (revisione dell'8/1/2015): «Wind will increase evaporation off the paper surface, drying the paper faster than you expect for a given temperature»; «Unusual humidity slows evaporation»; «Unusual heat or direct sun on the paper will warm the water vapor»; all'aperto, sulla carta umida o satinata, «use paints at a higher concentration (a creamy dilution)». «Cremosa» è la sua parola, non una quarta consistenza del Quaderno",
+   "url": "https://www.handprint.com/HP/WCL/tech23.html"
+  },
+  "griffiths-plein": {
+   "testo": "Andy Griffiths, Solving Watercolour, «Pro Tips For Plein Air Watercolor Painting» (12/2/2021, aggiornato il 14/6/2022): «The wind and sun will dry your paint faster than if you were indoors so speed of painting becomes more critical»; «Go for the broad strokes that convey the essence of the scene»; «two or three brushes should suffice» (un tondo, un piatto e un rigger); «Large water bottle»; «Paper Towels are a necessity»; «Limiting your palettes in this way will help you paint faster in the outdoors by cutting down your options»; «sets of watercolour pans are generally better than tubes for painting outdoors, especially if you are working at small sizes»",
+   "url": "https://www.solvingwatercolour.com/pro-tips-for-plein-air-watercolor-painting/"
+  },
+  "rainey-plein": {
+   "testo": "Jenna Rainey, «Top Tips for a Successful Plein Air Watercolor Session» (8/5/2026): «A limited palette of 4 to 6 colors»; «One or two brushes»; «A small water container»; «A rag or paper towel»; «You don't need a full easel or a giant supply kit»; «Use broad, loose strokes» e «Capture the feeling of the scene, not every leaf on the tree»",
+   "url": "https://jennarainey.com/plein-air-watercolor-tips/"
+  },
+  "giotto-dotazione": {
+   "testo": "Cerchio di Giotto, «Come disegnare all'aperto (en plein air)» (8/2/2020, aggiornato il 17/8/2026): lezione di disegno all'aperto, usata qui solo per la dotazione. Il kit essenziale comprende «una bottiglietta d'acqua», «un po' di carta da cucina» e «una scatola da viaggio per l'acquerello»",
+   "url": "https://www.cerchiodigiotto.it/video-tutorial-come-disegnare-allaperto-en-plein-air/"
+  },
+  "feltracco-plein": {
+   "testo": "Felice Feltracco, «Come prepararsi per dipingere en plein air»: in studio «la luce, i tempi, gli strumenti a portata di mano»; all'aperto «il sole abbaglia la carta e la asciuga troppo in fretta» e le luci cambiano; conviene semplificare, con «pochi strumenti» e «una palette compatta»",
+   "url": "https://www.youtube.com/watch?v=tMUbZh6cCgs"
   },
   "alberi-studio-aperto": {
    "testo": "Sezione Alberi del Quaderno: per ogni esempio la proposta libera «Colori in studio» e la proposta «All'aperto» coi sei colori di base",
