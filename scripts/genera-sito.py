@@ -93,7 +93,7 @@ SEZIONI = [
 ]
 
 DESCRIZIONE_HOME = (
-    "Il Quaderno nasce tra non professionisti ed è rivolto ad altri non professionisti. Appunti di studio dell'acquerello: le tre consistenze e gli stati della carta, "
+    "Il Quaderno nasce tra non professionisti e a loro si rivolge. Appunti di studio dell'acquerello: le tre consistenze e gli stati della carta, "
     "la teoria dei colori con un calcolatore di miscele, i tubetti marca per marca, gli esercizi sugli alberi tratti dai video "
     "e il calendario degli eventi."
 )
@@ -858,7 +858,7 @@ def genera_home(sezioni_pronte: list[dict]) -> str:
   <div class="testa-in">
     <h1>Quaderno di acquerello</h1>
     <p>Appunti di studio dell'acquerello: acqua e carta, colori e tubetti, soggetti, esercizi tratti dai video ed eventi</p>
-    <p class="nota">Il Quaderno nasce tra non professionisti ed è rivolto ad altri non professionisti. Raccoglie ciò che si impara strada facendo, con i limiti di chi non è un maestro, ed è aperto ai contributi di tutti gli appassionati.</p>
+    <p class="nota">Il Quaderno nasce tra non professionisti e a loro si rivolge. Raccoglie ciò che si impara strada facendo, con i limiti di chi non è un maestro, ed è aperto ai contributi di tutti gli appassionati.</p>
   </div>
 </header>
 {striscia_tavolozza()}
