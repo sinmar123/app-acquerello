@@ -2,6 +2,17 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-24 - GBOT-app-acquerello - Home: quaderno di un dilettante per dilettanti
+
+- Richiesta di Sandro: precisare in home, con registro curato, che il Quaderno è di un dilettante e si rivolge ad altri dilettanti. Raccoglie ciò che si impara strada facendo, con i limiti di chi non è un maestro, e si offre come un aiuto tra appassionati.
+- **Home** (`genera_home` in `scripts/genera-sito.py`): sotto l'introduzione della testata, due frasi compiute, nello stesso tono della pagina. La fila dei sei campioni, le schede delle sezioni e la nota di metodo restano com'erano. Testo: «Questo è il quaderno di un dilettante, rivolto ad altri dilettanti. Raccoglie ciò che si impara strada facendo, con i limiti di chi non è un maestro, e si offre come un aiuto tra appassionati.»
+- **Descrizione per i motori di ricerca** (`DESCRIZIONE_HOME`): in apertura, «Quaderno di un dilettante, rivolto ad altri dilettanti.» Il resto della descrizione resta.
+- **README**: una riga in apertura, nello stesso senso.
+- Controlli: `python3 scripts/genera-sito.py` senza errori, compreso `controlla_marche_fuori_sezione`. Gulpease: Principi 68, Colori 75, Marche 59, Soggetti 66, Alberi 72, Eventi 95, scheda Sestri Levante 93. L'archivio 2026 resta sotto le 100 parole, quindi l'indice non si calcola. `lib/prompt-chat.js` invariato. In attesa del via del curatore per l'unione su `main`.
+- Prossima azione: via del curatore. L'unione su `main` pubblica il sito.
+
+-- GBOT-app-acquerello
+
 ## 2026-10-24 - GBOT-app-acquerello - Eventi: solo locandina, programma e foto
 
 - Decisione di Sandro, a sezione già in linea: ogni scheda tiene solo la locandina, il programma e le fotografie di chi ha partecipato. Ogni foto porta il nome di chi l'ha scattata. Calendario e archivio per anno restano l'elenco degli eventi.
