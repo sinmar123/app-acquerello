@@ -1,5 +1,7 @@
 # Quaderno di acquerello (`app-acquerello`)
 
+È il quaderno di un dilettante, rivolto ad altri dilettanti: il frutto dell'esperienza di chi impara, offerto come un aiuto tra appassionati.
+
 Appunti di studio dell'acquerello aperti al pubblico: le tre consistenze della miscela e gli stati della carta, la teoria dei colori con un calcolatore di miscele, i tubetti marca per marca e gli esercizi per soggetto, a cominciare dagli alberi, con i passaggi dei video didattici indicati al secondo.
 
 Chi oggi apprende una disciplina pratica dispone di una documentazione vastissima ma frammentata; gli strumenti di intelligenza artificiale consentono di compiere a monte il lavoro di spoglio, confronto e classificazione delle fonti, così da ritrovare il dato tecnico nel momento dell'esercizio. Il Quaderno applica questo approccio allo studio dell'acquerello.

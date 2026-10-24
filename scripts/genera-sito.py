@@ -93,8 +93,9 @@ SEZIONI = [
 ]
 
 DESCRIZIONE_HOME = (
-    "Appunti di studio dell'acquerello: le tre consistenze e gli stati della carta, la teoria dei colori con un calcolatore "
-    "di miscele, i tubetti marca per marca, gli esercizi sugli alberi tratti dai video e il calendario degli eventi."
+    "Quaderno di un dilettante, rivolto ad altri dilettanti. Appunti di studio dell'acquerello: le tre consistenze e gli stati della carta, "
+    "la teoria dei colori con un calcolatore di miscele, i tubetti marca per marca, gli esercizi sugli alberi tratti dai video "
+    "e il calendario degli eventi."
 )
 
 OPZIONI_SEZIONE = [
@@ -768,6 +769,7 @@ body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;b
 .testa-in{position:relative;max-width:820px;margin:0 auto;padding:40px 18px 36px}
 .testa h1{margin:0 0 8px;font-family:Georgia,"Times New Roman",serif;font-weight:700;font-size:2.15rem;line-height:1.12;color:#1b2b20}
 .testa p{margin:0;max-width:520px;font-size:1.02rem;color:#2f4236}
+.testa .nota{margin:14px 0 0;max-width:40rem;font-size:.98rem;line-height:1.5;color:#2f4236}
 .tavolozza{max-width:820px;margin:0 auto;padding:18px 14px 0}
 .tavolozza ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
 .tavolozza li{display:flex;flex-direction:column;align-items:center;text-align:center;font-size:.75rem;line-height:1.25;color:#3d352a}
@@ -806,6 +808,7 @@ footer a{color:#5a4d3b}
  .testa-in{padding:26px 16px 22px}
  .testa h1{font-size:1.55rem}
  .testa p{font-size:.9rem}
+ .testa .nota{font-size:.88rem}
  .tavolozza ul{grid-template-columns:repeat(3,1fr);row-gap:12px}
  .card{padding:12px 12px;gap:10px}
  .card-fig,.card-fig svg{width:46px;height:46px}
@@ -841,6 +844,7 @@ def genera_home(sezioni_pronte: list[dict]) -> str:
   <div class="testa-in">
     <h1>Quaderno di acquerello</h1>
     <p>Appunti di studio dell'acquerello: acqua e carta, colori e tubetti, soggetti, esercizi tratti dai video ed eventi</p>
+    <p class="nota">Questo è il quaderno di un dilettante, rivolto ad altri dilettanti. È il frutto dell'esperienza di chi impara e può contenere ingenuità. Si offre come un aiuto tra appassionati.</p>
   </div>
 </header>
 {striscia_tavolozza()}
