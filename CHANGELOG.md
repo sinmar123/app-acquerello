@@ -2,6 +2,18 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-24 - GBOT-app-acquerello - Interviste: proposta nuova, ancora fuori dal sito
+
+- Solo `dati/eventi/idee-interviste.md`, più questa voce. Il file resta fuori dal sito: `genera-eventi.py` non lo legge e `scripts/genera-sito.py` non lo copia in `site/`. Pagine, generatore, sezione Eventi e controllo sulle marche restano com'erano.
+- Idea di Sandro del 24/10/2026: l'intervista si apre con «Sei amatore o professionista?». La risposta decide quale serie usare.
+- Proposta nuova, in attesa dell'approvazione di Sandro. È ricavata da interviste a Zbukvic, Schaller, Farré e Castagnet, a cura dell'agente acquerello. Per i maestri, con nome e cognome, dodici domande ordinate per tema (processo, plein air, demo appena vista, percorso). Le cinque segnate «breve», le domande 2, 4, 7, 8 e 10, si usano quando c'è poco tempo. Nella scheda resta un campo materiali (carta con marca e grammatura, pennelli, marche dei colori, tavolozza), collegato a Marche e tubetti. Per gli amatori e per chi dipinge per strada, sei domande e solo il nome, mai il cognome.
+- La versione precedente, le serie maestri e amatori «scolastiche», è segnata superata e resta in fondo al file, come storico, insieme alle quattro domande del primo giro e alla quinta per chi dipinge per strada.
+- Punti aperti da decidere con Sandro: eccezione per le marche nelle risposte (opzione a: citarle come dette, con il rimando a Marche e tubetti); un modo per ricevere le foto dei partecipanti. Il controllo del sito non è stato allentato. Le interviste restano sospese.
+- Controlli: `python3 scripts/genera-sito.py` senza errori. Gulpease invariato (Principi 68, Colori 75, Marche 59, Soggetti 66, Alberi 72, Eventi 95, scheda Sestri Levante 93). L'archivio 2026 resta sotto le 100 parole, quindi l'indice non si calcola. `lib/prompt-chat.js` invariato. Nessuna pagina del sito cambia.
+- Prossima azione: Sandro approva o corregge la proposta e decide i due punti aperti. L'unione su `main` pubblica il sito; le schede restano con locandina, programma e fotografie.
+
+-- GBOT-app-acquerello
+
 ## 2026-10-24 - GBOT-app-acquerello - Eventi: solo locandina, programma e foto
 
 - Decisione di Sandro, a sezione già in linea: ogni scheda tiene solo la locandina, il programma e le fotografie di chi ha partecipato. Ogni foto porta il nome di chi l'ha scattata. Calendario e archivio per anno restano l'elenco degli eventi.
