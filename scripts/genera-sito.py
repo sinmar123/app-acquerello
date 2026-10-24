@@ -33,7 +33,7 @@ SEZIONI = [
         "breve": "Principi",
         "nome_form": "Principi",
         "titolo": "Principi generali: acqua, colore e carta",
-        "sottotitolo": "Le tre consistenze della miscela, gli stati della carta e il rapporto fra pennello e carta, da conoscere prima degli esercizi; il lavoro in studio e all'aperto, con la tavolozza ridotta e le sue 12 miscele",
+        "sottotitolo": "Le tre consistenze della miscela, gli stati della carta e il rapporto fra pennello e carta, da conoscere prima degli esercizi; il lavoro in studio e all'aperto, con i sei colori proposti e le 12 miscele",
         "script_genera": DATI_DIR / "principi" / "genera-principi.py",
         "html_generato": DATI_DIR / "principi" / "principi.html",
     },
@@ -43,7 +43,7 @@ SEZIONI = [
         "breve": "Teoria dei colori",
         "nome_form": "Teoria dei colori",
         "titolo": "Teoria dei colori",
-        "sottotitolo": "Munsell, luce e pigmento, velature, i sei colori di base e un calcolatore di miscele",
+        "sottotitolo": "Munsell, luce e pigmento, velature, i sei colori proposti e un calcolatore di miscele",
         "script_genera": DATI_DIR / "colori" / "genera-teoria-colori.py",
         "html_generato": DATI_DIR / "colori" / "teoria-colori.html",
     },
@@ -53,7 +53,7 @@ SEZIONI = [
         "breve": "Marche e tubetti",
         "nome_form": "Confronto marche",
         "titolo": "Marche e tubetti",
-        "sottotitolo": "I sei colori di base nelle serie in commercio: nome del tubetto, numero, pigmento e trasparenza",
+        "sottotitolo": "I sei colori proposti nelle serie in commercio: nome del tubetto, numero, pigmento e trasparenza",
         "script_genera": DATI_DIR / "marche" / "genera-marche.py",
         "html_generato": DATI_DIR / "marche" / "marche.html",
     },
@@ -182,7 +182,7 @@ def genera_prompt_chat():
     sezioni = "\n".join(f"- {s['numero']}. {s['titolo']} ({SITO_URL}/{s['slug']}/)" for s in SEZIONI)
     colori = "\n".join(
         f"- {c['nome']} ({c['pigmento']}"
-        + (f", {c['trasparenza_tubetto']} nel tubetto della tavolozza" if c.get("trasparenza_tubetto") else "")
+        + (f", {c['trasparenza_tubetto']} nel tubetto proposto" if c.get("trasparenza_tubetto") else "")
         + f"); {c['note']}"
         for c in tavolozza["colori"])
     dosi = alberi["apertura"]["dosi"]
@@ -220,10 +220,10 @@ I momenti intermedi, riconoscibili dal lucido dell'acqua:
 La regola di fondo:
 - {regola}
 
-La tavolozza ridotta a sei colori (i colori del calcolatore sono provvisori, stimati a occhio):
+Sei colori proposti come punto di partenza: si possono ridurre, ampliare o cambiare (i colori del calcolatore sono provvisori, stimati a occhio):
 {colori}
 
-Le 12 miscele della tavolozza ridotta, M1-M12 ({SITO_URL}/principi/#miscele). {dosi['testo']} Le dosi: {convenzione}.
+Le 12 miscele dei sei colori proposti, M1-M12 ({SITO_URL}/principi/#miscele). {dosi['testo']} Le dosi: {convenzione}.
 {chr(10).join(miscele)}
 
 Il modulo S1, alberi, siepi e arbusti ({SITO_URL}/alberi/), con le modalità tratte dai video:
@@ -235,6 +235,7 @@ Come rispondere:
 - In italiano, col registro di un buon manuale tecnico: termini esatti, frasi chiare, niente parlato e niente paroloni. Di norma fra 120 e 220 parole.
 - Niente trattino lungo: per gli incisi si usano le virgole, i due punti o le parentesi.
 - Indica la sezione del Quaderno che tratta l'argomento, con il suo indirizzo.
+- I sei colori del Quaderno sono una proposta di partenza, non una tavolozza fissa: si possono ridurre, ampliare o cambiare.
 - Se una miscela M1-M12 ottiene il colore richiesto, indicala con sigla e nome prima di eventuali varianti.
 - Non inventare fonti, autori, video, citazioni, sigle di pigmenti o numeri. Se il Quaderno non tratta un punto, dillo, e suggerisci una prova su carta.
 - Ricorda che l'esito va sempre verificato sulla carta: le risposte sono una guida, non una regola.
@@ -316,7 +317,7 @@ def blocco_chat_e_suggerimenti(sezione_predefinita: str, pagina_path: str) -> st
     <div class="chat-esempi">
       <span style="font-size:.79rem;color:#6b5e4c;align-self:center;margin-right:2px">Esempi di domande:</span>
       <button type="button" class="chat-chip">Perché si formano i cavolfiori quando ripasso un velo che sta asciugando?</button>
-      <button type="button" class="chat-chip">Come preparo un verde scuro per le conifere in ombra con i sei colori di base?</button>
+      <button type="button" class="chat-chip">Come preparo un verde scuro per le conifere in ombra con i sei colori proposti?</button>
       <button type="button" class="chat-chip">Quando si sparge il sale sul velo per ottenere l'effetto brina?</button>
     </div>
     <div id="chat-messaggi" class="chat-messaggi" aria-live="polite"></div>
@@ -630,14 +631,15 @@ def colori_tavolozza() -> list[dict]:
 
 
 def striscia_tavolozza() -> str:
-    """Le sei macchie dei colori di base, con nome comune e pigmento, dai valori di dati/colori/tavolozza.json."""
+    """Le sei macchie, con nome comune e pigmento, dai valori di dati/colori/tavolozza.json.
+
+    Scelta di Sandro del 24/10/2026: in home la fila è solo immagine di presentazione, senza didascalia.
+    Il nome e il pigmento restano sull'etichetta di ogni campione."""
     voci = "".join(
         f'<li title="{e(c["nome"])} ({e(c["pigmento"])})"><span class="goccia" style="--c:{e(c["srgb"])}"></span>'
         f'<span class="m-nome">{e(c["nome"])}</span><span class="m-pig">{e(c["pigmento"])}</span></li>'
         for c in colori_tavolozza())
-    return (f'<section class="tavolozza" aria-label="I sei colori di base"><ul>{voci}</ul>'
-            '<p class="tav-nota">I sei colori di base della tavolozza, col nome comune e il pigmento. '
-            'Le tinte sono indicative, come nel <a href="./colori/#tavolozza">calcolatore</a>.</p></section>')
+    return f'<section class="tavolozza" aria-label="Sei colori proposti"><ul>{voci}</ul></section>'
 
 
 def icona_scheda(slug: str) -> str:
@@ -691,8 +693,6 @@ body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;b
 .tavolozza li:nth-child(2n) .goccia{border-radius:44% 56% 40% 60%/58% 42% 58% 42%;transform:rotate(4deg)}
 .tavolozza li:nth-child(3n) .goccia{border-radius:62% 38% 50% 50%/45% 55% 45% 55%;transform:rotate(-6deg)}
 .m-pig{font-size:.7rem;color:#7a6f5d}
-.tav-nota{margin:10px 0 0;font-size:.78rem;color:#6b5e4c;text-align:center}
-.tav-nota a{color:#5a4d3b}
 main{max-width:820px;margin:0 auto;padding:18px 14px 12px}
 .cf-origine{background:#eef4ef;border:1px solid #cadbce;border-left:4px solid #263529;border-radius:8px;padding:10px 14px;margin:0 0 16px;font-size:.91rem;color:#263529}
 .cf-origine summary{cursor:pointer;font-weight:700;color:#1b2b20}

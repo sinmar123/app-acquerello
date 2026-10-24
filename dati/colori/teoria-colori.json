@@ -1,8 +1,8 @@
 {
-  "data": "2026-10-21",
+  "data": "2026-10-24",
   "nota": "Testi della sezione Teoria dei colori. Un paragrafo con una fonte è un oggetto {testo, fonti}: il generatore numera le fonti e le elenca in fondo al capitolo; i testi delle fonti sono citati e collegati, non copiati. Rimandi controllati sulle pagine delle fonti il 21/10/2026. I campi possono contenere semplici tag html (b, i, a, br).",
   "titolo": "Teoria dei colori",
-  "sottotitolo": "Tinta, valore e croma secondo Munsell; perché i pigmenti non si mescolano come le luci; il ruolo dell'acqua e della carta; i sei colori della tavolozza ridotta e un calcolatore di miscele.",
+  "sottotitolo": "Tinta, valore e croma secondo Munsell; perché i pigmenti non si mescolano come le luci; il ruolo dell'acqua e della carta; sei colori proposti come punto di partenza e un calcolatore di miscele.",
   "capitoli": [
     {
       "id": "munsell",
@@ -117,14 +117,20 @@
     },
     {
       "id": "tavolozza",
-      "breve": "La tavolozza",
-      "titolo": "4. La tavolozza ridotta: sei colori di base",
+      "breve": "Sei colori",
+      "titolo": "4. Sei colori proposti, come punto di partenza",
       "paragrafi": [
         {
-          "testo": "Sono i sei colori della tavolozza ridotta proposta dal Quaderno, utile per dipingere all'aperto o per cominciare con pochi tubetti, indicati con il nome comune e il pigmento. Ciò che conta è il <b>pigmento</b>, cioè la sigla del Colour Index stampata sull'etichetta (PY giallo, PB blu, PR rosso, PBr bruno): lo stesso nome commerciale, in un'altra marca o in un'altra serie, può corrispondere a un pigmento diverso. I tubetti corrispondenti, marca per marca e con le fonti ufficiali, sono nella sezione <a href=\"../marche/\">Marche e tubetti</a>.",
+          "testo": "Sono sei colori proposti dal Quaderno come punto di partenza: si possono ridurre, ampliare o cambiare, e sono utili per dipingere all'aperto o per cominciare con pochi tubetti. Ogni colore è indicato col nome comune e il pigmento. Ciò che conta è il <b>pigmento</b>, cioè la sigla del Colour Index stampata sull'etichetta (PY giallo, PB blu, PR rosso, PBr bruno): lo stesso nome commerciale, in un'altra marca o in un'altra serie, può corrispondere a un pigmento diverso. I tubetti corrispondenti, marca per marca e con le fonti ufficiali, sono nella sezione <a href=\"../marche/\">Marche e tubetti</a>.",
           "fonti": [
             "marche",
             "handprint-ruota"
+          ]
+        },
+        {
+          "testo": "Mescolando questi sei colori si ottengono altri colori, fra cui i verdi, i bruni e i grigi degli esempi. Il prontuario è quello delle <a href=\"../principi/#miscele\">12 miscele M1-M12</a>. Il <a href=\"#calcolatore\">calcolatore</a> cerca la miscela più vicina a un colore dato e segnala ciò che resta fuori dalla loro portata.",
+          "fonti": [
+            "miscele-quaderno"
           ]
         },
         "I riquadri colorati sono <b>provvisori</b>: valori scelti a occhio per far funzionare il calcolatore, non misure dei tubetti. Vanno sostituiti con la taratura sulle prove, descritta sotto il calcolatore."
@@ -145,7 +151,7 @@
             "handprint-mescolanza"
           ]
         },
-        "Vale solo per tubetti <b>tarati</b>: oggi i colori dei sei tubetti sono provvisori, e lo sono anche i risultati.",
+        "Vale solo per tubetti <b>tarati</b>: oggi i colori dei sei tubetti proposti sono provvisori, e lo sono anche i risultati.",
         {
           "testo": "Diluizione, granulazione, tipo di carta, carta asciutta o bagnata e ordine delle velature cambiano il risultato; il calcolatore considera solo la mescolanza in tavolozza e, nella striscia, il velo sul bianco della carta.",
           "fonti": [
@@ -214,6 +220,10 @@
     "marche": {
       "testo": "sezione Marche e tubetti del Quaderno, con la fonte ufficiale e la data di controllo di ogni riga",
       "url": "../marche/"
+    },
+    "miscele-quaderno": {
+      "testo": "Sezione Principi generali del Quaderno, capitolo 8: con i sei colori proposti si ottengono i verdi, i bruni e i grigi degli esempi; il prontuario è quello delle 12 miscele M1-M12; il calcolatore segnala i colori fuori portata",
+      "url": "../principi/#tavolozza-plein-air"
     },
     "spectraljs": {
       "testo": "Ronald van Wijnen, spectral.js: documentazione e codice del modello di miscela, con le tabelle spettrali usate dal calcolatore",

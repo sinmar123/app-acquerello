@@ -7,7 +7,7 @@ Il **Quaderno di acquerello** (`https://app-acquerello.pages.dev`) è un progett
 1. **Dal sito (`https://app-acquerello.pages.dev/#suggerimenti`):** in fondo a ogni pagina c'è la casella *«Suggerimenti: correzioni, integrazioni e video»*. Non richiede registrazione né un account GitHub e pubblica la segnalazione nell'elenco aperto delle Issue del progetto.
 2. **Con una Issue su GitHub**, indicando:
    - **per un nuovo video o una nuova modalità di esercizio:** l'indirizzo del video YouTube, il minuto d'inizio e di fine del passaggio, i colori e i pennelli usati dall'autore e che cosa mostra il gesto;
-   - **per una nuova serie nella sezione Marche e tubetti:** il nome della serie e, per ciascuno dei sei colori di base, il collegamento alla pagina ufficiale del produttore da cui risultano nome commerciale, numero, pigmento (Colour Index) e trasparenza;
+   - **per una nuova serie nella sezione Marche e tubetti:** il nome della serie e, per ciascuno dei sei colori proposti, il collegamento alla pagina ufficiale del produttore da cui risultano nome commerciale, numero, pigmento (Colour Index) e trasparenza;
    - **per una correzione ai testi o alle ricette:** la sezione, il punto preciso e la fonte di riferimento.
 
 ## 2. Modifiche dirette con una pull request

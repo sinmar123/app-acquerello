@@ -1,10 +1,10 @@
 {
- "data": "2026-10-21",
+ "data": "2026-10-24",
  "nota": "Dati dei tubetti presi solo dalle pagine ufficiali dei produttori, con il link e la data di controllo su ogni riga. I colori (id e nome comune) vengono da dati/colori/tavolozza.json. GBOT-app-acquerello, 18/10/2026.",
- "titolo": "Marche e tubetti: i sei colori di base nelle serie in commercio",
- "sottotitolo": "Per ogni colore della tavolozza, il tubetto corrispondente in sei serie: nome commerciale, numero, pigmenti e trasparenza, dalle pagine ufficiali dei produttori",
+ "titolo": "Marche e tubetti: i sei colori proposti nelle serie in commercio",
+ "sottotitolo": "Per ogni colore proposto, il tubetto corrispondente in sei serie: nome commerciale, numero, pigmenti e trasparenza, dalle pagine ufficiali dei produttori",
  "introduzione": [
-  "Nelle schede del Quaderno i colori della tavolozza ridotta sono indicati con il nome comune e con il pigmento, per esempio «blu oltremare (PB29)». Il pigmento è la sigla del Colour Index stampata sull'etichetta: PY per i gialli, PR per i rossi, PB per i blu, PBr per i bruni. Il comportamento del colore dipende anzitutto da questa sigla, più che dal nome sul tubetto.",
+  "Nelle schede del Quaderno i sei colori proposti sono indicati con il nome comune e con il pigmento, per esempio «blu oltremare (PB29)». Il pigmento è la sigla del Colour Index stampata sull'etichetta: PY per i gialli, PR per i rossi, PB per i blu, PBr per i bruni. Il comportamento del colore dipende anzitutto da questa sigla, più che dal nome sul tubetto.",
   "Le tabelle mettono a confronto lo stesso colore in sei serie di cinque marche. Prima dell'acquisto conviene controllare il pigmento: due tubetti con lo stesso nome possono avere pigmenti diversi, e due tubetti con nomi diversi lo stesso pigmento.",
   "I produttori a volte cambiano la formula senza cambiare il nome: il cremisi Cotman usato negli esercizi ha PR206 sull'etichetta, mentre la formula attuale indicata sul sito è PR179. Fa fede sempre l'etichetta del tubetto."
  ],
@@ -22,7 +22,7 @@
    "id": "wn-cotman",
    "marca": "Winsor & Newton",
    "serie": "Cotman",
-   "nota": "È la serie da studio presa a riferimento per la tavolozza ridotta a sei colori del Quaderno.",
+   "nota": "È la serie da studio presa a riferimento per i sei colori proposti dal Quaderno.",
    "fonte_generale": "https://www.winsornewton.com/pages/cotman-watercolour",
    "righe": [
     {
@@ -504,7 +504,7 @@
    ]
   },
   {
-   "testo": "<b>Ceruleo.</b> Il ceruleo vero è il PB35, di solito granulante: Winsor &amp; Newton Professional Cerulean Blue, Daniel Smith Cerulean Blue, Schmincke cobalt azure, Maimeri Blu Celeste ceruleo. Le imitazioni (<i>hue</i>) usano il blu ftalo: PB15 (Cotman Cerulean Blue Hue, il ceruleo della tavolozza), PB15 + PW6 (Van Gogh Cerulean Blue (Phthalo)), PW4 + PB15:3 (Schmincke cerulean blue hue). Il PB36, un ceruleo di cromo, è un terzo pigmento: Daniel Smith lo vende come Cerulean Blue Chromium, Maimeri Blu come «Blu ceruleo», riservando il PB35 al «Celeste ceruleo».",
+   "testo": "<b>Ceruleo.</b> Il ceruleo vero è il PB35, di solito granulante: Winsor &amp; Newton Professional Cerulean Blue, Daniel Smith Cerulean Blue, Schmincke cobalt azure, Maimeri Blu Celeste ceruleo. Le imitazioni (<i>hue</i>) usano il blu ftalo: PB15 (Cotman Cerulean Blue Hue, il ceruleo proposto), PB15 + PW6 (Van Gogh Cerulean Blue (Phthalo)), PW4 + PB15:3 (Schmincke cerulean blue hue). Il PB36, un ceruleo di cromo, è un terzo pigmento: Daniel Smith lo vende come Cerulean Blue Chromium, Maimeri Blu come «Blu ceruleo», riservando il PB35 al «Celeste ceruleo».",
    "marche": [
     "wn-professional",
     "daniel-smith",
