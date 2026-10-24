@@ -1,60 +1,28 @@
 {
   "data": "2026-10-24",
   "titolo": "Eventi",
-  "sottotitolo": "Calendario di festival, mostre, demo e uscite all'aperto, con la scheda di ogni evento e l'archivio per anno",
+  "sottotitolo": "Locandina, programma e fotografie di ogni evento, con il calendario e l'archivio per anno",
   "introduzione": [
     "Questa sezione raccoglie festival, mostre, demo e uscite en plein air.",
-    "Per ogni voce ci sono la data, il luogo e un collegamento.",
-    "Ogni evento ha una scheda, scritta a più mani.",
-    "Nella scheda stanno il programma in breve, i racconti di chi c'era, le demo e le interviste.",
-    "Un racconto porta la firma di chi lo scrive.",
-    "Copre solo i momenti visti da quella persona.",
-    "Sul programma si vede quali momenti hanno un racconto e quali no.",
-    "Un momento senza racconto si può completare.",
-    "Le interviste usano quattro domande fisse, uguali per tutti.",
-    "Per chi dipinge per strada se ne aggiunge una quinta.",
-    "Le risposte si possono così confrontare.",
-    "Possono rispondere gli artisti del programma e anche gli amatori.",
-    "Vale pure per chi dipinge per strada, senza essere iscritto.",
-    "Se un dato manca, il campo resta da completare.",
-    "Non si riempie a stima."
+    "Per ogni evento ci sono la data, il luogo e la scheda.",
+    "Nella scheda stanno la locandina, il programma e le fotografie.",
+    "Ogni fotografia porta il nome di chi l'ha scattata."
   ],
   "scheda_intro": [
     "Il programma riporta solo ciò che è scritto nella fonte, con il collegamento.",
-    "I racconti restano in prima persona e portano la firma.",
-    "Nessuno di essi copre l'evento per intero.",
-    "Per ogni demo la scheda ha sei campi.",
-    "Sono l'artista, il soggetto, la tecnica, le carte, i colori e una lezione.",
-    "La lezione è ciò che conviene portarsi a casa.",
-    "Un collegamento a miscele, alberi o principi si aggiunge solo se la demo lo conferma o lo mette in discussione.",
-    "Se il materiale non lo dice, il collegamento resta da completare."
+    "La locandina, quando c'è un file, porta il credito e il collegamento alla fonte.",
+    "Le fotografie sono di chi ha partecipato."
   ],
   "archivio_intro": [
     "L'archivio ordina gli eventi per anno.",
     "Ogni scheda resta la pagina del singolo evento.",
     "Un anno nuovo compare qui quando c'è almeno un evento."
   ],
-  "contributi": [
-    "Chi va a un evento può proporre una scheda o una foto.",
-    "Può farlo anche chi non è nel programma.",
-    "Ogni testo porta la firma di chi lo scrive.",
-    "Ogni foto porta la firma di chi l'ha scattata.",
-    "Il testo si invia dalla casella Suggerimenti, in fondo alla pagina.",
-    "Si sceglie la sezione Eventi e si mette la firma.",
-    "La casella pubblica la segnalazione.",
-    "Non riceve file.",
-    "Contatto per le foto: da completare."
+  "foto_intro": [
+    "Sotto ogni scatto stanno la didascalia e il nome di chi ha fatto la foto."
   ],
-  "interviste_intro": [
-    "Le prime quattro domande sono uguali per ogni intervista.",
-    "Per chi dipinge per strada durante l'evento se ne aggiunge una quinta.",
-    "La seconda domanda rimanda a Marche e tubetti.",
-    "La risposta sui materiali si riporta come detta da chi parla.",
-    "Servono a confrontare le risposte."
-  ],
-  "nessuna_intervista": "In questa scheda non ci sono interviste. Le risposte sono da completare.",
-  "vuoto": "da completare",
-  "manca_racconto": "Manca un racconto",
+  "locandina_manca": "locandina da aggiungere",
+  "nessuna_foto": "In questa scheda non ci sono fotografie.",
   "stati": {
     "in_corso": "In corso",
     "in_arrivo": "In arrivo",

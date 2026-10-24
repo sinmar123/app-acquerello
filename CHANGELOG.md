@@ -2,6 +2,18 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-24 - GBOT-app-acquerello - Eventi: solo locandina, programma e foto
+
+- Decisione di Sandro, a sezione già in linea: ogni scheda tiene solo la locandina, il programma e le fotografie di chi ha partecipato. Ogni foto porta il nome di chi l'ha scattata. Calendario e archivio per anno restano l'elenco degli eventi.
+- **Tolto dalle pagine** (`genera-eventi.py`, `sezione.json`, `schede/watercolor-sestri-levante-2026.json`, `scripts/genera-sito.py`): interviste e `domande.json`, racconti «io c'ero», segni coperto o non coperto sul programma, schede demo (soggetto, tecnica, carte, colori, lezione, collegamenti) e il riquadro dei contributi. La foto di Cesc Farré resta fra le fotografie, con credito «foto di Alessandro Sanvitale» e didascalia «Cesc Farré, demo del 24/10/2026». Escono il testo «less is more» e il racconto.
+- **Locandina di Sestri Levante**: il 24/10/2026 il catalogo `wp-json` di `https://watercolorsestrilevante.it` non ha un file il cui titolo o la cui didascalia dica locandina. La pagina offre «Scarica il programma», che è un PDF, non la locandina. Lo spazio in scheda resta «locandina da aggiungere».
+- **Interviste, fuori dal sito** (`dati/eventi/idee-interviste.md`): l'idea non si perde. Il file, non copiato in `site/`, annota le domande del primo giro, le due serie proposte per un secondo giro (maestri con nome e cognome; amatori e chi dipinge per strada, solo il nome) e il punto aperto sulle marche nelle risposte. L'idea è sospesa, in attesa di Sandro.
+- **Documenti**: `README.md`, `AGENTS.md`, `CONTRIBUTING.md` e il prompt della chat. Il controllo sui nomi di marca resta quello di prima.
+- Controlli: `python3 scripts/genera-sito.py` senza errori. Gulpease: Principi 68, Colori 75, Marche 59, Soggetti 66, Alberi 72, Eventi 95, scheda Sestri Levante 93. L'archivio 2026 resta sotto le 100 parole, quindi l'indice non si calcola. `lib/prompt-chat.js` rigenerato. In attesa del via del curatore per l'unione su `main`.
+- Prossima azione: via del curatore. L'unione su `main` pubblica il sito. La locandina di Sestri Levante e le interviste restano in attesa.
+
+-- GBOT-app-acquerello
+
 ## 2026-10-24 - GBOT-app-acquerello - Sezione Eventi, primo caso Sestri Levante
 
 - **Nuova sezione 5, Eventi** (`dati/eventi/`), proposta da Sandro e approvata nella scaletta del 24/10/2026. Un file JSON per evento in `schede/`. `genera-eventi.py` scrive il calendario (`/eventi/`), la scheda (`/eventi/<anno>/<slug>/`) e l'archivio dell'anno (`/eventi/<anno>/`). In calendario un evento è in corso, in arrivo o passato secondo la data di Europe/Rome al momento della generazione.

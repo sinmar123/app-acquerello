@@ -8,7 +8,7 @@ Chi oggi apprende una disciplina pratica dispone di una documentazione vastissim
 - **Repository:** [https://github.com/sinmar123/app-acquerello](https://github.com/sinmar123/app-acquerello)
 - **Licenza:** [CC BY 4.0 per testi, dati e illustrazioni · MIT per il codice](LICENSE)
 
-Il repository è autonomo: contiene i dati, le infografiche, le illustrazioni e gli script che generano l'intero sito. **Il Quaderno è in costruzione:** alle sezioni generali (*Principi generali*, *Teoria dei colori*, *Marche e tubetti*) si aggiunge un modulo per ogni soggetto; il primo, sugli alberi, è pubblicato, e seguiranno cieli e nuvole, fiori, acqua e riflessi, rocce, architetture. La sezione *Eventi* raccoglie il calendario, la scheda di ogni evento e l'archivio per anno. Correzioni, integrazioni e nuovi video si propongono con la casella in fondo a ogni pagina o secondo [`CONTRIBUTING.md`](CONTRIBUTING.md).
+Il repository è autonomo: contiene i dati, le infografiche, le illustrazioni e gli script che generano l'intero sito. **Il Quaderno è in costruzione:** alle sezioni generali (*Principi generali*, *Teoria dei colori*, *Marche e tubetti*) si aggiunge un modulo per ogni soggetto; il primo, sugli alberi, è pubblicato, e seguiranno cieli e nuvole, fiori, acqua e riflessi, rocce, architetture. La sezione *Eventi* raccoglie il calendario, la scheda di ogni evento (locandina, programma e fotografie) e l'archivio per anno. Correzioni, integrazioni e nuovi video si propongono con la casella in fondo a ogni pagina o secondo [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ## Sezioni
 
@@ -20,7 +20,7 @@ Il repository è autonomo: contiene i dati, le infografiche, le illustrazioni e 
 | `/marche/` | **3. Marche e tubetti**: i sei colori proposti in sei serie (Winsor & Newton Cotman e Professional, Van Gogh, Daniel Smith, Schmincke Horadam, Maimeri Blu), con pagina ufficiale e data di controllo su ogni riga | `dati/marche/` |
 | `/soggetti/` | **4. Soggetti**: un modulo per tema; `S1` Alberi pubblicato, `S2`-`S6` in preparazione | `dati/soggetti/` |
 | `/alberi/` | **4.1 S1 · Alberi ad acquerello**: 6 esempi, 24 modalità tratte dai video con un'infografica SVG in 3 fasi ciascuna, 31 estratti video | `dati/alberi/` |
-| `/eventi/` | **5. Eventi**: calendario di festival, mostre, demo e uscite en plein air, in corso, in arrivo e passati; scheda per evento (programma, racconti firmati «io c'ero», demo, interviste con quattro domande fisse e, per chi dipinge per strada, «Perché sei qui oggi?»); archivio `/eventi/<anno>/` e scheda `/eventi/<anno>/<slug>/` | `dati/eventi/` |
+| `/eventi/` | **5. Eventi**: calendario di festival, mostre, demo e uscite en plein air, in corso, in arrivo e passati; scheda per evento con locandina, programma e fotografie di chi ha partecipato; archivio `/eventi/<anno>/` e scheda `/eventi/<anno>/<slug>/` | `dati/eventi/` |
 
 Le frasi «L'autore, in sintesi» della sezione Alberi riassumono in italiano il parlato dei video, con l'aiuto dell'IA: non sono trascrizioni.
 
