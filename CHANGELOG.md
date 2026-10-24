@@ -2,6 +2,17 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-24 - GBOT-app-acquerello - Home: non professionisti, al posto di dilettanti
+
+- Correzione di Sandro sulla nota in home: «dilettante» e «dilettanti» diventano «non professionista» e «non professionisti». Il resto della nota resta, compresa la nota di metodo.
+- **Nota** (`genera_home`): «Il Quaderno nasce tra non professionisti ed è rivolto ad altri non professionisti. Raccoglie ciò che si impara strada facendo, con i limiti di chi non è un maestro, ed è aperto ai contributi di tutti gli appassionati.»
+- **Descrizione per i motori di ricerca** (`DESCRIZIONE_HOME`) e **README**: in apertura, «Il Quaderno nasce tra non professionisti ed è rivolto ad altri non professionisti.»
+- Cercate le occorrenze entrate con le due modifiche della home. Sostituite in `scripts/genera-sito.py` (nota e descrizione) e in `README.md`. In `lib/prompt-chat.js`, `CONTRIBUTING.md` e `AGENTS.md` non ce n'erano. Le voci già scritte nel CHANGELOG restano come storia.
+- Controlli: `python3 scripts/genera-sito.py` senza errori, compreso `controlla_marche_fuori_sezione`. Gulpease: Principi 68, Colori 75, Marche 59, Soggetti 66, Alberi 72, Eventi 95, scheda Sestri Levante 83. L'archivio 2026 resta sotto le 100 parole, quindi l'indice non si calcola. La home resta a Gulpease 52. `lib/prompt-chat.js` invariato. In attesa del via del curatore per l'unione su `main`.
+- Prossima azione: via del curatore. L'unione su `main` pubblica il sito.
+
+-- GBOT-app-acquerello
+
 ## 2026-10-24 - GBOT-app-acquerello - Home: Quaderno aperto ai contributi
 
 - Richiesta di Sandro: la nota sotto l'introduzione non deve suonare come il quaderno di una sola persona. Il sito è aperto ad altri contributi. La nota di metodo segue lo stesso tono, da appassionati che imparano, non da esperti.
