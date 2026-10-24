@@ -127,6 +127,12 @@
             "handprint-ruota"
           ]
         },
+        {
+          "testo": "Mescolando questi sei colori si ottengono altri colori, fra cui i verdi, i bruni e i grigi degli esempi. Il prontuario è quello delle <a href=\"../principi/#miscele\">12 miscele M1-M12</a>. Il <a href=\"#calcolatore\">calcolatore</a> cerca la miscela più vicina a un colore dato e segnala ciò che resta fuori dalla loro portata.",
+          "fonti": [
+            "miscele-quaderno"
+          ]
+        },
         "I riquadri colorati sono <b>provvisori</b>: valori scelti a occhio per far funzionare il calcolatore, non misure dei tubetti. Vanno sostituiti con la taratura sulle prove, descritta sotto il calcolatore."
       ]
     },
@@ -214,6 +220,10 @@
     "marche": {
       "testo": "sezione Marche e tubetti del Quaderno, con la fonte ufficiale e la data di controllo di ogni riga",
       "url": "../marche/"
+    },
+    "miscele-quaderno": {
+      "testo": "Sezione Principi generali del Quaderno, capitolo 8: con i sei colori proposti si ottengono i verdi, i bruni e i grigi degli esempi; il prontuario è quello delle 12 miscele M1-M12; il calcolatore segnala i colori fuori portata",
+      "url": "../principi/#tavolozza-plein-air"
     },
     "spectraljs": {
       "testo": "Ronald van Wijnen, spectral.js: documentazione e codice del modello di miscela, con le tabelle spettrali usate dal calcolatore",
