@@ -84,7 +84,7 @@ SEZIONI = [
         "breve": "Eventi",
         "nome_form": "Eventi",
         "titolo": "Eventi",
-        "sottotitolo": "Calendario di festival, mostre, demo e uscite all'aperto, con la scheda di ogni evento e l'archivio per anno",
+        "sottotitolo": "Locandina, programma e fotografie di ogni evento, con il calendario e l'archivio per anno",
         "script_genera": DATI_DIR / "eventi" / "genera-eventi.py",
         "html_generato": DATI_DIR / "eventi" / "eventi.html",
         "cartelle": [DATI_DIR / "eventi" / "immagini"],
@@ -154,8 +154,7 @@ PAROLE_GENERICHE = {"professional", "extra", "fine", "aquarell", "blu"}
 def controlla_marche_fuori_sezione():
     """Marche e serie commerciali stanno solo in dati/marche/ (CONTRIBUTING.md § 3): altrove i colori
     si chiamano col nome comune e il codice Colour Index. Cerca i nomi di marche.json in tutti gli
-    altri sorgenti delle sezioni. Le risposte delle interviste in dati/eventi/ non sono esentate:
-    una risposta che nomina una marca ferma la generazione, finché il curatore non decide."""
+    altri sorgenti delle sezioni."""
     marche = json.loads((DATI_DIR / "marche" / "marche.json").read_text(encoding="utf-8"))["marche"]
     nomi = {"winsor"}
     for m in marche:
@@ -178,7 +177,7 @@ def controlla_marche_fuori_sezione():
 
 
 def riassunto_eventi():
-    """Testo della chat ricavato dai file degli eventi: date, programma, racconti e campi aperti."""
+    """Testo della chat ricavato dai file degli eventi: date, programma, locandina e foto."""
     cartella = DATI_DIR / "eventi" / "schede"
     if not cartella.is_dir():
         return "Eventi: nessun archivio presente."
@@ -191,40 +190,32 @@ def riassunto_eventi():
 
     blocchi = [
         "Eventi (https://app-acquerello.pages.dev/eventi/): calendario, scheda per evento e archivio per anno. "
-        "Un racconto è firmato e copre solo i momenti visti da chi scrive. "
-        "Le interviste usano quattro domande fisse: Come hai cominciato con l'acquerello?; "
-        "Che materiali usi: carta (marca e grammatura), pennelli e marche di colori, con la tavolozza?; "
-        "Un consiglio per chi dipinge en plein air?; Un errore da evitare?. "
-        "Per chi dipinge per strada durante l'evento si aggiunge: Perché sei qui oggi?. "
-        "La domanda sui materiali rimanda a Marche e tubetti "
-        "(https://app-acquerello.pages.dev/marche/). "
-        "La risposta, se c'è, si riporta come detta da chi parla: non si aggiungono marche che il testo non dice. "
-        "Valgono anche per gli amatori e per chi dipinge per strada senza essere nel programma. "
-        "I campi segnati «da completare» non si riempiono."
+        "Ogni scheda ha solo la locandina, il programma e le fotografie di chi ha partecipato. "
+        "Ogni foto porta la didascalia e il nome di chi l'ha scattata. "
+        "Se la locandina manca, in pagina c'è scritto «locandina da aggiungere»: non se ne inventa una. "
+        "Non si aggiungono racconti, schede di demo né interviste."
     ]
     for path in sorted(cartella.glob("*.json")):
         ev = json.loads(path.read_text(encoding="utf-8"))
         url = f"{SITO_URL}/eventi/{ev['anno']}/{ev['slug']}/"
         fonte = ev["fonte"]
         righe = [f"- {m['giorno'][8:10]} {mesi[int(m['giorno'][5:7]) - 1]}: {m['voce']}" for m in ev.get("programma", [])]
-        programma = "\n".join(righe) if righe else "- Programma da completare."
-        racconti = []
-        for r in ev.get("racconti", []):
-            racconti.append(
-                f"- {r['firma']}, momenti {', '.join(r['momenti'])}: «{r['testo']}» Fonte: {r['fonte']['url']}"
-            )
-        lezioni = []
-        for mid, lezione in ev.get("lezioni", {}).items():
-            lezioni.append(f"- {mid}: {lezione['testo']}. Fonte: {lezione['fonte']}")
+        programma = "\n".join(righe) if righe else "- Programma da aggiungere."
+        if ev.get("locandina"):
+            loc = ev["locandina"]
+            locandina = f"{loc['credito']}. Fonte: {loc['fonte']['url']}"
+        else:
+            locandina = "locandina da aggiungere."
+        foto = []
+        for f in ev.get("foto", []):
+            foto.append(f"- {f['didascalia']}. {f['credito']}.")
         blocchi.append(
             f"\n{ev['titolo']} ({url}). {ev['sottotitolo']}. "
             f"Dal {lunga(ev['data_inizio'])} al {lunga(ev['data_fine'])}. {ev['luogo']}. "
             f"Programma letto il {fonte['letto']} da {fonte['url']}.\n"
+            f"Locandina: {locandina}\n"
             f"Programma:\n{programma}\n"
-            f"Racconti:\n" + ("\n".join(racconti) if racconti else "- Nessuno.") + "\n"
-            f"Lezioni delle demo:\n" + ("\n".join(lezioni) if lezioni else "- Nessuna.") + "\n"
-            "Soggetto, tecnica, carte, colori e collegamenti alle altre sezioni, se non sono qui sopra: da completare.\n"
-            f"Interviste: {len(ev.get('interviste', []))}."
+            f"Fotografie:\n" + ("\n".join(foto) if foto else "- Nessuna.")
         )
     if len(blocchi) == 1:
         blocchi.append("Nessun evento in archivio.")
@@ -308,7 +299,7 @@ Come rispondere:
 - I sei colori del Quaderno sono una proposta di partenza, non una tavolozza fissa: si possono ridurre, ampliare o cambiare.
 - Se una miscela M1-M12 ottiene il colore richiesto, indicala con sigla e nome prima di eventuali varianti.
 - Non inventare fonti, autori, video, citazioni, sigle di pigmenti o numeri. Se il Quaderno non tratta un punto, dillo, e suggerisci una prova su carta.
-- Nella sezione Eventi non riempire i campi segnati «da completare» e non inventare programmi, nomi, demo, interviste o marche di carta, pennelli e colori.
+- Nella sezione Eventi non inventare locandine, programmi, nomi o didascalie. Se manca la locandina, resta «locandina da aggiungere».
 - Ricorda che l'esito va sempre verificato sulla carta: le risposte sono una guida, non una regola.
 - Rispondi solo sui temi indicati all'inizio; per il resto declina in una frase.
 - Non chiedere dati personali."""
@@ -701,7 +692,7 @@ def inietta_elementi_comuni(html_pagina: str, sezione: dict, pagina_path: str, p
 IN_COSTRUZIONE = [
     'i <a href="./principi/">principi generali su acqua, colore e carta</a>, dalle tre consistenze della miscela agli stati della carta',
     'un <a href="./alberi/">primo modulo di esercizi su alberi, siepi e arbusti</a>, con i passaggi dei video didattici indicati al secondo',
-    'un <a href="./eventi/">calendario degli eventi</a>, con la scheda di ciascuno e l\'archivio per anno',
+    'un <a href="./eventi/">calendario degli eventi</a>, con locandina, programma e fotografie, e l\'archivio per anno',
     'un <a href="./colori/#calcolatore">calcolatore</a> che propone, come stima, la miscela più vicina a un colore dato',
     "un <a href=\"#assistente-ai\">assistente basato sull'intelligenza artificiale</a> per le domande sulla tecnica, "
     "con un limite di 5 domande a settimana",
@@ -924,8 +915,6 @@ def gulpease(html_pagina):
     delle fonti, che citano titoli e passi nella lingua originale e si ripetono in più capitoli."""
     t = re.sub(r'<section id="(assistente-ai|suggerimenti)".*?</section>', " ", html_pagina, flags=re.S)
     t = re.sub(r'<div class="fonti-cap">.*?</div>', " ", t, flags=re.S)
-    # schede delle demo: nomi propri e campi «da completare», come gli elenchi delle fonti
-    t = re.sub(r'<article class="voce" id="demo-[^"]*">.*?</article>', " ", t, flags=re.S)
     t = re.sub(r"<(script|style|svg|nav|footer|table)[^>]*>.*?</\1>", " ", t, flags=re.S)
     t = re.sub(r"<(br|/p|/li|/h[1-6]|/div|/td)[^>]*>", ". ", t)
     t = html.unescape(re.sub(r"<[^>]+>", " ", t))

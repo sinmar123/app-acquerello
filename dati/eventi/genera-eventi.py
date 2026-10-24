@@ -3,20 +3,22 @@
 
 Uso: python genera-eventi.py pagina
 
-Legge sezione.json, domande.json e un file JSON per evento in schede/.
-Scrive eventi.html (il calendario) e pagine/<anno>/index.html più
-pagine/<anno>/<slug>/index.html. scripts/genera-sito.py copia il calendario
-in site/eventi/, inietta barra, chat e suggerimenti, e pubblica le altre pagine
-insieme alla cartella immagini/.
+Legge sezione.json e un file JSON per evento in schede/. Scrive eventi.html
+(il calendario) e pagine/<anno>/index.html più pagine/<anno>/<slug>/index.html.
+scripts/genera-sito.py copia il calendario in site/eventi/, inietta barra,
+chat e suggerimenti, e pubblica le altre pagine insieme alla cartella immagini/.
+
+Ogni scheda ha solo la locandina, il programma e le fotografie. Il file
+idee-interviste.md resta nel repository e non entra in queste pagine.
 
 Il giorno «oggi», per dire se un evento è in corso, in arrivo o passato, è
 quello di Europe/Rome nel momento della generazione.
 
-Controlli: date e giorni della settimana coerenti; ogni racconto ha la firma
-e cita momenti del programma; ogni foto è in immagini/ e ha il credito; le
-lezioni citano una demo; le interviste usano solo le domande fisse e, se ci
-sono, hanno la firma. Nessun testo contiene «da verificare» né il trattino
-lungo. I campi senza materiale restano «da completare»: non si inventano.
+Controlli: date e giorni della settimana coerenti; ogni voce del programma
+apre con il suo orario; ogni foto è in immagini/ e ha credito e didascalia;
+la locandina, se c'è, ha file, credito e fonte https. Nessun testo contiene
+«da verificare» né il trattino lungo. Racconti, demo e interviste non sono
+ammessi in una scheda.
 """
 import html
 import json
@@ -38,11 +40,9 @@ MESI = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno",
         "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"]
 GIORNI = ["lunedì", "martedì", "mercoledì", "giovedì", "venerdì", "sabato", "domenica"]
 TRATTINI = ("—", "–", "―")
-HREF_QUADRANO = re.compile(
-    r"^/(?:principi|colori|marche|soggetti|alberi|eventi)/[A-Za-z0-9./_-]*$"
-)
 ID_OK = re.compile(r"^[a-z0-9-]+$")
 FILE_OK = re.compile(r"^[a-z0-9.-]+$")
+CHIAVI_VIETATE = ("racconti", "interviste", "lezioni", "collegamenti", "campi_demo", "domande")
 
 CSS = """
 * { box-sizing: border-box; }
@@ -77,17 +77,10 @@ th { background: #eef4ef; color: #2c4f3a; }
 th.giorno { background: #263529; color: #f7f2e7; }
 caption { caption-side: bottom; text-align: left; font-size: .85em; color: #555; padding-top: 6px; }
 .vuoto { color: #6b5e4c; font-style: italic; }
-.manca { color: #6b3418; }
-.coperto { color: #1e4638; font-weight: 600; }
 .nota-riga { display: block; margin-top: 4px; color: #555; font-size: .92em; }
-blockquote.racconto { margin: 10px 0; padding: 8px 14px; border-left: 4px solid #263529; background: #fffdf8; }
-blockquote.racconto p { margin: 0; }
-.firma { margin: 4px 0 10px; font-size: .95em; }
 figure.foto { margin: 12px 0; }
 figure.foto img { width: 100%; max-width: 28rem; height: auto; border-radius: 8px; border: 1px solid #dfd5c3; display: block; }
 figure.foto figcaption { font-size: .9em; color: #444; margin-top: 6px; }
-ol.domande { margin: 8px 0 12px; padding-left: 1.2em; }
-ol.domande li { margin: 4px 0; }
 footer { margin-top: 28px; border-top: 1px solid #ddd; padding-top: 12px; font-size: .9em; color: #444; }
 """
 
@@ -143,20 +136,8 @@ def paragrafi(frasi):
     return "".join(f"<p>{e(p)}</p>" for p in frasi)
 
 
-def vuoto(sez):
-    return f'<span class="vuoto">{e(sez["vuoto"])}</span>'
-
-
 def radice(prof):
     return "../" * prof
-
-
-def href_nel_sito(percorso, prof):
-    if not HREF_QUADRANO.match(percorso.split("#", 1)[0]) and percorso != "/":
-        errore(f"collegamento non ammesso: {percorso}")
-    if percorso.startswith("/"):
-        return radice(prof) + percorso.lstrip("/")
-    return percorso
 
 
 def carica_json(path):
@@ -178,18 +159,23 @@ def stato_evento(ev, oggi):
     return "passato"
 
 
-def carica_eventi(domande):
+def controlla_file_immagine(ev, nome, dove):
+    if not FILE_OK.match(nome) or not (IMMAGINI / nome).is_file():
+        errore(f"{ev['id']}: file assente in immagini/ ({dove})")
+
+
+def carica_eventi():
     if not SCHEDE.is_dir():
         errore("manca la cartella schede/")
     eventi = []
-    elenco_domande = domande["domande"]
-    ids_domande = [d["id"] for d in elenco_domande]
-    solo_strada = {d["id"] for d in elenco_domande if d.get("solo") == "per_strada"}
     for path in sorted(SCHEDE.glob("*.json")):
         ev = carica_json(path)
         for campo in ("id", "slug", "anno", "titolo", "sottotitolo", "data_inizio", "data_fine", "luogo", "fonte"):
             if campo not in ev:
                 errore(f"{path.name}: manca {campo}")
+        for vietata in CHIAVI_VIETATE:
+            if vietata in ev:
+                errore(f"{ev['id']}: «{vietata}» non entra nella scheda")
         if path.stem != ev["id"]:
             errore(f"{path.name}: il nome del file deve essere {ev['id']}.json")
         if not ID_OK.match(ev["slug"]) or not ID_OK.match(ev["id"]):
@@ -214,9 +200,8 @@ def carica_eventi(domande):
                 errore(f"{ev['id']}: {giorno} non è un {nome}")
         visti = set()
         precedente = ""
-        momenti = {}
         for m in ev.get("programma", []):
-            for campo in ("id", "giorno", "fascia", "orario", "voce", "demo"):
+            for campo in ("id", "giorno", "fascia", "orario", "voce"):
                 if campo not in m:
                     errore(f"{ev['id']}: momento senza {campo}")
             if not ID_OK.match(m["id"]) or m["id"] in visti:
@@ -231,64 +216,19 @@ def carica_eventi(domande):
                 errore(f"{ev['id']}: fascia non riconosciuta in {m['id']}")
             if not m["voce"].startswith(m["orario"]):
                 errore(f"{ev['id']}: l'orario di {m['id']} non apre la voce")
-            if m["demo"] and not m.get("chi"):
-                errore(f"{ev['id']}: la demo {m['id']} non ha l'artista")
-            momenti[m["id"]] = m
-        for mid, lezione in ev.get("lezioni", {}).items():
-            if mid not in momenti or not momenti[mid]["demo"]:
-                errore(f"{ev['id']}: lezione su un momento che non è una demo ({mid})")
-            for campo in ("testo", "fonte", "fonte_etichetta"):
-                if not lezione.get(campo):
-                    errore(f"{ev['id']}: lezione {mid} senza {campo}")
-            if not lezione["fonte"].startswith("https://"):
-                errore(f"{ev['id']}: fonte della lezione {mid} non https")
-        for col in ev.get("collegamenti", {}):
-            if col not in momenti or not momenti[col]["demo"]:
-                errore(f"{ev['id']}: collegamenti su una demo inesistente ({col})")
-            if not ev["collegamenti"][col]:
-                errore(f"{ev['id']}: collegamenti vuoti in {col}; omettere la chiave")
-            for c in ev["collegamenti"][col]:
-                if not c.get("href") or not c.get("testo"):
-                    errore(f"{ev['id']}: collegamento incompleto in {col}")
-                href_nel_sito(c["href"], 1)
-        for r in ev.get("racconti", []):
-            for campo in ("id", "firma", "momenti", "testo", "fonte"):
-                if not r.get(campo):
-                    errore(f"{ev['id']}: racconto senza {campo}")
-            if not ID_OK.match(r["id"]) or r["id"] in visti:
-                errore(f"{ev['id']}: id racconto duplicato o non valido")
-            visti.add(r["id"])
-            if not r["fonte"].get("url", "").startswith("https://") or not r["fonte"].get("etichetta"):
-                errore(f"{ev['id']}: fonte del racconto {r['id']} incompleta")
-            for mid in r["momenti"]:
-                if mid not in momenti:
-                    errore(f"{ev['id']}: il racconto {r['id']} cita un momento inesistente")
-            for foto in r.get("foto", []):
-                for campo in ("file", "credito", "alt"):
-                    if not foto.get(campo):
-                        errore(f"{ev['id']}: foto del racconto {r['id']} senza {campo}")
-                if not FILE_OK.match(foto["file"]) or not (IMMAGINI / foto["file"]).is_file():
-                    errore(f"{ev['id']}: foto assente in immagini/{foto.get('file')}")
-        for inter in ev.get("interviste", []):
-            if not inter.get("firma") or not inter.get("id"):
-                errore(f"{ev['id']}: intervista senza firma o senza id")
-            if not isinstance(inter.get("nel_programma"), bool):
-                errore(f"{ev['id']}: intervista {inter['id']} senza nel_programma vero o falso")
-            if inter["id"] in visti or not ID_OK.match(inter["id"]):
-                errore(f"{ev['id']}: id intervista duplicato o non valido")
-            visti.add(inter["id"])
-            per_strada = inter.get("per_strada", False)
-            if not isinstance(per_strada, bool):
-                errore(f"{ev['id']}: per_strada dell'intervista {inter['id']} non è vero o falso")
-            risposte = inter.get("risposte", {})
-            for chiave in risposte:
-                if chiave not in ids_domande:
-                    errore(f"{ev['id']}: risposta «{chiave}» fuori dalle domande fisse")
-                if chiave in solo_strada and not per_strada:
-                    errore(f"{ev['id']}: «{chiave}» vale solo per chi dipinge per strada")
-            if inter.get("momento") and inter["momento"] not in momenti:
-                errore(f"{ev['id']}: l'intervista cita un momento inesistente")
-        ev["_path"] = path.name
+        loc = ev.get("locandina")
+        if loc:
+            for campo in ("file", "credito", "alt", "fonte"):
+                if not loc.get(campo):
+                    errore(f"{ev['id']}: locandina senza {campo}")
+            controlla_file_immagine(ev, loc["file"], "locandina")
+            if not loc["fonte"].get("url", "").startswith("https://") or not loc["fonte"].get("etichetta"):
+                errore(f"{ev['id']}: fonte della locandina incompleta")
+        for foto in ev.get("foto", []):
+            for campo in ("file", "credito", "didascalia", "alt"):
+                if not foto.get(campo):
+                    errore(f"{ev['id']}: foto senza {campo}")
+            controlla_file_immagine(ev, foto["file"], foto.get("file"))
         eventi.append(ev)
     return eventi
 
@@ -309,15 +249,6 @@ def piede(sez, prof):
         f'<a href="{r}soggetti/">4. Soggetti</a> · '
         f'<a href="{r}alberi/">4.1 Alberi</a>.</p>'
         "</footer>"
-    )
-
-
-def blocco_contributi(sez):
-    return (
-        '<section class="blocco" id="contributi">'
-        "<h2>Contributi</h2>"
-        f'<div class="nota">{paragrafi(sez["contributi"])}</div>'
-        "</section>"
     )
 
 
@@ -369,9 +300,7 @@ def pagina_calendario(sez, eventi, oggi):
             f'<li><a href="{anno}/{e(ev["slug"])}/">{e(ev["titolo"])}</a>, {e(intervallo(ev["data_inizio"], ev["data_fine"]))}.</li>'
             for ev in sorted((ev for ev in eventi if ev["anno"] == anno), key=lambda ev: ev["data_inizio"])
         )
-        archivio.append(
-            f"<h3><a href=\"{anno}/\">{e(str(anno))}</a></h3><ul>{voci}</ul>"
-        )
+        archivio.append(f"<h3><a href=\"{anno}/\">{e(str(anno))}</a></h3><ul>{voci}</ul>")
     corpo = (
         f"<h1>{e(sez['titolo'])}</h1>"
         f"<p class=\"sotto\">{e(sez['sottotitolo'])}</p>"
@@ -380,7 +309,6 @@ def pagina_calendario(sez, eventi, oggi):
             ("in-arrivo", "In arrivo"),
             ("passati", "Passati"),
             ("archivio", "Archivio"),
-            ("contributi", "Contributi"),
         ])
         + f'<div class="intro">{paragrafi(sez["introduzione"])}</div>'
         + gruppo("in-corso", "in_corso", in_corso, oggi, 1, sez)
@@ -388,9 +316,8 @@ def pagina_calendario(sez, eventi, oggi):
         + gruppo("passati", "passato", passati, oggi, 1, sez)
         + '<section class="blocco" id="archivio"><h2>Archivio per anno</h2>'
         + f'<div class="nota">{paragrafi(sez["archivio_intro"])}</div>'
-        + ("".join(archivio) or f"<p>{vuoto(sez)}</p>")
+        + ("".join(archivio) or "<p>Nessun anno in archivio.</p>")
         + "</section>"
-        + blocco_contributi(sez)
         + piede(sez, 1)
     )
     return documento(sez["titolo"], sez["sottotitolo"], corpo)
@@ -404,40 +331,27 @@ def pagina_anno(sez, anno, eventi, oggi):
         f'<p class="filo"><a href="../">Eventi</a></p>'
         f"<h1>Archivio {anno}</h1>"
         f"<p class=\"sotto\">Gli eventi del {anno}, con data, luogo e scheda.</p>"
-        + salti([("elenco", "Eventi"), ("contributi", "Contributi")])
         + f'<div class="intro">{paragrafi(sez["archivio_intro"])}</div>'
         + f'<section class="blocco" id="elenco"><h2>Eventi del {anno}</h2>{cards}</section>'
-        + blocco_contributi(sez)
         + piede(sez, 2)
     )
     return documento(f"Archivio {anno}", descrizione, corpo)
 
 
-def copertura(momento, racconti, sez):
-    suoi = [r for r in racconti if momento["id"] in r["momenti"]]
-    if not suoi:
-        return f'<span class="manca">{e(sez["manca_racconto"])}</span>. <a href="#contributi">Come si aggiunge</a>'
-    link = ", ".join(f'<a href="#r-{e(r["id"])}">{e(r["firma"])}</a>' for r in suoi)
-    return f'<span class="coperto">Coperto</span>: {link}'
-
-
-def tabella_programma(ev, sez):
+def tabella_programma(ev):
     righe = []
-    gruppo = None
+    gruppo_aperto = None
     for m in ev.get("programma", []):
         chiave = (m["giorno"], m["fascia"])
-        if chiave != gruppo:
-            gruppo = chiave
+        if chiave != gruppo_aperto:
+            gruppo_aperto = chiave
             d = date.fromisoformat(m["giorno"])
             titolo = f"{GIORNI[d.weekday()].capitalize()} {d.day} {MESI[d.month - 1]} {d.year}. {m['fascia'].capitalize()}"
-            righe.append(f'<tr><th class="giorno" colspan="2">{e(titolo)}</th></tr>')
+            righe.append(f'<tr><th class="giorno">{e(titolo)}</th></tr>')
         nota = f'<span class="nota-riga">{e(m["nota"])}</span>' if m.get("nota") else ""
-        righe.append(
-            f'<tr id="m-{e(m["id"])}"><td>{e(m["voce"])}{nota}</td>'
-            f"<td>{copertura(m, ev.get('racconti', []), sez)}</td></tr>"
-        )
+        righe.append(f'<tr id="m-{e(m["id"])}"><td>{e(m["voce"])}{nota}</td></tr>')
     if not righe:
-        return f"<p>{vuoto(sez)}</p>"
+        return "<p>Programma da aggiungere.</p>"
     fonte = ev["fonte"]
     caption = (
         f'Fonte: <a href="{e(fonte["url"])}">{e(fonte["etichetta"])}</a>, '
@@ -445,228 +359,69 @@ def tabella_programma(ev, sez):
     )
     return (
         '<div class="tab"><table>'
-        "<thead><tr><th>Voce del programma</th><th>Racconto</th></tr></thead>"
+        "<thead><tr><th>Voce del programma</th></tr></thead>"
         f"<tbody>{''.join(righe)}</tbody>"
         f"<caption>{caption}</caption></table></div>"
     )
 
 
-def cella_lezione(lezione):
-    if not lezione:
-        return None
+def blocco_locandina(ev, sez, prof):
+    loc = ev.get("locandina")
+    if not loc:
+        return f'<p class="vuoto">{e(sez["locandina_manca"])}</p>'
+    src = radice(prof - 1) + "immagini/" + loc["file"]
+    fonte = loc["fonte"]
     return (
-        f"{e(lezione['testo'])}. "
-        f'<a href="{e(lezione["fonte"])}">{e(lezione["fonte_etichetta"])}</a>'
+        '<figure class="foto">'
+        f'<img src="{e(src)}" alt="{e(loc["alt"])}">'
+        f'<figcaption>{e(loc["credito"])}. '
+        f'<a href="{e(fonte["url"])}">{e(fonte["etichetta"])}</a>.</figcaption>'
+        "</figure>"
     )
 
 
-def cella_collegamenti(ev, mid, prof, sez):
-    lista = ev.get("collegamenti", {}).get(mid)
-    if not lista:
-        return vuoto(sez)
-    parti = []
-    for c in lista:
-        parti.append(f'<a href="{e(href_nel_sito(c["href"], prof))}">{e(c["testo"])}</a>')
-    return "<br>".join(parti)
-
-
-def schede_demo(ev, sez, prof):
-    demo = [m for m in ev.get("programma", []) if m["demo"]]
-    if not demo:
-        return f"<p>{vuoto(sez)}</p>"
-    blocchi = []
-    for m in demo:
-        d = date.fromisoformat(m["giorno"])
-        quando = (
-            f"{GIORNI[d.weekday()].capitalize()} {d.day} {MESI[d.month - 1]} {d.year}, "
-            f"{m['fascia']}. {m['orario']}."
-        )
-        lezione = cella_lezione(ev.get("lezioni", {}).get(m["id"])) or vuoto(sez)
-        campi = [
-            ("Artista", e(m["chi"])),
-            ("Quando", e(quando)),
-            ("Soggetto", campo_demo(ev, m["id"], "soggetto", sez)),
-            ("Tecnica", campo_demo(ev, m["id"], "tecnica", sez)),
-            ("Carte", campo_demo(ev, m["id"], "carte", sez)),
-            ("Colori", campo_demo(ev, m["id"], "colori", sez)),
-            ("Lezione", lezione),
-            ("Collegamenti al Quaderno", cella_collegamenti(ev, m["id"], prof, sez)),
-        ]
-        righe = "".join(f"<tr><th>{e(nome)}</th><td>{valore}</td></tr>" for nome, valore in campi)
-        blocchi.append(
-            f'<article class="voce" id="demo-{e(m["id"])}">'
-            f'<div class="tab"><table>'
-            f'<thead><tr><th colspan="2">{e(m["chi"])}</th></tr></thead>'
-            f"<tbody>{righe}</tbody>"
-            f'<caption><a href="#m-{e(m["id"])}">Voce nel programma</a></caption>'
-            "</table></div></article>"
-        )
-    return "".join(blocchi)
-
-
-def blocco_racconti(ev, sez, prof):
-    if not ev.get("racconti"):
-        return f"<p>{vuoto(sez)}. Si può aggiungere un racconto firmato.</p>"
+def blocco_foto(ev, sez, prof):
+    if not ev.get("foto"):
+        return f"<p>{e(sez['nessuna_foto'])}</p>"
     pezzi = []
-    for r in ev["racconti"]:
-        momenti = []
-        for mid in r["momenti"]:
-            voce = next(m["voce"] for m in ev["programma"] if m["id"] == mid)
-            momenti.append(f'<a href="#m-{e(mid)}">{e(voce)}</a>')
-        foto = []
-        for f in r.get("foto", []):
-            src = radice(prof - 1) + "immagini/" + f["file"]
-            foto.append(
-                "<figure class=\"foto\">"
-                f'<img src="{e(src)}" alt="{e(f["alt"])}">'
-                f"<figcaption>{e(f['credito'])}</figcaption></figure>"
-            )
-        fonte = r["fonte"]
+    for foto in ev["foto"]:
+        src = radice(prof - 1) + "immagini/" + foto["file"]
         pezzi.append(
-            f'<article class="voce" id="r-{e(r["id"])}">'
-            f"<h3>{e(r['firma'])}</h3>"
-            f"<p>Momenti coperti: {', '.join(momenti)}.</p>"
-            f'<blockquote class="racconto"><p>{e(r["testo"])}</p></blockquote>'
-            f'<p class="firma">{e(r["firma"])}, '
-            f'<a href="{e(fonte["url"])}">{e(fonte["etichetta"])}</a>.</p>'
-            + "".join(foto)
-            + "</article>"
+            '<figure class="foto">'
+            f'<img src="{e(src)}" alt="{e(foto["alt"])}">'
+            f'<figcaption>{e(foto["didascalia"])}. {e(foto["credito"])}.</figcaption>'
+            "</figure>"
         )
     return "".join(pezzi)
 
 
-def voce_domanda(domanda, prof):
-    testo = e(domanda["testo"])
-    if domanda.get("rimando"):
-        href = href_nel_sito(domanda["rimando"]["href"], prof)
-        testo += f' Rimando: <a href="{e(href)}">{e(domanda["rimando"]["etichetta"])}</a>.'
-    if domanda.get("solo") == "per_strada":
-        testo += " Solo per chi dipinge per strada durante l'evento."
-    return f"<li>{testo}</li>"
-
-
-def cella_risposta(domanda, inter, sez, prof):
-    """La domanda sui materiali, se ha una risposta, resta una citazione di chi parla."""
-    if domanda.get("solo") == "per_strada" and not inter.get("per_strada"):
-        return "Non si applica"
-    testo = (inter.get("risposte") or {}).get(domanda["id"])
-    if not testo:
-        return vuoto(sez)
-    if domanda.get("come_detta"):
-        href = href_nel_sito(domanda["rimando"]["href"], prof)
-        return (
-            f"<q>{e(testo)}</q>"
-            f'<span class="nota-riga">Come detto da {e(inter["firma"])}. '
-            f'<a href="{e(href)}">{e(domanda["rimando"]["etichetta"])}</a>.</span>'
-        )
-    return e(testo)
-
-
-def blocco_interviste(ev, sez, domande, prof):
-    intro = f'<div class="nota">{paragrafi(sez["interviste_intro"])}</div>'
-    elenco = "<ol class=\"domande\">" + "".join(voce_domanda(d, prof) for d in domande["domande"]) + "</ol>"
-    if not ev.get("interviste"):
-        return intro + elenco + f"<p>{e(sez['nessuna_intervista'])}</p>"
-    testate = "".join(f"<th>{e(d['testo'])}</th>" for d in domande["domande"])
-    righe = []
-    for inter in ev["interviste"]:
-        dove = "Nel programma" if inter["nel_programma"] else "Fuori programma"
-        if inter.get("per_strada"):
-            dove += '<span class="nota-riga">Dipinge per strada durante l\'evento.</span>'
-        if inter.get("nota"):
-            dove += f'<span class="nota-riga">{e(inter["nota"])}</span>'
-        celle = "".join(f"<td>{cella_risposta(d, inter, sez, prof)}</td>" for d in domande["domande"])
-        righe.append(
-            f'<tr id="i-{e(inter["id"])}"><th>{e(inter["firma"])}</th><td>{dove}</td>{celle}</tr>'
-        )
-    tabella = (
-        '<div class="tab"><table><thead><tr><th>Firma</th><th>Rispetto al programma</th>'
-        f"{testate}</tr></thead><tbody>{''.join(righe)}</tbody></table></div>"
-    )
-    return intro + elenco + tabella
-
-
-def frase_copertura(ev):
-    totale = len(ev.get("programma", []))
-    coperti = sum(1 for m in ev.get("programma", []) if any(m["id"] in r["momenti"] for r in ev.get("racconti", [])))
-    if totale == 0:
-        return "Il programma è da completare."
-    return (
-        f"I momenti coperti da almeno un racconto sono {coperti} su {totale}. "
-        "Gli altri restano aperti: si può aggiungere un racconto firmato."
-    )
-
-
-def note_lezioni(ev):
-    pezzi = []
-    for m in ev.get("programma", []):
-        lezione = ev.get("lezioni", {}).get(m["id"])
-        if not lezione:
-            continue
-        d = date.fromisoformat(m["giorno"])
-        quando = f"{d.day} {MESI[d.month - 1]} {d.year}"
-        pezzi.append(
-            f"<p>Dalla demo di {e(m['chi'])}, il {e(quando)}, la lezione segnata è: {e(lezione['testo'])}. "
-            f'<a href="{e(lezione["fonte"])}">{e(lezione["fonte_etichetta"])}</a>.</p>'
-        )
-    return "".join(pezzi)
-
-
-def campo_demo(ev, mid, nome, sez):
-    """Soggetto, tecnica, carte e colori: se il dato c'è, porta una fonte https."""
-    valore = ev.get("campi_demo", {}).get(mid, {}).get(nome)
-    if not valore:
-        return vuoto(sez)
-    if not isinstance(valore, dict) or not valore.get("testo") or not str(valore.get("fonte", "")).startswith("https://"):
-        errore(f"{ev['id']}: il campo {nome} di {mid} richiede testo e fonte https")
-    etichetta = valore.get("fonte_etichetta") or "fonte"
-    return f'{e(valore["testo"])}. <a href="{e(valore["fonte"])}">{e(etichetta)}</a>'
-
-
-def pagina_scheda(sez, ev, oggi, domande):
+def pagina_scheda(sez, ev, oggi):
     prof = 3
     st = stato_evento(ev, oggi)
     etichetta = {"in_corso": "L'evento è in corso", "in_arrivo": "L'evento è in arrivo", "passato": "L'evento è passato"}[st]
-    fonte = ev["fonte"]
     quando = intervallo(ev["data_inizio"], ev["data_fine"])
     descrizione = f"{ev['titolo']}, {quando}, {ev['luogo']}."
-    note = paragrafi(ev.get("note", []))
-    lezioni = note_lezioni(ev)
     corpo = (
         f'<p class="filo"><a href="../../">Eventi</a> · <a href="../">Archivio {ev["anno"]}</a></p>'
         f"<h1>{e(ev['titolo'])}</h1>"
         f"<p class=\"sotto\">{e(ev['sottotitolo'])}</p>"
         + salti([
+            ("locandina", "Locandina"),
             ("programma", "Programma"),
-            ("demo", "Demo"),
-            ("io-cero", "Io c'ero"),
-            ("interviste", "Interviste"),
-            ("contributi", "Contributi"),
+            ("fotografie", "Fotografie"),
         ])
         + f'<div class="intro">{paragrafi(sez["scheda_intro"])}</div>'
-        + "<p>"
-        + f"{e(etichetta)}: {e(quando)}. {e(ev['luogo'])}.</p>"
-        + (f"<div class=\"nota\">{note}</div>" if note else "")
-        + "<p>"
-        + f'Fonte del programma: <a href="{e(fonte["url"])}">{e(fonte["etichetta"])}</a>, '
-        + f"letto il {e(data_it(fonte['letto']))}.</p>"
-        + f"<p>{e(frase_copertura(ev))}</p>"
+        + f"<p>{e(etichetta)}: {e(quando)}. {e(ev['luogo'])}.</p>"
+        + '<section class="blocco" id="locandina"><h2>Locandina</h2>'
+        + blocco_locandina(ev, sez, prof)
+        + "</section>"
         + '<section class="blocco" id="programma"><h2>Programma</h2>'
-        + tabella_programma(ev, sez)
+        + tabella_programma(ev)
         + "</section>"
-        + '<section class="blocco" id="demo"><h2>Demo</h2>'
-        + "<p>Per ogni demo restano visibili i campi ancora aperti, così si vede che cosa manca.</p>"
-        + (f"<div class=\"nota\">{lezioni}</div>" if lezioni else "")
-        + schede_demo(ev, sez, prof)
+        + '<section class="blocco" id="fotografie"><h2>Fotografie</h2>'
+        + f'<div class="nota">{paragrafi(sez["foto_intro"])}</div>'
+        + blocco_foto(ev, sez, prof)
         + "</section>"
-        + '<section class="blocco" id="io-cero"><h2>Racconti: io c\'ero</h2>'
-        + "<p>Ogni racconto è firmato. Vale per i momenti indicati, non per tutto l'evento.</p>"
-        + blocco_racconti(ev, sez, prof)
-        + "</section>"
-        + '<section class="blocco" id="interviste"><h2>Interviste</h2>'
-        + blocco_interviste(ev, sez, domande, prof)
-        + "</section>"
-        + blocco_contributi(sez)
         + piede(sez, prof)
     )
     return documento(ev["titolo"], descrizione, corpo)
@@ -674,21 +429,12 @@ def pagina_scheda(sez, ev, oggi, domande):
 
 def pagina():
     sez = carica_json(QUI / "sezione.json")
-    domande = carica_json(QUI / "domande.json")
-    attese = [
-        ("cominciato", "Come hai cominciato con l'acquerello?", None, None),
-        ("materiali", "Che materiali usi: carta (marca e grammatura), pennelli e marche di colori, con la tavolozza?", "/marche/", None),
-        ("consiglio", "Un consiglio per chi dipinge en plein air?", None, None),
-        ("errore", "Un errore da evitare?", None, None),
-        ("perche_qui", "Perché sei qui oggi?", None, "per_strada"),
-    ]
-    trovate = [
-        (d["id"], d["testo"], (d.get("rimando") or {}).get("href"), d.get("solo"))
-        for d in domande["domande"]
-    ]
-    if trovate != attese or not domande["domande"][1].get("come_detta"):
-        errore("le domande fisse non coincidono con quelle previste")
-    eventi = carica_eventi(domande)
+    for campo in ("introduzione", "scheda_intro", "archivio_intro", "foto_intro", "locandina_manca", "nessuna_foto"):
+        if campo not in sez:
+            errore(f"sezione.json: manca {campo}")
+    if sez["locandina_manca"] != "locandina da aggiungere":
+        errore("il testo della locandina mancante non è quello previsto")
+    eventi = carica_eventi()
     if PAGINE.exists():
         shutil.rmtree(PAGINE)
     PAGINE.mkdir(parents=True)
@@ -702,7 +448,7 @@ def pagina():
         for ev in del_anno:
             dest = cartella / ev["slug"]
             dest.mkdir(parents=True)
-            (dest / "index.html").write_text(pagina_scheda(sez, ev, oggi, domande), encoding="utf-8", newline="\n")
+            (dest / "index.html").write_text(pagina_scheda(sez, ev, oggi), encoding="utf-8", newline="\n")
     print(f"pagina: {CALENDARIO.name}, {len(eventi)} eventi, oggi {oggi.isoformat()} (Europe/Rome)")
 
 
