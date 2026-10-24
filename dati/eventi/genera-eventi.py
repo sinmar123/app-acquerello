@@ -8,8 +8,9 @@ Legge sezione.json e un file JSON per evento in schede/. Scrive eventi.html
 scripts/genera-sito.py copia il calendario in site/eventi/, inietta barra,
 chat e suggerimenti, e pubblica le altre pagine insieme alla cartella immagini/.
 
-Ogni scheda ha solo la locandina, il programma e le fotografie. Il file
-idee-interviste.md resta nel repository e non entra in queste pagine.
+Ogni scheda ha la locandina, il programma e le fotografie. In fondo, se il
+JSON ha «social», un riquadro di link testuali. Il file idee-interviste.md
+resta nel repository e non entra in queste pagine.
 
 Il giorno «oggi», per dire se un evento è in corso, in arrivo o passato, è
 quello di Europe/Rome nel momento della generazione.
@@ -19,7 +20,8 @@ apre con il suo orario; ogni foto è in immagini/ e ha credito e didascalia.
 Se una foto indica un momento, quello è una voce del programma e l'ora è
 nel formato 11.57: la foto sta accanto a quella voce. Le foto senza momento
 restano nella sezione fotografie. La locandina, se c'è, ha file, credito e
-fonte https. Nessun testo contiene «da verificare» né il trattino lungo.
+fonte https. Un riquadro social, se c'è, ha titolo e link https.
+Nessun testo contiene «da verificare» né il trattino lungo.
 Racconti, demo e interviste non sono ammessi in una scheda.
 """
 import html
@@ -86,6 +88,10 @@ caption { caption-side: bottom; text-align: left; font-size: .85em; color: #555;
 figure.foto { margin: 12px 0; }
 figure.foto img { width: 100%; max-width: 28rem; height: auto; border-radius: 8px; border: 1px solid #dfd5c3; display: block; }
 figure.foto figcaption { font-size: .9em; color: #444; margin-top: 6px; }
+.social { background: #fffdf8; border: 1px solid #dfd5c3; border-radius: 12px; padding: 12px 16px; margin: 22px 0 4px; }
+.social h2 { font-size: 1.05em; margin: 0 0 8px; }
+.social ul { margin: 0; padding-left: 1.15em; }
+.social li { margin: 4px 0; }
 footer { margin-top: 28px; border-top: 1px solid #ddd; padding-top: 12px; font-size: .9em; color: #444; }
 """
 
@@ -152,6 +158,27 @@ def carica_json(path):
         errore(f"{path.name} non è un JSON valido ({exc})")
     controlla_stringhe(dati, path.name)
     return dati
+
+
+def controlla_social(ev):
+    if "social" not in ev:
+        return
+    social = ev["social"]
+    if not isinstance(social, dict) or not str(social.get("titolo") or "").strip():
+        errore(f"{ev['id']}: social senza titolo")
+    link = social.get("link")
+    if not isinstance(link, list) or not link:
+        errore(f"{ev['id']}: social senza link")
+    visti = set()
+    for voce in link:
+        if not isinstance(voce, dict) or not str(voce.get("etichetta") or "").strip():
+            errore(f"{ev['id']}: link social senza etichetta")
+        url = str(voce.get("url") or "")
+        if not url.startswith("https://") or any(c in url for c in " \t"):
+            errore(f"{ev['id']}: il link social non è un https")
+        if url in visti:
+            errore(f"{ev['id']}: link social ripetuto")
+        visti.add(url)
 
 
 def stato_evento(ev, oggi):
@@ -245,6 +272,7 @@ def carica_eventi():
                     errore(f"{ev['id']}: la foto {foto['file']} ha un'ora assente o non valida")
             elif "ora" in foto and not ORA_OK.match(foto.get("ora", "")):
                 errore(f"{ev['id']}: la foto {foto['file']} ha un'ora non valida")
+        controlla_social(ev)
         eventi.append(ev)
     return eventi
 
@@ -437,6 +465,18 @@ def blocco_foto(ev, sez, prof):
     return "".join(pezzi)
 
 
+def link_esterno(url, etichetta):
+    return f'<a href="{e(url)}" target="_blank" rel="noopener">{e(etichetta)}</a>'
+
+
+def blocco_social(ev):
+    social = ev.get("social")
+    if not social:
+        return ""
+    voci = "".join(f"<li>{link_esterno(voce['url'], voce['etichetta'])}</li>" for voce in social["link"])
+    return f'<aside class="social"><h2>{e(social["titolo"])}</h2><ul>{voci}</ul></aside>'
+
+
 def pagina_scheda(sez, ev, oggi):
     prof = 3
     st = stato_evento(ev, oggi)
@@ -464,6 +504,7 @@ def pagina_scheda(sez, ev, oggi):
         + f'<div class="nota">{paragrafi(sez["foto_intro"])}</div>'
         + blocco_foto(ev, sez, prof)
         + "</section>"
+        + blocco_social(ev)
         + piede(sez, prof)
     )
     return documento(ev["titolo"], descrizione, corpo)

@@ -191,7 +191,8 @@ def riassunto_eventi():
 
     blocchi = [
         "Eventi (https://app-acquerello.pages.dev/eventi/): calendario, scheda per evento e archivio per anno. "
-        "Ogni scheda ha solo la locandina, il programma e le fotografie di chi ha partecipato. "
+        "Ogni scheda ha la locandina, il programma e le fotografie di chi ha partecipato. "
+        "In fondo alla scheda, solo se sono indicati, ci sono link social testuali: non se ne inventano altri. "
         "Ogni foto porta la didascalia e il nome di chi l'ha scattata. "
         "Se la locandina manca, in pagina c'è scritto «locandina da aggiungere»: non se ne inventa una. "
         "Non si aggiungono racconti, schede di demo né interviste."
@@ -215,6 +216,12 @@ def riassunto_eventi():
         foto = []
         for f in ev.get("foto", []):
             foto.append(f"- {f['didascalia']}. {f['credito']}.")
+        social = ev.get("social")
+        if social:
+            righe_social = "\n".join(f"- {voce['etichetta']}: {voce['url']}" for voce in social["link"])
+            testo_social = f"\n{social['titolo']}:\n{righe_social}"
+        else:
+            testo_social = ""
         blocchi.append(
             f"\n{ev['titolo']} ({url}). {ev['sottotitolo']}. "
             f"Dal {lunga(ev['data_inizio'])} al {lunga(ev['data_fine'])}. {ev['luogo']}. "
@@ -222,6 +229,7 @@ def riassunto_eventi():
             f"Locandina: {locandina}\n"
             f"Programma:\n{programma}\n"
             f"Fotografie:\n" + ("\n".join(foto) if foto else "- Nessuna.")
+            + testo_social
         )
     if len(blocchi) == 1:
         blocchi.append("Nessun evento in archivio.")

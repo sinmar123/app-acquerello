@@ -2,6 +2,18 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-24 - GBOT-app-acquerello - Riquadro social in fondo alla scheda di Sestri Levante
+
+- Richiesta di Sandro: in fondo alla sola scheda di Watercolor Sestri Levante, un riquadro di link testuali. Non entra nel piè di pagina del sito, né nel calendario, né nell'archivio, né nelle altre sezioni.
+- **Dati** (`social` in `schede/watercolor-sestri-levante-2026.json`): titolo e tre link https. Il campo è generico: senza `social` la scheda non ha il riquadro. Il generatore si ferma se manca il titolo, se un link non è https o se un indirizzo è ripetuto.
+- **Testo del riquadro**: «L'evento sui social». I link: «Profilo di Alessandro Sanvitale su X»; «Demo di Cesc Farré, post del 24/10/2026»; «Riassunto della giornata e quattro foto, post del 24/10/2026». Sono ancore, con `target="_blank"` e `rel="noopener"`, come gli altri link esterni del sito. Niente widget, embed, script o immagini esterne.
+- **Chat**: il prompt elenca questi link solo per la scheda che li ha, e chiede di non inventarne altri.
+- **Documenti**: una frase in `AGENTS.md` e in `CONTRIBUTING.md`.
+- Controlli: `python3 scripts/genera-sito.py` senza errori, compreso il controllo sui nomi di marca. Gulpease invariato: Principi 68, Colori 75, Marche 59, Soggetti 66, Alberi 72, Eventi 95, scheda Sestri Levante 83. L'archivio 2026 resta sotto le 100 parole, quindi l'indice non si calcola. `lib/prompt-chat.js` rigenerato. In attesa del via del curatore per l'unione su `main`.
+- Prossima azione: via del curatore. L'unione su `main` pubblica il sito.
+
+-- GBOT-app-acquerello
+
 ## 2026-10-24 - GBOT-app-acquerello - Quattro foto di Sestri Levante accanto al programma
 
 - Quattro fotografie di Alessandro Sanvitale, sabato 24/10/2026, entrano nella scheda di Watercolor Sestri Levante (`schede/watercolor-sestri-levante-2026.json`, file `immagini/wsl-2026-sandro-01.jpg` … `04.jpg`). Credito di tutte: «foto di Alessandro Sanvitale», come per lo scatto di Cesc Farré, che resta nella sezione Fotografie.
