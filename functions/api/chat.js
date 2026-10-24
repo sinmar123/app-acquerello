@@ -19,8 +19,21 @@ const PAGINE_VALIDE = [
   "/colori/",
   "/marche/",
   "/soggetti/",
-  "/alberi/"
+  "/alberi/",
+  "/eventi/"
 ];
+
+// Una sottopagina di una sezione resta nel contesto, per esempio la scheda di un evento.
+// Un indirizzo fuori dal sito torna alla home.
+function paginaNelSito(paginaRaw) {
+  const pagina = String(paginaRaw || "/").trim();
+  if (PAGINE_VALIDE.includes(pagina)) return pagina;
+  if (!/^\/[a-z0-9/-]+\/$/.test(pagina)) return "/";
+  for (const base of PAGINE_VALIDE) {
+    if (base !== "/" && pagina.startsWith(base)) return pagina;
+  }
+  return "/";
+}
 
 function rispostaJson(dati, stato = 200) {
   return new Response(JSON.stringify(dati), {
@@ -152,8 +165,7 @@ export async function onRequestPost(context) {
   if (domanda.length < 4) {
     return rispostaJson({ ok: false, errore: "Scrivi una domanda un po' più precisa (almeno 4 caratteri)." }, 400);
   }
-  const paginaRaw = String(body.pagina || "/").trim();
-  const pagina = PAGINE_VALIDE.includes(paginaRaw) ? paginaRaw : "/";
+  const pagina = paginaNelSito(body.pagina);
 
   // Prima si prenota la domanda, poi si chiama il modello: se la chiamata fallisce la si restituisce.
   const perIp = await incrementa(db, chiaveIp, periodo, LIMITE_SETTIMANALE);

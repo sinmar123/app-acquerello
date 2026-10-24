@@ -1,0 +1,233 @@
+{
+  "id": "watercolor-sestri-levante-2026",
+  "slug": "watercolor-sestri-levante",
+  "anno": 2026,
+  "titolo": "Watercolor Sestri Levante 2026",
+  "sottotitolo": "Rassegna d'Arte e Mostra di Acquarelli",
+  "data_inizio": "2026-10-23",
+  "data_fine": "2026-10-25",
+  "luogo": "Sala Agave, ex Convento dell'Annunziata, Sestri Levante",
+  "fonte": {
+    "url": "https://watercolorsestrilevante.it/#programma",
+    "etichetta": "programma ufficiale",
+    "letto": "2026-10-24"
+  },
+  "controllo_giorni": {
+    "2026-10-23": "venerdì",
+    "2026-10-24": "sabato",
+    "2026-10-25": "domenica"
+  },
+  "note": [
+    "La pagina indica la manifestazione presso la Sala Agave del Convento dell'Annunziata.",
+    "È promossa dal Comune di Sestri Levante.",
+    "La stessa pagina chiama il luogo Ex Convento dell'Annunziata."
+  ],
+  "programma": [
+    {
+      "id": "v23-monopoli",
+      "giorno": "2026-10-23",
+      "fascia": "mattina",
+      "orario": "Dalle 09.30 alle 12.30",
+      "voce": "Dalle 09.30 alle 12.30. Sessione didattica: Carlo Monopoli",
+      "demo": false
+    },
+    {
+      "id": "v23-arapi",
+      "giorno": "2026-10-23",
+      "fascia": "mattina",
+      "orario": "Dalle 12.30 alle 13.30",
+      "voce": "Dalle 12.30 alle 13.30. Demo: Igli Arapi",
+      "chi": "Igli Arapi",
+      "demo": true
+    },
+    {
+      "id": "v23-bomben",
+      "giorno": "2026-10-23",
+      "fascia": "pomeriggio",
+      "orario": "Dalle 15.00 alle 16.00",
+      "voce": "Dalle 15.00 alle 16.00. Demo: Sonia Bomben",
+      "chi": "Sonia Bomben",
+      "demo": true
+    },
+    {
+      "id": "v23-massa",
+      "giorno": "2026-10-23",
+      "fascia": "pomeriggio",
+      "orario": "Dalle 16.30 alle 17.30",
+      "voce": "Dalle 16.30 alle 17.30. Demo: Lorena Massa",
+      "chi": "Lorena Massa",
+      "demo": true
+    },
+    {
+      "id": "s24-farre",
+      "giorno": "2026-10-24",
+      "fascia": "mattina",
+      "orario": "Dalle 10.00 alle 11.00",
+      "voce": "Dalle 10.00 alle 11.00. Demo: Cesc Farré",
+      "chi": "Cesc Farré",
+      "demo": true
+    },
+    {
+      "id": "s24-pretti",
+      "giorno": "2026-10-24",
+      "fascia": "mattina",
+      "orario": "Alle 11.00",
+      "voce": "Alle 11.00. En plein air: Franco Pretti",
+      "demo": false
+    },
+    {
+      "id": "s24-brazzale",
+      "giorno": "2026-10-24",
+      "fascia": "mattina",
+      "orario": "Dalle 12.00 alle 13.00",
+      "voce": "Dalle 12.00 alle 13.00. Demo: Elena Brazzale",
+      "chi": "Elena Brazzale",
+      "demo": true
+    },
+    {
+      "id": "s24-salvador",
+      "giorno": "2026-10-24",
+      "fascia": "pomeriggio",
+      "orario": "Alle 14.00",
+      "voce": "Alle 14.00. En plein air: Barnaba Salvador",
+      "demo": false
+    },
+    {
+      "id": "s24-zangarelli",
+      "giorno": "2026-10-24",
+      "fascia": "pomeriggio",
+      "orario": "Dalle 15.00 alle 16.00",
+      "voce": "Dalle 15.00 alle 16.00. Demo: Roberto Zangarelli",
+      "chi": "Roberto Zangarelli",
+      "demo": true
+    },
+    {
+      "id": "s24-wihlem",
+      "giorno": "2026-10-24",
+      "fascia": "pomeriggio",
+      "orario": "Dalle 15.00 alle 16.00",
+      "voce": "Dalle 15.00 alle 16.00. Laboratorio per bambini: Yana Wihlem",
+      "nota": "Nel programma il nome è scritto «Yana Wihlem». Nella biografia della stessa pagina è scritto «Yana Wilhelm».",
+      "demo": false
+    },
+    {
+      "id": "s24-iocco",
+      "giorno": "2026-10-24",
+      "fascia": "pomeriggio",
+      "orario": "Alle 16.30",
+      "voce": "Alle 16.30. En plein air: Massimiliano Iocco",
+      "demo": false
+    },
+    {
+      "id": "s24-andreoli",
+      "giorno": "2026-10-24",
+      "fascia": "pomeriggio",
+      "orario": "Dalle 17.30 alle 18.30",
+      "voce": "Dalle 17.30 alle 18.30. Demo: Roberto Andreoli",
+      "chi": "Roberto Andreoli",
+      "demo": true
+    },
+    {
+      "id": "s24-cerri",
+      "giorno": "2026-10-24",
+      "fascia": "pomeriggio",
+      "orario": "Dalle 18.00 alle 19.00",
+      "voce": "Dalle 18.00 alle 19.00. Performance: Geremia Cerri (in collaborazione con Raul Orvieto)",
+      "demo": false
+    },
+    {
+      "id": "d25-sketching",
+      "giorno": "2026-10-25",
+      "fascia": "mattina",
+      "orario": "Alle 09.30",
+      "voce": "Alle 09.30. Ritrovo Gruppi Sketching",
+      "demo": false
+    },
+    {
+      "id": "d25-feltracco",
+      "giorno": "2026-10-25",
+      "fascia": "mattina",
+      "orario": "Dalle 10.00 alle 11.00",
+      "voce": "Dalle 10.00 alle 11.00. Demo: Felice Feltracco",
+      "chi": "Felice Feltracco",
+      "demo": true
+    },
+    {
+      "id": "d25-fracasso",
+      "giorno": "2026-10-25",
+      "fascia": "mattina",
+      "orario": "Dalle 11.00 alle 12.00",
+      "voce": "Dalle 11.00 alle 12.00. En plein air: Pasqualino Fracasso",
+      "demo": false
+    },
+    {
+      "id": "d25-premiazione",
+      "giorno": "2026-10-25",
+      "fascia": "mattina",
+      "orario": "Dalle 12.00",
+      "voce": "Dalle 12.00. Premiazione concorso «Fermo Immagine»",
+      "nota": "La pagina non indica un orario di fine.",
+      "demo": false
+    },
+    {
+      "id": "d25-farinelli",
+      "giorno": "2026-10-25",
+      "fascia": "pomeriggio",
+      "orario": "Alle 14.00",
+      "voce": "Alle 14.00. En plein air: Bruno Farinelli",
+      "demo": false
+    },
+    {
+      "id": "d25-smirnova",
+      "giorno": "2026-10-25",
+      "fascia": "pomeriggio",
+      "orario": "Dalle 14.30 alle 15.30",
+      "voce": "Dalle 14.30 alle 15.30. Demo: Tatiana Smirnova",
+      "chi": "Tatiana Smirnova",
+      "demo": true
+    },
+    {
+      "id": "d25-boccuni",
+      "giorno": "2026-10-25",
+      "fascia": "pomeriggio",
+      "orario": "Alle 15.30",
+      "voce": "Alle 15.30. En plein air: Giuseppe Boccuni",
+      "demo": false
+    },
+    {
+      "id": "d25-chiusura",
+      "giorno": "2026-10-25",
+      "fascia": "pomeriggio",
+      "orario": "Alle 16.30",
+      "voce": "Alle 16.30. Ritrovo di chiusura Gruppi Sketching",
+      "demo": false
+    }
+  ],
+  "lezioni": {
+    "s24-farre": {
+      "testo": "less is more",
+      "fonte": "https://x.com/alessandro_snv/status/2113927807763960240",
+      "fonte_etichetta": "post di Alessandro Sanvitale del 24/10/2026"
+    }
+  },
+  "racconti": [
+    {
+      "id": "sanvitale-farre",
+      "firma": "Alessandro Sanvitale",
+      "momenti": ["s24-farre"],
+      "testo": "Tanti video sul web, ma una demo dal vero è un'altra storia. Stamattina Cesc Farré a Watercolor Sestri Levante: less is more, e si sente.",
+      "fonte": {
+        "url": "https://x.com/alessandro_snv/status/2113927807763960240",
+        "etichetta": "post di Alessandro Sanvitale del 24/10/2026"
+      },
+      "foto": [
+        {
+          "file": "farre-sestri-2026-sandro.jpg",
+          "credito": "foto di Alessandro Sanvitale",
+          "alt": "Demo di Cesc Farré a Watercolor Sestri Levante, la mattina del 24 ottobre 2026"
+        }
+      ]
+    }
+  ],
+  "interviste": []
+}
