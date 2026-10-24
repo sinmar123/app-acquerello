@@ -93,7 +93,7 @@ SEZIONI = [
 ]
 
 DESCRIZIONE_HOME = (
-    "Quaderno di un dilettante, rivolto ad altri dilettanti. Appunti di studio dell'acquerello: le tre consistenze e gli stati della carta, "
+    "Il Quaderno nasce tra non professionisti e a loro si rivolge. Appunti di studio dell'acquerello: le tre consistenze e gli stati della carta, "
     "la teoria dei colori con un calcolatore di miscele, i tubetti marca per marca, gli esercizi sugli alberi tratti dai video "
     "e il calendario degli eventi."
 )
@@ -702,7 +702,8 @@ def inietta_elementi_comuni(html_pagina: str, sezione: dict, pagina_path: str, p
 
 
 # Voci del riquadro «in costruzione» della home, testo approvato dal curatore il 21/10/2026: ogni voce porta
-# alla pagina o allo strumento che nomina.
+# alla pagina o allo strumento che nomina. La voce della casella, prima in questo elenco, dal 24/10/2026
+# è la frase che chiude il riquadro, così non compare due volte.
 IN_COSTRUZIONE = [
     'i <a href="./principi/">principi generali su acqua, colore e carta</a>, dalle tre consistenze della miscela agli stati della carta',
     'un <a href="./alberi/">primo modulo di esercizi su alberi, siepi e arbusti</a>, con i passaggi dei video didattici indicati al secondo',
@@ -710,7 +711,6 @@ IN_COSTRUZIONE = [
     'un <a href="./colori/#calcolatore">calcolatore</a> che propone, come stima, la miscela più vicina a un colore dato',
     "un <a href=\"#assistente-ai\">assistente basato sull'intelligenza artificiale</a> per le domande sulla tecnica, "
     "con un limite di 5 domande a settimana",
-    'una <a href="#suggerimenti">casella per proporre correzioni, integrazioni e nuovi video</a>',
 ]
 
 
@@ -799,6 +799,7 @@ main{max-width:820px;margin:0 auto;padding:18px 14px 12px}
 .cf-sviluppo p{margin:0 0 6px}
 .cf-sviluppo strong{color:#6b3418}
 .cf-sviluppo ul{margin:0;padding-left:20px}
+.cf-sviluppo ul + p{margin:10px 0 0}
 .cf-sviluppo li{margin:3px 0}
 .cf-sviluppo a{color:#6b3418}
 .sezioni-tit{margin:0 0 12px;font-size:1.12rem;color:#263529}
@@ -857,19 +858,20 @@ def genera_home(sezioni_pronte: list[dict]) -> str:
   <div class="testa-in">
     <h1>Quaderno di acquerello</h1>
     <p>Appunti di studio dell'acquerello: acqua e carta, colori e tubetti, soggetti, esercizi tratti dai video ed eventi</p>
-    <p class="nota">Questo è il quaderno di un dilettante, rivolto ad altri dilettanti. Raccoglie ciò che si impara strada facendo, con i limiti di chi non è un maestro, e si offre come un aiuto tra appassionati.</p>
+    <p class="nota">Il Quaderno nasce tra non professionisti e a loro si rivolge. Raccoglie ciò che si impara strada facendo, con i limiti di chi non è un maestro, ed è aperto ai contributi di tutti gli appassionati.</p>
   </div>
 </header>
 {striscia_tavolozza()}
 <main>
   <details class="cf-origine">
     <summary>Nota di metodo</summary>
-    <p>Chi oggi apprende una disciplina pratica dispone di una documentazione vastissima, distribuita tra manuali, schede tecniche e centinaia di ore di dimostrazioni filmate; la vera difficoltà sta nel ricondurre una materia tanto dispersa a un criterio ordinato e consultabile mentre si lavora. Gli strumenti di intelligenza artificiale permettono di compiere a monte questo lavoro di spoglio, confronto e classificazione, restituendo al momento opportuno il dato che serve per guidare la mano ed esercitarsi con maggiore sicurezza. Questo quaderno nasce dall'applicazione di tale approccio allo studio dell'acquerello: sistematizza il comportamento di acqua, carta e pigmenti, scompone e indicizza al secondo le sequenze esecutive nei video didattici e affianca al tavolo da lavoro strumenti di riscontro immediato, dal calcolatore colorimetrico all'assistente tecnico integrato nelle pagine.</p>
+    <p>Chi oggi apprende una disciplina pratica dispone di una documentazione vastissima, distribuita tra manuali, schede tecniche e centinaia di ore di dimostrazioni filmate; la vera difficoltà sta nel ricondurre una materia tanto dispersa a un criterio ordinato e consultabile mentre si lavora. Gli strumenti di intelligenza artificiale permettono di compiere a monte questo lavoro di spoglio, confronto e classificazione, così da aiutare a esercitarsi con più consapevolezza. Il Quaderno nasce dall'applicazione di tale approccio allo studio dell'acquerello: ordina il comportamento di acqua, carta e pigmenti, indica al secondo le sequenze esecutive nei video didattici e affianca al tavolo da lavoro strumenti di riscontro, dal calcolatore colorimetrico all'assistente tecnico integrato nelle pagine.</p>
   </details>
   <section class="cf-sviluppo" aria-label="Stato del Quaderno">
     <p><strong>Il Quaderno è in costruzione.</strong> Le sezioni esistenti vengono ampliate progressivamente e altre se ne
     aggiungeranno. Nella versione attuale il Quaderno mette a disposizione:</p>
     <ul>{voci}</ul>
+    <p>Chiunque può proporre correzioni, integrazioni e video dalla <a href="#suggerimenti">casella dei suggerimenti</a>: il Quaderno è aperto ai contributi di tutti gli appassionati.</p>
   </section>
 
   <h2 class="sezioni-tit">Le sezioni</h2>

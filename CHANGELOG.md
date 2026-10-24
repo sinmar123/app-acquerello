@@ -2,6 +2,34 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-24 - GBOT-app-acquerello - Home: non professionisti, al posto di dilettanti
+
+- Correzione di Sandro sulla nota in home: «dilettante» e «dilettanti» diventano «non professionista» e «non professionisti». Poi Sandro sceglie l'incipit «Il Quaderno nasce tra non professionisti e a loro si rivolge.» Il resto della nota resta, compresa la nota di metodo.
+- **Nota** (`genera_home`): «Il Quaderno nasce tra non professionisti e a loro si rivolge. Raccoglie ciò che si impara strada facendo, con i limiti di chi non è un maestro, ed è aperto ai contributi di tutti gli appassionati.»
+- **Descrizione per i motori di ricerca** (`DESCRIZIONE_HOME`, anche `og:description`) e **README**: in apertura, «Il Quaderno nasce tra non professionisti e a loro si rivolge.»
+- Cercate le occorrenze entrate con le due modifiche della home. Sostituite in `scripts/genera-sito.py` (nota e descrizione) e in `README.md`. In `lib/prompt-chat.js`, `CONTRIBUTING.md` e `AGENTS.md` non ce n'erano. Le voci già scritte nel CHANGELOG restano come storia.
+- Controlli: `python3 scripts/genera-sito.py` senza errori, compreso `controlla_marche_fuori_sezione`. Gulpease: Principi 68, Colori 75, Marche 59, Soggetti 66, Alberi 72, Eventi 95, scheda Sestri Levante 83. L'archivio 2026 resta sotto le 100 parole, quindi l'indice non si calcola. La home resta a Gulpease 52. `lib/prompt-chat.js` invariato. In attesa del via del curatore per l'unione su `main`.
+- Prossima azione: via del curatore. L'unione su `main` pubblica il sito.
+
+-- GBOT-app-acquerello
+
+## 2026-10-24 - GBOT-app-acquerello - Home: Quaderno aperto ai contributi
+
+- Richiesta di Sandro: la nota sotto l'introduzione non deve suonare come il quaderno di una sola persona. Il sito è aperto ad altri contributi. La nota di metodo segue lo stesso tono, da appassionati che imparano, non da esperti.
+- **Nota** (`genera_home` in `scripts/genera-sito.py`): «Il Quaderno nasce tra dilettanti ed è rivolto ad altri dilettanti. Raccoglie ciò che si impara strada facendo, con i limiti di chi non è un maestro, ed è aperto ai contributi di tutti gli appassionati.» I sei campioni, le schede delle sezioni e l'informativa restano com'erano.
+- **Descrizione per i motori di ricerca** (`DESCRIZIONE_HOME`): in apertura, «Il Quaderno nasce tra dilettanti ed è rivolto ad altri dilettanti.» Il resto della descrizione resta.
+- **README**: la riga di apertura, nello stesso senso.
+- **Nota di metodo**, stessi fatti (video indicati al secondo, calcolatore colorimetrico, assistente nelle pagine, limite di 5 domande a settimana nell'elenco). Frasi ritoccate, prima e dopo:
+  - «restituendo al momento opportuno il dato che serve per guidare la mano ed esercitarsi con maggiore sicurezza» diventa «così da aiutare a esercitarsi con più consapevolezza».
+  - «Questo quaderno» diventa «Il Quaderno».
+  - «sistematizza il comportamento di acqua, carta e pigmenti, scompone e indicizza al secondo le sequenze esecutive nei video didattici» diventa «ordina il comportamento di acqua, carta e pigmenti, indica al secondo le sequenze esecutive nei video didattici».
+  - «strumenti di riscontro immediato» diventa «strumenti di riscontro».
+- **Elenco** di ciò che il Quaderno mette a disposizione: la voce «una casella per proporre correzioni, integrazioni e nuovi video» non si ripete. In fondo all'elenco, la frase «Chiunque può proporre correzioni, integrazioni e video dalla casella dei suggerimenti: il Quaderno è aperto ai contributi di tutti gli appassionati.» Il collegamento porta alla casella già in pagina.
+- Controlli: `python3 scripts/genera-sito.py` senza errori, compreso `controlla_marche_fuori_sezione`. Gulpease: Principi 68, Colori 75, Marche 59, Soggetti 66, Alberi 72, Eventi 95, scheda Sestri Levante 83. L'archivio 2026 resta sotto le 100 parole, quindi l'indice non si calcola. La home resta a Gulpease 52, come prima del ritocco (soglia 52). `lib/prompt-chat.js` invariato. In attesa del via del curatore per l'unione su `main`.
+- Prossima azione: via del curatore. L'unione su `main` pubblica il sito.
+
+-- GBOT-app-acquerello
+
 ## 2026-10-24 - GBOT-app-acquerello - Riquadro social in fondo alla scheda di Sestri Levante
 
 - Richiesta di Sandro: in fondo alla sola scheda di Watercolor Sestri Levante, un riquadro di link testuali. Non entra nel piè di pagina del sito, né nel calendario, né nell'archivio, né nelle altre sezioni.
