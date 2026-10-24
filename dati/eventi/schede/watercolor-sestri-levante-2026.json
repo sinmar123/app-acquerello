@@ -58,7 +58,8 @@
       "giorno": "2026-10-24",
       "fascia": "mattina",
       "orario": "Alle 11.00",
-      "voce": "Alle 11.00. En plein air: Franco Pretti"
+      "voce": "Alle 11.00. En plein air: Franco Pretti",
+      "nota": "Il programma ufficiale indica Franco Pretti alle 11.00. Rispetto a quella voce, il 24/10 alle 11.30, dopo Cesc Farré, in spiaggia, sulla Baia delle Favole, ha dipinto Igli Arapi."
     },
     {
       "id": "s24-brazzale",
@@ -174,6 +175,55 @@
       "didascalia": "Cesc Farré, demo del 24/10/2026",
       "credito": "foto di Alessandro Sanvitale",
       "alt": "Cesc Farré, demo del 24/10/2026"
+    },
+    {
+      "file": "wsl-2026-sandro-01.jpg",
+      "momento": "s24-pretti",
+      "ora": "11.57",
+      "didascalia": "Igli Arapi, en plein air in spiaggia, sulla Baia delle Favole, il 24/10/2026 alle 11.57. Il promontorio con il leudo in primo piano",
+      "credito": "foto di Alessandro Sanvitale",
+      "alt": "Igli Arapi, en plein air in spiaggia, sulla Baia delle Favole, il 24/10/2026 alle 11.57. Il promontorio con il leudo in primo piano"
+    },
+    {
+      "file": "wsl-2026-sandro-02.jpg",
+      "momento": "s24-salvador",
+      "ora": "15.29",
+      "didascalia": "Barnaba Salvador, en plein air in Via XXV Aprile e Via della Chiusa, il 24/10/2026 alle 15.29",
+      "credito": "foto di Alessandro Sanvitale",
+      "alt": "Barnaba Salvador, en plein air in Via XXV Aprile e Via della Chiusa, il 24/10/2026 alle 15.29"
+    },
+    {
+      "file": "wsl-2026-sandro-03.jpg",
+      "momento": "s24-zangarelli",
+      "ora": "15.39",
+      "didascalia": "Il tavolo della demo di Roberto Zangarelli in Sala Agave, il 24/10/2026 alle 15.39",
+      "credito": "foto di Alessandro Sanvitale",
+      "alt": "Il tavolo della demo di Roberto Zangarelli in Sala Agave, il 24/10/2026 alle 15.39"
+    },
+    {
+      "file": "wsl-2026-sandro-04.jpg",
+      "momento": "s24-iocco",
+      "ora": "16.44",
+      "didascalia": "Massimiliano Iocco, en plein air, vista sul mare dal cavalletto, il 24/10/2026 alle 16.44",
+      "credito": "foto di Alessandro Sanvitale",
+      "alt": "Massimiliano Iocco, en plein air, vista sul mare dal cavalletto, il 24/10/2026 alle 16.44"
     }
-  ]
+  ],
+  "social": {
+    "titolo": "L'evento sui social",
+    "link": [
+      {
+        "etichetta": "Profilo di Alessandro Sanvitale su X",
+        "url": "https://x.com/alessandro_snv"
+      },
+      {
+        "etichetta": "Demo di Cesc Farré, post del 24/10/2026",
+        "url": "https://x.com/alessandro_snv/status/2113927807763960240"
+      },
+      {
+        "etichetta": "Riassunto della giornata e quattro foto, post del 24/10/2026",
+        "url": "https://x.com/alessandro_snv/status/2114044128484893135"
+      }
+    ]
+  }
 }

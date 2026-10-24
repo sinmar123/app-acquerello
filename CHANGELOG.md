@@ -2,6 +2,36 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-24 - GBOT-app-acquerello - Riquadro social in fondo alla scheda di Sestri Levante
+
+- Richiesta di Sandro: in fondo alla sola scheda di Watercolor Sestri Levante, un riquadro di link testuali. Non entra nel piè di pagina del sito, né nel calendario, né nell'archivio, né nelle altre sezioni.
+- **Dati** (`social` in `schede/watercolor-sestri-levante-2026.json`): titolo e tre link https. Il campo è generico: senza `social` la scheda non ha il riquadro. Il generatore si ferma se manca il titolo, se un link non è https o se un indirizzo è ripetuto.
+- **Testo del riquadro**: «L'evento sui social». I link: «Profilo di Alessandro Sanvitale su X»; «Demo di Cesc Farré, post del 24/10/2026»; «Riassunto della giornata e quattro foto, post del 24/10/2026». Sono ancore, con `target="_blank"` e `rel="noopener"`, come gli altri link esterni del sito. Niente widget, embed, script o immagini esterne.
+- **Chat**: il prompt elenca questi link solo per la scheda che li ha, e chiede di non inventarne altri.
+- **Documenti**: una frase in `AGENTS.md` e in `CONTRIBUTING.md`.
+- Controlli: `python3 scripts/genera-sito.py` senza errori, compreso il controllo sui nomi di marca. Gulpease invariato: Principi 68, Colori 75, Marche 59, Soggetti 66, Alberi 72, Eventi 95, scheda Sestri Levante 83. L'archivio 2026 resta sotto le 100 parole, quindi l'indice non si calcola. `lib/prompt-chat.js` rigenerato. In attesa del via del curatore per l'unione su `main`.
+- Prossima azione: via del curatore. L'unione su `main` pubblica il sito.
+
+-- GBOT-app-acquerello
+
+## 2026-10-24 - GBOT-app-acquerello - Quattro foto di Sestri Levante accanto al programma
+
+- Quattro fotografie di Alessandro Sanvitale, sabato 24/10/2026, entrano nella scheda di Watercolor Sestri Levante (`schede/watercolor-sestri-levante-2026.json`, file `immagini/wsl-2026-sandro-01.jpg` … `04.jpg`). Credito di tutte: «foto di Alessandro Sanvitale», come per lo scatto di Cesc Farré, che resta nella sezione Fotografie.
+- **Accanto alla voce** (`genera-eventi.py`): una foto con `momento` e `ora` (formato 11.57) compare sotto quella voce del programma. In Fotografie l'elenco segue l'orario dello scatto e rimanda alla voce. Senza `momento`, la foto resta solo in Fotografie. Il generatore si ferma se il momento non è una voce o se l'ora non è valida.
+- **Didascalie**, uguali al testo alternativo:
+  - 11.57, accanto alla voce delle 11.00: «Igli Arapi, en plein air in spiaggia, sulla Baia delle Favole, il 24/10/2026 alle 11.57. Il promontorio con il leudo in primo piano».
+  - 15.29, Barnaba Salvador: «Barnaba Salvador, en plein air in Via XXV Aprile e Via della Chiusa, il 24/10/2026 alle 15.29».
+  - 15.39, Roberto Zangarelli: «Il tavolo della demo di Roberto Zangarelli in Sala Agave, il 24/10/2026 alle 15.39».
+  - 16.44, Massimiliano Iocco: «Massimiliano Iocco, en plein air, vista sul mare dal cavalletto, il 24/10/2026 alle 16.44».
+- **Nota sul cambio di programma**, accanto alla voce di sabato «Alle 11.00. En plein air: Franco Pretti», senza riscrivere la voce copiata dalla fonte: «Il programma ufficiale indica Franco Pretti alle 11.00. Rispetto a quella voce, il 24/10 alle 11.30, dopo Cesc Farré, in spiaggia, sulla Baia delle Favole, ha dipinto Igli Arapi.» La demo di Igli Arapi del venerdì 23/10, dalle 12.30 alle 13.30, resta com'è: la foto non è di quella demo.
+- **Nomi e luoghi**. Salvador, Zangarelli e Iocco coincidono con le voci del programma. Sala Agave coincide con il luogo dell'evento. Il programma ufficiale non nomina la Baia delle Favole, il leudo, Via XXV Aprile, Via della Chiusa né la vista sul mare: queste indicazioni stanno solo nelle didascalie, dai dati delle foto, e non contraddicono una voce che non indica un altro luogo. Gli orari degli scatti sono successivi all'inizio della voce. Quello di Zangarelli cade nella fascia 15.00-16.00.
+- **Chat** (`scripts/genera-sito.py`): il prompt riporta anche la nota di una voce, così non resta solo il testo del programma ufficiale. Vale anche per la grafia di Yana Wihlem e per la premiazione senza orario di fine.
+- **Documenti**: una frase in `AGENTS.md` e in `CONTRIBUTING.md` sul posto della foto accanto alla voce.
+- Controlli: `python3 scripts/genera-sito.py` senza errori, compreso il controllo sui nomi di marca. Gulpease: Principi 68, Colori 75, Marche 59, Soggetti 66, Alberi 72, Eventi 95, scheda Sestri Levante 83. L'archivio 2026 resta sotto le 100 parole, quindi l'indice non si calcola. `lib/prompt-chat.js` rigenerato. In attesa del via del curatore per l'unione su `main`.
+- Prossima azione: via del curatore. L'unione su `main` pubblica il sito.
+
+-- GBOT-app-acquerello
+
 ## 2026-10-24 - GBOT-app-acquerello - Home: quaderno di un dilettante per dilettanti
 
 - Richiesta di Sandro: precisare in home, con registro curato, che il Quaderno è di un dilettante e si rivolge ad altri dilettanti. Raccoglie ciò che si impara strada facendo, con i limiti di chi non è un maestro, e si offre come un aiuto tra appassionati.
