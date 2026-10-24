@@ -3,7 +3,7 @@
 
 Uso: python genera-marche.py pagina
 
-Legge marche.json e i sei colori di base da ../colori/tavolozza.json e scrive marche.html accanto a sé.
+Legge marche.json e i sei colori proposti da ../colori/tavolozza.json e scrive marche.html accanto a sé.
 scripts/genera-sito.py la copia in site/marche/index.html.
 Controlli: ogni riga ha un colore della tavolozza, una fonte ufficiale (link) e la data di controllo;
 ogni serie copre tutti e sei i colori; i rimandi dei capitoli puntano a serie esistenti; nessun testo
@@ -149,7 +149,7 @@ def pagina():
         nota = f'<p class="nota-serie">{e(m["nota"])}</p>' if m.get("nota") else ""
         sezioni.append(
             f'<section class="cap" id="{e(m["id"])}"><h2>{e(titoli[m["id"]])}</h2>{nota}'
-            f'<div class="tab"><table class="tub"><tr><th>Colore della tavolozza</th><th>Tubetto</th><th>{n_tit}</th>'
+            f'<div class="tab"><table class="tub"><tr><th>Colore proposto</th><th>Tubetto</th><th>{n_tit}</th>'
             f'<th>Pigmenti</th><th>Trasparenza</th><th>Fonte</th></tr>{"".join(righe)}</table></div>'
             f'<p class="nota-serie"><a href="{e(m["fonte_generale"])}" target="_blank" '
             f'rel="noopener">Tabella generale della serie</a> sul sito del produttore.</p></section>')
@@ -176,7 +176,7 @@ def pagina():
 <nav class="salti">{salti}</nav>
 <div class="intro" id="apertura">{intro}
 <p>{e(d['criterio'])} <a href="{e(d['criterio_fonte'])}" target="_blank" rel="noopener">Il video su YouTube ↗</a></p></div>
-<p class="legenda">{e(d['nota_trasparenza'])} I nomi comuni e i pigmenti della tavolozza sono quelli della sezione
+<p class="legenda">{e(d['nota_trasparenza'])} I nomi comuni e i pigmenti dei sei colori proposti sono quelli della sezione
 <a href="../colori/#tavolozza">Teoria dei colori</a>.</p>
 {chr(10).join(sezioni)}
 <section class="cap" id="stesso-nome"><h2>Stesso nome, pigmenti diversi</h2>

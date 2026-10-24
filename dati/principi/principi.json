@@ -1,11 +1,11 @@
 {
- "data": "2026-10-23",
- "nota": "Testi della sezione Principi generali (18/10/2026, rivisti il 21/10/2026). Ogni affermazione ha le sue fonti; ciò che non aveva fonte è rimasto fuori. Il capitolo 8 (22/10/2026) è il testo della sezione Studio ed en plein air, spostato allora senza riscriverlo; il 23/10/2026 le indicazioni sono riformulate come proposte. Lo stesso giorno, sulle frasi coperte da pagine esterne approvate dal curatore, il rimando al solo testo del Quaderno è stato affiancato o sostituito. Le frasi che non hanno una fonte esterna rimandano ancora alla voce «Testo del Quaderno».",
+ "data": "2026-10-24",
+ "nota": "Testi della sezione Principi generali (18/10/2026, rivisti il 21/10/2026). Ogni affermazione ha le sue fonti; ciò che non aveva fonte è rimasto fuori. Il capitolo 8 (22/10/2026) è il testo della sezione Studio ed en plein air, spostato allora senza riscriverlo; il 23/10/2026 le indicazioni sono riformulate come proposte. Lo stesso giorno, sulle frasi coperte da pagine esterne approvate dal curatore, il rimando al solo testo del Quaderno è stato affiancato o sostituito. Le frasi che non hanno una fonte esterna rimandano ancora alla voce «Testo del Quaderno». Il 24/10/2026 i sei colori si leggono come proposta, non come tavolozza fissa.",
  "titolo": "Principi generali: acqua, colore e carta",
  "sottotitolo": "Le tre consistenze della miscela, gli stati della carta e come abbinarli, prima di ogni esercizio; il lavoro in studio e all'aperto.",
  "introduzione": [
   "Questa sezione raccoglie le regole che ricorrono nei video e nei corsi esaminati per il Quaderno. Ogni paragrafo rimanda con un numero alle fonti elencate in fondo al capitolo: gli appunti di studio dei corsi e i video della sezione Alberi, che si aprono al minuto indicato.",
-  "Il lavoro in studio e all'aperto, con la tavolozza ridotta e le 12 miscele, è proposto nel capitolo 8, <a href=\"#studio-aperto\">In studio e all'aperto</a>. Gli esercizi per soggetto sono nella sezione <a href=\"../soggetti/\">Soggetti</a>, a cominciare dagli <a href=\"../alberi/\">Alberi</a>. I pigmenti, la tavolozza e il calcolatore di miscele, con la striscia di diluizione dal miele al tè, sono nella sezione <a href=\"../colori/\">Teoria dei colori</a>."
+  "Il lavoro in studio e all'aperto, con i sei colori proposti e le 12 miscele, è proposto nel capitolo 8, <a href=\"#studio-aperto\">In studio e all'aperto</a>. Gli esercizi per soggetto sono nella sezione <a href=\"../soggetti/\">Soggetti</a>, a cominciare dagli <a href=\"../alberi/\">Alberi</a>. I pigmenti, i sei colori proposti e il calcolatore di miscele, con la striscia di diluizione dal miele al tè, sono nella sezione <a href=\"../colori/\">Teoria dei colori</a>."
  ],
  "nota_fonti": "Le citazioni dei video provengono dalle schede di studio preparate per la sezione Alberi: sono riassunti del parlato e del gesto, controllati a campione, e il collegamento apre il video al minuto indicato per la verifica. Le citazioni dei corsi provengono dagli appunti di studio delle lezioni. Nel capitolo 8 alcune frasi rimandano anche a pagine web, con un passo breve letto sulla pagina.",
  "capitoli": [
@@ -405,7 +405,7 @@
     },
     {
      "tipo": "p",
-     "testo": "Questo capitolo propone i due modi di lavorare usati nei moduli dei Soggetti e il prontuario completo delle 12 miscele (M1-M12) della tavolozza ridotta a sei colori.",
+     "testo": "Questo capitolo propone i due modi di lavorare usati nei moduli dei Soggetti e il prontuario completo delle 12 miscele (M1-M12) dei sei colori proposti.",
      "fonti": [
       "alberi-studio-aperto",
       "alberi-miscele"
@@ -443,7 +443,7 @@
        "celle": [
         "Tavolozza",
         "Una proposta è la tavolozza estesa: ai primari caldi e freddi si possono affiancare colori pronti, sia pigmenti singoli (verdi ftalo e perilene, ocre, terre naturali, turchese di cobalto) sia miscele di fabbrica (indaco, grigio di Payne, verde vescica), utili per preparare in fretta campiture abbondanti.",
-        "Una proposta è la scatola compatta con i sei colori di base della tavolozza ridotta, elencati più sotto: occupa poco spazio, e tutte le miscele nascono dagli stessi sei colori."
+        "Una proposta è la scatola compatta con i sei colori proposti, elencati più sotto: occupa poco spazio, e le miscele nascono da questi sei colori."
        ],
        "fonti": [
         "testo-quaderno",
@@ -469,7 +469,7 @@
        "celle": [
         "A che cosa serve negli esercizi",
         "Si possono rifare fedelmente le procedure dei video, anche con i colori usati dai singoli autori.",
-        "Si può esercitarsi a ricavare i verdi, i grigi atmosferici e le ombre degli esempi dai soli sei colori di base, con il prontuario M1-M12."
+        "Si può esercitarsi a ricavare i verdi, i grigi atmosferici e le ombre degli esempi dai sei colori proposti, con il prontuario M1-M12."
        ],
        "fonti": [
         "alberi-studio-aperto",
@@ -502,11 +502,11 @@
     {
      "tipo": "titoletto",
      "id": "tavolozza-plein-air",
-     "testo": "All'aperto: la tavolozza ridotta a sei colori e le 12 miscele (M1-M12)"
+     "testo": "All'aperto: sei colori proposti e le 12 miscele (M1-M12)"
     },
     {
      "tipo": "p",
-     "testo": "All'aperto, o per imparare a mescolare senza dipendere da molti tubetti, si possono usare sei colori: un giallo, un rosso, due blu, uno freddo (il ceruleo, a base di blu ftalo) e uno caldo (l'oltremare), e due terre. Con questi sei colori si ottengono i verdi, i bruni e i grigi degli esempi; alcuni colori restano fuori dalla loro portata, e il calcolatore lo segnala.",
+     "testo": "All'aperto, o per imparare a mescolare senza dipendere da molti tubetti, si possono usare sei colori: un giallo, un rosso, due blu, uno freddo (il ceruleo, a base di blu ftalo) e uno caldo (l'oltremare), e due terre. Con questi sei colori si ottengono i verdi, i bruni e i grigi degli esempi; alcuni colori restano fuori dalla loro portata, e il calcolatore lo segnala. È un punto di partenza: si può ridurre, ampliare o cambiare.",
      "fonti": [
       "tavolozza-colori",
       "rainey-plein"
@@ -776,15 +776,15 @@
    "url": "https://www.youtube.com/watch?v=tMUbZh6cCgs"
   },
   "alberi-studio-aperto": {
-   "testo": "Sezione Alberi del Quaderno: per ogni esempio la proposta libera «Colori in studio» e la proposta «All'aperto» coi sei colori di base",
+   "testo": "Sezione Alberi del Quaderno: per ogni esempio la proposta libera «Colori in studio» e la proposta «All'aperto» coi sei colori proposti",
    "url": "../alberi/"
   },
   "tavolozza-colori": {
-   "testo": "Sezione Teoria dei colori del Quaderno, capitolo 4: i sei colori di base della tavolozza ridotta, col pigmento (dati/colori/tavolozza.json), e il calcolatore di miscele",
+   "testo": "Sezione Teoria dei colori del Quaderno, capitolo 4: i sei colori proposti, col pigmento (dati/colori/tavolozza.json), e il calcolatore di miscele",
    "url": "../colori/#tavolozza"
   },
   "alberi-miscele": {
-   "testo": "Sezione Alberi del Quaderno, riquadro «All'aperto (en plein air): i 6 colori di base e le 12 miscele (M1-M12)»: ricette, consistenze, convenzione delle dosi e prove",
+   "testo": "Sezione Alberi del Quaderno, riquadro «All'aperto (en plein air): i 6 colori proposti e le 12 miscele (M1-M12)»: ricette, consistenze, convenzione delle dosi e prove",
    "url": "../alberi/#miscele"
   }
  }

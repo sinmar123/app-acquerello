@@ -77,7 +77,7 @@ SVG = {"consistenze": svg_consistenze, "carta": svg_carta}
 
 
 def tavolozza_ridotta(b, F, dove):
-    """I sei colori della tavolozza ridotta e le 12 miscele M1-M12, dai dati della sezione Alberi (riquadro
+    """I sei colori proposti e le 12 miscele M1-M12, dai dati della sezione Alberi (riquadro
     «All'aperto»), con i rimandi al calcolatore della Teoria dei colori."""
     a = json.loads(FONTE_ALBERI.read_text(encoding="utf-8"))["apertura"]
     tav = a["tavolozza"]
@@ -90,11 +90,11 @@ def tavolozza_ridotta(b, F, dove):
 
     def riga_tav(c):
         sigla = f' ({e(c["sigla"])})' if c.get("sigla") else ""
-        tras = f'; nel tubetto della tavolozza: {e(c["trasparenza_tubetto"])}' if c.get("trasparenza_tubetto") else ""
+        tras = f'; nel tubetto proposto: {e(c["trasparenza_tubetto"])}' if c.get("trasparenza_tubetto") else ""
         nota = f' ({e(c["nota"])})' if c.get("nota") else ""
         return f'<li><b>{e(c["nome"])}</b>{sigla}: pigmento <b>{e(c["pigmento"])}</b>{tras}{nota}</li>'
 
-    sei_colori = (f'<div class="sei-colori"><h4>I sei colori della tavolozza ridotta{F.rif(b["fonti_colori"], f"{dove}, sei colori")}</h4>'
+    sei_colori = (f'<div class="sei-colori"><h4>I sei colori proposti{F.rif(b["fonti_colori"], f"{dove}, sei colori")}</h4>'
                   f'<ul class="tav">{"".join(riga_tav(c) for c in tav)}</ul>'
                   '<p class="rimando">Teoria e calcolatore: <a href="../colori/">Teoria dei colori</a> · '
                   '<a href="../colori/#calcolatore">Calcolatore di miscele</a>. '

@@ -2,6 +2,23 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-24 - GBOT-app-acquerello - I sei colori come proposta
+
+- Richiesta di Sandro: in tutto il sito i sei colori (giallo limone PY175, ceruleo PB15, cremisi PR206, terra di Siena bruciata PR101, terra d'ombra bruciata PBr7+PY42, blu oltremare PB29) si leggono come proposta, un punto di partenza che si può ridurre, ampliare o cambiare. Stessi colori, stessi pigmenti, stesse miscele M1-M12, stesse fonti e stessi ancoraggi. Dove bastava una formula breve, «i sei colori di base» diventa «i sei colori proposti».
+- **Home** (`scripts/genera-sito.py`), correzione dello stesso giorno: la fila dei sei colori resta solo come immagine di presentazione, con nome e pigmento sull'etichetta di ogni campione, e senza alcuna didascalia. Esce la frase «I sei colori di base della tavolozza, col nome comune e il pigmento. Le tinte sono indicative, come nel calcolatore.» Non entra una frase nuova al suo posto.
+- **Schede della home e descrizioni per i motori di ricerca** (sottotitoli in `SEZIONI`): «la tavolozza ridotta e le sue 12 miscele» diventa «i sei colori proposti e le 12 miscele»; «i sei colori di base e un calcolatore» diventa «i sei colori proposti e un calcolatore»; «I sei colori di base nelle serie in commercio» diventa «I sei colori proposti nelle serie in commercio».
+- **Principi generali**, capitolo 8 e introduzione (`dati/principi/principi.json`, titolo del blocco in `genera-principi.py`): «tavolozza ridotta» e «sei colori di base» diventano «sei colori proposti». Il paragrafo dei sei colori chiude con «È un punto di partenza: si può ridurre, ampliare o cambiare.» Il titolo del blocco è «I sei colori proposti». «nel tubetto della tavolozza» diventa «nel tubetto proposto». La data in calce passa al 24/10/2026. Le tre voci di fonte interne che nominavano i sei colori seguono le nuove formule; gli URL restano uguali.
+- **Teoria dei colori**: il capitolo 4 si intitola «4. Sei colori proposti, come punto di partenza» (voce dell'indice: «Sei colori»; l'ancora resta `#tavolozza`). Il paragrafo di apertura dice che si possono ridurre, ampliare o cambiare. Nel calcolatore, «fuori dalla portata dei sei tubetti» diventa «fuori dalla portata dei sei colori proposti» e «dei sei tubetti» nei limiti diventa «dei sei tubetti proposti». Data in calce: 24/10/2026.
+- **Marche e tubetti**: titolo, sottotitolo, introduzione, nota della serie Cotman e «il ceruleo della tavolozza» passano a «proposti» / «proposto». L'intestazione di tabella «Colore della tavolozza» diventa «Colore proposto». Data in calce: 24/10/2026.
+- **Soggetti**: la scheda S1 dice «sei colori proposti per l'aperto» al posto di «tavolozza ridotta a sei colori».
+- **Alberi**: il riquadro si intitola «i 6 colori proposti»; «bastano i 6 colori di base» diventa «si possono usare i 6 colori proposti», con la frase sul punto di partenza. L'etichetta di ogni esempio è «6 colori proposti». Nelle sei schede «si usano» / «si usa» diventa «si possono usare» / «si può usare». Nelle 24 modalità, «coi 6 colori:» diventa «coi 6 colori proposti:». Ricette, sigle e dosi invariate. Il riquadro delle dosi, letto anche dal capitolo 8, parla di «6 colori proposti» al posto di «tavolozza ridotta».
+- **Chat**: l'esempio di domanda e `lib/prompt-chat.js` (rigenerato) parlano di proposta, non di tavolozza fissa. Una riga chiede di non presentarli come obbligatori.
+- **Documenti**: `README.md`, `AGENTS.md` e `CONTRIBUTING.md` usano «sei colori proposti» dove descrivevano i sei colori di base.
+- Controlli: `python3 scripts/genera-sito.py` senza errori. Gulpease invariato (Principi 68, Colori 75, Marche 59, Soggetti 66, Alberi 72). `lib/prompt-chat.js` rigenerato. In attesa del via del curatore per l'unione su `main`.
+- Prossima azione: via del curatore. L'unione su `main` pubblica il sito.
+
+-- GBOT-app-acquerello
+
 ## 2026-10-23 - GBOT-app-acquerello - Fonti esterne del capitolo 8
 
 - **Principi generali** (`dati/principi/principi.json`): nel capitolo 8, «In studio e all'aperto», le frasi che citavano solo il testo del Quaderno prendono le pagine approvate da Sandro il 23/10/2026, dove il passo c'è davvero. Il tono resta di proposta. Nessun colore e nessuna miscela nuovi. L'elenco dei colori pronti (ocra, vescica, perilene e gli altri) resta su `alberi-studio-aperto` e, dove il passo non è nella sezione Alberi, sul testo del Quaderno.

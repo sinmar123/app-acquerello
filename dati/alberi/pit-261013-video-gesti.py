@@ -454,7 +454,7 @@ def pagina():
         if t.get("colori_studio"):
             blocco_colori += f'<p class="colori studio"><b>🎨 <a href="../principi/#tavolozza-studio" style="color:inherit">Colori in studio</a> (proposta libera):</b> {e(t["colori_studio"])}</p>'
         if t.get("colori_aperto"):
-            blocco_colori += f'<p class="colori aperto"><b>🎒 All\'aperto (coi <a href="#miscele">6 colori di base</a>):</b> {e(t["colori_aperto"])}</p>'
+            blocco_colori += f'<p class="colori aperto"><b>🎒 All\'aperto (coi <a href="#miscele">6 colori proposti</a>):</b> {e(t["colori_aperto"])}</p>'
         elif t.get("colori"):
             colori = " · ".join(f'<b>{e(x["m"])}</b> {e(x["ricetta"])}, {e(x["per"])}' for x in t["colori"])
             blocco_colori += f'<p class="colori"><b>Colori:</b> {colori}</p>'
@@ -507,8 +507,8 @@ def pagina():
 <h3>Come funziona questa sezione</h3>
 <ul class="come">{esercizi}</ul>
 </div>
-<details class="miscele-box" id="miscele"><summary>All'aperto (en plein air): i 6 colori di base e le 12 miscele (M1-M12) per dipingere con una scatola leggera</summary>
-<p class="nota-studio-aperto">All'aperto, o per esercitarsi a ricavare tutto da pochi tubetti, bastano i 6 colori di base e le 12 miscele qui sotto, con cui si preparano i verdi, i bruni e i grigi degli esempi. Il confronto fra il lavoro in studio e all'aperto è nel capitolo <a href="../principi/#studio-aperto">In studio e all'aperto</a> dei Principi generali.</p>
+<details class="miscele-box" id="miscele"><summary>All'aperto (en plein air): i 6 colori proposti e le 12 miscele (M1-M12) per dipingere con una scatola leggera</summary>
+<p class="nota-studio-aperto">All'aperto, o per esercitarsi a ricavare tutto da pochi tubetti, si possono usare i 6 colori proposti e le 12 miscele qui sotto, con cui si preparano i verdi, i bruni e i grigi degli esempi. È un punto di partenza: si può ridurre, ampliare o cambiare. Il confronto fra il lavoro in studio e all'aperto è nel capitolo <a href="../principi/#studio-aperto">In studio e all'aperto</a> dei Principi generali.</p>
 {sei_colori}
 {riquadri}
 <table class="mix">{miscele}</table></details>
@@ -556,11 +556,11 @@ def parte_colori(a, e):
     nomi = {c["id"]: c["nome"] for c in tav}
     def riga_tav(c):
         sigla = f' ({e(c["sigla"])})' if c.get("sigla") else ""
-        tras = f'; nel tubetto della tavolozza: {e(c["trasparenza_tubetto"])}' if c.get("trasparenza_tubetto") else ""
+        tras = f'; nel tubetto proposto: {e(c["trasparenza_tubetto"])}' if c.get("trasparenza_tubetto") else ""
         nota = f' ({e(c["nota"])})' if c.get("nota") else ""
         return f'<li><b>{e(c["nome"])}</b>{sigla}: pigmento <b>{e(c["pigmento"])}</b>{tras}{nota}</li>'
     righe_tav = "".join(riga_tav(c) for c in tav)
-    sei_colori = (f'<div class="sei-colori"><b>I 6 colori di base</b> (nome comune e pigmento):'
+    sei_colori = (f'<div class="sei-colori"><b>I 6 colori proposti</b> (nome comune e pigmento):'
                   f'<ul class="tav">{righe_tav}</ul>'
                   f'<p class="rimando">Teoria, schede dei colori e calcolatore di miscele: '
                   f'<a href="../colori/">Teoria dei colori</a> · <a href="../colori/#calcolatore">calcolatore</a>. '

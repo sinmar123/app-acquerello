@@ -91,7 +91,7 @@ def testo_e_fonti(voce):
 def schede_tavolozza(tav):
     carte = []
     for c in tav["colori"]:
-        tras = f" · nel tubetto della tavolozza: {e(c['trasparenza_tubetto'])}" if c.get("trasparenza_tubetto") else ""
+        tras = f" · nel tubetto proposto: {e(c['trasparenza_tubetto'])}" if c.get("trasparenza_tubetto") else ""
         carte.append(f"""<div class="tubo">
   <div class="tubo-camp" style="background:{e(c['srgb'])}"><span>provvisorio</span></div>
   <div class="tubo-txt">

@@ -15,9 +15,9 @@ Il repository è autonomo: contiene i dati, le infografiche, le illustrazioni e 
 | Percorso | Sezione | Sorgenti |
 |----------|---------|----------|
 | `/` | Indice e organizzazione del Quaderno | `scripts/genera-sito.py` |
-| `/principi/` | **1. Principi generali: acqua, colore e carta**: tè, latte e miele; carta bagnata, umida, asciutta e i momenti intermedi; acqua nel pennello e acqua nella carta; bordi, asciugatura, carte; nel capitolo 8, *In studio e all'aperto* (`#studio-aperto`), il lavoro in studio e all'aperto a confronto, la tavolozza estesa e i sei colori di base con le 12 miscele `M1`-`M12`; 42 fonti, elencate in fondo a ogni capitolo, dai corsi, dai video al minuto indicato e dalle altre sezioni del Quaderno | `dati/principi/` |
-| `/colori/` | **2. Teoria dei colori**: Munsell, luce e pigmento, velature, i sei colori di base col pigmento e un calcolatore di miscele Kubelka-Munk in JavaScript; rimandi alle fonti paragrafo per paragrafo | `dati/colori/` |
-| `/marche/` | **3. Marche e tubetti**: i sei colori di base in sei serie (Winsor & Newton Cotman e Professional, Van Gogh, Daniel Smith, Schmincke Horadam, Maimeri Blu), con pagina ufficiale e data di controllo su ogni riga | `dati/marche/` |
+| `/principi/` | **1. Principi generali: acqua, colore e carta**: tè, latte e miele; carta bagnata, umida, asciutta e i momenti intermedi; acqua nel pennello e acqua nella carta; bordi, asciugatura, carte; nel capitolo 8, *In studio e all'aperto* (`#studio-aperto`), il lavoro in studio e all'aperto a confronto, la tavolozza estesa e i sei colori proposti con le 12 miscele `M1`-`M12`; 42 fonti, elencate in fondo a ogni capitolo, dai corsi, dai video al minuto indicato e dalle altre sezioni del Quaderno | `dati/principi/` |
+| `/colori/` | **2. Teoria dei colori**: Munsell, luce e pigmento, velature, i sei colori proposti col pigmento e un calcolatore di miscele Kubelka-Munk in JavaScript; rimandi alle fonti paragrafo per paragrafo | `dati/colori/` |
+| `/marche/` | **3. Marche e tubetti**: i sei colori proposti in sei serie (Winsor & Newton Cotman e Professional, Van Gogh, Daniel Smith, Schmincke Horadam, Maimeri Blu), con pagina ufficiale e data di controllo su ogni riga | `dati/marche/` |
 | `/soggetti/` | **4. Soggetti**: un modulo per tema; `S1` Alberi pubblicato, `S2`-`S6` in preparazione | `dati/soggetti/` |
 | `/alberi/` | **4.1 S1 · Alberi ad acquerello**: 6 esempi, 24 modalità tratte dai video con un'infografica SVG in 3 fasi ciascuna, 31 estratti video | `dati/alberi/` |
 
