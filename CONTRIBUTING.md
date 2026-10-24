@@ -8,7 +8,8 @@ Il **Quaderno di acquerello** (`https://app-acquerello.pages.dev`) è un progett
 2. **Con una Issue su GitHub**, indicando:
    - **per un nuovo video o una nuova modalità di esercizio:** l'indirizzo del video YouTube, il minuto d'inizio e di fine del passaggio, i colori e i pennelli usati dall'autore e che cosa mostra il gesto;
    - **per una nuova serie nella sezione Marche e tubetti:** il nome della serie e, per ciascuno dei sei colori proposti, il collegamento alla pagina ufficiale del produttore da cui risultano nome commerciale, numero, pigmento (Colour Index) e trasparenza;
-   - **per una correzione ai testi o alle ricette:** la sezione, il punto preciso e la fonte di riferimento.
+   - **per una correzione ai testi o alle ricette:** la sezione, il punto preciso e la fonte di riferimento;
+   - **per un evento, un racconto o una foto:** la data, il luogo e il collegamento al programma ufficiale; per un racconto «io c'ero», la firma e i momenti del programma a cui si è assistito; per una demo, solo artista, soggetto, tecnica, carte, colori e lezione realmente visti. I vuoti restano «da completare». Le foto portano il credito di chi le ha scattate. La casella del sito riceve il testo e non i file: il contatto per le foto è scritto nella sezione Eventi, e finché non c'è resta «da completare».
 
 ## 2. Modifiche dirette con una pull request
 
@@ -34,6 +35,7 @@ I generatori controllano la coerenza dei dati e fermano la generazione se una re
 - **Onestà del dato:** ciò che è stimato, provvisorio o da provare su carta lo resta anche nel testo; un riassunto non si presenta come citazione.
 - **Registro dei testi**, scelto dal curatore il 21/10/2026: quello di un buon manuale tecnico, leggibile da un appassionato. Termini esatti della pittura ad acquerello, usati nel loro senso (campitura, velo, velatura solo per lo strato steso su un fondo asciutto, bagnato su bagnato, pennello scarico, risparmio del bianco); frasi compiute, di norma entro 25 parole; forma impersonale («si stende», «si lascia asciugare») o terza persona per l'autore di un video. Niente parlato, niente seconda persona nei testi delle guide, niente paroloni pseudo-scientifici («idrodinamico», «igrometrico», «cloruro di sodio» per il sale). `scripts/genera-sito.py` si ferma se l'indice di leggibilità Gulpease di una pagina scende sotto 52.
 - **Lingua:** italiano, con gli accenti grafici corretti (`è`, `é`, `à`, `ò`, `ù`, `ì`) e senza trattino lungo.
+- **Eventi** (`dati/eventi/`): un file JSON per evento. Il programma si copia dalla fonte indicata, senza aggiunte. I racconti «io c'ero» sono in prima persona e firmati: è l'eccezione al registro impersonale delle guide. Le interviste usano solo le domande di `dati/eventi/domande.json`. Quattro sono fisse: «Come hai cominciato con l'acquerello?»; «Che materiali usi: carta (marca e grammatura), pennelli e marche di colori, con la tavolozza?»; «Un consiglio per chi dipinge en plein air?»; «Un errore da evitare?». Per chi dipinge per strada durante l'evento se ne aggiunge una: «Perché sei qui oggi?». Valgono anche per gli amatori e per chi non è nel programma. La risposta sui materiali, quando c'è, si riporta come detta da chi parla, con il rimando a Marche e tubetti. I campi senza materiale si pubblicano come «da completare», mai riempiti a stima. Niente nomi di marca: restano in Marche e tubetti. Le foto sono scatti di chi le firma, non immagini generate che imitano un acquerello.
 
 ## 4. Licenza dei contributi
 

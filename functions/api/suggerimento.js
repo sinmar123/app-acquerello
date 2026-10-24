@@ -10,7 +10,8 @@ const SEZIONI_VALIDE = [
   "Principi",
   "Teoria dei colori",
   "Confronto marche",
-  "Soggetti (Alberi, Nuvole, Fiori...)"
+  "Soggetti (Alberi, Nuvole, Fiori...)",
+  "Eventi"
 ];
 const PAGINE_VALIDE = [
   "/",
@@ -18,8 +19,20 @@ const PAGINE_VALIDE = [
   "/colori/",
   "/marche/",
   "/soggetti/",
-  "/alberi/"
+  "/alberi/",
+  "/eventi/"
 ];
+
+// Stessa regola di chat.js: la scheda di un evento resta la pagina di partenza.
+function paginaNelSito(paginaRaw) {
+  const pagina = String(paginaRaw || "/").trim();
+  if (PAGINE_VALIDE.includes(pagina)) return pagina;
+  if (!/^\/[a-z0-9/-]+\/$/.test(pagina)) return "/";
+  for (const base of PAGINE_VALIDE) {
+    if (base !== "/" && pagina.startsWith(base)) return pagina;
+  }
+  return "/";
+}
 
 // Tetti contro gli invii automatici, contati su D1 per giorno (UTC).
 const LIMITE_IP_GIORNALIERO = 5;
@@ -121,8 +134,7 @@ export async function onRequestPost(context) {
   const titolo = pulisci(payload.titolo, 120);
   const testo = pulisci(payload.testo, 3500);
   const firma = pulisci(payload.firma, 60).replace(/[\r\n]+/g, " ");
-  const paginaRaw = String(payload.pagina || "/").trim();
-  const pagina = PAGINE_VALIDE.includes(paginaRaw) ? paginaRaw : "/";
+  const pagina = paginaNelSito(payload.pagina);
 
   if (titolo.length < 4) {
     return rispostaJson(

@@ -78,11 +78,23 @@ SEZIONI = [
         "script_genera": DATI_DIR / "alberi" / "pit-261013-video-gesti.py",
         "html_generato": DATI_DIR / "alberi" / "pit-261014-video-gesti-alberi.html",
     },
+    {
+        "slug": "eventi",
+        "numero": "5",
+        "breve": "Eventi",
+        "nome_form": "Eventi",
+        "titolo": "Eventi",
+        "sottotitolo": "Calendario di festival, mostre, demo e uscite all'aperto, con la scheda di ogni evento e l'archivio per anno",
+        "script_genera": DATI_DIR / "eventi" / "genera-eventi.py",
+        "html_generato": DATI_DIR / "eventi" / "eventi.html",
+        "cartelle": [DATI_DIR / "eventi" / "immagini"],
+        "pagine_extra": DATI_DIR / "eventi" / "pagine",
+    },
 ]
 
 DESCRIZIONE_HOME = (
     "Appunti di studio dell'acquerello: le tre consistenze e gli stati della carta, la teoria dei colori con un calcolatore "
-    "di miscele, i tubetti marca per marca e gli esercizi sugli alberi tratti dai video."
+    "di miscele, i tubetti marca per marca, gli esercizi sugli alberi tratti dai video e il calendario degli eventi."
 )
 
 OPZIONI_SEZIONE = [
@@ -91,6 +103,7 @@ OPZIONI_SEZIONE = [
     "Teoria dei colori",
     "Confronto marche",
     "Soggetti (Alberi, Nuvole, Fiori...)",
+    "Eventi",
 ]
 
 FUNZIONE_SUGGERIMENTI = APP_DIR / "functions" / "api" / "suggerimento.js"
@@ -141,7 +154,8 @@ PAROLE_GENERICHE = {"professional", "extra", "fine", "aquarell", "blu"}
 def controlla_marche_fuori_sezione():
     """Marche e serie commerciali stanno solo in dati/marche/ (CONTRIBUTING.md § 3): altrove i colori
     si chiamano col nome comune e il codice Colour Index. Cerca i nomi di marche.json in tutti gli
-    altri sorgenti delle sezioni."""
+    altri sorgenti delle sezioni. Le risposte delle interviste in dati/eventi/ non sono esentate:
+    una risposta che nomina una marca ferma la generazione, finché il curatore non decide."""
     marche = json.loads((DATI_DIR / "marche" / "marche.json").read_text(encoding="utf-8"))["marche"]
     nomi = {"winsor"}
     for m in marche:
@@ -161,6 +175,60 @@ def controlla_marche_fuori_sezione():
                     trovati.append(f"{p.relative_to(APP_DIR).as_posix()}:{n} «{nome}»")
     if trovati:
         raise SystemExit("genera-sito: nomi di marche fuori dalla sezione Marche:\n  " + "\n  ".join(trovati))
+
+
+def riassunto_eventi():
+    """Testo della chat ricavato dai file degli eventi: date, programma, racconti e campi aperti."""
+    cartella = DATI_DIR / "eventi" / "schede"
+    if not cartella.is_dir():
+        return "Eventi: nessun archivio presente."
+    mesi = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno",
+            "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"]
+
+    def lunga(iso):
+        anno, mese, giorno = iso.split("-")
+        return f"{int(giorno)} {mesi[int(mese) - 1]} {anno}"
+
+    blocchi = [
+        "Eventi (https://app-acquerello.pages.dev/eventi/): calendario, scheda per evento e archivio per anno. "
+        "Un racconto è firmato e copre solo i momenti visti da chi scrive. "
+        "Le interviste usano quattro domande fisse: Come hai cominciato con l'acquerello?; "
+        "Che materiali usi: carta (marca e grammatura), pennelli e marche di colori, con la tavolozza?; "
+        "Un consiglio per chi dipinge en plein air?; Un errore da evitare?. "
+        "Per chi dipinge per strada durante l'evento si aggiunge: Perché sei qui oggi?. "
+        "La domanda sui materiali rimanda a Marche e tubetti "
+        "(https://app-acquerello.pages.dev/marche/). "
+        "La risposta, se c'è, si riporta come detta da chi parla: non si aggiungono marche che il testo non dice. "
+        "Valgono anche per gli amatori e per chi dipinge per strada senza essere nel programma. "
+        "I campi segnati «da completare» non si riempiono."
+    ]
+    for path in sorted(cartella.glob("*.json")):
+        ev = json.loads(path.read_text(encoding="utf-8"))
+        url = f"{SITO_URL}/eventi/{ev['anno']}/{ev['slug']}/"
+        fonte = ev["fonte"]
+        righe = [f"- {m['giorno'][8:10]} {mesi[int(m['giorno'][5:7]) - 1]}: {m['voce']}" for m in ev.get("programma", [])]
+        programma = "\n".join(righe) if righe else "- Programma da completare."
+        racconti = []
+        for r in ev.get("racconti", []):
+            racconti.append(
+                f"- {r['firma']}, momenti {', '.join(r['momenti'])}: «{r['testo']}» Fonte: {r['fonte']['url']}"
+            )
+        lezioni = []
+        for mid, lezione in ev.get("lezioni", {}).items():
+            lezioni.append(f"- {mid}: {lezione['testo']}. Fonte: {lezione['fonte']}")
+        blocchi.append(
+            f"\n{ev['titolo']} ({url}). {ev['sottotitolo']}. "
+            f"Dal {lunga(ev['data_inizio'])} al {lunga(ev['data_fine'])}. {ev['luogo']}. "
+            f"Programma letto il {fonte['letto']} da {fonte['url']}.\n"
+            f"Programma:\n{programma}\n"
+            f"Racconti:\n" + ("\n".join(racconti) if racconti else "- Nessuno.") + "\n"
+            f"Lezioni delle demo:\n" + ("\n".join(lezioni) if lezioni else "- Nessuna.") + "\n"
+            "Soggetto, tecnica, carte, colori e collegamenti alle altre sezioni, se non sono qui sopra: da completare.\n"
+            f"Interviste: {len(ev.get('interviste', []))}."
+        )
+    if len(blocchi) == 1:
+        blocchi.append("Nessun evento in archivio.")
+    return "\n".join(blocchi)
 
 
 def genera_prompt_chat():
@@ -231,6 +299,8 @@ Il modulo S1, alberi, siepi e arbusti ({SITO_URL}/alberi/), con le modalità tra
 
 Moduli in preparazione: {in_preparazione}.
 
+{riassunto_eventi()}
+
 Come rispondere:
 - In italiano, col registro di un buon manuale tecnico: termini esatti, frasi chiare, niente parlato e niente paroloni. Di norma fra 120 e 220 parole.
 - Niente trattino lungo: per gli incisi si usano le virgole, i due punti o le parentesi.
@@ -238,6 +308,7 @@ Come rispondere:
 - I sei colori del Quaderno sono una proposta di partenza, non una tavolozza fissa: si possono ridurre, ampliare o cambiare.
 - Se una miscela M1-M12 ottiene il colore richiesto, indicala con sigla e nome prima di eventuali varianti.
 - Non inventare fonti, autori, video, citazioni, sigle di pigmenti o numeri. Se il Quaderno non tratta un punto, dillo, e suggerisci una prova su carta.
+- Nella sezione Eventi non riempire i campi segnati «da completare» e non inventare programmi, nomi, demo, interviste o marche di carta, pennelli e colori.
 - Ricorda che l'esito va sempre verificato sulla carta: le risposte sono una guida, non una regola.
 - Rispondi solo sui temi indicati all'inizio; per il resto declina in una frase.
 - Non chiedere dati personali."""
@@ -574,9 +645,14 @@ def stile_barra(margine: str) -> str:
     return STILE_BARRA % {"altezza": BARRA_ALTEZZA, "margine": margine}
 
 
-def barra_quaderno(slug_pagina: str) -> str:
-    """La barra con tutte le sezioni; slug_pagina è la sezione aperta, stringa vuota per la home."""
-    radice = "../" if slug_pagina else "./"
+def barra_quaderno(slug_pagina: str, profondita: int | None = None) -> str:
+    """La barra con tutte le sezioni; slug_pagina è la sezione aperta, stringa vuota per la home.
+
+    profondita è il numero di «../» per tornare alla radice del sito: 0 in home, 1 nelle sezioni,
+    2 e 3 nelle pagine di un evento. Senza il parametro resta il comportamento di prima."""
+    if profondita is None:
+        profondita = 1 if slug_pagina else 0
+    radice = "./" if profondita == 0 else "../" * profondita
 
     def corrente(slug):
         return ' aria-current="page"' if slug == slug_pagina else ""
@@ -593,14 +669,23 @@ def barra_quaderno(slug_pagina: str) -> str:
     return f'<nav id="barra-quaderno" aria-label="Sezioni del Quaderno">{"".join(voci)}</nav>\n{script}\n'
 
 
-def inietta_elementi_comuni(html_pagina: str, sezione: dict, pagina_path: str) -> str:
-    if 'name="description"' not in html_pagina:
+def inietta_elementi_comuni(html_pagina: str, sezione: dict, pagina_path: str, profondita: int | None = None) -> str:
+    if 'property="og:title"' not in html_pagina:
+        dichiarazione = re.search(r'<meta name="description" content="([^"]*)">', html_pagina)
+        descrizione = html.unescape(dichiarazione.group(1)) if dichiarazione else senza_tag(sezione["sottotitolo"])
+        if dichiarazione:
+            html_pagina = html_pagina.replace(dichiarazione.group(0), "", 1)
         m = re.search(r"<title>(.*?)</title>", html_pagina, re.S)
         titolo = html.unescape(m.group(1)) if m else sezione["titolo"]
-        html_pagina = html_pagina.replace("</head>", testa_comune(titolo, senza_tag(sezione["sottotitolo"]), pagina_path) + "</head>", 1)
+        html_pagina = html_pagina.replace("</head>", testa_comune(titolo, descrizione, pagina_path) + "</head>", 1)
     if 'id="barra-quaderno"' not in html_pagina:
         html_pagina = html_pagina.replace("</head>", stile_barra("0 calc(50% - 50vw + var(--sb, 0px) / 2)") + "</head>", 1)
-        html_pagina = re.sub(r"(<body[^>]*>)", lambda m: m.group(1) + "\n" + barra_quaderno(sezione["slug"]), html_pagina, count=1)
+        html_pagina = re.sub(
+            r"(<body[^>]*>)",
+            lambda m, profondita=profondita: m.group(1) + "\n" + barra_quaderno(sezione["slug"], profondita),
+            html_pagina,
+            count=1,
+        )
 
     blocco = blocco_chat_e_suggerimenti(sezione.get("nome_form", OPZIONI_SEZIONE[0]), pagina_path)
     if 'id="suggerimenti"' not in html_pagina:
@@ -616,6 +701,7 @@ def inietta_elementi_comuni(html_pagina: str, sezione: dict, pagina_path: str) -
 IN_COSTRUZIONE = [
     'i <a href="./principi/">principi generali su acqua, colore e carta</a>, dalle tre consistenze della miscela agli stati della carta',
     'un <a href="./alberi/">primo modulo di esercizi su alberi, siepi e arbusti</a>, con i passaggi dei video didattici indicati al secondo',
+    'un <a href="./eventi/">calendario degli eventi</a>, con la scheda di ciascuno e l\'archivio per anno',
     'un <a href="./colori/#calcolatore">calcolatore</a> che propone, come stima, la miscela più vicina a un colore dato',
     "un <a href=\"#assistente-ai\">assistente basato sull'intelligenza artificiale</a> per le domande sulla tecnica, "
     "con un limite di 5 domande a settimana",
@@ -662,6 +748,12 @@ def icona_scheda(slug: str) -> str:
                 '<g clip-path="url(#cp-sog)"><rect width="64" height="64" fill="#cfe0ee"/><ellipse cx="24" cy="21" rx="11" ry="5" fill="#fff" fill-opacity=".9"/>'
                 '<path d="M0 42Q18 26 34 38T64 34V64H0Z" fill="#6f8f5a" fill-opacity=".85"/><rect y="46" width="64" height="18" fill="#7fa3cf" fill-opacity=".8"/>'
                 '<path d="M12 51h22M30 56h20" stroke="#fff" stroke-opacity=".7" stroke-width="2" stroke-linecap="round"/></g></svg>')
+    if slug == "eventi":  # calendario, figura disegnata
+        return ('<svg viewBox="0 0 64 64" aria-hidden="true"><rect x="12" y="14" width="40" height="38" rx="4" fill="#fffdf8" stroke="#263529" stroke-width="2"/>'
+                '<rect x="12" y="14" width="40" height="12" rx="4" fill="#263529"/><rect x="12" y="20" width="40" height="6" fill="#263529"/>'
+                '<rect x="22" y="8" width="4" height="10" rx="1" fill="#263529"/><rect x="38" y="8" width="4" height="10" rx="1" fill="#263529"/>'
+                '<circle cx="24" cy="36" r="3" fill="#3f6fb0"/><circle cx="34" cy="36" r="3" fill="#6f8f5a"/>'
+                '<circle cx="44" cy="44" r="3" fill="#8c4a27"/></svg>')
     if slug == "alberi":  # albero con chioma e tronco
         return ('<svg viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="57" rx="22" ry="4" fill="#6f8f5a" fill-opacity=".35"/><path d="M30 58V38h4v20Z" fill="#7a5236"/><path d="M32 46l-7-6M32 43l6-5" stroke="#7a5236" stroke-width="2" stroke-linecap="round"/><circle cx="32" cy="25" r="15" fill="#4f7d45" fill-opacity=".85"/><circle cx="21" cy="32" r="10" fill="#6f9a52" fill-opacity=".8"/><circle cx="43" cy="31" r="11" fill="#3f6a3a" fill-opacity=".8"/><circle cx="27" cy="19" r="6" fill="#9cc07a" fill-opacity=".55"/></svg>')
     return ""
@@ -757,7 +849,7 @@ def genera_home(sezioni_pronte: list[dict]) -> str:
 {barra_quaderno("")}<header class="testa">
   <div class="testa-in">
     <h1>Quaderno di acquerello</h1>
-    <p>Appunti di studio dell'acquerello: acqua e carta, colori e tubetti, soggetti ed esercizi tratti dai video</p>
+    <p>Appunti di studio dell'acquerello: acqua e carta, colori e tubetti, soggetti, esercizi tratti dai video ed eventi</p>
   </div>
 </header>
 {striscia_tavolozza()}
@@ -810,8 +902,11 @@ def controlla_reindirizzamenti():
             raise SystemExit(f"genera-sito: il rinvio di {vecchio} porta a /{slug}/#{ancora}, che non esiste")
 
 
-def scrivi_file_di_servizio():
+def scrivi_file_di_servizio(pagine_extra=None):
     pagine = ["/"] + [f"/{s['slug']}/" for s in SEZIONI]
+    for p in pagine_extra or []:
+        if p not in pagine:
+            pagine.append(p)
     (SITE_DIR / "_redirects").write_text(
         "".join(f"{vecchio} /{slug}/#{ancora} 301\n" for vecchio, slug, ancora in REINDIRIZZAMENTI),
         encoding="utf-8", newline="\n")
@@ -829,6 +924,8 @@ def gulpease(html_pagina):
     delle fonti, che citano titoli e passi nella lingua originale e si ripetono in più capitoli."""
     t = re.sub(r'<section id="(assistente-ai|suggerimenti)".*?</section>', " ", html_pagina, flags=re.S)
     t = re.sub(r'<div class="fonti-cap">.*?</div>', " ", t, flags=re.S)
+    # schede delle demo: nomi propri e campi «da completare», come gli elenchi delle fonti
+    t = re.sub(r'<article class="voce" id="demo-[^"]*">.*?</article>', " ", t, flags=re.S)
     t = re.sub(r"<(script|style|svg|nav|footer|table)[^>]*>.*?</\1>", " ", t, flags=re.S)
     t = re.sub(r"<(br|/p|/li|/h[1-6]|/div|/td)[^>]*>", ". ", t)
     t = html.unescape(re.sub(r"<[^>]+>", " ", t))
@@ -844,7 +941,7 @@ def main():
     controlla_funzioni()
     controlla_marche_fuori_sezione()
     SITE_DIR.mkdir(parents=True, exist_ok=True)
-    sezioni_pronte, leggibilita = [], {}
+    sezioni_pronte, leggibilita, pagine_sitemap = [], {}, []
 
     for s in SEZIONI:
         script = s["script_genera"]
@@ -867,12 +964,31 @@ def main():
             shutil.copytree(cartella, dest_dir / cartella.name, dirs_exist_ok=True)
         leggibilita[s["slug"]] = gulpease(html_text)
         print(f"[{s['slug']}] Scritto {dest_html.relative_to(APP_DIR).as_posix()} ({dest_html.stat().st_size // 1024} KB)")
+        extra = s.get("pagine_extra")
+        if extra is not None:
+            if not extra.is_dir():
+                raise FileNotFoundError(f"Pagine aggiuntive non trovate: {extra}")
+            for html_extra in sorted(extra.rglob("*.html")):
+                rel = html_extra.relative_to(extra)
+                if rel.name != "index.html":
+                    raise SystemExit(f"genera-sito: pagina non prevista in {rel.as_posix()}")
+                prof = len(rel.parent.parts) + 1
+                pagina_path = f"/{s['slug']}/{rel.parent.as_posix()}/"
+                sorgente = html_extra.read_text(encoding="utf-8")
+                dest = dest_dir / rel
+                dest.parent.mkdir(parents=True, exist_ok=True)
+                dest.write_text(
+                    inietta_elementi_comuni(sorgente, s, pagina_path, prof),
+                    encoding="utf-8", newline="\n")
+                leggibilita[f"{s['slug']}/{rel.parent.as_posix()}"] = gulpease(sorgente)
+                pagine_sitemap.append(pagina_path)
+                print(f"[{s['slug']}] Scritto {dest.relative_to(APP_DIR).as_posix()} ({dest.stat().st_size // 1024} KB)")
         sezioni_pronte.append(dict(s))
 
     index_html = SITE_DIR / "index.html"
     index_html.write_text(genera_home(sezioni_pronte), encoding="utf-8", newline="\n")
     print(f"[home] Scritto {index_html.relative_to(APP_DIR).as_posix()} ({index_html.stat().st_size // 1024} KB)")
-    scrivi_file_di_servizio()
+    scrivi_file_di_servizio(pagine_sitemap)
     controlla_reindirizzamenti()
     genera_prompt_chat()
 
