@@ -844,7 +844,7 @@ def genera_home(sezioni_pronte: list[dict]) -> str:
   <div class="testa-in">
     <h1>Quaderno di acquerello</h1>
     <p>Appunti di studio dell'acquerello: acqua e carta, colori e tubetti, soggetti, esercizi tratti dai video ed eventi</p>
-    <p class="nota">Questo è il quaderno di un dilettante, rivolto ad altri dilettanti. È il frutto dell'esperienza di chi impara e può contenere ingenuità. Si offre come un aiuto tra appassionati.</p>
+    <p class="nota">Questo è il quaderno di un dilettante, rivolto ad altri dilettanti. Raccoglie ciò che si impara strada facendo, con i limiti di chi non è un maestro, e si offre come un aiuto tra appassionati.</p>
   </div>
 </header>
 {striscia_tavolozza()}
