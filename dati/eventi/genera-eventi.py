@@ -15,10 +15,12 @@ Il giorno «oggi», per dire se un evento è in corso, in arrivo o passato, è
 quello di Europe/Rome nel momento della generazione.
 
 Controlli: date e giorni della settimana coerenti; ogni voce del programma
-apre con il suo orario; ogni foto è in immagini/ e ha credito e didascalia;
-la locandina, se c'è, ha file, credito e fonte https. Nessun testo contiene
-«da verificare» né il trattino lungo. Racconti, demo e interviste non sono
-ammessi in una scheda.
+apre con il suo orario; ogni foto è in immagini/ e ha credito e didascalia.
+Se una foto indica un momento, quello è una voce del programma e l'ora è
+nel formato 11.57: la foto sta accanto a quella voce. Le foto senza momento
+restano nella sezione fotografie. La locandina, se c'è, ha file, credito e
+fonte https. Nessun testo contiene «da verificare» né il trattino lungo.
+Racconti, demo e interviste non sono ammessi in una scheda.
 """
 import html
 import json
@@ -42,6 +44,7 @@ GIORNI = ["lunedì", "martedì", "mercoledì", "giovedì", "venerdì", "sabato",
 TRATTINI = ("—", "–", "―")
 ID_OK = re.compile(r"^[a-z0-9-]+$")
 FILE_OK = re.compile(r"^[a-z0-9.-]+$")
+ORA_OK = re.compile(r"^([01]\d|2[0-3])\.[0-5]\d$")
 CHIAVI_VIETATE = ("racconti", "interviste", "lezioni", "collegamenti", "campi_demo", "domande")
 
 CSS = """
@@ -71,8 +74,10 @@ section.blocco { border-top: 3px solid #3d6b4f; padding-top: 14px; margin-top: 2
 .stato.in_arrivo { background: #e7eef8; color: #243e66; }
 .stato.passato { background: #efe8d8; color: #5a4d3b; }
 .tab { overflow-x: auto; margin: 8px 0 14px; }
-table { width: 100%; border-collapse: collapse; font-size: .92em; }
+table { width: 100%; border-collapse: collapse; font-size: .92em; table-layout: fixed; }
 th, td { border: 1px solid #d8d2c4; padding: 6px 8px; vertical-align: top; text-align: left; }
+.accanto .testo { margin: 0; }
+.accanto figure.foto { margin: 10px 0 0; }
 th { background: #eef4ef; color: #2c4f3a; }
 th.giorno { background: #263529; color: #f7f2e7; }
 caption { caption-side: bottom; text-align: left; font-size: .85em; color: #555; padding-top: 6px; }
@@ -224,11 +229,22 @@ def carica_eventi():
             controlla_file_immagine(ev, loc["file"], "locandina")
             if not loc["fonte"].get("url", "").startswith("https://") or not loc["fonte"].get("etichetta"):
                 errore(f"{ev['id']}: fonte della locandina incompleta")
+        file_visti = set()
         for foto in ev.get("foto", []):
             for campo in ("file", "credito", "didascalia", "alt"):
                 if not foto.get(campo):
                     errore(f"{ev['id']}: foto senza {campo}")
+            if foto["file"] in file_visti:
+                errore(f"{ev['id']}: file di foto ripetuto ({foto['file']})")
+            file_visti.add(foto["file"])
             controlla_file_immagine(ev, foto["file"], foto.get("file"))
+            if "momento" in foto:
+                if foto["momento"] not in visti:
+                    errore(f"{ev['id']}: la foto {foto['file']} indica un momento assente ({foto.get('momento')})")
+                if not ORA_OK.match(foto.get("ora", "")):
+                    errore(f"{ev['id']}: la foto {foto['file']} ha un'ora assente o non valida")
+            elif "ora" in foto and not ORA_OK.match(foto.get("ora", "")):
+                errore(f"{ev['id']}: la foto {foto['file']} ha un'ora non valida")
         eventi.append(ev)
     return eventi
 
@@ -338,7 +354,22 @@ def pagina_anno(sez, anno, eventi, oggi):
     return documento(f"Archivio {anno}", descrizione, corpo)
 
 
-def tabella_programma(ev):
+def figura_foto(foto, prof):
+    src = radice(prof - 1) + "immagini/" + foto["file"]
+    return (
+        '<figure class="foto">'
+        f'<img src="{e(src)}" alt="{e(foto["alt"])}">'
+        f'<figcaption>{e(foto["didascalia"])}. {e(foto["credito"])}.</figcaption>'
+        "</figure>"
+    )
+
+
+def foto_del_momento(ev, momento_id):
+    scelte = [f for f in ev.get("foto", []) if f.get("momento") == momento_id]
+    return sorted(scelte, key=lambda f: (f.get("ora") or "", f["file"]))
+
+
+def tabella_programma(ev, prof):
     righe = []
     gruppo_aperto = None
     for m in ev.get("programma", []):
@@ -349,7 +380,12 @@ def tabella_programma(ev):
             titolo = f"{GIORNI[d.weekday()].capitalize()} {d.day} {MESI[d.month - 1]} {d.year}. {m['fascia'].capitalize()}"
             righe.append(f'<tr><th class="giorno">{e(titolo)}</th></tr>')
         nota = f'<span class="nota-riga">{e(m["nota"])}</span>' if m.get("nota") else ""
-        righe.append(f'<tr id="m-{e(m["id"])}"><td>{e(m["voce"])}{nota}</td></tr>')
+        figure = "".join(figura_foto(f, prof) for f in foto_del_momento(ev, m["id"]))
+        if figure:
+            cella = f'<div class="accanto"><p class="testo">{e(m["voce"])}{nota}</p>{figure}</div>'
+        else:
+            cella = f'{e(m["voce"])}{nota}'
+        righe.append(f'<tr id="m-{e(m["id"])}"><td>{cella}</td></tr>')
     if not righe:
         return "<p>Programma da aggiungere.</p>"
     fonte = ev["fonte"]
@@ -381,16 +417,22 @@ def blocco_locandina(ev, sez, prof):
 
 
 def blocco_foto(ev, sez, prof):
-    if not ev.get("foto"):
+    tutte = ev.get("foto", [])
+    if not tutte:
         return f"<p>{e(sez['nessuna_foto'])}</p>"
-    pezzi = []
-    for foto in ev["foto"]:
-        src = radice(prof - 1) + "immagini/" + foto["file"]
+    pezzi = [figura_foto(foto, prof) for foto in tutte if not foto.get("momento")]
+    legate = sorted((f for f in tutte if f.get("momento")), key=lambda f: (f.get("ora") or "", f["file"]))
+    if legate:
+        voci = "".join(
+            "<li>"
+            f'<a href="#m-{e(foto["momento"])}">{e(foto["didascalia"])}</a>. '
+            f"{e(foto['credito'])}."
+            "</li>"
+            for foto in legate
+        )
         pezzi.append(
-            '<figure class="foto">'
-            f'<img src="{e(src)}" alt="{e(foto["alt"])}">'
-            f'<figcaption>{e(foto["didascalia"])}. {e(foto["credito"])}.</figcaption>'
-            "</figure>"
+            "<p>Queste fotografie stanno accanto alla voce corrispondente del programma.</p>"
+            f"<ul>{voci}</ul>"
         )
     return "".join(pezzi)
 
@@ -416,7 +458,7 @@ def pagina_scheda(sez, ev, oggi):
         + blocco_locandina(ev, sez, prof)
         + "</section>"
         + '<section class="blocco" id="programma"><h2>Programma</h2>'
-        + tabella_programma(ev)
+        + tabella_programma(ev, prof)
         + "</section>"
         + '<section class="blocco" id="fotografie"><h2>Fotografie</h2>'
         + f'<div class="nota">{paragrafi(sez["foto_intro"])}</div>'

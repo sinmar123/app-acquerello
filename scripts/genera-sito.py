@@ -200,7 +200,12 @@ def riassunto_eventi():
         ev = json.loads(path.read_text(encoding="utf-8"))
         url = f"{SITO_URL}/eventi/{ev['anno']}/{ev['slug']}/"
         fonte = ev["fonte"]
-        righe = [f"- {m['giorno'][8:10]} {mesi[int(m['giorno'][5:7]) - 1]}: {m['voce']}" for m in ev.get("programma", [])]
+        righe = []
+        for m in ev.get("programma", []):
+            riga = f"- {m['giorno'][8:10]} {mesi[int(m['giorno'][5:7]) - 1]}: {m['voce']}"
+            if m.get("nota"):
+                riga += f". Nota: {m['nota']}"
+            righe.append(riga)
         programma = "\n".join(righe) if righe else "- Programma da aggiungere."
         if ev.get("locandina"):
             loc = ev["locandina"]
