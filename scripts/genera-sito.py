@@ -210,7 +210,8 @@ def riassunto_eventi():
         programma = "\n".join(righe) if righe else "- Programma da aggiungere."
         if ev.get("locandina"):
             loc = ev["locandina"]
-            locandina = f"{loc['credito']}. Fonte: {loc['fonte']['url']}"
+            testa = f"{loc['didascalia']}. " if loc.get("didascalia") else ""
+            locandina = f"{testa}{loc['credito']}. Fonte: {loc['fonte']['url']}"
         else:
             locandina = "locandina da aggiungere."
         foto = []

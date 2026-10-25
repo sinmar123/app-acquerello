@@ -19,8 +19,9 @@ Controlli: date e giorni della settimana coerenti; ogni voce del programma
 apre con il suo orario; ogni foto è in immagini/ e ha credito e didascalia.
 Se una foto indica un momento, quello è una voce del programma e l'ora è
 nel formato 11.57: la foto sta accanto a quella voce. Le foto senza momento
-restano nella sezione fotografie. La locandina, se c'è, ha file, credito e
-fonte https. Un riquadro social, se c'è, ha titolo e link https.
+restano nella sezione fotografie, e l'elenco delle foto legate segue l'ordine
+del programma. La locandina, se c'è, ha file, credito, alt e fonte https, e
+può avere una didascalia. Un riquadro social, se c'è, ha titolo e link https.
 Nessun testo contiene «da verificare» né il trattino lungo.
 Racconti, demo e interviste non sono ammessi in una scheda.
 """
@@ -435,10 +436,11 @@ def blocco_locandina(ev, sez, prof):
         return f'<p class="vuoto">{e(sez["locandina_manca"])}</p>'
     src = radice(prof - 1) + "immagini/" + loc["file"]
     fonte = loc["fonte"]
+    didascalia = f'{e(loc["didascalia"])}. ' if loc.get("didascalia") else ""
     return (
         '<figure class="foto">'
         f'<img src="{e(src)}" alt="{e(loc["alt"])}">'
-        f'<figcaption>{e(loc["credito"])}. '
+        f'<figcaption>{didascalia}{e(loc["credito"])}. '
         f'<a href="{e(fonte["url"])}">{e(fonte["etichetta"])}</a>.</figcaption>'
         "</figure>"
     )
@@ -449,7 +451,9 @@ def blocco_foto(ev, sez, prof):
     if not tutte:
         return f"<p>{e(sez['nessuna_foto'])}</p>"
     pezzi = [figura_foto(foto, prof) for foto in tutte if not foto.get("momento")]
-    legate = sorted((f for f in tutte if f.get("momento")), key=lambda f: (f.get("ora") or "", f["file"]))
+    ordine = {m["id"]: i for i, m in enumerate(ev.get("programma", []))}
+    legate = sorted((f for f in tutte if f.get("momento")),
+                    key=lambda f: (ordine.get(f["momento"], len(ordine)), f.get("ora") or "", f["file"]))
     if legate:
         voci = "".join(
             "<li>"
