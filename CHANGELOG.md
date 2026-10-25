@@ -2,6 +2,16 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-25 - GBOT-app-acquerello - Sestri Levante: post sulla demo di Felice Feltracco
+
+- Nel riquadro «L'evento sui social» della scheda di Watercolor Sestri Levante entra il post di Alessandro Sanvitale del 25/10/2026 sulla demo di Felice Feltracco. Il riquadro resta solo su questa scheda.
+- **Dati** (`social` in `schede/watercolor-sestri-levante-2026.json`): si aggiunge il link «Demo di Felice Feltracco, post del 25/10/2026», indirizzo `https://x.com/alessandro_snv/status/2114283557317194149`. Stesso formato degli altri: ancora testuale, `target="_blank"` e `rel="noopener"`. I tre link già in scheda restano (profilo su X e due post del 24/10). Il riquadro ne mostra quattro.
+- **Chat**: `lib/prompt-chat.js` elenca anche questo link, solo per la scheda.
+- Controlli: `python3 scripts/genera-sito.py` senza errori, compreso il controllo sui nomi di marca. Gulpease: Principi 68, Colori 75, Marche 59, Soggetti 66, Alberi 72, Eventi 95, scheda Sestri Levante 83. L'archivio 2026 resta sotto le 100 parole, quindi l'indice non si calcola. `lib/prompt-chat.js` rigenerato. In attesa del via del curatore per l'unione su `main`.
+- Prossima azione: via del curatore. L'unione su `main` pubblica il sito.
+
+-- GBOT-app-acquerello
+
 ## 2026-10-25 - GBOT-app-acquerello - Nota di metodo: il sito è in costruzione
 
 - Richiesta di Sandro: la nota di metodo si apre dicendo che il sito è in costruzione. Dove il testo parla del sito (che cosa contiene, come è ordinato), «Quaderno» diventa «sito». Il nome nel titolo e nella testata resta «Quaderno di acquerello». La nota sopra la nota di metodo resta com'è, e così il riquadro «Il Quaderno è in costruzione».
