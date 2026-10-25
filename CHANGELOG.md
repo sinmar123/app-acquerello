@@ -2,6 +2,17 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-25 - GBOT-app-acquerello - Sestri Levante: tolto il profilo su X
+
+- Decisione di Sandro del 25/10/2026: nel riquadro «L'evento sui social» della scheda di Watercolor Sestri Levante il link al suo profilo non serve. Il riquadro resta solo su questa scheda.
+- **Dati** (`social` in `schede/watercolor-sestri-levante-2026.json`): esce la voce «Profilo di Alessandro Sanvitale su X» (`https://x.com/alessandro_snv`). Restano i tre post: «Demo di Cesc Farré, post del 24/10/2026», «Riassunto della giornata e quattro foto, post del 24/10/2026» e «Demo di Felice Feltracco, post del 25/10/2026».
+- **Generatore**: `genera-eventi.py` e `scripts/genera-sito.py` copiano i link del campo `social` e non aggiungono il profilo da soli. In `README.md`, `AGENTS.md` e `CONTRIBUTING.md` il riquadro è descritto in generale, senza quella voce. Le voci già scritte nel CHANGELOG restano come storia.
+- **Chat**: `lib/prompt-chat.js` elenca i tre post, solo per la scheda, e non il profilo.
+- Controlli: `python3 scripts/genera-sito.py` senza errori, compreso il controllo sui nomi di marca. Gulpease: Principi 68, Colori 75, Marche 59, Soggetti 66, Alberi 72, Eventi 95, scheda Sestri Levante 83. L'archivio 2026 resta sotto le 100 parole, quindi l'indice non si calcola. La scheda mostra i tre post e non il profilo. `lib/prompt-chat.js` rigenerato. In attesa del via del curatore per l'unione su `main`.
+- Prossima azione: via del curatore. L'unione su `main` pubblica il sito.
+
+-- GBOT-app-acquerello
+
 ## 2026-10-25 - GBOT-app-acquerello - Sestri Levante: post sulla demo di Felice Feltracco
 
 - Nel riquadro «L'evento sui social» della scheda di Watercolor Sestri Levante entra il post di Alessandro Sanvitale del 25/10/2026 sulla demo di Felice Feltracco. Il riquadro resta solo su questa scheda.
