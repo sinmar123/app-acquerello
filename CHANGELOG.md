@@ -2,6 +2,23 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-25 - GBOT-app-acquerello - Sestri Levante: locandina del festival e foto del 24 e 25 ottobre
+
+- Richiesta di Sandro del 25/10/2026: altre foto sulla scheda di Watercolor Sestri Levante, la demo di Cesc Farré per prima nella giornata del 24/10 e la locandina del festival al posto di «locandina da aggiungere». Foto di Alessandro Sanvitale, ore di Europa/Roma dai dati delle foto.
+- **Locandina** (`locandina` in `schede/watercolor-sestri-levante-2026.json`, file `wsl-2026-locandina.jpg`): la copertina del programma «Programma 23-24-25 ottobre, Watercolor Sestri Levante 2026», col refuso della copertina lasciato com'è. Didascalia: «Locandina del festival, copertina del programma. Il dipinto è un acquerello di Felice Feltracco». Rimando al programma ufficiale.
+- **Foto accanto al programma**, sette nuove (`wsl-2026-sandro-05.jpg`-`11.jpg`):
+  - `s24-farre`: Cesc Farré, demo in Sala Agave, 24/10/2026 alle 10.54. Ora la giornata del 24 si apre con Farré, prima di Igli Arapi.
+  - `d25-feltracco`: Felice Feltracco, demo in sala, 25/10/2026 alle 10.48.
+  - `d25-fracasso`: Pasqualino Fracasso, en plein air in piazza, alle 11.56.
+  - `d25-premiazione`: premiazione del concorso «Fermo Immagine» alle 12.20, la sala con le opere selezionate alle 12.26 e alle 12.30, la locandina del concorso alle 12.30.
+- **Foto di Farré già in scheda** (`farre-sestri-2026-sandro.jpg`): è un'altra inquadratura della stessa demo, senza ora nei dati. Senza `momento` restava solo nella sezione Fotografie, per questo nel programma le foto del 24 partivano da Arapi. Resta nella sezione Fotografie, com'era.
+- **Generatore**: `genera-eventi.py` accetta una `didascalia` facoltativa per la locandina, scritta prima del credito; l'elenco delle foto legate nella sezione Fotografie segue l'ordine del programma, non più la sola ora (prima le foto del 25 mattina finivano tra quelle del 24). `scripts/genera-sito.py` passa la didascalia della locandina alla chat.
+- Immagini raddrizzate secondo l'orientamento delle foto originali, lato lungo 1600 pixel, senza dati EXIF e quindi senza posizione GPS, come le foto già in scheda.
+- Controlli: `python scripts/genera-sito.py` senza errori, compreso il controllo sui nomi di marca. Gulpease: Principi 68, Colori 75, Marche 59, Soggetti 66, Alberi 72, Eventi 95, scheda Sestri Levante 80. La scheda mostra la locandina e le foto nell'ordine del programma. `lib/prompt-chat.js` rigenerato. In attesa del via del curatore per l'unione su `main`.
+- Prossima azione: via del curatore. L'unione su `main` pubblica il sito.
+
+-- GBOT-app-acquerello
+
 ## 2026-10-25 - GBOT-app-acquerello - Sestri Levante: tolto il profilo su X
 
 - Decisione di Sandro del 25/10/2026: nel riquadro «L'evento sui social» della scheda di Watercolor Sestri Levante il link al suo profilo non serve. Il riquadro resta solo su questa scheda.

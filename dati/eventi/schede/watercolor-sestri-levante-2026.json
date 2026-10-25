@@ -169,12 +169,30 @@
       "voce": "Alle 16.30. Ritrovo di chiusura Gruppi Sketching"
     }
   ],
+  "locandina": {
+    "file": "wsl-2026-locandina.jpg",
+    "didascalia": "Locandina del festival, copertina del programma. Il dipinto è un acquerello di Felice Feltracco",
+    "credito": "foto di Alessandro Sanvitale",
+    "alt": "Copertina del programma di Watercolor Sestri Levante 2026, 23-24-25 ottobre, con un acquerello di Felice Feltracco",
+    "fonte": {
+      "url": "https://watercolorsestrilevante.it/#programma",
+      "etichetta": "programma ufficiale"
+    }
+  },
   "foto": [
     {
       "file": "farre-sestri-2026-sandro.jpg",
       "didascalia": "Cesc Farré, demo del 24/10/2026",
       "credito": "foto di Alessandro Sanvitale",
       "alt": "Cesc Farré, demo del 24/10/2026"
+    },
+    {
+      "file": "wsl-2026-sandro-05.jpg",
+      "momento": "s24-farre",
+      "ora": "10.54",
+      "didascalia": "Cesc Farré, demo in Sala Agave, il 24/10/2026 alle 10.54",
+      "credito": "foto di Alessandro Sanvitale",
+      "alt": "Cesc Farré, demo in Sala Agave, il 24/10/2026 alle 10.54"
     },
     {
       "file": "wsl-2026-sandro-01.jpg",
@@ -207,6 +225,54 @@
       "didascalia": "Massimiliano Iocco, en plein air, vista sul mare dal cavalletto, il 24/10/2026 alle 16.44",
       "credito": "foto di Alessandro Sanvitale",
       "alt": "Massimiliano Iocco, en plein air, vista sul mare dal cavalletto, il 24/10/2026 alle 16.44"
+    },
+    {
+      "file": "wsl-2026-sandro-06.jpg",
+      "momento": "d25-feltracco",
+      "ora": "10.48",
+      "didascalia": "Felice Feltracco, demo in sala, il 25/10/2026 alle 10.48. Sullo schermo, una marina con cielo nuvoloso",
+      "credito": "foto di Alessandro Sanvitale",
+      "alt": "Felice Feltracco, demo in sala, il 25/10/2026 alle 10.48. Sullo schermo, una marina con cielo nuvoloso"
+    },
+    {
+      "file": "wsl-2026-sandro-07.jpg",
+      "momento": "d25-fracasso",
+      "ora": "11.56",
+      "didascalia": "Pasqualino Fracasso, en plein air in piazza, con il pubblico intorno, il 25/10/2026 alle 11.56",
+      "credito": "foto di Alessandro Sanvitale",
+      "alt": "Pasqualino Fracasso, en plein air in piazza, con il pubblico intorno, il 25/10/2026 alle 11.56"
+    },
+    {
+      "file": "wsl-2026-sandro-08.jpg",
+      "momento": "d25-premiazione",
+      "ora": "12.20",
+      "didascalia": "Premiazione del concorso «Fermo Immagine», il 25/10/2026 alle 12.20",
+      "credito": "foto di Alessandro Sanvitale",
+      "alt": "Premiazione del concorso «Fermo Immagine», il 25/10/2026 alle 12.20"
+    },
+    {
+      "file": "wsl-2026-sandro-09.jpg",
+      "momento": "d25-premiazione",
+      "ora": "12.26",
+      "didascalia": "La sala con le opere selezionate del concorso «Fermo Immagine», il 25/10/2026 alle 12.26",
+      "credito": "foto di Alessandro Sanvitale",
+      "alt": "La sala con le opere selezionate del concorso «Fermo Immagine», il 25/10/2026 alle 12.26"
+    },
+    {
+      "file": "wsl-2026-sandro-10.jpg",
+      "momento": "d25-premiazione",
+      "ora": "12.30",
+      "didascalia": "La sala con le opere selezionate del concorso «Fermo Immagine», il 25/10/2026 alle 12.30",
+      "credito": "foto di Alessandro Sanvitale",
+      "alt": "La sala con le opere selezionate del concorso «Fermo Immagine», il 25/10/2026 alle 12.30"
+    },
+    {
+      "file": "wsl-2026-sandro-11.jpg",
+      "momento": "d25-premiazione",
+      "ora": "12.30",
+      "didascalia": "Locandina del concorso «Fermo Immagine», 3ª edizione, sul tema «Cammino in pendenza», il 25/10/2026 alle 12.30",
+      "credito": "foto di Alessandro Sanvitale",
+      "alt": "Locandina del concorso «Fermo Immagine», 3ª edizione, sul tema «Cammino in pendenza», il 25/10/2026 alle 12.30"
     }
   ],
   "social": {
