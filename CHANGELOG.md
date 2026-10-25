@@ -12,6 +12,18 @@ Cronologia delle modifiche. Ordine cronologico inverso.
 
 -- GBOT-app-acquerello
 
+## 2026-10-25 - GBOT-app-acquerello - Nota di metodo: il sito è in costruzione
+
+- Richiesta di Sandro: la nota di metodo si apre dicendo che il sito è in costruzione. Dove il testo parla del sito (che cosa contiene, come è ordinato), «Quaderno» diventa «sito». Il nome nel titolo e nella testata resta «Quaderno di acquerello». La nota sopra la nota di metodo resta com'è, e così il riquadro «Il Quaderno è in costruzione».
+- **Nota di metodo** (`genera_home` in `scripts/genera-sito.py`). In apertura, la frase «Il sito è in costruzione.» Poi il testo di prima, con una sostituzione:
+  - «Il Quaderno nasce» diventa «Il sito nasce».
+- Testo prima: «Chi oggi apprende una disciplina pratica dispone di una documentazione vastissima, distribuita tra manuali, schede tecniche e centinaia di ore di dimostrazioni filmate; la vera difficoltà sta nel ricondurre una materia tanto dispersa a un criterio ordinato e consultabile mentre si lavora. Gli strumenti di intelligenza artificiale permettono di compiere a monte questo lavoro di spoglio, confronto e classificazione, così da aiutare a esercitarsi con più consapevolezza. Il Quaderno nasce dall'applicazione di tale approccio allo studio dell'acquerello: ordina il comportamento di acqua, carta e pigmenti, indica al secondo le sequenze esecutive nei video didattici e affianca al tavolo da lavoro strumenti di riscontro, dal calcolatore colorimetrico all'assistente tecnico integrato nelle pagine.»
+- Testo dopo: «Il sito è in costruzione. Chi oggi apprende una disciplina pratica dispone di una documentazione vastissima, distribuita tra manuali, schede tecniche e centinaia di ore di dimostrazioni filmate; la vera difficoltà sta nel ricondurre una materia tanto dispersa a un criterio ordinato e consultabile mentre si lavora. Gli strumenti di intelligenza artificiale permettono di compiere a monte questo lavoro di spoglio, confronto e classificazione, così da aiutare a esercitarsi con più consapevolezza. Il sito nasce dall'applicazione di tale approccio allo studio dell'acquerello: ordina il comportamento di acqua, carta e pigmenti, indica al secondo le sequenze esecutive nei video didattici e affianca al tavolo da lavoro strumenti di riscontro, dal calcolatore colorimetrico all'assistente tecnico integrato nelle pagine.»
+- Controlli: `python3 scripts/genera-sito.py` senza errori, compreso `controlla_marche_fuori_sezione`. Gulpease: Principi 68, Colori 75, Marche 59, Soggetti 66, Alberi 72, Eventi 95, scheda Sestri Levante 83. L'archivio 2026 resta sotto le 100 parole, quindi l'indice non si calcola. La home è a Gulpease 53. `lib/prompt-chat.js` invariato. In attesa del via del curatore per l'unione su `main`.
+- Prossima azione: via del curatore. L'unione su `main` pubblica il sito.
+
+-- GBOT-app-acquerello
+
 ## 2026-10-24 - GBOT-app-acquerello - Home: non professionisti, al posto di dilettanti
 
 - Correzione di Sandro sulla nota in home: «dilettante» e «dilettanti» diventano «non professionista» e «non professionisti». Il 25/10/2026 Sandro fissa il testo definitivo. La nota di metodo resta.
