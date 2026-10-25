@@ -715,23 +715,7 @@ IN_COSTRUZIONE = [
 ]
 
 
-# Home: testata ad acquerello, striscia della tavolozza, schede con una figurina in SVG o CSS, nota di metodo da aprire.
-
-
-def colori_tavolozza() -> list[dict]:
-    return json.loads((DATI_DIR / "colori" / "tavolozza.json").read_text(encoding="utf-8"))["colori"]
-
-
-def striscia_tavolozza() -> str:
-    """Le sei macchie, con nome comune e pigmento, dai valori di dati/colori/tavolozza.json.
-
-    Scelta di Sandro del 24/10/2026: in home la fila è solo immagine di presentazione, senza didascalia.
-    Il nome e il pigmento restano sull'etichetta di ogni campione."""
-    voci = "".join(
-        f'<li title="{e(c["nome"])} ({e(c["pigmento"])})"><span class="goccia" style="--c:{e(c["srgb"])}"></span>'
-        f'<span class="m-nome">{e(c["nome"])}</span><span class="m-pig">{e(c["pigmento"])}</span></li>'
-        for c in colori_tavolozza())
-    return f'<section class="tavolozza" aria-label="Sei colori proposti"><ul>{voci}</ul></section>'
+# Home: testata ad acquerello, schede con una figurina in SVG o CSS, nota di metodo da aprire.
 
 
 def icona_scheda(slug: str) -> str:
@@ -784,14 +768,6 @@ body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;b
 .testa h1{margin:0 0 8px;font-family:Georgia,"Times New Roman",serif;font-weight:700;font-size:2.15rem;line-height:1.12;color:#1b2b20}
 .testa p{margin:0;max-width:520px;font-size:1.02rem;color:#2f4236}
 .testa .nota{margin:14px 0 0;max-width:40rem;font-size:.98rem;line-height:1.5;color:#2f4236}
-.tavolozza{max-width:820px;margin:0 auto;padding:18px 14px 0}
-.tavolozza ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
-.tavolozza li{display:flex;flex-direction:column;align-items:center;text-align:center;font-size:.75rem;line-height:1.25;color:#3d352a}
-.goccia{width:56px;height:40px;margin-bottom:5px;background:radial-gradient(ellipse at 40% 40%,rgba(255,255,255,.22),transparent 65%),var(--c);opacity:.84;
- border-radius:58% 42% 55% 45%/52% 60% 40% 48%;box-shadow:inset 0 0 3px 1px rgba(0,0,0,.28)}
-.tavolozza li:nth-child(2n) .goccia{border-radius:44% 56% 40% 60%/58% 42% 58% 42%;transform:rotate(4deg)}
-.tavolozza li:nth-child(3n) .goccia{border-radius:62% 38% 50% 50%/45% 55% 45% 55%;transform:rotate(-6deg)}
-.m-pig{font-size:.7rem;color:#7a6f5d}
 main{max-width:820px;margin:0 auto;padding:18px 14px 12px}
 .cf-origine{background:#eef4ef;border:1px solid #cadbce;border-left:4px solid #263529;border-radius:8px;padding:10px 14px;margin:0 0 16px;font-size:.91rem;color:#263529}
 .cf-origine summary{cursor:pointer;font-weight:700;color:#1b2b20}
@@ -824,7 +800,6 @@ footer a{color:#5a4d3b}
  .testa h1{font-size:1.55rem}
  .testa p{font-size:.9rem}
  .testa .nota{font-size:.88rem}
- .tavolozza ul{grid-template-columns:repeat(3,1fr);row-gap:12px}
  .card{padding:12px 12px;gap:10px}
  .card-fig,.card-fig svg{width:46px;height:46px}
  .ruota{width:42px;height:42px}
@@ -862,7 +837,6 @@ def genera_home(sezioni_pronte: list[dict]) -> str:
     <p class="nota">Questo sito è sviluppato da non professionisti e si rivolge a chi condivide la stessa passione. Raccoglie ciò che si impara strada facendo, con i limiti di chi non è un maestro, ed è aperto ai contributi di tutti gli appassionati. Anche i professionisti che vi trovassero qualcosa di utile, o volessero aiutarci a migliorarlo, saranno i benvenuti.</p>
   </div>
 </header>
-{striscia_tavolozza()}
 <main>
   <details class="cf-origine">
     <summary>Nota di metodo</summary>
