@@ -2,6 +2,16 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-25 - GBOT-app-acquerello - Home: tolta la fila dei sei colori proposti
+
+- Decisione di Sandro del 25/10/2026: in home la fila dei campioni dei sei colori proposti, sotto la testata e senza didascalia, non serve più.
+- **Generatore** (`scripts/genera-sito.py`): escono le funzioni `striscia_tavolozza()` e `colori_tavolozza()`, usate solo dalla home, il blocco `<section class="tavolozza">` sotto la testata e le regole CSS che servivano solo a quel blocco (`.tavolozza`, `.goccia`, `.m-pig`, anche nella versione per schermi stretti). La home passa dalla testata direttamente alla nota di metodo. Nessun file immagine tolto: la fila era disegnata in CSS dai valori di `dati/colori/tavolozza.json`, che resta e serve alle altre pagine.
+- La sezione Teoria dei colori (`/colori/`) non cambia: le schede dei sei colori restano dove sono. Restano anche i sottotitoli delle schede in home che nominano i sei colori, perché descrivono le sezioni.
+- Controlli: `python scripts/genera-sito.py` senza errori. In home non restano titoletti, spazi vuoti o classi della fila. In attesa del via del curatore per l'unione su `main`.
+- Prossima azione: via del curatore. L'unione su `main` pubblica il sito.
+
+-- GBOT-app-acquerello
+
 ## 2026-10-25 - GBOT-app-acquerello - Sestri Levante: locandina del festival e foto del 24 e 25 ottobre
 
 - Richiesta di Sandro del 25/10/2026: altre foto sulla scheda di Watercolor Sestri Levante, la demo di Cesc Farré per prima nella giornata del 24/10 e la locandina del festival al posto di «locandina da aggiungere». Foto di Alessandro Sanvitale, ore di Europa/Roma dai dati delle foto.
