@@ -693,6 +693,14 @@ def inietta_elementi_comuni(html_pagina: str, sezione: dict, pagina_path: str, p
             count=1,
         )
 
+    if 'class="piede-informativa"' not in html_pagina:
+        radice = "../" * (1 if profondita is None else profondita)
+        nota = f'<p class="piede-informativa"><a href="{radice}informativa/">Informativa sulla privacy</a></p>'
+        pos = html_pagina.rfind("</footer>")
+        if pos < 0:
+            raise SystemExit(f"genera-sito: la pagina {pagina_path} non ha il piè di pagina per l'informativa")
+        html_pagina = html_pagina[:pos] + nota + html_pagina[pos:]
+
     blocco = blocco_chat_e_suggerimenti(sezione.get("nome_form", OPZIONI_SEZIONE[0]), pagina_path)
     if 'id="suggerimenti"' not in html_pagina:
         if "<footer" in html_pagina:
@@ -858,10 +866,87 @@ def genera_home(sezioni_pronte: list[dict]) -> str:
 <footer>
   Quaderno di acquerello · progetto aperto su <a href="{REPO_URL}" target="_blank" rel="noopener">GitHub</a>
   (testi, dati e illustrazioni <a href="https://creativecommons.org/licenses/by/4.0/deed.it" target="_blank" rel="noopener">CC BY 4.0</a>, codice MIT)
+  · <a href="./informativa/">Informativa sulla privacy</a>
 </footer>
 </body>
 </html>
 """
+
+# Informativa sulla privacy (/informativa/), collegata dal piè di pagina di ogni pagina. Testo del 27/10/2026,
+# da verificare quando cambia il sito: le pagine non hanno cookie propri, statistiche, caratteri o script di altri
+# siti; i video degli Alberi caricano il lettore di YouTube solo al clic (dati/alberi/pit-261013-video-gesti.py).
+# Titolare e contatto sono quelli già scritti nella nota della chat, senza indirizzo né telefono.
+INFORMATIVA_DATA = "27/10/2026"
+PRIVACY_GOOGLE = "https://policies.google.com/privacy?hl=it"
+TERMINI_YOUTUBE = "https://www.youtube.com/t/terms"
+STILE_INFORMATIVA = """.informativa h1{margin:0 0 6px;font-family:Georgia,"Times New Roman",serif;font-size:1.8rem;color:#1b2b20}
+.informativa .sotto{margin:0 0 18px;color:#6b5e4c}
+.informativa h2{margin:22px 0 6px;font-size:1.08rem;color:#263529}
+.informativa p{margin:0 0 10px}
+.informativa a{color:#2c4f3a}
+"""
+
+
+def genera_informativa() -> str:
+    corpo = f"""<main class="informativa">
+<h1>Informativa sulla privacy</h1>
+<p class="sotto">Come il sito tratta i dati di chi lo visita. Testo del {INFORMATIVA_DATA}.</p>
+
+<h2>Chi è il titolare</h2>
+<p>Il titolare del trattamento è Alessandro Sanvitale, curatore del sito (account GitHub sinmar123). Lo si contatta
+aprendo una <a href="{REPO_URL}/issues" target="_blank" rel="noopener">segnalazione sul repository del progetto</a>.
+Le segnalazioni sono pubbliche: non vanno scritti dati personali.</p>
+
+<h2>Cookie e strumenti di misura</h2>
+<p>Le pagine del sito non impostano cookie propri. Non usano strumenti di statistica o di tracciamento e non caricano
+caratteri, script o immagini da altri siti. Il sito non chiede di registrarsi.</p>
+<p>Il sito è ospitato da Cloudflare. Come ogni servizio che ospita un sito, Cloudflare riceve i dati tecnici delle
+connessioni, per esempio l'indirizzo IP, per consegnare le pagine.</p>
+
+<h2>I video di YouTube</h2>
+<p>Nella sezione <a href="../alberi/">Alberi</a> i passaggi dei video si guardano col lettore di YouTube. Finché non si
+preme «Guarda il video», la pagina non carica nulla da YouTube o da Google: al posto del lettore c'è un riquadro del
+sito, senza immagini del video.</p>
+<p>Premendo il pulsante, il browser scarica il lettore ufficiale di YouTube. Da quel momento YouTube, cioè Google,
+riceve alcuni dati della visita, come l'indirizzo IP e la pagina da cui parte il video, e può usare cookie o tecnologie
+simili. Per questi dati valgono l'<a href="{PRIVACY_GOOGLE}" target="_blank" rel="noopener">informativa sulla privacy
+di Google</a> e i <a href="{TERMINI_YOUTUBE}" target="_blank" rel="noopener">Termini di servizio di YouTube</a>.
+Lo stesso vale per i collegamenti «YouTube ↗», che aprono il video sul sito o nell'app di YouTube.</p>
+
+<h2>Assistente e suggerimenti</h2>
+<p>La domanda scritta all'assistente viene inviata a Google tramite l'API Gemini, per generare la risposta. I
+suggerimenti inviati dalla casella diventano pubblici su GitHub. Per limitare gli invii, il server conserva per non più
+di 14 giorni un'impronta dell'indirizzo IP, senza l'indirizzo in chiaro. Le note complete sono nei due riquadri in fondo
+alle pagine.</p>
+
+<h2>Diritti</h2>
+<p>Restano i diritti previsti dagli articoli 15-22 del Regolamento UE 2016/679 e il reclamo al Garante per la
+protezione dei dati personali. Questa pagina descrive il sito com'è al {INFORMATIVA_DATA}.</p>
+</main>"""
+    # La pagina non ha i riquadri della chat e dei suggerimenti: i due collegamenti della barra portano a quelli della home.
+    barra = barra_quaderno("informativa", 1).replace('href="#assistente-ai"', 'href="../#assistente-ai"').replace('href="#suggerimenti"', 'href="../#suggerimenti"')
+    if 'href="#' in barra:
+        raise SystemExit("genera-sito: la barra dell'informativa ha collegamenti interni che la pagina non contiene")
+    titolo = "Informativa sulla privacy · Quaderno di acquerello"
+    descrizione = "Cookie, video di YouTube, assistente e suggerimenti: come il sito tratta i dati di chi lo visita."
+    return f"""<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{e(titolo)}</title>
+{testa_comune(titolo, descrizione, "/informativa/")}<style>
+{STILE_HOME}{STILE_INFORMATIVA}</style>
+{stile_barra("0")}</head>
+<body>
+{barra}{corpo}
+<footer>
+  Quaderno di acquerello · progetto aperto su <a href="{REPO_URL}" target="_blank" rel="noopener">GitHub</a>
+</footer>
+</body>
+</html>
+"""
+
 
 FAVICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
 <path d="M32 4 C22 20 12 30 12 42 a20 20 0 0 0 40 0 C52 30 42 20 32 4 Z" fill="#283A9E" fill-opacity=".82"/>
@@ -971,6 +1056,13 @@ def main():
     index_html = SITE_DIR / "index.html"
     index_html.write_text(genera_home(sezioni_pronte), encoding="utf-8", newline="\n")
     print(f"[home] Scritto {index_html.relative_to(APP_DIR).as_posix()} ({index_html.stat().st_size // 1024} KB)")
+    informativa = SITE_DIR / "informativa" / "index.html"
+    informativa.parent.mkdir(parents=True, exist_ok=True)
+    testo_informativa = genera_informativa()
+    informativa.write_text(testo_informativa, encoding="utf-8", newline="\n")
+    leggibilita["informativa"] = gulpease(testo_informativa)
+    pagine_sitemap.append("/informativa/")
+    print(f"[informativa] Scritto {informativa.relative_to(APP_DIR).as_posix()}")
     scrivi_file_di_servizio(pagine_sitemap)
     controlla_reindirizzamenti()
     genera_prompt_chat()
