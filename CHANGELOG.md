@@ -2,6 +2,18 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-27 - GBOT-app-acquerello - Alberi: sesta modalità per le chiome tonde, il tondo caricato chiaro e scuro (Christopher Stephen)
+
+- Richiesta di Sandro del 27/10/2026: aggiungere la terza tecnica del video di Christopher Stephen «Three Watercolour Tree Techniques YOU NEED TO KNOW !!!» (`TPU6woga-6M`) come nuova modalità di A3. Le prime due tecniche del video, bagnato su bagnato e spugna naturale, in A3 ci sono già.
+- **Modalità A3-M6** (`dati/alberi/pit-261014-video-gesti-alberi.json`): titolo, proposta, colori e pennelli presi solo dalla trascrizione automatica in inglese, coi colori come li nomina l'autore (giallo di cadmio, terra di Siena naturale, blu, terra di Siena bruciata). L'autore non dice il numero dei pennelli e non precisa il blu: la scheda non li aggiunge. Manca, rispetto alle altre schede, la corrispondenza coi 6 colori proposti, che resta da decidere. La descrizione di A3 passa da cinque a sei modalità.
+- **Estratto A3-6** (`pit-261013-video-gesti-segmenti.csv`): da 10:52 a 14:11, 199 secondi, dall'acqua con lo spruzzino fino all'ombra del tronco. I secondi vengono dalle parole della trascrizione e vanno rifiniti guardando il video. Il video entra in `pit-261013-alberi-selezione-video.csv` sotto V11 con durata 973 secondi e anno 2026 letti dai metadati pubblici di YouTube; visualizzazioni e iscritti restano vuoti.
+- **Infografica A3-M6** (`pit-261015-infografiche.py`): tre fasi, le due pozze e il tondo caricato sui due lati, il pennello ruotato fra chiaro e scuro, tronco e rami. Nuovo campione `blu`, senza altro nome, perché l'autore dice solo «blue».
+- **Conteggi**: 25 modalità da 24 video, 32 estratti, 25 infografiche, nella pagina, in home, nella scheda dei Soggetti, nel prompt della chat, nel README e in AGENTS. Il piè della pagina Alberi ora conta le infografiche dai dati.
+- Controlli: `python scripts/genera-sito.py` senza errori. Gulpease: Principi 68, Colori 75, Marche 59, Soggetti 66, Alberi 72, Eventi 95, scheda Sestri Levante 80. Prova nel browser: la scheda A3-M6 mostra le tre fasi e il lettore; nessuna richiesta verso altri siti prima del clic.
+- Prossima azione: via del curatore. L'unione su `main` pubblica il sito.
+
+-- GBOT-app-acquerello
+
 ## 2026-10-25 - GBOT-app-acquerello - Home: tolta la fila dei sei colori proposti
 
 - Decisione di Sandro del 25/10/2026: in home la fila dei campioni dei sei colori proposti, sotto la testata e senza didascalia, non serve più.

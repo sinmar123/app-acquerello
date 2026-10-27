@@ -1,4 +1,4 @@
-# Infografiche SVG passo-passo dedicate a ciascuna delle 24 modalità video (A1-M1 .. A6-M2).
+# Infografiche SVG passo-passo dedicate a ciascuna delle 25 modalità video (A1-M1 .. A6-M2).
 # Ogni modalità ha 3 fasi illustrate che spiegano visivamente cosa propone quel video:
 # stato della carta, pennello o attrezzo, colori usati nel video (senza marche commerciali) e gesto.
 
@@ -13,6 +13,7 @@ COLORI_HEX = {
     "blu_ftalo": ("#1b4965", "blu ftalo"),
     "cobalto": ("#3a6ea5", "blu cobalto / ceruleo"),
     "oltremare": ("#2b4c8c", "blu oltremare"),
+    "blu": ("#34598f", "blu"),
     "prussia": ("#1b365d", "blu di Prussia"),
     "indaco": ("#263248", "indaco / grigio di Payne"),
     "lilla": ("#8f85a8", "grigio-lilla / viola"),
@@ -384,7 +385,7 @@ INFOGRAFICHE = {
     },
 
     # =========================================================================
-    # A3 - CHIOME TONDE D'AUTUNNO (5 modalità)
+    # A3 - CHIOME TONDE D'AUTUNNO (6 modalità)
     # =========================================================================
     "A3-M1": {
         "titolo": "Infografica del video: pancia del pennello mossa in tondo, dal centro al bordo",
@@ -610,6 +611,56 @@ INFOGRAFICHE = {
                     '<ellipse cx="122" cy="78" rx="52" ry="26" fill="#3b2d26" opacity="0.8"/>'
                     '<path d="M78,96 L68,54 M76,78 L88,60" stroke="#1c1410" stroke-width="2.2" stroke-linecap="round"/>'
                     '<path d="M126,96 L118,54 M124,76 L142,58 M150,92 L162,62" stroke="#fbeec8" stroke-width="2.2" stroke-linecap="round"/>'
+                ),
+            },
+        ],
+    },
+
+    "A3-M6": {
+        "titolo": "Infografica del video: tondo caricato chiaro da un lato e scuro dall'altro, ruotato nella stesura",
+        "fasi": [
+            {
+                "titolo": "Due pozze e il tondo caricato sui due lati",
+                "carta": "umida",
+                "colori": ["giallo_limone", "siena_nat", "blu", "siena_bruc"],
+                "attrezzo": "Pennello tondo, steso quasi piatto",
+                "testo": "Con lo spruzzino si porta un po' d'acqua sulla carta. Si prepara un verde terroso chiaro e una pozza più scura, si carica il pennello di chiaro su un lato e di scuro sull'altro.",
+                "svg": svg_wrap(
+                    '<ellipse cx="52" cy="40" rx="30" ry="16" fill="#8f9a45" opacity="0.9"/>'
+                    '<ellipse cx="52" cy="98" rx="30" ry="16" fill="#3d4038" opacity="0.9"/>'
+                    '<path d="M196,70 L130,70" stroke="#6b4a2b" stroke-width="5" stroke-linecap="round"/>'
+                    '<path d="M130,64 Q104,66 96,70 Q104,74 130,76 Z" fill="#c9b48a"/>'
+                    '<path d="M130,64 Q104,66 96,70 L130,70 Z" fill="#8f9a45"/>'
+                    '<path d="M130,76 Q104,74 96,70 L130,70 Z" fill="#3d4038"/>'
+                ),
+            },
+            {
+                "titolo": "Il pennello ruota fra chiaro e scuro",
+                "carta": "umida",
+                "colori": ["giallo_limone", "siena_nat", "blu", "siena_bruc"],
+                "attrezzo": "Pennello tondo, ruotato fra le dita",
+                "testo": "Si trascina il chiaro e, girando il pennello, si posa lo scuro. Ruotandolo di continuo si lega tutta la chioma in una sola stesura, luci e scuri insieme.",
+                "svg": svg_wrap(
+                    '<ellipse cx="100" cy="66" rx="58" ry="40" fill="#8f9a45" opacity="0.85"/>'
+                    '<ellipse cx="118" cy="80" rx="40" ry="24" fill="#3d4038" opacity="0.75"/>'
+                    '<circle cx="74" cy="48" r="5" fill="#fcfaf4"/>'
+                    '<path d="M168,40 A22,22 0 1,1 190,70" fill="none" stroke="#6b4a2b" stroke-width="2" stroke-dasharray="3,2"/>'
+                    '<path d="M186,64 L190,72 L196,64" fill="none" stroke="#6b4a2b" stroke-width="2"/>'
+                ),
+            },
+            {
+                "titolo": "Tronco, rami e varchi del cielo",
+                "carta": "asciutta",
+                "colori": ["blu", "siena_bruc"],
+                "attrezzo": "Pennello più piccolo",
+                "testo": "Col pennello più piccolo e lo scuro si fa il tronco: bordo netto dove la carta è asciutta, morbido dove tocca la stesura. In alto forme più piccole e qualche ramo nei varchi del cielo.",
+                "svg": svg_wrap(
+                    '<ellipse cx="100" cy="62" rx="58" ry="40" fill="#8f9a45" opacity="0.85"/>'
+                    '<ellipse cx="118" cy="76" rx="40" ry="24" fill="#3d4038" opacity="0.75"/>'
+                    '<circle cx="74" cy="44" r="5" fill="#fcfaf4"/>'
+                    '<circle cx="122" cy="40" r="4" fill="#fcfaf4"/>'
+                    '<path d="M104,126 L104,74 M104,92 L82,66 M104,84 L124,44 M104,100 L132,82" stroke="#3a2c22" stroke-width="3" stroke-linecap="round"/>'
+                    '<path d="M70,128 L150,128" stroke="#6b6458" stroke-width="3" opacity="0.6"/>'
                 ),
             },
         ],

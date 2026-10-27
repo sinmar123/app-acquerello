@@ -1,6 +1,6 @@
 {
  "data": "2026-10-21",
- "nota": "Sezione Alberi ad acquerello: 6 esempi tipici di alberi e arbusti (sganciati da qualsiasi paesaggio fisso o specchio d'acqua), sviluppati attraverso 24 modalità video con un'infografica SVG in 3 fasi per ciascuna modalità e proposta colori doppia (libera in studio, 6 colori proposti all'aperto).",
+ "nota": "Sezione Alberi ad acquerello: 6 esempi tipici di alberi e arbusti (sganciati da qualsiasi paesaggio fisso o specchio d'acqua), sviluppati attraverso 25 modalità video con un'infografica SVG in 3 fasi per ciascuna modalità e proposta colori doppia (libera in studio, 6 colori proposti all'aperto).",
  "apertura": {
   "titolo": "S1 · Alberi ad acquerello: esempi, modalità e gesti nei video",
   "sottotitolo": "Primo modulo dei Soggetti: sei esempi di alberi, siepi e arbusti, ciascuno sviluppato in più modalità tratte dai video. Ogni esempio ha un'infografica in tre fasi per ciascuna modalità e proposte di colore per lo studio e per l'aperto.",
@@ -17,7 +17,7 @@
    },
    {
     "titolo": "Per ogni esempio: più modalità tratte dai video, con un'infografica per ciascuna",
-    "testo": "Nell'acquerello non esiste una ricetta unica per dipingere un albero. Sotto ciascuno dei sei esempi sono raccolte diverse modalità possibili per svilupparlo, ciascuna tratta da uno o più video (24 modalità in tutto, da 23 video). Ogni scheda riassume che cosa propone l'autore e quali colori e pennelli usa. La scheda mostra poi un'infografica in 3 fasi costruita su quella modalità, e il lettore integrato mostra il passaggio del video."
+    "testo": "Nell'acquerello non esiste una ricetta unica per dipingere un albero. Sotto ciascuno dei sei esempi sono raccolte diverse modalità possibili per svilupparlo, ciascuna tratta da uno o più video (25 modalità in tutto, da 24 video). Ogni scheda riassume che cosa propone l'autore e quali colori e pennelli usa. La scheda mostra poi un'infografica in 3 fasi costruita su quella modalità, e il lettore integrato mostra il passaggio del video."
    },
    {
     "titolo": "Colori: tavolozza libera in studio, 6 colori proposti all'aperto",
@@ -451,7 +451,7 @@
   {
    "voce": "A3 Chiome tonde d'autunno",
    "breve": "Chiome d'autunno",
-   "descrizione": "Sono latifoglie autunnali (faggi, querce, aceri) dalle grandi chiome tondeggianti e luminose. I gialli dorati in luce si fondono con gli aranci, i rossi e i bruni profondi nella parte bassa. I cinque video propongono cinque modalità per impostare la forma e i passaggi di colore. La prima usa il movimento circolare di pancia del pennello, la seconda la fusione bagnato su bagnato dal giallo al rosso scuro, la terza la tamponatura con la spugna naturale. La quarta accosta a fresco alberi verdi vicini, la quinta incide i rami con la tessera di plastica.",
+   "descrizione": "Sono latifoglie autunnali (faggi, querce, aceri) dalle grandi chiome tondeggianti e luminose. I gialli dorati in luce si fondono con gli aranci, i rossi e i bruni profondi nella parte bassa. I sei video propongono sei modalità per impostare la forma e i passaggi di colore. La prima usa il movimento circolare di pancia del pennello, la seconda la fusione bagnato su bagnato dal giallo al rosso scuro, la terza la tamponatura con la spugna naturale. La quarta accosta a fresco alberi verdi vicini, la quinta incide i rami con la tessera di plastica. La sesta carica il pennello tondo di chiaro da un lato e di scuro dall'altro e fa la chioma in una sola stesura.",
    "colori_studio": "In studio si può sfruttare tutta la ricchezza dei pigmenti autunnali. La tavolozza comprende giallo limone o giallo aureolina, giallo e arancio di cadmio, oro chinacridone, terra di Siena naturale e bruciata, rosso inglese (light red), cremisi d'alizarina, seppia, indaco e blu oltremare.",
    "colori_aperto": "All'aperto, con i 6 colori proposti, si possono usare M5 (arancio) per la chioma in luce, M6 (rame) calato a fresco nel centro e M7 (rosso cupo) per la base in ombra. M3 (verde scuro) serve per eventuali alberi verdi accostati, M10/M11 per tronchi e rami.",
    "pennelli": "Tondo grande (n. 10-12), piatto medio, pennellessa piatta (mottler), spugna naturale marina, pennello sagomato o dentellato, tondo fine o rigger (n. 2-3) e una tessera rigida di plastica.",
@@ -510,6 +510,17 @@
      "pennelli_video": "Pennellessa piatta (mottler, circa 2 pollici) per la stesura e angolo di una tessera rigida di plastica.",
      "segmenti": [
       "A3-5"
+     ]
+    },
+    {
+     "id": "A3-M6",
+     "titolo": "Modalità 6: chioma in una sola stesura col tondo caricato chiaro da un lato e scuro dall'altro",
+     "autore": "Christopher Stephen",
+     "proposta": "È una tecnica che l'autore usa nel proprio lavoro. Con lo spruzzino si porta un po' d'acqua sulla carta e si preparano due pozze, un verde terroso chiaro e un colore più scuro. Si carica il pennello tondo nel chiaro, lo si stende quasi piatto e lo si carica di scuro sull'altro lato: il tondo lavora quasi come un piatto. Ruotando di continuo il pennello fra le dita, la pennellata passa dal chiaro allo scuro e la chioma nasce in una sola stesura, luci e scuri insieme. Poi qualche ombra scura e, col pennello più piccolo, il tronco: bordi netti dove la carta è asciutta, morbidi dove tocca la stesura. In alto forme più piccole e alcuni rami che escono dai varchi del cielo. Nel video l'albero è verde.",
+     "colori_video": "Giallo di cadmio, terra di Siena naturale e una punta di blu per il verde terroso chiaro; blu e un po' di terra di Siena bruciata per la pozza più scura.",
+     "pennelli_video": "Pennello tondo, caricato sui due lati, per la chioma; pennello più piccolo per il tronco e i rami; spruzzino per bagnare la carta.",
+     "segmenti": [
+      "A3-6"
      ]
     }
    ],

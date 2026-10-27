@@ -528,7 +528,7 @@ def pagina():
 {"".join(sezioni)}
 <footer><h2>I video</h2><p>I video restano dei loro autori: la pagina li mostra col lettore di YouTube, senza copiarli. Grazie a:</p>
 <ul class="crediti">{crediti}</ul>
-<p>Le 24 infografiche in 3 fasi sono disegnate per questa guida, una per ogni modalità.</p></footer>"""
+<p>Le {tot_modalita} infografiche in 3 fasi sono disegnate per questa guida, una per ogni modalità.</p></footer>"""
     html_ = f"""<!doctype html>
 <html lang="it"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
