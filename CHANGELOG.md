@@ -2,6 +2,26 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-27 - CC - Nuova sezione 6. Opere di non professionisti, con gli acquerelli di Alessandro Sanvitale
+
+- Richiesta di Sandro del 27/10/2026: una sezione per le opere di non professionisti, a cominciare dalle sue, con le 14 foto che ha raccolto. Come titolo la data, con il giorno della settimana e l'ora quando si trovano, e il numero che lui scrive sul foglio.
+- **Sezione** (`dati/opere/`): `sezione.json` con i testi, un JSON per autore in `autori/` (per ora `alessandro-sanvitale.json`), le foto in `immagini/alessandro-sanvitale/` e `genera-opere.py` (comando `pagina`). Il generatore scrive l'elenco degli autori, `/opere/`, e una pagina per autore, `/opere/alessandro-sanvitale/`, con le opere dalla più recente in una griglia; un clic apre la foto a grandezza piena.
+- **Titoli e date**. Il titolo è la data in cui l'acquerello è stato dipinto, con il giorno della settimana calcolato dal generatore e l'ora quando è nota. Su cinque fogli c'è una scritta a mano nel margine, letta sulla foto ingrandita:
+  - n. 104: «17-1-23 lezione 12ª / 24-1-23 lez. 13ª», due sedute, martedì 17 e martedì 24 gennaio 2023;
+  - n. 114: «15-2-23 Mercoledì ore 21-22, 16-2-23 giovedì ore 21-», due sedute; i giorni scritti coincidono con le date;
+  - n. 117: «4-3-23 Sabato», sabato 4 marzo 2023; la foto è del giorno dopo;
+  - n. 124: il numero senza data, con il 4 scritto sopra un 3; titolo dalla data della foto;
+  - n. 107: il numero si legge, la data no, perché la riga è tagliata dal bordo della foto. Per ora il titolo è la data della foto, lunedì 27 febbraio 2023 alle 21.45; se la numerazione segue l'ordine di lavoro, il foglio è fra il 24 gennaio e il 15 febbraio 2023.
+- Gli altri nove fogli non hanno scritte nei margini visibili. Il titolo viene dalla data e dall'ora di scatto (dati EXIF); per l'immagine arrivata da WhatsApp, dalla data nel nome del file, senza ora. Sotto questi titoli la pagina scrive «data della fotografia».
+- **Foto**: `prepara-foto.py <cartella> <id-autore>` le raddrizza, porta il lato lungo a 1600 pixel e le salva senza dati EXIF, quindi senza la posizione GPS che cinque originali contenevano. 14 file, 5,6 MB in tutto. Gli originali restano fuori dal repository.
+- **Diritti**: le opere restano dei rispettivi autori e non rientrano nella licenza CC BY 4.0. Riga nuova in `LICENSE` § 2, eccezione in `CONTRIBUTING.md` § 4, nota in fondo alle pagine della sezione.
+- **Sito**: la sezione entra in `SEZIONI` di `scripts/genera-sito.py` col numero 6, quindi nella barra e in home, con una figura disegnata (un foglio dipinto sul cavalletto). «Opere» entra nel menu della casella dei suggerimenti e in `SEZIONI_VALIDE` di `functions/api/suggerimento.js`; `/opere/` negli elenchi `PAGINE_VALIDE` delle due funzioni. La chat riceve gli autori, il numero delle opere e gli anni, con l'istruzione di non descrivere né giudicare le opere, che non vede.
+- **Documenti**: `README.md` (tabella delle sezioni e licenza), `AGENTS.md`, `CONTRIBUTING.md` (§ 1 come proporre le proprie opere, § 3 regole della sezione, § 4 diritti).
+- Controlli: `python scripts/genera-sito.py` senza errori, compreso il controllo sui nomi di marca. Gulpease: Principi 68, Colori 75, Marche 59, Soggetti 66, Alberi 72, Eventi 95, scheda Sestri Levante 80, Opere 74, pagina di Alessandro Sanvitale 102. Pagine provate in Chrome a 1280 pixel e, dentro un riquadro, a 360 e 390 pixel: griglia a tre colonne sul computer e a una sul telefono, nessuno scorrimento di lato. Le 14 foto rispondono e ognuna sta sotto il suo titolo. `lib/prompt-chat.js` rigenerato. In attesa del via del curatore per l'unione su `main`.
+- Prossima azione: Sandro indica la data scritta sul foglio n. 107 e conferma il n. 124; poi il via del curatore. L'unione su `main` pubblica il sito.
+
+-- CC
+
 ## 2026-10-25 - GBOT-app-acquerello - Home: tolta la fila dei sei colori proposti
 
 - Decisione di Sandro del 25/10/2026: in home la fila dei campioni dei sei colori proposti, sotto la testata e senza didascalia, non serve più.

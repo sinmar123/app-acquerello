@@ -1,0 +1,20 @@
+{
+  "data": "2026-10-27",
+  "titolo": "Opere di non professionisti",
+  "sottotitolo": "Acquerelli di appassionati che non dipingono per mestiere, una pagina per autore",
+  "introduzione": [
+    "Questa sezione raccoglie acquerelli di appassionati che non dipingono per mestiere.",
+    "Ogni autore ha una pagina, con le opere dalla più recente.",
+    "Il titolo di ogni opera è la data in cui è stata dipinta, con il giorno della settimana e, quando è nota, l'ora.",
+    "La data è quella scritta sul foglio; dove manca o non si legge, è la data della fotografia, indicata sotto il titolo.",
+    "Sotto il titolo c'è anche il numero che l'autore ha dato al foglio, quando c'è.",
+    "Chi vuole proporre le proprie opere può scriverlo nella casella dei suggerimenti in fondo alla pagina."
+  ],
+  "autore_intro": [
+    "Il titolo è la data in cui l'acquerello è stato dipinto, scritta sul foglio, con il numero del foglio quando c'è.",
+    "Dove il foglio non porta la data, o la foto non la mostra, il titolo è la data della fotografia.",
+    "Un clic sull'immagine la apre a grandezza piena."
+  ],
+  "data_foto": "data della fotografia",
+  "diritti": "Le opere appartengono ai rispettivi autori e non rientrano nella licenza CC BY 4.0 del Quaderno."
+}

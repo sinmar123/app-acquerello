@@ -20,7 +20,8 @@ const PAGINE_VALIDE = [
   "/marche/",
   "/soggetti/",
   "/alberi/",
-  "/eventi/"
+  "/eventi/",
+  "/opere/"
 ];
 
 // Una sottopagina di una sezione resta nel contesto, per esempio la scheda di un evento.

@@ -90,6 +90,18 @@ SEZIONI = [
         "cartelle": [DATI_DIR / "eventi" / "immagini"],
         "pagine_extra": DATI_DIR / "eventi" / "pagine",
     },
+    {
+        "slug": "opere",
+        "numero": "6",
+        "breve": "Opere",
+        "nome_form": "Opere",
+        "titolo": "Opere di non professionisti",
+        "sottotitolo": "Acquerelli di appassionati che non dipingono per mestiere, una pagina per autore",
+        "script_genera": DATI_DIR / "opere" / "genera-opere.py",
+        "html_generato": DATI_DIR / "opere" / "opere.html",
+        "cartelle": [DATI_DIR / "opere" / "immagini"],
+        "pagine_extra": DATI_DIR / "opere" / "pagine",
+    },
 ]
 
 DESCRIZIONE_HOME = (
@@ -105,6 +117,7 @@ OPZIONI_SEZIONE = [
     "Confronto marche",
     "Soggetti (Alberi, Nuvole, Fiori...)",
     "Eventi",
+    "Opere",
 ]
 
 FUNZIONE_SUGGERIMENTI = APP_DIR / "functions" / "api" / "suggerimento.js"
@@ -237,6 +250,24 @@ def riassunto_eventi():
     return "\n".join(blocchi)
 
 
+def riassunto_opere():
+    """Testo della chat ricavato dai file degli autori della sezione Opere: nomi, numero di opere e anni.
+    Le immagini non entrano nel prompt, quindi la chat non descrive le opere."""
+    righe = []
+    for path in sorted((DATI_DIR / "opere" / "autori").glob("*.json")):
+        autore = json.loads(path.read_text(encoding="utf-8"))
+        anni = sorted(int(s["giorno"][:4]) for op in autore["opere"] for s in op["sedute"])
+        periodo = f"nel {anni[0]}" if anni[0] == anni[-1] else f"dal {anni[0]} al {anni[-1]}"
+        righe.append(f"- {autore['nome']}: {len(autore['opere'])} acquerelli, {periodo} ({SITO_URL}/opere/{autore['id']}/)")
+    return (
+        f"Opere di non professionisti ({SITO_URL}/opere/): acquerelli di appassionati che non dipingono per mestiere, "
+        "una pagina per autore, con le opere dalla più recente. Il titolo di ogni opera è la data in cui è stata dipinta, "
+        "scritta sul foglio; dove manca o non si legge, è la data della fotografia. Le opere appartengono ai rispettivi autori "
+        "e non rientrano nella licenza CC BY 4.0 del Quaderno. Le immagini non sono in questo riassunto: "
+        "non descrivere le opere e non giudicarle.\nAutori:\n" + ("\n".join(righe) if righe else "- Nessun autore.")
+    )
+
+
 def genera_prompt_chat():
     """Scrive lib/prompt-chat.js col prompt di sistema della chat, ricavato dai dati del sito: sezioni,
     consistenze e stati della carta dei Principi, tavolozza, le 12 miscele con la convenzione delle dosi,
@@ -306,6 +337,8 @@ Il modulo S1, alberi, siepi e arbusti ({SITO_URL}/alberi/), con le modalità tra
 Moduli in preparazione: {in_preparazione}.
 
 {riassunto_eventi()}
+
+{riassunto_opere()}
 
 Come rispondere:
 - In italiano, col registro di un buon manuale tecnico: termini esatti, frasi chiare, niente parlato e niente paroloni. Di norma fra 120 e 220 parole.
@@ -744,6 +777,11 @@ def icona_scheda(slug: str) -> str:
                 '<rect x="22" y="8" width="4" height="10" rx="1" fill="#263529"/><rect x="38" y="8" width="4" height="10" rx="1" fill="#263529"/>'
                 '<circle cx="24" cy="36" r="3" fill="#3f6fb0"/><circle cx="34" cy="36" r="3" fill="#6f8f5a"/>'
                 '<circle cx="44" cy="44" r="3" fill="#8c4a27"/></svg>')
+    if slug == "opere":  # foglio dipinto sul cavalletto, figura disegnata
+        return ('<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M24 50l-6 10M40 50l6 10" stroke="#7a5236" stroke-width="2.5" stroke-linecap="round"/>'
+                '<rect x="8" y="8" width="48" height="42" rx="2" fill="#a07a52"/><rect x="13" y="13" width="38" height="32" fill="#fffdf8"/>'
+                '<rect x="15" y="15" width="34" height="15" fill="#7fa3cf" fill-opacity=".6"/><circle cx="40" cy="21" r="3.5" fill="#e8b24a" fill-opacity=".85"/>'
+                '<path d="M15 34Q24 25 32 31T49 28V43H15Z" fill="#6f8f5a" fill-opacity=".8"/></svg>')
     if slug == "alberi":  # albero con chioma e tronco
         return ('<svg viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="57" rx="22" ry="4" fill="#6f8f5a" fill-opacity=".35"/><path d="M30 58V38h4v20Z" fill="#7a5236"/><path d="M32 46l-7-6M32 43l6-5" stroke="#7a5236" stroke-width="2" stroke-linecap="round"/><circle cx="32" cy="25" r="15" fill="#4f7d45" fill-opacity=".85"/><circle cx="21" cy="32" r="10" fill="#6f9a52" fill-opacity=".8"/><circle cx="43" cy="31" r="11" fill="#3f6a3a" fill-opacity=".8"/><circle cx="27" cy="19" r="6" fill="#9cc07a" fill-opacity=".55"/></svg>')
     return ""

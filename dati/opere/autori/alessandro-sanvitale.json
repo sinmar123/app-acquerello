@@ -1,0 +1,104 @@
+{
+  "id": "alessandro-sanvitale",
+  "nome": "Alessandro Sanvitale",
+  "presentazione": "Alessandro Sanvitale cura il Quaderno di acquerello.",
+  "opere": [
+    {
+      "file": "20240516-221918.jpg",
+      "data_da": "foto",
+      "sedute": [{"giorno": "2024-05-16", "ora": "22.19"}],
+      "alt": "Acquerello notturno: una scala con la ringhiera sale verso una porta illuminata da un lampione, fra muri in ombra."
+    },
+    {
+      "file": "20240327-220723.jpg",
+      "data_da": "foto",
+      "sedute": [{"giorno": "2024-03-27", "ora": "22.07"}],
+      "alt": "Acquerello di un tramonto giallo e arancio sopra uno specchio d'acqua, con erbe e foglie scure in controluce in primo piano."
+    },
+    {
+      "file": "20240304-223837.jpg",
+      "data_da": "foto",
+      "sedute": [{"giorno": "2024-03-04", "ora": "22.38"}],
+      "alt": "Acquerello di un sentiero sterrato fra due file di erbe alte, sotto un cielo a strisce azzurre."
+    },
+    {
+      "file": "20231213-221259.jpg",
+      "numero": "124",
+      "data_da": "foto",
+      "sedute": [{"giorno": "2023-12-13", "ora": "22.12"}],
+      "scritta": "124, con il 4 scritto sopra un 3; nessuna data sul foglio",
+      "alt": "Acquerello di una casa gialla dietro alcuni ulivi, su un prato verde e sotto un cielo azzurro."
+    },
+    {
+      "file": "20230528-222558.jpg",
+      "data_da": "foto",
+      "sedute": [{"giorno": "2023-05-28", "ora": "22.25"}],
+      "alt": "Acquerello: due pareti di roccia scura incorniciano il mare e un cielo rosa; sulla riva, due piccole figure."
+    },
+    {
+      "file": "20230523-214045.jpg",
+      "data_da": "foto",
+      "sedute": [{"giorno": "2023-05-23", "ora": "21.40"}],
+      "alt": "Acquerello di onde che si frangono sulla riva, con la schiuma bianca, il mare blu e la sabbia in primo piano."
+    },
+    {
+      "file": "img-20230516-wa0006.jpg",
+      "data_da": "nome-file",
+      "sedute": [{"giorno": "2023-05-16"}],
+      "alt": "Acquerello di un mare in tempesta: onde verdi e azzurre con la schiuma, sotto un cielo grigio e viola."
+    },
+    {
+      "file": "20230305-101550.jpg",
+      "numero": "117",
+      "data_da": "foglio",
+      "sedute": [{"giorno": "2023-03-04", "giorno_scritto": "sabato"}],
+      "scritta": "117 4-3-23 Sabato",
+      "alt": "Acquerello di colline grigio azzurre, una dietro l'altra, sotto un cielo velato di rosa, con un bosco scuro in primo piano."
+    },
+    {
+      "file": "20230228-201625.jpg",
+      "data_da": "foto",
+      "sedute": [{"giorno": "2023-02-28", "ora": "20.16"}],
+      "alt": "Acquerello di un cielo nuvoloso grigio, azzurro e rosa sopra una fascia di alberi scuri e uno specchio d'acqua con le canne."
+    },
+    {
+      "file": "20230227-214538.jpg",
+      "numero": "107",
+      "data_da": "foto",
+      "sedute": [{"giorno": "2023-02-27", "ora": "21.45"}],
+      "scritta": "107; la data che segue è tagliata dal bordo della fotografia",
+      "alt": "Acquerello: dal bordo di un ombrello arancione cola la pioggia; più in basso, una figura con un ombrello rosa e le luci sfocate della strada."
+    },
+    {
+      "file": "20230223-215730.jpg",
+      "data_da": "foto",
+      "sedute": [{"giorno": "2023-02-23", "ora": "21.57"}],
+      "alt": "Acquerello di un fico d'India: pale tonde in verde, rosa e viola, con le spine disegnate."
+    },
+    {
+      "file": "20230220-221042.jpg",
+      "numero": "114",
+      "data_da": "foglio",
+      "sedute": [
+        {"giorno": "2023-02-15", "giorno_scritto": "mercoledì", "ora": "21-22"},
+        {"giorno": "2023-02-16", "giorno_scritto": "giovedì", "ora": "21"}
+      ],
+      "scritta": "114 - 15-2-23 Mercoledì ore 21-22, 16-2-23 giovedì ore 21-",
+      "alt": "Acquerello di tre archi aperti sul mare al tramonto, con una scogliera a destra e in primo piano un pavimento a riquadri."
+    },
+    {
+      "file": "20230130-213802.jpg",
+      "numero": "104",
+      "data_da": "foglio",
+      "sedute": [{"giorno": "2023-01-17"}, {"giorno": "2023-01-24"}],
+      "scritta": "104 17-1-23 lezione 12ª / 24-1-23 lez. 13ª",
+      "alt": "Acquerello: dal bordo di un ombrello arancione cola la pioggia; più in basso, una figura con un ombrello rosa."
+    },
+    {
+      "file": "20210927-220328.jpg",
+      "data_da": "foto",
+      "sedute": [{"giorno": "2021-09-27", "ora": "22.03"}],
+      "alt": "Acquerello di un interno: una scrivania con la lampada e la sedia, un quadro alla parete e una pianta appena abbozzata."
+    }
+  ]
+}
