@@ -74,7 +74,7 @@ SEZIONI = [
         "modulo_di": "soggetti",
         "nome_form": "Soggetti (Alberi, Nuvole, Fiori...)",
         "titolo": "S1 · Alberi ad acquerello",
-        "sottotitolo": "Sei esempi di alberi, siepi e arbusti, sviluppati in 24 modalità tratte dai video, con un'infografica in tre fasi per ciascuna",
+        "sottotitolo": "Sei esempi di alberi, siepi e arbusti, sviluppati in 25 modalità tratte dai video, con un'infografica in tre fasi per ciascuna",
         "script_genera": DATI_DIR / "alberi" / "pit-261013-video-gesti.py",
         "html_generato": DATI_DIR / "alberi" / "pit-261014-video-gesti-alberi.html",
     },
