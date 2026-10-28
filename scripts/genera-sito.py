@@ -276,9 +276,10 @@ def riassunto_opere():
     Le immagini non entrano nel prompt, quindi la chat non descrive le opere."""
     righe = [f"- {v['numero']} {v['nome']}: {v['quante']} ({SITO_URL}/{v['href']})" for v in sottosezioni_opere()]
     return (
-        f"Opere di non professionisti ({SITO_URL}/opere/): acquerelli di appassionati che non dipingono per mestiere, "
-        "una sottosezione per autore, con le opere dalla più recente. Il titolo di ogni opera è la data in cui è stata dipinta, "
-        "scritta sul foglio; dove manca o non si legge, è la data della fotografia. Le opere appartengono ai rispettivi autori "
+        f"Opere di non professionisti ({SITO_URL}/opere/): acquerelli di dilettanti, cioè di appassionati che non dipingono per "
+        "mestiere, una sottosezione per autore; ogni autore sceglie l'ordine delle sue opere e come presentarle. Nella 6.1 il "
+        "titolo di ogni opera è la data in cui è stata dipinta, scritta sul foglio; dove manca o non si legge, è la data della "
+        "fotografia, e sotto ogni opera c'è un breve parere scritto da un'intelligenza artificiale. Le opere appartengono ai rispettivi autori "
         "e non rientrano nella licenza CC BY 4.0 del Quaderno. Le immagini non sono in questo riassunto: "
         "non descrivere le opere e non giudicarle.\nAutori:\n" + ("\n".join(righe) if righe else "- Nessun autore.")
     )

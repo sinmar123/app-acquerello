@@ -11,8 +11,10 @@ autori insieme alla cartella immagini/. Le foto si preparano con
 prepara-foto.py.
 
 Ogni autore è una sottosezione: il numero della sezione in sezione.json più
-il suo «ordine», per esempio 6.1. La pagina dell'autore si apre con la sua
-presentazione e con due righe su come leggere titoli e date.
+il suo «ordine», per esempio 6.1. Ogni autore sceglie anche in che ordine
+mostrare le opere («ordine_opere»: dal_piu_recente o dal_primo), e la sua
+pagina lo dichiara. La pagina si apre con la presentazione dell'autore, poi
+la frase sull'ordine e «come_leggere», le sue righe su titoli e date.
 
 Il titolo di ogni opera è la data in cui è stata dipinta, in una o più
 sedute, con il giorno della settimana e, se nota, l'ora. Sotto il titolo
@@ -63,6 +65,7 @@ NUMERO_OK = re.compile(r"^\d+$")
 ORA = r"([01]?\d|2[0-3])(\.[0-5]\d)?"
 ORA_OK = re.compile(rf"^{ORA}(-{ORA})?$")
 ORIGINI = ("foglio", "foto", "nome-file")
+ORDINI_OPERE = ("dal_piu_recente", "dal_primo")
 
 CSS = """
 * { box-sizing: border-box; }
@@ -187,9 +190,11 @@ def carica_autori():
     ordini = set()
     for path in sorted(AUTORI.glob("*.json")):
         autore = carica_json(path)
-        for campo in ("id", "nome", "ordine", "opere"):
+        for campo in ("id", "nome", "ordine", "ordine_opere", "opere"):
             if not autore.get(campo):
                 errore(f"{path.name}: manca {campo}")
+        if autore["ordine_opere"] not in ORDINI_OPERE:
+            errore(f"{path.name}: «ordine_opere» deve essere uno fra {', '.join(ORDINI_OPERE)}")
         if not ID_OK.match(autore["id"]) or path.stem != autore["id"]:
             errore(f"{path.name}: il nome del file deve essere <id>.json, con id in minuscolo e trattini")
         if not isinstance(autore["ordine"], int) or autore["ordine"] < 1 or autore["ordine"] in ordini:
@@ -213,7 +218,8 @@ def carica_autori():
         avanzano = sorted(p.name for p in cartella.glob("*") if p.name not in visti)
         if avanzano:
             errore(f"{autore['id']}: foto senza opera in immagini/{autore['id']}/: {', '.join(avanzano)}")
-        autore["opere"] = sorted(autore["opere"], key=chiave_opera, reverse=True)
+        # l'ordine lo sceglie l'autore: dal più recente o dal primo
+        autore["opere"] = sorted(autore["opere"], key=chiave_opera, reverse=autore["ordine_opere"] == "dal_piu_recente")
         autori.append(autore)
     if not autori:
         errore("nessun autore in autori/")
@@ -363,6 +369,7 @@ def pagina_autore(sez, autore):
             "</figure>"
         )
     presentazione = [autore["presentazione"]] if autore.get("presentazione") else []
+    lettura = " ".join(t for t in (sez["frasi_ordine"][autore["ordine_opere"]], autore.get("come_leggere"), sez["clic"]) if t)
     nota_pareri = []
     if any("parere" in op for op in autore["opere"]):
         nota_pareri = [sez["nota_pareri"].format(data=data_lunga(pareri["data"]), modello=pareri["modello"], di=pareri["di"])]
@@ -372,7 +379,7 @@ def pagina_autore(sez, autore):
         f'<p class="filo"><a href="../">{e(sez["numero"])}. {e(sez["titolo"])}</a></p>'
         f"<h1>{e(numero)} · {e(autore['nome'])}</h1>"
         f'<p class="sotto">{e(quante(autore))}.</p>'
-        f'<div class="intro">{paragrafi(presentazione + sez["autore_intro"] + nota_pareri)}</div>'
+        f'<div class="intro">{paragrafi(presentazione + [lettura] + nota_pareri)}</div>'
         f'<section class="blocco" id="opere"><h2>Gli acquerelli</h2><div class="galleria">{"".join(figure)}</div></section>'
         + piede(sez, "../../")
     )
@@ -381,9 +388,12 @@ def pagina_autore(sez, autore):
 
 def pagina():
     sez = carica_json(QUI / "sezione.json")
-    for campo in ("data", "numero", "titolo", "sottotitolo", "introduzione", "autore_intro", "data_foto", "diritti"):
+    for campo in ("data", "numero", "titolo", "sottotitolo", "introduzione", "frasi_ordine", "clic", "nota_pareri",
+                  "data_foto", "diritti"):
         if not sez.get(campo):
             errore(f"sezione.json: manca {campo}")
+    if set(sez["frasi_ordine"]) != set(ORDINI_OPERE):
+        errore(f"sezione.json: «frasi_ordine» deve avere una frase per {', '.join(ORDINI_OPERE)}")
     date.fromisoformat(sez["data"])
     autori = carica_autori()
     if PAGINE.exists():
