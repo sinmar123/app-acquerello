@@ -293,7 +293,7 @@ def pagina_elenco(sez, autori):
             "<div>"
             f'<h3><a href="{e(autore["id"])}/">{e(sottosezione(sez, autore))} · {e(autore["nome"])}</a></h3>'
             f"<p>{e(quante(autore))}.</p>"
-            f'<p><a href="{e(autore["id"])}/">Apri la sottosezione</a>.</p>'
+            f'<p><a href="{e(autore["id"])}/">Vedi le opere</a>.</p>'
             "</div></article>"
         )
     corpo = (
