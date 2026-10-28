@@ -96,7 +96,7 @@ SEZIONI = [
         "breve": "Opere",
         "nome_form": "Opere",
         "titolo": "Opere di non professionisti",
-        "sottotitolo": "Acquerelli di appassionati che non dipingono per mestiere, una pagina per autore",
+        "sottotitolo": "Acquerelli di appassionati che non dipingono per mestiere, una sottosezione per autore",
         "script_genera": DATI_DIR / "opere" / "genera-opere.py",
         "html_generato": DATI_DIR / "opere" / "opere.html",
         "cartelle": [DATI_DIR / "opere" / "immagini"],
@@ -250,18 +250,33 @@ def riassunto_eventi():
     return "\n".join(blocchi)
 
 
+def sottosezioni_opere():
+    """Gli autori della sezione Opere come sottosezioni (6.1, 6.2...), dai file di dati/opere/autori/: numero,
+    nome, indirizzo e quante opere in quali anni. Il numero della sezione in dati/opere/sezione.json deve essere
+    quello di SEZIONI, perché le pagine degli autori lo scrivono da sé."""
+    numero = next(s["numero"] for s in SEZIONI if s["slug"] == "opere")
+    sezione = json.loads((DATI_DIR / "opere" / "sezione.json").read_text(encoding="utf-8"))
+    if sezione.get("numero") != numero:
+        raise SystemExit(f"genera-sito: dati/opere/sezione.json dà alla sezione il numero {sezione.get('numero')}, SEZIONI {numero}")
+    voci = []
+    for path in sorted((DATI_DIR / "opere" / "autori").glob("*.json")):
+        autore = json.loads(path.read_text(encoding="utf-8"))
+        n = len(autore["opere"])
+        anni = sorted(int(s["giorno"][:4]) for op in autore["opere"] for s in op["sedute"])
+        periodo = f"nel {anni[0]}" if anni[0] == anni[-1] else f"dal {anni[0]} al {anni[-1]}"
+        voci.append({"ordine": autore["ordine"], "numero": f"{numero}.{autore['ordine']}", "nome": autore["nome"],
+                     "href": f"opere/{autore['id']}/",
+                     "quante": f"{n} {'acquerello' if n == 1 else 'acquerelli'}, {periodo}"})
+    return sorted(voci, key=lambda v: v["ordine"])
+
+
 def riassunto_opere():
     """Testo della chat ricavato dai file degli autori della sezione Opere: nomi, numero di opere e anni.
     Le immagini non entrano nel prompt, quindi la chat non descrive le opere."""
-    righe = []
-    for path in sorted((DATI_DIR / "opere" / "autori").glob("*.json")):
-        autore = json.loads(path.read_text(encoding="utf-8"))
-        anni = sorted(int(s["giorno"][:4]) for op in autore["opere"] for s in op["sedute"])
-        periodo = f"nel {anni[0]}" if anni[0] == anni[-1] else f"dal {anni[0]} al {anni[-1]}"
-        righe.append(f"- {autore['nome']}: {len(autore['opere'])} acquerelli, {periodo} ({SITO_URL}/opere/{autore['id']}/)")
+    righe = [f"- {v['numero']} {v['nome']}: {v['quante']} ({SITO_URL}/{v['href']})" for v in sottosezioni_opere()]
     return (
         f"Opere di non professionisti ({SITO_URL}/opere/): acquerelli di appassionati che non dipingono per mestiere, "
-        "una pagina per autore, con le opere dalla più recente. Il titolo di ogni opera è la data in cui è stata dipinta, "
+        "una sottosezione per autore, con le opere dalla più recente. Il titolo di ogni opera è la data in cui è stata dipinta, "
         "scritta sul foglio; dove manca o non si legge, è la data della fotografia. Le opere appartengono ai rispettivi autori "
         "e non rientrano nella licenza CC BY 4.0 del Quaderno. Le immagini non sono in questo riassunto: "
         "non descrivere le opere e non giudicarle.\nAutori:\n" + ("\n".join(righe) if righe else "- Nessun autore.")
@@ -862,6 +877,13 @@ def genera_home(sezioni_pronte: list[dict]) -> str:
         schede.append(f"""<a class="{classe}" href="./{s['slug']}/">
   <span class="sig">{s['numero']}</span>
   <span class="card-txt"><span class="card-tit">{s['titolo']}</span><span class="card-sub">{s['sottotitolo']}</span></span>{figura}
+</a>""")
+        # gli autori delle Opere sono sottosezioni: una scheda rientrata ciascuno, come i moduli dei Soggetti
+        if s["slug"] == "opere":
+            for v in sottosezioni_opere():
+                schede.append(f"""<a class="card modulo" href="./{v['href']}">
+  <span class="sig">{v['numero']}</span>
+  <span class="card-txt"><span class="card-tit">{e(v['nome'])}</span><span class="card-sub">{e(v['quante'])}</span></span>
 </a>""")
     schede_html = "\n".join(schede)
     voci = "".join(f"<li>{v}{';' if i < len(IN_COSTRUZIONE) - 1 else '.'}</li>" for i, v in enumerate(IN_COSTRUZIONE))

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Genera la sezione Opere: l'elenco degli autori e una pagina per autore.
+"""Genera la sezione Opere: l'elenco degli autori e una sottosezione per autore.
 
 Uso: python genera-opere.py pagina
 
@@ -10,19 +10,24 @@ site/opere/, inietta barra, chat e suggerimenti, e pubblica le pagine degli
 autori insieme alla cartella immagini/. Le foto si preparano con
 prepara-foto.py.
 
+Ogni autore è una sottosezione: il numero della sezione in sezione.json più
+il suo «ordine», per esempio 6.1. La pagina dell'autore si apre con la frase
+che la colloca fra le opere di non professionisti e con la sua presentazione.
+
 Il titolo di ogni opera è la data in cui è stata dipinta, in una o più
 sedute, con il giorno della settimana e, se nota, l'ora. Sotto il titolo
-stanno il numero che l'autore ha dato al foglio, se c'è, e «data della
-fotografia» quando la data non viene dal foglio (data_da «foto» o
-«nome-file»).
+stanno il numero che l'autore ha dato al foglio, se c'è, la «nota» breve
+dell'opera, se c'è, e «data della fotografia» quando la data non viene dal
+foglio (data_da «foto» o «nome-file»).
 
-Controlli: ogni opera ha la foto in immagini/<id-autore>/, il testo
-alternativo, l'origine della data e almeno una seduta, in ordine di data;
-ogni foto della cartella è usata da un'opera; il giorno della settimana
-scritto sul foglio, se trascritto, coincide con la data; l'ora è nel formato
-21, 21-22 o 22.03; una data presa dal foglio ha la trascrizione in
-«scritta»; una data della fotografia vale per una sola seduta. Nessun testo
-contiene «da verificare» né il trattino lungo.
+Controlli: ogni autore ha un ordine intero diverso da quello degli altri;
+ogni opera ha la foto in immagini/<id-autore>/, il testo alternativo,
+l'origine della data e almeno una seduta, in ordine di data; ogni foto della
+cartella è usata da un'opera; il giorno della settimana scritto sul foglio,
+se trascritto, coincide con la data; l'ora è nel formato 21, 21-22 o 22.03;
+una data presa dal foglio ha la trascrizione in «scritta»; una data della
+fotografia vale per una sola seduta. Nessun testo contiene «da verificare»
+né il trattino lungo.
 """
 import html
 import json
@@ -134,6 +139,8 @@ def controlla_opera(autore, op):
         errore(f"{dove}: data_da deve essere uno fra {', '.join(ORIGINI)}")
     if "numero" in op and not NUMERO_OK.match(str(op["numero"])):
         errore(f"{dove}: numero del foglio non valido")
+    if "nota" in op and (not isinstance(op["nota"], str) or not op["nota"].strip()):
+        errore(f"{dove}: la nota deve essere un testo breve")
     if op["data_da"] == "foglio" and not op.get("scritta"):
         errore(f"{dove}: una data presa dal foglio vuole la trascrizione in «scritta»")
     if op["data_da"] != "foglio" and len(op["sedute"]) != 1:
@@ -158,13 +165,17 @@ def carica_autori():
     if not AUTORI.is_dir():
         errore("manca la cartella autori/")
     autori = []
+    ordini = set()
     for path in sorted(AUTORI.glob("*.json")):
         autore = carica_json(path)
-        for campo in ("id", "nome", "opere"):
+        for campo in ("id", "nome", "ordine", "opere"):
             if not autore.get(campo):
                 errore(f"{path.name}: manca {campo}")
         if not ID_OK.match(autore["id"]) or path.stem != autore["id"]:
             errore(f"{path.name}: il nome del file deve essere <id>.json, con id in minuscolo e trattini")
+        if not isinstance(autore["ordine"], int) or autore["ordine"] < 1 or autore["ordine"] in ordini:
+            errore(f"{path.name}: «ordine» deve essere un intero da 1 in su, diverso da quello degli altri autori")
+        ordini.add(autore["ordine"])
         visti = set()
         for op in autore["opere"]:
             controlla_opera(autore, op)
@@ -179,8 +190,12 @@ def carica_autori():
         autori.append(autore)
     if not autori:
         errore("nessun autore in autori/")
-    # prima l'autore con l'opera più recente
-    return sorted(autori, key=lambda a: chiave_opera(a["opere"][0]), reverse=True)
+    # nell'ordine delle sottosezioni: 6.1, 6.2...
+    return sorted(autori, key=lambda a: a["ordine"])
+
+
+def sottosezione(sez, autore):
+    return f"{sez['numero']}.{autore['ordine']}"
 
 
 def chiave_opera(op):
@@ -213,6 +228,8 @@ def dettaglio_opera(op, sez):
     pezzi = []
     if op.get("numero"):
         pezzi.append(f"n. {op['numero']}")
+    if op.get("nota"):
+        pezzi.append(op["nota"])
     if op["data_da"] != "foglio":
         pezzi.append(sez["data_foto"])
     return " · ".join(pezzi)
@@ -274,9 +291,9 @@ def pagina_elenco(sez, autori):
             f'<article class="autore" id="autore-{e(autore["id"])}">'
             f'<a class="miniatura" href="{e(autore["id"])}/">{img}</a>'
             "<div>"
-            f'<h3><a href="{e(autore["id"])}/">{e(autore["nome"])}</a></h3>'
+            f'<h3><a href="{e(autore["id"])}/">{e(sottosezione(sez, autore))} · {e(autore["nome"])}</a></h3>'
             f"<p>{e(quante(autore))}.</p>"
-            f'<p><a href="{e(autore["id"])}/">Apri la pagina</a>.</p>'
+            f'<p><a href="{e(autore["id"])}/">Apri la sottosezione</a>.</p>'
             "</div></article>"
         )
     corpo = (
@@ -303,21 +320,23 @@ def pagina_autore(sez, autore):
             "</figure>"
         )
     presentazione = [autore["presentazione"]] if autore.get("presentazione") else []
+    numero = sottosezione(sez, autore)
     descrizione = f"{autore['nome']}: {quante(autore)}. {sez['titolo']} nel Quaderno di acquerello."
     corpo = (
-        '<p class="filo"><a href="../">Opere</a></p>'
-        f"<h1>{e(autore['nome'])}</h1>"
+        f'<p class="filo"><a href="../">{e(sez["numero"])}. {e(sez["titolo"])}</a></p>'
+        f"<h1>{e(numero)} · {e(autore['nome'])}</h1>"
         f'<p class="sotto">{e(quante(autore))}, dal più recente.</p>'
-        f'<div class="intro">{paragrafi(presentazione + sez["autore_intro"])}</div>'
+        f'<div class="intro">{paragrafi([sez["autore_apertura"]] + presentazione + sez["autore_intro"])}</div>'
         f'<section class="blocco" id="opere"><h2>Gli acquerelli</h2><div class="galleria">{"".join(figure)}</div></section>'
         + piede(sez, "../../")
     )
-    return documento(f"{autore['nome']} · {sez['titolo']}", descrizione, corpo)
+    return documento(f"{numero} · {autore['nome']} · {sez['titolo']}", descrizione, corpo)
 
 
 def pagina():
     sez = carica_json(QUI / "sezione.json")
-    for campo in ("data", "titolo", "sottotitolo", "introduzione", "autore_intro", "data_foto", "diritti"):
+    for campo in ("data", "numero", "titolo", "sottotitolo", "introduzione", "autore_apertura", "autore_intro",
+                  "data_foto", "diritti"):
         if not sez.get(campo):
             errore(f"sezione.json: manca {campo}")
     date.fromisoformat(sez["data"])

@@ -2,6 +2,19 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-28 - CC - Opere: Alessandro Sanvitale diventa la sottosezione 6.1, con la presentazione
+
+- Richiesta di Sandro del 28/10/2026: la sezione deve dire che raccoglie opere di non professionisti, e la sua pagina ne è una sottosezione. Nella presentazione: ha iniziato ad acquerello il 27 settembre 2021, ha seguito i corsi di Irene Tamagnone dal 2021 al 2024 e ora segue con lei un corso avanzato di acquerello sul paesaggio.
+- **Sottosezioni**: ogni autore ha un `ordine` nel suo JSON e diventa la sottosezione 6.1, 6.2 e così via. La pagina dell'autore si apre con «6. Opere di non professionisti» e il titolo «6.1 · Alessandro Sanvitale». Nell'elenco della sezione e in home l'autore compare col suo numero; in home la scheda sta rientrata sotto la 6, come «4.1 Alberi» sotto i Soggetti. La barra in cima resta con la sola voce «6 Opere». `scripts/genera-sito.py` si ferma se il numero della sezione in `dati/opere/sezione.json` non è quello di `SEZIONI`.
+- **Testi** (`sezione.json`): l'introduzione si apre con «Questa sezione raccoglie opere di non professionisti: acquerelli di appassionati che non dipingono per mestiere.»; la pagina dell'autore con «Questa sottosezione fa parte della sezione Opere di non professionisti: acquerelli di appassionati che non dipingono per mestiere.» Il sottotitolo dice «una sottosezione per autore».
+- **Presentazione** (`autori/alessandro-sanvitale.json`): «Alessandro Sanvitale cura il Quaderno di acquerello. Ha iniziato a dipingere ad acquerello il 27 settembre 2021: il primo acquerello, di quel giorno, è l'ultimo della pagina. Dal 2021 al 2024 ha seguito i corsi di acquerello di Irene Tamagnone, e attualmente segue con lei un corso avanzato di acquerello sul paesaggio.» Il nome della docente è scritto come nei file del corso.
+- **Primo acquerello**: l'opera del 27/9/2021 (foto delle 22.03) porta sotto il titolo la nota «il primo acquerello», nel campo nuovo `nota`. La data coincide con quella che Sandro indica come inizio.
+- **Chat**: il prompt elenca gli autori col numero di sottosezione.
+- Controlli: `python scripts/genera-sito.py` senza errori. Gulpease: Opere 71, sottosezione 6.1 91, le altre pagine invariate. Pagina e home viste in Chrome: intestazione con la sezione e la sottosezione, scheda 6.1 rientrata in home.
+- Prossima azione: Sandro indica la data scritta sul foglio n. 107 e conferma il n. 124 e la licenza delle opere; poi il via del curatore. L'unione su `main` pubblica il sito.
+
+-- CC
+
 ## 2026-10-27 - CC - Nuova sezione 6. Opere di non professionisti, con gli acquerelli di Alessandro Sanvitale
 
 - Richiesta di Sandro del 27/10/2026: una sezione per le opere di non professionisti, a cominciare dalle sue, con le 14 foto che ha raccolto. Come titolo la data, con il giorno della settimana e l'ora quando si trovano, e il numero che lui scrive sul foglio.

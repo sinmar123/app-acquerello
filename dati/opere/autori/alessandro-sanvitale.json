@@ -1,7 +1,8 @@
 {
   "id": "alessandro-sanvitale",
   "nome": "Alessandro Sanvitale",
-  "presentazione": "Alessandro Sanvitale cura il Quaderno di acquerello.",
+  "ordine": 1,
+  "presentazione": "Alessandro Sanvitale cura il Quaderno di acquerello. Ha iniziato a dipingere ad acquerello il 27 settembre 2021: il primo acquerello, di quel giorno, è l'ultimo della pagina. Dal 2021 al 2024 ha seguito i corsi di acquerello di Irene Tamagnone, e attualmente segue con lei un corso avanzato di acquerello sul paesaggio.",
   "opere": [
     {
       "file": "20240516-221918.jpg",
@@ -98,6 +99,7 @@
       "file": "20210927-220328.jpg",
       "data_da": "foto",
       "sedute": [{"giorno": "2021-09-27", "ora": "22.03"}],
+      "nota": "il primo acquerello",
       "alt": "Acquerello di un interno: una scrivania con la lampada e la sedia, un quadro alla parete e una pianta appena abbozzata."
     }
   ]
