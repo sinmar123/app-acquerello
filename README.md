@@ -21,8 +21,9 @@ Il repository è autonomo: contiene i dati, le infografiche, le illustrazioni e 
 | `/colori/` | **2. Teoria dei colori**: Munsell, luce e pigmento, velature, i sei colori proposti col pigmento e un calcolatore di miscele Kubelka-Munk in JavaScript; rimandi alle fonti paragrafo per paragrafo | `dati/colori/` |
 | `/marche/` | **3. Marche e tubetti**: i sei colori proposti in sei serie (Winsor & Newton Cotman e Professional, Van Gogh, Daniel Smith, Schmincke Horadam, Maimeri Blu), con pagina ufficiale e data di controllo su ogni riga | `dati/marche/` |
 | `/soggetti/` | **4. Soggetti**: un modulo per tema; `S1` Alberi pubblicato, `S2`-`S6` in preparazione | `dati/soggetti/` |
-| `/alberi/` | **4.1 S1 · Alberi ad acquerello**: 6 esempi, 24 modalità tratte dai video con un'infografica SVG in 3 fasi ciascuna, 31 estratti video | `dati/alberi/` |
+| `/alberi/` | **4.1 S1 · Alberi ad acquerello**: 6 esempi, 24 modalità tratte dai video con un'infografica SVG in 3 fasi ciascuna, 31 estratti video; ogni video si carica da YouTube solo quando si preme «Guarda il video» | `dati/alberi/` |
 | `/eventi/` | **5. Eventi**: calendario di festival, mostre, demo e uscite en plein air, in corso, in arrivo e passati; scheda per evento con locandina, programma e fotografie di chi ha partecipato; archivio `/eventi/<anno>/` e scheda `/eventi/<anno>/<slug>/` | `dati/eventi/` |
+| `/informativa/` | Informativa sulla privacy: titolare, cookie, video di YouTube caricati al clic, chat e suggerimenti; collegata dal piè di pagina di ogni pagina | `scripts/genera-sito.py` |
 
 Le frasi «L'autore, in sintesi» della sezione Alberi riassumono in italiano il parlato dei video, con l'aiuto dell'IA: non sono trascrizioni.
 
@@ -37,7 +38,7 @@ python scripts/genera-sito.py
 Lo script:
 1. controlla che il menu della casella dei suggerimenti e le pagine del sito coincidano con gli elenchi che le funzioni del server accettano, e che i nomi delle marche non compaiano fuori dalla sezione Marche;
 2. rigenera la pagina di ogni sezione col suo generatore in `dati/<sezione>/`, che fa i controlli propri della sezione (fonti dei Principi, fonti e date delle Marche, coerenza della tavolozza);
-3. la copia in `site/<sezione>/index.html` con la barra delle sezioni, la chat e la casella dei suggerimenti, e scrive la home, `robots.txt`, `sitemap.xml` e la favicon;
+3. la copia in `site/<sezione>/index.html` con la barra delle sezioni, la chat e la casella dei suggerimenti, e scrive la home, l'informativa sulla privacy, `robots.txt`, `sitemap.xml` e la favicon;
 4. scrive `lib/prompt-chat.js`, il prompt della chat ricavato dai dati del sito;
 5. misura la leggibilità di ogni pagina (indice Gulpease) e si ferma se una pagina scende sotto 52.
 

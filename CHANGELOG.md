@@ -2,6 +2,18 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-27 - GBOT-app-acquerello - Video degli Alberi caricati solo al clic e informativa sulla privacy
+
+- Richiesta di Sandro del 27/10/2026: nessun contatto con YouTube o Google finché chi visita non sceglie di guardare un video, e una breve informativa sulla privacy collegata dal piè di pagina.
+- **Riquadro prima del video** (`dati/alberi/pit-261013-video-gesti.py`): al posto del pulsante «Guarda il gesto» ogni estratto mostra un riquadro del sito, senza miniature di YouTube, col titolo del passaggio, la durata, i minuti, il titolo del video e l'autore. Sotto, la frase «Il video è ospitato su YouTube: aprendolo, YouTube (Google) riceverà alcuni dati della tua visita.» e i collegamenti all'informativa del sito, alla privacy di Google e ai Termini di YouTube. Il pulsante «Guarda il video» crea il lettore ufficiale con gli stessi punti di inizio e di fine.
+- **Lettore**: già prima lo script di YouTube si caricava solo al clic; ora la regola è scritta nel codice e spiegata in pagina. Comandi del lettore visibili (`controls: 1`), partenza automatica solo dopo il clic, spazio del lettore di almeno 200 × 200 pixel anche sui telefoni stretti. Il Referer resta quello della pagina (`strict-origin-when-cross-origin`, come nell'intestazione già inviata da Cloudflare). Nessuna libreria esterna. Il file `_headers` non c'è nel repository e non serve aggiungerlo.
+- **Informativa** (`/informativa/`, scritta da `scripts/genera-sito.py`): titolare e contatto come nella nota della chat, senza indirizzo né telefono; nessun cookie proprio, nessuno strumento di statistica o di tracciamento, nessun carattere o script di altri siti, verificato nel codice e nelle pagine pubblicate; i video caricati solo al clic, poi valgono l'informativa di Google e i Termini di YouTube; due righe su chat e suggerimenti con rinvio alle loro note. La pagina entra nella `sitemap.xml`; non entra nel menu della casella dei suggerimenti né negli elenchi `PAGINE_VALIDE`, perché non ha i riquadri della chat.
+- **Piè di pagina**: in home e in ogni pagina delle sezioni c'è il collegamento «Informativa sulla privacy».
+- Controlli: `python scripts/genera-sito.py` senza errori. Gulpease: Principi 68, Colori 75, Marche 59, Soggetti 66, Alberi 73, Eventi 95, scheda Sestri Levante 80, Informativa 64. Prova in un browser con schermo da telefono (360 pixel): prima del clic nessuna richiesta verso altri siti; dopo il clic il lettore parte da 02:30 nel primo estratto, coi comandi, alto 200 pixel.
+- Prossima azione: via del curatore. L'unione su `main` pubblica il sito.
+
+-- GBOT-app-acquerello
+
 ## 2026-10-25 - GBOT-app-acquerello - Home: tolta la fila dei sei colori proposti
 
 - Decisione di Sandro del 25/10/2026: in home la fila dei campioni dei sei colori proposti, sotto la testata e senza didascalia, non serve più.
