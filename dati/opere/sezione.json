@@ -2,18 +2,14 @@
   "data": "2026-10-28",
   "numero": "6",
   "titolo": "Opere di non professionisti",
-  "sottotitolo": "Acquerelli di appassionati che non dipingono per mestiere, una sottosezione per autore",
+  "sottotitolo": "Acquerelli di chi dipinge per passione, raccolti autore per autore",
   "introduzione": [
-    "Questa sezione raccoglie opere di non professionisti: acquerelli di appassionati che non dipingono per mestiere.",
-    "Ogni autore ha una sottosezione con le sue opere, dalla più recente.",
-    "Chi vuole proporre le proprie opere può scriverlo nella casella dei suggerimenti in fondo alla pagina."
+    "Questa sezione raccoglie gli acquerelli di chi dipinge per passione. Ogni autore ha la sua pagina, con i fogli in ordine di tempo, dal più recente al primo: scorrendola si vede come è cambiata la mano.",
+    "Chi desidera esporre qui i propri acquerelli può proporlo dalla casella dei suggerimenti, in fondo alla pagina."
   ],
-  "autore_apertura": "Questa sottosezione fa parte della sezione Opere di non professionisti: acquerelli di appassionati che non dipingono per mestiere.",
   "autore_intro": [
-    "Il titolo è la data in cui l'acquerello è stato dipinto, scritta sul foglio, con il numero del foglio quando c'è.",
-    "Dove il foglio non porta la data, o la foto non la mostra, il titolo è la data della fotografia.",
-    "Un clic sull'immagine la apre a grandezza piena."
+    "Come in tutta la sezione dedicata alle opere di non professionisti, gli acquerelli vanno dal più recente al primo. Ciascuno ha per titolo il giorno in cui è stato dipinto, annotato a mano sul margine del foglio insieme al numero progressivo. Dove l'annotazione manca, o la foto non la mostra, vale la data della fotografia, segnalata sotto il titolo. Cliccando su un'immagine la si vede a grandezza piena."
   ],
   "data_foto": "data della fotografia",
-  "diritti": "Le opere appartengono ai rispettivi autori e non rientrano nella licenza CC BY 4.0 del Quaderno."
+  "diritti": "Gli acquerelli appartengono ai loro autori e sono esclusi dalla licenza CC BY 4.0 del Quaderno."
 }

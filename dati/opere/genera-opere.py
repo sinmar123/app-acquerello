@@ -11,8 +11,8 @@ autori insieme alla cartella immagini/. Le foto si preparano con
 prepara-foto.py.
 
 Ogni autore è una sottosezione: il numero della sezione in sezione.json più
-il suo «ordine», per esempio 6.1. La pagina dell'autore si apre con la frase
-che la colloca fra le opere di non professionisti e con la sua presentazione.
+il suo «ordine», per esempio 6.1. La pagina dell'autore si apre con la sua
+presentazione e con due righe su come leggere titoli e date.
 
 Il titolo di ogni opera è la data in cui è stata dipinta, in una o più
 sedute, con il giorno della settimana e, se nota, l'ora. Sotto il titolo
@@ -236,10 +236,11 @@ def dettaglio_opera(op, sez):
 
 
 def quante(autore):
+    """«14 acquerelli dipinti fra il 2021 e il 2024»; la stessa frase in home la scrive scripts/genera-sito.py."""
     n = len(autore["opere"])
     anni = sorted(int(s["giorno"][:4]) for op in autore["opere"] for s in op["sedute"])
-    periodo = f"nel {anni[0]}" if anni[0] == anni[-1] else f"dal {anni[0]} al {anni[-1]}"
-    return f"{n} {'acquerello' if n == 1 else 'acquerelli'}, {periodo}"
+    periodo = f"nel {anni[0]}" if anni[0] == anni[-1] else f"fra il {anni[0]} e il {anni[-1]}"
+    return f"{n} acquerell{'o dipinto' if n == 1 else 'i dipinti'} {periodo}"
 
 
 def immagine(autore, op, prefisso, lazy=True):
@@ -293,14 +294,14 @@ def pagina_elenco(sez, autori):
             "<div>"
             f'<h3><a href="{e(autore["id"])}/">{e(sottosezione(sez, autore))} · {e(autore["nome"])}</a></h3>'
             f"<p>{e(quante(autore))}.</p>"
-            f'<p><a href="{e(autore["id"])}/">Vedi le opere</a>.</p>'
+            f'<p><a href="{e(autore["id"])}/">Guarda gli acquerelli</a></p>'
             "</div></article>"
         )
     corpo = (
         f"<h1>{e(sez['titolo'])}</h1>"
         f'<p class="sotto">{e(sez["sottotitolo"])}</p>'
         f'<div class="intro">{paragrafi(sez["introduzione"])}</div>'
-        f'<section class="blocco" id="autori"><h2>Autori</h2>{"".join(schede)}</section>'
+        f'<section class="blocco" id="autori"><h2>Gli autori</h2>{"".join(schede)}</section>'
         + piede(sez, "../")
     )
     return documento(sez["titolo"], sez["sottotitolo"], corpo)
@@ -325,8 +326,8 @@ def pagina_autore(sez, autore):
     corpo = (
         f'<p class="filo"><a href="../">{e(sez["numero"])}. {e(sez["titolo"])}</a></p>'
         f"<h1>{e(numero)} · {e(autore['nome'])}</h1>"
-        f'<p class="sotto">{e(quante(autore))}, dal più recente.</p>'
-        f'<div class="intro">{paragrafi([sez["autore_apertura"]] + presentazione + sez["autore_intro"])}</div>'
+        f'<p class="sotto">{e(quante(autore))}.</p>'
+        f'<div class="intro">{paragrafi(presentazione + sez["autore_intro"])}</div>'
         f'<section class="blocco" id="opere"><h2>Gli acquerelli</h2><div class="galleria">{"".join(figure)}</div></section>'
         + piede(sez, "../../")
     )
@@ -335,8 +336,7 @@ def pagina_autore(sez, autore):
 
 def pagina():
     sez = carica_json(QUI / "sezione.json")
-    for campo in ("data", "numero", "titolo", "sottotitolo", "introduzione", "autore_apertura", "autore_intro",
-                  "data_foto", "diritti"):
+    for campo in ("data", "numero", "titolo", "sottotitolo", "introduzione", "autore_intro", "data_foto", "diritti"):
         if not sez.get(campo):
             errore(f"sezione.json: manca {campo}")
     date.fromisoformat(sez["data"])

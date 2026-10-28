@@ -96,7 +96,7 @@ SEZIONI = [
         "breve": "Opere",
         "nome_form": "Opere",
         "titolo": "Opere di non professionisti",
-        "sottotitolo": "Acquerelli di appassionati che non dipingono per mestiere, una sottosezione per autore",
+        "sottotitolo": "Acquerelli di chi dipinge per passione, raccolti autore per autore",
         "script_genera": DATI_DIR / "opere" / "genera-opere.py",
         "html_generato": DATI_DIR / "opere" / "opere.html",
         "cartelle": [DATI_DIR / "opere" / "immagini"],
@@ -263,10 +263,11 @@ def sottosezioni_opere():
         autore = json.loads(path.read_text(encoding="utf-8"))
         n = len(autore["opere"])
         anni = sorted(int(s["giorno"][:4]) for op in autore["opere"] for s in op["sedute"])
-        periodo = f"nel {anni[0]}" if anni[0] == anni[-1] else f"dal {anni[0]} al {anni[-1]}"
+        periodo = f"nel {anni[0]}" if anni[0] == anni[-1] else f"fra il {anni[0]} e il {anni[-1]}"
+        # la stessa frase di quante() in dati/opere/genera-opere.py
         voci.append({"ordine": autore["ordine"], "numero": f"{numero}.{autore['ordine']}", "nome": autore["nome"],
                      "href": f"opere/{autore['id']}/",
-                     "quante": f"{n} {'acquerello' if n == 1 else 'acquerelli'}, {periodo}"})
+                     "quante": f"{n} acquerell{'o dipinto' if n == 1 else 'i dipinti'} {periodo}"})
     return sorted(voci, key=lambda v: v["ordine"])
 
 

@@ -2,6 +2,17 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-28 - CC - Opere: testi riscritti con il tono di una piccola mostra
+
+- Richiesta di Sandro del 28/10/2026: lo stile dei testi della sezione lasciava a desiderare. Riscritti con il tono adatto a una raccolta di acquerelli, invece del registro da manuale tecnico delle guide; i fatti restano quelli dati da Sandro.
+- **Sezione** (`sezione.json`): sottotitolo, anche in home, «Acquerelli di chi dipinge per passione, raccolti autore per autore». Presentazione: «Questa sezione raccoglie gli acquerelli di chi dipinge per passione. Ogni autore ha la sua pagina, con i fogli in ordine di tempo, dal più recente al primo: scorrendola si vede come è cambiata la mano. Chi desidera esporre qui i propri acquerelli può proporlo dalla casella dei suggerimenti, in fondo alla pagina.» L'elenco si intitola «Gli autori», il collegamento dice «Guarda gli acquerelli».
+- **Pagina 6.1** (`autori/alessandro-sanvitale.json`): «Alessandro Sanvitale dipinge ad acquerello per passione dal 27 settembre 2021: il primo foglio, dipinto quel giorno, chiude la pagina. Dal 2021 al 2024 ha frequentato i corsi di Irene Tamagnone, e oggi segue con lei il corso avanzato dedicato al paesaggio.» Segue un paragrafo su come leggere titoli e date, che nomina la sezione. Esce la frase «Questa sottosezione fa parte della sezione...»: la collocazione la danno il rimando «6. Opere di non professionisti» in cima alla pagina e il numero 6.1 nel titolo.
+- Il conteggio, in pagina e in home, diventa «14 acquerelli dipinti fra il 2021 e il 2024». Il piè di pagina dice «Gli acquerelli appartengono ai loro autori e sono esclusi dalla licenza CC BY 4.0 del Quaderno.»
+- Controlli: `python scripts/genera-sito.py` senza errori; Gulpease della pagina 6.1 a 91, le altre invariate; le due pagine viste in Chrome.
+- Prossima azione: Sandro indica la data scritta sul foglio n. 107 e conferma il n. 124 e la licenza delle opere; poi il via del curatore. L'unione su `main` pubblica il sito.
+
+-- CC
+
 ## 2026-10-28 - CC - Opere: Alessandro Sanvitale diventa la sottosezione 6.1, con la presentazione
 
 - Richiesta di Sandro del 28/10/2026: la sezione deve dire che raccoglie opere di non professionisti, e la sua pagina ne è una sottosezione. Nella presentazione: ha iniziato ad acquerello il 27 settembre 2021, ha seguito i corsi di Irene Tamagnone dal 2021 al 2024 e ora segue con lei un corso avanzato di acquerello sul paesaggio.
