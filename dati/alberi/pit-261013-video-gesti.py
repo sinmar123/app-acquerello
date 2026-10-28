@@ -39,6 +39,9 @@ TABELLA = os.path.join(QUI, "pit-261013-video-gesti-segmenti.csv")
 PAGINA = os.path.join(QUI, "pit-261014-video-gesti-alberi.html")
 LAVORO = os.path.join(os.environ.get("TEMP", "."), "pit-alberi", "video-gesti")
 YTDLP = os.path.expanduser("~/.local/bin/yt-dlp.exe")
+# Collegamenti mostrati nel riquadro prima del video, come chiedono le regole di YouTube per chi incorpora il lettore.
+PRIVACY_GOOGLE = "https://policies.google.com/privacy?hl=it"
+TERMINI_YOUTUBE = "https://www.youtube.com/t/terms"
 COLONNE = ["passo", "albero", "video", "canale", "minuto_scheda", "inizio", "fine", "durata_s",
            "incorporabile", "etichetta", "nel_video", "traduzione", "quadri", "nota"]
 
@@ -423,10 +426,20 @@ def pagina():
         riga_trad = (f'<p class="traduzione muto">{e(trad)}</p>' if trad.startswith("(") else
                      f'<p class="traduzione"><b>Dal video, in sintesi:</b> {e(trad)}</p>') if trad else ""
         yt = f"https://www.youtube.com/watch?v={vid}&t={i0}s"
+        titolo_video = selezione.get(vid, {}).get("titolo", "")
+        da_video = f'dal video «{e(titolo_video)}» di {e(canale)}' if titolo_video else f'dal video di {e(canale)}'
+        # Riquadro del sito al posto del lettore: finché non si preme «Guarda il video» la pagina non carica nulla
+        # da YouTube o da Google (niente miniature, niente script). Col clic lo script crea il lettore ufficiale.
         return (f'<div class="video" id="{e(sigla)}" data-passo="{e(sigla)}" data-id="{e(vid)}" data-inizio="{i0}" data-fine="{i1}">'
-                f'<button class="guarda" type="button"><span class="tri">▶</span><span class="lab">Guarda il gesto'
-                + (f': {e(etichetta)}' if etichetta else '') +
-                f'</span><small>{i1 - i0} s · {e(canale)}</small></button>'
+                f'<div class="prima-del-video">'
+                f'<p class="pv-tit">{e(etichetta) if etichetta else "Passaggio del video"}</p>'
+                f'<p class="pv-dati">{i1 - i0} s, da {mmss(i0)} a {mmss(i1)}, {da_video}</p>'
+                f'<p class="pv-avviso">Il video è ospitato su YouTube: aprendolo, YouTube (Google) riceverà alcuni dati della tua visita. '
+                f'<a href="../informativa/">Informativa del sito</a> · '
+                f'<a href="{PRIVACY_GOOGLE}" target="_blank" rel="noopener">Privacy di Google</a> · '
+                f'<a href="{TERMINI_YOUTUBE}" target="_blank" rel="noopener">Termini di YouTube</a></p>'
+                f'<button class="guarda" type="button"><span class="tri">▶</span><span class="lab">Guarda il video</span></button>'
+                f'</div>'
                 f'<div class="schermo"></div>'
                 f'<div class="comandi"><button type="button" class="dacapo">↺ Da capo</button>'
                 f'<button type="button" class="lento" aria-pressed="false">Lento</button>'
@@ -516,7 +529,7 @@ def pagina():
 <h3>Come leggere le infografiche e usare i video</h3>
 <p class="legenda"><b>Stato della carta nelle fasi dell'infografica:</b> {pill('bagnata')} lucida d'acqua, il colore corre · {pill('umida')} opaca, i bordi si fondono · {pill('asciutta')} il tratto resta netto. <a href="../principi/#carta-umidita">Gli stati della carta, momenti di mezzo compresi, nei Principi generali</a>.</p>
 <ul class="come">
-<li><b>▶ Guarda il gesto</b> fa partire il video nel punto giusto e lo ferma da solo alla fine del passaggio.</li>
+<li>Al posto di ogni video c'è un riquadro del sito: finché non si preme <b>▶ Guarda il video</b>, la pagina non carica nulla da YouTube o da Google. Il pulsante apre il lettore di YouTube, fa partire il video nel punto giusto e lo ferma da solo alla fine del passaggio. Che cosa succede ai dati della visita è spiegato nell'<a href="../informativa/">informativa del sito</a>.</li>
 <li><b>Da capo</b> fa ripartire l'estratto, <b>Lento</b> lo porta a metà velocità per studiare il movimento della mano, <b>Ripeti</b> lo ripete in continuo mentre si prova sulla carta.</li>
 <li><b>YouTube ↗</b> apre lo stesso punto nell'app o nel sito di YouTube.</li>
 <li>Le righe <b>Dal video, in sintesi</b> riassumono in italiano quello che l'autore o l'autrice dice in quel passaggio: sono sintesi preparate con l'aiuto dell'intelligenza artificiale, non trascrizioni, e la fonte resta il video.</li>
@@ -528,7 +541,7 @@ def pagina():
 {"".join(sezioni)}
 <footer><h2>I video</h2><p>I video restano dei loro autori: la pagina li mostra col lettore di YouTube, senza copiarli. Grazie a:</p>
 <ul class="crediti">{crediti}</ul>
-<p>Le 24 infografiche in 3 fasi sono disegnate per questa guida, una per ogni modalità.</p></footer>"""
+<p>Le {tot_modalita} infografiche in 3 fasi sono disegnate per questa guida, una per ogni modalità.</p></footer>"""
     html_ = f"""<!doctype html>
 <html lang="it"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -667,12 +680,18 @@ section.albero { border-top: 3px solid #3d6b4f; padding-top: 14px; margin-top: 2
 .tag { font-size: .75em; color: #555; border: 1px solid #aaa; border-radius: 7px; padding: 0 6px; white-space: nowrap; margin-left: 3px; }
 .tag.prop { color: #7a5a2a; border-color: #c9a96b; }
 button { font: inherit; }
+.prima-del-video { border: 1px solid #d8d3c6; border-radius: 10px; background: #f7f5ef; padding: 10px 12px; }
+.prima-del-video p { margin: 0 0 6px; }
+.pv-tit { font-weight: 700; color: #1f3c2b; }
+.pv-dati { font-size: .86em; color: #444; }
+.pv-avviso { font-size: .82em; color: #555; line-height: 1.4; }
+.pv-avviso a { color: #2c4f3a; }
 button.guarda { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; width: 100%; min-height: 48px; border: 0; border-radius: 10px;
                 background: #c0392b; color: #fff; font-weight: 600; padding: 8px 14px; cursor: pointer; text-align: left; }
 button.guarda .tri { font-size: 1.1em; }
 button.guarda .lab { flex: 1 1 11em; }
 button.guarda small { font-weight: 400; opacity: .9; margin-left: auto; }
-.schermo { display: none; position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; border-radius: 8px; overflow: hidden; }
+.schermo { display: none; position: relative; width: 100%; min-width: 200px; min-height: 200px; aspect-ratio: 16 / 9; background: #000; border-radius: 8px; overflow: hidden; }
 .schermo iframe, .schermo > div { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .schermo .errore { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 16px;
                    color: #fff; text-align: center; }
@@ -692,7 +711,7 @@ button.guarda small { font-weight: 400; opacity: .9; margin-left: auto; }
 .traduzione.muto { font-style: italic; color: #555; background: transparent; padding: 2px 0 0; }
 .nel-video { margin: 5px 0 0; font-size: .85em; color: #555; font-style: italic; }
 .dove-video { display: none; margin: 4px 0 0; font-size: .8em; color: #666; }
-.video.aperto button.guarda { display: none; }
+.video.aperto .prima-del-video { display: none; }
 .video.aperto .schermo { display: block; } .video.aperto .comandi { display: flex; } .video.aperto .dove-video { display: block; }
 footer { margin-top: 34px; border-top: 3px solid #3d6b4f; padding-top: 12px; font-size: .9em; color: #333; }
 footer ul.crediti { padding-left: 20px; } footer a { color: #2c4f3a; }
@@ -766,7 +785,7 @@ JS = r"""
       v.player = new YT.Player(schermo.firstChild, {
         host: 'https://www.youtube-nocookie.com',
         videoId: v.dataset.id,
-        playerVars: {start: +v.dataset.inizio, end: +v.dataset.fine, autoplay: 1, playsinline: 1, rel: 0,
+        playerVars: {start: +v.dataset.inizio, end: +v.dataset.fine, autoplay: 1, controls: 1, playsinline: 1, rel: 0,
                      origin: location.origin},
         events: {
           onReady: function (ev) { ev.target.playVideo(); sorveglianza(v); },

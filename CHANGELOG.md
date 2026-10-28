@@ -18,9 +18,34 @@ Cronologia delle modifiche. Ordine cronologico inverso.
 - **Sito**: la sezione entra in `SEZIONI` di `scripts/genera-sito.py` col numero 6, quindi nella barra e in home, con una figura disegnata (un foglio dipinto sul cavalletto). «Opere» entra nel menu della casella dei suggerimenti e in `SEZIONI_VALIDE` di `functions/api/suggerimento.js`; `/opere/` negli elenchi `PAGINE_VALIDE` delle due funzioni. La chat riceve gli autori, il numero delle opere e gli anni, con l'istruzione di non descrivere né giudicare le opere, che non vede.
 - **Documenti**: `README.md` (tabella delle sezioni e licenza), `AGENTS.md`, `CONTRIBUTING.md` (§ 1 come proporre le proprie opere, § 3 regole della sezione, § 4 diritti).
 - Controlli: `python scripts/genera-sito.py` senza errori, compreso il controllo sui nomi di marca. Gulpease: Principi 68, Colori 75, Marche 59, Soggetti 66, Alberi 72, Eventi 95, scheda Sestri Levante 80, Opere 74, pagina di Alessandro Sanvitale 102. Pagine provate in Chrome a 1280 pixel e, dentro un riquadro, a 360 e 390 pixel: griglia a tre colonne sul computer e a una sul telefono, nessuno scorrimento di lato. Le 14 foto rispondono e ognuna sta sotto il suo titolo. `lib/prompt-chat.js` rigenerato. In attesa del via del curatore per l'unione su `main`.
+- 28/10/2026: unito nel ramo `main` con le #48 e #49; conflitti solo in README, CHANGELOG e nel prompt generato, risolti tenendo le due parti. Rigenerato senza errori; il piè di pagina delle Opere porta anche il collegamento all'informativa sulla privacy, che le pagine della sezione rispettano (nessun cookie, nessuno script o carattere di altri siti). Gulpease invariati, Informativa 64.
 - Prossima azione: Sandro indica la data scritta sul foglio n. 107 e conferma il n. 124; poi il via del curatore. L'unione su `main` pubblica il sito.
 
 -- CC
+
+## 2026-10-27 - GBOT-app-acquerello - Alberi: sesta modalità per le chiome tonde, il tondo caricato chiaro e scuro (Christopher Stephen)
+
+- Richiesta di Sandro del 27/10/2026: aggiungere la terza tecnica del video di Christopher Stephen «Three Watercolour Tree Techniques YOU NEED TO KNOW !!!» (`TPU6woga-6M`) come nuova modalità di A3. Le prime due tecniche del video, bagnato su bagnato e spugna naturale, in A3 ci sono già.
+- **Modalità A3-M6** (`dati/alberi/pit-261014-video-gesti-alberi.json`): titolo, proposta, colori e pennelli presi solo dalla trascrizione automatica in inglese, coi colori come li nomina l'autore (giallo di cadmio, terra di Siena naturale, blu, terra di Siena bruciata). L'autore non dice il numero dei pennelli e non precisa il blu: la scheda non li aggiunge. Manca, rispetto alle altre schede, la corrispondenza coi 6 colori proposti, che resta da decidere. La descrizione di A3 passa da cinque a sei modalità.
+- **Estratto A3-6** (`pit-261013-video-gesti-segmenti.csv`): da 10:52 a 14:11, 199 secondi, dall'acqua con lo spruzzino fino all'ombra del tronco. I secondi vengono dalle parole della trascrizione e vanno rifiniti guardando il video. Il video entra in `pit-261013-alberi-selezione-video.csv` sotto V11 con durata 973 secondi e anno 2026 letti dai metadati pubblici di YouTube; visualizzazioni e iscritti restano vuoti.
+- **Infografica A3-M6** (`pit-261015-infografiche.py`): tre fasi, le due pozze e il tondo caricato sui due lati, il pennello ruotato fra chiaro e scuro, tronco e rami. Nuovo campione `blu`, senza altro nome, perché l'autore dice solo «blue».
+- **Conteggi**: 25 modalità da 24 video, 32 estratti, 25 infografiche, nella pagina, in home, nella scheda dei Soggetti, nel prompt della chat, nel README e in AGENTS. Il piè della pagina Alberi ora conta le infografiche dai dati.
+- Controlli: `python scripts/genera-sito.py` senza errori. Gulpease: Principi 68, Colori 75, Marche 59, Soggetti 66, Alberi 72, Eventi 95, scheda Sestri Levante 80. Prova nel browser: la scheda A3-M6 mostra le tre fasi e il lettore; nessuna richiesta verso altri siti prima del clic.
+- Prossima azione: via del curatore. L'unione su `main` pubblica il sito.
+
+-- GBOT-app-acquerello
+
+## 2026-10-27 - GBOT-app-acquerello - Video degli Alberi caricati solo al clic e informativa sulla privacy
+
+- Richiesta di Sandro del 27/10/2026: nessun contatto con YouTube o Google finché chi visita non sceglie di guardare un video, e una breve informativa sulla privacy collegata dal piè di pagina.
+- **Riquadro prima del video** (`dati/alberi/pit-261013-video-gesti.py`): al posto del pulsante «Guarda il gesto» ogni estratto mostra un riquadro del sito, senza miniature di YouTube, col titolo del passaggio, la durata, i minuti, il titolo del video e l'autore. Sotto, la frase «Il video è ospitato su YouTube: aprendolo, YouTube (Google) riceverà alcuni dati della tua visita.» e i collegamenti all'informativa del sito, alla privacy di Google e ai Termini di YouTube. Il pulsante «Guarda il video» crea il lettore ufficiale con gli stessi punti di inizio e di fine.
+- **Lettore**: già prima lo script di YouTube si caricava solo al clic; ora la regola è scritta nel codice e spiegata in pagina. Comandi del lettore visibili (`controls: 1`), partenza automatica solo dopo il clic, spazio del lettore di almeno 200 × 200 pixel anche sui telefoni stretti. Il Referer resta quello della pagina (`strict-origin-when-cross-origin`, come nell'intestazione già inviata da Cloudflare). Nessuna libreria esterna. Il file `_headers` non c'è nel repository e non serve aggiungerlo.
+- **Informativa** (`/informativa/`, scritta da `scripts/genera-sito.py`): titolare e contatto come nella nota della chat, senza indirizzo né telefono; nessun cookie proprio, nessuno strumento di statistica o di tracciamento, nessun carattere o script di altri siti, verificato nel codice e nelle pagine pubblicate; i video caricati solo al clic, poi valgono l'informativa di Google e i Termini di YouTube; due righe su chat e suggerimenti con rinvio alle loro note. La pagina entra nella `sitemap.xml`; non entra nel menu della casella dei suggerimenti né negli elenchi `PAGINE_VALIDE`, perché non ha i riquadri della chat.
+- **Piè di pagina**: in home e in ogni pagina delle sezioni c'è il collegamento «Informativa sulla privacy».
+- Controlli: `python scripts/genera-sito.py` senza errori. Gulpease: Principi 68, Colori 75, Marche 59, Soggetti 66, Alberi 73, Eventi 95, scheda Sestri Levante 80, Informativa 64. Prova in un browser con schermo da telefono (360 pixel): prima del clic nessuna richiesta verso altri siti; dopo il clic il lettore parte da 02:30 nel primo estratto, coi comandi, alto 200 pixel.
+- Prossima azione: via del curatore. L'unione su `main` pubblica il sito.
+
+-- GBOT-app-acquerello
 
 ## 2026-10-25 - GBOT-app-acquerello - Home: tolta la fila dei sei colori proposti
 
