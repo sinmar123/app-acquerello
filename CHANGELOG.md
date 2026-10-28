@@ -2,6 +2,18 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-28 - CC - Opere: un parere dell'IA sotto ogni acquerello della 6.1, scritto da Claude Opus 5.5
+
+- Idea di Sandro del 28/10/2026: far leggere gli acquerelli a un'intelligenza artificiale e mettere sotto ciascuno un breve commento su che cosa va e che cosa non va, precisando che è di Claude Opus 5.5. Il tono l'ha approvato su due prove, il primo e l'ultimo acquerello.
+- **Pareri** (`autori/alessandro-sanvitale.json`, campo `parere` di ogni opera): due frasi, «Funziona» e «Da migliorare», scritte da Claude Opus 5.5 il 28/10/2026 guardando le 14 foto a piena risoluzione. Solo ciò che si vede nella foto: composizione, valori, sfumature, bianchi lasciati, prospettiva; niente nomi di pigmenti o di marche. Il parere del n. 107 lo confronta col n. 104, che ha lo stesso soggetto.
+- **Pagina**: sotto ogni foto un riquadro «Parere dell'IA (Claude Opus 5.5)», chiuso finché non lo si apre, così la galleria resta pulita. L'introduzione dice chi ha scritto i pareri, quando e su che cosa: «Sotto ogni acquerello, il «Parere dell'IA» è un breve commento scritto il 28 ottobre 2026 da Claude Opus 5.5, un modello di intelligenza artificiale di Anthropic, guardando la fotografia: che cosa funziona e che cosa si potrebbe migliorare. Va preso come un parere, e la foto può falsare i colori.» Modello, produttore e data stanno in `pareri_ia` dell'autore.
+- **Generatore** (`genera-opere.py`): si ferma se un parere non ha le due parti o se l'autore che ha pareri non dichiara modello, produttore e data. Provato con due errori messi apposta e poi tolti.
+- **Documenti**: `README.md`, `AGENTS.md`, `CONTRIBUTING.md` § 3 (i pareri solo se l'autore li chiede, col modello dichiarato).
+- Controlli: `python scripts/genera-sito.py` senza errori; 14 riquadri nella pagina; Gulpease della pagina 6.1 a 70, le altre invariate. Pagina vista in Chrome coi riquadri aperti.
+- Prossima azione: Sandro rilegge i pareri; poi le risposte su n. 107, n. 124 e licenza e il via del curatore. L'unione su `main` pubblica il sito.
+
+-- CC
+
 ## 2026-10-28 - CC - Opere: testi riscritti con il tono di una piccola mostra
 
 - Richiesta di Sandro del 28/10/2026: lo stile dei testi della sezione lasciava a desiderare. Riscritti con il tono adatto a una raccolta di acquerelli, invece del registro da manuale tecnico delle guide; i fatti restano quelli dati da Sandro.

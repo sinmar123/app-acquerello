@@ -20,14 +20,21 @@ stanno il numero che l'autore ha dato al foglio, se c'è, la «nota» breve
 dell'opera, se c'è, e «data della fotografia» quando la data non viene dal
 foglio (data_da «foto» o «nome-file»).
 
+Un'opera può avere un «parere» scritto da un modello di intelligenza
+artificiale guardando la foto: che cosa funziona e che cosa si potrebbe
+migliorare. Sta in un riquadro «Parere dell'IA» che si apre sotto la foto; il
+modello, il produttore e la data stanno in «pareri_ia» dell'autore, e la
+pagina li dichiara nell'introduzione.
+
 Controlli: ogni autore ha un ordine intero diverso da quello degli altri;
 ogni opera ha la foto in immagini/<id-autore>/, il testo alternativo,
 l'origine della data e almeno una seduta, in ordine di data; ogni foto della
 cartella è usata da un'opera; il giorno della settimana scritto sul foglio,
 se trascritto, coincide con la data; l'ora è nel formato 21, 21-22 o 22.03;
 una data presa dal foglio ha la trascrizione in «scritta»; una data della
-fotografia vale per una sola seduta. Nessun testo contiene «da verificare»
-né il trattino lungo.
+fotografia vale per una sola seduta; un parere ha le due parti, e l'autore
+che ha pareri dichiara modello, produttore e data. Nessun testo contiene «da
+verificare» né il trattino lungo.
 """
 import html
 import json
@@ -85,6 +92,9 @@ figure.opera { margin: 0; background: #fffdf8; border: 1px solid #dfd5c3; border
 figure.opera figcaption { margin-top: 8px; }
 figure.opera h3 { font-size: 1em; margin: 0; }
 figure.opera p { margin: 2px 0 0; font-size: .9em; color: #555; }
+details.parere { margin-top: 8px; border-top: 1px solid #e6dfd1; padding-top: 6px; }
+details.parere summary { cursor: pointer; font-size: .88em; font-weight: 600; color: #2c6a4a; }
+details.parere p { margin: 6px 0 0; font-size: .88em; line-height: 1.45; color: #333; }
 footer { margin-top: 28px; border-top: 1px solid #ddd; padding-top: 12px; font-size: .9em; color: #444; }
 @media (max-width: 480px) {
   .autore { flex-direction: column; align-items: flex-start; }
@@ -103,6 +113,11 @@ def errore(msg):
 def data_it(iso):
     anno, mese, giorno = iso.split("-")
     return f"{int(giorno)}/{mese}/{anno}"
+
+
+def data_lunga(iso):
+    d = date.fromisoformat(iso)
+    return f"{d.day} {MESI[d.month - 1]} {d.year}"
 
 
 def controlla_stringhe(valore, dove):
@@ -141,6 +156,10 @@ def controlla_opera(autore, op):
         errore(f"{dove}: numero del foglio non valido")
     if "nota" in op and (not isinstance(op["nota"], str) or not op["nota"].strip()):
         errore(f"{dove}: la nota deve essere un testo breve")
+    if "parere" in op:
+        parere = op["parere"]
+        if not isinstance(parere, dict) or not all(str(parere.get(c) or "").strip() for c in ("funziona", "migliorare")):
+            errore(f"{dove}: il parere dell'IA vuole le due parti, «funziona» e «migliorare»")
     if op["data_da"] == "foglio" and not op.get("scritta"):
         errore(f"{dove}: una data presa dal foglio vuole la trascrizione in «scritta»")
     if op["data_da"] != "foglio" and len(op["sedute"]) != 1:
@@ -182,6 +201,14 @@ def carica_autori():
             if op["file"] in visti:
                 errore(f"{autore['id']}: foto ripetuta ({op['file']})")
             visti.add(op["file"])
+        if any("parere" in op for op in autore["opere"]):
+            pareri = autore.get("pareri_ia")
+            if not isinstance(pareri, dict) or not all(str(pareri.get(c) or "").strip() for c in ("modello", "di", "data")):
+                errore(f"{path.name}: chi ha pareri dell'IA dichiara in «pareri_ia» modello, produttore («di») e data")
+            try:
+                date.fromisoformat(pareri["data"])
+            except ValueError:
+                errore(f"{path.name}: data dei pareri dell'IA non valida")
         cartella = IMMAGINI / autore["id"]
         avanzano = sorted(p.name for p in cartella.glob("*") if p.name not in visti)
         if avanzano:
@@ -307,8 +334,23 @@ def pagina_elenco(sez, autori):
     return documento(sez["titolo"], sez["sottotitolo"], corpo)
 
 
+def riquadro_parere(op, pareri):
+    """Il parere dell'IA sotto la foto, chiuso finché non lo si apre."""
+    parere = op.get("parere")
+    if not parere:
+        return ""
+    return (
+        '<details class="parere">'
+        f"<summary>Parere dell'IA ({e(pareri['modello'])})</summary>"
+        f"<p><strong>Funziona.</strong> {e(parere['funziona'])}</p>"
+        f"<p><strong>Da migliorare.</strong> {e(parere['migliorare'])}</p>"
+        "</details>"
+    )
+
+
 def pagina_autore(sez, autore):
     figure = []
+    pareri = autore.get("pareri_ia")
     for op in autore["opere"]:
         img, src = immagine(autore, op, "../")
         dettaglio = dettaglio_opera(op, sez)
@@ -317,17 +359,20 @@ def pagina_autore(sez, autore):
         figure.append(
             f'<figure class="opera" id="{e(ancora)}">'
             f'<a class="cornice" href="{e(src)}">{img}</a>'
-            f"<figcaption><h3>{e(titolo_opera(op))}</h3>{riga}</figcaption>"
+            f"<figcaption><h3>{e(titolo_opera(op))}</h3>{riga}{riquadro_parere(op, pareri)}</figcaption>"
             "</figure>"
         )
     presentazione = [autore["presentazione"]] if autore.get("presentazione") else []
+    nota_pareri = []
+    if any("parere" in op for op in autore["opere"]):
+        nota_pareri = [sez["nota_pareri"].format(data=data_lunga(pareri["data"]), modello=pareri["modello"], di=pareri["di"])]
     numero = sottosezione(sez, autore)
     descrizione = f"{autore['nome']}: {quante(autore)}. {sez['titolo']} nel Quaderno di acquerello."
     corpo = (
         f'<p class="filo"><a href="../">{e(sez["numero"])}. {e(sez["titolo"])}</a></p>'
         f"<h1>{e(numero)} · {e(autore['nome'])}</h1>"
         f'<p class="sotto">{e(quante(autore))}.</p>'
-        f'<div class="intro">{paragrafi(presentazione + sez["autore_intro"])}</div>'
+        f'<div class="intro">{paragrafi(presentazione + sez["autore_intro"] + nota_pareri)}</div>'
         f'<section class="blocco" id="opere"><h2>Gli acquerelli</h2><div class="galleria">{"".join(figure)}</div></section>'
         + piede(sez, "../../")
     )
