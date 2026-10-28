@@ -11,7 +11,8 @@ const SEZIONI_VALIDE = [
   "Teoria dei colori",
   "Confronto marche",
   "Soggetti (Alberi, Nuvole, Fiori...)",
-  "Eventi"
+  "Eventi",
+  "Opere"
 ];
 const PAGINE_VALIDE = [
   "/",
@@ -20,7 +21,8 @@ const PAGINE_VALIDE = [
   "/marche/",
   "/soggetti/",
   "/alberi/",
-  "/eventi/"
+  "/eventi/",
+  "/opere/"
 ];
 
 // Stessa regola di chat.js: la scheda di un evento resta la pagina di partenza.

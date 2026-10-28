@@ -2,6 +2,63 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-28 - CC - Opere: un parere dell'IA sotto ogni acquerello della 6.1, scritto da Claude Opus 5.5
+
+- Idea di Sandro del 28/10/2026: far leggere gli acquerelli a un'intelligenza artificiale e mettere sotto ciascuno un breve commento su che cosa va e che cosa non va, precisando che è di Claude Opus 5.5. Il tono l'ha approvato su due prove, il primo e l'ultimo acquerello.
+- **Pareri** (`autori/alessandro-sanvitale.json`, campo `parere` di ogni opera): due frasi, «Funziona» e «Da migliorare», scritte da Claude Opus 5.5 il 28/10/2026 guardando le 14 foto a piena risoluzione. Solo ciò che si vede nella foto: composizione, valori, sfumature, bianchi lasciati, prospettiva; niente nomi di pigmenti o di marche. Il parere del n. 107 lo confronta col n. 104, che ha lo stesso soggetto.
+- **Pagina**: sotto ogni foto un riquadro «Parere dell'IA (Claude Opus 5.5)», chiuso finché non lo si apre, così la galleria resta pulita. L'introduzione dice chi ha scritto i pareri, quando e su che cosa: «Sotto ogni acquerello, il «Parere dell'IA» è un breve commento scritto il 28 ottobre 2026 da Claude Opus 5.5, un modello di intelligenza artificiale di Anthropic, guardando la fotografia: che cosa funziona e che cosa si potrebbe migliorare. Va preso come un parere, e la foto può falsare i colori.» Modello, produttore e data stanno in `pareri_ia` dell'autore.
+- **Generatore** (`genera-opere.py`): si ferma se un parere non ha le due parti o se l'autore che ha pareri non dichiara modello, produttore e data. Provato con due errori messi apposta e poi tolti.
+- **Documenti**: `README.md`, `AGENTS.md`, `CONTRIBUTING.md` § 3 (i pareri solo se l'autore li chiede, col modello dichiarato).
+- Controlli: `python scripts/genera-sito.py` senza errori; 14 riquadri nella pagina; Gulpease della pagina 6.1 a 70, le altre invariate. Pagina vista in Chrome coi riquadri aperti.
+- Prossima azione: Sandro rilegge i pareri; poi le risposte su n. 107, n. 124 e licenza e il via del curatore. L'unione su `main` pubblica il sito.
+
+-- CC
+
+## 2026-10-28 - CC - Opere: testi riscritti con il tono di una piccola mostra
+
+- Richiesta di Sandro del 28/10/2026: lo stile dei testi della sezione lasciava a desiderare. Riscritti con il tono adatto a una raccolta di acquerelli, invece del registro da manuale tecnico delle guide; i fatti restano quelli dati da Sandro.
+- **Sezione** (`sezione.json`): sottotitolo, anche in home, «Acquerelli di chi dipinge per passione, raccolti autore per autore». Presentazione: «Questa sezione raccoglie gli acquerelli di chi dipinge per passione. Ogni autore ha la sua pagina, con i fogli in ordine di tempo, dal più recente al primo, così da poterne seguire il percorso. Chi desidera esporre qui i propri acquerelli può proporlo dalla casella dei suggerimenti, in fondo alla pagina.» La chiusa della seconda frase era «scorrendola si vede come è cambiata la mano»: su richiesta di Sandro è diventata «così da poterne seguire il percorso». L'elenco si intitola «Gli autori», il collegamento dice «Guarda gli acquerelli».
+- **Pagina 6.1** (`autori/alessandro-sanvitale.json`): «Alessandro Sanvitale dipinge ad acquerello per passione dal 27 settembre 2021: il primo foglio, dipinto quel giorno, chiude la pagina. Dal 2021 al 2024 ha frequentato i corsi di Irene Tamagnone, e oggi segue con lei il corso avanzato dedicato al paesaggio.» Segue un paragrafo su come leggere titoli e date, che nomina la sezione. Esce la frase «Questa sottosezione fa parte della sezione...»: la collocazione la danno il rimando «6. Opere di non professionisti» in cima alla pagina e il numero 6.1 nel titolo.
+- Il conteggio, in pagina e in home, diventa «14 acquerelli dipinti fra il 2021 e il 2024». Il piè di pagina dice «Gli acquerelli appartengono ai loro autori e sono esclusi dalla licenza CC BY 4.0 del Quaderno.»
+- Controlli: `python scripts/genera-sito.py` senza errori; Gulpease della pagina 6.1 a 91, le altre invariate; le due pagine viste in Chrome.
+- Prossima azione: Sandro indica la data scritta sul foglio n. 107 e conferma il n. 124 e la licenza delle opere; poi il via del curatore. L'unione su `main` pubblica il sito.
+
+-- CC
+
+## 2026-10-28 - CC - Opere: Alessandro Sanvitale diventa la sottosezione 6.1, con la presentazione
+
+- Richiesta di Sandro del 28/10/2026: la sezione deve dire che raccoglie opere di non professionisti, e la sua pagina ne è una sottosezione. Nella presentazione: ha iniziato ad acquerello il 27 settembre 2021, ha seguito i corsi di Irene Tamagnone dal 2021 al 2024 e ora segue con lei un corso avanzato di acquerello sul paesaggio.
+- **Sottosezioni**: ogni autore ha un `ordine` nel suo JSON e diventa la sottosezione 6.1, 6.2 e così via. La pagina dell'autore si apre con «6. Opere di non professionisti» e il titolo «6.1 · Alessandro Sanvitale». Nell'elenco della sezione e in home l'autore compare col suo numero; in home la scheda sta rientrata sotto la 6, come «4.1 Alberi» sotto i Soggetti. La barra in cima resta con la sola voce «6 Opere». `scripts/genera-sito.py` si ferma se il numero della sezione in `dati/opere/sezione.json` non è quello di `SEZIONI`.
+- **Testi** (`sezione.json`): l'introduzione della sezione è una breve presentazione in tre frasi, seguita dal collegamento alla pagina di ogni autore («Vedi le opere»): «Questa sezione raccoglie opere di non professionisti: acquerelli di appassionati che non dipingono per mestiere. Ogni autore ha una sottosezione con le sue opere, dalla più recente. Chi vuole proporre le proprie opere può scriverlo nella casella dei suggerimenti in fondo alla pagina.» Le regole su titoli, date e numeri restano solo nella pagina dell'autore, che si apre con «Questa sottosezione fa parte della sezione Opere di non professionisti: acquerelli di appassionati che non dipingono per mestiere.» Il sottotitolo dice «una sottosezione per autore».
+- **Presentazione** (`autori/alessandro-sanvitale.json`): «Alessandro Sanvitale ha iniziato a dipingere ad acquerello il 27 settembre 2021: il primo acquerello, di quel giorno, è l'ultimo della pagina. Dal 2021 al 2024 ha seguito i corsi di acquerello di Irene Tamagnone, e attualmente segue con lei un corso avanzato di acquerello sul paesaggio.» Il nome della docente è scritto come nei file del corso. Su indicazione di Sandro la presentazione non dice che cura il sito, che in futuro sarà curato da molti; lo stesso nel README.
+- **Primo acquerello**: l'opera del 27/9/2021 (foto delle 22.03) porta sotto il titolo la nota «il primo acquerello», nel campo nuovo `nota`. La data coincide con quella che Sandro indica come inizio.
+- **Chat**: il prompt elenca gli autori col numero di sottosezione.
+- Controlli: `python scripts/genera-sito.py` senza errori. Gulpease: sottosezione 6.1 90, le altre pagine invariate; la pagina della sezione resta sotto le 100 parole, quindi l'indice non si calcola. Pagine e home viste in Chrome: intestazione con la sezione e la sottosezione, scheda 6.1 rientrata in home.
+- Prossima azione: Sandro indica la data scritta sul foglio n. 107 e conferma il n. 124 e la licenza delle opere; poi il via del curatore. L'unione su `main` pubblica il sito.
+
+-- CC
+
+## 2026-10-27 - CC - Nuova sezione 6. Opere di non professionisti, con gli acquerelli di Alessandro Sanvitale
+
+- Richiesta di Sandro del 27/10/2026: una sezione per le opere di non professionisti, a cominciare dalle sue, con le 14 foto che ha raccolto. Come titolo la data, con il giorno della settimana e l'ora quando si trovano, e il numero che lui scrive sul foglio.
+- **Sezione** (`dati/opere/`): `sezione.json` con i testi, un JSON per autore in `autori/` (per ora `alessandro-sanvitale.json`), le foto in `immagini/alessandro-sanvitale/` e `genera-opere.py` (comando `pagina`). Il generatore scrive l'elenco degli autori, `/opere/`, e una pagina per autore, `/opere/alessandro-sanvitale/`, con le opere dalla più recente in una griglia; un clic apre la foto a grandezza piena.
+- **Titoli e date**. Il titolo è la data in cui l'acquerello è stato dipinto, con il giorno della settimana calcolato dal generatore e l'ora quando è nota. Su cinque fogli c'è una scritta a mano nel margine, letta sulla foto ingrandita:
+  - n. 104: «17-1-23 lezione 12ª / 24-1-23 lez. 13ª», due sedute, martedì 17 e martedì 24 gennaio 2023;
+  - n. 114: «15-2-23 Mercoledì ore 21-22, 16-2-23 giovedì ore 21-», due sedute; i giorni scritti coincidono con le date;
+  - n. 117: «4-3-23 Sabato», sabato 4 marzo 2023; la foto è del giorno dopo;
+  - n. 124: il numero senza data, con il 4 scritto sopra un 3; titolo dalla data della foto;
+  - n. 107: il numero si legge, la data no, perché la riga è tagliata dal bordo della foto. Per ora il titolo è la data della foto, lunedì 27 febbraio 2023 alle 21.45; se la numerazione segue l'ordine di lavoro, il foglio è fra il 24 gennaio e il 15 febbraio 2023.
+- Gli altri nove fogli non hanno scritte nei margini visibili. Il titolo viene dalla data e dall'ora di scatto (dati EXIF); per l'immagine arrivata da WhatsApp, dalla data nel nome del file, senza ora. Sotto questi titoli la pagina scrive «data della fotografia».
+- **Foto**: `prepara-foto.py <cartella> <id-autore>` le raddrizza, porta il lato lungo a 1600 pixel e le salva senza dati EXIF, quindi senza la posizione GPS che cinque originali contenevano. 14 file, 5,6 MB in tutto. Gli originali restano fuori dal repository.
+- **Diritti**: le opere restano dei rispettivi autori e non rientrano nella licenza CC BY 4.0. Riga nuova in `LICENSE` § 2, eccezione in `CONTRIBUTING.md` § 4, nota in fondo alle pagine della sezione.
+- **Sito**: la sezione entra in `SEZIONI` di `scripts/genera-sito.py` col numero 6, quindi nella barra e in home, con una figura disegnata (un foglio dipinto sul cavalletto). «Opere» entra nel menu della casella dei suggerimenti e in `SEZIONI_VALIDE` di `functions/api/suggerimento.js`; `/opere/` negli elenchi `PAGINE_VALIDE` delle due funzioni. La chat riceve gli autori, il numero delle opere e gli anni, con l'istruzione di non descrivere né giudicare le opere, che non vede.
+- **Documenti**: `README.md` (tabella delle sezioni e licenza), `AGENTS.md`, `CONTRIBUTING.md` (§ 1 come proporre le proprie opere, § 3 regole della sezione, § 4 diritti).
+- Controlli: `python scripts/genera-sito.py` senza errori, compreso il controllo sui nomi di marca. Gulpease: Principi 68, Colori 75, Marche 59, Soggetti 66, Alberi 72, Eventi 95, scheda Sestri Levante 80, Opere 74, pagina di Alessandro Sanvitale 102. Pagine provate in Chrome a 1280 pixel e, dentro un riquadro, a 360 e 390 pixel: griglia a tre colonne sul computer e a una sul telefono, nessuno scorrimento di lato. Le 14 foto rispondono e ognuna sta sotto il suo titolo. `lib/prompt-chat.js` rigenerato. In attesa del via del curatore per l'unione su `main`.
+- 28/10/2026: unito nel ramo `main` con le #48 e #49; conflitti solo in README, CHANGELOG e nel prompt generato, risolti tenendo le due parti. Rigenerato senza errori; il piè di pagina delle Opere porta anche il collegamento all'informativa sulla privacy, che le pagine della sezione rispettano (nessun cookie, nessuno script o carattere di altri siti). Gulpease invariati, Informativa 64.
+- Prossima azione: Sandro indica la data scritta sul foglio n. 107 e conferma il n. 124; poi il via del curatore. L'unione su `main` pubblica il sito.
+
+-- CC
+
 ## 2026-10-27 - GBOT-app-acquerello - Alberi: sesta modalità per le chiome tonde, il tondo caricato chiaro e scuro (Christopher Stephen)
 
 - Richiesta di Sandro del 27/10/2026: aggiungere la terza tecnica del video di Christopher Stephen «Three Watercolour Tree Techniques YOU NEED TO KNOW !!!» (`TPU6woga-6M`) come nuova modalità di A3. Le prime due tecniche del video, bagnato su bagnato e spugna naturale, in A3 ci sono già.

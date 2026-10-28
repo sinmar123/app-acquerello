@@ -8,9 +8,9 @@ Chi oggi apprende una disciplina pratica dispone di una documentazione vastissim
 
 - **Sito:** [https://app-acquerello.pages.dev](https://app-acquerello.pages.dev)
 - **Repository:** [https://github.com/sinmar123/app-acquerello](https://github.com/sinmar123/app-acquerello)
-- **Licenza:** [CC BY 4.0 per testi, dati e illustrazioni · MIT per il codice](LICENSE)
+- **Licenza:** [CC BY 4.0 per testi, dati e illustrazioni · MIT per il codice](LICENSE); le opere della sezione *Opere* restano dei rispettivi autori
 
-Il repository è autonomo: contiene i dati, le infografiche, le illustrazioni e gli script che generano l'intero sito. **Il Quaderno è in costruzione:** alle sezioni generali (*Principi generali*, *Teoria dei colori*, *Marche e tubetti*) si aggiunge un modulo per ogni soggetto; il primo, sugli alberi, è pubblicato, e seguiranno cieli e nuvole, fiori, acqua e riflessi, rocce, architetture. La sezione *Eventi* raccoglie il calendario, la scheda di ogni evento (locandina, programma e fotografie) e l'archivio per anno. Correzioni, integrazioni e nuovi video si propongono con la casella in fondo a ogni pagina o secondo [`CONTRIBUTING.md`](CONTRIBUTING.md).
+Il repository è autonomo: contiene i dati, le infografiche, le illustrazioni e gli script che generano l'intero sito. **Il Quaderno è in costruzione:** alle sezioni generali (*Principi generali*, *Teoria dei colori*, *Marche e tubetti*) si aggiunge un modulo per ogni soggetto; il primo, sugli alberi, è pubblicato, e seguiranno cieli e nuvole, fiori, acqua e riflessi, rocce, architetture. La sezione *Eventi* raccoglie il calendario, la scheda di ogni evento (locandina, programma e fotografie) e l'archivio per anno. La sezione *Opere di non professionisti* raccoglie gli acquerelli di appassionati, una sottosezione per autore, a cominciare da quelli di Alessandro Sanvitale. Correzioni, integrazioni e nuovi video si propongono con la casella in fondo a ogni pagina o secondo [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ## Sezioni
 
@@ -23,6 +23,7 @@ Il repository è autonomo: contiene i dati, le infografiche, le illustrazioni e 
 | `/soggetti/` | **4. Soggetti**: un modulo per tema; `S1` Alberi pubblicato, `S2`-`S6` in preparazione | `dati/soggetti/` |
 | `/alberi/` | **4.1 S1 · Alberi ad acquerello**: 6 esempi, 25 modalità tratte dai video con un'infografica SVG in 3 fasi ciascuna, 32 estratti video; ogni video si carica da YouTube solo quando si preme «Guarda il video» | `dati/alberi/` |
 | `/eventi/` | **5. Eventi**: calendario di festival, mostre, demo e uscite en plein air, in corso, in arrivo e passati; scheda per evento con locandina, programma e fotografie di chi ha partecipato; archivio `/eventi/<anno>/` e scheda `/eventi/<anno>/<slug>/` | `dati/eventi/` |
+| `/opere/` | **6. Opere di non professionisti**: acquerelli di appassionati, una sottosezione per autore (`6.1` Alessandro Sanvitale, `/opere/<autore>/`) con la presentazione e le opere dalla più recente; il titolo è la data in cui l'opera è stata dipinta, scritta sul foglio o, dove manca, la data della fotografia, con il numero del foglio quando c'è; sotto ogni acquerello, se l'autore lo chiede, un breve parere dell'IA che dichiara il modello (per la 6.1 Claude Opus 5.5); le opere restano dei rispettivi autori, fuori dalla licenza CC BY 4.0 | `dati/opere/` |
 | `/informativa/` | Informativa sulla privacy: titolare, cookie, video di YouTube caricati al clic, chat e suggerimenti; collegata dal piè di pagina di ogni pagina | `scripts/genera-sito.py` |
 
 Le frasi «L'autore, in sintesi» della sezione Alberi riassumono in italiano il parlato dei video, con l'aiuto dell'IA: non sono trascrizioni.
@@ -37,7 +38,7 @@ python scripts/genera-sito.py
 
 Lo script:
 1. controlla che il menu della casella dei suggerimenti e le pagine del sito coincidano con gli elenchi che le funzioni del server accettano, e che i nomi delle marche non compaiano fuori dalla sezione Marche;
-2. rigenera la pagina di ogni sezione col suo generatore in `dati/<sezione>/`, che fa i controlli propri della sezione (fonti dei Principi, fonti e date delle Marche, coerenza della tavolozza);
+2. rigenera la pagina di ogni sezione col suo generatore in `dati/<sezione>/`, che fa i controlli propri della sezione (fonti dei Principi, fonti e date delle Marche, coerenza della tavolozza, foto e date delle Opere);
 3. la copia in `site/<sezione>/index.html` con la barra delle sezioni, la chat e la casella dei suggerimenti, e scrive la home, l'informativa sulla privacy, `robots.txt`, `sitemap.xml` e la favicon;
 4. scrive `lib/prompt-chat.js`, il prompt della chat ricavato dai dati del sito;
 5. misura la leggibilità di ogni pagina (indice Gulpease) e si ferma se una pagina scende sotto 52.
