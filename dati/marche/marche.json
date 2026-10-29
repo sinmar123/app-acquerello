@@ -1,12 +1,11 @@
 {
- "data": "2026-10-24",
- "nota": "Dati dei tubetti presi solo dalle pagine ufficiali dei produttori, con il link e la data di controllo su ogni riga. I colori (id e nome comune) vengono da dati/colori/tavolozza.json. GBOT-app-acquerello, 18/10/2026.",
- "titolo": "Marche e tubetti: i sei colori proposti nelle serie in commercio",
- "sottotitolo": "Per ogni colore proposto, il tubetto corrispondente in sei serie: nome commerciale, numero, pigmenti e trasparenza, dalle pagine ufficiali dei produttori",
+ "data": "2026-10-29",
+ "nota": "Dati dei tubetti presi solo dalle pagine ufficiali dei produttori, con il link e la data di controllo su ogni riga. I colori (id e nome comune) vengono da dati/colori/tavolozza.json. GBOT-app-acquerello, 18/10/2026. Dal 29/10/2026 la sezione è generale: le tabelle dei sei colori della tavolozza ridotta stanno in fondo, come esempio (scelta del curatore).",
+ "titolo": "Marche e tubetti: come orientarsi fra i colori in commercio",
+ "sottotitolo": "Tubetti e pastiglie, serie per chi comincia e per artisti, come leggere l'etichetta e perché lo stesso nome può nascondere pigmenti diversi",
  "introduzione": [
-  "Nelle schede del Quaderno i sei colori proposti sono indicati con il nome comune e con il pigmento, per esempio «blu oltremare (PB29)». Il pigmento è la sigla del Colour Index stampata sull'etichetta: PY per i gialli, PR per i rossi, PB per i blu, PBr per i bruni. Il comportamento del colore dipende anzitutto da questa sigla, più che dal nome sul tubetto.",
-  "Le tabelle mettono a confronto lo stesso colore in sei serie di cinque marche. Prima dell'acquisto conviene controllare il pigmento: due tubetti con lo stesso nome possono avere pigmenti diversi, e due tubetti con nomi diversi lo stesso pigmento.",
-  "I produttori a volte cambiano la formula senza cambiare il nome: il cremisi Cotman usato negli esercizi ha PR206 sull'etichetta, mentre la formula attuale indicata sul sito è PR179. Fa fede sempre l'etichetta del tubetto."
+  "Davanti allo scaffale dei colori le possibilità sono molte: marche diverse, più serie della stessa marca, tubetti e pastiglie, prezzi che cambiano da un colore all'altro. Questa sezione raccoglie quello che serve per orientarsi: come si presentano i colori in commercio, che cosa distingue una serie pensata per chi comincia da una pensata per gli artisti, come si legge l'etichetta e perché due tubetti con lo stesso nome possono contenere pigmenti diversi.",
+  "Gli esempi vengono da sei serie di cinque marche, lette sulle pagine ufficiali dei produttori, con il collegamento e la data di controllo. Non sono una classifica, e il Quaderno non consiglia una marca: fa fede sempre l'etichetta del tubetto."
  ],
  "criterio": "Oltre alla serie usata negli esercizi (Cotman) e alla serie superiore della stessa marca, le tabelle comprendono le marche confrontate nel video «Best Brand to Fill Watercolour Pans», raccolto nei materiali del Quaderno: Daniel Smith, Schmincke, Van Gogh e Maimeri Blu. Per ogni colore è riportato il tubetto con il nome più vicino; quando la serie ne ha due, per esempio il ceruleo vero e un'imitazione, sono riportati entrambi.",
  "criterio_fonte": "https://www.youtube.com/watch?v=F-wkzt94-OA",
@@ -22,7 +21,7 @@
    "id": "wn-cotman",
    "marca": "Winsor & Newton",
    "serie": "Cotman",
-   "nota": "È la serie da studio presa a riferimento per i sei colori proposti dal Quaderno.",
+   "nota": "È la serie usata negli esercizi, presa a riferimento per la tavolozza ridotta.",
    "fonte_generale": "https://www.winsornewton.com/pages/cotman-watercolour",
    "righe": [
     {
@@ -81,6 +80,10 @@
      "fonte": "https://www.winsornewton.com/en-ca/products/cotman-watercolour-ultramarine",
      "controllato": "2026-10-18"
     }
+   ],
+   "scheda": "40 colori, tubetti da 8 e 21 ml e mezze pastiglie; carico di pigmento ridotto rispetto alla Professional; resistenza alla luce AA e A.",
+   "fonti_scheda": [
+    "wn-cotman-pagina"
    ]
   },
   {
@@ -158,6 +161,10 @@
      "fonte": "https://www.winsornewton.com/en-ca/products/professional-watercolour-french-ultramarine",
      "controllato": "2026-10-18"
     }
+   ],
+   "scheda": "115 colori, 85 a pigmento singolo; tubetti da 5 e 14 ml e mezze pastiglie.",
+   "fonti_scheda": [
+    "wn-professional-pagina"
    ]
   },
   {
@@ -221,6 +228,11 @@
      "fonte": "https://www.royaltalens.com/products/van-gogh-watercolour-tube-10-ml",
      "controllato": "2026-10-18"
     }
+   ],
+   "scheda": "Livello per studenti e artisti; tubetti da 10 ml e mezze pastiglie; resistenza alla luce con le crocette.",
+   "fonti_scheda": [
+    "van-gogh-serie",
+    "van-gogh-tubetto"
    ]
   },
   {
@@ -309,7 +321,9 @@
      "fonte": "https://danielsmith.com/color-stories/watercolors/french-ultramarine-watercolor/",
      "controllato": "2026-10-18"
     }
-   ]
+   ],
+   "scheda": "Le pagine ufficiali di ogni colore riportano il pigmento, la trasparenza e il codice SKU, che nelle tabelle in fondo sta al posto del numero breve del colore.",
+   "fonti_scheda": []
   },
   {
    "id": "schmincke",
@@ -405,6 +419,10 @@
      "fonte": "https://www.schmincke.de/en/produkte/aquarell/horadam-aquarell",
      "controllato": "2026-10-18"
     }
+   ],
+   "scheda": "«Acquerelli per artisti», serie 14; 139 colori in pastiglie intere e mezze e tubetti da 5 e 15 ml, più 50 colori supergranulanti; 162 colori su 189 con la resistenza alla luce più alta, 4 e 5 stelle.",
+   "fonti_scheda": [
+    "schmincke-serie"
    ]
   },
   {
@@ -488,6 +506,10 @@
      "fonte": "https://www.maimeri.it/it/categorie/acquerello/maimeri-blu/blu-oltremare-scuro-1609392.html",
      "controllato": "2026-10-18"
     }
+   ],
+   "scheda": "90 colori nei formati da 1,5 e 12 ml; secondo il produttore solo pigmenti e gomma arabica, «niente polveri da taglio, niente additivi».",
+   "fonti_scheda": [
+    "maimeri-serie"
    ]
   }
  ],
@@ -504,7 +526,7 @@
    ]
   },
   {
-   "testo": "<b>Ceruleo.</b> Il ceruleo vero è il PB35, di solito granulante: Winsor &amp; Newton Professional Cerulean Blue, Daniel Smith Cerulean Blue, Schmincke cobalt azure, Maimeri Blu Celeste ceruleo. Le imitazioni (<i>hue</i>) usano il blu ftalo: PB15 (Cotman Cerulean Blue Hue, il ceruleo proposto), PB15 + PW6 (Van Gogh Cerulean Blue (Phthalo)), PW4 + PB15:3 (Schmincke cerulean blue hue). Il PB36, un ceruleo di cromo, è un terzo pigmento: Daniel Smith lo vende come Cerulean Blue Chromium, Maimeri Blu come «Blu ceruleo», riservando il PB35 al «Celeste ceruleo».",
+   "testo": "<b>Ceruleo.</b> Il ceruleo vero è il PB35, di solito granulante: Winsor &amp; Newton Professional Cerulean Blue, Daniel Smith Cerulean Blue, Schmincke cobalt azure, Maimeri Blu Celeste ceruleo. Le imitazioni (<i>hue</i>) usano il blu ftalo: PB15 (Cotman Cerulean Blue Hue, il ceruleo della tavolozza ridotta), PB15 + PW6 (Van Gogh Cerulean Blue (Phthalo)), PW4 + PB15:3 (Schmincke cerulean blue hue). Il PB36, un ceruleo di cromo, è un terzo pigmento: Daniel Smith lo vende come Cerulean Blue Chromium, Maimeri Blu come «Blu ceruleo», riservando il PB35 al «Celeste ceruleo».",
    "marche": [
     "wn-professional",
     "daniel-smith",
@@ -602,5 +624,94 @@
     "daniel-smith"
    ]
   }
- ]
+ ],
+ "fonti_pagine": {
+  "wn-cotman-pagina": {
+   "testo": "Winsor &amp; Newton, Cotman Watercolour, pagina di un colore (Lemon Yellow Hue): presentazione della serie, formati, carico di pigmento, resistenza alla luce",
+   "url": "https://www.winsornewton.com/en-ca/products/cotman-watercolour-lemon-yellow-hue",
+   "controllato": "2026-10-29"
+  },
+  "wn-professional-pagina": {
+   "testo": "Winsor &amp; Newton, Professional Watercolour, pagina di un colore (Winsor Lemon): numero dei colori e dei colori a pigmento singolo, formati",
+   "url": "https://www.winsornewton.com/en-ca/products/professional-watercolour-winsor-lemon",
+   "controllato": "2026-10-29"
+  },
+  "van-gogh-serie": {
+   "testo": "Royal Talens, pagina della serie Van Gogh watercolours: presentazione, destinatari, pastiglie e tubetti",
+   "url": "https://www.royaltalens.com/collections/van-gogh-watercolours",
+   "controllato": "2026-10-29"
+  },
+  "van-gogh-tubetto": {
+   "testo": "Royal Talens, Van Gogh Watercolour Tube 10 ml: livello della serie e scala della resistenza alla luce",
+   "url": "https://www.royaltalens.com/products/van-gogh-watercolour-tube-10-ml",
+   "controllato": "2026-10-29"
+  },
+  "schmincke-serie": {
+   "testo": "Schmincke, HORADAM Aquarell: presentazione della serie, colori, formati, resistenza alla luce, gruppi di prezzo",
+   "url": "https://www.schmincke.de/en/produkte/aquarell/horadam-aquarell",
+   "controllato": "2026-10-29"
+  },
+  "maimeri-serie": {
+   "testo": "Maimeri, pagina della serie Maimeri Blu: numero dei colori, formati, composizione",
+   "url": "https://www.maimeri.it/it/categorie/acquerello/maimeri-blu/",
+   "controllato": "2026-10-29"
+  },
+  "maimeri-colore": {
+   "testo": "Maimeri Blu, pagina di un colore (Blu oltremare scuro): gruppo di prezzo, pigmento col numero del Colour Index, legende di coprenza e resistenza alla luce",
+   "url": "https://www.maimeri.it/it/categorie/acquerello/maimeri-blu/blu-oltremare-scuro-1609392.html",
+   "controllato": "2026-10-29"
+  },
+  "principi-aperto": {
+   "testo": "Principi generali del Quaderno, capitolo 8: il lavoro all'aperto, la scatola compatta e la tavolozza ridotta",
+   "url": "../principi/#tavolozza-plein-air"
+  }
+ },
+ "capitoli_generali": [
+  {
+   "id": "formati",
+   "breve": "Tubetti e pastiglie",
+   "titolo": "1. Tubetti e pastiglie",
+   "paragrafi": [
+    "L'acquerello si vende in tubetti e in pastiglie, intere o mezze, che alcuni produttori chiamano godet. Le misure cambiano da una serie all'altra: tubetti da 5 e 15 ml per Schmincke HORADAM, da 10 ml per Van Gogh, da 8 e 21 ml per Cotman, da 5 e 14 ml per Winsor &amp; Newton Professional, da 12 ml per Maimeri Blu. Le pastiglie stanno in scatole compatte, comode da portare fuori; per il lavoro all'aperto, dove conviene usare pochi colori, c'è il <a href=\"../principi/#tavolozza-plein-air\">capitolo 8 dei Principi generali</a>."
+   ],
+   "fonti": [
+    "schmincke-serie",
+    "van-gogh-serie",
+    "wn-cotman-pagina",
+    "wn-professional-pagina",
+    "maimeri-serie",
+    "principi-aperto"
+   ]
+  },
+  {
+   "id": "livelli",
+   "breve": "Le serie",
+   "titolo": "2. Serie per chi comincia e serie per artisti",
+   "paragrafi": [
+    "Molte marche producono più serie di acquerello, a prezzi diversi. Winsor &amp; Newton dichiara che la serie Cotman usa pigmenti di qualità, ma con un carico di pigmento ridotto rispetto alla Professional, per renderla più accessibile, e la presenta come adatta a chi comincia. La Professional, con 115 colori di cui 85 a pigmento singolo, è la serie superiore della stessa marca. Royal Talens presenta i colori Van Gogh come una serie di livello per studenti e artisti, adatta a principianti, studenti e artisti esperti. Schmincke chiama HORADAM i suoi «acquerelli per artisti di qualità più fine».",
+    "Nelle serie per chi comincia alcuni colori costosi sono sostituiti da imitazioni, che portano di solito la parola «hue» nel nome: il ceruleo della serie Cotman, per esempio, è un blu ftalo schiarito, non il ceruleo vero, che è il PB35. Nelle serie per artisti il prezzo cambia spesso da un colore all'altro, secondo il costo del pigmento: Schmincke e Maimeri indicano per ogni colore un gruppo di prezzo."
+   ],
+   "fonti": [
+    "wn-cotman-pagina",
+    "wn-professional-pagina",
+    "van-gogh-serie",
+    "van-gogh-tubetto",
+    "schmincke-serie",
+    "maimeri-colore"
+   ]
+  }
+ ],
+ "etichetta_intro": {
+  "paragrafi": [
+   "Sull'etichetta e sulle pagine dei produttori ricorrono quasi sempre le stesse informazioni: il pigmento, con la sigla del Colour Index; il numero del colore; la trasparenza, spesso con un simbolo; la resistenza alla luce, con scale diverse da marca a marca. Royal Talens, per esempio, usa le crocette, e +++ vuol dire almeno cento anni in condizioni museali; Schmincke usa le stelle. Conviene guardare prima di tutto il pigmento: dice come si comporterà il colore molto più del nome commerciale.",
+   "La sigla del Colour Index è fatta di lettere e di un numero: PY per i gialli, PR per i rossi, PB per i blu, PBr per i bruni. Nelle schede del Quaderno i colori sono indicati con il nome comune e con il pigmento, per esempio «blu oltremare (PB29)»."
+  ],
+  "fonti": [
+   "van-gogh-tubetto",
+   "schmincke-serie",
+   "maimeri-colore"
+  ]
+ },
+ "stesso_nome_intro": "Due tubetti con lo stesso nome possono avere pigmenti diversi, e due tubetti con nomi diversi lo stesso pigmento: prima dell'acquisto conviene controllare il pigmento. I produttori, poi, a volte cambiano la formula senza cambiare il nome: il cremisi Cotman usato negli esercizi ha PR206 sull'etichetta, mentre la formula attuale indicata sul sito è PR179. Gli esempi che seguono vengono dalle tabelle in fondo alla pagina; tra parentesi quadre le serie da cui vengono.",
+ "esempio_intro": "Le tabelle che seguono cercano nelle sei serie i colori della tavolozza ridotta per l'aperto, descritta nel <a href=\"../principi/#tavolozza-plein-air\">capitolo 8 dei Principi generali</a>: per ogni colore il tubetto con il nome più vicino, il numero, i pigmenti e la trasparenza."
 }

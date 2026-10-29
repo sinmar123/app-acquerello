@@ -2,6 +2,26 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-29 - CC - Marche e tubetti diventa una guida generale
+
+- Richiesta di Sandro del 29/10/2026: la parte su marche e tubetti deve essere generale, non costruita sui sei colori, che restano un esempio. Testi proposti e approvati in chat prima di toccare l'app.
+- **Titolo e apertura** (`marche.json`): «Marche e tubetti: come orientarsi fra i colori in commercio»; sottotitolo e introduzione nuovi. L'introduzione dice da dove vengono gli esempi, cioè sei serie di cinque marche lette sulle pagine ufficiali, e che il Quaderno non consiglia una marca.
+- **Capitoli**:
+  1. Tubetti e pastiglie, con le misure dei tubetti di ogni serie.
+  2. Serie per chi comincia e serie per artisti: Cotman e Professional, Van Gogh, HORADAM; le imitazioni «hue»; i gruppi di prezzo.
+  3. Come leggere l'etichetta: due capoversi nuovi in apertura, poi le voci di prima.
+  4. Stesso nome, pigmenti diversi: in apertura le frasi della vecchia introduzione, poi gli esempi di prima.
+  5. Le sei serie in breve, una scheda ciascuna con la pagina ufficiale e il rimando alla tabella.
+  6. In fondo, come esempio, le tabelle dei sei colori della tavolozza ridotta nelle sei serie, con il criterio della scelta e la legenda.
+- **Fonti nuove** (`fonti_pagine`), lette il 29/10/2026 sulle pagine ufficiali: Winsor & Newton (Cotman e Professional), Royal Talens (Van Gogh), Schmincke (HORADAM), Maimeri (Maimeri Blu). Ogni dato dei capitoli 1, 2, 3 e 5 è stato riscontrato sul testo della pagina scaricata. Il sito di Daniel Smith blocca la lettura automatica, anche con un browser senza finestra: la sua scheda dice solo ciò che le tabelle avevano già verificato il 18/10, cioè pigmento, trasparenza e SKU, senza formati.
+- **Generatore** (`genera-marche.py`): pagina con i sei capitoli; si ferma se una fonte dei capitoli manca, non è citata o, se esterna, non ha la data di controllo, e se una serie non ha la scheda. Le tabelle tengono le ancore di prima, così i rimandi fra parentesi quadre continuano a funzionare.
+- **Testi minori**: la nota della serie Cotman e un esempio dello «stesso nome» non parlano più di colori «proposti» ma di tavolozza ridotta. La scheda in home ha il sottotitolo nuovo.
+- **Documenti**: `README.md`, `AGENTS.md`, `CONTRIBUTING.md` § 1 (che cosa serve per proporre una nuova serie).
+- Controlli: `python scripts/genera-sito.py` senza errori, compreso il controllo sui nomi di marca. Gulpease di Marche 56, le altre invariate. Pagina vista in Chrome. «sei colori proposti» non compare più in nessuna pagina del sito.
+- Prossima azione: via del curatore per l'unione su `main`, che pubblica il sito.
+
+-- CC
+
 ## 2026-10-29 - CC - Prima pagina riscritta, sei colori solo nel capitolo dell'aperto, Alberi con sommario e indice
 
 - Richieste di Sandro del 28 e 29/10/2026. I testi sono stati proposti e approvati in chat prima di toccare l'app, come lui ha chiesto.
