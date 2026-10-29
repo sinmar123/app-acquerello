@@ -79,8 +79,19 @@ SEZIONI = [
         "html_generato": DATI_DIR / "alberi" / "pit-261014-video-gesti-alberi.html",
     },
     {
-        "slug": "eventi",
+        "slug": "approfondimenti",
         "numero": "5",
+        "breve": "Approfondimenti",
+        "nome_form": "Approfondimenti",
+        "titolo": "Approfondimenti",
+        "sottotitolo": "Questioni che tornano spesso fra chi dipinge ad acquerello, una pagina per tema, con le fonti",
+        "script_genera": DATI_DIR / "approfondimenti" / "genera-approfondimenti.py",
+        "html_generato": DATI_DIR / "approfondimenti" / "approfondimenti.html",
+        "pagine_extra": DATI_DIR / "approfondimenti" / "pagine",
+    },
+    {
+        "slug": "eventi",
+        "numero": "6",
         "breve": "Eventi",
         "nome_form": "Eventi",
         "titolo": "Eventi",
@@ -92,7 +103,7 @@ SEZIONI = [
     },
     {
         "slug": "opere",
-        "numero": "6",
+        "numero": "7",
         "breve": "Opere",
         "nome_form": "Opere",
         "titolo": "Opere di non professionisti",
@@ -107,7 +118,7 @@ SEZIONI = [
 DESCRIZIONE_HOME = (
     "Appunti di studio dell'acquerello, scritti da dilettanti per altri appassionati: principi su acqua, colore e carta, "
     "teoria dei colori con un calcolatore di miscele, marche e tubetti, soggetti con gli esercizi tratti dai video, "
-    "eventi e opere di non professionisti."
+    "approfondimenti come il bianco nell'acquerello, eventi e opere di non professionisti."
 )
 
 OPZIONI_SEZIONE = [
@@ -116,6 +127,7 @@ OPZIONI_SEZIONE = [
     "Teoria dei colori",
     "Confronto marche",
     "Soggetti (Alberi, Nuvole, Fiori...)",
+    "Approfondimenti",
     "Eventi",
     "Opere",
 ]
@@ -165,10 +177,23 @@ def controlla_funzioni():
 PAROLE_GENERICHE = {"professional", "extra", "fine", "aquarell", "blu"}
 
 
+def righe_da_controllare(p):
+    """Le righe di un sorgente in cui cercare i nomi delle marche. Nelle questioni degli Approfondimenti
+    l'elenco delle fonti nomina i produttori di cui cita la pagina (CONTRIBUTING.md § 3): di quei file si
+    controlla tutto il resto, riscritto senza le fonti, e i numeri di riga sono quelli della riscrittura."""
+    testo = p.read_text(encoding="utf-8")
+    if "approfondimenti" in p.parts and p.suffix == ".json":
+        dati = json.loads(testo)
+        if isinstance(dati, dict):
+            dati.pop("fonti", None)
+        testo = json.dumps(dati, ensure_ascii=False, indent=1)
+    return testo.splitlines()
+
+
 def controlla_marche_fuori_sezione():
     """Marche e serie commerciali stanno solo in dati/marche/ (CONTRIBUTING.md § 3): altrove i colori
     si chiamano col nome comune e il codice Colour Index. Cerca i nomi di marche.json in tutti gli
-    altri sorgenti delle sezioni."""
+    altri sorgenti delle sezioni, salvo l'elenco delle fonti degli Approfondimenti (righe_da_controllare)."""
     marche = json.loads((DATI_DIR / "marche" / "marche.json").read_text(encoding="utf-8"))["marche"]
     nomi = {"winsor"}
     for m in marche:
@@ -181,7 +206,7 @@ def controlla_marche_fuori_sezione():
     for p in sorted(DATI_DIR.rglob("*")):
         if p.suffix not in {".json", ".csv", ".py", ".js"} or "marche" in p.parts or "spettri" in p.name:
             continue
-        for n, riga in enumerate(p.read_text(encoding="utf-8").splitlines(), 1):
+        for n, riga in enumerate(righe_da_controllare(p), 1):
             basso = riga.lower()
             for nome in nomi:
                 if re.search(rf"(?<![a-z]){re.escape(nome)}(?![a-z])", basso):
@@ -250,14 +275,20 @@ def riassunto_eventi():
     return "\n".join(blocchi)
 
 
-def sottosezioni_opere():
-    """Gli autori della sezione Opere come sottosezioni (6.1, 6.2...), dai file di dati/opere/autori/: numero,
-    nome, indirizzo e quante opere in quali anni. Il numero della sezione in dati/opere/sezione.json deve essere
-    quello di SEZIONI, perché le pagine degli autori lo scrivono da sé."""
-    numero = next(s["numero"] for s in SEZIONI if s["slug"] == "opere")
-    sezione = json.loads((DATI_DIR / "opere" / "sezione.json").read_text(encoding="utf-8"))
+def numero_sezione(slug):
+    """Il numero della sezione in SEZIONI, che deve coincidere con quello del suo sezione.json: le pagine delle
+    sottosezioni (gli autori delle Opere, le questioni degli Approfondimenti) lo scrivono da sé."""
+    numero = next(s["numero"] for s in SEZIONI if s["slug"] == slug)
+    sezione = json.loads((DATI_DIR / slug / "sezione.json").read_text(encoding="utf-8"))
     if sezione.get("numero") != numero:
-        raise SystemExit(f"genera-sito: dati/opere/sezione.json dà alla sezione il numero {sezione.get('numero')}, SEZIONI {numero}")
+        raise SystemExit(f"genera-sito: dati/{slug}/sezione.json dà alla sezione il numero {sezione.get('numero')}, SEZIONI {numero}")
+    return numero
+
+
+def sottosezioni_opere():
+    """Gli autori della sezione Opere come sottosezioni (numero della sezione più l'ordine dell'autore, per
+    esempio 7.1), dai file di dati/opere/autori/: numero, nome, indirizzo e quante opere in quali anni."""
+    numero = numero_sezione("opere")
     voci = []
     for path in sorted((DATI_DIR / "opere" / "autori").glob("*.json")):
         autore = json.loads(path.read_text(encoding="utf-8"))
@@ -274,15 +305,47 @@ def sottosezioni_opere():
 def riassunto_opere():
     """Testo della chat ricavato dai file degli autori della sezione Opere: nomi, numero di opere e anni.
     Le immagini non entrano nel prompt, quindi la chat non descrive le opere."""
-    righe = [f"- {v['numero']} {v['nome']}: {v['quante']} ({SITO_URL}/{v['href']})" for v in sottosezioni_opere()]
+    voci = sottosezioni_opere()
+    righe = [f"- {v['numero']} {v['nome']}: {v['quante']} ({SITO_URL}/{v['href']})" for v in voci]
+    prima = voci[0]["numero"] if voci else f"{numero_sezione('opere')}.1"
     return (
         f"Opere di non professionisti ({SITO_URL}/opere/): acquerelli di dilettanti, cioè di appassionati che non dipingono per "
-        "mestiere, una sottosezione per autore; ogni autore sceglie l'ordine delle sue opere e come presentarle. Nella 6.1 il "
+        f"mestiere, una sottosezione per autore; ogni autore sceglie l'ordine delle sue opere e come presentarle. Nella {prima} il "
         "titolo di ogni opera è la data in cui è stata dipinta, scritta sul foglio; dove manca o non si legge, è la data della "
         "fotografia, e sotto ogni opera c'è un breve parere scritto da un'intelligenza artificiale. Le opere appartengono ai rispettivi autori "
         "e non rientrano nella licenza CC BY 4.0 del Quaderno. Le immagini non sono in questo riassunto: "
         "non descrivere le opere e non giudicarle.\nAutori:\n" + ("\n".join(righe) if righe else "- Nessun autore.")
     )
+
+
+def sottosezioni_approfondimenti():
+    """Le questioni della sezione Approfondimenti come sottosezioni (5.1, 5.2...), dai file di
+    dati/approfondimenti/temi/: numero, titolo, indirizzo e la riga della scheda."""
+    numero = numero_sezione("approfondimenti")
+    voci = []
+    for path in sorted((DATI_DIR / "approfondimenti" / "temi").glob("*.json")):
+        tema = json.loads(path.read_text(encoding="utf-8"))
+        voci.append({"ordine": tema["ordine"], "numero": f"{numero}.{tema['ordine']}", "titolo": tema["titolo"],
+                     "href": f"approfondimenti/{tema['id']}/", "scheda": tema["scheda"], "tema": tema})
+    return sorted(voci, key=lambda v: v["ordine"])
+
+
+def riassunto_approfondimenti():
+    """Testo della chat ricavato dalle questioni degli Approfondimenti: per ognuna la sintesi in cima alla pagina
+    e, se c'è, il capitolo «In pratica» con le proposte del Quaderno, così la chat non contraddice la pagina."""
+    blocchi = [f"Approfondimenti ({SITO_URL}/approfondimenti/): una pagina per ogni questione che torna spesso fra chi "
+               "dipinge ad acquerello, con le fonti in fondo a ogni capitolo; le valutazioni del Quaderno sono dichiarate."]
+    for v in sottosezioni_approfondimenti():
+        tema = v["tema"]
+        righe = [f"\n{v['numero']} {v['titolo']} ({SITO_URL}/{v['href']}). {tema['scheda']}.", "In sintesi:"]
+        righe += [f"- {senza_tag(p['testo'])}" for p in tema["sintesi"]]
+        pratica = next((c for c in tema["capitoli"] if c["id"] == "pratica"), None)
+        if pratica:
+            voci = [x for b in pratica["blocchi"] if b["tipo"] == "lista" for x in b["voci"]]
+            righe.append("Le proposte del Quaderno, una valutazione ricavata dalle fonti:")
+            righe += [f"{i}. {senza_tag(x['testo'])}" for i, x in enumerate(voci, 1)]
+        blocchi.append("\n".join(righe))
+    return "\n".join(blocchi)
 
 
 def genera_prompt_chat():
@@ -352,6 +415,8 @@ Il modulo S1, alberi, siepi e arbusti ({SITO_URL}/alberi/), con le modalità tra
 {chr(10).join(esempi)}
 
 Moduli in preparazione: {in_preparazione}.
+
+{riassunto_approfondimenti()}
 
 {riassunto_eventi()}
 
@@ -761,13 +826,15 @@ def inietta_elementi_comuni(html_pagina: str, sezione: dict, pagina_path: str, p
 
 
 # Voci del riquadro «in costruzione» della home, testo approvato dal curatore il 29/10/2026 (prima versione del
-# 21/10/2026): ogni voce porta alla pagina o allo strumento che nomina. L'invito alla casella dei suggerimenti
+# 21/10/2026), con la voce degli Approfondimenti aggiunta lo stesso giorno insieme alla sezione: ogni voce porta
+# alla pagina o allo strumento che nomina. L'invito alla casella dei suggerimenti
 # è la frase che chiude il riquadro, così non compare due volte.
 IN_COSTRUZIONE = [
     'i <a href="./principi/">principi generali su acqua, colore e carta</a>, dalle tre consistenze della miscela agli stati della carta, fino al lavoro in studio e all\'aperto',
     'la <a href="./colori/">teoria dei colori</a>, con un <a href="./colori/#calcolatore">calcolatore</a> che propone, come stima, la miscela più vicina a un colore dato',
     'una <a href="./marche/">guida alle marche e ai tubetti</a> in commercio: come leggere l\'etichetta, come si distinguono le serie, perché due colori con lo stesso nome possono avere pigmenti diversi',
     'una <a href="./soggetti/">sezione dedicata ai soggetti</a> che si incontrano dipingendo, con un modulo per ogni tema: è pronto il primo, su <a href="./alberi/">alberi, siepi e arbusti</a>, con i passaggi dei video didattici indicati al secondo, e seguiranno cieli e nuvole, fiori, acqua e riflessi, rocce e architetture',
+    'una sezione di <a href="./approfondimenti/">approfondimenti</a>, con una pagina per ogni questione che torna spesso fra chi dipinge: la prima è dedicata al <a href="./approfondimenti/bianco/">bianco nell\'acquerello</a>',
     'il <a href="./eventi/">calendario degli eventi</a>, con locandina, programma e fotografie, e l\'archivio per anno',
     'uno <a href="./opere/">spazio per le opere di non professionisti</a>, dove chi dipinge per passione espone i propri acquerelli in una pagina tutta sua e racconta il percorso fatto',
     "un <a href=\"#assistente-ai\">assistente basato sull'intelligenza artificiale</a> per le domande sulla tecnica, "
@@ -798,6 +865,11 @@ def icona_scheda(slug: str) -> str:
                 '<g clip-path="url(#cp-sog)"><rect width="64" height="64" fill="#cfe0ee"/><ellipse cx="24" cy="21" rx="11" ry="5" fill="#fff" fill-opacity=".9"/>'
                 '<path d="M0 42Q18 26 34 38T64 34V64H0Z" fill="#6f8f5a" fill-opacity=".85"/><rect y="46" width="64" height="18" fill="#7fa3cf" fill-opacity=".8"/>'
                 '<path d="M12 51h22M30 56h20" stroke="#fff" stroke-opacity=".7" stroke-width="2" stroke-linecap="round"/></g></svg>')
+    if slug == "approfondimenti":  # quaderno aperto, con un velo blu e il bianco della carta risparmiato
+        return ('<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 16C24 10 14 10 6 13v38c8-3 18-3 26 3 8-6 18-6 26-3V13c-8-3-18-3-26 3Z" '
+                'fill="#fffdf8" stroke="#263529" stroke-width="2" stroke-linejoin="round"/><path d="M32 16v38" stroke="#263529" stroke-width="2"/>'
+                '<path d="M11 22c6-2 12-2 17 1M11 29c6-2 12-2 17 1M11 36c6-2 12-2 17 1M36 23c5-3 11-3 17-1" stroke="#9c8f7a" stroke-width="1.6" stroke-linecap="round"/>'
+                '<rect x="36" y="30" width="17" height="15" rx="2" fill="#3f6fb0" fill-opacity=".65"/><circle cx="44.5" cy="37.5" r="3.2" fill="#fffdf8"/></svg>')
     if slug == "eventi":  # calendario, figura disegnata
         return ('<svg viewBox="0 0 64 64" aria-hidden="true"><rect x="12" y="14" width="40" height="38" rx="4" fill="#fffdf8" stroke="#263529" stroke-width="2"/>'
                 '<rect x="12" y="14" width="40" height="12" rx="4" fill="#263529"/><rect x="12" y="20" width="40" height="6" fill="#263529"/>'
@@ -882,7 +954,14 @@ def genera_home(sezioni_pronte: list[dict]) -> str:
   <span class="sig">{s['numero']}</span>
   <span class="card-txt"><span class="card-tit">{s['titolo']}</span><span class="card-sub">{s['sottotitolo']}</span></span>{figura}
 </a>""")
-        # gli autori delle Opere sono sottosezioni: una scheda rientrata ciascuno, come i moduli dei Soggetti
+        # le questioni degli Approfondimenti e gli autori delle Opere sono sottosezioni: una scheda rientrata
+        # ciascuno, come i moduli dei Soggetti
+        if s["slug"] == "approfondimenti":
+            for v in sottosezioni_approfondimenti():
+                schede.append(f"""<a class="card modulo" href="./{v['href']}">
+  <span class="sig">{v['numero']}</span>
+  <span class="card-txt"><span class="card-tit">{e(v['titolo'])}</span><span class="card-sub">{e(v['scheda'])}</span></span>
+</a>""")
         if s["slug"] == "opere":
             for v in sottosezioni_opere():
                 schede.append(f"""<a class="card modulo" href="./{v['href']}">

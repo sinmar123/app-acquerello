@@ -11,6 +11,7 @@ const SEZIONI_VALIDE = [
   "Teoria dei colori",
   "Confronto marche",
   "Soggetti (Alberi, Nuvole, Fiori...)",
+  "Approfondimenti",
   "Eventi",
   "Opere"
 ];
@@ -21,6 +22,7 @@ const PAGINE_VALIDE = [
   "/marche/",
   "/soggetti/",
   "/alberi/",
+  "/approfondimenti/",
   "/eventi/",
   "/opere/"
 ];

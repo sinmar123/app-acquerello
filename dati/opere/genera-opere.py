@@ -11,7 +11,7 @@ autori insieme alla cartella immagini/. Le foto si preparano con
 prepara-foto.py.
 
 Ogni autore è una sottosezione: il numero della sezione in sezione.json più
-il suo «ordine», per esempio 6.1. Ogni autore sceglie anche in che ordine
+il suo «ordine», per esempio 7.1. Ogni autore sceglie anche in che ordine
 mostrare le opere («ordine_opere»: dal_piu_recente o dal_primo), e la sua
 pagina lo dichiara. La pagina si apre con la presentazione dell'autore, poi
 la frase sull'ordine e «come_leggere», le sue righe su titoli e date.
@@ -223,7 +223,7 @@ def carica_autori():
         autori.append(autore)
     if not autori:
         errore("nessun autore in autori/")
-    # nell'ordine delle sottosezioni: 6.1, 6.2...
+    # nell'ordine delle sottosezioni: 7.1, 7.2...
     return sorted(autori, key=lambda a: a["ordine"])
 
 
@@ -299,7 +299,8 @@ def piede(sez, prefisso):
         f'<a href="{prefisso}marche/">3. Marche e tubetti</a> · '
         f'<a href="{prefisso}soggetti/">4. Soggetti</a> · '
         f'<a href="{prefisso}alberi/">4.1 Alberi</a> · '
-        f'<a href="{prefisso}eventi/">5. Eventi</a>.</p>'
+        f'<a href="{prefisso}approfondimenti/">5. Approfondimenti</a> · '
+        f'<a href="{prefisso}eventi/">6. Eventi</a>.</p>'
         "</footer>"
     )
 

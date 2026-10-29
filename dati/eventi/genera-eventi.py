@@ -292,7 +292,9 @@ def piede(sez, prof):
         f'<a href="{r}colori/">2. Teoria dei colori</a> · '
         f'<a href="{r}marche/">3. Marche e tubetti</a> · '
         f'<a href="{r}soggetti/">4. Soggetti</a> · '
-        f'<a href="{r}alberi/">4.1 Alberi</a>.</p>'
+        f'<a href="{r}alberi/">4.1 Alberi</a> · '
+        f'<a href="{r}approfondimenti/">5. Approfondimenti</a> · '
+        f'<a href="{r}opere/">7. Opere di non professionisti</a>.</p>'
         "</footer>"
     )
 
