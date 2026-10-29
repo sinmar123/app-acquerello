@@ -2,6 +2,21 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-29 - CC - Nuova sezione 5. Approfondimenti, con la pagina 5.1 Il bianco nell'acquerello
+
+- Richiesta di Sandro del 29/10/2026: una sezione per le questioni che tornano spesso fra chi dipinge, a cominciare dal bianco, partendo dalla ricerca del 27-28/10. Nome, posto e testi proposti in chat e approvati da lui prima di toccare l'app.
+- **Sezione** (`dati/approfondimenti/`): `sezione.json`, un JSON per questione in `temi/` e `genera-approfondimenti.py` (comando `pagina`). L'elenco sta in `/approfondimenti/`, ogni questione in `/approfondimenti/<id>/`; ogni questione è una sottosezione numerata (5.1), anche in home, rientrata sotto la 5.
+- **Pagina 5.1, Il bianco nell'acquerello** (`temi/bianco.json`): sintesi in cinque punti con il rimando ai capitoli, premessa e otto capitoli. Sono: da dove viene la regola; società e concorsi, con la tabella dei bandi; i pigmenti bianchi; le riserve; i pittori; perché la carta sembra più luminosa; la conservazione; in pratica, con le sette proposte del Quaderno e le domande aperte. 69 fonti, tutte verificate nel report v2 della ricerca, che resta fuori dal repository, elencate in fondo a ogni capitolo con il passo originale delle citazioni tradotte. I paragrafi di Ruskin usati (§§ 115, 157-160) sono stati riscontrati il 29/10/2026 sul testo di Project Gutenberg.
+- **Marche**: nessuna nel testo. Per la coprenza dichiarata dei due bianchi e per i tempi del liquido per mascherare le fonti sono pagine di produttori, citate per nome nell'elenco delle fonti, come proposto in chat. Il controllo delle marche di `scripts/genera-sito.py` (`righe_da_controllare`) salta il solo campo `fonti` dei JSON degli Approfondimenti; le chiavi delle fonti non contengono nomi di marca.
+- **Numeri**: Eventi diventa la 6 e Opere la 7, con la sottosezione 7.1, che era 6.1. Aggiornati `SEZIONI`, `dati/opere/sezione.json`, i piè di pagina di Eventi e Opere e il riassunto delle Opere per la chat, che ora prende il numero dai dati. Gli indirizzi delle pagine non cambiano.
+- **Sito**: la sezione entra in `SEZIONI` con le pagine aggiuntive; in home ha una scheda con una figura disegnata, un quaderno aperto con un velo blu e il bianco della carta risparmiato, e la scheda rientrata della 5.1. Nuova voce nel riquadro «in costruzione», descrizione della home allineata. «Approfondimenti» entra nel menu dei suggerimenti e in `SEZIONI_VALIDE` di `functions/api/suggerimento.js`, `/approfondimenti/` nei `PAGINE_VALIDE` delle due funzioni. La funzione nuova `numero_sezione` controlla il numero di Opere e Approfondimenti nei loro `sezione.json`.
+- **Chat**: il prompt riceve la sezione, la sintesi della 5.1 e le sette proposte del capitolo «In pratica».
+- **Documenti**: `README.md`, `AGENTS.md`, `CONTRIBUTING.md` (§ 1 come proporre una questione, § 3 fonti, marche e regole della sezione).
+- Controlli: `python scripts/genera-sito.py` senza errori, compreso il controllo delle marche. Gulpease: Approfondimenti 66, pagina 5.1 69, le altre invariate. Pagine viste in Chrome a 1280 pixel e, dentro un riquadro, a 390: barra, sintesi, capitoli e fonti a posto, la tabella dei bandi va a capo. Collegamenti interni della 5.1 controllati: portano a Marche, Teoria dei colori e Principi, alle ancore che esistono.
+- Prossima azione: via del curatore per l'unione su `main`, che pubblica il sito.
+
+-- CC
+
 ## 2026-10-29 - CC - Marche e tubetti diventa una guida generale
 
 - Richiesta di Sandro del 29/10/2026: la parte su marche e tubetti deve essere generale, non costruita sui sei colori, che restano un esempio. Testi proposti e approvati in chat prima di toccare l'app.

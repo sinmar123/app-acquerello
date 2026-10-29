@@ -20,6 +20,7 @@ const PAGINE_VALIDE = [
   "/marche/",
   "/soggetti/",
   "/alberi/",
+  "/approfondimenti/",
   "/eventi/",
   "/opere/"
 ];
