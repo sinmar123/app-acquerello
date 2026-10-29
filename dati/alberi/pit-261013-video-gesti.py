@@ -461,13 +461,13 @@ def pagina():
         n_mod = len(t.get("modalita", []))
         tot_modalita += n_mod
         indice.append(f'<a href="#{s}">{e(t.get("breve", nome))}</a>')
-        elenco.append(f'<li><a href="#{s}"><b>{e(nome)}</b> <span class="cnt-mod">({n_mod} modalità nei video)</span></a></li>')
+        elenco.append(f'<li><a href="#{s}">{e(nome)}</a> <span class="cnt-mod">({n_mod} modalità)</span></li>')
 
         blocco_colori = ""
         if t.get("colori_studio"):
             blocco_colori += f'<p class="colori studio"><b>🎨 <a href="../principi/#tavolozza-studio" style="color:inherit">Colori in studio</a> (proposta libera):</b> {e(t["colori_studio"])}</p>'
         if t.get("colori_aperto"):
-            blocco_colori += f'<p class="colori aperto"><b>🎒 All\'aperto (coi <a href="#miscele">6 colori proposti</a>):</b> {e(t["colori_aperto"])}</p>'
+            blocco_colori += f'<p class="colori aperto"><b>🎒 All\'aperto (con la <a href="../principi/#tavolozza-plein-air">tavolozza ridotta</a>):</b> {e(t["colori_aperto"])}</p>'
         elif t.get("colori"):
             colori = " · ".join(f'<b>{e(x["m"])}</b> {e(x["ricetta"])}, {e(x["per"])}' for x in t["colori"])
             blocco_colori += f'<p class="colori"><b>Colori:</b> {colori}</p>'
@@ -502,30 +502,41 @@ def pagina():
                        f'{blocco_colori}{pennelli}{esercizio}'
                        f'<div class="modalita-lista">{"".join(schede_mod)}</div>{blocco_coda}</section>')
 
-    esercizi = "".join(f'<li><b>{e(x["titolo"])}.</b> {e(x["testo"])}</li>' for x in a.get("esercizi", []))
-    if a.get("principi"):
-        pr = a["principi"]
-        esercizi = (f'<li><b>{e(pr["titolo"])}.</b> {e(pr["testo"])} <a href="{e(pr["href"])}">{e(pr["link"])}</a> · <a href="../principi/#studio-aperto">In studio e all\'aperto</a> · <a href="../soggetti/">Tutti i soggetti</a>.</li>'
-                    + esercizi)
-    miscele, sei_colori, riquadri = parte_colori(a, e)
+    def con_collegamenti(p):
+        """Un paragrafo della premessa: il testo, con le parole indicate in «link» trasformate in collegamenti."""
+        testo = e(p["testo"])
+        for lk in p.get("link", []):
+            parola = e(lk["parola"])
+            if parola not in testo:
+                raise SystemExit(f"premessa: «{lk['parola']}» non compare nel paragrafo")
+            testo = testo.replace(parola, f'<a href="{e(lk["href"])}">{parola}</a>', 1)
+        return f"<p>{testo}</p>"
+    premessa = "".join(con_collegamenti(p) for p in a["premessa"])
+    sommario = e(a["sommario"].format(modalita=tot_modalita, video=len(video_usati)))
     crediti = "".join(f'<li><a href="https://www.youtube.com/watch?v={e(v)}" target="_blank" rel="noopener">'
                       f'{e(selezione.get(v, {}).get("canale", v))}, «{e(selezione.get(v, {}).get("titolo", ""))}»</a></li>'
                       for v in video_usati)
-    corpo = f"""<header class="testa"><h1>{e(a["titolo"])}</h1>
-<p class="sotto">{e(a["sottotitolo"])}</p></header>
+    corpo = f"""<header class="testa"><h1>{e(a["titolo"])}</h1></header>
 <nav class="salti"><a href="../soggetti/">← Tutti i soggetti</a>{"".join(indice)}</nav>
 <div id="avviso" hidden></div>
 <section class="intro">
-<div class="guida">
-<h3>Come funziona questa sezione</h3>
-<ul class="come">{esercizi}</ul>
+<div class="sommario" id="sommario">
+<h3>Sommario</h3>
+<p>{sommario}</p>
 </div>
-<details class="miscele-box" id="miscele"><summary>All'aperto (en plein air): i 6 colori proposti e le 12 miscele (M1-M12) per dipingere con una scatola leggera</summary>
-<p class="nota-studio-aperto">All'aperto, o per esercitarsi a ricavare tutto da pochi tubetti, si possono usare i 6 colori proposti e le 12 miscele qui sotto, con cui si preparano i verdi, i bruni e i grigi degli esempi. È un punto di partenza: si può ridurre, ampliare o cambiare. Il confronto fra il lavoro in studio e all'aperto è nel capitolo <a href="../principi/#studio-aperto">In studio e all'aperto</a> dei Principi generali.</p>
-{sei_colori}
-{riquadri}
-<table class="mix">{miscele}</table></details>
-<div class="uso-video">
+<div class="indice" id="indice">
+<h3>Indice</h3>
+<ol class="indice-voci">
+<li><a href="#premessa">Premessa</a></li>
+<li><a href="#come-leggere">Come leggere le infografiche e usare i video</a></li>
+<li>I sei esempi di alberi e arbusti ({tot_modalita} modalità nei video)<ol class="alberi">{"".join(elenco)}</ol></li>
+</ol>
+</div>
+<div class="guida" id="premessa">
+<h3>Premessa</h3>
+{premessa}
+</div>
+<div class="uso-video" id="come-leggere">
 <h3>Come leggere le infografiche e usare i video</h3>
 <p class="legenda"><b>Stato della carta nelle fasi dell'infografica:</b> {pill('bagnata')} lucida d'acqua, il colore corre · {pill('umida')} opaca, i bordi si fondono · {pill('asciutta')} il tratto resta netto. <a href="../principi/#carta-umidita">Gli stati della carta, momenti di mezzo compresi, nei Principi generali</a>.</p>
 <ul class="come">
@@ -535,8 +546,6 @@ def pagina():
 <li>Le righe <b>Dal video, in sintesi</b> riassumono in italiano quello che l'autore o l'autrice dice in quel passaggio: sono sintesi preparate con l'aiuto dell'intelligenza artificiale, non trascrizioni, e la fonte resta il video.</li>
 </ul>
 </div>
-<h3>I sei esempi di alberi e arbusti ({tot_modalita} modalità nei video)</h3>
-<ol class="alberi">{"".join(elenco)}</ol>
 </section>
 {"".join(sezioni)}
 <footer><h2>I video</h2><p>I video restano dei loro autori: la pagina li mostra col lettore di YouTube, senza copiarli. Grazie a:</p>
@@ -553,56 +562,6 @@ def pagina():
     print("pagina:", PAGINA, f"{os.path.getsize(PAGINA) / 1e6:.2f} MB")
     if mancano:
         print("SEGMENTI NON ANCORA DECISI (minuto della scheda + 20 s):", " ".join(mancano))
-
-def parte_colori(a, e):
-    """Tavolozza, riquadri «Come leggere le dosi» e «Le tre prove», tabella delle 12 miscele con il collegamento
-    al mescolatore della sezione Teoria dei colori (../colori/?mix=id:parti,...#mescola). GBOT-app-acquerello, 18/10/2026."""
-    tav = a["tavolozza"]
-    # coerenza con la tavolozza della sezione Teoria dei colori, se c'è nel repository
-    p_col = os.path.join(QUI, "..", "colori", "tavolozza.json")
-    if os.path.exists(p_col):
-        rif = {c["id"]: c for c in json.load(open(p_col, encoding="utf-8"))["colori"]}
-        for c in tav:
-            r = rif.get(c["id"])
-            if not r or (r["nome"], r["pigmento"], r.get("trasparenza_tubetto")) != (c["nome"], c["pigmento"], c.get("trasparenza_tubetto")):
-                raise SystemExit(f"tavolozza: {c['id']} diverso da dati/colori/tavolozza.json")
-    nomi = {c["id"]: c["nome"] for c in tav}
-    def riga_tav(c):
-        sigla = f' ({e(c["sigla"])})' if c.get("sigla") else ""
-        tras = f'; nel tubetto proposto: {e(c["trasparenza_tubetto"])}' if c.get("trasparenza_tubetto") else ""
-        nota = f' ({e(c["nota"])})' if c.get("nota") else ""
-        return f'<li><b>{e(c["nome"])}</b>{sigla}: pigmento <b>{e(c["pigmento"])}</b>{tras}{nota}</li>'
-    righe_tav = "".join(riga_tav(c) for c in tav)
-    sei_colori = (f'<div class="sei-colori"><b>I 6 colori proposti</b> (nome comune e pigmento):'
-                  f'<ul class="tav">{righe_tav}</ul>'
-                  f'<p class="rimando">Teoria, schede dei colori e calcolatore di miscele: '
-                  f'<a href="../colori/">Teoria dei colori</a> · <a href="../colori/#calcolatore">calcolatore</a>. '
-                  f'I tubetti corrispondenti, marca per marca: <a href="../marche/">Marche e tubetti</a>.</p></div>')
-
-    def riquadro(r, classe):
-        voci = "".join(f'<li><b>{e(k)}</b>: {e(v)}</li>' for k, v in r["voci"])
-        rim = r.get("rimando")
-        rimando = (f'<p class="rimando">{e(rim["testo"])} <a href="{e(rim["href"])}">{e(rim["link"])}</a>.</p>'
-                   if rim else "")
-        return (f'<div class="{classe}"><h4>{e(r["titolo"])}</h4><p>{e(r["testo"])}</p><ul>{voci}</ul>'
-                f'<p>{e(r["chiusura"])}</p>{rimando}</div>')
-    riquadri = riquadro(a["dosi"], "dosi") + riquadro(a["prove"], "prove") + f'<p class="nota-calc">{e(a["calcolatore_nota"])}</p>'
-
-    def link(mix, testo):
-        q = ",".join(f"{i}:{n}" for i, n in mix)
-        return f'<a class="calc" href="../colori/?mix={e(q)}#mescola">{e(testo)}</a>'
-    righe = []
-    for x in a["miscele"]:
-        if x.get("mix"):
-            lk = link(x["mix"], "prova nel calcolatore")
-        else:
-            lk = " · ".join(link([m], f"{nomi[m[0]].lower()} nel calcolatore") for m in x.get("mix_separati", []))
-        nota = f' {e(x["nota"])}' if x.get("nota") else ""
-        righe.append(f'<tr><td class="m">{e(x["m"])}</td><td><b>{e(x["nome"])}</b><br>{e(x["ricetta"])}'
-                     f'<br><span class="cons">Consistenza: <b>{e(x["consistenza"])}</b></span>'
-                     f'<br><span class="pigm">Pigmenti: {e(x["pigmenti"])}.{nota}</span><br>{lk}</td></tr>')
-    return "".join(righe), sei_colori, riquadri
-
 
 CSS = """
 * { box-sizing: border-box; }
@@ -621,6 +580,12 @@ nav.salti a { flex: none; text-decoration: none; color: #2c4f3a; border: 1px sol
 #avviso { background: #fff3cd; border: 1px solid #e0c36a; border-radius: 8px; padding: 10px 12px; margin: 10px 0; }
 .guida { background: #eef4ef; border: 1px solid #cadbce; border-radius: 8px; padding: 10px 12px; margin: 12px 0; }
 .guida h3 { margin-top: 0; }
+.guida p { margin: 6px 0; }
+.sommario, .indice { background: #fffdf8; border: 1px solid #dfd5c3; border-radius: 8px; padding: 10px 12px; margin: 12px 0; }
+.sommario { border-left: 4px solid #3d6b4f; }
+.sommario h3, .indice h3 { margin-top: 0; }
+.sommario p { margin: 4px 0; }
+ol.indice-voci { padding-left: 20px; margin: 4px 0 0; } ol.indice-voci > li { margin-bottom: 4px; } ol.indice-voci a { color: #2c6a4a; }
 .uso-video { background: #f6f4ee; border: 1px solid #e3e0d8; border-radius: 8px; padding: 10px 12px; margin: 12px 0; }
 .uso-video h3 { margin-top: 0; }
 .legenda { margin: 0 0 8px; font-size: .92em; }

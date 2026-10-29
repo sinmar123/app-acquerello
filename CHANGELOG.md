@@ -2,6 +2,32 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-29 - CC - Prima pagina riscritta, sei colori solo nel capitolo dell'aperto, Alberi con sommario e indice
+
+- Richieste di Sandro del 28 e 29/10/2026. I testi sono stati proposti e approvati in chat prima di toccare l'app, come lui ha chiesto.
+- **Prima pagina** (`scripts/genera-sito.py`):
+  - sottotitolo «Appunti di studio dell'acquerello, scritti da appassionati per appassionati»;
+  - premessa in due capoversi: il sito è fatto da dilettanti, «nel senso originario della parola: persone che si dilettano a dipingere ad acquerello e non ne fanno un mestiere»; l'ultima frase, sui professionisti benvenuti, resta quella di Sandro del 25/10;
+  - nota di metodo riscritta senza paroloni: materiale vastissimo, difficoltà di ritrovarlo col pennello in mano, aiuto dell'intelligenza artificiale per leggere, confrontare e ordinare le fonti, fonte per ogni affermazione delle guide, ultima parola alla prova sul foglio;
+  - riquadro «in costruzione» con sette voci: entrano la guida a Marche e tubetti, la sezione dei Soggetti come raccolta dei temi che si incontrano dipingendo e lo spazio per le opere di non professionisti, senza nomi; l'invito alla casella dei suggerimenti compare una volta sola;
+  - descrizione per i motori di ricerca allineata.
+- **Sei colori**, per Sandro marginali: si trattano come parte del lavoro all'aperto, dove conviene usare pochi colori.
+  - Principi, capitolo 8: il paragrafo diventa «All'aperto: lavorare con pochi colori», con il testo approvato; l'apertura del capitolo, la dotazione e il prontuario parlano di «tavolozza ridotta». È l'unico punto del sito che presenta i sei colori.
+  - Teoria dei colori: esce il capitolo 4 «Sei colori proposti» con le schede dei colori. Il calcolatore, ora capitolo 4, si apre con una nota: lavora con la tavolozza ridotta del capitolo 8, e nella scelta di un tubetto conta il pigmento. Le tre fonti del capitolo tolto restano citate nella nota.
+  - Tolti dalle schede in home (Principi, Teoria dei colori, Marche), dall'introduzione dei Principi, dalla descrizione del modulo S1 nei Soggetti e dal messaggio del calcolatore sui colori fuori portata. In Marche la legenda rimanda al capitolo 8 invece che al capitolo tolto.
+  - Chat: la tavolozza ridotta serve quando conviene lavorare con pochi colori e non è la tavolozza obbligata; le miscele M1-M12 si propongono quando la domanda riguarda quel modo di lavorare; la domanda d'esempio non nomina più i sei colori.
+- **Alberi** (`pit-261013-video-gesti.py`, `apertura` del JSON): la pagina si apre con il sommario, i conteggi calcolati (25 modalità da 24 video), l'indice (premessa, come leggere infografiche e video, i sei esempi con le modalità di ciascuno) e la premessa in quattro capoversi, al posto di «Come funziona questa sezione». Escono il riquadro dei sei colori con miscele e dosi, che stanno nel capitolo 8 dei Principi, e l'elenco degli esempi, che passa nell'indice. Le proposte «All'aperto» delle schede rimandano alla tavolozza ridotta. Nei Principi la fonte «alberi-miscele», che puntava al riquadro tolto, punta alla pagina e ai dati della sezione.
+- **Marche e tubetti** resta com'è per ora: la versione generale è la parte successiva, da proporre in chat.
+- **Documenti**: `README.md`, `AGENTS.md`.
+- Controlli:
+  - `python scripts/genera-sito.py` senza errori. Gulpease: Principi 68, Colori 71, Marche 58, Soggetti 66, Alberi 73, Eventi 95, scheda Sestri Levante 80, Opere 64, pagina 6.1 70, Informativa 64.
+  - Collegamenti interni della home e di Principi, Teoria dei colori, Marche, Soggetti, Alberi e Opere controllati con uno script: nessun collegamento rotto, a parte due falsi allarmi (la favicon con l'indirizzo assoluto e un pezzo di codice della pagina Alberi).
+  - «sei colori proposti» resta solo nella pagina Marche, che cambia con la parte successiva.
+  - Home, Alberi, Principi e Teoria dei colori viste in Chrome.
+- Prossima azione: via del curatore per l'unione su `main`, che pubblica il sito; poi la proposta per Marche e tubetti.
+
+-- CC
+
 ## 2026-10-28 - CC - Opere: introduzione sviluppata e ordine delle opere scelto da ogni autore
 
 - Richiesta di Sandro del 28/10/2026, dopo la pubblicazione della #50: l'introduzione non lo convinceva, era troppo sintetica; doveva dire meglio che gli autori sono dilettanti e non professionisti. L'ordine delle opere lo decide ogni autore: lui ha voluto il cronologico inverso, e va scritto nella sua pagina.

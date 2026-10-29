@@ -78,7 +78,7 @@
   function giudizio(d) {
     if (d <= 0.03) return '<span class="vicino si">molto vicino</span>';
     if (d <= 0.07) return '<span class="vicino quasi">abbastanza vicino</span>';
-    return '<span class="vicino no">lontano: forse fuori dalla portata dei sei colori proposti</span>';
+    return '<span class="vicino no">lontano: forse fuori dalla portata dei sei colori della tavolozza ridotta</span>';
   }
   function cerca() {
     var obj = $('tobj').value, dil = $('tdil').checked;

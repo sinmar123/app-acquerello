@@ -33,7 +33,7 @@ SEZIONI = [
         "breve": "Principi",
         "nome_form": "Principi",
         "titolo": "Principi generali: acqua, colore e carta",
-        "sottotitolo": "Le tre consistenze della miscela, gli stati della carta e il rapporto fra pennello e carta, da conoscere prima degli esercizi; il lavoro in studio e all'aperto, con i sei colori proposti e le 12 miscele",
+        "sottotitolo": "Le tre consistenze della miscela, gli stati della carta e il rapporto fra pennello e carta, da conoscere prima degli esercizi; il lavoro in studio e all'aperto",
         "script_genera": DATI_DIR / "principi" / "genera-principi.py",
         "html_generato": DATI_DIR / "principi" / "principi.html",
     },
@@ -43,7 +43,7 @@ SEZIONI = [
         "breve": "Teoria dei colori",
         "nome_form": "Teoria dei colori",
         "titolo": "Teoria dei colori",
-        "sottotitolo": "Munsell, luce e pigmento, velature, i sei colori proposti e un calcolatore di miscele",
+        "sottotitolo": "Munsell, luce e pigmento, velature e un calcolatore di miscele",
         "script_genera": DATI_DIR / "colori" / "genera-teoria-colori.py",
         "html_generato": DATI_DIR / "colori" / "teoria-colori.html",
     },
@@ -53,7 +53,7 @@ SEZIONI = [
         "breve": "Marche e tubetti",
         "nome_form": "Confronto marche",
         "titolo": "Marche e tubetti",
-        "sottotitolo": "I sei colori proposti nelle serie in commercio: nome del tubetto, numero, pigmento e trasparenza",
+        "sottotitolo": "I colori in commercio: come leggere l'etichetta, i pigmenti e le serie a confronto",
         "script_genera": DATI_DIR / "marche" / "genera-marche.py",
         "html_generato": DATI_DIR / "marche" / "marche.html",
     },
@@ -105,9 +105,9 @@ SEZIONI = [
 ]
 
 DESCRIZIONE_HOME = (
-    "Questo sito è sviluppato da non professionisti e si rivolge a chi condivide la stessa passione. Appunti di studio dell'acquerello: le tre consistenze e gli stati della carta, "
-    "la teoria dei colori con un calcolatore di miscele, i tubetti marca per marca, gli esercizi sugli alberi tratti dai video "
-    "e il calendario degli eventi."
+    "Appunti di studio dell'acquerello, scritti da dilettanti per altri appassionati: principi su acqua, colore e carta, "
+    "teoria dei colori con un calcolatore di miscele, marche e tubetti, soggetti con gli esercizi tratti dai video, "
+    "eventi e opere di non professionisti."
 )
 
 OPZIONI_SEZIONE = [
@@ -342,10 +342,10 @@ I momenti intermedi, riconoscibili dal lucido dell'acqua:
 La regola di fondo:
 - {regola}
 
-Sei colori proposti come punto di partenza: si possono ridurre, ampliare o cambiare (i colori del calcolatore sono provvisori, stimati a occhio):
+La tavolozza ridotta per l'aperto, nel capitolo 8 dei Principi ({SITO_URL}/principi/#tavolozza-plein-air): sei colori per quando conviene lavorare con pochi tubetti, all'aperto o in viaggio; si possono ridurre, ampliare o cambiare (i colori del calcolatore sono provvisori, stimati a occhio):
 {colori}
 
-Le 12 miscele dei sei colori proposti, M1-M12 ({SITO_URL}/principi/#miscele). {dosi['testo']} Le dosi: {convenzione}.
+Le 12 miscele della tavolozza ridotta, M1-M12 ({SITO_URL}/principi/#miscele). {dosi['testo']} Le dosi: {convenzione}.
 {chr(10).join(miscele)}
 
 Il modulo S1, alberi, siepi e arbusti ({SITO_URL}/alberi/), con le modalità tratte dai video:
@@ -361,8 +361,8 @@ Come rispondere:
 - In italiano, col registro di un buon manuale tecnico: termini esatti, frasi chiare, niente parlato e niente paroloni. Di norma fra 120 e 220 parole.
 - Niente trattino lungo: per gli incisi si usano le virgole, i due punti o le parentesi.
 - Indica la sezione del Quaderno che tratta l'argomento, con il suo indirizzo.
-- I sei colori del Quaderno sono una proposta di partenza, non una tavolozza fissa: si possono ridurre, ampliare o cambiare.
-- Se una miscela M1-M12 ottiene il colore richiesto, indicala con sigla e nome prima di eventuali varianti.
+- La tavolozza ridotta di sei colori serve quando conviene lavorare con pochi colori, per esempio all'aperto: non è la tavolozza obbligata del Quaderno, e in studio si può usare quella degli autori o la propria.
+- Se la domanda riguarda il lavoro con pochi colori e una miscela M1-M12 ottiene il colore richiesto, indicala con sigla e nome prima di eventuali varianti.
 - Non inventare fonti, autori, video, citazioni, sigle di pigmenti o numeri. Se il Quaderno non tratta un punto, dillo, e suggerisci una prova su carta.
 - Nella sezione Eventi non inventare locandine, programmi, nomi o didascalie. Se manca la locandina, resta «locandina da aggiungere».
 - Ricorda che l'esito va sempre verificato sulla carta: le risposte sono una guida, non una regola.
@@ -444,7 +444,7 @@ def blocco_chat_e_suggerimenti(sezione_predefinita: str, pagina_path: str) -> st
     <div class="chat-esempi">
       <span style="font-size:.79rem;color:#6b5e4c;align-self:center;margin-right:2px">Esempi di domande:</span>
       <button type="button" class="chat-chip">Perché si formano i cavolfiori quando ripasso un velo che sta asciugando?</button>
-      <button type="button" class="chat-chip">Come preparo un verde scuro per le conifere in ombra con i sei colori proposti?</button>
+      <button type="button" class="chat-chip">Come preparo un verde scuro per le conifere in ombra?</button>
       <button type="button" class="chat-chip">Quando si sparge il sale sul velo per ottenere l'effetto brina?</button>
     </div>
     <div id="chat-messaggi" class="chat-messaggi" aria-live="polite"></div>
@@ -760,14 +760,16 @@ def inietta_elementi_comuni(html_pagina: str, sezione: dict, pagina_path: str, p
     return html_pagina
 
 
-# Voci del riquadro «in costruzione» della home, testo approvato dal curatore il 21/10/2026: ogni voce porta
-# alla pagina o allo strumento che nomina. La voce della casella, prima in questo elenco, dal 24/10/2026
+# Voci del riquadro «in costruzione» della home, testo approvato dal curatore il 29/10/2026 (prima versione del
+# 21/10/2026): ogni voce porta alla pagina o allo strumento che nomina. L'invito alla casella dei suggerimenti
 # è la frase che chiude il riquadro, così non compare due volte.
 IN_COSTRUZIONE = [
-    'i <a href="./principi/">principi generali su acqua, colore e carta</a>, dalle tre consistenze della miscela agli stati della carta',
-    'un <a href="./alberi/">primo modulo di esercizi su alberi, siepi e arbusti</a>, con i passaggi dei video didattici indicati al secondo',
-    'un <a href="./eventi/">calendario degli eventi</a>, con locandina, programma e fotografie, e l\'archivio per anno',
-    'un <a href="./colori/#calcolatore">calcolatore</a> che propone, come stima, la miscela più vicina a un colore dato',
+    'i <a href="./principi/">principi generali su acqua, colore e carta</a>, dalle tre consistenze della miscela agli stati della carta, fino al lavoro in studio e all\'aperto',
+    'la <a href="./colori/">teoria dei colori</a>, con un <a href="./colori/#calcolatore">calcolatore</a> che propone, come stima, la miscela più vicina a un colore dato',
+    'una <a href="./marche/">guida alle marche e ai tubetti</a> in commercio: come leggere l\'etichetta, come si distinguono le serie, perché due colori con lo stesso nome possono avere pigmenti diversi',
+    'una <a href="./soggetti/">sezione dedicata ai soggetti</a> che si incontrano dipingendo, con un modulo per ogni tema: è pronto il primo, su <a href="./alberi/">alberi, siepi e arbusti</a>, con i passaggi dei video didattici indicati al secondo, e seguiranno cieli e nuvole, fiori, acqua e riflessi, rocce e architetture',
+    'il <a href="./eventi/">calendario degli eventi</a>, con locandina, programma e fotografie, e l\'archivio per anno',
+    'uno <a href="./opere/">spazio per le opere di non professionisti</a>, dove chi dipinge per passione espone i propri acquerelli in una pagina tutta sua e racconta il percorso fatto',
     "un <a href=\"#assistente-ai\">assistente basato sull'intelligenza artificiale</a> per le domande sulla tecnica, "
     "con un limite di 5 domande a settimana",
 ]
@@ -903,20 +905,20 @@ def genera_home(sezioni_pronte: list[dict]) -> str:
 {barra_quaderno("")}<header class="testa">
   <div class="testa-in">
     <h1>Quaderno di acquerello</h1>
-    <p>Appunti di studio dell'acquerello: acqua e carta, colori e tubetti, soggetti, esercizi tratti dai video ed eventi</p>
-    <p class="nota">Questo sito è sviluppato da non professionisti e si rivolge a chi condivide la stessa passione. Raccoglie ciò che si impara strada facendo, con i limiti di chi non è un maestro, ed è aperto ai contributi di tutti gli appassionati. Anche i professionisti che vi trovassero qualcosa di utile, o volessero aiutarci a migliorarlo, saranno i benvenuti.</p>
+    <p>Appunti di studio dell'acquerello, scritti da appassionati per appassionati</p>
+    <p class="nota">Questo sito è fatto da dilettanti, nel senso originario della parola: persone che si dilettano a dipingere ad acquerello e non ne fanno un mestiere. Raccoglie ciò che impariamo strada facendo, fra i corsi, le prove al tavolo e le uscite all'aperto, con i limiti di chi non è un maestro e la voglia di capire perché un foglio riesce e un altro no.</p>
+    <p class="nota">È scritto per chi condivide la stessa passione ed è aperto ai contributi di tutti gli appassionati. Anche i professionisti che vi trovassero qualcosa di utile, o volessero aiutarci a migliorarlo, saranno i benvenuti.</p>
   </div>
 </header>
 <main>
   <details class="cf-origine">
     <summary>Nota di metodo</summary>
-    <p>Il sito è in costruzione. Chi oggi apprende una disciplina pratica dispone di una documentazione vastissima, distribuita tra manuali, schede tecniche e centinaia di ore di dimostrazioni filmate; la vera difficoltà sta nel ricondurre una materia tanto dispersa a un criterio ordinato e consultabile mentre si lavora. Gli strumenti di intelligenza artificiale permettono di compiere a monte questo lavoro di spoglio, confronto e classificazione, così da aiutare a esercitarsi con più consapevolezza. Il sito nasce dall'applicazione di tale approccio allo studio dell'acquerello: ordina il comportamento di acqua, carta e pigmenti, indica al secondo le sequenze esecutive nei video didattici e affianca al tavolo da lavoro strumenti di riscontro, dal calcolatore colorimetrico all'assistente tecnico integrato nelle pagine.</p>
+    <p>Chi impara l'acquerello oggi ha a disposizione moltissimo materiale: manuali, schede dei produttori, ore e ore di dimostrazioni filmate. La difficoltà è ritrovare il punto giusto nel momento in cui serve, con il pennello in mano. Per questo, nel preparare il Quaderno, ci siamo fatti aiutare dall'intelligenza artificiale a leggere, confrontare e ordinare le fonti. Ne sono nati i principi su acqua, colore e carta, gli esercizi con i passaggi dei video indicati al secondo, il calcolatore delle miscele e l'assistente che risponde alle domande sulla tecnica. Nelle guide ogni affermazione rimanda alla sua fonte, e ciò che è stimato resta dichiarato come stima; l'ultima parola, però, spetta sempre alla prova sul foglio.</p>
   </details>
   <section class="cf-sviluppo" aria-label="Stato del Quaderno">
-    <p><strong>Il Quaderno è in costruzione.</strong> Le sezioni esistenti vengono ampliate progressivamente e altre se ne
-    aggiungeranno. Nella versione attuale il Quaderno mette a disposizione:</p>
+    <p><strong>Il Quaderno è in costruzione:</strong> le sezioni crescono un poco alla volta e altre se ne aggiungeranno. Oggi vi si trovano:</p>
     <ul>{voci}</ul>
-    <p>Chiunque può proporre correzioni, integrazioni e video dalla <a href="#suggerimenti">casella dei suggerimenti</a>: il Quaderno è aperto ai contributi di tutti gli appassionati.</p>
+    <p>Correzioni, integrazioni, video e le proprie opere si propongono dalla <a href="#suggerimenti">casella dei suggerimenti</a>, in fondo a ogni pagina.</p>
   </section>
 
   <h2 class="sezioni-tit">Le sezioni</h2>
