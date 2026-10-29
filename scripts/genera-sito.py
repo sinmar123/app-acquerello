@@ -53,7 +53,7 @@ SEZIONI = [
         "breve": "Marche e tubetti",
         "nome_form": "Confronto marche",
         "titolo": "Marche e tubetti",
-        "sottotitolo": "I colori in commercio: come leggere l'etichetta, i pigmenti e le serie a confronto",
+        "sottotitolo": "Tubetti e pastiglie, serie per chi comincia e per artisti, come leggere l'etichetta e perché lo stesso nome può nascondere pigmenti diversi",
         "script_genera": DATI_DIR / "marche" / "genera-marche.py",
         "html_generato": DATI_DIR / "marche" / "marche.html",
     },
