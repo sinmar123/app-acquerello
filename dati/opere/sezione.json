@@ -4,12 +4,16 @@
   "titolo": "Opere di non professionisti",
   "sottotitolo": "Acquerelli di chi dipinge per passione, raccolti autore per autore",
   "introduzione": [
-    "Questa sezione raccoglie gli acquerelli di chi dipinge per passione. Ogni autore ha la sua pagina, con i fogli in ordine di tempo, dal più recente al primo, così da poterne seguire il percorso.",
-    "Chi desidera esporre qui i propri acquerelli può proporlo dalla casella dei suggerimenti, in fondo alla pagina."
+    "Le opere raccolte in questa sezione sono di dilettanti, nel senso originario della parola: persone che si dilettano a dipingere. Nessuno di noi vive di pittura. L'acquerello è una passione coltivata nel tempo libero, fra un corso, un'uscita all'aperto e qualche prova fatta a casa.",
+    "Mostriamo questi fogli per quello che sono: le tappe di un percorso, con le riuscite e gli errori di chi sta imparando. Accanto ai principi e alle tecniche raccolti nelle altre sezioni del Quaderno, fanno vedere che cosa succede quando le regole passano dalla teoria al foglio.",
+    "Ogni autore ha una sottosezione tutta sua e decide come presentarsi: in che ordine mettere i fogli, che cosa raccontare di sé, quali notizie accompagnano ogni acquerello e, se lo desidera, un breve parere scritto da un'intelligenza artificiale. Le opere restano di chi le ha dipinte.",
+    "La sezione è aperta a tutti gli appassionati che non dipingono per mestiere. Chi vuole esporre qui i propri acquerelli può proporlo dalla casella dei suggerimenti, in fondo alla pagina."
   ],
-  "autore_intro": [
-    "Come in tutta la sezione dedicata alle opere di non professionisti, gli acquerelli vanno dal più recente al primo. Ciascuno ha per titolo il giorno in cui è stato dipinto, annotato a mano sul margine del foglio insieme al numero progressivo. Dove l'annotazione manca, o la foto non la mostra, vale la data della fotografia, segnalata sotto il titolo. Cliccando su un'immagine la si vede a grandezza piena."
-  ],
+  "frasi_ordine": {
+    "dal_piu_recente": "Ha scelto di presentare i suoi acquerelli dal più recente al primo, così da poterne seguire il percorso a ritroso.",
+    "dal_primo": "Ha scelto di presentare i suoi acquerelli dal primo al più recente, così da poterne seguire il percorso."
+  },
+  "clic": "Cliccando su un'immagine la si vede a grandezza piena.",
   "nota_pareri": "Sotto ogni acquerello, il «Parere dell'IA» è un breve commento scritto il {data} da {modello}, un modello di intelligenza artificiale di {di}, guardando la fotografia: che cosa funziona e che cosa si potrebbe migliorare. Va preso come un parere, e la foto può falsare i colori.",
   "data_foto": "data della fotografia",
   "diritti": "Gli acquerelli appartengono ai loro autori e sono esclusi dalla licenza CC BY 4.0 del Quaderno."

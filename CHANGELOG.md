@@ -2,6 +2,19 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-28 - CC - Opere: introduzione sviluppata e ordine delle opere scelto da ogni autore
+
+- Richiesta di Sandro del 28/10/2026, dopo la pubblicazione della #50: l'introduzione non lo convinceva, era troppo sintetica; doveva dire meglio che gli autori sono dilettanti e non professionisti. L'ordine delle opere lo decide ogni autore: lui ha voluto il cronologico inverso, e va scritto nella sua pagina.
+- **Introduzione della sezione** (`sezione.json`), quattro capoversi al posto di due frasi. Chi sono gli autori: «dilettanti, nel senso originario della parola: persone che si dilettano a dipingere», che non vivono di pittura. Perché si mostrano i fogli: le tappe di un percorso, con le riuscite e gli errori di chi sta imparando, accanto ai principi e alle tecniche delle altre sezioni; il 29/10/2026, su richiesta di Sandro, esce il paragone col museo e il capoverso si apre con «Mostriamo questi fogli per quello che sono», testo approvato da lui in chat. Come funziona: ogni autore ha una sottosezione e decide come presentarsi, ordine dei fogli, notizie, parere dell'IA se lo desidera. Infine l'invito a proporre le proprie opere dalla casella dei suggerimenti. Il titolo resta «Opere di non professionisti», come la nota in home.
+- **Ordine scelto dall'autore**: campo nuovo `ordine_opere` (`dal_piu_recente` o `dal_primo`) nel JSON di ogni autore; il generatore ordina di conseguenza e la pagina lo dichiara con una frase di `sezione.json` («Ha scelto di presentare i suoi acquerelli dal più recente al primo, così da poterne seguire il percorso a ritroso.»). Per la 6.1, `dal_piu_recente`. Il generatore si ferma se il valore non è uno dei due.
+- **Pagina 6.1** (`autori/alessandro-sanvitale.json`): la presentazione aggiunge che la pagina raccoglie una scelta dei suoi acquerelli, primo foglio compreso; le righe su titoli, date e numeri diventano sue (`come_leggere`), perché un altro autore potrebbe intitolare le opere in altro modo.
+- **Chat**: il riassunto dice che gli autori sono dilettanti, che ognuno sceglie ordine e presentazione, e che nella 6.1 ci sono i pareri dell'IA.
+- **Documenti**: `README.md`, `AGENTS.md`, `CONTRIBUTING.md` § 3.
+- Controlli: `python scripts/genera-sito.py` senza errori; Gulpease Opere 65, pagina 6.1 70, le altre invariate. Le due pagine viste in Chrome.
+- Prossima azione: via del curatore per l'unione su `main`, che pubblica il sito.
+
+-- CC
+
 ## 2026-10-28 - CC - Opere: un parere dell'IA sotto ogni acquerello della 6.1, scritto da Claude Opus 5.5
 
 - Idea di Sandro del 28/10/2026: far leggere gli acquerelli a un'intelligenza artificiale e mettere sotto ciascuno un breve commento su che cosa va e che cosa non va, precisando che è di Claude Opus 5.5. Il tono l'ha approvato su due prove, il primo e l'ultimo acquerello.
