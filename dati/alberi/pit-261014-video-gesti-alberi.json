@@ -1,27 +1,23 @@
 {
  "data": "2026-10-21",
- "nota": "Sezione Alberi ad acquerello: 6 esempi tipici di alberi e arbusti (sganciati da qualsiasi paesaggio fisso o specchio d'acqua), sviluppati attraverso 25 modalità video con un'infografica SVG in 3 fasi per ciascuna modalità e proposta colori doppia (libera in studio, 6 colori proposti all'aperto).",
+ "nota": "Sezione Alberi ad acquerello: 6 esempi tipici di alberi e arbusti (sganciati da qualsiasi paesaggio fisso o specchio d'acqua), sviluppati attraverso 25 modalità video con un'infografica SVG in 3 fasi per ciascuna modalità e proposta colori doppia (libera in studio, tavolozza ridotta all'aperto, descritta nel capitolo 8 dei Principi). Dal 29/10/2026 la pagina si apre con sommario, indice e premessa.",
  "apertura": {
   "titolo": "S1 · Alberi ad acquerello: esempi, modalità e gesti nei video",
-  "sottotitolo": "Primo modulo dei Soggetti: sei esempi di alberi, siepi e arbusti, ciascuno sviluppato in più modalità tratte dai video. Ogni esempio ha un'infografica in tre fasi per ciascuna modalità e proposte di colore per lo studio e per l'aperto.",
-  "principi": {
-   "titolo": "Prima degli esercizi",
-   "testo": "Le tre consistenze tè, latte e miele, gli stati della carta e il rapporto fra pennello e carta sono trattati nei",
-   "link": "Principi generali",
-   "href": "../principi/"
-  },
-  "esercizi": [
+  "sommario": "Il primo modulo dei Soggetti è dedicato ad alberi, siepi e arbusti. Raccoglie sei esempi, dagli abeti in gruppo ai rami brinati in primo piano, sviluppati in {modalita} modalità tratte da {video} video didattici. Per ogni modalità ci sono una scheda con i colori e i pennelli usati dall'autore, un'infografica in tre fasi e il passaggio del video indicato al secondo.",
+  "premessa": [
    {
-    "titolo": "Sei esempi di partenza",
-    "testo": "I sei soggetti raccolti qui sotto cominciano con abeti e conifere in gruppo, conifere alte e rade contro il cielo, chiome tonde d'autunno. Seguono siepi e cespugli nel paesaggio, alberi invernali con fusti chiari e brina, rami sottili e foglie brinate in primo piano. Sono soltanto alcuni esempi, rappresentativi per portamento, distanza e stagione, e formano un punto di partenza concreto al quale se ne possono affiancare molti altri."
+    "testo": "Prima degli esercizi conviene conoscere le tre consistenze della miscela, gli stati della carta e il rapporto fra pennello e carta, trattati nei Principi generali.",
+    "link": [{"parola": "Principi generali", "href": "../principi/"}]
    },
    {
-    "titolo": "Per ogni esempio: più modalità tratte dai video, con un'infografica per ciascuna",
-    "testo": "Nell'acquerello non esiste una ricetta unica per dipingere un albero. Sotto ciascuno dei sei esempi sono raccolte diverse modalità possibili per svilupparlo, ciascuna tratta da uno o più video (25 modalità in tutto, da 24 video). Ogni scheda riassume che cosa propone l'autore e quali colori e pennelli usa. La scheda mostra poi un'infografica in 3 fasi costruita su quella modalità, e il lettore integrato mostra il passaggio del video."
+    "testo": "I sei esempi vanno dagli abeti e dalle conifere in gruppo alle conifere alte e rade contro il cielo e alle chiome tonde d'autunno; seguono siepi e cespugli nel paesaggio, alberi invernali con fusti chiari e brina, rami sottili e foglie brinate in primo piano. Sono scelti per portamento, distanza e stagione, e sono un punto di partenza: se ne possono aggiungere molti altri."
    },
    {
-    "titolo": "Colori: tavolozza libera in studio, 6 colori proposti all'aperto",
-    "testo": "In studio lo spazio disponibile consente una tavolozza ampia e libera. Si possono seguire direttamente i colori proposti dagli autori nei vari video, oppure usare i tubetti preferiti, come verdi pronti (verde vescica, verde oliva o verde oro) e terra di Siena naturale e bruciata. Altre scelte possibili sono ocra gialla, rosso inglese, turchese di cobalto, blu ftalo, blu cobalto, blu di Prussia, indaco, grigio di Payne e seppia. All'aperto (en plein air) o in viaggio conviene invece portare pochissimi colori. Il riquadro a scomparsa qui sotto riporta i 6 colori proposti e le 12 miscele (M1-M12): un punto di partenza, da ridurre, ampliare o cambiare."
+    "testo": "Nell'acquerello non esiste una ricetta unica per dipingere un albero. Per questo ogni esempio raccoglie più modalità, ciascuna tratta da uno o più video: la scheda riassume che cosa propone l'autore e quali colori e pennelli usa, l'infografica in tre fasi ne mostra i passaggi, e il lettore apre il video al punto giusto."
+   },
+   {
+    "testo": "Per i colori, in studio si può seguire la tavolozza degli autori o usare i propri tubetti. All'aperto conviene portare pochi colori: la tavolozza ridotta e le sue miscele, richiamate nelle schede con le sigle M1-M12, sono nel capitolo In studio e all'aperto dei Principi generali.",
+    "link": [{"parola": "In studio e all'aperto", "href": "../principi/#tavolozza-plein-air"}]
    }
   ],
   "tavolozza": [

@@ -176,8 +176,8 @@ def pagina():
 <nav class="salti">{salti}</nav>
 <div class="intro" id="apertura">{intro}
 <p>{e(d['criterio'])} <a href="{e(d['criterio_fonte'])}" target="_blank" rel="noopener">Il video su YouTube ↗</a></p></div>
-<p class="legenda">{e(d['nota_trasparenza'])} I nomi comuni e i pigmenti dei sei colori proposti sono quelli della sezione
-<a href="../colori/#tavolozza">Teoria dei colori</a>.</p>
+<p class="legenda">{e(d['nota_trasparenza'])} I nomi comuni e i pigmenti dei sei colori sono quelli della tavolozza ridotta per l'aperto, nel
+<a href="../principi/#tavolozza-plein-air">capitolo 8 dei Principi generali</a>.</p>
 {chr(10).join(sezioni)}
 <section class="cap" id="stesso-nome"><h2>Stesso nome, pigmenti diversi</h2>
 <p>Esempi presi dalle tabelle qui sopra; tra parentesi quadre le serie da cui vengono.</p><ul class="voci">{stesso}</ul></section>
