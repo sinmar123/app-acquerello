@@ -2,6 +2,18 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-31 - GBOT-codex - Opere: due pareri dell'IA per ogni acquerello
+
+- Alla 7.1 Alessandro Sanvitale, accanto al parere di Claude Opus 5.5 del 28/10/2026, un parere nuovo per ognuna delle 13 opere, scritto il 31/10/2026 da GPT-6 Astra (OpenAI, slug `gpt-6-astra`) guardando le foto una per una. Ogni parere ha le due parti, che cosa funziona e che cosa si potrebbe migliorare, e non ripete le osservazioni dell'altro modello.
+- **Struttura** (`dati/opere/autori/alessandro-sanvitale.json`): in ogni opera il campo `parere` diventa `pareri`, un elenco con una voce per modello (`modello`, `di`, `data`, `funziona`, `migliorare`); `pareri_ia` dell'autore diventa un elenco con le due dichiarazioni. Il vecchio `parere` singolo resta accettato in lettura, con modello, produttore e data presi da `pareri_ia` quando la dichiarazione e una sola.
+- **Generatore** (`dati/opere/genera-opere.py`): `riquadri_parere` scrive un riquadro per voce, ognuno con la sua intestazione «Parere dell'IA (modello)»; `voci_parere` e `elenco_pareri_ia` leggono le due forme e si fermano se una voce non dichiara modello, produttore e data, o se non ha le due parti.
+- **Testi della sezione** (`dati/opere/sezione.json`): la nota sotto la pagina dell'autore dice che i pareri sono di due modelli, con date e produttori; l'introduzione della sezione dice «uno o più brevi pareri». Testi proposti al curatore e approvati prima di entrare in pagina.
+- Documentazione aggiornata: `AGENTS.md` § `dati/opere/`, `README.md` (tabella delle sezioni) e `CONTRIBUTING.md` § 3.
+- Controlli: `python scripts/genera-sito.py` senza errori; nella pagina dell'autore 13 opere e 26 riquadri di parere, 13 per modello; `lib/prompt-chat.js` invariato; leggibilita della pagina 7.1 a 64.
+- Prossima azione: l'unione della pull request in `main`, che pubblica il sito, aspetta l'ok del curatore.
+
+-- GBOT-codex
+
 ## 2026-10-31 - GBOT-codex - Opere: rimosso il foglio n. 104
 
 - Su richiesta di Sandro, rimossa la voce dell'opera con file `20230130-213802.jpg` e numero `104` da `dati/opere/autori/alessandro-sanvitale.json`. Nell'elenco restano 13 opere. Presentazione, come leggere le opere, dichiarazione dei pareri dell'IA e ordine restano invariati.

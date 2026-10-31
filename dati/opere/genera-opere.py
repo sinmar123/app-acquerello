@@ -22,11 +22,13 @@ stanno il numero che l'autore ha dato al foglio, se c'è, la «nota» breve
 dell'opera, se c'è, e «data della fotografia» quando la data non viene dal
 foglio (data_da «foto» o «nome-file»).
 
-Un'opera può avere un «parere» scritto da un modello di intelligenza
-artificiale guardando la foto: che cosa funziona e che cosa si potrebbe
-migliorare. Sta in un riquadro «Parere dell'IA» che si apre sotto la foto; il
-modello, il produttore e la data stanno in «pareri_ia» dell'autore, e la
-pagina li dichiara nell'introduzione.
+Un'opera può avere uno o più «pareri» scritti da modelli di intelligenza
+artificiale guardando la foto, in «pareri», una voce per modello con
+«modello», «di», «data», «funziona» e «migliorare». I file vecchi hanno il
+parere singolo in «parere» e li dichiara «pareri_ia»: il generatore li accetta
+e li tratta come una voce sola, con modello, produttore e data dell'autore.
+Ogni parere sta in un riquadro «Parere dell'IA (modello)» che si apre sotto la
+foto; la pagina dichiara nell'introduzione quali modelli hanno scritto.
 
 Controlli: ogni autore ha un ordine intero diverso da quello degli altri;
 ogni opera ha la foto in immagini/<id-autore>/, il testo alternativo,
@@ -123,6 +125,55 @@ def data_lunga(iso):
     return f"{d.day} {MESI[d.month - 1]} {d.year}"
 
 
+def parere_dichiarato(d):
+    """«il 28 ottobre 2026 Claude Opus 5.5, di Anthropic»: una voce nell'introduzione."""
+    return f"il {data_lunga(d['data'])} {d['modello']}, di {d['di']}"
+
+
+def elenco_pareri_ia(autore, dove):
+    """I modelli che hanno scritto i pareri, da «pareri_ia»: una dichiarazione o un elenco."""
+    dichiarate = autore.get("pareri_ia")
+    if not dichiarate:
+        return []
+    if isinstance(dichiarate, dict):
+        dichiarate = [dichiarate]
+    if not isinstance(dichiarate, list):
+        errore(f"{dove}: «pareri_ia» vuole una dichiarazione o un elenco di dichiarazioni")
+    for d in dichiarate:
+        if not isinstance(d, dict) or not all(str(d.get(c) or "").strip() for c in ("modello", "di", "data")):
+            errore(f"{dove}: chi ha pareri dell'IA dichiara in «pareri_ia» modello, produttore («di») e data")
+        try:
+            date.fromisoformat(d["data"])
+        except ValueError:
+            errore(f"{dove}: data dei pareri dell'IA non valida ({d.get('data')})")
+    return dichiarate
+
+
+def voci_parere(op, dichiarate, dove):
+    """I pareri di un'opera: «pareri», oppure il vecchio «parere» con la dichiarazione dell'autore."""
+    if op.get("pareri"):
+        voci = op["pareri"] if isinstance(op["pareri"], list) else [op["pareri"]]
+    elif op.get("parere"):
+        if len(dichiarate) != 1:
+            errore(f"{dove}: un «parere» senza modello vuole una sola dichiarazione in «pareri_ia»")
+        parere = op["parere"]
+        if not isinstance(parere, dict):
+            errore(f"{dove}: il parere dell'IA vuole le due parti, «funziona» e «migliorare»")
+        voci = [dict(dichiarate[0], **{k: parere.get(k) for k in ("funziona", "migliorare")})]
+    else:
+        return []
+    for v in voci:
+        if not isinstance(v, dict) or not all(str(v.get(c) or "").strip() for c in ("funziona", "migliorare")):
+            errore(f"{dove}: il parere dell'IA vuole le due parti, «funziona» e «migliorare»")
+        if not all(str(v.get(c) or "").strip() for c in ("modello", "di", "data")):
+            errore(f"{dove}: ogni parere dichiara modello, produttore («di») e data")
+        try:
+            date.fromisoformat(str(v["data"]))
+        except ValueError:
+            errore(f"{dove}: data del parere dell'IA non valida ({v.get('data')})")
+    return voci
+
+
 def controlla_stringhe(valore, dove):
     if isinstance(valore, str):
         if "da verificare" in valore.lower():
@@ -146,7 +197,7 @@ def carica_json(path):
     return dati
 
 
-def controlla_opera(autore, op):
+def controlla_opera(autore, op, dichiarate):
     dove = f"{autore['id']}/{op.get('file')}"
     for campo in ("file", "data_da", "sedute", "alt"):
         if not op.get(campo):
@@ -159,10 +210,7 @@ def controlla_opera(autore, op):
         errore(f"{dove}: numero del foglio non valido")
     if "nota" in op and (not isinstance(op["nota"], str) or not op["nota"].strip()):
         errore(f"{dove}: la nota deve essere un testo breve")
-    if "parere" in op:
-        parere = op["parere"]
-        if not isinstance(parere, dict) or not all(str(parere.get(c) or "").strip() for c in ("funziona", "migliorare")):
-            errore(f"{dove}: il parere dell'IA vuole le due parti, «funziona» e «migliorare»")
+    voci_parere(op, dichiarate, dove)
     if op["data_da"] == "foglio" and not op.get("scritta"):
         errore(f"{dove}: una data presa dal foglio vuole la trascrizione in «scritta»")
     if op["data_da"] != "foglio" and len(op["sedute"]) != 1:
@@ -201,19 +249,14 @@ def carica_autori():
             errore(f"{path.name}: «ordine» deve essere un intero da 1 in su, diverso da quello degli altri autori")
         ordini.add(autore["ordine"])
         visti = set()
+        dichiarate = elenco_pareri_ia(autore, path.name)
         for op in autore["opere"]:
-            controlla_opera(autore, op)
+            controlla_opera(autore, op, dichiarate)
             if op["file"] in visti:
                 errore(f"{autore['id']}: foto ripetuta ({op['file']})")
             visti.add(op["file"])
-        if any("parere" in op for op in autore["opere"]):
-            pareri = autore.get("pareri_ia")
-            if not isinstance(pareri, dict) or not all(str(pareri.get(c) or "").strip() for c in ("modello", "di", "data")):
-                errore(f"{path.name}: chi ha pareri dell'IA dichiara in «pareri_ia» modello, produttore («di») e data")
-            try:
-                date.fromisoformat(pareri["data"])
-            except ValueError:
-                errore(f"{path.name}: data dei pareri dell'IA non valida")
+        if any(op.get("parere") or op.get("pareri") for op in autore["opere"]) and not dichiarate:
+            errore(f"{path.name}: chi ha pareri dell'IA dichiara in «pareri_ia» modello, produttore («di») e data")
         cartella = IMMAGINI / autore["id"]
         avanzano = sorted(p.name for p in cartella.glob("*") if p.name not in visti)
         if avanzano:
@@ -341,23 +384,23 @@ def pagina_elenco(sez, autori):
     return documento(sez["titolo"], sez["sottotitolo"], corpo)
 
 
-def riquadro_parere(op, pareri):
-    """Il parere dell'IA sotto la foto, chiuso finché non lo si apre."""
-    parere = op.get("parere")
-    if not parere:
-        return ""
-    return (
-        '<details class="parere">'
-        f"<summary>Parere dell'IA ({e(pareri['modello'])})</summary>"
-        f"<p><strong>Funziona.</strong> {e(parere['funziona'])}</p>"
-        f"<p><strong>Da migliorare.</strong> {e(parere['migliorare'])}</p>"
-        "</details>"
-    )
+def riquadri_parere(voci):
+    """I pareri dell'IA sotto la foto, uno per modello, chiusi finché non li si apre."""
+    pezzi = []
+    for v in voci:
+        pezzi.append(
+            '<details class="parere">'
+            f"<summary>Parere dell'IA ({e(v['modello'])})</summary>"
+            f"<p><strong>Funziona.</strong> {e(v['funziona'])}</p>"
+            f"<p><strong>Da migliorare.</strong> {e(v['migliorare'])}</p>"
+            "</details>"
+        )
+    return "".join(pezzi)
 
 
 def pagina_autore(sez, autore):
     figure = []
-    pareri = autore.get("pareri_ia")
+    dichiarate = elenco_pareri_ia(autore, autore["id"])
     for op in autore["opere"]:
         img, src = immagine(autore, op, "../")
         dettaglio = dettaglio_opera(op, sez)
@@ -366,14 +409,16 @@ def pagina_autore(sez, autore):
         figure.append(
             f'<figure class="opera" id="{e(ancora)}">'
             f'<a class="cornice" href="{e(src)}">{img}</a>'
-            f"<figcaption><h3>{e(titolo_opera(op))}</h3>{riga}{riquadro_parere(op, pareri)}</figcaption>"
+            f"<figcaption><h3>{e(titolo_opera(op))}</h3>{riga}{riquadri_parere(voci_parere(op, dichiarate, op['file']))}</figcaption>"
             "</figure>"
         )
     presentazione = [autore["presentazione"]] if autore.get("presentazione") else []
     lettura = " ".join(t for t in (sez["frasi_ordine"][autore["ordine_opere"]], autore.get("come_leggere"), sez["clic"]) if t)
     nota_pareri = []
-    if any("parere" in op for op in autore["opere"]):
-        nota_pareri = [sez["nota_pareri"].format(data=data_lunga(pareri["data"]), modello=pareri["modello"], di=pareri["di"])]
+    if any(op.get("parere") or op.get("pareri") for op in autore["opere"]):
+        modelli = ", ".join(parere_dichiarato(d) for d in dichiarate[:-1])
+        elenco = f"{modelli}, e {parere_dichiarato(dichiarate[-1])}" if modelli else parere_dichiarato(dichiarate[0])
+        nota_pareri = [sez["nota_pareri"].format(elenco=elenco)]
     numero = sottosezione(sez, autore)
     descrizione = f"{autore['nome']}: {quante(autore)}. {sez['titolo']} nel Quaderno di acquerello."
     corpo = (

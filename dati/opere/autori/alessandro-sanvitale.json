@@ -5,149 +5,383 @@
   "presentazione": "Alessandro Sanvitale dipinge ad acquerello per passione dal 27 settembre 2021, il giorno del suo primo foglio. Negli anni ha seguito corsi di acquerello e oggi frequenta un corso avanzato dedicato al paesaggio. Questa pagina raccoglie una scelta dei suoi acquerelli, primo foglio compreso.",
   "ordine_opere": "dal_piu_recente",
   "come_leggere": "Ogni acquerello ha per titolo il giorno in cui è stato dipinto, come risulta dall'annotazione a mano sul margine del foglio, accanto al numero progressivo. Dove l'annotazione manca, o la foto non la mostra, vale la data della fotografia, segnalata sotto il titolo.",
-  "pareri_ia": {"modello": "Claude Opus 5.5", "di": "Anthropic", "data": "2026-10-28"},
+  "pareri_ia": [
+    {
+      "modello": "Claude Opus 5.5",
+      "di": "Anthropic",
+      "data": "2026-10-28"
+    },
+    {
+      "modello": "GPT-6 Astra",
+      "di": "OpenAI",
+      "data": "2026-10-31"
+    }
+  ],
   "opere": [
     {
       "file": "20240516-221918.jpg",
       "data_da": "foto",
-      "sedute": [{"giorno": "2024-05-16", "ora": "22.19"}],
+      "sedute": [
+        {
+          "giorno": "2024-05-16",
+          "ora": "22.19"
+        }
+      ],
       "alt": "Acquerello notturno: una scala con la ringhiera sale verso una porta illuminata da un lampione, fra muri in ombra.",
-      "parere": {
-        "funziona": "Il contrasto fra la luce calda della porta e il grigio freddo dei muri rende davvero la notte, e la grana del colore dà materia alle pareti.",
-        "migliorare": "I raggi tirati a sinistra sono troppo regolari e distraggono dal lampione, e la massa scura a destra resta piatta."
-      }
+      "pareri": [
+        {
+          "modello": "Claude Opus 5.5",
+          "di": "Anthropic",
+          "data": "2026-10-28",
+          "funziona": "Il contrasto fra la luce calda della porta e il grigio freddo dei muri rende davvero la notte, e la grana del colore dà materia alle pareti.",
+          "migliorare": "I raggi tirati a sinistra sono troppo regolari e distraggono dal lampione, e la massa scura a destra resta piatta."
+        },
+        {
+          "modello": "GPT-6 Astra",
+          "di": "OpenAI",
+          "data": "2026-10-31",
+          "funziona": "I bordi chiari dei gradini fanno salire l'occhio fino al pianerottolo, mentre la ringhiera emerge gradualmente dall'ombra e accompagna il percorso.",
+          "migliorare": "La tettoia concentra molti bianchi racchiusi da contorni scuri: attenuare qualche tratto eviterebbe che rubi attenzione all'ingresso."
+        }
+      ]
     },
     {
       "file": "20240327-220723.jpg",
       "data_da": "foto",
-      "sedute": [{"giorno": "2024-03-27", "ora": "22.07"}],
+      "sedute": [
+        {
+          "giorno": "2024-03-27",
+          "ora": "22.07"
+        }
+      ],
       "alt": "Acquerello di un tramonto giallo e arancio sopra uno specchio d'acqua, con erbe e foglie scure in controluce in primo piano.",
-      "parere": {
-        "funziona": "Il sole lasciato in bianco e le erbe scure in controluce sulla striscia d'acqua chiara danno un tramonto pieno di luce.",
-        "migliorare": "In primo piano pennellate diagonali e macchie si affollano e fanno concorrenza allo sfondo: una zona più quieta aiuterebbe l'occhio a fermarsi."
-      }
+      "pareri": [
+        {
+          "modello": "Claude Opus 5.5",
+          "di": "Anthropic",
+          "data": "2026-10-28",
+          "funziona": "Il sole lasciato in bianco e le erbe scure in controluce sulla striscia d'acqua chiara danno un tramonto pieno di luce.",
+          "migliorare": "In primo piano pennellate diagonali e macchie si affollano e fanno concorrenza allo sfondo: una zona più quieta aiuterebbe l'occhio a fermarsi."
+        },
+        {
+          "modello": "GPT-6 Astra",
+          "di": "OpenAI",
+          "data": "2026-10-31",
+          "funziona": "Nelle nuvole, i segni asciutti a sinistra e le espansioni morbide al centro danno consistenze diverse al cielo. Il loro andamento orizzontale contrasta bene con gli steli sottili.",
+          "migliorare": "Il bordo inferiore della sponda separa terra e acqua con una linea molto continua: qualche interruzione e pochi riflessi verticali renderebbero meno rigido quel passaggio."
+        }
+      ]
     },
     {
       "file": "20240304-223837.jpg",
       "data_da": "foto",
-      "sedute": [{"giorno": "2024-03-04", "ora": "22.38"}],
+      "sedute": [
+        {
+          "giorno": "2024-03-04",
+          "ora": "22.38"
+        }
+      ],
       "alt": "Acquerello di un sentiero sterrato fra due file di erbe alte, sotto un cielo a strisce azzurre.",
-      "parere": {
-        "funziona": "Il sentiero porta subito lo sguardo verso il mare, e i bianchi lasciati dal pennello asciutto fanno scintillare l'acqua.",
-        "migliorare": "Cielo e mare hanno lo stesso azzurro e quasi la stessa intensità, così l'orizzonte non si legge, e le due quinte d'erba sono troppo simmetriche."
-      }
+      "pareri": [
+        {
+          "modello": "Claude Opus 5.5",
+          "di": "Anthropic",
+          "data": "2026-10-28",
+          "funziona": "Il sentiero porta subito lo sguardo verso il mare, e i bianchi lasciati dal pennello asciutto fanno scintillare l'acqua.",
+          "migliorare": "Cielo e mare hanno lo stesso azzurro e quasi la stessa intensità, così l'orizzonte non si legge, e le due quinte d'erba sono troppo simmetriche."
+        },
+        {
+          "modello": "GPT-6 Astra",
+          "di": "OpenAI",
+          "data": "2026-10-31",
+          "funziona": "I segni spezzati sullo sterrato ne fanno sentire la ruvidità senza coprire il fondo chiaro; diventando più minuti in lontananza, aiutano a misurare la profondità.",
+          "migliorare": "Le fasce del cielo terminano a destra con estremità arrotondate molto evidenti: raccordarne alcune sul bagnato toglierebbe l'effetto di pennellate separate e sovrapposte."
+        }
+      ]
     },
     {
       "file": "20231213-221259.jpg",
       "numero": "124",
       "data_da": "foto",
-      "sedute": [{"giorno": "2023-12-13", "ora": "22.12"}],
+      "sedute": [
+        {
+          "giorno": "2023-12-13",
+          "ora": "22.12"
+        }
+      ],
       "scritta": "124, con il 4 scritto sopra un 3; nessuna data sul foglio",
       "alt": "Acquerello di una casa gialla dietro alcuni ulivi, su un prato verde e sotto un cielo azzurro.",
-      "parere": {
-        "funziona": "Il giallo caldo della casa contro il cielo e il tronco scuro e sinuoso dell'ulivo a sinistra danno struttura e luce alla scena.",
-        "migliorare": "La chioma dell'ulivo a destra si scioglie nel cielo senza un margine, e il prato è una fascia uniforme che chiederebbe qualche ombra più decisa."
-      }
+      "pareri": [
+        {
+          "modello": "Claude Opus 5.5",
+          "di": "Anthropic",
+          "data": "2026-10-28",
+          "funziona": "Il giallo caldo della casa contro il cielo e il tronco scuro e sinuoso dell'ulivo a sinistra danno struttura e luce alla scena.",
+          "migliorare": "La chioma dell'ulivo a destra si scioglie nel cielo senza un margine, e il prato è una fascia uniforme che chiederebbe qualche ombra più decisa."
+        },
+        {
+          "modello": "GPT-6 Astra",
+          "di": "OpenAI",
+          "data": "2026-10-31",
+          "funziona": "Le sottili fasce illuminate sui tronchi indicano la direzione del sole, e le ombre allungate sul prato danno agli alberi un appoggio convincente.",
+          "migliorare": "Il contorno del tetto mantiene uno spessore molto uniforme e attira parecchio l'occhio: alleggerirlo in alcuni tratti, soprattutto fra i rami, integrerebbe meglio la casa nel giardino."
+        }
+      ]
     },
     {
       "file": "20230528-222558.jpg",
       "data_da": "foto",
-      "sedute": [{"giorno": "2023-05-28", "ora": "22.25"}],
+      "sedute": [
+        {
+          "giorno": "2023-05-28",
+          "ora": "22.25"
+        }
+      ],
       "alt": "Acquerello: due pareti di roccia scura incorniciano il mare e un cielo rosa; sulla riva, due piccole figure.",
-      "parere": {
-        "funziona": "La sfumatura del cielo dal rosa al lilla è stesa senza segni, e le due figurine sulla riva danno la scala e un piccolo racconto.",
-        "migliorare": "Le due pareti di roccia sono quasi speculari e dello stesso scuro: un lato colpito dalla luce, o una sagoma meno simmetrica, darebbe più profondità."
-      }
+      "pareri": [
+        {
+          "modello": "Claude Opus 5.5",
+          "di": "Anthropic",
+          "data": "2026-10-28",
+          "funziona": "La sfumatura del cielo dal rosa al lilla è stesa senza segni, e le due figurine sulla riva danno la scala e un piccolo racconto.",
+          "migliorare": "Le due pareti di roccia sono quasi speculari e dello stesso scuro: un lato colpito dalla luce, o una sagoma meno simmetrica, darebbe più profondità."
+        },
+        {
+          "modello": "GPT-6 Astra",
+          "di": "OpenAI",
+          "data": "2026-10-31",
+          "funziona": "L'orizzonte basso lascia un grande spazio aperto sopra il mare e accentua l'altezza delle rocce. La sottile riva scura collega le loro basi e tiene insieme la composizione.",
+          "migliorare": "L'orizzonte è segnato da una fascia blu piuttosto pesante rispetto all'acqua sottostante: assottigliarla e schiarirla aumenterebbe la distanza percepita verso il largo."
+        }
+      ]
     },
     {
       "file": "20230523-214045.jpg",
       "data_da": "foto",
-      "sedute": [{"giorno": "2023-05-23", "ora": "21.40"}],
+      "sedute": [
+        {
+          "giorno": "2023-05-23",
+          "ora": "21.40"
+        }
+      ],
       "alt": "Acquerello di onde che si frangono sulla riva, con la schiuma bianca, il mare blu e la sabbia in primo piano.",
-      "parere": {
-        "funziona": "La schiuma è carta lasciata bianca, e il passaggio dal blu profondo al turchese dà trasparenza all'onda.",
-        "migliorare": "Il cielo, una fascia chiara quasi uniforme, si confonde con la schiuma, e la sabbia in primo piano resta un abbozzo che non regge il peso del mare."
-      }
+      "pareri": [
+        {
+          "modello": "Claude Opus 5.5",
+          "di": "Anthropic",
+          "data": "2026-10-28",
+          "funziona": "La schiuma è carta lasciata bianca, e il passaggio dal blu profondo al turchese dà trasparenza all'onda.",
+          "migliorare": "Il cielo, una fascia chiara quasi uniforme, si confonde con la schiuma, e la sabbia in primo piano resta un abbozzo che non regge il peso del mare."
+        },
+        {
+          "modello": "GPT-6 Astra",
+          "di": "OpenAI",
+          "data": "2026-10-31",
+          "funziona": "La massa scura dell'onda a destra concentra la forza del frangente; il suo margine inferiore, sciogliendosi nell'acqua più chiara, suggerisce il movimento di ricaduta.",
+          "migliorare": "La larga fascia di schiuma centrale resta quasi tutta sullo stesso chiaro: poche ombre molto diluite sotto le creste distinguerebbero meglio i rigonfiamenti dalla superficie piatta."
+        }
+      ]
     },
     {
       "file": "img-20230516-wa0006.jpg",
       "data_da": "nome-file",
-      "sedute": [{"giorno": "2023-05-16"}],
+      "sedute": [
+        {
+          "giorno": "2023-05-16"
+        }
+      ],
       "alt": "Acquerello di un mare in tempesta: onde verdi e azzurre con la schiuma, sotto un cielo grigio e viola.",
-      "parere": {
-        "funziona": "Le pennellate oblique danno moto al mare, e il cielo grigio viola, sfumato sul bagnato, si fonde con gli spruzzi come in una vera mareggiata.",
-        "migliorare": "Le onde in basso hanno tutte la stessa direzione e la stessa misura, e i piccoli bianchi sparsi sembrano casuali più che creste."
-      }
+      "pareri": [
+        {
+          "modello": "Claude Opus 5.5",
+          "di": "Anthropic",
+          "data": "2026-10-28",
+          "funziona": "Le pennellate oblique danno moto al mare, e il cielo grigio viola, sfumato sul bagnato, si fonde con gli spruzzi come in una vera mareggiata.",
+          "migliorare": "Le onde in basso hanno tutte la stessa direzione e la stessa misura, e i piccoli bianchi sparsi sembrano casuali più che creste."
+        },
+        {
+          "modello": "GPT-6 Astra",
+          "di": "OpenAI",
+          "data": "2026-10-31",
+          "funziona": "La cresta chiara al centro forma un percorso continuo fra le masse d'acqua e permette di leggere un'onda principale dentro il mare agitato.",
+          "migliorare": "Il breve tratto scuro dell'orizzonte a destra è molto più netto della foschia circostante: spezzarlo o sfumarne un'estremità eviterebbe che lo sguardo si arresti proprio lì."
+        }
+      ]
     },
     {
       "file": "20230305-101550.jpg",
       "numero": "117",
       "data_da": "foglio",
-      "sedute": [{"giorno": "2023-03-04", "giorno_scritto": "sabato"}],
+      "sedute": [
+        {
+          "giorno": "2023-03-04",
+          "giorno_scritto": "sabato"
+        }
+      ],
       "scritta": "117 4-3-23 Sabato",
       "alt": "Acquerello di colline grigio azzurre, una dietro l'altra, sotto un cielo velato di rosa, con un bosco scuro in primo piano.",
-      "parere": {
-        "funziona": "Le colline che schiariscono e si raffreddano allontanandosi danno subito la profondità, e il bosco scuro in primo piano ha un bordo frastagliato credibile.",
-        "migliorare": "Le colline di mezzo hanno quasi lo stesso valore del cielo e vi si perdono, e la macchia scura davanti è un po' piatta."
-      }
+      "pareri": [
+        {
+          "modello": "Claude Opus 5.5",
+          "di": "Anthropic",
+          "data": "2026-10-28",
+          "funziona": "Le colline che schiariscono e si raffreddano allontanandosi danno subito la profondità, e il bosco scuro in primo piano ha un bordo frastagliato credibile.",
+          "migliorare": "Le colline di mezzo hanno quasi lo stesso valore del cielo e vi si perdono, e la macchia scura davanti è un po' piatta."
+        },
+        {
+          "modello": "GPT-6 Astra",
+          "di": "OpenAI",
+          "data": "2026-10-31",
+          "funziona": "La sottile fascia rosa introduce luce sopra i crinali, soprattutto dove si abbassano verso destra. Le velature rade del cielo lasciano visibile la carta e mantengono leggera quella zona.",
+          "migliorare": "La macchia scura sul fianco del monte a sinistra ha una forma poco legata al pendio: darle un andamento più riconoscibile lungo il versante chiarirebbe il rilievo."
+        }
+      ]
     },
     {
       "file": "20230228-201625.jpg",
       "data_da": "foto",
-      "sedute": [{"giorno": "2023-02-28", "ora": "20.16"}],
+      "sedute": [
+        {
+          "giorno": "2023-02-28",
+          "ora": "20.16"
+        }
+      ],
       "alt": "Acquerello di un cielo nuvoloso grigio, azzurro e rosa sopra una fascia di alberi scuri e uno specchio d'acqua con le canne.",
-      "parere": {
-        "funziona": "Il cielo, bagnato su bagnato, si apre dal centro con molta energia, e l'acqua resa a pennello asciutto sulla grana della carta scintilla davvero.",
-        "migliorare": "La fascia degli alberi è una striscia scura tutta uguale, e le due nuvolette al centro, quasi speculari, attirano l'occhio più del necessario."
-      }
+      "pareri": [
+        {
+          "modello": "Claude Opus 5.5",
+          "di": "Anthropic",
+          "data": "2026-10-28",
+          "funziona": "Il cielo, bagnato su bagnato, si apre dal centro con molta energia, e l'acqua resa a pennello asciutto sulla grana della carta scintilla davvero.",
+          "migliorare": "La fascia degli alberi è una striscia scura tutta uguale, e le due nuvolette al centro, quasi speculari, attirano l'occhio più del necessario."
+        },
+        {
+          "modello": "GPT-6 Astra",
+          "di": "OpenAI",
+          "data": "2026-10-31",
+          "funziona": "Fra gli isolotti rimane un corridoio d'acqua chiara che conduce verso l'apertura luminosa del cielo: questo richiamo collega bene la parte alta e quella bassa del dipinto.",
+          "migliorare": "Gli isolotti lontani sono scuri quasi quanto quelli vicini: alleggerirne il tono e ridurre la nettezza delle piccole canne renderebbe più leggibili le distanze."
+        }
+      ]
     },
     {
       "file": "20230227-214538.jpg",
       "numero": "107",
       "data_da": "foto",
-      "sedute": [{"giorno": "2023-02-27", "ora": "21.45"}],
+      "sedute": [
+        {
+          "giorno": "2023-02-27",
+          "ora": "21.45"
+        }
+      ],
       "scritta": "107; la data che segue è tagliata dal bordo della fotografia",
       "alt": "Acquerello: dal bordo di un ombrello arancione cola la pioggia; più in basso, una figura con un ombrello rosa e le luci sfocate della strada.",
-      "parere": {
-        "funziona": "La figura ha preso forma, le gocce, col bianco lasciato e il nucleo scuro, sono credibili, e le luci sfocate danno profondità alla strada.",
-        "migliorare": "La figura resta un contorno a matita riempito d'azzurro, senza volume, e il fondo ha lo stesso valore dall'alto in basso, così l'ombrello rosa si stacca poco."
-      }
+      "pareri": [
+        {
+          "modello": "Claude Opus 5.5",
+          "di": "Anthropic",
+          "data": "2026-10-28",
+          "funziona": "La figura ha preso forma, le gocce, col bianco lasciato e il nucleo scuro, sono credibili, e le luci sfocate danno profondità alla strada.",
+          "migliorare": "La figura resta un contorno a matita riempito d'azzurro, senza volume, e il fondo ha lo stesso valore dall'alto in basso, così l'ombrello rosa si stacca poco."
+        },
+        {
+          "modello": "GPT-6 Astra",
+          "di": "OpenAI",
+          "data": "2026-10-31",
+          "funziona": "Il taglio ravvicinato dell'ombrello superiore porta chi guarda dentro la scena; le stecche convergono verso il punto da cui scende uno dei rivoli e guidano l'occhio alla pioggia.",
+          "migliorare": "I rivoli alternano tanti piccoli bianchi e scuri molto netti che a tratti sembrano cordoni solidi: perdere qualche contorno restituirebbe più trasparenza all'acqua."
+        }
+      ]
     },
     {
       "file": "20230223-215730.jpg",
       "data_da": "foto",
-      "sedute": [{"giorno": "2023-02-23", "ora": "21.57"}],
+      "sedute": [
+        {
+          "giorno": "2023-02-23",
+          "ora": "21.57"
+        }
+      ],
       "alt": "Acquerello di un fico d'India: pale tonde in verde, rosa e viola, con le spine disegnate.",
-      "parere": {
-        "funziona": "Dentro ogni pala il rosa, il viola e il verde si fondono sul bagnato con passaggi morbidi, e i contorni netti tengono la forma.",
-        "migliorare": "Le pale hanno misure simili e sono impilate senza un appoggio né uno sfondo, e la luce non arriva da una direzione comune, così il volume cambia da una pala all'altra."
-      }
+      "pareri": [
+        {
+          "modello": "Claude Opus 5.5",
+          "di": "Anthropic",
+          "data": "2026-10-28",
+          "funziona": "Dentro ogni pala il rosa, il viola e il verde si fondono sul bagnato con passaggi morbidi, e i contorni netti tengono la forma.",
+          "migliorare": "Le pale hanno misure simili e sono impilate senza un appoggio né uno sfondo, e la luce non arriva da una direzione comune, così il volume cambia da una pala all'altra."
+        },
+        {
+          "modello": "GPT-6 Astra",
+          "di": "OpenAI",
+          "data": "2026-10-31",
+          "funziona": "Le ombre strette nei punti di sovrapposizione distinguono bene le pale, soprattutto sotto quella alta a destra. Il bianco fra i due gruppi superiori lascia leggibile la ramificazione.",
+          "migliorare": "Alcune spine bianche in primo piano sono larghe e smussate: assottigliarne le punte e alleggerire il contorno scuro le renderebbe meno tozze."
+        }
+      ]
     },
     {
       "file": "20230220-221042.jpg",
       "numero": "114",
       "data_da": "foglio",
       "sedute": [
-        {"giorno": "2023-02-15", "giorno_scritto": "mercoledì", "ora": "21-22"},
-        {"giorno": "2023-02-16", "giorno_scritto": "giovedì", "ora": "21"}
+        {
+          "giorno": "2023-02-15",
+          "giorno_scritto": "mercoledì",
+          "ora": "21-22"
+        },
+        {
+          "giorno": "2023-02-16",
+          "giorno_scritto": "giovedì",
+          "ora": "21"
+        }
       ],
       "scritta": "114 - 15-2-23 Mercoledì ore 21-22, 16-2-23 giovedì ore 21-",
       "alt": "Acquerello di tre archi aperti sul mare al tramonto, con una scogliera a destra e in primo piano un pavimento a riquadri.",
-      "parere": {
-        "funziona": "Il buio caldo della stanza fa brillare il mare e il cielo del tramonto dentro gli archi, e il riflesso a pennello asciutto sull'acqua è riuscito.",
-        "migliorare": "La griglia del pavimento non converge verso un punto di fuga e ha linee incerte, e il marrone delle pareti, steso tutto con lo stesso tono, risulta piatto e un po' torbido."
-      }
+      "pareri": [
+        {
+          "modello": "Claude Opus 5.5",
+          "di": "Anthropic",
+          "data": "2026-10-28",
+          "funziona": "Il buio caldo della stanza fa brillare il mare e il cielo del tramonto dentro gli archi, e il riflesso a pennello asciutto sull'acqua è riuscito.",
+          "migliorare": "La griglia del pavimento non converge verso un punto di fuga e ha linee incerte, e il marrone delle pareti, steso tutto con lo stesso tono, risulta piatto e un po' torbido."
+        },
+        {
+          "modello": "GPT-6 Astra",
+          "di": "OpenAI",
+          "data": "2026-10-31",
+          "funziona": "L'orizzonte prosegue alla stessa altezza nelle tre aperture e fa leggere un unico mare oltre la parete; la scogliera a destra interrompe la ripetizione degli archi.",
+          "migliorare": "Le numerose strisce di luce sotto gli archi non trovano un'origine visibile nelle tre aperture: raccoglierle in campi più larghi renderebbe più chiaro il rapporto fra finestre e pavimento."
+        }
+      ]
     },
     {
       "file": "20210927-220328.jpg",
       "data_da": "foto",
-      "sedute": [{"giorno": "2021-09-27", "ora": "22.03"}],
+      "sedute": [
+        {
+          "giorno": "2021-09-27",
+          "ora": "22.03"
+        }
+      ],
       "nota": "il primo acquerello",
       "alt": "Acquerello di un interno: una scrivania con la lampada e la sedia, un quadro alla parete e una pianta appena abbozzata.",
-      "parere": {
-        "funziona": "Le campiture sono pulite e decise, e i colori pieni danno allegria alla stanza.",
-        "migliorare": "Agli oggetti manca un'ombra che dia volume, la prospettiva del tavolo e del pavimento non converge, e la metà sinistra, con la pianta solo abbozzata, resta vuota."
-      }
+      "pareri": [
+        {
+          "modello": "Claude Opus 5.5",
+          "di": "Anthropic",
+          "data": "2026-10-28",
+          "funziona": "Le campiture sono pulite e decise, e i colori pieni danno allegria alla stanza.",
+          "migliorare": "Agli oggetti manca un'ombra che dia volume, la prospettiva del tavolo e del pavimento non converge, e la metà sinistra, con la pianta solo abbozzata, resta vuota."
+        },
+        {
+          "modello": "GPT-6 Astra",
+          "di": "OpenAI",
+          "data": "2026-10-31",
+          "funziona": "Lo schienale davanti al mobile chiaro distingue subito due distanze; il braccio sottile della lampada interrompe la successione delle forme rettangolari di schermi, tavoli e quadri.",
+          "migliorare": "Lo schermo grande e il portatile riprendono molto il colore del legno: differenziare maggiormente le loro superfici aiuterebbe a riconoscerli senza affidarsi soltanto ai contorni."
+        }
+      ]
     }
   ]
 }
