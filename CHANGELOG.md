@@ -2,6 +2,17 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-31 - GBOT-codex - Opere: rimosso il foglio n. 104
+
+- Su richiesta di Sandro, rimossa la voce dell'opera con file `20230130-213802.jpg` e numero `104` da `dati/opere/autori/alessandro-sanvitale.json`. Nell'elenco restano 13 opere. Presentazione, come leggere le opere, dichiarazione dei pareri dell'IA e ordine restano invariati.
+- La fotografia `dati/opere/immagini/alessandro-sanvitale/20230130-213802.jpg` è stata tolta dal repository su richiesta di Sandro, senza archiviarla in un'altra cartella.
+- Sempre su richiesta di Sandro, sciolto il riferimento al foglio 104 nella frase d'apertura del parere dell'IA del foglio 107, rendendola autonoma senza aggiungere valutazioni. La parte «Da migliorare», gli altri pareri e le altre opere restano invariati.
+- Controlli: `python scripts/genera-sito.py` senza errori; nella pagina generata dell'autore compaiono 13 opere. Confronto del JSON con la versione precedente: nessuna differenza oltre alla rimozione del foglio 104 e all'apertura del parere del 107. Eliminata anche la copia residua della foto dalla cartella generata `site/`.
+- Il generatore aggiorna soltanto il conteggio delle opere da 14 a 13 in `lib/prompt-chat.js`.
+- Prossima azione: l'unione su `main` aspetta l'ok di Sandro.
+
+-- GBOT-codex
+
 ## 2026-10-31 - GBOT-app-acquerello - Opere: la presentazione non nomina più l'insegnante
 
 - Richiesta di Sandro del 31/10/2026: togliere il nome della sua insegnante dalla presentazione della sua pagina nelle Opere e dalle voci del CHANGELOG, perché non è sicuro che lei sia d'accordo a comparire.
