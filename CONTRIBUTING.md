@@ -43,6 +43,6 @@ I generatori controllano la coerenza dei dati e fermano la generazione se una re
 
 ## 4. Licenza dei contributi
 
-Inviando un contributo a questo repository (tramite la casella pubblica sul sito, pull request, Issue o altra comunicazione), dichiari di avere il diritto di inviarlo e accetti che sia rilasciato con le licenze aperte del progetto indicate nel file [`LICENSE`](LICENSE): **MIT** per il codice sorgente, **CC BY 4.0** per i testi, i dati, le schede e le illustrazioni.
+Inviando un contributo a questo repository (tramite la casella pubblica sul sito, pull request, Issue o altra comunicazione), dichiari di essere l'autore del contributo, di avere il diritto di pubblicarlo, di acconsentire alla pubblicazione del nome o dello pseudonimo che indichi e accetti che sia rilasciato con le licenze aperte del progetto indicate nel file [`LICENSE`](LICENSE): **MIT** per il codice sorgente, **CC BY 4.0** per i testi, i dati, le schede e le illustrazioni.
 
-Fanno eccezione le opere della sezione *Opere*: chi le propone ne autorizza la pubblicazione nel Quaderno e ne resta titolare, senza licenza CC BY 4.0 (`LICENSE` § 2).
+Fanno eccezione le opere della sezione *Opere*: chi le propone dichiara di essere l'autore delle opere o di avere il diritto di pubblicarle, acconsente alla pubblicazione delle loro fotografie nel Quaderno e nel repository pubblico, sceglie il nome o lo pseudonimo con cui firmarsi e ne resta titolare, senza licenza CC BY 4.0 (`LICENSE` § 2). Le fotografie si pubblicano ridotte e senza i dati di scatto, quindi senza la posizione GPS. Il consenso si può revocare quando si vuole, chiedendo la rimozione dalla casella dei suggerimenti: le opere vengono tolte dal sito e dal repository.

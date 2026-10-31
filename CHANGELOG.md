@@ -2,6 +2,18 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-10-31 - GBOT-codex - Il Quaderno dichiara l'aiuto dell'IA, le opere si firmano sinmar
+
+- **Home** (`scripts/genera-sito.py`): nuova nota prima di quella sui dilettanti. Dice che il Quaderno nasce nell'ottobre 2026 e che anche le pagine, l'architettura del sito e i testi sono stati sviluppati con l'aiuto di strumenti di intelligenza artificiale, con i modelli per compito: Gemini 4 Argon per l'assistente in fondo alle pagine, GPT-6 Astra e Claude Opus 5.5 per i pareri sulle opere, altri modelli per rileggere i testi; aggiunge che le ricerche degli Approfondimenti sono state fatte con gli stessi strumenti e che ogni affermazione porta la sua fonte. Testo proposto a Sandro e approvato.
+- **Approfondimenti** (`dati/approfondimenti/sezione.json`): l'introduzione chiude dicendo che le ricerche dietro le pagine sono ricerche approfondite fatte con l'aiuto dell'IA, con la fonte per ogni affermazione.
+- **Contributi** (`scripts/genera-sito.py`, riquadro dei suggerimenti, e `CONTRIBUTING.md` § 4): con l'invio si dichiara di essere l'autore del contributo, di avere il diritto di pubblicarlo e di acconsentire alla pubblicazione del nome o dello pseudonimo indicato. La firma facoltativa resta com'e.
+- **Pubblicazione delle opere** (`dati/opere/sezione.json`, ultimo paragrafo dell'introduzione, e `CONTRIBUTING.md` § 4): chi propone i propri acquerelli dichiara di essere l'autore o di avere il diritto di pubblicarli, acconsente alla pubblicazione delle fotografie nel Quaderno e nel repository pubblico, sceglie il nome o lo pseudonimo con cui firmarsi; le opere restano sue, fuori dalla licenza CC BY 4.0; le foto si pubblicano ridotte e senza i dati di scatto, quindi senza la posizione; il consenso si revoca chiedendo la rimozione dalla casella dei suggerimenti. Testo proposto a Sandro e approvato con «No va bene», cioe va bene cosi.
+- **Pseudonimo**: l'autore della 7.1 ora si firma `sinmar`, nel campo `nome` di `dati/opere/autori/alessandro-sanvitale.json` e nell'apertura della `presentazione` («sinmar dipinge ad acquerello per passione dal 27 settembre 2021...»); il resto della presentazione resta identico. Cambiati anche i 12 crediti «foto di sinmar» della scheda `watercolor-sestri-levante-2026`, e le due citazioni in `README.md` e `AGENTS.md`. Il nome vero resta solo nell'informativa privacy, dove il titolare del trattamento deve restare identificabile.
+- Controlli: `python scripts/genera-sito.py` senza errori; leggibilita di tutte le pagine sopra 52 (la sezione Opere scende da 64 a 59 per il paragrafo nuovo); resta il nome vero solo nelle righe dell'informativa presenti in ogni pagina.
+- Prossima azione: l'unione della pull request in `main` aspetta l'ok di Sandro.
+
+-- GBOT-codex
+
 ## 2026-10-31 - GBOT-codex - Opere: due pareri dell'IA per ogni acquerello
 
 - Alla 7.1 Alessandro Sanvitale, accanto al parere di Claude Opus 5.5 del 28/10/2026, un parere nuovo per ognuna delle 13 opere, scritto il 31/10/2026 da GPT-6 Astra (OpenAI, slug `gpt-6-astra`) guardando le foto una per una. Ogni parere ha le due parti, che cosa funziona e che cosa si potrebbe migliorare, e non ripete le osservazioni dell'altro modello.

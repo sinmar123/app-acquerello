@@ -573,7 +573,9 @@ def blocco_chat_e_suggerimenti(sezione_predefinita: str, pagina_path: str) -> st
         <strong>Pubblicazione:</strong> l'invio non richiede registrazione. Premendo <em>Invia</em>, oggetto, descrizione, sezione,
         pagina di partenza e firma eventuale <strong>diventano pubblici</strong> nelle
         <a href="{REPO_URL}/issues" target="_blank" rel="noopener">segnalazioni del progetto su GitHub</a>,
-        con licenza Creative Commons CC BY 4.0, per la revisione e l'aggiornamento del Quaderno; le condizioni complete
+        con licenza Creative Commons CC BY 4.0, per la revisione e l'aggiornamento del Quaderno. Con l'invio dichiari di essere
+        l'autore del contributo, di avere il diritto di pubblicarlo e di acconsentire alla pubblicazione del nome o dello
+        pseudonimo che indichi; le condizioni complete
         sono in <a href="{REPO_URL}/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">CONTRIBUTING.md</a>.
         Per limitare gli invii a 5 al giorno il server registra, per non più di 14 giorni, un'impronta dell'indirizzo IP
         calcolata con una chiave segreta e diversa ogni giorno, senza l'indirizzo in chiaro.
@@ -985,6 +987,7 @@ def genera_home(sezioni_pronte: list[dict]) -> str:
   <div class="testa-in">
     <h1>Quaderno di acquerello</h1>
     <p>Appunti di studio dell'acquerello, scritti da appassionati per appassionati</p>
+    <p class="nota">Il Quaderno nasce nell'ottobre 2026 e anche le pagine, l'architettura del sito e i testi sono stati sviluppati con l'aiuto di strumenti di intelligenza artificiale: Gemini 4 Argon per l'assistente che risponde in fondo alle pagine, GPT-6 Astra e Claude Opus 5.5 per i pareri sulle opere, altri modelli per rileggere i testi. Le ricerche degli Approfondimenti sono state fatte con gli stessi strumenti, e ogni affermazione porta la sua fonte.</p>
     <p class="nota">Questo sito è fatto da dilettanti, nel senso originario della parola: persone che si dilettano a dipingere ad acquerello e non ne fanno un mestiere. Raccoglie ciò che impariamo strada facendo, fra i corsi, le prove al tavolo e le uscite all'aperto, con i limiti di chi non è un maestro e la voglia di capire perché un foglio riesce e un altro no.</p>
     <p class="nota">È scritto per chi condivide la stessa passione ed è aperto ai contributi di tutti gli appassionati. Anche i professionisti che vi trovassero qualcosa di utile, o volessero aiutarci a migliorarlo, saranno i benvenuti.</p>
   </div>
