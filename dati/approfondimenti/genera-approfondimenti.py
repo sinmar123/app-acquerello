@@ -11,8 +11,10 @@ site/approfondimenti/<id>/.
 
 Ogni questione è una sottosezione: il numero della sezione in sezione.json più
 il suo «ordine», per esempio 5.1. La pagina si apre con la sintesi, i cui punti
-rimandano ai capitoli, e la premessa; poi i capitoli, con le fonti numerate in
-fondo a ognuno come nei Principi generali (scripts/rimandi_fonti.py).
+rimandano ai capitoli, e la premessa. Il campo facoltativo «nota_metodo», un
+elenco di paragrafi, aggiunge un riquadro «Nota di metodo» dopo la premessa.
+Seguono i capitoli, con le fonti numerate in fondo a ognuno come nei Principi
+generali (scripts/rimandi_fonti.py).
 
 Blocchi dei capitoli: «p» (paragrafo), «lista» (con «numerata» per l'elenco
 numerato), «tabella» (intestazione e righe, con la colonna delle fonti),
@@ -66,11 +68,12 @@ nav.salti a { flex: none; text-decoration: none; color: #2c4f3a; border: 1px sol
               padding: 3px 12px; font-weight: 600; }
 .sintesi { background: #f6f3eb; border: 1px solid #dfd8c8; border-left: 4px solid #8c4a27; border-radius: 8px;
            padding: 10px 14px; margin: 14px 0; }
-.sintesi h2, .intro h2 { font-size: 1.08em; margin: 0 0 6px; }
+.sintesi h2, .intro h2, .metodo h2 { font-size: 1.08em; margin: 0 0 6px; }
 .sintesi ul { margin: 0; padding-left: 20px; } .sintesi li { margin-bottom: 6px; }
 .sintesi a.al-cap { font-size: .85em; white-space: nowrap; text-decoration: none; }
 .intro { background: #eef4ef; border: 1px solid #cadbce; border-radius: 8px; padding: 10px 14px; margin: 12px 0; }
-.intro p { margin: 6px 0; }
+.metodo { background: #f1f3f6; border: 1px solid #cdd6df; border-radius: 8px; padding: 10px 14px; margin: 12px 0; }
+.intro p, .metodo p { margin: 6px 0; }
 section.cap { border-top: 3px solid #3d6b4f; padding-top: 14px; margin-top: 26px; }
 .voci { padding-left: 22px; } .voci li { margin-bottom: 6px; }
 p.nota { font-style: italic; color: #444; }
@@ -231,6 +234,10 @@ def pagina_tema(sez, tema):
     sintesi = "".join(f'<li>{p["testo"]} <a class="al-cap" href="#{e(p["capitolo"])}">capitolo {e(numeri[p["capitolo"]])}</a></li>'
                       for p in tema["sintesi"])
     premessa = "".join(f"<p>{p}</p>" for p in tema["premessa"])
+    nota_metodo = ""
+    if tema.get("nota_metodo"):
+        paragrafi = "".join(f"<p>{e(p)}</p>" for p in tema["nota_metodo"])
+        nota_metodo = f'<div class="metodo"><h2>Nota di metodo</h2>{paragrafi}</div>'
     numero = numero_tema(sez, tema)
     corpo = (
         f'<p class="filo"><a href="../">{e(sez["numero"])}. {e(sez["titolo"])}</a></p>'
@@ -239,6 +246,7 @@ def pagina_tema(sez, tema):
         f'<nav class="salti">{salti}</nav>'
         f'<div class="sintesi"><h2>In sintesi</h2><ul>{sintesi}</ul></div>'
         f'<div class="intro"><h2>Premessa</h2>{premessa}</div>'
+        + nota_metodo
         + "\n".join(capitoli)
         + piede(sez, "../../")
     )
