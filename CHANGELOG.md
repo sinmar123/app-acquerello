@@ -2,6 +2,17 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-11-01 - GBOT-codex - Il curatore si presenta come sinmar anche negli indirizzi
+
+- Su richiesta di Sandro, tolto il nome del curatore dalla nota della chat e dall'informativa. Il titolare resta indicato con l'account GitHub `sinmar123`, contattabile tramite una segnalazione sul repository; l'informativa precisa che usa lo pseudonimo `sinmar` e che il nome si può chiedere con la stessa segnalazione.
+- L'id dell'autore diventa `sinmar` e la sua pagina passa a `/opere/sinmar/`. Sandro ha rinominato con `git mv` il JSON dell'autore e la cartella delle fotografie. Opere, pareri e immagini restano invariati; menu, sitemap e prompt della chat usano il nuovo indirizzo.
+- Aggiunta in `scripts/genera-sito.py` la lista `REINDIRIZZAMENTI_PAGINE`, con il controllo della pagina di arrivo: `/opere/alessandro-sanvitale/` rinvia a `/opere/sinmar/` con codice 301. Restano i rinvii di `/studio-plein-air` e il controllo dell'ancora di arrivo. Rimossi da `site/` i file generati della vecchia pagina, le copie delle fotografie al vecchio percorso e la pagina obsoleta di Studio ed en plein air; conservate le cartelle vuote.
+- Controlli: `python scripts/genera-sito.py` senza errori; Gulpease delle pagine controllate da 56 a 95, home 53. Sitemap con il nuovo indirizzo e senza il vecchio; nessun nome completo nei file di `site/`, vecchio id solo nella regola di rinvio. Restano 13 opere e 26 pareri; il JSON cambia solo nell'id, le fotografie sono identiche e le voci storiche del CHANGELOG restano intatte. Verificati anche gli errori per pagina o ancora di arrivo mancanti.
+
+-- GBOT-codex
+
+Prossima azione: verificare le modifiche e preparare commit e pull request fuori dalla sandbox; l'unione su `main`, che pubblica il sito, aspetta l'ok di Sandro.
+
 ## 2026-11-01 - GBOT-codex - Home: prima i dilettanti, poi una dichiarazione più esplicita sull'IA
 
 - Su richiesta di Sandro, riordinate le tre note della testata in `scripts/genera-sito.py`: sito scritto da dilettanti per dilettanti, ruolo dell'intelligenza artificiale, apertura ai contributi.
