@@ -6,9 +6,9 @@ Nota: nelle voci fino al 1/11/2026 il curatore è indicato con lo pseudonimo sin
 
 ## 2026-11-01 - GBOT-codex - Approfondimenti: nota di metodo sulla ricerca del bianco
 
-- La pagina 5.1 dichiara come sono state fatte le ricerche, con i modelli e il compito di ciascuno: Grok Build e Codex in quattro corse parallele, Gemini Deep Research su tutte le domande, Consensus per gli articoli scientifici, Claude Code per la rilettura delle fonti decisive e la sintesi; poi DeepSeek, Kimi e GLM nei collaudi del 31 ottobre e del 1 novembre.
-- La nota spiega le sigle delle fonti (V, C, M, A), le citazioni inglesi tradotte con l'originale nella fonte e le domande aperte lasciate tali. Aggiunge che i bandi italiani sono stati cercati a mano, con 19 premi e 21 documenti aperti uno per uno, e che le sei dichiarazioni dei pittori sono state riaperte il 1 novembre.
-- La nota è di dieci paragrafi e sta in un riquadro dopo la premessa; il documento di lavoro è indicato come conservato dal curatore e non pubblicato, senza collegamento.
+- La pagina 5.1 dichiara come sono state fatte le ricerche, con i modelli e il compito di ciascuno: Grok Build (grok-4.7) e Codex (gpt-6-astra) in quattro corse parallele con ricerca web attiva e impegno alto, Gemini Deep Research (agente deep-research-preview-04-2026) su tutte e sette le domande, Consensus per gli articoli scientifici, Claude Code per la rilettura delle fonti decisive e la sintesi, nominato senza versione perché i documenti non la indicano.
+- Poi il collaudo del 31 ottobre, con DeepSeek (deepseek-v4-pro), Kimi (kimi-k3.1-pro) e GLM (glm-5.3): DeepSeek e Kimi hanno cercato da soli, GLM no, e una sola sintesi completa è arrivata. Il 1 novembre DeepSeek e Kimi hanno rifatto il lavoro per intero e GLM ha fallito di nuovo. La nota spiega anche le sigle delle fonti (V, C, M, A), le citazioni inglesi tradotte con l'originale nella fonte e le domande aperte lasciate tali.
+- I nomi dei modelli e le versioni vengono dai rapporti di ricerca conservati nel workspace, in `pit/acquerello-sito/bianco/`, non dal repository; il costo delle corse non è indicato in pagina, in attesa della decisione del curatore. I bandi italiani sono stati cercati a mano, con 19 premi e 21 documenti aperti uno per uno, e le sei dichiarazioni dei pittori sono state riaperte il 1 novembre.
 - Il generatore accetta il campo facoltativo `nota_metodo` e lo mostra dopo la premessa, prima del primo capitolo, in un riquadro con uno sfondo distinto. Aggiornate le descrizioni nel generatore e in AGENTS.md.
 
 -- GBOT-codex
