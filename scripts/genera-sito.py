@@ -987,9 +987,9 @@ def genera_home(sezioni_pronte: list[dict]) -> str:
   <div class="testa-in">
     <h1>Quaderno di acquerello</h1>
     <p>Appunti di studio dell'acquerello, scritti da appassionati per appassionati</p>
-    <p class="nota">Il Quaderno nasce nell'ottobre 2026 e anche le pagine, l'architettura del sito e i testi sono stati sviluppati con l'aiuto di strumenti di intelligenza artificiale: Gemini 4 Argon per l'assistente che risponde in fondo alle pagine, GPT-6 Astra e Claude Opus 5.5 per i pareri sulle opere, altri modelli per rileggere i testi. Le ricerche degli Approfondimenti sono state fatte con gli stessi strumenti, e ogni affermazione porta la sua fonte.</p>
-    <p class="nota">Questo sito è fatto da dilettanti, nel senso originario della parola: persone che si dilettano a dipingere ad acquerello e non ne fanno un mestiere. Raccoglie ciò che impariamo strada facendo, fra i corsi, le prove al tavolo e le uscite all'aperto, con i limiti di chi non è un maestro e la voglia di capire perché un foglio riesce e un altro no.</p>
-    <p class="nota">È scritto per chi condivide la stessa passione ed è aperto ai contributi di tutti gli appassionati. Anche i professionisti che vi trovassero qualcosa di utile, o volessero aiutarci a migliorarlo, saranno i benvenuti.</p>
+    <p class="nota">Questo sito è scritto da dilettanti per dilettanti. Dipingiamo ad acquerello per passione, senza farne un mestiere. Qui raccogliamo ciò che impariamo nei corsi, nelle prove al tavolo e nelle uscite all'aperto. Non siamo maestri: cerchiamo di capire perché un foglio riesce e un altro no.</p>
+    <p class="nota">Il sito è nato nell'ottobre 2026. Lo realizziamo con l'ausilio di strumenti di intelligenza artificiale, partendo dai modelli disponibili in quel periodo. Man mano che ne escono di nuovi, li proviamo per rileggere e migliorare i testi. Testi, pagine, codice e illustrazioni nascono dal dialogo fra chi dipinge e alcuni modelli. Gemini 4 Argon risponde alle domande in fondo alle pagine. GPT-6 Astra e Claude Opus 5.5 hanno scritto i pareri sulle opere. Altri modelli aiutano a rileggere i testi. Anche le ricerche degli Approfondimenti sono fatte con l'aiuto dell'IA, con una fonte per ogni affermazione.</p>
+    <p class="nota">Il sito è aperto ai contributi di chi condivide questa passione. Sono benvenuti anche i professionisti che vi trovano qualcosa di utile o vogliono aiutarci a migliorarlo.</p>
   </div>
 </header>
 <main>

@@ -2,6 +2,18 @@
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
+## 2026-11-01 - GBOT-codex - Home: prima i dilettanti, poi una dichiarazione più esplicita sull'IA
+
+- Su richiesta di Sandro, riordinate le tre note della testata in `scripts/genera-sito.py`: sito scritto da dilettanti per dilettanti, ruolo dell'intelligenza artificiale, apertura ai contributi.
+- Su richiesta di Sandro del 1° novembre, sostituita solo la frase «Lo realizziamo in gran parte con l'intelligenza artificiale.»: il sito si realizza con l'ausilio di strumenti di IA, partendo dai modelli disponibili nell'ottobre 2026; man mano che ne escono di nuovi, si provano per rileggere e migliorare i testi.
+- In questa revisione restano invariati il resto della nota sull'IA e le altre due note, già riordinate e semplificate. Restano quindi il dialogo da cui nascono testi, pagine, codice e illustrazioni, i nomi Gemini 4 Argon, GPT-6 Astra e Claude Opus 5.5, i loro compiti e il richiamo alle fonti degli Approfondimenti.
+- Controlli: `python scripts/genera-sito.py` senza errori; tutte le pagine controllate sopra 52. Misurata anche la home, esclusa dal controllo ordinario: Gulpease da 50 a 53 rispetto a `main`; le tre note passano da 52 a 63. Testi del generatore confrontati con quelli in `site/index.html`: coincidono e seguono l'ordine richiesto. `lib/prompt-chat.js` invariato nel contenuto.
+- Sul W520 la sandbox di Codex non può scrivere nella cartella `.git` del repository; dopo aver verificato le modifiche, Grok Bot esegue commit, push e apertura della pull request fuori dalla sandbox.
+
+-- GBOT-codex
+
+Prossima azione: revisione dei testi da parte di Sandro; l'unione su `main` aspetta il suo ok.
+
 ## 2026-10-31 - GBOT-codex - Il Quaderno dichiara l'aiuto dell'IA, le opere si firmano sinmar
 
 - **Home** (`scripts/genera-sito.py`): nuova nota prima di quella sui dilettanti. Dice che il Quaderno nasce nell'ottobre 2026 e che anche le pagine, l'architettura del sito e i testi sono stati sviluppati con l'aiuto di strumenti di intelligenza artificiale, con i modelli per compito: Gemini 4 Argon per l'assistente in fondo alle pagine, GPT-6 Astra e Claude Opus 5.5 per i pareri sulle opere, altri modelli per rileggere i testi; aggiunge che le ricerche degli Approfondimenti sono state fatte con gli stessi strumenti e che ogni affermazione porta la sua fonte. Testo proposto a Sandro e approvato.
