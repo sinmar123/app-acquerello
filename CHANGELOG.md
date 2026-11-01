@@ -12,8 +12,6 @@ Nota: nelle voci fino al 1/11/2026 il curatore è indicato con lo pseudonimo sin
 
 -- GBOT-codex
 
-Prossima azione: il curatore verifica le modifiche ed esegue commit e push fuori dalla sandbox.
-
 ## 2026-11-01 - GBOT-codex - Il curatore si presenta come sinmar anche negli indirizzi
 
 - Su richiesta di Sandro, tolto il nome del curatore dalla nota della chat e dall'informativa. Il titolare resta indicato con l'account GitHub `sinmar123`, contattabile tramite una segnalazione sul repository; l'informativa precisa che usa lo pseudonimo `sinmar` e che il nome si può chiedere con la stessa segnalazione.
