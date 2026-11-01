@@ -4,6 +4,20 @@ Cronologia delle modifiche. Ordine cronologico inverso.
 
 Nota: nelle voci fino al 1/11/2026 il curatore è indicato con lo pseudonimo sinmar.
 
+## 2026-11-01 - GBOT-codex - Approfondimenti: nuovi riscontri sul bianco, tre domande ancora aperte
+
+- Integrata la pagina 5.1 dal materiale del 1/11/2026, letto per intero insieme al JSON. Restano otto capitoli, i cinque punti della sintesi e le sette proposte pratiche; la premessa distingue ora testi letti ed estratti.
+- Bandi: il silenzio sul bianco opaco riguarda i 19 premi e 21 documenti della ricognizione italiana, non tutti i concorsi. Entrano Combat, Marchionni e Forte di Bard, che ammettono la gouache fra le tecniche di grafica o illustrazione, la clausola sul bianco nelle miscele del 2024 e i punti 3 e 5 di Alvese 2019. L'esclusione della gouache dall'acquerello puro resta una deduzione al condizionale.
+- Pigmenti: aggiunti PW21 e PW22, il nome non univoco «bianco permanente» e il limite della tabella sui pigmenti in polvere. Per il PW21 valgono le schede Paint List e CHS confermate; il PW22 resta una stima da estratto.
+- Pittori: aggiunti Whistler, la testimonianza di Menpes e la cautela sull'ipotesi di alterazione dello zinco di Turner. Per decisione del curatore, Waterlow e Weight Reed sono testi letti; Noble, Kwamena-Poh, Osorio e O'Connor restano estratti, al condizionale. Segnalata la contraddizione interna di Waterlow; nessun uso della gouache attribuito a Pederson.
+- Riserve e conservazione: precisati i diversi tempi del liquido, l'ingiallimento, le prove sulle carte di cotone, il nastro del gennaio 2025 e il termine prudenziale in assenza di istruzioni. Aggiunti il limite dell'ultravioletto e la cautela sull'umidità oltre il 75%, senza introdurre il dato incerto di 50-100 lux.
+- Restano dichiarate aperte tutte e tre le domande: coprenza in velatura, confronto della luce riflessa, mascheratura e sollevamento sulle carte attuali. Aggiunte 17 fonti, per un totale di 86; il materiale di ricerca fornito è indicato come documento non pubblicato, senza inventare un collegamento. Aggiornata la descrizione in AGENTS.md; README invariato perché ancora coerente.
+- Controlli: `python scripts/genera-sito.py` senza errori; Gulpease della pagina 5.1 a 69. Verificati gli otto capitoli, i rimandi alle fonti, la sintesi e le sette proposte pratiche invariate. Nessun nome di marca nel corpo, nessun trattino lungo e nessuna fonte rimasta senza citazioni. Le altre pagine HTML e il contenuto di `lib/prompt-chat.js` restano identici.
+
+-- GBOT-codex
+
+Prossima azione: revisione del curatore; l'unione su `main`, che pubblica il sito, aspetta il suo ok.
+
 ## 2026-11-01 - GBOT-codex - CHANGELOG: il curatore è indicato come sinmar
 
 - Su richiesta del curatore, sostituito il suo nome completo con lo pseudonimo `sinmar` nel CHANGELOG, anche nei titoli e nelle citazioni dei testi precedenti.
