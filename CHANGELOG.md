@@ -8,6 +8,7 @@ Cronologia delle modifiche. Ordine cronologico inverso.
 - Su richiesta di Sandro del 1° novembre, sostituita solo la frase «Lo realizziamo in gran parte con l'intelligenza artificiale.»: il sito si realizza con l'ausilio di strumenti di IA, partendo dai modelli disponibili nell'ottobre 2026; man mano che ne escono di nuovi, si provano per rileggere e migliorare i testi.
 - In questa revisione restano invariati il resto della nota sull'IA e le altre due note, già riordinate e semplificate. Restano quindi il dialogo da cui nascono testi, pagine, codice e illustrazioni, i nomi Gemini 4 Argon, GPT-6 Astra e Claude Opus 5.5, i loro compiti e il richiamo alle fonti degli Approfondimenti.
 - Controlli: `python scripts/genera-sito.py` senza errori; tutte le pagine controllate sopra 52. Misurata anche la home, esclusa dal controllo ordinario: Gulpease da 50 a 53 rispetto a `main`; le tre note passano da 52 a 63. Testi del generatore confrontati con quelli in `site/index.html`: coincidono e seguono l'ordine richiesto. `lib/prompt-chat.js` invariato nel contenuto.
+- Sul W520 la sandbox di Codex non può scrivere nella cartella `.git` del repository; dopo aver verificato le modifiche, Grok Bot esegue commit, push e apertura della pull request fuori dalla sandbox.
 
 -- GBOT-codex
 
