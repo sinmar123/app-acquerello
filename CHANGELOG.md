@@ -4,6 +4,15 @@ Cronologia delle modifiche. Ordine cronologico inverso.
 
 Nota: nelle voci fino al 1/11/2026 il curatore è indicato con lo pseudonimo sinmar.
 
+## 2026-11-01 - GBOT-codex - Approfondimenti: nota di metodo sulla ricerca del bianco
+
+- La pagina 5.1 dichiara come sono state fatte le ricerche: documento di lavoro del curatore, versione 2 del 1/11/2026, con fonti numerate ed etichette di certezza; ricerca con strumenti di IA poi ricontrollata.
+- La nota distingue le letture integrali dagli estratti e dalle copie di lettura. Spiega le citazioni inglesi tradotte, con l'originale nella fonte, e le domande aperte lasciate tali; la scelta di che cosa pubblicare resta del curatore.
+- Sostituito il rimando alla nota generale della home con il richiamo alla nota presente nella pagina. I cinque paragrafi della nota sono quelli concordati; il secondo nomina i due casi che la pagina dichiara, la scheda del PW22 e la testimonianza di Kwamena-Poh. Capitoli, fonti, sintesi, titolo, sottotitolo e scheda del tema invariati.
+- Il generatore accetta il campo facoltativo `nota_metodo` e lo mostra dopo la premessa, prima del primo capitolo, in un riquadro con uno sfondo distinto. Aggiornate le descrizioni nel generatore e in AGENTS.md.
+
+-- GBOT-codex
+
 ## 2026-11-01 - GBOT-codex - Approfondimenti: nuovi riscontri sul bianco, tre domande ancora aperte
 
 - Integrata la pagina 5.1 dal materiale del 1/11/2026, letto per intero insieme al JSON. Restano otto capitoli, i cinque punti della sintesi e le sette proposte pratiche; la premessa distingue ora testi letti ed estratti.
