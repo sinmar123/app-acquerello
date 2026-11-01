@@ -522,7 +522,7 @@ def blocco_chat_e_suggerimenti(sezione_predefinita: str, pagina_path: str) -> st
     <div id="chat-esito-err" class="sugg-esito err" role="alert"></div>
     <details class="chat-nota-privacy">
       <summary>Informativa sul trattamento dei dati della chat</summary>
-      <p>Titolare del trattamento è Alessandro Sanvitale, curatore del Quaderno (account GitHub sinmar123), che si contatta aprendo una
+      <p>Titolare del trattamento è il curatore del Quaderno, account GitHub sinmar123, che si contatta aprendo una
       <a href="{REPO_URL}/issues" target="_blank" rel="noopener">segnalazione sul repository del progetto</a>.
       La domanda scritta nella chat viene inviata a Google tramite l'API Gemini al solo scopo di generare la risposta,
       insieme alle due domande e risposte precedenti della stessa conversazione e all'indirizzo della pagina consultata,
@@ -1039,8 +1039,9 @@ def genera_informativa() -> str:
 <p class="sotto">Come il sito tratta i dati di chi lo visita. Testo del {INFORMATIVA_DATA}.</p>
 
 <h2>Chi è il titolare</h2>
-<p>Il titolare del trattamento è Alessandro Sanvitale, curatore del sito (account GitHub sinmar123). Lo si contatta
+<p>Il titolare del trattamento è il curatore del sito, account GitHub sinmar123. Lo si contatta
 aprendo una <a href="{REPO_URL}/issues" target="_blank" rel="noopener">segnalazione sul repository del progetto</a>.
+Il curatore usa lo pseudonimo sinmar; il suo nome, se serve, si chiede con la stessa segnalazione.
 Le segnalazioni sono pubbliche: non vanno scritti dati personali.</p>
 
 <h2>Cookie e strumenti di misura</h2>
@@ -1110,12 +1111,21 @@ REINDIRIZZAMENTI = [
     ("/studio-plein-air/index.html", "principi", "studio-aperto"),
 ]
 
+# Rinvii a una pagina intera, senza ancora: percorso vecchio e pagina nuova.
+REINDIRIZZAMENTI_PAGINE = [
+    ("/opere/alessandro-sanvitale/", "opere/sinmar"),
+]
+
 
 def controlla_reindirizzamenti():
     for vecchio, slug, ancora in REINDIRIZZAMENTI:
         pagina = SITE_DIR / slug / "index.html"
         if not pagina.exists() or f'id="{ancora}"' not in pagina.read_text(encoding="utf-8"):
             raise SystemExit(f"genera-sito: il rinvio di {vecchio} porta a /{slug}/#{ancora}, che non esiste")
+    for vecchio, slug in REINDIRIZZAMENTI_PAGINE:
+        pagina = SITE_DIR / slug / "index.html"
+        if not pagina.is_file():
+            raise SystemExit(f"genera-sito: il rinvio di {vecchio} porta a /{slug}/, che non esiste")
 
 
 def scrivi_file_di_servizio(pagine_extra=None):
@@ -1124,7 +1134,8 @@ def scrivi_file_di_servizio(pagine_extra=None):
         if p not in pagine:
             pagine.append(p)
     (SITE_DIR / "_redirects").write_text(
-        "".join(f"{vecchio} /{slug}/#{ancora} 301\n" for vecchio, slug, ancora in REINDIRIZZAMENTI),
+        "".join(f"{vecchio} /{slug}/#{ancora} 301\n" for vecchio, slug, ancora in REINDIRIZZAMENTI)
+        + "".join(f"{vecchio} /{slug}/ 301\n" for vecchio, slug in REINDIRIZZAMENTI_PAGINE),
         encoding="utf-8", newline="\n")
     (SITE_DIR / "robots.txt").write_text(
         f"User-agent: *\nAllow: /\nDisallow: /api/\nSitemap: {SITO_URL}/sitemap.xml\n", encoding="utf-8", newline="\n")
