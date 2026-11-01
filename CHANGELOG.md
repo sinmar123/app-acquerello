@@ -6,9 +6,9 @@ Nota: nelle voci fino al 1/11/2026 il curatore è indicato con lo pseudonimo sin
 
 ## 2026-11-01 - GBOT-codex - Approfondimenti: nota di metodo sulla ricerca del bianco
 
-- La pagina 5.1 dichiara come sono state fatte le ricerche: documento di lavoro del curatore, versione 2 del 1/11/2026, con fonti numerate ed etichette di certezza; ricerca con strumenti di IA poi ricontrollata.
-- La nota distingue le letture integrali dagli estratti e dalle copie di lettura. Spiega le citazioni inglesi tradotte, con l'originale nella fonte, e le domande aperte lasciate tali; la scelta di che cosa pubblicare resta del curatore.
-- Sostituito il rimando alla nota generale della home con il richiamo alla nota presente nella pagina. I cinque paragrafi della nota sono quelli concordati; il secondo nomina i due casi che la pagina dichiara, la scheda del PW22 e la testimonianza di Kwamena-Poh. Capitoli, fonti, sintesi, titolo, sottotitolo e scheda del tema invariati.
+- La pagina 5.1 dichiara come sono state fatte le ricerche, con i modelli e il compito di ciascuno: Grok Build e Codex in quattro corse parallele, Gemini Deep Research su tutte le domande, Consensus per gli articoli scientifici, Claude Code per la rilettura delle fonti decisive e la sintesi; poi DeepSeek, Kimi e GLM nei collaudi del 31 ottobre e del 1 novembre.
+- La nota spiega le sigle delle fonti (V, C, M, A), le citazioni inglesi tradotte con l'originale nella fonte e le domande aperte lasciate tali. Aggiunge che i bandi italiani sono stati cercati a mano, con 19 premi e 21 documenti aperti uno per uno, e che le sei dichiarazioni dei pittori sono state riaperte il 1 novembre.
+- La nota è di dieci paragrafi e sta in un riquadro dopo la premessa; il documento di lavoro è indicato come conservato dal curatore e non pubblicato, senza collegamento.
 - Il generatore accetta il campo facoltativo `nota_metodo` e lo mostra dopo la premessa, prima del primo capitolo, in un riquadro con uno sfondo distinto. Aggiornate le descrizioni nel generatore e in AGENTS.md.
 
 -- GBOT-codex
