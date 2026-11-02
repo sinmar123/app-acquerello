@@ -4,6 +4,17 @@ Cronologia delle modifiche. Ordine cronologico inverso.
 
 Nota: nelle voci fino al 1/11/2026 il curatore è indicato con lo pseudonimo sinmar.
 
+## 2026-11-02 - OC - Riscrittura approvata della nota di metodo sul bianco
+
+- Inserito il testo proposto in chat e approvato dal curatore il 2/11/2026: la nota della pagina 5.1 passa da dieci a sei capoversi, da 503 a 232 parole. Restano i nomi e le versioni dei modelli, i loro compiti, la distinzione fra concordanza e verifica sul documento, i limiti delle letture e il ruolo del curatore. Tolti la cronaca delle singole esecuzioni, i conteggi intermedi e i dettagli sui token.
+- Accorciato il richiamo nella premessa, senza ripetere l'elenco dei modelli. Il riquadro si intitola «Come è stata svolta la ricerca»; aggiornata la descrizione in AGENTS.md e la data della pagina al 2/11/2026. README ancora coerente.
+- Controlli: generazione completa del sito senza errori, Gulpease della pagina 5.1 a 68. JSON confrontato con la base 362a7d8: sintesi, otto capitoli e 86 fonti invariati. I sei capoversi dell'HTML coincidono con il testo approvato; 351 rimandi interni validi. Il confronto delle impronte dei file generati rileva la sola pagina del bianco modificata; prompt della chat invariato. `git diff --check` senza rilievi. Lo stile-lint non trova costrutti vietati e segnala una frase di 26 parole, mantenuta perché elenca nomi e versioni approvati.
+- Verifica visiva non completata in questo ambiente, privo delle librerie richieste dal browser. Nessuna modifica al sito pubblico. L'accesso GitHub del bot non è configurato: il lavoro resta sul ramo dedicato `oc/261102-nota-metodo-bianco`.
+
+-- OC
+
+Prossima azione: collegare GitHub a OpenClaw, inviare il ramo oc/261102-nota-metodo-bianco e aprire la pull request; unire su main solo dopo l'ok esplicito di Sandro.
+
 ## 2026-11-01 - GBOT-codex - Approfondimenti: nota di metodo sulla ricerca del bianco
 
 - La pagina 5.1 dichiara come sono state fatte le ricerche, con i modelli e il compito di ciascuno: Grok Build (grok-4.7) e Codex (gpt-6-astra) in quattro corse parallele con ricerca web attiva e impegno alto, Gemini Deep Research (agente deep-research-preview-04-2026) su tutte e sette le domande, Consensus per gli articoli scientifici, Claude Code per la rilettura delle fonti decisive e la sintesi, nominato senza versione perché i documenti non la indicano.

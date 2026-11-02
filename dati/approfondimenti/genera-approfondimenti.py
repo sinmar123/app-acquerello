@@ -237,7 +237,7 @@ def pagina_tema(sez, tema):
     nota_metodo = ""
     if tema.get("nota_metodo"):
         paragrafi = "".join(f"<p>{e(p)}</p>" for p in tema["nota_metodo"])
-        nota_metodo = f'<div class="metodo"><h2>Nota di metodo</h2>{paragrafi}</div>'
+        nota_metodo = f'<div class="metodo"><h2>Come è stata svolta la ricerca</h2>{paragrafi}</div>'
     numero = numero_tema(sez, tema)
     corpo = (
         f'<p class="filo"><a href="../">{e(sez["numero"])}. {e(sez["titolo"])}</a></p>'
