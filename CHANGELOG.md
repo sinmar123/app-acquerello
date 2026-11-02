@@ -4,6 +4,22 @@ Cronologia delle modifiche. Ordine cronologico inverso.
 
 Nota: nelle voci fino al 1/11/2026 il curatore è indicato con lo pseudonimo sinmar.
 
+## 2026-11-03 - OC - Revisione di stile approvata per tutte le sezioni
+
+- Applicate le proposte del documento locale `lavoro/app-acquerello-261102-proposte-stile.md`, approvate da Sandro nel topic dell'app il 2/11/2026 con «Ok fai tutte le modifiche proposte». Nessuna unione su `main` o pubblicazione.
+- Home: presentazione ridotta, tolto l'elenco che ripeteva le schede, distinti modulo disponibile e moduli in preparazione. I dettagli sui modelli restano nella Nota di metodo apribile. Testata confrontata con la versione iniziale: da 183 a 88 parole, contando titolo, sottotitolo e paragrafi.
+- Eventi: aperture riscritte in prosa compiuta; nell'archivio compare l'anno corretto e la scheda apre con date e luogo. Negli Alberi, tutte le 25 modalità hanno titoli brevi e sintesi iniziali; procedimenti estesi e sintesi dei passaggi sono apribili. Conservati colori, autori, attrezzi, esercizi, infografiche e 32 segmenti video.
+- Principi: obiettivo della sezione prima delle note di metodo, con collegamenti agli argomenti del capitolo 8. Teoria dei colori: definizioni ed esempi prima di storia e dettagli; modello matematico e taratura separati dall'uso del calcolatore. Precisato l'ambito dell'acquerello trasparente nella frase sul bianco della carta, con il rimando all'Approfondimento. Limiti e taratura provvisoria restano visibili e invariati.
+- Marche: fonti numerate per capitolo tramite il modulo condiviso, con ritorno al testo. Semplificata l'apertura, mantenute le 6 serie, le 44 righe e tutte le date di controllo. Soggetti: i cinque moduli futuri hanno presentazioni brevi, senza anticipare piccole lezioni.
+- Approfondimenti: apertura meno ripetitiva; la nota sul Bianco è apribile e resta identica al testo approvato. Nelle sei testimonianze sulla gouache restano ciò che le fonti documentano e i limiti; date complete, accesso e qualifiche sono nelle fonti, già complete e non modificate. Nelle Opere, invito e consenso sono separati senza cambiare le parole; la pagina di sinmar distingue «Come leggere le schede» dalla presentazione. Nessuna riscrittura di opere o pareri attribuiti ai modelli. Informativa senza interventi giuridici.
+- Testi comuni: pulsanti «Invia domanda» e «Invia suggerimento», nota dell'assistente distinta per scopo, risposte e limiti; «Colore da ottenere», «Trova le miscele» e «Tabella della serie». Quote, API e testi delle informative conservati, salvo il nome del pulsante nell'avvertenza di invio. Aggiornati README, descrizioni in AGENTS e prompt della chat generato.
+- Verifiche: generazione completa senza errori e controlli di leggibilità superati; 14 pagine HTML controllate, nessun collegamento o ancora interna mancante, nessun nuovo ID duplicato. Sintassi di cinque script JavaScript distinti verificata con Node. Confronto dei dati con la base `8313497`: fonti dei Principi e del Bianco, tabelle commerciali, video, programma dell'evento, opere/pareri, tavolozza, algoritmo del calcolatore e API invariati. `git diff --check` senza rilievi. La formattazione JSON fuori dai valori cambiati è conservata.
+- Controllo grafico nel browser non eseguito: nell'ambiente non è presente un browser supportato. Accesso GitHub in scrittura non configurato per il bot; modifica conservata sul ramo dedicato e consegnata anche come patch locale, senza credenziali o dati privati.
+
+-- OC
+
+Prossima azione: inviare il ramo oc/261102-proposte-stile e aprire la pull request con accesso GitHub abilitato; unire su main solo dopo l'ok esplicito di Sandro per questa revisione.
+
 ## 2026-11-02 - OC - Proposte di stile per le pagine pubbliche
 
 - Su richiesta del curatore, esaminate le 14 pagine della sitemap pubblica nella versione successiva alla PR #64. La revisione riguarda prosa, titoli, ordine delle informazioni, rimandi alle fonti ed etichette; non è una verifica scientifica né una prova grafica su telefono.

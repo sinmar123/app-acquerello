@@ -1,5 +1,5 @@
 {
-  "data": "2026-10-24",
+  "data": "2026-11-03",
   "nota": "Testi della sezione Teoria dei colori. Un paragrafo con una fonte è un oggetto {testo, fonti}: il generatore numera le fonti e le elenca in fondo al capitolo; i testi delle fonti sono citati e collegati, non copiati. Rimandi controllati sulle pagine delle fonti il 21/10/2026. I campi possono contenere semplici tag html (b, i, a, br).",
   "titolo": "Teoria dei colori",
   "sottotitolo": "Tinta, valore e croma secondo Munsell; perché i pigmenti non si mescolano come le luci; il ruolo dell'acqua e della carta; un calcolatore di miscele.",
@@ -10,32 +10,11 @@
       "titolo": "1. Tinta, valore, croma",
       "paragrafi": [
         {
-          "testo": "Albert Munsell (1858-1918), pittore e insegnante di Boston, propose nel 1905 (<i>A Color Notation</i>) di descrivere il colore di ogni oggetto con tre grandezze indipendenti, scelte in modo che passi uguali corrispondano a differenze percepite uguali. Il suo atlante del 1915 fu rivisto nel 1943 dalla Optical Society of America (la «renotation»), che lo collegò alla colorimetria della CIE: è la base delle edizioni attuali.",
+          "testo": "Nel sistema di Munsell un colore si descrive attraverso <b>tinta</b>, <b>valore</b> e <b>croma</b>. La tinta ne identifica la famiglia; il valore indica quanto è chiaro o scuro. Il croma esprime la distanza dal grigio dello stesso valore.",
           "fonti": [
+            "wiki-munsell",
             "briggs",
-            "wiki-munsell",
-            "wiki-albert-munsell"
-          ]
-        },
-        {
-          "testo": "<b>Tinta</b> (hue): la famiglia del colore. Munsell usa 5 tinte principali, rosso R, giallo Y, verde G, blu B, porpora P, e 5 intermedie, YR, GY, BG, PB, RP. Ciascuna si divide in quattro passi (2,5, 5, 7,5, 10), per un totale di 40 tinte nell'atlante.",
-          "fonti": [
-            "wiki-munsell",
-            "briggs"
-          ]
-        },
-        {
-          "testo": "<b>Valore</b> (value): quanto il colore è chiaro o scuro, da 0 (nero ideale) a 10 (bianco ideale). I grigi si indicano con N1, N2... N9. Il valore Munsell corrisponde all'incirca alla chiarezza CIELAB L* divisa per 10: un grigio N5 ha L* intorno a 50.",
-          "fonti": [
-            "wiki-munsell",
             "handprint-valore"
-          ]
-        },
-        {
-          "testo": "<b>Croma</b> (chroma): quanto il colore si discosta dal grigio dello stesso valore. Un grigio ha croma 0; un massimo fisso non esiste, perché il croma più alto ottenibile cambia da tinta a tinta e da valore a valore. Per questo il «solido» di Munsell ha una forma irregolare, e ogni tavolozza ne copre solo una parte.",
-          "fonti": [
-            "briggs",
-            "wiki-munsell"
           ]
         },
         {
@@ -49,6 +28,47 @@
           "fonti": [
             "handprint-valore",
             "handprint-mescolanza"
+          ]
+        }
+      ],
+      "approfondimenti": [
+        {
+          "titolo": "Le tre grandezze in dettaglio",
+          "paragrafi": [
+            {
+              "testo": "<b>Tinta</b> (hue): la famiglia del colore. Munsell usa 5 tinte principali, rosso R, giallo Y, verde G, blu B, porpora P, e 5 intermedie, YR, GY, BG, PB, RP. Ciascuna si divide in quattro passi (2,5, 5, 7,5, 10), per un totale di 40 tinte nell'atlante.",
+              "fonti": [
+                "wiki-munsell",
+                "briggs"
+              ]
+            },
+            {
+              "testo": "<b>Valore</b> (value): quanto il colore è chiaro o scuro, da 0 (nero ideale) a 10 (bianco ideale). I grigi si indicano con N1, N2... N9. Il valore Munsell corrisponde all'incirca alla chiarezza CIELAB L* divisa per 10: un grigio N5 ha L* intorno a 50.",
+              "fonti": [
+                "wiki-munsell",
+                "handprint-valore"
+              ]
+            },
+            {
+              "testo": "<b>Croma</b> (chroma): quanto il colore si discosta dal grigio dello stesso valore. Un grigio ha croma 0; un massimo fisso non esiste, perché il croma più alto ottenibile cambia da tinta a tinta e da valore a valore. Per questo il «solido» di Munsell ha una forma irregolare, e ogni tavolozza ne copre solo una parte.",
+              "fonti": [
+                "briggs",
+                "wiki-munsell"
+              ]
+            }
+          ]
+        },
+        {
+          "titolo": "Origine del sistema e atlante",
+          "paragrafi": [
+            {
+              "testo": "Albert Munsell (1858-1918), pittore e insegnante di Boston, propose nel 1905 (<i>A Color Notation</i>) di descrivere il colore di ogni oggetto con tre grandezze indipendenti, scelte in modo che passi uguali corrispondano a differenze percepite uguali. Il suo atlante del 1915 fu rivisto nel 1943 dalla Optical Society of America (la «renotation»), che lo collegò alla colorimetria della CIE: è la base delle edizioni attuali.",
+              "fonti": [
+                "briggs",
+                "wiki-munsell",
+                "wiki-albert-munsell"
+              ]
+            }
           ]
         }
       ]
@@ -77,13 +97,6 @@
             "handprint-ruota",
             "handprint-mescolanza"
           ]
-        },
-        {
-          "testo": "<b>Il modello del calcolatore.</b> La teoria di Kubelka e Munk (1931) descrive uno strato di colore con due grandezze per ogni lunghezza d'onda: l'assorbimento (K) e la diffusione (S). Nella versione più semplice, detta «a una costante», di ogni pigmento basta il rapporto K/S, e il K/S di una miscela è la media dei K/S dei componenti pesata con le quantità. Il calcolatore esegue questo conto su 38 bande dello spettro, da 380 a 750 nanometri, con la correzione delle quantità descritta sotto il calcolatore, e riconverte il risultato in un colore per lo schermo.",
-          "fonti": [
-            "wiki-km",
-            "spectraljs"
-          ]
         }
       ]
     },
@@ -93,12 +106,13 @@
       "titolo": "3. L'acquerello: acqua, carta, velature",
       "paragrafi": [
         {
-          "testo": "Nell'acquerello il bianco è quello della carta: per schiarire si aggiunge acqua, così sulla carta si deposita meno pigmento.",
+          "testo": "Nell'acquerello trasparente, le zone bianche sono quelle della carta lasciata scoperta. Per schiarire si aggiunge acqua, così sulla carta si deposita meno pigmento.",
           "fonti": [
             "handprint-mescolanza",
             "handprint-valore"
           ]
         },
+        "Gli usi del bianco aggiunto sono trattati nell'<a href=\"../approfondimenti/bianco/\">approfondimento sul bianco</a>.",
         "<b>Consistenze e carta.</b> Le tre consistenze della miscela (tè, latte, miele), gli stati della carta (asciutta, umida, bagnata e i momenti intermedi) e il modo di abbinarli sono trattati nella sezione <a href=\"../principi/#consistenze\">Principi generali</a>, con le fonti.",
         {
           "testo": "<b>Mescolare o velare.</b> Mescolando in tavolozza, i pigmenti stanno nello stesso strato; velando, cioè stendendo un colore sopra un altro già asciutto, la luce attraversa due filtri sovrapposti. Con i pigmenti opachi lo strato superiore copre di più e l'ordine delle velature cambia il risultato.",
@@ -172,7 +186,16 @@
         "fonti": [
           "spectraljs"
         ]
-      }
+      },
+      "modello": [
+        {
+          "testo": "<b>Il modello del calcolatore.</b> La teoria di Kubelka e Munk (1931) descrive uno strato di colore con due grandezze per ogni lunghezza d'onda: l'assorbimento (K) e la diffusione (S). Nella versione più semplice, detta «a una costante», di ogni pigmento basta il rapporto K/S, e il K/S di una miscela è la media dei K/S dei componenti pesata con le quantità. Il calcolatore esegue questo conto su 38 bande dello spettro, da 380 a 750 nanometri, con la correzione delle quantità descritta sotto il calcolatore, e riconverte il risultato in un colore per lo schermo.",
+          "fonti": [
+            "wiki-km",
+            "spectraljs"
+          ]
+        }
+      ]
     }
   ],
   "fonti": {

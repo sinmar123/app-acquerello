@@ -1,9 +1,9 @@
 {
-  "titolo": "Soggetti: un modulo per ogni tema, dagli alberi alle architetture",
-  "sottotitolo": "Una sezione che cresce un modulo alla volta: per ogni soggetto classico dell'acquerello, esempi tipici, modalità tratte dai video, infografiche in tre fasi ed estratti video con inizio e fine al secondo.",
+  "titolo": "Soggetti: esercizi per tema",
+  "sottotitolo": "Esempi, infografiche e passaggi dei video didattici",
   "introduzione": [
-    "Accanto alle tre sezioni generali (Principi generali, Teoria dei colori, Marche e tubetti), questa sezione raccoglie un modulo per ogni soggetto.",
-    "Il Quaderno è in fase di sviluppo: il primo modulo pubblicato è quello sugli alberi. I moduli successivi, su cieli e nuvole, fiori, acqua e riflessi, rocce e architetture, seguiranno lo stesso schema."
+    "Ogni modulo studia un soggetto attraverso più modalità tratte dai video, con infografiche in tre fasi e passaggi indicati al secondo.",
+    "Il modulo sugli alberi è pubblicato. Gli altri cinque sono in preparazione; le schede ne presentano il contenuto previsto."
   ],
   "soggetti": [
     {
@@ -22,8 +22,8 @@
       "stato": "in_programma",
       "etichetta_stato": "In preparazione",
       "titolo": "Cieli e nuvole",
-      "sottotitolo": "Campiture sfumate, nuvole a risparmio o per sollevamento del colore, cieli al tramonto e temporaleschi",
-      "descrizione": "Le grandi campiture su tavola inclinata: la stesura sfumata (graded wash) su carta asciutta e bagnata; i cumuli ottenuti a risparmio del bianco o sollevando il colore con pennello scarico e carta assorbente; il passaggio dal caldo al freddo verso l'orizzonte senza ingrigire e senza verdi indesiderati; le nuvole dense costruite bagnato su umido.",
+      "sottotitolo": "Campiture e forme delle nuvole",
+      "descrizione": "Il modulo raccoglierà esempi di campiture sfumate, nuvole a risparmio del bianco o per sollevamento e passaggi di colore nei cieli.",
       "badge": ["Campiture sfumate", "Sollevamento a umido", "Caldo e freddo", "Bagnato su umido"]
     },
     {
@@ -31,8 +31,8 @@
       "stato": "in_programma",
       "etichetta_stato": "In preparazione",
       "titolo": "Fiori",
-      "sottotitolo": "Velature trasparenti sui petali, bordi netti e bordi persi (lost and found), steli e foglie in sintesi",
-      "descrizione": "Il fiore dal vero e in sintesi: conservare la luce della carta nelle corolle chiare, usare i rossi e i viola di chinacridone molto intensi, fondere i colori alla base del calice sulla carta umida, costruire in negativo steli e foglie in controluce.",
+      "sottotitolo": "Corolle, steli e foglie",
+      "descrizione": "Il modulo studierà velature sui petali, bordi netti e persi e pittura in negativo per steli e foglie.",
       "badge": ["Velature intense", "Bordi netti e persi", "Pittura in negativo", "Sintesi"]
     },
     {
@@ -40,8 +40,8 @@
       "stato": "in_programma",
       "etichetta_stato": "In preparazione",
       "titolo": "Acqua e riflessi",
-      "sottotitolo": "Riflessi verticali sull'acqua ferma, pennello secco per i riflessi del sole, onde e corsi d'acqua",
-      "descrizione": "La superficie dell'acqua: nei riflessi i valori si avvicinano (i chiari si scuriscono, gli scuri si schiariscono); le masse riflesse si stendono sulla campitura umida quando perde il lucido e si interrompono con righe orizzontali a secco; la grana ruvida della carta rende la luce radente.",
+      "sottotitolo": "Acqua ferma, onde e corsi d’acqua",
+      "descrizione": "Il modulo confronterà i riflessi sull'acqua ferma, le interruzioni orizzontali e il pennello secco per le luci.",
       "badge": ["Riflessi bagnato su umido", "Pennello secco sulla grana", "Valori avvicinati", "Acqua ferma e mossa"]
     },
     {
@@ -49,8 +49,8 @@
       "stato": "in_programma",
       "etichetta_stato": "In preparazione",
       "titolo": "Rocce, montagne e terreni",
-      "sottotitolo": "Piani in luce e in ombra, granulazione, incisioni e prospettiva aerea",
-      "descrizione": "Rocce, scogliere e catene montuose: piani in luce e in ombra separati con pennellate piatte e angolose, la granulazione dell'oltremare e delle terre bruciate per la trama della pietra, incisioni sulla carta umida per le fessure, profili sempre più freddi in lontananza.",
+      "sottotitolo": "Luce e trama della pietra",
+      "descrizione": "Il modulo raccoglierà esempi su piani in luce e in ombra, granulazione, incisioni e prospettiva aerea.",
       "badge": ["Piani di luce e ombra", "Granulazione", "Incisioni", "Prospettiva aerea"]
     },
     {
@@ -58,8 +58,8 @@
       "stato": "in_programma",
       "etichetta_stato": "In preparazione",
       "titolo": "Architetture e scorci urbani",
-      "sottotitolo": "Ombre collegate, trama degli intonaci, equilibrio fra geometria e sintesi",
-      "descrizione": "Case di campagna, borghi e scorci: un primo velo caldo per la luce del sole, le ombre proprie e portate collegate in un'unica forma a consistenza latte, pietre e intonaci resi con velature granulate e spruzzi controllati, gli accenti scuri finali a consistenza miele.",
+      "sottotitolo": "Edifici, ombre e intonaci",
+      "descrizione": "Il modulo studierà le ombre collegate, la trama dei muri e gli accenti finali in case, borghi e scorci urbani.",
       "badge": ["Ombre collegate", "Trama dei muri", "Luce e controluce", "Accenti finali"]
     }
   ]

@@ -27,7 +27,13 @@ Il repository è autonomo: contiene i dati, le infografiche, le illustrazioni e 
 | `/opere/` | **7. Opere di non professionisti**: acquerelli di dilettanti, cioè di appassionati che non dipingono per mestiere, una sottosezione per autore (`7.1` sinmar, `/opere/<autore>/`) con la presentazione e le opere nell'ordine che l'autore sceglie; il titolo è la data in cui l'opera è stata dipinta, scritta sul foglio o, dove manca, la data della fotografia, con il numero del foglio quando c'è; sotto ogni acquerello, se l'autore lo chiede, uno o più brevi pareri dell'IA, ognuno col suo modello (per la 7.1 Claude Opus 5.5 e GPT-6 Astra); le opere restano dei rispettivi autori, fuori dalla licenza CC BY 4.0 | `dati/opere/` |
 | `/informativa/` | Informativa sulla privacy: titolare, cookie, video di YouTube caricati al clic, chat e suggerimenti; collegata dal piè di pagina di ogni pagina | `scripts/genera-sito.py` |
 
-Le frasi «L'autore, in sintesi» della sezione Alberi riassumono in italiano il parlato dei video, con l'aiuto dell'IA: non sono trascrizioni.
+## Organizzazione dei testi
+
+Le aperture presentano il contenuto della pagina; le note di metodo e i dettagli del modello di calcolo si possono aprire a parte. Nei Principi il capitolo 8 ha collegamenti ai propri argomenti. Nella Teoria dei colori, i concetti e gli esempi precedono la storia di Munsell e i dettagli matematici del calcolatore.
+
+Negli Alberi, ogni modalità ha un titolo breve e una sintesi iniziale; l'infografica conserva le tre fasi. La descrizione estesa del metodo e i riquadri «Dal video, in sintesi» si possono aprire per approfondire. Le sintesi del parlato sono preparate con l'aiuto dell'IA, non sono trascrizioni. Video, tempi e cautele sui colori restano dichiarati.
+
+Le Marche usano gli stessi rimandi numerati per capitolo delle altre guide. Le date di controllo restano nelle fonti e nelle righe delle tabelle. Nelle Opere, l'invito e le condizioni di pubblicazione sono separati dalla presentazione; la pagina dell'autore distingue «Come leggere le schede» dalla presentazione personale. I pareri dei modelli restano attribuiti e non vengono riscritti.
 
 ## Generare il sito in locale
 

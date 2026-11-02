@@ -1,11 +1,10 @@
 {
- "data": "2026-10-29",
+ "data": "2026-11-03",
  "nota": "Dati dei tubetti presi solo dalle pagine ufficiali dei produttori, con il link e la data di controllo su ogni riga. I colori (id e nome comune) vengono da dati/colori/tavolozza.json. GBOT-app-acquerello, 18/10/2026. Dal 29/10/2026 la sezione è generale: le tabelle dei sei colori della tavolozza ridotta stanno in fondo, come esempio (scelta del curatore).",
  "titolo": "Marche e tubetti: come orientarsi fra i colori in commercio",
- "sottotitolo": "Tubetti e pastiglie, serie per chi comincia e per artisti, come leggere l'etichetta e perché lo stesso nome può nascondere pigmenti diversi",
+ "sottotitolo": "Leggere l’etichetta e confrontare le serie",
  "introduzione": [
-  "Davanti allo scaffale dei colori le possibilità sono molte: marche diverse, più serie della stessa marca, tubetti e pastiglie, prezzi che cambiano da un colore all'altro. Questa sezione raccoglie quello che serve per orientarsi: come si presentano i colori in commercio, che cosa distingue una serie pensata per chi comincia da una pensata per gli artisti, come si legge l'etichetta e perché due tubetti con lo stesso nome possono contenere pigmenti diversi.",
-  "Gli esempi vengono da sei serie di cinque marche, lette sulle pagine ufficiali dei produttori, con il collegamento e la data di controllo. Non sono una classifica, e il Quaderno non consiglia una marca: fa fede sempre l'etichetta del tubetto."
+  "Questa guida aiuta a leggere l'etichetta e a confrontare i colori in commercio: formati, serie, pigmenti, trasparenza e resistenza alla luce. Gli esempi riguardano sei serie di cinque marche e rimandano alle pagine ufficiali dei produttori. Il Quaderno non propone una classifica: prima dell'acquisto, fa fede l'etichetta del tubetto."
  ],
  "criterio": "Oltre alla serie usata negli esercizi (Cotman) e alla serie superiore della stessa marca, le tabelle comprendono le marche confrontate nel video «Best Brand to Fill Watercolour Pans», raccolto nei materiali del Quaderno: Daniel Smith, Schmincke, Van Gogh e Maimeri Blu. Per ogni colore è riportato il tubetto con il nome più vicino; quando la serie ne ha due, per esempio il ceruleo vero e un'imitazione, sono riportati entrambi.",
  "criterio_fonte": "https://www.youtube.com/watch?v=F-wkzt94-OA",

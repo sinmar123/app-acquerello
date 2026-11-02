@@ -2,8 +2,8 @@
 
 Ogni capitolo numera le proprie fonti da 1, nell'ordine in cui le cita, e le elenca in fondo al capitolo,
 una per riga. Il numero nel testo porta alla fonte; la freccia accanto alla fonte riporta al rimando da cui
-si è partiti, oppure, senza JavaScript, al primo rimando del capitolo. Lo usano dati/principi/genera-principi.py
-e dati/colori/genera-teoria-colori.py: dopo una modifica si rigenera il sito con scripts/genera-sito.py."""
+si è partiti, oppure, senza JavaScript, al primo rimando del capitolo. Lo usano i generatori di Principi, Teoria dei colori, Marche e Approfondimenti:
+dopo una modifica si rigenera il sito con scripts/genera-sito.py."""
 import html
 
 CSS = """

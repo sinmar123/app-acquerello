@@ -1,25 +1,16 @@
 {
-  "data": "2026-10-24",
+  "data": "2026-11-03",
   "titolo": "Eventi",
-  "sottotitolo": "Locandina, programma e fotografie di ogni evento, con il calendario e l'archivio per anno",
+  "sottotitolo": "Festival, mostre, dimostrazioni e pittura all’aperto",
   "introduzione": [
-    "Questa sezione raccoglie festival, mostre, demo e uscite en plein air.",
-    "Per ogni evento ci sono la data, il luogo e la scheda.",
-    "Nella scheda stanno la locandina, il programma e le fotografie.",
-    "Ogni fotografia porta il nome di chi l'ha scattata."
+    "Questa sezione raccoglie festival, mostre, dimostrazioni e uscite di pittura all'aperto. Le schede riuniscono date, luoghi e programmi, con locandine e fotografie di chi ha partecipato. Ogni fotografia indica chi l'ha scattata."
   ],
-  "scheda_intro": [
-    "Il programma riporta solo ciò che è scritto nella fonte, con il collegamento.",
-    "La locandina, quando c'è un file, porta il credito e il collegamento alla fonte.",
-    "Le fotografie sono di chi ha partecipato."
-  ],
+  "scheda_intro": [],
   "archivio_intro": [
-    "L'archivio ordina gli eventi per anno.",
-    "Ogni scheda resta la pagina del singolo evento.",
-    "Un anno nuovo compare qui quando c'è almeno un evento."
+    "Le schede sono raccolte per anno, con programma e fotografie."
   ],
   "foto_intro": [
-    "Sotto ogni scatto stanno la didascalia e il nome di chi ha fatto la foto."
+    "Fotografie di chi ha partecipato, con didascalia e nome dell'autore dello scatto."
   ],
   "locandina_manca": "locandina da aggiungere",
   "nessuna_foto": "In questa scheda non ci sono fotografie.",
@@ -32,5 +23,8 @@
     "in_corso": "Nessun evento in corso.",
     "in_arrivo": "Nessun evento in arrivo.",
     "passato": "Nessun evento passato."
-  }
+  },
+  "archivio_anno_intro": [
+    "Qui sono raccolti gli eventi del {anno}. Ogni scheda conserva il programma e le fotografie."
+  ]
 }

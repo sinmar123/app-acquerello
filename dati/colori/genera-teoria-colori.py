@@ -124,9 +124,9 @@ CALCOLATORE_HTML = """
   <h3>Trova la miscela</h3>
   <p class="aiuto">Si sceglie il colore da ottenere: il calcolatore prova tutte le combinazioni di uno, due o tre tubetti con parti da 1 a 10 e mostra le 5 più vicine, misurando la distanza nello spazio OKLab.{rif_oklab}</p>
   <div class="riga-trova">
-    <label>Colore obiettivo <input id="tobj" type="color" value="#6b8e23"></label>
+    <label>Colore da ottenere <input id="tobj" type="color" value="#6b8e23"></label>
     <label class="spunta"><input id="tdil" type="checkbox" checked> considera anche la diluizione</label>
-    <button id="tvai" type="button">Cerca</button>
+    <button id="tvai" type="button">Trova le miscele</button>
   </div>
   <div id="tris"></div>
 </div>
@@ -184,6 +184,9 @@ figure { margin: 12px 0; } figcaption { font-size: .85em; color: #555; margin-to
 .coppia div { width: 44px; height: 54px; }
 .prop-txt { font-size: .88em; line-height: 1.35; } .prop-txt b.ric { color: #1f3c2b; }
 .vicino { font-weight: 600; } .vicino.si { color: #2c6a4a; } .vicino.quasi { color: #8a6a10; } .vicino.no { color: #a33; }
+.approfondimento { margin: 12px 0; padding: 10px 12px; background: #f1efe8; border: 1px solid #dfd9cc; border-radius: 8px; }
+.approfondimento summary { cursor: pointer; font-weight: 600; color: #2c4f3a; }
+.approfondimento p { margin: 8px 0 0; }
 code { background: #f1efe8; border-radius: 4px; padding: 0 4px; font-size: .9em; }
 footer { margin-top: 30px; font-size: .8em; color: #666; border-top: 1px solid #e3e0d8; padding-top: 10px; }
 """ + rimandi_fonti.CSS
@@ -216,7 +219,12 @@ def pagina():
                          + "".join(f"<li>{con_rimando(x, f'limite {i}')}</li>" for i, x in enumerate(c["limiti"], 1)) + "</ul></div>")
             # la frase su OKLab sta nel codice del calcolatore, e la sua fonte con lei
             corpo.append(CALCOLATORE_HTML.format(rif_oklab=F.rif(["oklab", "spectraljs"], "calcolatore, Trova la miscela")))
-            corpo.append(f'<p class="aiuto">{con_rimando(c["taratura"], "taratura")}</p>')
+            modello = "".join(f'<p>{con_rimando(p, "modello di calcolo")}</p>' for p in c.get("modello", []))
+            corpo.append('<details class="approfondimento"><summary>Modello di calcolo e taratura</summary>'
+                         + modello + f'<p>{con_rimando(c["taratura"], "taratura")}</p></details>')
+        for n, extra in enumerate(c.get("approfondimenti", []), 1):
+            paragrafi = "".join(f'<p>{con_rimando(p, f"approfondimento {n}")}</p>' for p in extra["paragrafi"])
+            corpo.append(f'<details class="approfondimento"><summary>{e(extra["titolo"])}</summary>{paragrafi}</details>')
         corpo.append(F.elenco())
         corpo.append("</section>")
         sezioni.append("\n".join(corpo))

@@ -1,5 +1,5 @@
 {
- "data": "2026-10-21",
+ "data": "2026-11-03",
  "nota": "Sezione Alberi ad acquerello: 6 esempi tipici di alberi e arbusti (sganciati da qualsiasi paesaggio fisso o specchio d'acqua), sviluppati attraverso 25 modalità video con un'infografica SVG in 3 fasi per ciascuna modalità e proposta colori doppia (libera in studio, tavolozza ridotta all'aperto, descritta nel capitolo 8 dei Principi). Dal 29/10/2026 la pagina si apre con sommario, indice e premessa.",
  "apertura": {
   "titolo": "S1 · Alberi ad acquerello: esempi, modalità e gesti nei video",
@@ -7,17 +7,24 @@
   "premessa": [
    {
     "testo": "Prima degli esercizi conviene conoscere le tre consistenze della miscela, gli stati della carta e il rapporto fra pennello e carta, trattati nei Principi generali.",
-    "link": [{"parola": "Principi generali", "href": "../principi/"}]
+    "link": [
+     {
+      "parola": "Principi generali",
+      "href": "../principi/"
+     }
+    ]
    },
    {
-    "testo": "I sei esempi vanno dagli abeti e dalle conifere in gruppo alle conifere alte e rade contro il cielo e alle chiome tonde d'autunno; seguono siepi e cespugli nel paesaggio, alberi invernali con fusti chiari e brina, rami sottili e foglie brinate in primo piano. Sono scelti per portamento, distanza e stagione, e sono un punto di partenza: se ne possono aggiungere molti altri."
-   },
-   {
-    "testo": "Nell'acquerello non esiste una ricetta unica per dipingere un albero. Per questo ogni esempio raccoglie più modalità, ciascuna tratta da uno o più video: la scheda riassume che cosa propone l'autore e quali colori e pennelli usa, l'infografica in tre fasi ne mostra i passaggi, e il lettore apre il video al punto giusto."
+    "testo": "Ogni esempio confronta più modalità. La spiegazione iniziale indica ciò che distingue il metodo; colori e attrezzi sono elencati a parte. L'infografica mostra le tre fasi. La descrizione estesa e la sintesi di ogni passaggio si possono aprire per approfondire il video."
    },
    {
     "testo": "Per i colori, in studio si può seguire la tavolozza degli autori o usare i propri tubetti. All'aperto conviene portare pochi colori: la tavolozza ridotta e le sue miscele, richiamate nelle schede con le sigle M1-M12, sono nel capitolo In studio e all'aperto dei Principi generali.",
-    "link": [{"parola": "In studio e all'aperto", "href": "../principi/#tavolozza-plein-air"}]
+    "link": [
+     {
+      "parola": "In studio e all'aperto",
+      "href": "../principi/#tavolozza-plein-air"
+     }
+    ]
    }
   ],
   "tavolozza": [
@@ -335,7 +342,7 @@
   {
    "voce": "A1 Abeti e conifere in gruppo",
    "breve": "Abeti in gruppo",
-   "descrizione": "Sono conifere singole o raccolte in bosco a media distanza, caratterizzate dalla sagoma conica stretta e dalle cime ad altezze diverse. I quattro video qui sotto propongono quattro modalità complementari. La prima costruisce l'abete di punta oppure col fianco del pennello e sovrappone più piani dal chiaro allo scuro. La seconda imposta un cono rapido sollevando la luce col pennello asciugato. La terza fonde più colori direttamente nei rami umidi, la quarta fa intravedere il tronco solo nei piccoli varchi.",
+   "descrizione": "Sono conifere singole o raccolte in bosco a media distanza, caratterizzate dalla sagoma conica stretta e dalle cime ad altezze diverse.",
    "colori_studio": "In studio si può usare come base un verde vescica (sap green) o un verde oliva. Le punte al sole si schiariscono con verde oro (green gold), giallo di cadmio o giallo limone. I coni in primo piano e le ombre si scuriscono con blu ftalo, turchese di cobalto, blu oltremare, indaco o seppia. Per il tronco si usano terra di Siena naturale e bruciata.",
    "colori_aperto": "All'aperto, con i 6 colori proposti, si possono usare M1 (verde-giallo) per i tocchi di luce, M2 (verde medio al tè) per gli abeti lontani e M3 (verde scuro) per i coni principali. M4 (verde-blu d'ombra) serve per il lato in ombra, M11 (grigio caldo) per il tronco.",
    "pennelli": "Tondo medio con buona punta (n. 6-8, usato di punta o di fianco), tondo grande (n. 10-12, per il cono rapido) e tondo piccolo (n. 2, per i tratti di tronco nei varchi).",
@@ -343,62 +350,66 @@
    "modalita": [
     {
      "id": "A1-M1",
-     "titolo": "Modalità 1: dall'abete singolo, di punta o di fianco, al gruppo per strati",
+     "titolo": "Modalità 1: Abeti di punta, di fianco e per strati",
      "autore": "Emma Jane Lefebvre",
-     "proposta": "Mostra tre passaggi in sequenza. Nel primo un abete ravvicinato si costruisce tracciando un asse discontinuo, due piccoli tratti a V rivolti verso l'alto sulla cima e numerosi tocchi minuti di punta. Nel secondo un abete a media distanza si dipinge scendendo molto più in fretta a zig-zag, col fianco del pennello inclinato. Nel terzo la profondità di un bosco si crea dipingendo prima una fila di abeti chiari e diluiti sullo sfondo. Quando sono asciutti del tutto, davanti si sovrappongono i coni medi e quelli scuri.",
+     "proposta": "L'abete cambia con la distanza: tocchi minuti di punta da vicino, pennellate di fianco per la sagoma più sintetica. Nel gruppo, più strati asciutti distinguono i piani di profondità.",
      "colori_video": "Marrone chiaro per l'asse guida, verde chiaro molto diluito per il fondo, verde medio per il piano intermedio e verde scuro mescolato a nero o seppia per il primo piano (all'aperto coi 6 colori proposti: M2 diluito dietro, M3 in mezzo, M4 + M10 davanti).",
      "pennelli_video": "Tondo medio n. 6 (usato in verticale sulla punta per il primo albero e inclinato sul fianco per il secondo).",
      "segmenti": [
       "A1-1",
       "A1-2",
       "A1-4"
-     ]
+     ],
+     "procedimento": "Mostra tre passaggi in sequenza. Nel primo un abete ravvicinato si costruisce tracciando un asse discontinuo, due piccoli tratti a V rivolti verso l'alto sulla cima e numerosi tocchi minuti di punta. Nel secondo un abete a media distanza si dipinge scendendo molto più in fretta a zig-zag, col fianco del pennello inclinato. Nel terzo la profondità di un bosco si crea dipingendo prima una fila di abeti chiari e diluiti sullo sfondo. Quando sono asciutti del tutto, davanti si sovrappongono i coni medi e quelli scuri."
     },
     {
      "id": "A1-M2",
-     "titolo": "Modalità 2: cono rapido in pochi secondi, luce sollevata a sinistra e ombra a destra",
+     "titolo": "Modalità 2: Abete rapido con luce e ombra",
      "autore": "Paul Clark",
-     "proposta": "È un approccio rapido e sintetico, che dà subito volume cilindrico al cono senza disegnare ramo per ramo. L'intera sagoma dell'abete si imposta in pochi secondi con un verde-azzurro medio. Poi, mentre la carta è ancora umida, si asciuga il pennello su un fazzoletto per sollevare il colore sul lato sinistro (luce) e si appoggia un tono scuro sul lato destro (ombra). Dietro si aggiunge qualche cono più chiaro e azzurrato.",
+     "proposta": "La sagoma è sintetica e il volume si definisce subito, senza disegnare ogni ramo. Sul colore ancora umido, Paul Clark solleva la luce a sinistra con il pennello asciugato e aggiunge lo scuro a destra.",
      "colori_video": "Triade giallo di cadmio, blu cobalto e cremisi d'alizarina: verde-azzurro per il cono, blu scuro/nero per l'ombra a destra e grigio-azzurro molto diluito per gli abeti lontani (coi 6 colori proposti: M2/M3 per il cono, M4 per l'ombra).",
      "pennelli_video": "Tondo grande n. 12 con buona punta e fazzoletto di carta per asciugare il pennello.",
      "segmenti": [
       "A1-2b",
       "A1-3"
-     ]
+     ],
+     "procedimento": "L'intera sagoma dell'abete si imposta in pochi secondi con un verde-azzurro medio. Poi, mentre la carta è ancora umida, si asciuga il pennello su un fazzoletto per sollevare il colore sul lato sinistro (luce) e si appoggia un tono scuro sul lato destro (ombra). Dietro si aggiunge qualche cono più chiaro e azzurrato."
     },
     {
      "id": "A1-M3",
-     "titolo": "Modalità 3: abete sciolto ed espressivo, con verde oro, blu ftalo e rosso fusi nei rami umidi",
+     "titolo": "Modalità 3: Abete con colori fusi sull'umido",
      "autore": "Angela Fehr",
-     "proposta": "Invece di preparare un solo verde sulla tavolozza, si lascia che i colori si mescolino da soli sul foglio. La cima e i rami si impostano con pennellate sciolte di turchese di cobalto e blu ftalo. Mentre sono ancora ben umidi, il lato al sole si tocca con il verde oro, che si allarga e apre la luce. Sul tronco e sotto i rami si appoggia qualche tocco di rosso o arancio di cadmio, che fondendosi col verde crea ombre brune vibranti.",
+     "proposta": "I colori si mescolano sul foglio, anziché formare un solo verde in tavolozza. Le pennellate umide accolgono i tocchi chiari e quelli caldi delle ombre.",
      "colori_video": "Turchese di cobalto, blu ftalo, verde oro (green gold) per le luci a fresco, rosso e arancio di cadmio per neutralizzare i verdi sul tronco e nelle ombre (coi 6 colori proposti: ceruleo, M1 verde-giallo e M6/TSB a fresco).",
      "pennelli_video": "Tondo in martora n. 7.",
      "segmenti": [
       "A1-3b"
-     ]
+     ],
+     "procedimento": "Invece di preparare un solo verde sulla tavolozza, si lascia che i colori si mescolino da soli sul foglio. La cima e i rami si impostano con pennellate sciolte di turchese di cobalto e blu ftalo. Mentre sono ancora ben umidi, il lato al sole si tocca con il verde oro, che si allarga e apre la luce. Sul tronco e sotto i rami si appoggia qualche tocco di rosso o arancio di cadmio, che fondendosi col verde crea ombre brune vibranti."
     },
     {
      "id": "A1-M4",
-     "titolo": "Modalità 4: tronco e rami intravisti solo a brevi tratti nei varchi",
+     "titolo": "Modalità 4: Tronco e rami nei varchi della chioma",
      "autore": "Geoff Kersey",
-     "proposta": "Espone una regola fondamentale, valida sia per le conifere sia per le latifoglie. Il tronco non va mai tirato come una riga continua da cima a fondo sopra i rami, perché taglierebbe l'albero a metà. Si accenna la base sotto la chioma, poi si segnano solo brevi segmenti discontinui di fusto e piccoli rami dentro i varchi bianchi lasciati aperti nel fogliame.",
+     "proposta": "Geoff Kersey mostra il tronco solo a brevi tratti, nei varchi lasciati fra i rami. In questa modalità, una linea continua sopra il fogliame interromperebbe la chioma.",
      "colori_video": "Terra di Siena naturale e terra di Siena bruciata per il lato in luce del tronco; terra di Siena bruciata + blu oltremare per il lato in ombra e i rami interni (coi 6 colori proposti: M5 e M11).",
      "pennelli_video": "Tondo piccolo a punta fine n. 2.",
      "segmenti": [
       "A1-5"
-     ]
+     ],
+     "procedimento": "Geoff Kersey evita una linea continua di tronco sopra i rami, che interromperebbe la chioma. Si accenna la base sotto la chioma, poi si segnano solo brevi segmenti discontinui di fusto e piccoli rami dentro i varchi bianchi lasciati aperti nel fogliame."
     }
    ],
-   "controllo": "In qualunque modalità la cima dell'abete resta sottile e i rami non sono simmetrici. Nel gruppo i piani chiari di sfondo staccano nettamente da quelli scuri davanti.",
+   "controllo": "Negli esempi raccolti la cima dell'abete resta sottile e i rami non sono simmetrici. Nel gruppo i piani chiari di sfondo staccano nettamente da quelli scuri davanti.",
    "attenzione": [
     "Coni tutti uguali, dritti e alla stessa altezza: si variano altezza, larghezza e inclinazione.",
-    "Il tronco non si disegna mai come una linea continua da cima a fondo sopra i rami."
+    "Nella modalità di Kersey, il tronco resta discontinuo nei varchi fra i rami."
    ]
   },
   {
    "voce": "A2 Conifere alte e rade contro il cielo",
    "breve": "Conifere alte e rade",
-   "descrizione": "Sono conifere vecchie, alte e slanciate, con palchi di rami ben distanziati che lasciano passare la luce del cielo intorno al tronco sottile. I tre video mostrano tre modalità molto diverse per ottenere questa trasparenza. Si può partire dai ciuffi di fogliame e collegarli dopo col rigger, disegnare prima il fusto lungo con i singoli rami e gli aghi, oppure scendere dall'alto a tocchi saltellati.",
+   "descrizione": "Sono conifere vecchie, alte e slanciate, con palchi di rami ben distanziati che lasciano passare la luce del cielo intorno al tronco sottile.",
    "colori_studio": "In studio si usa verde vescica o verde bosco, mescolato con terra di Siena bruciata o terra d'ombra bruciata, per i palchi di rami. Blu oltremare + terra d'ombra bruciata (o indaco) servono per i tocchi scuri sotto i ciuffi, terra di Siena bruciata per il tronco illuminato.",
    "colori_aperto": "All'aperto, con i 6 colori proposti, si possono usare M12 per l'eventuale cielo di fondo ben asciutto e M2 per i rami in luce. M3 e M4 servono per i palchi in ombra, M5 e M11 per il fusto.",
    "pennelli": "Rigger o liner sottile (n. 0-2, per il tronco alto e i rami fini), tondo medio (n. 6) oppure un piatto piccolo a setole rigide (da 3/8 di pollice) per i tocchi saltellati.",
@@ -406,36 +417,39 @@
    "modalita": [
     {
      "id": "A2-M1",
-     "titolo": "Modalità 1: prima i ciuffi di fogliame tamponati, poi il tronco e i rami col rigger",
+     "titolo": "Modalità 1: Fogliame tamponato e rami col rigger",
      "autore": "Art By Lynn Norris",
-     "proposta": "Inverte l'ordine abituale per evitare rami rigidi a lisca di pesce. Prima si tamponano sulla carta inumidita macchie irregolari di fogliame, più piccole in cima e più larghe in basso, lasciando larghi spazi chiari in mezzo. Quando sono asciutte, col rigger si tira il tronco dal basso verso l'alto e si collega ciascun ciuffo con brevi rami. Sotto ogni palco si aggiunge un tocco scuro.",
+     "proposta": "Il fogliame precede la struttura: i ciuffi si dipingono sulla carta inumidita e si collegano col rigger dopo l'asciugatura. I varchi fra i palchi lasciano passare il cielo.",
      "colori_video": "Verde scuro mescolato a marrone scuro (usato denso e con poca acqua per i ciuffi, più fluido col marrone per il tronco col rigger, e ancora più scuro per le ombre sotto i ciuffi; coi 6 colori proposti: M3, M11 e M4).",
      "pennelli_video": "Tondo medio per tamponare i ciuffi, rigger/liner a setole lunghe per il tronco e tondo n. 6 per le ombre.",
      "segmenti": [
       "A2-1"
-     ]
+     ],
+     "procedimento": "Inverte l'ordine abituale per evitare rami rigidi a lisca di pesce. Prima si tamponano sulla carta inumidita macchie irregolari di fogliame, più piccole in cima e più larghe in basso, lasciando larghi spazi chiari in mezzo. Quando sono asciutte, col rigger si tira il tronco dal basso verso l'alto e si collega ciascun ciuffo con brevi rami. Sotto ogni palco si aggiunge un tocco scuro."
     },
     {
      "id": "A2-M2",
-     "titolo": "Modalità 2: tronco lungo e sottile, rami singoli distanziati e aghi fini",
+     "titolo": "Modalità 2: Conifera dal tronco sottile e dai rami radi",
      "autore": "Julia Lis Art",
-     "proposta": "È una costruzione grafica e leggerissima su carta asciutta, adatta a conifere molto alte con la parte bassa del fusto spoglia. Si traccia prima la linea sottile del tronco, poi nella metà superiore si tirano linee singole di rami, ben distanziate e inclinate verso il basso. Infine i rami si vestono con piccoli tocchi rapidi per gli aghi.",
+     "proposta": "La costruzione parte dal fusto e dai rami, sulla carta asciutta. I piccoli tocchi degli aghi completano una conifera alta, con la parte bassa del tronco spoglia.",
      "colori_video": "Verde bosco medio e verde scuro su carta asciutta, anche per la linea del fusto (coi 6 colori proposti: M2 e M3).",
      "pennelli_video": "Tondo a punta finissima o liner (n. 0-1).",
      "segmenti": [
       "A2-2"
-     ]
+     ],
+     "procedimento": "È una costruzione grafica essenziale su carta asciutta, adatta a conifere molto alte con la parte bassa del fusto spoglia. Si traccia prima la linea sottile del tronco, poi nella metà superiore si tirano linee singole di rami, ben distanziate e inclinate verso il basso. Infine i rami si vestono con piccoli tocchi rapidi per gli aghi."
     },
     {
      "id": "A2-M3",
-     "titolo": "Modalità 3: discesa dalla punta alla base a tocchi saltellati da un lato all'altro",
+     "titolo": "Modalità 3: Conifera a tocchi alternati",
      "autore": "Draw Paint",
-     "proposta": "È un metodo rapidissimo, che costruisce l'albero in meno di un minuto senza disegnare i singoli aghi. Dalla punta sottile si scende appoggiando e spingendo appena il pennello, a scatti irregolari da sinistra a destra. Fra un palco e l'altro si lasciano ampi varchi, e il lato in ombra si rinforza subito a umido.",
+     "proposta": "La sagoma nasce scendendo dalla cima, con tocchi irregolari alternati sui due lati. I singoli aghi non sono disegnati; il lato in ombra si rinforza mentre il colore è umido.",
      "colori_video": "Verde scuro per la discesa a scatti e miscela scura d'ombra (blu oltremare + terra d'ombra bruciata) appoggiata sotto i palchi (coi 6 colori proposti: M3 e M4).",
      "pennelli_video": "Piatto piccolo a setole rigide da 3/8 di pollice (oppure tondo medio usato di pancia a scatti).",
      "segmenti": [
       "A2-3"
-     ]
+     ],
+     "procedimento": "È un metodo rapido, che costruisce l'albero in meno di un minuto senza disegnare i singoli aghi. Dalla punta sottile si scende appoggiando e spingendo appena il pennello, a scatti irregolari da sinistra a destra. Fra un palco e l'altro si lasciano ampi varchi, e il lato in ombra si rinforza subito a umido."
     }
    ],
    "controllo": "In tutte e tre le modalità il chiaro del cielo passa liberamente fra i palchi. Il fusto si assottiglia verso la cima.",
@@ -447,7 +461,7 @@
   {
    "voce": "A3 Chiome tonde d'autunno",
    "breve": "Chiome d'autunno",
-   "descrizione": "Sono latifoglie autunnali (faggi, querce, aceri) dalle grandi chiome tondeggianti e luminose. I gialli dorati in luce si fondono con gli aranci, i rossi e i bruni profondi nella parte bassa. I sei video propongono sei modalità per impostare la forma e i passaggi di colore. La prima usa il movimento circolare di pancia del pennello, la seconda la fusione bagnato su bagnato dal giallo al rosso scuro, la terza la tamponatura con la spugna naturale. La quarta accosta a fresco alberi verdi vicini, la quinta incide i rami con la tessera di plastica. La sesta carica il pennello tondo di chiaro da un lato e di scuro dall'altro e fa la chioma in una sola stesura.",
+   "descrizione": "Sono latifoglie autunnali (faggi, querce, aceri) dalle grandi chiome tondeggianti e luminose. I gialli dorati in luce si fondono con gli aranci, i rossi e i bruni profondi nella parte bassa.",
    "colori_studio": "In studio si può sfruttare tutta la ricchezza dei pigmenti autunnali. La tavolozza comprende giallo limone o giallo aureolina, giallo e arancio di cadmio, oro chinacridone, terra di Siena naturale e bruciata, rosso inglese (light red), cremisi d'alizarina, seppia, indaco e blu oltremare.",
    "colori_aperto": "All'aperto, con i 6 colori proposti, si possono usare M5 (arancio) per la chioma in luce, M6 (rame) calato a fresco nel centro e M7 (rosso cupo) per la base in ombra. M3 (verde scuro) serve per eventuali alberi verdi accostati, M10/M11 per tronchi e rami.",
    "pennelli": "Tondo grande (n. 10-12), piatto medio, pennellessa piatta (mottler), spugna naturale marina, pennello sagomato o dentellato, tondo fine o rigger (n. 2-3) e una tessera rigida di plastica.",
@@ -455,69 +469,75 @@
    "modalita": [
     {
      "id": "A3-M1",
-     "titolo": "Modalità 1: chioma impostata col pennello di pancia, in tondo dal centro al bordo",
+     "titolo": "Modalità 1: Chioma col movimento circolare del pennello",
      "autore": "Geoff Kersey",
-     "proposta": "Spiega il movimento della mano per ottenere contorni fogliari naturali senza stampare puntini rigidi. Si appoggia la pancia del pennello grande, ben carico, al centro del lobo e lo si muove in tondo, spingendolo verso il bordo esterno. Via via che il pennello si scarica sulla carta, lascia da solo un profilo frastagliato e arioso.",
+     "proposta": "Il movimento della pancia del pennello forma i lobi della chioma. Il pennello che si scarica lascia un contorno frastagliato, senza una successione di puntini separati.",
      "colori_video": "Giallo aureolina + terra di Siena naturale e bruciata per la chioma dorata; terra di Siena bruciata + blu oltremare per il bruno scuro d'ombra; giallo limone per i tocchi luminosi (coi 6 colori proposti: M5, M6 e M11/M7).",
      "pennelli_video": "Tondo grande n. 10 (usato di pancia in movimento continuo) e tondo n. 6 per le ombre.",
      "segmenti": [
       "A3-1"
-     ]
+     ],
+     "procedimento": "Spiega il movimento della mano per ottenere contorni fogliari naturali senza stampare puntini rigidi. Si appoggia la pancia del pennello grande, ben carico, al centro del lobo e lo si muove in tondo, spingendolo verso il bordo esterno. Via via che il pennello si scarica sulla carta, lascia da solo un profilo frastagliato e arioso."
     },
     {
      "id": "A3-M2",
-     "titolo": "Modalità 2: chioma interamente bagnato su bagnato, dal giallo all'arancio fino al bruno-rosso",
+     "titolo": "Modalità 2: Chioma autunnale bagnato su bagnato",
      "autore": "Emma Jane Lefebvre",
-     "proposta": "Si lavora interamente per fusione spontanea sull'acqua. Si stende prima una base gialla molto bagnata, dandole la forma mossa della chioma. Subito, mentre è lucida, si lasciano cadere gocce di arancio e terra di Siena bruciata al centro, e infine un rosso scuro lungo la base. Si lascia che i colori si espandano da soli, senza spennellare.",
+     "proposta": "La chioma si forma per fusione del giallo, dell'arancio e dei toni bruno-rossi sulla carta bagnata. I colori vengono lasciati espandere, senza ripassarli col pennello.",
      "colori_video": "Giallo e arancio chiaro per la base bagnata, arancio vivo e terra di Siena bruciata a umido, rosso scuro (e rosso spento con una punta di verde) per l'ombra bassa, seppia per il tronco e i rami (coi 6 colori proposti: giallo limone, M5, M6, M7 e M10).",
      "pennelli_video": "Piatto medio (da circa mezzo pollice, usato di spigolo e di piatto) e tondo fine n. 2 per il tronco.",
      "segmenti": [
       "A3-2"
-     ]
+     ],
+     "procedimento": "Si lavora interamente per fusione spontanea sull'acqua. Si stende prima una base gialla molto bagnata, dandole la forma mossa della chioma. Subito, mentre è lucida, si lasciano cadere gocce di arancio e terra di Siena bruciata al centro, e infine un rosso scuro lungo la base. Si lascia che i colori si espandano da soli, senza spennellare."
     },
     {
      "id": "A3-M3",
-     "titolo": "Modalità 3: chioma tamponata con la spugna naturale e scuri calati col pennello nell'umido",
+     "titolo": "Modalità 3: Chioma con spugna e pennello",
      "autore": "Paul Clark",
-     "proposta": "Unisce la trama granulosa della spugna alla morbidezza del pennello tondo. Con una spugna marina umida si tamponano prima l'arancio brillante e un primo rosso. Poi, mentre la macchia è ancora bagnata, col pennello tondo n. 12 si lasciano cadere sul lato in ombra toni bruno-rossi molto più scuri: l'autore ricorda che l'acquerello, asciugando, schiarisce almeno del 15%.",
+     "proposta": "La spugna marina imposta la trama del fogliame; il pennello aggiunge le ombre mentre la macchia è bagnata. La modalità combina segni tamponati e passaggi morbidi.",
      "colori_video": "Arancio brillante e rosso scuro dati con la spugna, marrone-rosso molto scuro calato a umido col pennello (coi 6 colori proposti: M5, M6 e M7 denso al miele).",
      "pennelli_video": "Spugna naturale marina, tondo grande n. 12 e rigger n. 3 per i rami.",
      "segmenti": [
       "A3-3"
-     ]
+     ],
+     "procedimento": "Unisce la trama granulosa della spugna alla morbidezza del pennello tondo. Con una spugna marina umida si tamponano prima l'arancio brillante e un primo rosso. Poi, mentre la macchia è ancora bagnata, col pennello tondo n. 12 si lasciano cadere sul lato in ombra toni bruno-rossi molto più scuri: l'autore ricorda che l'acquerello, asciugando, schiarisce almeno del 15%."
     },
     {
      "id": "A3-M4",
-     "titolo": "Modalità 4: chiome calde d'autunno e alberi verdi accostati a fresco",
+     "titolo": "Modalità 4: Chiome calde e verdi accostate a fresco",
      "autore": "Draw Paint",
-     "proposta": "Mostra come legare tra loro alberi di colore diverso in un gruppo autunnale. Si dipingono prima le chiome calde in terra di Siena. Mentre il loro bordo in ombra è ancora umido, a fianco si appoggia subito il verde scuro degli alberi vicini. I due colori si fondono leggermente sul confine, senza creare ritagli rigidi.",
+     "proposta": "Le chiome di colore diverso si legano lungo il confine ancora umido. Il passaggio fra i toni caldi e il verde resta morbido, senza contorni ritagliati.",
      "colori_video": "Terra di Siena naturale + una punta di blu oltremare per le masse calde; terra di Siena naturale + più blu oltremare per i verdi scuri; tocchi di rosso inglese (light red) a umido (coi 6 colori proposti: M5, M3 e M6).",
      "pennelli_video": "Tondo medio e pennello sagomato/dentellato per sgranare i bordi.",
      "segmenti": [
       "A3-4"
-     ]
+     ],
+     "procedimento": "Mostra come legare tra loro alberi di colore diverso in un gruppo autunnale. Si dipingono prima le chiome calde in terra di Siena. Mentre il loro bordo in ombra è ancora umido, a fianco si appoggia subito il verde scuro degli alberi vicini. I due colori si fondono leggermente sul confine, senza creare ritagli rigidi."
     },
     {
      "id": "A3-M5",
-     "titolo": "Modalità 5: rami e fusti scalfiti nel colore umido con l'angolo della tessera",
+     "titolo": "Modalità 5: Rami incisi con la tessera",
      "autore": "Lois & Morgaine Davidson",
-     "proposta": "È una tecnica rapida per ricavare rami e fusti direttamente dentro la macchia umida della chioma. Dopo aver rimesso la tavola in piano, si trascina a scatto nel colore l'angolo di una tessera rigida di plastica. Se la carta è ancora molto bagnata, il solco raccoglie il pigmento e crea rami scuri. Se la carta ha appena perso il lucido, il solco sposta il colore e apre sottili rami chiari. Nel video la tecnica è mostrata su betulle d'inverno.",
+     "proposta": "La tessera ricava rami chiari o scuri nella macchia della chioma, secondo lo stato della carta. Il gesto è mostrato su betulle invernali.",
      "colori_video": "Seppia, indaco e terra di Siena bruciata fusi sulla carta umida (coi 6 colori proposti: M6, M7 e M10).",
      "pennelli_video": "Pennellessa piatta (mottler, circa 2 pollici) per la stesura e angolo di una tessera rigida di plastica.",
      "segmenti": [
       "A3-5"
-     ]
+     ],
+     "procedimento": "È una tecnica rapida per ricavare rami e fusti direttamente dentro la macchia umida della chioma. Dopo aver rimesso la tavola in piano, si trascina a scatto nel colore l'angolo di una tessera rigida di plastica. Se la carta è ancora molto bagnata, il solco raccoglie il pigmento e crea rami scuri. Se la carta ha appena perso il lucido, il solco sposta il colore e apre sottili rami chiari. Nel video la tecnica è mostrata su betulle d'inverno."
     },
     {
      "id": "A3-M6",
-     "titolo": "Modalità 6: chioma in una sola stesura col tondo caricato chiaro da un lato e scuro dall'altro",
+     "titolo": "Modalità 6: Chioma con pennello caricato su due lati",
      "autore": "Christopher Stephen",
-     "proposta": "È una tecnica che l'autore usa nel proprio lavoro. Con lo spruzzino si porta un po' d'acqua sulla carta e si preparano due pozze, un verde terroso chiaro e un colore più scuro. Si carica il pennello tondo nel chiaro, lo si stende quasi piatto e lo si carica di scuro sull'altro lato: il tondo lavora quasi come un piatto. Ruotando di continuo il pennello fra le dita, la pennellata passa dal chiaro allo scuro e la chioma nasce in una sola stesura, luci e scuri insieme. Poi qualche ombra scura e, col pennello più piccolo, il tronco: bordi netti dove la carta è asciutta, morbidi dove tocca la stesura. In alto forme più piccole e alcuni rami che escono dai varchi del cielo. Nel video l'albero è verde.",
+     "proposta": "Chiaro e scuro sono caricati sui due lati del pennello tondo. La rotazione del pennello varia il tono durante una sola stesura; nel video la chioma è verde.",
      "colori_video": "Giallo di cadmio, terra di Siena naturale e una punta di blu per il verde terroso chiaro; blu e un po' di terra di Siena bruciata per la pozza più scura.",
      "pennelli_video": "Pennello tondo, caricato sui due lati, per la chioma; pennello più piccolo per il tronco e i rami; spruzzino per bagnare la carta.",
      "segmenti": [
       "A3-6"
-     ]
+     ],
+     "procedimento": "È una tecnica che l'autore usa nel proprio lavoro. Con lo spruzzino si porta un po' d'acqua sulla carta e si preparano due pozze, un verde terroso chiaro e un colore più scuro. Si carica il pennello tondo nel chiaro, lo si stende quasi piatto e lo si carica di scuro sull'altro lato: il tondo lavora quasi come un piatto. Ruotando di continuo il pennello fra le dita, la pennellata passa dal chiaro allo scuro e la chioma nasce in una sola stesura, luci e scuri insieme. Poi qualche ombra scura e, col pennello più piccolo, il tronco: bordi netti dove la carta è asciutta, morbidi dove tocca la stesura. In alto forme più piccole e alcuni rami che escono dai varchi del cielo. Nel video l'albero è verde."
     }
    ],
    "controllo": "La chioma conserva il chiaro dorato in alto e passa gradualmente ai rossi e ai bruni in basso, senza toni fangosi. I bordi esterni sono mossi e frastagliati.",
@@ -529,7 +549,7 @@
   {
    "voce": "A4 Siepi e cespugli nel paesaggio",
    "breve": "Siepi e cespugli",
-   "descrizione": "Sono siepi di campagna, filari bassi e cespugli tondeggianti che disegnano i piani del paesaggio e si raccordano col prato. I cinque video illustrano cinque modalità. La prima dipinge una siepe autunnale calda con tocchi di rosso inglese, la seconda crea la fascia scura alla base e la scioglie a tratti verso l'erba. La terza costruisce un cespuglio a cupola dal chiaro allo scuro, la quarta fa emergere i cespugli chiari dipingendo lo scuro dietro in negativo. La quinta lega le siepi al prato con una passata semplice e un'ombra fredda.",
+   "descrizione": "Sono siepi di campagna, filari bassi e cespugli tondeggianti che disegnano i piani del paesaggio e si raccordano col prato.",
    "colori_studio": "In studio la tavolozza comprende giallo limone o giallo di cadmio, terra di Siena naturale, rosso inglese (light red), verde oliva o verde vescica, blu oltremare, blu di Prussia e terra d'ombra bruciata.",
    "colori_aperto": "All'aperto, con i 6 colori proposti, si possono usare M5 e M6 per le siepi calde d'autunno, M1 e M2 per i cespugli e i prati in luce. M3 e M4 servono per i cespugli a cupola e le ombre in negativo, M7 o M10 per la base scura della siepe, M9 per l'ombra fredda sul prato.",
    "pennelli": "Tondo medio (n. 4-6), piatto medio-piccolo pulito e umido (per ammorbidire la base verso il prato) e tondo fine (n. 2).",
@@ -537,58 +557,63 @@
    "modalita": [
     {
      "id": "A4-M1",
-     "titolo": "Modalità 1: siepe autunnale a tocchi caldi con variazioni di rosso inglese e base scura",
+     "titolo": "Modalità 1: Siepe autunnale a tocchi caldi",
      "autore": "Draw Paint",
-     "proposta": "Costruisce una siepe bassa di campagna in un unico passaggio a umido. Il corpo si stende con una miscela calda di giallo limone e terra di Siena naturale, più carica di quella del prato. Subito dentro si picchiettano tocchi di rosso inglese per variare il fogliame, e il piede si chiude con una linea mossa di ombra scura.",
+     "proposta": "Il fogliame della siepe varia con tocchi caldi inseriti nella stesura umida. La base scura distingue la massa dal prato.",
      "colori_video": "Giallo limone + terra di Siena naturale per la base della siepe, rosso inglese (light red) per i tocchi caldi a fresco, terra d'ombra bruciata + blu oltremare per l'ombra alla base (coi 6 colori proposti: M5, M6 e M7/M10).",
      "pennelli_video": "Tondo n. 6 e un pennello a setole corte e rigide per tamponare la base.",
      "segmenti": [
       "A4-1"
-     ]
+     ],
+     "procedimento": "Costruisce una siepe bassa di campagna in un unico passaggio a umido. Il corpo si stende con una miscela calda di giallo limone e terra di Siena naturale, più carica di quella del prato. Subito dentro si picchiettano tocchi di rosso inglese per variare il fogliame, e il piede si chiude con una linea mossa di ombra scura."
     },
     {
      "id": "A4-M2",
-     "titolo": "Modalità 2: fascia scura sotto la siepe e scioglimento a tratti verso il prato",
+     "titolo": "Modalità 2: Ombra della siepe raccordata al prato",
      "autore": "Colin Steed",
-     "proposta": "Spiega come evitare che la siepe sembri incollata o sospesa sopra il prato. Dopo aver impostato il corpo chiaro e i toni medi, si stende una fascia scura decisa lungo la base. Subito, mentre è ancora umida, la si scioglie in due o tre punti verso il terreno con un pennello piatto pulito e umido, alternando tratti netti e tratti morbidi.",
+     "proposta": "La fascia scura alla base lega la siepe al terreno. Il bordo si ammorbidisce solo in alcuni punti, alternando tratti netti e sfumati.",
      "colori_video": "Verde oliva / verde chiaro caldo per il corpo della siepe, verde scuro denso per la fascia alla base e sola acqua per sciogliere il bordo (coi 6 colori proposti: M2, M3 e M4/M7).",
      "pennelli_video": "Tondo piccolo usato di lato per il fogliame e piatto medio-piccolo pulito e umido per ammorbidire la base.",
      "segmenti": [
       "A4-3"
-     ]
+     ],
+     "procedimento": "Spiega come evitare che la siepe sembri incollata o sospesa sopra il prato. Dopo aver impostato il corpo chiaro e i toni medi, si stende una fascia scura decisa lungo la base. Subito, mentre è ancora umida, la si scioglie in due o tre punti verso il terreno con un pennello piatto pulito e umido, alternando tratti netti e tratti morbidi."
     },
     {
      "id": "A4-M3",
-     "titolo": "Modalità 3: cespuglio a cupola costruito per strati, dal chiaro allo scuro",
+     "titolo": "Modalità 3: Cespuglio dal chiaro allo scuro",
      "autore": "Dennis Clark (Painting with Paint Basket)",
-     "proposta": "Mostra come dare pieno volume sferico a un cespuglio, isolato o inserito in una siepe, con soli tre colori primari. Si parte dalla macchia giallo-verde più chiara sul lato illuminato e si aggiunge il verde medio al centro. La base e gli incavi si chiudono con un verde scurissimo, spento con una punta di rosso.",
+     "proposta": "Tre colori primari costruiscono il volume del cespuglio, dalla parte illuminata alla base in ombra. Il rosso smorza il verde più scuro.",
      "colori_video": "Triade giallo di cadmio, blu oltremare e rosso di cadmio mescolati in tre gradi dal verde-giallo chiaro al verde medio fino al verde cupo d'ombra (coi 6 colori proposti: M1, M2, M3 e M4).",
      "pennelli_video": "Tondo medio-piccolo (n. 4-6) per le masse e tondo fine (n. 2) per gli incavi scuri.",
      "segmenti": [
       "A4-4"
-     ]
+     ],
+     "procedimento": "Mostra come dare pieno volume sferico a un cespuglio, isolato o inserito in una siepe, con soli tre colori primari. Si parte dalla macchia giallo-verde più chiara sul lato illuminato e si aggiunge il verde medio al centro. La base e gli incavi si chiudono con un verde scurissimo, spento con una punta di rosso."
     },
     {
      "id": "A4-M4",
-     "titolo": "Modalità 4: cespugli chiari in risalto sullo scuro dipinto dietro in negativo",
+     "titolo": "Modalità 4: Cespugli chiari dipinti in negativo",
      "autore": "Art Painting Workshop",
-     "proposta": "Per mantenere luminosissimo un cespuglio dorato o verde chiaro, non lo si dipinge sopra uno sfondo scuro. Si dipingono prima le masse chiare e le si lascia asciugare del tutto. Poi con un tono scuro si contorna dall'esterno il profilo frastagliato delle foglie, e il cespuglio chiaro avanza per contrasto. Nel video le masse chiare sono larici dorati.",
+     "proposta": "Lo scuro steso intorno alle masse chiare ne definisce il profilo senza coprirle. Il video mostra larici dorati: qui il metodo è proposto anche per i cespugli.",
      "colori_video": "Riconosciuti a vista, perché l'autore non li dichiara: giallo limone, ocra gialla e arancio per le masse chiare; blu oltremare, verde pino scuro e grigio scuro per il fondo in negativo; seppia per i rametti (coi 6 colori proposti: M1/M5 davanti, M4/M10 dietro).",
      "pennelli_video": "Pennello calligrafico a punta tonda e tondo fine.",
      "segmenti": [
       "A4-4b"
-     ]
+     ],
+     "procedimento": "Per conservare chiaro un cespuglio dorato o verde chiaro, non lo si dipinge sopra uno sfondo scuro. Si dipingono prima le masse chiare e le si lascia asciugare del tutto. Poi con un tono scuro si contorna dall'esterno il profilo frastagliato delle foglie, e il cespuglio chiaro avanza per contrasto. Nel video le masse chiare sono larici dorati."
     },
     {
      "id": "A4-M5",
-     "titolo": "Modalità 5: passata leggera sul prato in primo piano e striscia d'ombra fredda alla base",
+     "titolo": "Modalità 5: Prato leggero e ombra fredda",
      "autore": "Peter Woolley",
-     "proposta": "Mostra come chiudere con semplicità il terreno davanti agli alberi e alle siepi, senza appesantirlo. Basta un velo leggero sul prato e, mentre è ancora umido, una striscia orizzontale d'ombra fredda appoggiata subito alla base delle siepi e lasciata fondere morbida, senza ritocchi.",
+     "proposta": "Il terreno davanti alle siepi resta sintetico. Un velo leggero accoglie l'ombra fredda alla base, lasciata fondere senza ritocchi.",
      "colori_video": "Giallo di cadmio + blu di Prussia molto diluiti per il prato, blu oltremare per la striscia d'ombra fredda alla base degli alberi e terra d'ombra bruciata per il sentiero (coi 6 colori proposti: M1/M2 al tè e M9 o oltremare diluito).",
      "pennelli_video": "Tondo medio-grande.",
      "segmenti": [
       "A4-5"
-     ]
+     ],
+     "procedimento": "Mostra come chiudere con semplicità il terreno davanti agli alberi e alle siepi, senza appesantirlo. Basta un velo leggero sul prato e, mentre è ancora umido, una striscia orizzontale d'ombra fredda appoggiata subito alla base delle siepi e lasciata fondere morbida, senza ritocchi."
     }
    ],
    "controllo": "La siepe è più chiara in alto e più scura alla base. La fascia d'ombra si raccorda col prato in alcuni punti morbidi, senza formare una riga rigida continua, e il prato davanti resta fresco e semplice.",
@@ -600,7 +625,7 @@
   {
    "voce": "A5 Alberi invernali con fusti chiari e brina",
    "breve": "Alberi invernali e brina",
-   "descrizione": "Sono boschi e alberi spogli d'inverno (betulle, faggi, pioppi), dove i fusti chiari risaltano contro il fondo scuro e le chiome leggere sono avvolte dalla brina. Le cinque modalità, tratte da sette video, si possono usare da sole o combinare. La prima riserva i fusti sottili col tiralinee e il mascherante, poi li arrotonda con l'ombra su un lato. La seconda protegge i tronchi dritti con striscioline di nastro di carta, la terza apre i cristalli di brina col sale fino sul colore umido. La quarta definisce i rami bianchi dipingendo lo scuro in negativo e sfumando il bordo con acqua. La quinta crea una massa leggera di rametti sottili col pennello a ventaglio.",
+   "descrizione": "Sono boschi e alberi spogli d'inverno (betulle, faggi, pioppi), dove i fusti chiari risaltano contro il fondo scuro e le chiome leggere sono avvolte dalla brina.",
    "colori_studio": "In studio la tavolozza comprende blu ftalo, blu cobalto o ceruleo, turchese, oro chinacridone (quinacridone gold), verde vescica, terra di Siena bruciata, grigio di Payne, indaco, blu oltremare e seppia.",
    "colori_aperto": "All'aperto, con i 6 colori proposti, si può usare M5 (arancio molto diluito al tè) per il velo caldo in alto. M9 (grigio-lilla al tè) serve per il velo freddo e per l'ombra sul lato del fusto, M8 (viola) o M4/M10 per la massa scura in negativo dietro i tronchi.",
    "pennelli": "Tiralinee e gomma crêpe (o striscioline di nastro di carta), tondo grande (n. 10-14) o pennellessa piatta per i veli bagnati, piccolo pennello a ventaglio (fan brush), rigger e sale fino da cucina.",
@@ -608,72 +633,77 @@
    "modalita": [
     {
      "id": "A5-M1",
-     "titolo": "Modalità 1: fusti sottili riservati col tiralinee e il mascherante, poi scoperti e arrotondati con l'ombra",
+     "titolo": "Modalità 1: Fusti chiari riservati con il mascherante",
      "autore": "Michele Webber e Paul Clark",
-     "proposta": "È una sequenza completa in tre estratti per ottenere fusti chiari sottili e cilindrici. 1) Sulla carta asciutta si tracciano i fusti e le biforcazioni a Y col tiralinee intinto nel liquido mascherante. 2) Quando lo sfondo è dipinto e completamente asciutto, si rimuove il mascherante con la gomma crêpe. 3) Infine si bagna il fusto bianco con acqua pulita e, col pennello scarico d'acqua, si passa un filetto grigio-azzurro lungo un solo bordo, sfumandolo verso il centro: la striscia piatta diventa un cilindro.",
+     "proposta": "Il mascherante protegge i fusti sottili durante la pittura dello sfondo. Dopo la rimozione sulla carta asciutta, un'ombra sfumata su un lato ne definisce il volume.",
      "colori_video": "Liquido mascherante, veli di sfondo (blu ftalo, ceruleo, giallo e terra di Siena bruciata), e grigio-azzurro diluito per l'ombra laterale sul fusto (coi 6 colori proposti: M9 o M11 molto diluito sul bordo del tronco).",
      "pennelli_video": "Tiralinee (ruling pen), gomma crêpe (rubber cement pickup) e tondo n. 12 scarico d'acqua.",
      "segmenti": [
       "A5-1",
       "A5-6",
       "A5-6b"
-     ]
+     ],
+     "procedimento": "È una sequenza completa in tre estratti per ottenere fusti chiari sottili e cilindrici. 1) Sulla carta asciutta si tracciano i fusti e le biforcazioni a Y col tiralinee intinto nel liquido mascherante. 2) Quando lo sfondo è dipinto e completamente asciutto, si rimuove il mascherante con la gomma crêpe. 3) Infine si bagna il fusto bianco con acqua pulita e, col pennello scarico d'acqua, si passa un filetto grigio-azzurro lungo un solo bordo, sfumandolo verso il centro: la striscia piatta diventa un cilindro."
     },
     {
      "id": "A5-M2",
-     "titolo": "Modalità 2: tronchi dritti protetti col nastro di carta e veli fusi sul bagnato",
+     "titolo": "Modalità 2: Tronchi riservati con il nastro",
      "autore": "Karen Rice",
-     "proposta": "È un'alternativa rapidissima al liquido mascherante quando i tronchi sono abbastanza dritti. Sulla carta asciutta si incollano numerose striscioline di nastro di carta, tagliate o strappate. Poi si bagna liberamente tutto il foglio, passando sopra il nastro, e si lasciano fondere bagnato su bagnato i veli luminosi del bosco, dall'alto in basso.",
+     "proposta": "Il nastro di carta protegge i tronchi abbastanza dritti. I colori del bosco si lasciano fondere bagnato su bagnato attorno alle riserve.",
      "colori_video": "Giallo, oro chinacridone (quinacridone gold) e verde vescica in alto; blu-viola, turchese e bruno-ruggine nella fascia bassa (coi 6 colori proposti: M5 al tè in alto e M9/M8 in basso).",
      "pennelli_video": "Striscioline di nastro di carta, tondo grande n. 14 per i veli e tondo fine n. 2.",
      "segmenti": [
       "A5-2"
-     ]
+     ],
+     "procedimento": "È un'alternativa rapida al liquido mascherante quando i tronchi sono abbastanza dritti. Sulla carta asciutta si incollano numerose striscioline di nastro di carta, tagliate o strappate. Poi si bagna liberamente tutto il foglio, passando sopra il nastro, e si lasciano fondere bagnato su bagnato i veli luminosi del bosco, dall'alto in basso."
     },
     {
      "id": "A5-M3",
-     "titolo": "Modalità 3: trama granulosa della brina col sale fino sparso sul colore umido",
+     "titolo": "Modalità 3: Brina con sale sul colore umido",
      "autore": "Lois & Morgaine Davidson",
-     "proposta": "Mostra il momento esatto in cui spargere il sale da cucina per imitare la brina e la neve sulle fronde. Se la carta è ancora lucida e allagata, l'acqua scioglie il sale senza effetto. Occorre aspettare che il lucido sparisca quasi del tutto (carta umida opaca), poi si spargono pochi grani. Prima di spazzolarli via si lascia asciugare completamente.",
+     "proposta": "La trama della brina dipende dal momento in cui si sparge il sale. Il video mostra la carta quasi opaca e la rimozione dei grani solo dopo l'asciugatura completa.",
      "colori_video": "Grigio di Payne, indaco e un tocco di terra d'ombra bruciata (coi 6 colori proposti: M9 grigio-lilla o M8 viola).",
      "pennelli_video": "Pennellessa piatta (hake) e un pizzico di comune sale fino da cucina.",
      "segmenti": [
       "A5-3"
-     ]
+     ],
+     "procedimento": "Mostra il momento esatto in cui spargere il sale da cucina per imitare la brina e la neve sulle fronde. Se la carta è ancora lucida e allagata, l'acqua scioglie il sale senza effetto. Occorre aspettare che il lucido sparisca quasi del tutto (carta umida opaca), poi si spargono pochi grani. Prima di spazzolarli via si lascia asciugare completamente."
     },
     {
      "id": "A5-M4",
-     "titolo": "Modalità 4: massa scura in negativo dietro i rami e bordo sfumato con acqua",
+     "titolo": "Modalità 4: Rami chiari definiti in negativo",
      "autore": "Susan Chiang",
-     "proposta": "Definisce gli alberi chiari senza mascherante, lavorando in negativo sugli spazi vuoti. Con la punta del pennello si inserisce il colore scuro fra i fusti e i rami bianchi, lasciando netto il bordo interno per il contrasto. Subito dopo si tocca il contorno esterno della macchia scura con un pennello di acqua pulita, per sfumarlo dolcemente. Nel video le zone chiare sono la neve sulla chioma di un abete rosso.",
+     "proposta": "Gli spazi scuri definiscono i rami chiari senza mascherante. Il bordo esterno della macchia si sfuma con acqua; il video mostra la neve sulla chioma di un abete rosso.",
      "colori_video": "Miscela scura fredda di verde ftalo, blu oltremare, terra di Siena bruciata e grigio di Payne, più acqua pulita per il bordo (coi 6 colori proposti: M4 o M8).",
      "pennelli_video": "Tondo fine a punta per gli interstizi e, pulito e bagnato, per sfumare il contorno; un tondo di circa n. 6 per le chiome.",
      "segmenti": [
       "A5-4"
-     ]
+     ],
+     "procedimento": "Definisce gli alberi chiari senza mascherante, lavorando in negativo sugli spazi vuoti. Con la punta del pennello si inserisce il colore scuro fra i fusti e i rami bianchi, lasciando netto il bordo interno per il contrasto. Subito dopo si tocca il contorno esterno della macchia scura con un pennello di acqua pulita, per sfumarlo dolcemente. Nel video le zone chiare sono la neve sulla chioma di un abete rosso."
     },
     {
      "id": "A5-M5",
-     "titolo": "Modalità 5: massa leggera di rametti spogli col pennello a ventaglio",
+     "titolo": "Modalità 5: Rametti col pennello a ventaglio",
      "autore": "Steve Mitchell (The Mind of Watercolor)",
-     "proposta": "Permette di non disegnare uno per uno centinaia di rametti invernali, che risulterebbero rigidi e pesanti. Si carica un piccolo pennello a ventaglio con il seppia e lo si scarica quasi del tutto, così che le setole restino aperte a pettine. Si sfiora la carta asciutta con archi leggeri e incrociati; poi col rigger si raccordano dal basso i rami principali.",
+     "proposta": "Il pennello a ventaglio suggerisce una massa di rametti, senza disegnarli uno per uno. Il rigger raccorda poi i rami principali.",
      "colori_video": "Seppia usato quasi a secco sul ventaglio e più fluido sul rigger (coi 6 colori proposti: M10 o TOB + BO).",
      "pennelli_video": "Piccolo pennello a ventaglio (fan brush) e rigger sottile.",
      "segmenti": [
       "A5-5"
-     ]
+     ],
+     "procedimento": "Permette di non disegnare uno per uno centinaia di rametti invernali, che risulterebbero rigidi e pesanti. Si carica un piccolo pennello a ventaglio con il seppia e lo si scarica quasi del tutto, così che le setole restino aperte a pettine. Si sfiora la carta asciutta con archi leggeri e incrociati; poi col rigger si raccordano dal basso i rami principali."
     }
    ],
    "controllo": "I fusti risparmiati staccano netti davanti alla massa scura, e il filetto d'ombra su un solo lato li rende cilindrici. Il sale ha aperto i cristalli chiari di brina e i rametti periferici restano leggeri.",
    "attenzione": [
-    "Il mascherante o il nastro non va mai tolto prima che la carta sia completamente asciutta: si strapperebbe la fibra.",
+    "Il mascherante o il nastro si rimuove solo quando la carta è completamente asciutta, per non strappare la fibra.",
     "Il sale non si sparge sull'acqua lucida: si aspetta sempre che il foglio diventi opaco."
    ]
   },
   {
    "voce": "A6 Rami sottili e foglie brinate in primo piano",
    "breve": "Rami e foglie in primo piano",
-   "descrizione": "Sono arbusti, rovi e rami visti da vicino, in controluce su uno sfondo chiaro e freddo. I fusti scuri si incrociano assottigliandosi verso le cime, e le foglie scure portano sul bordo superiore un filo sottilissimo e luminoso di brina. I due gruppi di video mostrano prima come tirare e intrecciare con naturalezza i rami dal basso verso l'alto. Poi mostrano come realizzare le foglie brinate risparmiando e ammorbidendo il filo bianco, a mano libera oppure col tiralinee.",
+   "descrizione": "Sono arbusti, rovi e rami visti da vicino, in controluce su uno sfondo chiaro e freddo. I fusti scuri si incrociano assottigliandosi verso le cime, e le foglie scure portano sul bordo superiore un filo sottilissimo e luminoso di brina.",
    "colori_studio": "In studio si usano terra d'ombra bruciata o seppia per i rami, e blu di Prussia, terra di Siena bruciata, rosso di cadmio e cremisi d'alizarina per le foglie scure e cangianti. Ceruleo o blu cobalto molto diluito serve per il fondo freddo.",
    "colori_aperto": "All'aperto, con i 6 colori proposti, si possono usare M12 (ceruleo/oltremare al tè) per il fondo freddo ben asciutto e M10 (scuro) per i rami sottili e le foglie in controluce. M4 (verde-blu d'ombra) serve per le foglie viste di faccia.",
    "pennelli": "Tondo a punta fine (n. 4-6) o rigger per i rami e le foglie, tiralinee con liquido mascherante (per la variante protetta) e pennello pulito appena umido.",
@@ -681,27 +711,29 @@
    "modalita": [
     {
      "id": "A6-M1",
-     "titolo": "Modalità 1: rami sottili tirati e intrecciati dal basso verso l'alto",
+     "titolo": "Modalità 1: Rami sottili dal basso verso l’alto",
      "autore": "Alyssa Whetstone",
-     "proposta": "Mostra il gesto continuo per dare slancio e naturalezza a un arbusto spoglio o in primo piano. I rami si tirano sempre dal basso verso l'alto, alleggerendo la pressione della mano per assottigliare le punte. Si aprono biforcazioni a V e a Y e si fanno incrociare alcuni rami centrali, perché in natura i rami si sovrappongono e non si evitano.",
+     "proposta": "Nella dimostrazione, la pressione diminuisce mentre il pennello sale, assottigliando le punte. Biforcazioni e incroci variano la struttura dell'arbusto.",
      "colori_video": "Marrone scuro / terra d'ombra bruciata ben fluida sulla punta del pennello (coi 6 colori proposti: M10 al latte).",
      "pennelli_video": "Tondo a punta fine n. 6 (o rigger).",
      "segmenti": [
       "A6-2"
-     ]
+     ],
+     "procedimento": "Mostra il gesto continuo per dare slancio e naturalezza a un arbusto spoglio o in primo piano. Nella dimostrazione i rami si tirano dal basso verso l'alto, alleggerendo la pressione della mano per assottigliare le punte. Si aprono biforcazioni a V e a Y e si fanno incrociare alcuni rami centrali, perché in natura i rami si sovrappongono e non si evitano."
     },
     {
      "id": "A6-M2",
-     "titolo": "Modalità 2: foglie scure con il filo bianco di brina risparmiato e ammorbidito a secco",
+     "titolo": "Modalità 2: Foglie scure con riserva della brina",
      "autore": "de Winton Paper Co. (e Michele Webber)",
-     "proposta": "Tre estratti mostrano come ottenere l'effetto della brina luminosa sulle foglie scure. 1) La foglia si dipinge un lobo alla volta, fermando il pennello appena prima di chiudere il confine: così resta scoperto a mano libera un filo bianco sottilissimo. 2) A foglia asciutta, i fili bianchi si sfiorano con un pennello pulito e appena umido, perché un velo di colore scuro si sciolga e leghi la brina alla foglia. 3) In alternativa, per non rischiare a mano libera, il filo sottile si traccia prima col tiralinee e il mascherante.",
+     "proposta": "Un filo di carta scoperta rende la brina sul bordo delle foglie. Il video confronta la riserva a mano libera e quella col mascherante, poi mostra come ammorbidire il bianco a colore asciutto.",
      "colori_video": "Rosso di cadmio + terra di Siena bruciata + blu di Prussia + cremisi per la base scura della foglia, con tocchi di blu di Prussia puro a umido per gli accenti più profondi (coi 6 colori proposti: M4 e M10 al miele).",
      "pennelli_video": "Tondo a punta fine n. 4, pennello pulito appena umido (e tiralinee per la variante col mascherante).",
      "segmenti": [
       "A6-3",
       "A6-4",
       "A6-1"
-     ]
+     ],
+     "procedimento": "Tre estratti mostrano come ottenere l'effetto della brina luminosa sulle foglie scure. 1) La foglia si dipinge un lobo alla volta, fermando il pennello appena prima di chiudere il confine: così resta scoperto a mano libera un filo bianco sottilissimo. 2) A foglia asciutta, i fili bianchi si sfiorano con un pennello pulito e appena umido, perché un velo di colore scuro si sciolga e leghi la brina alla foglia. 3) In alternativa, per non rischiare a mano libera, il filo sottile si traccia prima col tiralinee e il mascherante."
     }
    ],
    "controllo": "I rami si assottigliano verso l'alto e si incrociano con naturalezza. Il filo chiaro di brina è sottilissimo e, dopo il tocco col pennello umido, si integra nella foglia senza sembrare un ritaglio duro.",
