@@ -4,6 +4,17 @@ Cronologia delle modifiche. Ordine cronologico inverso.
 
 Nota: nelle voci fino al 1/11/2026 il curatore è indicato con lo pseudonimo sinmar.
 
+## 2026-11-02 - OC - Proposte di stile per le pagine pubbliche
+
+- Su richiesta del curatore, esaminate le 14 pagine della sitemap pubblica nella versione successiva alla PR #64. La revisione riguarda prosa, titoli, ordine delle informazioni, rimandi alle fonti ed etichette; non è una verifica scientifica né una prova grafica su telefono.
+- Preparato il documento locale `lavoro/app-acquerello-261102-proposte-stile.md`, con priorità e riscritture complete di esempio. Prime proposte: alleggerire la Home, rendere più scorrevoli gli Eventi, accorciare i titoli degli Alberi e distinguere spiegazione, fasi e sintesi del video; uniformare poi le fonti delle Marche.
+- Proposte confrontate con i testi pubblicati e con le scelte di CONTRIBUTING.md: conservati lessico tecnico, attribuzioni, limiti delle fonti, tono espositivo delle Opere e ruolo circoscritto della tavolozza ridotta. Nessuna modifica ai sorgenti o alle pagine del sito; nessuna pubblicazione.
+- Aggiornato l'indice locale con il collegamento al documento. Il resoconto resta su un ramo dedicato.
+
+-- OC
+
+Prossima azione: valutare le proposte di stile con il curatore, partendo da Home ed Eventi.
+
 ## 2026-11-02 - OC - Riscrittura approvata della nota di metodo sul bianco
 
 - Inserito il testo proposto in chat e approvato dal curatore il 2/11/2026: la nota della pagina 5.1 passa da dieci a sei capoversi, da 503 a 232 parole. Restano i nomi e le versioni dei modelli, i loro compiti, la distinzione fra concordanza e verifica sul documento, i limiti delle letture e il ruolo del curatore. Tolti la cronaca delle singole esecuzioni, i conteggi intermedi e i dettagli sui token.
