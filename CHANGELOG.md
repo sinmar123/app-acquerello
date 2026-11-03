@@ -4,6 +4,17 @@ Cronologia delle modifiche. Ordine cronologico inverso.
 
 Nota: nelle voci fino al 1/11/2026 il curatore è indicato con lo pseudonimo sinmar.
 
+## 2026-11-03 - OC - Approfondimenti: il blu oltremare nell’acquerello
+
+- Su richiesta di Sandro, dopo la proposta nel topic Ricerche e il via del 3 novembre, preparata la pagina 5.2 in `dati/approfondimenti/temi/blu-oltremare.json`, indirizzo `/approfondimenti/blu-oltremare/`: sintesi, premessa, metodo, otto capitoli e 16 fonti, di cui 15 esterne e una proposta interna per le sei prove pratiche.
+- Identità e storia del PB29, tinta e asciugatura, granulazione, lavature e velature, mescolanze, luce e conservazione, caso museale di Frederick Wilson, prove sui propri materiali. Dichiarazioni commerciali, osservazioni dei campioni, esperimenti e proposte del Quaderno restano distinti. Due studi di conservazione restano dichiarati letti solo nell’abstract; nessun trasferimento automatico da olio o resina all’acquerello. Nessuna classifica commerciale né marca nel corpo della guida.
+- Aggiornati apertura degli Approfondimenti, README, descrizione in AGENTS e prompt della chat generato. Home, elenco dei temi e sitemap ricevono la pagina dal generatore esistente; non cambiano API, generatori o testi della pagina sul bianco.
+- Verifica: generazione completa riuscita, pagina 5.2 con Gulpease 67; testi dei capitoli confrontati fra JSON e HTML e riferimenti esterni confrontati con il rapporto verificato del 3 novembre. Controllati 40 testi di capitolo fra JSON e HTML e 1.257 collegamenti locali su 15 pagine, senza errori; `git diff --check` senza rilievi. La verifica grafica nel browser non è stata eseguita: nel container non è disponibile un browser supportato. Pillow 12.3.0 usato da una copia isolata nella cartella di lavoro ignorata da Git, senza modificare l’ambiente condiviso.
+
+-- OC
+
+Prossima azione: revisione della pagina da parte di Sandro; unire la pull request su main soltanto dopo il suo ok esplicito per questa modifica.
+
 ## 2026-11-03 - OC - Titolo della sezione Alberi
 
 - Su richiesta di Sandro nel topic dell'app, tolto «ad acquerello» dal nome del modulo S1 nella Home e dal titolo della pagina Alberi. Conservati la numerazione, il sottotitolo descrittivo e il percorso `/alberi/`.

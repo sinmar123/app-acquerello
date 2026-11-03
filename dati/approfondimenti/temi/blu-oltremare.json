@@ -1,0 +1,456 @@
+{
+  "id": "blu-oltremare",
+  "ordine": 2,
+  "data": "2026-11-03",
+  "titolo": "Il blu oltremare nell'acquerello",
+  "sottotitolo": "Il pigmento PB29, le lavature, le mescolanze e la conservazione: che cosa dicono le fonti e che cosa provare sulla carta",
+  "scheda": "Il blu oltremare PB29: storia, granulazione, lavature, mescolanze e conservazione, con una scheda di prove sui propri materiali",
+  "sintesi": [
+    {
+      "testo": "PB29 identifica il pigmento, non tutta la ricetta del colore. Due tubetti con lo stesso codice possono dare stesure diverse.",
+      "capitolo": "identita"
+    },
+    {
+      "testo": "La granulazione è un aspetto del deposito. Da sola non permette di riconoscere tutti i processi che lo hanno formato.",
+      "capitolo": "granulazione"
+    },
+    {
+      "testo": "Riattivare il colore in tavolozza e sollevarlo dalla carta sono prove diverse. Non si può chiamare ogni oltremare «non macchiante».",
+      "capitolo": "stesure"
+    },
+    {
+      "testo": "Le terre possono dare neutri, i rossi e i magenta violetti, i gialli verdi diversi. Le dosi non sono universali.",
+      "capitolo": "mescolanze"
+    },
+    {
+      "testo": "La solidità alla luce non equivale a resistenza agli acidi. Gli studi su olio e resina non descrivono automaticamente l’acquerello.",
+      "capitolo": "conservazione"
+    },
+    {
+      "testo": "Come proposta del Quaderno, sei prove potrebbero aiutare a conoscere il proprio tubetto, cambiando una variabile alla volta.",
+      "capitolo": "pratica"
+    }
+  ],
+  "premessa": [
+    "L’oltremare può dare una campitura tenue, un blu intenso o un deposito dalla trama evidente. Per scegliere come impiegarlo, occorre distinguere il pigmento dalla formulazione e osservare la stesura asciutta.",
+    "La pagina confronta studi, schede dei produttori e prove di pittori e didatti. Le differenze fra campioni non diventano classifiche di tutte le formulazioni in commercio. Le proposte pratiche del Quaderno sono dichiarate come tali."
+  ],
+  "nota_metodo": [
+    "La ricerca è stata svolta il 3 novembre 2026 con l’aiuto dell’intelligenza artificiale. DeepSeek e Kimi hanno preparato due sintesi sullo stesso corpus: letture separate, non raccolte di fonti indipendenti.",
+    "La verifica successiva ha confrontato le conclusioni con le fonti e aggiunto studi ed esempi pertinenti. L’accordo fra modelli non è stato considerato una prova. Le dichiarazioni dei produttori riguardano i loro prodotti, non ogni colore PB29.",
+    "Per due studi sulla degradazione è stato consultato soltanto il riassunto scientifico, non il testo integrale. Questo limite è indicato nel capitolo 6 e nelle fonti. Le prove comparative datate non certificano le ricette oggi in commercio.",
+    "La prima adozione del sintetico nell’acquerello e l’invecchiamento del sistema pigmento, gomma e carta restano questioni aperte nel materiale esaminato. La scheda finale propone esercizi, ma non riporta risultati già misurati."
+  ],
+  "capitoli": [
+    {
+      "id": "identita",
+      "breve": "Pigmento e storia",
+      "titolo": "1. Dal lapislazzuli al PB29",
+      "blocchi": [
+        {
+          "tipo": "p",
+          "testo": "L’oltremare naturale si ottiene separando la componente blu, la lazurite, dal lapislazzuli. Non coincide con una qualsiasi polvere della pietra intera. Il pigmento sintetico riproduce il sistema chimico del blu, ma ciò non rende uguali le impurità o le particelle.",
+          "fonti": [
+            "F01",
+            "F02"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Nel 1824 fu promosso un premio per ottenere un oltremare artificiale. Fu assegnato a Guimet nel 1828; il museo colloca la produzione del sintetico intorno al 1830. Queste date non stabiliscono il primo uso in un acquerello.",
+          "fonti": [
+            "F01",
+            "F02"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Nelle gamme moderne, il codice PB29 può comparire su più versioni di oltremare. Il codice identifica il pigmento, non la ricetta completa. Anche i nomi «French», «deep», «light» e «finest» vanno letti all’interno della gamma, non come specifiche comuni a tutti i prodotti.",
+          "fonti": [
+            "F06",
+            "F08"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Il confronto commerciale fra tubetti appartiene alla sezione <a href=\"../../marche/\">Marche e tubetti</a>. Le schede ufficiali e le prove comparative mostrano differenze anche fra prodotti con lo stesso codice: non basta il nome per prevedere la stesura.",
+          "fonti": [
+            "F05",
+            "F06",
+            "F08"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tinta",
+      "breve": "Tinta e asciugatura",
+      "titolo": "2. Il blu umido e il blu asciutto",
+      "blocchi": [
+        {
+          "tipo": "p",
+          "testo": "Il blu dipende da specie dello zolfo ospitate nella struttura del pigmento. Il principale responsabile del colore è il radicale S₃⁻. La tinta non dipende quindi soltanto dalla macinazione: contano anche la chimica e il processo di sintesi.",
+          "fonti": [
+            "F01"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "La tinta è la direzione del colore, il valore la sua posizione fra chiaro e scuro, il croma la sua intensità rispetto al grigio. Sono aspetti distinti. Le misure di MacEvoy mostrano che, asciugando, un acquerello può perdere soprattutto croma: non soltanto diventare più chiaro.",
+          "fonti": [
+            "F04"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Le variazioni dipendono dal colore e dalla stesura. Le misure pubblicate non autorizzano ad assegnare a ogni PB29 una percentuale fissa di cambiamento. Per confrontare due campioni si osservano separatamente il colore umido e quello asciutto.",
+          "fonti": [
+            "F04"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Jane Blundell chiama caldo l’oltremare per la sua tendenza al viola rispetto ai blu verdastri. Una variante verdastra può invece essere descritta come più fredda di un altro oltremare. Occorre precisare il confronto: «più rossastro» o «più verdastro» è spesso più utile di una temperatura assoluta.",
+          "fonti": [
+            "F05",
+            "F07"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "granulazione",
+      "breve": "Granulazione",
+      "titolo": "3. La trama che resta sulla carta",
+      "blocchi": [
+        {
+          "tipo": "p",
+          "testo": "La granulazione descrive l’aspetto disuniforme del deposito. La sedimentazione è il moto delle particelle verso il supporto; l’aggregazione è la loro associazione. MacEvoy descrive agglomerati e tessiture diverse negli oltremare provati. Una fotografia della lavatura non basta a separare i processi.",
+          "fonti": [
+            "F03",
+            "F10"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Uno studio sperimentale ha osservato gocce di acquerello, incluso un blu oltremare, su carta a grana fredda. La sedimentazione e il trasporto dell’acqua contribuiscono al deposito. La distribuzione dell’acqua sulla superficie modifica la forma delle macchie.",
+          "fonti": [
+            "F10"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Lo studio riguarda gocce in condizioni controllate, non pennellate su qualsiasi carta. Non separa sistematicamente tutti gli effetti di gomma, additivi, collatura e inclinazione. Le dimensioni misurate nel campione non sono una specifica universale del PB29.",
+          "fonti": [
+            "F10"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Anche il produttore di più varianti dichiara differenze di tessitura fra i propri oltremare. La sigla PB29, da sola, non promette una granulazione identica.",
+          "fonti": [
+            "F08"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stesure",
+      "breve": "Lavature e velature",
+      "titolo": "4. Stendere, riattivare, sollevare",
+      "blocchi": [
+        {
+          "tipo": "p",
+          "testo": "La tessitura non impedisce di fare una lavatura. Blundell confronta stesure graduate e campioni più carichi; fra quelli provati, un oltremare meno granulante le serviva per cieli più uniformi. È un’osservazione sui campioni di quella prova, non una classifica attuale.",
+          "fonti": [
+            "F05"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "MacEvoy descrive oltremare quasi trasparenti nelle stesure sottili e altri con aggregazione più evidente. La trasparenza non significa assenza di particelle o di trama. Una velatura, stesa sul fondo asciutto, va giudicata nella sua diluizione e nel suo spessore.",
+          "fonti": [
+            "F03"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Riattivare significa riprendere con acqua un colore asciutto in tavolozza. Sollevare significa rimuovere una parte del colore dalla carta. Le indicazioni di prebagnatura del godet non misurano il residuo lasciato sul foglio.",
+          "fonti": [
+            "F05",
+            "F09"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Il potere colorante, cioè quanto un colore modifica una miscela, non equivale alla sua tenacia sulla carta. Le prove del PB29 non sostengono la definizione assoluta «non macchiante». Se una scheda non indica la sollevabilità, non la si ricava dalla sola trasparenza.",
+          "fonti": [
+            "F03"
+          ]
+        },
+        {
+          "tipo": "nota",
+          "testo": "Come proposta del Quaderno, si potrebbe scegliere una stesura più tessiturata per rocce o muri e confrontarla con una lavatura più uniforme per il cielo. È una scelta pittorica, non un effetto garantito dal pigmento."
+        }
+      ]
+    },
+    {
+      "id": "mescolanze",
+      "breve": "Mescolanze",
+      "titolo": "5. Neutri, violetti e verdi",
+      "blocchi": [
+        {
+          "tipo": "p",
+          "testo": "Le prove di MacEvoy mostrano neutri scuri con terra di Siena bruciata PBr7 o ossido rosso trasparente PR101. Blundell mostra bruni e grigi con terre e aranci. Il nome «Siena bruciata» non identifica sempre lo stesso pigmento: va letto il codice del tubetto.",
+          "fonti": [
+            "F03",
+            "F05",
+            "F06"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Con PR122 e PV19, MacEvoy riporta violetti; Blundell confronta risultati con rossi caldi e freddi. Le prove riguardano i colori identificati nelle fonti. Non consentono di attribuire un pigmento a qualsiasi rosa o rosso commerciale con un nome simile.",
+          "fonti": [
+            "F03",
+            "F05"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Nelle prove di Blundell, i gialli caldi danno verdi più smorzati; un giallo freddo o un verde ftalo possono spostare il blu verso il verde. Per ripetere il confronto occorre indicare i pigmenti effettivamente usati, non soltanto il nome del giallo.",
+          "fonti": [
+            "F05"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "La tessitura può cambiare nella miscela e dipende anche da carta e diluizione. Non sono disponibili dosi universali: contano concentrazione e potere colorante dei tubetti.",
+          "fonti": [
+            "F03",
+            "F08"
+          ]
+        },
+        {
+          "tipo": "nota",
+          "testo": "Come proposta del Quaderno, si potrebbe confrontare una miscela preparata in tavolozza con l’incontro dei due colori sul foglio bagnato. Il primo campione mostrerebbe il tono medio; il secondo anche l’eventuale separazione."
+        }
+      ]
+    },
+    {
+      "id": "conservazione",
+      "breve": "Conservazione",
+      "titolo": "6. Luce, acidi e legante",
+      "blocchi": [
+        {
+          "tipo": "p",
+          "testo": "Le schede ufficiali consultate assegnano la classe di solidità alla luce I ad alcuni oltremare PB29. È una dichiarazione sui prodotti indicati, non una certificazione della carta, del legante o degli altri colori di una miscela.",
+          "fonti": [
+            "F06",
+            "F07"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "La solidità alla luce non equivale a resistenza chimica. Lo studio di Del Federico e collaboratori descrive la distruzione della struttura del pigmento; il mezzo acido produce un fenomeno analogo. È stato letto soltanto il riassunto scientifico. Non ne deriva una durata prevista per un acquerello conservato normalmente.",
+          "fonti": [
+            "F11"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Un altro studio riguarda colori legati con olio di lino e resina. Riferisce alterazioni del legante e della riflettanza con pigmento rimasto intatto. Anche qui è stato letto soltanto il riassunto: il lavoro non dimostra il degrado ordinario della gomma arabica su carta.",
+          "fonti": [
+            "F12"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "L’espressione «malattia dell’oltremare» non indica automaticamente un unico processo. Va distinto l’attacco al pigmento dal cambiamento del legante o dell’aspetto dello strato. Nel materiale esaminato non risulta documentata una soglia universale di pH o di durata per il proprio acquerello PB29.",
+          "fonti": [
+            "F11",
+            "F12"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Per le opere su carta, la guida di conservazione raccomanda di evitare sole diretto, calore e forti variazioni ambientali. Montaggio e custodie devono essere adatti alla conservazione, senza materiali acidi o contaminanti. La protezione dagli ultravioletti non elimina tutti gli effetti della luce.",
+          "fonti": [
+            "F13"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "storia-opere",
+      "breve": "Un caso documentato",
+      "titolo": "7. L’oltremare in un’opera analizzata",
+      "blocchi": [
+        {
+          "tipo": "p",
+          "testo": "Il Metropolitan Museum riferisce analisi Raman e fluorescenza X su saggi di colore marginali di un progetto di Frederick Wilson. È il disegno per una vetrata a tre luci della St. John’s Episcopal Church di Cornwall, datato circa 1926, ad acquerello, gouache e grafite. Fra i pigmenti identificati compare l’oltremare.",
+          "fonti": [
+            "F15"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "L’identificazione viene dal resoconto del laboratorio, non dal colore della riproduzione. La pagina non lo presenta come primo impiego e non distingue espressamente, per quel risultato, oltremare naturale e sintetico.",
+          "fonti": [
+            "F15"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Le Bodleian Libraries discutono l’oltremare dei manoscritti e una ricostruzione del suo uso con gomma arabica. La pagina distingue questa pittura dall’acquerello moderno. È un precedente materiale utile, non una prova del comportamento di ogni PB29 attuale.",
+          "fonti": [
+            "F14"
+          ]
+        },
+        {
+          "tipo": "nota",
+          "testo": "Nel materiale esaminato resta aperta la prima adozione documentata del sintetico nell’acquerello. L’invenzione del pigmento e l’identificazione in una singola opera non risolvono, da sole, la questione."
+        }
+      ]
+    },
+    {
+      "id": "pratica",
+      "breve": "Prove sul foglio",
+      "titolo": "8. Sei prove sui propri materiali",
+      "blocchi": [
+        {
+          "tipo": "p",
+          "testo": "Come proposta del Quaderno, si potrebbe preparare una scheda comparativa. Si annoterebbero colore, pigmenti e lotto leggibile; carta, grana e lato; acqua, pennello e orientamento del foglio. Le prove seguenti non sono già state eseguite né costituiscono un protocollo normalizzato.",
+          "fonti": [
+            "quaderno-prove"
+          ]
+        },
+        {
+          "tipo": "lista",
+          "numerata": true,
+          "voci": [
+            {
+              "testo": "<b>Lavatura.</b> Si potrebbe stendere una striscia dal concentrato al diluito e una campitura più acquosa, lasciando accanto carta bianca. Il confronto asciutto mostrerebbe uniformità, trama e bordi.",
+              "fonti": [
+                "quaderno-prove",
+                "F05"
+              ]
+            },
+            {
+              "testo": "<b>Stati del bagnato.</b> Si potrebbe usare la stessa miscela su carta asciutta, su carta lucida d’acqua e su carta umida senza lucido. Andrebbe registrato l’aspetto della superficie: il tempo dalla bagnatura, da solo, non descrive come l’acqua è distribuita.",
+              "fonti": [
+                "quaderno-prove",
+                "F10"
+              ]
+            },
+            {
+              "testo": "<b>Carta o inclinazione.</b> Si potrebbe ripetere una lavatura su due carte, oppure con foglio piano e inclinato. Cambiando una sola variabile si eviterebbe di attribuire l’effetto alla causa sbagliata. La pozza di colore dovrebbe restare la stessa.",
+              "fonti": [
+                "quaderno-prove"
+              ]
+            },
+            {
+              "testo": "<b>Velatura.</b> Si potrebbero preparare due campiture uguali. Dopo un giorno, scelto come attesa convenzionale della prova, su metà di una si passerebbe un secondo velo morbido. Si annoterebbero il movimento della prima stesura e la trama finale.",
+              "fonti": [
+                "quaderno-prove"
+              ]
+            },
+            {
+              "testo": "<b>Sollevamento e riattivazione.</b> Dopo la stessa attesa, si potrebbe passare un pennello pulito e umido su metà della campitura, con uguale numero di passaggi, e tamponare senza insistere. A parte, si confronterebbe il godet usato subito con quello prebagnato: le due prove riguardano comportamenti diversi.",
+              "fonti": [
+                "quaderno-prove",
+                "F03",
+                "F09"
+              ]
+            },
+            {
+              "testo": "<b>Mescolanze.</b> Si potrebbero fare scale fra PB29 e la propria terra, poi con rosa o magenta, rosso caldo, giallo e verde. Andrebbero scritti i codici dei tubetti. Per la coppia con la terra si confronterebbero miscela in tavolozza e incontro sul bagnato.",
+              "fonti": [
+                "quaderno-prove",
+                "F03",
+                "F05"
+              ]
+            }
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "I campioni si potrebbero fotografare insieme, con luce e impostazioni fisse, includendo il bianco della carta. La foto sarebbe un registro qualitativo, non una misura del colore calibrata. Una differenza interessante andrebbe ripetuta su un secondo campione prima di considerarla stabile.",
+          "fonti": [
+            "quaderno-prove"
+          ]
+        },
+        {
+          "tipo": "nota",
+          "testo": "La scheda terrebbe separati tinta, valore, croma, trama, diffusione, residuo dopo sollevamento e ripresa in tavolozza. Il risultato servirebbe a scegliere un uso, non a dichiarare un blu migliore in assoluto."
+        }
+      ]
+    }
+  ],
+  "fonti": {
+    "F01": {
+      "testo": "Primaria sperimentale:. A Systematic Examination of Colour Development in Synthetic Ultramarine According to Historical Methods, PLOS ONE, 13 febbraio 2013.  DOI 10.1371/journal.pone.0050364. Letti abstract, introduzione, metodi e discussione chimica; non è una prova di acquerello su carta. La parte storica è ricostruzione bibliografica degli autori. Consultazione nella ricerca del 3 novembre 2026.",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0050364"
+    },
+    "F02": {
+      "testo": "Museo, sintesi tecnico-scientifica del progetto:. Fitzwilliam Museum, Ultramarine, ILLUMINATED, senza data.  Scheda letta per intero. Consultazione nella ricerca del 3 novembre 2026.",
+      "url": "https://fitzmuseum.cam.ac.uk/illuminated/lab/overview-of-artists-materials/ultramarine/type/material"
+    },
+    "F03": {
+      "testo": "Primaria indipendente per i test dell’autore:. Bruce MacEvoy, Handprint, Guide to watercolor pigments: blue, sezione PB29; senza data unica, pagina con prove e riferimenti storici non contemporanei.  Letta la sezione pertinente dal testo completo acquisito, non soltanto l’anteprima troncata. Consultazione nella ricerca del 3 novembre 2026.",
+      "url": "https://www.handprint.com/HP/WCL/waterb.html#PB29"
+    },
+    "F04": {
+      "testo": "Primaria indipendente per le misure:. Bruce MacEvoy, Watercolor drying shifts, senza data accertata.  Letta l’esposizione del metodo e dei limiti; non sono state ricalcolate le misure originali. Consultazione nella ricerca del 3 novembre 2026.",
+      "url": "https://www.handprint.com/HP/WCL/cds.html"
+    },
+    "F05": {
+      "testo": "Primaria testimoniale e comparativa:. Jane Blundell, Watercolour Comparisons 1 Ultramarine Blue PB29, 18 giugno 2013, aggiornamento dichiarato 2015 e ulteriori aggiunte non datate singolarmente.  Testo letto; campioni fotografici non trattati come colorimetria. Consultazione nella ricerca del 3 novembre 2026.",
+      "url": "https://janeblundellart.blogspot.com/2013/06/watercolour-comparisons-1-ultramarine.html"
+    },
+    "F06": {
+      "testo": "Primaria commerciale:. Winsor & Newton, Professional Watercolour, tabella tecnica della gamma, senza data.  Riscontrate le righe dei prodotti citati; dichiarazioni del produttore. Consultazione nella ricerca del 3 novembre 2026.",
+      "url": "https://eu.winsornewton.com/pages/professional-watercolour"
+    },
+    "F07": {
+      "testo": "Primaria commerciale:. Da Vinci, Ultramarine (Green Shade), Watercolor, senza data.  Letta la scheda; dichiarazioni del produttore. Consultazione nella ricerca del 3 novembre 2026.",
+      "url": "https://davincipaints.com/ultramarine-green-shade-8ml-watercolor/"
+    },
+    "F08": {
+      "testo": "Primaria commerciale per le proprie varianti:. Da Vinci, All About Ultramarine Blue, senza data editoriale accertata.  Letta la parte sugli acquerelli; le sezioni olio non sono trasferite all’acquerello. Consultazione nella ricerca del 3 novembre 2026.",
+      "url": "https://www.davincipaints.blog/main/all-about-ultramarine-blue"
+    },
+    "F09": {
+      "testo": "Primaria commerciale:. Deep Deep Light, French Ultramarine, senza data.  Letta la scheda; racconto storico non assunto come autorità autonoma. Consultazione nella ricerca del 3 novembre 2026.",
+      "url": "https://deepdeeplight.com/product/french-ultramarine/"
+    },
+    "F10": {
+      "testo": "Primaria sperimentale, versione preprint:. González-Gutiérrez e collaboratori, Pattern formation by droplet evaporation and imbibition in watercolor paintings, arXiv:1909.09098v1, deposito 19 settembre 2019.  Letti metodi, risultati e discussione pertinenti; il rendering HTML mostra anche una data del 2026 che non viene confusa con quella del deposito. Non letti separatamente tutti i materiali supplementari. Consultazione nella ricerca del 3 novembre 2026.",
+      "url": "https://arxiv.org/html/1909.09098v1"
+    },
+    "F11": {
+      "testo": "Primaria scientifica, solo abstract:. Del Federico e collaboratori, Insight into framework destruction in ultramarine pigments, Inorganic Chemistry, 6 febbraio 2006.  DOI 10.1021/ic050903z. Abstract verificato; testo integrale non letto. Consultazione nella ricerca del 3 novembre 2026.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16441139/"
+    },
+    "F12": {
+      "testo": "Primaria scientifica, solo abstract istituzionale:. Photo-catalytic degradation of binding media of ultramarine blue containing paint layers, Polymer Degradation and Stability 144, 43-52, 1 ottobre 2017.  DOI 10.1016/j.polymdegradstab.2017.08.002. Abstract e metadati verificati, non testo integrale. Consultazione nella ricerca del 3 novembre 2026.",
+      "url": "https://research.tudelft.nl/en/publications/photo-catalytic-degradation-of-binding-media-of-ultramarine-blue-/"
+    },
+    "F13": {
+      "testo": "Fonte istituzionale di conservazione:. Canadian Conservation Institute, Basic care of works of art on paper, senza data editoriale accertata.  Letta la guida, in particolare luce, umidità, inquinanti e montaggio. Consultazione nella ricerca del 3 novembre 2026.",
+      "url": "https://www.canada.ca/en/conservation-institute/services/care-objects/paper-books/basic-care-art-paper.html"
+    },
+    "F14": {
+      "testo": "Fonte istituzionale con osservazioni e ricostruzione pratica:. Bodleian Libraries, Exploring ultramarine, senza data.  Pagina letta per intero; inferenze tecniche mantenute come tali. Consultazione nella ricerca del 3 novembre 2026.",
+      "url": "https://www.bodleian.ox.ac.uk/about/libraries/our-work/conservation/exploring-ultramarine"
+    },
+    "F15": {
+      "testo": "Primaria museale, resoconto del laboratorio:. Marina Ruiz Molina, What Lies Beneath a Tiffany Drawing, Part Two, Metropolitan Museum of Art, 26 febbraio 2018.  Letto il resoconto e riscontrati opera e analisi citate. Consultazione nella ricerca del 3 novembre 2026.",
+      "url": "https://www.metmuseum.org/perspectives/conservation-louis-comfort-tiffany"
+    },
+    "quaderno-prove": {
+      "testo": "Quaderno di acquerello, proposta di prove comparative, 3 novembre 2026. Adattamento del protocollo della ricerca sul blu oltremare: esercizi da svolgere sui propri materiali, non prove già eseguite né protocollo normalizzato. Le scelte di attesa e di applicazione sono convenzioni del confronto.",
+      "url": ""
+    }
+  }
+}
