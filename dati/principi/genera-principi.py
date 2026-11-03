@@ -156,6 +156,8 @@ figure { margin: 12px 0; } figcaption { font-size: .85em; color: #555; margin-to
 table.riass { width: 100%; min-width: 520px; border-collapse: collapse; font-size: .88em; }
 table.riass th, table.riass td { border: 1px solid #d8d2c4; padding: 5px 6px; vertical-align: top; text-align: left; }
 table.riass th { background: #eef4ef; color: #2c4f3a; }
+.nota-metodo { margin-top: 10px; } .nota-metodo summary { cursor: pointer; font-weight: 600; color: #2c4f3a; }
+.argomenti { display: flex; flex-wrap: wrap; gap: 6px 16px; margin: 10px 0 16px; font-size: .9em; }
 .intro p.nota-fonti { font-size: .88em; color: #555; }
 h3 { font-size: 1.1em; margin: 18px 0 6px; color: #2c4f3a; }
 h4 { font-size: 1em; margin: 8px 0 6px; color: #2c4f3a; }
@@ -189,6 +191,12 @@ def pagina():
     for c in d["capitoli"]:
         F = rimandi_fonti.Capitolo(c["id"], d["fonti"], "principi")
         corpo = [f'<section class="cap" id="{c["id"]}"><h2>{e(c["titolo"])}</h2>']
+        if c.get("argomenti"):
+            titoletti = {b["id"] for b in c["blocchi"] if b["tipo"] == "titoletto"}
+            if any(v["id"] not in titoletti for v in c["argomenti"]):
+                raise SystemExit(f"principi: argomento senza destinazione nel capitolo {c['id']}")
+            voci = "".join(f'<a href="#{e(v["id"])}">{e(v["titolo"])}</a>' for v in c["argomenti"])
+            corpo.append(f'<nav class="argomenti" aria-label="Argomenti del capitolo">{voci}</nav>')
         for i, b in enumerate(c["blocchi"]):
             dove = f'{c["id"]}, blocco {i + 1}'
             if b["tipo"] == "p":
@@ -225,9 +233,12 @@ def pagina():
     mancano = [k for k in d["fonti"] if k not in citate]
     if mancano:
         raise SystemExit(f"principi: fonti mai citate: {', '.join(mancano)}")
-    for p in d["introduzione"]:
+    for p in d["introduzione"] + d.get("nota_metodo", []):
         controlla_testo(p, "introduzione")
-    intro = "".join(f"<p>{p}</p>" for p in d["introduzione"]) + f'<p class="nota-fonti">{e(d["nota_fonti"])}</p>'
+    metodo = "".join(f"<p>{p}</p>" for p in d.get("nota_metodo", []))
+    intro = ("".join(f"<p>{p}</p>" for p in d["introduzione"])
+             + f'<details class="nota-metodo"><summary>Fonti, collegamenti e metodo</summary>{metodo}'
+             + f'<p class="nota-fonti">{e(d["nota_fonti"])}</p></details>')
     data = "/".join(reversed(d["data"].split("-")))
     pagina_html = f"""<!doctype html>
 <html lang="it">

@@ -424,7 +424,7 @@ def pagina():
         nel_video = (tab.get(sigla) or {}).get("nel_video", "")
         trad = (tab.get(sigla) or {}).get("traduzione", "")
         riga_trad = (f'<p class="traduzione muto">{e(trad)}</p>' if trad.startswith("(") else
-                     f'<p class="traduzione"><b>Dal video, in sintesi:</b> {e(trad)}</p>') if trad else ""
+                     f'<details class="sintesi-video"><summary>Dal video, in sintesi</summary><p class="traduzione">{e(trad)}</p></details>') if trad else ""
         yt = f"https://www.youtube.com/watch?v={vid}&t={i0}s"
         titolo_video = selezione.get(vid, {}).get("titolo", "")
         da_video = f'dal video «{e(titolo_video)}» di {e(canale)}' if titolo_video else f'dal video di {e(canale)}'
@@ -480,18 +480,20 @@ def pagina():
             id_mod = m["id"]
             info_svg = mod_info.rendi_infografica_modalita(id_mod, e, pill)
             players = "".join(scatola(seg) for seg in m.get("segmenti", []))
+            procedimento = (f'<details class="procedimento"><summary>Descrizione estesa del metodo</summary>'
+                            f'<p>{e(m["procedimento"])}</p></details>') if m.get("procedimento") else ""
             schede_mod.append(
                 f'<article class="modalita-card" id="{e(id_mod)}">'
                 f'<div class="mod-head">'
                 f'<h3>{e(m["titolo"])}</h3>'
                 f'<span class="mod-autore">Video: {e(m["autore"])}</span>'
                 f'</div>'
-                f'<p class="mod-proposta"><b>Cosa propone il video:</b> {e(m["proposta"])}</p>'
+                f'<p class="mod-proposta"><b>Il metodo:</b> {e(m["proposta"])}</p>'
                 f'<div class="mod-meta">'
                 f'<p><b>🎨 Colori usati nel video:</b> {e(m["colori_video"])}</p>'
                 f'<p><b>🖌 Pennelli e attrezzi nel video:</b> {e(m["pennelli_video"])}</p>'
                 f'</div>'
-                f'{info_svg}'
+                f'{info_svg}{procedimento}'
                 f'<div class="mod-videos">{players}</div>'
                 f'</article>'
             )
@@ -543,7 +545,7 @@ def pagina():
 <li>Al posto di ogni video c'è un riquadro del sito: finché non si preme <b>▶ Guarda il video</b>, la pagina non carica nulla da YouTube o da Google. Il pulsante apre il lettore di YouTube, fa partire il video nel punto giusto e lo ferma da solo alla fine del passaggio. Che cosa succede ai dati della visita è spiegato nell'<a href="../informativa/">informativa del sito</a>.</li>
 <li><b>Da capo</b> fa ripartire l'estratto, <b>Lento</b> lo porta a metà velocità per studiare il movimento della mano, <b>Ripeti</b> lo ripete in continuo mentre si prova sulla carta.</li>
 <li><b>YouTube ↗</b> apre lo stesso punto nell'app o nel sito di YouTube.</li>
-<li>Le righe <b>Dal video, in sintesi</b> riassumono in italiano quello che l'autore o l'autrice dice in quel passaggio: sono sintesi preparate con l'aiuto dell'intelligenza artificiale, non trascrizioni, e la fonte resta il video.</li>
+<li>I riquadri apribili <b>Dal video, in sintesi</b> riassumono in italiano quello che l'autore o l'autrice dice in quel passaggio: sono sintesi preparate con l'aiuto dell'intelligenza artificiale, non trascrizioni, e la fonte resta il video.</li>
 </ul>
 </div>
 </section>
@@ -616,6 +618,7 @@ section.albero { border-top: 3px solid #3d6b4f; padding-top: 14px; margin-top: 2
 .mod-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; flex-wrap: wrap; border-bottom: 1px solid #e1eae3; padding-bottom: 8px; margin-bottom: 9px; }
 .mod-head h3 { margin: 0; font-size: 1.08em; color: #1f3c2b; }
 .mod-autore { font-size: .82em; font-weight: 600; color: #2c4f3a; background: #e8f1eb; border: 1px solid #bdd3c3; border-radius: 999px; padding: 2px 10px; max-width: 100%; }
+.procedimento p, .sintesi-video p { margin: 8px 0 0; }
 .mod-proposta { margin: 0 0 8px; font-size: .95em; color: #222; }
 .mod-meta { background: #f8f6f0; border: 1px solid #e5dfd2; border-radius: 8px; padding: 8px 11px; margin-bottom: 11px; font-size: .88em; color: #333; }
 .mod-meta p { margin: 3px 0; }

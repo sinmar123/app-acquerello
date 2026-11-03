@@ -33,7 +33,7 @@ SEZIONI = [
         "breve": "Principi",
         "nome_form": "Principi",
         "titolo": "Principi generali: acqua, colore e carta",
-        "sottotitolo": "Le tre consistenze della miscela, gli stati della carta e il rapporto fra pennello e carta, da conoscere prima degli esercizi; il lavoro in studio e all'aperto",
+        "sottotitolo": "Consistenze della miscela, stati della carta e lavoro in studio e all’aperto",
         "script_genera": DATI_DIR / "principi" / "genera-principi.py",
         "html_generato": DATI_DIR / "principi" / "principi.html",
     },
@@ -53,7 +53,7 @@ SEZIONI = [
         "breve": "Marche e tubetti",
         "nome_form": "Confronto marche",
         "titolo": "Marche e tubetti",
-        "sottotitolo": "Tubetti e pastiglie, serie per chi comincia e per artisti, come leggere l'etichetta e perché lo stesso nome può nascondere pigmenti diversi",
+        "sottotitolo": "Leggere l’etichetta e confrontare le serie",
         "script_genera": DATI_DIR / "marche" / "genera-marche.py",
         "html_generato": DATI_DIR / "marche" / "marche.html",
     },
@@ -62,8 +62,8 @@ SEZIONI = [
         "numero": "4",
         "breve": "Soggetti",
         "nome_form": "Soggetti (Alberi, Nuvole, Fiori...)",
-        "titolo": "Soggetti: un modulo per ogni tema",
-        "sottotitolo": "Sezione in crescita: S1 Alberi, siepi e arbusti è pubblicato; in preparazione cieli e nuvole, fiori, acqua e riflessi, rocce, architetture",
+        "titolo": "Soggetti: esercizi per tema",
+        "sottotitolo": "Un modulo pubblicato sugli alberi e cinque in preparazione",
         "script_genera": DATI_DIR / "soggetti" / "genera-soggetti.py",
         "html_generato": DATI_DIR / "soggetti" / "soggetti.html",
     },
@@ -84,7 +84,7 @@ SEZIONI = [
         "breve": "Approfondimenti",
         "nome_form": "Approfondimenti",
         "titolo": "Approfondimenti",
-        "sottotitolo": "Questioni che tornano spesso fra chi dipinge ad acquerello, una pagina per tema, con le fonti",
+        "sottotitolo": "Fatti, opinioni e domande aperte, con le fonti",
         "script_genera": DATI_DIR / "approfondimenti" / "genera-approfondimenti.py",
         "html_generato": DATI_DIR / "approfondimenti" / "approfondimenti.html",
         "pagine_extra": DATI_DIR / "approfondimenti" / "pagine",
@@ -95,7 +95,7 @@ SEZIONI = [
         "breve": "Eventi",
         "nome_form": "Eventi",
         "titolo": "Eventi",
-        "sottotitolo": "Locandina, programma e fotografie di ogni evento, con il calendario e l'archivio per anno",
+        "sottotitolo": "Festival, mostre, dimostrazioni e pittura all’aperto",
         "script_genera": DATI_DIR / "eventi" / "genera-eventi.py",
         "html_generato": DATI_DIR / "eventi" / "eventi.html",
         "cartelle": [DATI_DIR / "eventi" / "immagini"],
@@ -487,7 +487,8 @@ def blocco_chat_e_suggerimenti(sezione_predefinita: str, pagina_path: str) -> st
 .chat-msg.ai p{{margin:0 0 8px}}
 .chat-msg.ai p:last-child{{margin-bottom:0}}
 .chat-input-row{{display:flex;gap:8px;align-items:flex-end}}
-.chat-input-row textarea{{flex:1;font:inherit;font-size:.92rem;padding:8px 10px;border:1px solid #c9bba3;border-radius:6px;min-height:54px;max-height:140px;resize:vertical;background:#fff}}
+.chat-input-row textarea{{flex:1;min-width:0;font:inherit;font-size:.92rem;padding:8px 10px;border:1px solid #c9bba3;border-radius:6px;min-height:54px;max-height:140px;resize:vertical;background:#fff}}
+@media(max-width:480px){{.chat-input-row{{flex-wrap:wrap}}.chat-input-row textarea{{flex-basis:100%}}}}
 .chat-nota-privacy{{margin:10px 0 0;font-size:.78rem;color:#6b5e4c;line-height:1.45}}
 .chat-nota-privacy summary{{cursor:pointer;font-weight:600}}
 .chat-nota-privacy p{{margin:6px 0 0}}
@@ -497,10 +498,15 @@ def blocco_chat_e_suggerimenti(sezione_predefinita: str, pagina_path: str) -> st
   <div class="chat-box" data-pagina="{e(pagina_path)}">
     <h2>🎨 Assistente sull'acquerello</h2>
     <p class="sugg-sub">
-      Domande sulla tecnica dell'acquerello, sui colori e sui materiali, o su come usare il Quaderno. Le risposte sono generate
-      da un modello di intelligenza artificiale, Gemini 4 Argon di Google, istruito con un riassunto del Quaderno: possono
-      contenere errori, e fa fede il testo delle sezioni. Ogni connessione dispone di <strong>5 domande a settimana</strong>;
-      quando in un giorno le domande di tutti arrivano a 10, la chat riprende il giorno dopo.
+      <strong>Scopo.</strong> Domande sulla tecnica dell'acquerello, sui colori e sui materiali, o su come usare il Quaderno.
+    </p>
+    <p class="sugg-sub">
+      <strong>Risposte.</strong> Gemini 4 Argon di Google risponde sulla base di un riassunto del Quaderno.
+      Può commettere errori: fa fede il testo delle sezioni.
+    </p>
+    <p class="sugg-sub">
+      <strong>Limiti d'uso.</strong> Ogni connessione dispone di <strong>5 domande a settimana</strong>.
+      Quando in un giorno le domande di tutti arrivano a 10, la chat riprende il giorno dopo.
     </p>
     <div class="chat-barra-stato">
       <span>Non serve registrarsi.</span>
@@ -516,7 +522,7 @@ def blocco_chat_e_suggerimenti(sezione_predefinita: str, pagina_path: str) -> st
     <form id="form-chat-domanda">
       <div class="chat-input-row">
         <textarea id="chat-domanda-input" required minlength="4" maxlength="1000" placeholder="Scrivi qui la domanda sull'acquerello..."></textarea>
-        <button type="submit" class="sugg-btn arancio" id="chat-invia-btn">Invia</button>
+        <button type="submit" class="sugg-btn arancio" id="chat-invia-btn">Invia domanda</button>
       </div>
     </form>
     <div id="chat-esito-err" class="sugg-esito err" role="alert"></div>
@@ -570,7 +576,7 @@ def blocco_chat_e_suggerimenti(sezione_predefinita: str, pagina_path: str) -> st
         <textarea id="sugg-testo" name="testo" required minlength="10" maxlength="3500" placeholder="La proposta o la correzione. Per un video di YouTube: indirizzo e minuti d'inizio e di fine (mm:ss) del passaggio."></textarea>
       </div>
       <div class="sugg-avviso">
-        <strong>Pubblicazione:</strong> l'invio non richiede registrazione. Premendo <em>Invia</em>, oggetto, descrizione, sezione,
+        <strong>Pubblicazione:</strong> l'invio non richiede registrazione. Premendo <em>Invia suggerimento</em>, oggetto, descrizione, sezione,
         pagina di partenza e firma eventuale <strong>diventano pubblici</strong> nelle
         <a href="{REPO_URL}/issues" target="_blank" rel="noopener">segnalazioni del progetto su GitHub</a>,
         con licenza Creative Commons CC BY 4.0, per la revisione e l'aggiornamento del Quaderno. Con l'invio dichiari di essere
@@ -582,7 +588,7 @@ def blocco_chat_e_suggerimenti(sezione_predefinita: str, pagina_path: str) -> st
         <strong>Non inserire indirizzi email, numeri di telefono o altri dati personali.</strong>
       </div>
       <div class="sugg-actions">
-        <button type="submit" class="sugg-btn" id="sugg-submit">Invia</button>
+        <button type="submit" class="sugg-btn" id="sugg-submit">Invia suggerimento</button>
         <a class="sugg-link-gh" href="{REPO_URL}/issues" target="_blank" rel="noopener">Le segnalazioni pubblicate →</a>
       </div>
       <div id="sugg-esito" class="sugg-esito" role="status" aria-live="polite"></div>
@@ -711,7 +717,7 @@ def blocco_chat_e_suggerimenti(sezione_predefinita: str, pagina_path: str) -> st
         collegamento(url, "aprire la segnalazione su GitHub con questo collegamento precompilato"), ".");
     }}).then(function () {{
       pulsante.disabled = false;
-      pulsante.textContent = "Invia";
+      pulsante.textContent = "Invia suggerimento";
     }});
   }});
 }})();
@@ -825,23 +831,6 @@ def inietta_elementi_comuni(html_pagina: str, sezione: dict, pagina_path: str, p
         else:
             html_pagina = html_pagina.replace("</body>", blocco + "\n</body>", 1)
     return html_pagina
-
-
-# Voci del riquadro «in costruzione» della home, testo approvato dal curatore il 29/10/2026 (prima versione del
-# 21/10/2026), con la voce degli Approfondimenti aggiunta lo stesso giorno insieme alla sezione: ogni voce porta
-# alla pagina o allo strumento che nomina. L'invito alla casella dei suggerimenti
-# è la frase che chiude il riquadro, così non compare due volte.
-IN_COSTRUZIONE = [
-    'i <a href="./principi/">principi generali su acqua, colore e carta</a>, dalle tre consistenze della miscela agli stati della carta, fino al lavoro in studio e all\'aperto',
-    'la <a href="./colori/">teoria dei colori</a>, con un <a href="./colori/#calcolatore">calcolatore</a> che propone, come stima, la miscela più vicina a un colore dato',
-    'una <a href="./marche/">guida alle marche e ai tubetti</a> in commercio: come leggere l\'etichetta, come si distinguono le serie, perché due colori con lo stesso nome possono avere pigmenti diversi',
-    'una <a href="./soggetti/">sezione dedicata ai soggetti</a> che si incontrano dipingendo, con un modulo per ogni tema: è pronto il primo, su <a href="./alberi/">alberi, siepi e arbusti</a>, con i passaggi dei video didattici indicati al secondo, e seguiranno cieli e nuvole, fiori, acqua e riflessi, rocce e architetture',
-    'una sezione di <a href="./approfondimenti/">approfondimenti</a>, con una pagina per ogni questione che torna spesso fra chi dipinge: la prima è dedicata al <a href="./approfondimenti/bianco/">bianco nell\'acquerello</a>',
-    'il <a href="./eventi/">calendario degli eventi</a>, con locandina, programma e fotografie, e l\'archivio per anno',
-    'uno <a href="./opere/">spazio per le opere di non professionisti</a>, dove chi dipinge per passione espone i propri acquerelli in una pagina tutta sua e racconta il percorso fatto',
-    "un <a href=\"#assistente-ai\">assistente basato sull'intelligenza artificiale</a> per le domande sulla tecnica, "
-    "con un limite di 5 domande a settimana",
-]
 
 
 # Home: testata ad acquerello, schede con una figurina in SVG o CSS, nota di metodo da aprire.
@@ -971,7 +960,6 @@ def genera_home(sezioni_pronte: list[dict]) -> str:
   <span class="card-txt"><span class="card-tit">{e(v['nome'])}</span><span class="card-sub">{e(v['quante'])}</span></span>
 </a>""")
     schede_html = "\n".join(schede)
-    voci = "".join(f"<li>{v}{';' if i < len(IN_COSTRUZIONE) - 1 else '.'}</li>" for i, v in enumerate(IN_COSTRUZIONE))
     blocco_sugg = blocco_chat_e_suggerimenti(OPZIONI_SEZIONE[0], "/")
     return f"""<!doctype html>
 <html lang="it">
@@ -987,20 +975,19 @@ def genera_home(sezioni_pronte: list[dict]) -> str:
   <div class="testa-in">
     <h1>Quaderno di acquerello</h1>
     <p>Appunti di studio dell'acquerello, scritti da appassionati per appassionati</p>
-    <p class="nota">Questo sito è scritto da dilettanti per dilettanti. Dipingiamo ad acquerello per passione, senza farne un mestiere. Qui raccogliamo ciò che impariamo nei corsi, nelle prove al tavolo e nelle uscite all'aperto. Non siamo maestri: cerchiamo di capire perché un foglio riesce e un altro no.</p>
-    <p class="nota">Il sito è nato nell'ottobre 2026. Lo realizziamo con l'ausilio di strumenti di intelligenza artificiale, partendo dai modelli disponibili in quel periodo. Man mano che ne escono di nuovi, li proviamo per rileggere e migliorare i testi. Testi, pagine, codice e illustrazioni nascono dal dialogo fra chi dipinge e alcuni modelli. Gemini 4 Argon risponde alle domande in fondo alle pagine. GPT-6 Astra e Claude Opus 5.5 hanno scritto i pareri sulle opere. Altri modelli aiutano a rileggere i testi. Anche le ricerche degli Approfondimenti sono fatte con l'aiuto dell'IA, con una fonte per ogni affermazione.</p>
-    <p class="nota">Il sito è aperto ai contributi di chi condivide questa passione. Sono benvenuti anche i professionisti che vi trovano qualcosa di utile o vogliono aiutarci a migliorarlo.</p>
+    <p class="nota">Il Quaderno raccoglie appunti e prove di acquerello, dai principi su acqua, colore e carta agli esercizi per soggetto. È scritto da dilettanti per dilettanti: persone che dipingono per passione e condividono ciò che imparano. Sono benvenuti anche i professionisti che vogliono contribuire.</p>
+    <p class="nota">Il sito si sviluppa con l'aiuto dell'intelligenza artificiale. Gli strumenti aiutano a cercare le fonti e a organizzare i contenuti. Nelle guide, ogni affermazione rimanda alla propria fonte; stime e limiti restano dichiarati.</p>
   </div>
 </header>
 <main>
   <details class="cf-origine">
     <summary>Nota di metodo</summary>
-    <p>Chi impara l'acquerello oggi ha a disposizione moltissimo materiale: manuali, schede dei produttori, ore e ore di dimostrazioni filmate. La difficoltà è ritrovare il punto giusto nel momento in cui serve, con il pennello in mano. Per questo, nel preparare il Quaderno, ci siamo fatti aiutare dall'intelligenza artificiale a leggere, confrontare e ordinare le fonti. Ne sono nati i principi su acqua, colore e carta, gli esercizi con i passaggi dei video indicati al secondo, il calcolatore delle miscele e l'assistente che risponde alle domande sulla tecnica. Nelle guide ogni affermazione rimanda alla sua fonte, e ciò che è stimato resta dichiarato come stima; l'ultima parola, però, spetta sempre alla prova sul foglio.</p>
+    <p>Il Quaderno ordina manuali, schede dei produttori e dimostrazioni filmate per ritrovare il passaggio utile durante lo studio. Le sintesi non sostituiscono le fonti: i video si aprono al secondo indicato e i rimandi delle guide portano ai documenti consultati. La prova sul foglio resta necessaria.</p>
+    <p>Il sito è nato nell'ottobre 2026. Lo realizziamo con l'ausilio di strumenti di intelligenza artificiale, partendo dai modelli disponibili in quel periodo. Man mano che ne escono di nuovi, li proviamo per rileggere e migliorare i testi. Testi, pagine, codice e illustrazioni nascono dal dialogo fra chi dipinge e alcuni modelli. Gemini 4 Argon risponde alle domande in fondo alle pagine. GPT-6 Astra e Claude Opus 5.5 hanno scritto i pareri sulle opere. Altri modelli aiutano a rileggere i testi. Anche le ricerche degli Approfondimenti sono fatte con l'aiuto dell'IA, con una fonte per ogni affermazione.</p>
   </details>
   <section class="cf-sviluppo" aria-label="Stato del Quaderno">
-    <p><strong>Il Quaderno è in costruzione:</strong> le sezioni crescono un poco alla volta e altre se ne aggiungeranno. Oggi vi si trovano:</p>
-    <ul>{voci}</ul>
-    <p>Correzioni, integrazioni, video e le proprie opere si propongono dalla <a href="#suggerimenti">casella dei suggerimenti</a>, in fondo a ogni pagina.</p>
+    <p><strong>Il Quaderno è in costruzione.</strong> Il modulo sugli alberi è pubblicato; cieli e nuvole, fiori, acqua e riflessi, rocce e architetture sono <a href="./soggetti/">in preparazione</a>.</p>
+    <p>Correzioni, integrazioni, video e le proprie opere si propongono dalla <a href="#suggerimenti">casella dei suggerimenti</a>.</p>
   </section>
 
   <h2 class="sezioni-tit">Le sezioni</h2>

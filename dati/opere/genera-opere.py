@@ -379,6 +379,8 @@ def pagina_elenco(sez, autori):
         f'<p class="sotto">{e(sez["sottotitolo"])}</p>'
         f'<div class="intro">{paragrafi(sez["introduzione"])}</div>'
         f'<section class="blocco" id="autori"><h2>Gli autori</h2>{"".join(schede)}</section>'
+        f'<section class="blocco" id="partecipare"><h2>Come partecipare</h2>{paragrafi(sez["invito"])}'
+        f'<h3>Condizioni di pubblicazione</h3>{paragrafi(sez["condizioni_pubblicazione"])}</section>'
         + piede(sez, "../")
     )
     return documento(sez["titolo"], sez["sottotitolo"], corpo)
@@ -425,7 +427,8 @@ def pagina_autore(sez, autore):
         f'<p class="filo"><a href="../">{e(sez["numero"])}. {e(sez["titolo"])}</a></p>'
         f"<h1>{e(numero)} · {e(autore['nome'])}</h1>"
         f'<p class="sotto">{e(quante(autore))}.</p>'
-        f'<div class="intro">{paragrafi(presentazione + [lettura] + nota_pareri)}</div>'
+        f'<div class="intro">{paragrafi(presentazione)}</div>'
+        f'<section class="intro" id="come-leggere"><h2>Come leggere le schede</h2>{paragrafi([lettura] + nota_pareri)}</section>'
         f'<section class="blocco" id="opere"><h2>Gli acquerelli</h2><div class="galleria">{"".join(figure)}</div></section>'
         + piede(sez, "../../")
     )
@@ -434,7 +437,7 @@ def pagina_autore(sez, autore):
 
 def pagina():
     sez = carica_json(QUI / "sezione.json")
-    for campo in ("data", "numero", "titolo", "sottotitolo", "introduzione", "frasi_ordine", "clic", "nota_pareri",
+    for campo in ("data", "numero", "titolo", "sottotitolo", "introduzione", "invito", "condizioni_pubblicazione", "frasi_ordine", "clic", "nota_pareri",
                   "data_foto", "diritti"):
         if not sez.get(campo):
             errore(f"sezione.json: manca {campo}")

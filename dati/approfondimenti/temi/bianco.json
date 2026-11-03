@@ -1,7 +1,7 @@
 {
   "id": "bianco",
   "ordine": 1,
-  "data": "2026-11-02",
+  "data": "2026-11-03",
   "titolo": "Il bianco nell'acquerello",
   "sottotitolo": "La carta risparmiata o il bianco in tubetto: la storia della regola, i bandi dei concorsi, i pigmenti, le riserve, la conservazione",
   "scheda": "La carta risparmiata o il bianco in tubetto: storia della regola, bandi, pigmenti, riserve e conservazione",
@@ -137,13 +137,13 @@
           {"testo": "Correzioni di colore nei cieli: Mondloch.", "fonti": ["kane-mondloch"]}
         ]},
         {"tipo": "titoletto", "id": "altre-testimonianze", "testo": "Altre sei testimonianze sulla gouache"},
-        {"tipo": "nota", "testo": "«Dato certo» indica qui ciò che è scritto in una fonte letta, non una verifica della tecnica usata. «Stima» indica un'ipotesi o una notizia ricavata solo da un estratto. Le sei fonti sono state lette per intero, quella di Kwamena-Poh da una copia. Waterlow e Weight Reed parlano in prima persona di gouache bianca. Le altre quattro sono citate per l'uso della gouache, senza attribuire ai pittori l'uso del bianco. Nessuno dei sei artisti è italiano."},
-        {"tipo": "p", "testo": "<b>Faye Waterlow, dato certo, testo letto per intero (21/6/2024).</b> Nell'intervista dichiara che i suoi acquerelli «ora traggono beneficio dall'aggiunta di gouache bianca». Nella stessa risposta afferma però di non usare colore bianco nei suoi acquerelli. Le due affermazioni si contraddicono e il testo non chiarisce il punto: la contraddizione resta aperta.", "fonti": ["waterlow"]},
-        {"tipo": "p", "testo": "<b>Janet Weight Reed, dato certo, testo letto per intero (30/10/2018).</b> Nel suo post didattico descrive l'uso di gouache bianca permanente per i lumi quando la carta è tutta coperta. Tiene separate le tavolozze, per evitare che la gouache renda opachi i colori trasparenti. Nei commenti al post conferma di insegnare.", "fonti": ["weight-reed"]},
-        {"tipo": "p", "testo": "<b>Jay Noble, testo letto per intero (14/9/2012).</b> Il redattore del comunicato stampa del college attribuisce a Noble l'uso della gouache al posto della gomma per togliere i segni di matita. La frase è del redattore, non parole di Noble fra virgolette. Il comunicato riguarda una mostra, non è un'intervista, e lo presenta come docente in due college. Qui documenta l'uso della gouache, non una dichiarazione dell'artista sul bianco.", "fonti": ["jay-noble"]},
-        {"tipo": "p", "testo": "<b>William Kwamena-Poh, testo letto per intero da una copia (10/5/2007).</b> In un articolo del quotidiano The Ledger dichiara: «Non mi discosto dai metodi dell'acquerello, ma uso la gouache, che è opaca». Non parla del bianco. Al 1/11/2026 la pagina originale del quotidiano non risponde (errore 402); il testo è stato letto da una copia di lettura.", "fonti": ["kwamena-poh"]},
-        {"tipo": "p", "testo": "<b>Ruby Osorio, testo letto per intero, pagina senza data.</b> Nella propria dichiarazione d'artista indica acquerello e gouache fra i suoi mezzi espressivi, senza parlare del bianco. La rivista colloca la dichiarazione nel numero 79, Pacific Coast, dicembre 2008.", "fonti": ["ruby-osorio"]},
-        {"tipo": "p", "testo": "<b>Carla O'Connor, testo letto per intero (4/1/2018).</b> Definisce la gouache «il mezzo della mia maturità», per il modo di lavorarla, simile a quello dell'olio. Non nomina il bianco. L'articolo la presenta come pittrice e insegnante, membro con firma di American Watercolor Society, National Watercolor Society e Northwest Watercolor Society. La indica inoltre come Dolphin Fellow della American Watercolor Society. La presenta anche come giurata di livello nazionale.", "fonti": ["carla-oconnor"]}
+        {"tipo": "nota", "testo": "Waterlow e Weight Reed parlano in prima persona di gouache bianca. Le altre quattro testimonianze riguardano la gouache, senza attribuire ai pittori l'uso del bianco. Nessuno dei sei artisti è italiano."},
+        {"tipo": "p", "testo": "<b>Faye Waterlow</b> dichiara nel 2024 che i suoi acquerelli «ora traggono beneficio dall'aggiunta di gouache bianca». Nella stessa risposta afferma però di non usare colore bianco. La fonte non chiarisce questa contraddizione, che resta aperta.", "fonti": ["waterlow"]},
+        {"tipo": "p", "testo": "<b>Janet Weight Reed</b> descrive nel 2018 l'uso di gouache bianca permanente per i lumi quando la carta è tutta coperta. Tiene separate le tavolozze, per evitare che la gouache renda opachi i colori trasparenti.", "fonti": ["weight-reed"]},
+        {"tipo": "p", "testo": "Nel comunicato su una mostra del 2012, il redattore attribuisce a <b>Jay Noble</b> l'uso della gouache al posto della gomma per togliere i segni di matita. Non sono parole dell'artista fra virgolette: la fonte documenta la gouache, non una sua dichiarazione sul bianco.", "fonti": ["jay-noble"]},
+        {"tipo": "p", "testo": "<b>William Kwamena-Poh</b> dichiara nel 2007: «Non mi discosto dai metodi dell'acquerello, ma uso la gouache, che è opaca». Non parla del bianco.", "fonti": ["kwamena-poh"]},
+        {"tipo": "p", "testo": "Nella propria dichiarazione d'artista, <b>Ruby Osorio</b> indica acquerello e gouache fra i suoi mezzi espressivi, senza parlare del bianco.", "fonti": ["ruby-osorio"]},
+        {"tipo": "p", "testo": "Nel 2018 <b>Carla O'Connor</b> definisce la gouache «il mezzo della mia maturità». L'articolo la presenta come pittrice, insegnante e giurata di livello nazionale. Non vi compare una dichiarazione sull'uso del bianco.", "fonti": ["carla-oconnor"]}
       ]
     },
     {

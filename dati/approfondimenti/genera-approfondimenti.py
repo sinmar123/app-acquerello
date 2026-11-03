@@ -73,6 +73,7 @@ nav.salti a { flex: none; text-decoration: none; color: #2c4f3a; border: 1px sol
 .sintesi a.al-cap { font-size: .85em; white-space: nowrap; text-decoration: none; }
 .intro { background: #eef4ef; border: 1px solid #cadbce; border-radius: 8px; padding: 10px 14px; margin: 12px 0; }
 .metodo { background: #f1f3f6; border: 1px solid #cdd6df; border-radius: 8px; padding: 10px 14px; margin: 12px 0; }
+.metodo summary { cursor: pointer; font-weight: 600; color: #2c4f3a; }
 .intro p, .metodo p { margin: 6px 0; }
 section.cap { border-top: 3px solid #3d6b4f; padding-top: 14px; margin-top: 26px; }
 .voci { padding-left: 22px; } .voci li { margin-bottom: 6px; }
@@ -237,7 +238,7 @@ def pagina_tema(sez, tema):
     nota_metodo = ""
     if tema.get("nota_metodo"):
         paragrafi = "".join(f"<p>{e(p)}</p>" for p in tema["nota_metodo"])
-        nota_metodo = f'<div class="metodo"><h2>Come è stata svolta la ricerca</h2>{paragrafi}</div>'
+        nota_metodo = f'<details class="metodo"><summary>Come è stata svolta la ricerca</summary>{paragrafi}</details>'
     numero = numero_tema(sez, tema)
     corpo = (
         f'<p class="filo"><a href="../">{e(sez["numero"])}. {e(sez["titolo"])}</a></p>'

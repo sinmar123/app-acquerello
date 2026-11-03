@@ -377,8 +377,7 @@ def pagina_anno(sez, anno, eventi, oggi):
     corpo = (
         f'<p class="filo"><a href="../">Eventi</a></p>'
         f"<h1>Archivio {anno}</h1>"
-        f"<p class=\"sotto\">Gli eventi del {anno}, con data, luogo e scheda.</p>"
-        + f'<div class="intro">{paragrafi(sez["archivio_intro"])}</div>'
+        + f'<div class="intro">{paragrafi([p.format(anno=anno) for p in sez["archivio_anno_intro"]])}</div>'
         + f'<section class="blocco" id="elenco"><h2>Eventi del {anno}</h2>{cards}</section>'
         + piede(sez, 2)
     )
@@ -493,13 +492,13 @@ def pagina_scheda(sez, ev, oggi):
         f'<p class="filo"><a href="../../">Eventi</a> · <a href="../">Archivio {ev["anno"]}</a></p>'
         f"<h1>{e(ev['titolo'])}</h1>"
         f"<p class=\"sotto\">{e(ev['sottotitolo'])}</p>"
+        f'<p class="intro">{e(quando)} · {e(ev["luogo"])}</p>'
         + salti([
             ("locandina", "Locandina"),
             ("programma", "Programma"),
             ("fotografie", "Fotografie"),
         ])
-        + f'<div class="intro">{paragrafi(sez["scheda_intro"])}</div>'
-        + f"<p>{e(etichetta)}: {e(quando)}. {e(ev['luogo'])}.</p>"
+        + f"<p>{e(etichetta)}.</p>"
         + '<section class="blocco" id="locandina"><h2>Locandina</h2>'
         + blocco_locandina(ev, sez, prof)
         + "</section>"
@@ -518,7 +517,7 @@ def pagina_scheda(sez, ev, oggi):
 
 def pagina():
     sez = carica_json(QUI / "sezione.json")
-    for campo in ("introduzione", "scheda_intro", "archivio_intro", "foto_intro", "locandina_manca", "nessuna_foto"):
+    for campo in ("introduzione", "scheda_intro", "archivio_intro", "archivio_anno_intro", "foto_intro", "locandina_manca", "nessuna_foto"):
         if campo not in sez:
             errore(f"sezione.json: manca {campo}")
     if sez["locandina_manca"] != "locandina da aggiungere":

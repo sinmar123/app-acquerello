@@ -25,6 +25,8 @@ sys.stdout.reconfigure(encoding="utf-8")
 QUI = pathlib.Path(__file__).resolve().parent
 USCITA = QUI / "marche.html"
 TAVOLOZZA = QUI.parent / "colori" / "tavolozza.json"
+sys.path.insert(0, str(QUI.parent.parent / "scripts"))
+import rimandi_fonti  # noqa: E402
 
 
 def e(testo):
@@ -155,15 +157,7 @@ h3 { font-size: 1.08em; margin: 18px 0 6px; color: #2c4f3a; }
 .tab-serie { margin-top: 18px; }
 ol.fonti { font-size: .85em; color: #444; padding-left: 26px; overflow-wrap: anywhere; } ol.fonti li { margin-bottom: 5px; }
 footer { margin-top: 30px; font-size: .8em; color: #666; border-top: 1px solid #e3e0d8; padding-top: 10px; }
-"""
-
-
-def fonte_breve(f):
-    """Una fonte di fonti_pagine: il testo come collegamento e, per le pagine esterne, la data di controllo."""
-    esterna = f["url"].startswith("http")
-    destinazione = ' target="_blank" rel="noopener"' if esterna else ""
-    data = f' (controllata il {e(data_it(f["controllato"]))})' if esterna else ""
-    return f'<a href="{e(f["url"])}"{destinazione}>{f["testo"]}</a>{data}'
+""" + rimandi_fonti.CSS
 
 
 def pagina():
@@ -176,26 +170,40 @@ def pagina():
     titoli = {m["id"]: f'{m["marca"]} {m["serie"]}' if m["serie"] != m["marca"] and not m["serie"].startswith(m["marca"])
               else m["serie"] for m in d["marche"]}
 
-    def rimandi(chiavi):
-        return '<sup class="rif">[' + ", ".join(f'<a href="#{k}">{e(titoli[k])}</a>' for k in chiavi) + "]</sup>"
+    fonti_rimandi = {}
+    for k, fonte in fp.items():
+        data = f' (controllata il {e(data_it(fonte["controllato"]))})' if fonte.get("controllato") else ""
+        fonti_rimandi[k] = {"testo": fonte["testo"] + data, "url": fonte["url"]}
+    for m in d["marche"]:
+        # Le pagine generali erano già citate, senza una propria data di controllo.
+        # Le date di lettura dei singoli colori restano nelle righe delle tabelle.
+        fonti_rimandi[f'serie-{m["id"]}'] = {
+            "testo": f'{titoli[m["id"]]}: pagina generale della serie.',
+            "url": m["fonte_generale"],
+        }
+    fonti_rimandi["criterio-video"] = {
+        "testo": 'Video «Best Brand to Fill Watercolour Pans», per la scelta delle marche nelle tabelle.',
+        "url": d["criterio_fonte"],
+    }
 
-    def fonti_capitolo(chiavi):
-        return '<p class="fonti-cap">Fonti: ' + "; ".join(fonte_breve(fp[k]) for k in chiavi) + ".</p>"
-
-    # capitoli 1 e 2: formati, serie per chi comincia e per artisti
     generali = []
     for c in d["capitoli_generali"]:
-        paragrafi = "".join(f"<p>{p}</p>" for p in c["paragrafi"])
-        generali.append(f'<section class="cap" id="{e(c["id"])}"><h2>{e(c["titolo"])}</h2>{paragrafi}{fonti_capitolo(c["fonti"])}</section>')
+        F = rimandi_fonti.Capitolo(c["id"], fonti_rimandi, "marche", testo_html=True)
+        paragrafi = []
+        for i, p in enumerate(c["paragrafi"], 1):
+            rif = F.rif(c["fonti"], f'{c["id"]}, paragrafo {i}')
+            paragrafi.append(f"<p>{p}{rif}</p>")
+        generali.append(f'<section class="cap" id="{e(c["id"])}"><h2>{e(c["titolo"])}</h2>'
+                        + "".join(paragrafi) + F.elenco() + "</section>")
 
-    # capitolo 5: una scheda per serie, con la pagina ufficiale e il rimando alla sua tabella
+    F_serie = rimandi_fonti.Capitolo("serie", fonti_rimandi, "marche", testo_html=True)
     schede = []
     for m in d["marche"]:
-        extra = "".join(f"<br><small>Fonte: {fonte_breve(fp[k])}</small>" for k in m["fonti_scheda"])
+        rif = F_serie.rif(m["fonti_scheda"] or [f'serie-{m["id"]}'], f'scheda {m["id"]}')
         schede.append(
-            f'<article class="scheda-serie" id="scheda-{e(m["id"])}"><h3>{e(titoli[m["id"]])}</h3><p>{m["scheda"]}</p>'
+            f'<article class="scheda-serie" id="scheda-{e(m["id"])}"><h3>{e(titoli[m["id"]])}</h3><p>{m["scheda"]}{rif}</p>'
             f'<p class="link-serie"><a href="{e(m["fonte_generale"])}" target="_blank" rel="noopener">Pagina ufficiale della serie</a>'
-            f' · <a href="#{e(m["id"])}">La sua tabella, in fondo</a>{extra}</p></article>')
+            f' · <a href="#{e(m["id"])}">Tabella della serie</a></p></article>')
 
     # capitolo 6: le tabelle della tavolozza ridotta, una per serie
     tabelle = []
@@ -225,18 +233,29 @@ def pagina():
             f'<p class="nota-serie"><a href="{e(m["fonte_generale"])}" target="_blank" '
             f'rel="noopener">Tabella generale della serie</a> sul sito del produttore.</p></div>')
 
-    stesso = "".join(f'<li>{v["testo"]}{rimandi(v["marche"])}</li>' for v in d["stesso_nome"])
-    etich = "".join(f'<li>{v["testo"]}{rimandi(v["marche"])}</li>' for v in d["etichetta"])
+    def voci_elenco(voci, F, ambito):
+        righe = []
+        for i, v in enumerate(voci, 1):
+            rif = F.rif([f"serie-{k}" for k in v["marche"]], f"{ambito}, voce {i}")
+            righe.append(f'<li>{v["testo"]}{rif}</li>')
+        return "".join(righe)
+
     eti = d["etichetta_intro"]
+    F_etich = rimandi_fonti.Capitolo("etichetta", fonti_rimandi, "marche", testo_html=True)
+    eti_intro = []
+    for i, p in enumerate(eti["paragrafi"], 1):
+        rif = F_etich.rif(eti["fonti"], f"etichetta, paragrafo {i}")
+        eti_intro.append(f"<p>{p}{rif}</p>")
+    etich = voci_elenco(d["etichetta"], F_etich, "etichetta")
+    F_stesso = rimandi_fonti.Capitolo("stesso-nome", fonti_rimandi, "marche", testo_html=True)
+    stesso = voci_elenco(d["stesso_nome"], F_stesso, "stesso nome")
+    F_esempio = rimandi_fonti.Capitolo("esempio", fonti_rimandi, "marche", testo_html=True)
+    rif_esempio = F_esempio.rif(["principi-aperto"], "tavolozza ridotta")
+    rif_criterio = F_esempio.rif(["criterio-video"], "scelta delle marche")
     salti = ('<a href="#apertura">Apertura</a>'
              + "".join(f'<a href="#{e(c["id"])}">{e(c["breve"])}</a>' for c in d["capitoli_generali"])
              + '<a href="#etichetta">L\'etichetta</a><a href="#stesso-nome">Stesso nome</a><a href="#serie">Le sei serie</a>'
              + '<a href="#esempio">Un esempio</a><a href="#fonti">Fonti</a>')
-    fonti = "".join(f'<li>{e(titoli[m["id"]])}: <a href="{e(m["fonte_generale"])}" target="_blank" rel="noopener">'
-                    f'{e(m["fonte_generale"])}</a></li>' for m in d["marche"])
-    fonti += "".join(f"<li>{fonte_breve(f)}</li>" for f in fp.values())
-    fonti += (f'<li>Video «Best Brand to Fill Watercolour Pans», per la scelta delle marche: <a href="{e(d["criterio_fonte"])}" '
-              f'target="_blank" rel="noopener">{e(d["criterio_fonte"])}</a></li>')
     intro = "".join(f"<p>{e(p)}</p>" for p in d["introduzione"])
     pagina_html = f"""<!doctype html>
 <html lang="it">
@@ -253,23 +272,24 @@ def pagina():
 <div class="intro" id="apertura">{intro}</div>
 {chr(10).join(generali)}
 <section class="cap" id="etichetta"><h2>3. Come leggere l'etichetta</h2>
-{"".join(f"<p>{p}</p>" for p in eti["paragrafi"])}
-<p>Le voci che le pagine ufficiali usate qui riportano, marca per marca:</p><ul class="voci">{etich}</ul>{fonti_capitolo(eti["fonti"])}</section>
+{"".join(eti_intro)}
+<p>Le voci che le pagine ufficiali usate qui riportano, marca per marca:</p><ul class="voci">{etich}</ul>{F_etich.elenco()}</section>
 <section class="cap" id="stesso-nome"><h2>4. Stesso nome, pigmenti diversi</h2>
-<p>{e(d['stesso_nome_intro'])}</p><ul class="voci">{stesso}</ul></section>
+<p>{e(d['stesso_nome_intro'])}</p><ul class="voci">{stesso}</ul>{F_stesso.elenco()}</section>
 <section class="cap" id="serie"><h2>5. Le sei serie in breve</h2>
-<div class="schede">{chr(10).join(schede)}</div></section>
+<div class="schede">{chr(10).join(schede)}</div>{F_serie.elenco()}</section>
 <section class="cap" id="esempio"><h2>6. Un esempio: la tavolozza ridotta nelle sei serie</h2>
-<p>{d['esempio_intro']}</p>
-<p>{e(d['criterio'])} <a href="{e(d['criterio_fonte'])}" target="_blank" rel="noopener">Il video su YouTube ↗</a></p>
+<p>{d['esempio_intro']}{rif_esempio}</p>
+<p>{e(d['criterio'])}{rif_criterio}</p>
 <p class="legenda">{e(d['nota_trasparenza'])} I nomi comuni e i pigmenti dei sei colori sono quelli della tavolozza ridotta per l'aperto, nel
 <a href="../principi/#tavolozza-plein-air">capitolo 8 dei Principi generali</a>.</p>
 {chr(10).join(tabelle)}
+{F_esempio.elenco()}
 </section>
 <section class="cap" id="fonti"><h2>Fonti</h2>
-<p>Ogni riga delle tabelle ha il link alla pagina ufficiale del tubetto e la data di controllo. Le pagine generali delle serie e le altre fonti dei capitoli:</p>
-<ol class="fonti">{fonti}</ol></section>
+<p>I riferimenti numerati portano alle fonti in fondo a ogni capitolo; la freccia riporta al testo. Ogni riga delle tabelle conserva il collegamento alla pagina ufficiale del colore e la sua data di controllo.</p></section>
 <footer>Quaderno di acquerello · Marche e tubetti · testi del {e(data_it(d['data']))}.</footer>
+{rimandi_fonti.JS}
 </body>
 </html>
 """
