@@ -4,6 +4,16 @@ Cronologia delle modifiche. Ordine cronologico inverso.
 
 Nota: nelle voci fino al 1/11/2026 il curatore è indicato con lo pseudonimo sinmar.
 
+## 2026-11-03 - OC - Titolo della sezione Alberi
+
+- Su richiesta di Sandro nel topic dell'app, tolto «ad acquerello» dal nome del modulo S1 nella Home e dal titolo della pagina Alberi. Conservati la numerazione, il sottotitolo descrittivo e il percorso `/alberi/`.
+- Allineati la nota descrittiva dei dati, README e prompt della chat generato. Nessuna modifica alle spiegazioni, ai pigmenti, alle fonti, alle modalità o ai video; i titoli originali dei video restano invariati.
+- Verifica: generazione completa riuscita; titolo della Home e della pagina confrontati con la richiesta. Collegamenti e ancore delle 14 pagine identici alla revisione precedente; JSON tecnico invariato salvo titolo e nota descrittiva; il prompt cambia solo nel nome della sezione. `git diff --check` senza rilievi. Modifica su ramo dedicato, senza pubblicazione.
+
+-- OC
+
+Prossima azione: unire la pull request su main solo dopo l'ok esplicito di Sandro per questa modifica.
+
 ## 2026-11-03 - OC - Revisione di stile approvata per tutte le sezioni
 
 - Applicate le proposte del documento locale `lavoro/app-acquerello-261102-proposte-stile.md`, approvate da Sandro nel topic dell'app il 2/11/2026 con «Ok fai tutte le modifiche proposte». Nessuna unione su `main` o pubblicazione.
