@@ -1,40 +1,60 @@
-"""Rimandi numerati alle fonti, capitolo per capitolo, nello stesso formato in tutte le sezioni del Quaderno.
+"""Rimandi numerati alle fonti, con numerazione autonoma per capitolo.
 
-Ogni capitolo numera le proprie fonti da 1, nell'ordine in cui le cita, e le elenca in fondo al capitolo,
-una per riga. Il numero nel testo porta alla fonte; la freccia accanto alla fonte riporta al rimando da cui
-si è partiti, oppure, senza JavaScript, al primo rimando del capitolo. Lo usano i generatori di Principi, Teoria dei colori, Marche e Approfondimenti:
-dopo una modifica si rigenera il sito con scripts/genera-sito.py."""
+Le voci possono mantenere «testo» e indicare «titolo_link», una porzione
+esatta da collegare. In alternativa separano autore, titolo, pubblicazione,
+nota e consultazione. Le cautele essenziali restano sempre visibili.
+Formato editoriale: README.md, Organizzazione dei testi. Dopo una modifica
+si rigenera il sito con scripts/genera-sito.py.
+"""
 import html
 
 CSS = """
 sup.rif { font-size: .68em; color: #555; white-space: nowrap; } sup.rif a { text-decoration: none; }
 sup.rif:target { background: #fff3cd; border-radius: 3px; }
-.fonti-cap { margin: 16px 0 4px; font-size: .85em; color: #444; background: #f1efe8; border-radius: 8px; padding: 8px 12px 2px; }
-.fonti-cap .fonti-tit { margin: 0 0 4px; font-weight: 700; color: #2c4f3a; }
-.fonti-cap ol { margin: 0 0 6px; padding-left: 24px; } .fonti-cap li { margin-bottom: 5px; }
+.fonti-cap { margin: 16px 0 4px; font-size: .94em; line-height: 1.5; color: #444; background: #f1efe8; border-radius: 8px; padding: 10px 12px 4px; }
+.fonti-cap .fonti-tit { margin: 0 0 8px; font-weight: 700; color: #2c4f3a; }
+.fonti-cap ol { margin: 0 0 6px; padding-left: 24px; } .fonti-cap li { margin-bottom: 14px; overflow-wrap: anywhere; }
 .fonti-cap li:target { background: #fff3cd; }
-.fonti-cap a.torna { text-decoration: none; margin-right: 2px; }
+.fonti-cap p { margin: 4px 0; }
+.fonti-cap a.torna { display: inline-block; margin-top: 5px; font-size: .9em; }
+.fonti-cap .fonte-nota, .fonti-cap .fonte-limite { color: #333; }
+.fonti-cap details { margin-top: 5px; }
+.fonti-cap summary { cursor: pointer; }
+.fonti-cap :focus-visible, sup.rif a:focus-visible { outline: 2px solid #2c6a4a; outline-offset: 3px; }
 """
 
 JS = """<script>
 (function () {
-  var da = null;
+  function alPunto(id) {
+    var punto = document.getElementById(id);
+    if (!punto) return;
+    punto.setAttribute('tabindex', '-1');
+    punto.focus({preventScroll: true});
+  }
   document.addEventListener('click', function (ev) {
-    if (!ev.target.closest) return;
+    if (!ev.target.closest || ev.button !== 0 || ev.ctrlKey || ev.metaKey || ev.shiftKey || ev.altKey) return;
     var rif = ev.target.closest('sup.rif a');
-    if (rif) { da = rif.parentNode.id; return; }
-    var torna = ev.target.closest('a.torna');
-    if (torna && da) { ev.preventDefault(); location.hash = da; da = null; }
+    if (rif) {
+      var fonte = document.getElementById(rif.hash.slice(1));
+      if (!fonte) return;
+      var torna = fonte.querySelector('a.torna');
+      if (torna) torna.setAttribute('href', '#' + rif.parentNode.id);
+      setTimeout(function () { alPunto(fonte.id); }, 0);
+      return;
+    }
+    var ritorno = ev.target.closest('a.torna');
+    if (ritorno) setTimeout(function () { alPunto(ritorno.hash.slice(1)); }, 0);
   });
 })();
 </script>"""
 
 
 class Capitolo:
-    """Le fonti citate in un capitolo, numerate nell'ordine della prima citazione.
+    """Fonti numerate nell'ordine della prima citazione.
 
-    fonti è il dizionario delle fonti della sezione; testo_html dice se il campo «testo» di una fonte
-    contiene già html (Teoria dei colori) o testo semplice da proteggere (Principi)."""
+    testo_html riguarda solo il vecchio campo «testo». I campi bibliografici
+    separati e «titolo_link» sono sempre testo semplice, non HTML.
+    """
 
     def __init__(self, id_cap, fonti, sezione, testo_html=False):
         self.id = id_cap
@@ -60,22 +80,48 @@ class Capitolo:
                 self.ordine.append(k)
                 self.prima[k] = rid
             numeri.add(self.ordine.index(k) + 1)
-        link = ", ".join(f'<a href="#{self.id}-f{n}">{n}</a>' for n in sorted(numeri))
+        link = ", ".join(f'<a href="#{self.id}-f{n}" aria-label="Fonte {n}">{n}</a>' for n in sorted(numeri))
         return f'<sup class="rif" id="{rid}">[{link}]</sup>'
 
     def voce(self, k):
         f = self.fonti[k]
+        if "titolo" in f:
+            for campo in ("autore", "titolo", "pubblicazione", "nota"):
+                if not isinstance(f.get(campo), str) or not f[campo].strip():
+                    raise SystemExit(f"{self.sezione}: manca {campo} nella fonte «{k}»")
+            titolo = html.escape(f["titolo"], quote=True)
+            if f.get("url"):
+                titolo = f'<a href="{html.escape(f["url"], quote=True)}">{titolo}</a>'
+            testo = (f'<p class="fonte-riferimento">{html.escape(f["autore"], quote=True)}. '
+                     f'<cite>{titolo}</cite>. {html.escape(f["pubblicazione"], quote=True)}')
+            if f.get("doi"):
+                doi = html.escape('https://doi.org/' + f["doi"], quote=True)
+                testo += f' <a href="{doi}">{doi}</a>.'
+            testo += '</p>'
+            if f.get("limite"):
+                testo += f'<p class="fonte-limite"><strong>{html.escape(f["limite"], quote=True)}</strong></p>'
+            testo += f'<p class="fonte-nota">{html.escape(f["nota"], quote=True)}</p>'
+            if f.get("consultazione"):
+                testo += ('<details class="fonte-lettura"><summary>Dettagli della consultazione</summary>'
+                          f'<p>{html.escape(f["consultazione"], quote=True)}</p></details>')
+            return testo
         testo = f["testo"] if self.testo_html else html.escape(f["testo"], quote=True)
         url = f.get("url")
         if url:
-            esterno = url.startswith("http")
-            attr = ' target="_blank" rel="noopener"' if esterno else ""
-            testo += f' <a href="{html.escape(url, quote=True)}"{attr}>{"apri" if esterno else "nel Quaderno"}</a>'
+            titolo = f.get("titolo_link")
+            if not titolo:
+                raise SystemExit(f"{self.sezione}: manca titolo_link nella fonte «{k}»")
+            cerca = html.escape(titolo, quote=True)
+            if cerca not in testo:
+                raise SystemExit(f"{self.sezione}: titolo_link non trovato nel testo della fonte «{k}»")
+            link = f'<a href="{html.escape(url, quote=True)}">{cerca}</a>'
+            testo = testo.replace(cerca, link, 1)
         return testo
 
     def elenco(self):
         if not self.ordine:
             return ""
-        voci = "".join(f'<li id="{self.id}-f{n}"><a class="torna" href="#{self.prima[k]}" title="Torna al testo">↩</a> '
-                       f'{self.voce(k)}</li>' for n, k in enumerate(self.ordine, 1))
+        voci = "".join(f'<li id="{self.id}-f{n}">{self.voce(k)} '
+                       f'<a class="torna" href="#{self.prima[k]}" aria-label="Torna al testo che cita la fonte {n}">↩ Torna al testo</a></li>'
+                       for n, k in enumerate(self.ordine, 1))
         return f'<div class="fonti-cap"><p class="fonti-tit">Fonti del capitolo</p><ol>{voci}</ol></div>'

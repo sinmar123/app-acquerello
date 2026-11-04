@@ -625,45 +625,53 @@
   }
  ],
  "fonti_pagine": {
-  "wn-cotman-pagina": {
-   "testo": "Winsor &amp; Newton, Cotman Watercolour, pagina di un colore (Lemon Yellow Hue): presentazione della serie, formati, carico di pigmento, resistenza alla luce",
-   "url": "https://www.winsornewton.com/en-ca/products/cotman-watercolour-lemon-yellow-hue",
-   "controllato": "2026-10-29"
-  },
-  "wn-professional-pagina": {
-   "testo": "Winsor &amp; Newton, Professional Watercolour, pagina di un colore (Winsor Lemon): numero dei colori e dei colori a pigmento singolo, formati",
-   "url": "https://www.winsornewton.com/en-ca/products/professional-watercolour-winsor-lemon",
-   "controllato": "2026-10-29"
-  },
-  "van-gogh-serie": {
-   "testo": "Royal Talens, pagina della serie Van Gogh watercolours: presentazione, destinatari, pastiglie e tubetti",
-   "url": "https://www.royaltalens.com/collections/van-gogh-watercolours",
-   "controllato": "2026-10-29"
-  },
-  "van-gogh-tubetto": {
-   "testo": "Royal Talens, Van Gogh Watercolour Tube 10 ml: livello della serie e scala della resistenza alla luce",
-   "url": "https://www.royaltalens.com/products/van-gogh-watercolour-tube-10-ml",
-   "controllato": "2026-10-29"
-  },
-  "schmincke-serie": {
-   "testo": "Schmincke, HORADAM Aquarell: presentazione della serie, colori, formati, resistenza alla luce, gruppi di prezzo",
-   "url": "https://www.schmincke.de/en/produkte/aquarell/horadam-aquarell",
-   "controllato": "2026-10-29"
-  },
-  "maimeri-serie": {
-   "testo": "Maimeri, pagina della serie Maimeri Blu: numero dei colori, formati, composizione",
-   "url": "https://www.maimeri.it/it/categorie/acquerello/maimeri-blu/",
-   "controllato": "2026-10-29"
-  },
-  "maimeri-colore": {
-   "testo": "Maimeri Blu, pagina di un colore (Blu oltremare scuro): gruppo di prezzo, pigmento col numero del Colour Index, legende di coprenza e resistenza alla luce",
-   "url": "https://www.maimeri.it/it/categorie/acquerello/maimeri-blu/blu-oltremare-scuro-1609392.html",
-   "controllato": "2026-10-29"
-  },
-  "principi-aperto": {
-   "testo": "Principi generali del Quaderno, capitolo 8: il lavoro all'aperto, la scatola compatta e la tavolozza ridotta",
-   "url": "../principi/#tavolozza-plein-air"
-  }
+   "wn-cotman-pagina": {
+     "testo": "Winsor &amp; Newton, Cotman Watercolour, pagina di un colore (Lemon Yellow Hue): presentazione della serie, formati, carico di pigmento, resistenza alla luce",
+     "url": "https://www.winsornewton.com/en-ca/products/cotman-watercolour-lemon-yellow-hue",
+     "controllato": "2026-10-29",
+     "titolo_link": "Cotman Watercolour"
+   },
+   "wn-professional-pagina": {
+     "testo": "Winsor &amp; Newton, Professional Watercolour, pagina di un colore (Winsor Lemon): numero dei colori e dei colori a pigmento singolo, formati",
+     "url": "https://www.winsornewton.com/en-ca/products/professional-watercolour-winsor-lemon",
+     "controllato": "2026-10-29",
+     "titolo_link": "Professional Watercolour"
+   },
+   "van-gogh-serie": {
+     "testo": "Royal Talens, pagina della serie Van Gogh watercolours: presentazione, destinatari, pastiglie e tubetti",
+     "url": "https://www.royaltalens.com/collections/van-gogh-watercolours",
+     "controllato": "2026-10-29",
+     "titolo_link": "Van Gogh watercolours"
+   },
+   "van-gogh-tubetto": {
+     "testo": "Royal Talens, Van Gogh Watercolour Tube 10 ml: livello della serie e scala della resistenza alla luce",
+     "url": "https://www.royaltalens.com/products/van-gogh-watercolour-tube-10-ml",
+     "controllato": "2026-10-29",
+     "titolo_link": "Van Gogh Watercolour Tube 10 ml"
+   },
+   "schmincke-serie": {
+     "testo": "Schmincke, HORADAM Aquarell: presentazione della serie, colori, formati, resistenza alla luce, gruppi di prezzo",
+     "url": "https://www.schmincke.de/en/produkte/aquarell/horadam-aquarell",
+     "controllato": "2026-10-29",
+     "titolo_link": "HORADAM Aquarell"
+   },
+   "maimeri-serie": {
+     "testo": "Maimeri, pagina della serie Maimeri Blu: numero dei colori, formati, composizione",
+     "url": "https://www.maimeri.it/it/categorie/acquerello/maimeri-blu/",
+     "controllato": "2026-10-29",
+     "titolo_link": "Maimeri Blu"
+   },
+   "maimeri-colore": {
+     "testo": "Maimeri Blu, pagina di un colore (Blu oltremare scuro): gruppo di prezzo, pigmento col numero del Colour Index, legende di coprenza e resistenza alla luce",
+     "url": "https://www.maimeri.it/it/categorie/acquerello/maimeri-blu/blu-oltremare-scuro-1609392.html",
+     "controllato": "2026-10-29",
+     "titolo_link": "Blu oltremare scuro"
+   },
+   "principi-aperto": {
+     "testo": "Principi generali del Quaderno, capitolo 8: il lavoro all'aperto, la scatola compatta e la tavolozza ridotta",
+     "url": "../principi/#tavolozza-plein-air",
+     "titolo_link": "Principi generali del Quaderno"
+   }
  },
  "capitoli_generali": [
   {
