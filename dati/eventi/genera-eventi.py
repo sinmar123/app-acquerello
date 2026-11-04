@@ -286,7 +286,7 @@ def piede(sez, prof):
     r = radice(prof)
     return (
         "<footer>"
-        f"<p>Quaderno di acquerello · Eventi · testi del {e(data_it(sez['data']))}.</p>"
+        f"<p>Quaderno di acquerello in cornice AI · Eventi · testi del {e(data_it(sez['data']))}.</p>"
         "<p>Le altre sezioni: "
         f'<a href="{r}principi/">1. Principi generali</a> · '
         f'<a href="{r}colori/">2. Teoria dei colori</a> · '
@@ -373,7 +373,7 @@ def pagina_calendario(sez, eventi, oggi):
 def pagina_anno(sez, anno, eventi, oggi):
     elenco = sorted(eventi, key=lambda ev: ev["data_inizio"])
     cards = "".join(card_evento(ev, oggi, 2, sez) for ev in elenco)
-    descrizione = f"Archivio {anno} degli eventi del Quaderno di acquerello."
+    descrizione = f"Archivio {anno} degli eventi del Quaderno di acquerello in cornice AI."
     corpo = (
         f'<p class="filo"><a href="../">Eventi</a></p>'
         f"<h1>Archivio {anno}</h1>"

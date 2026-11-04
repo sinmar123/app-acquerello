@@ -1,4 +1,6 @@
-# Quaderno di acquerello (`app-acquerello`)
+# Quaderno di acquerello in cornice AI (`app-acquerello`)
+
+Il titolo esteso è stato richiesto dal curatore nel topic dell’app il 4 novembre 2026. La modifica del titolo è preparata in una pull request, non ancora pubblicata; l’indirizzo del sito e il nome del repository restano invariati.
 
 Il Quaderno nasce dall’iniziativa personale di un appassionato che dipinge ad acquerello per hobby. Il curatore usa i modelli di intelligenza artificiale nel proprio lavoro e li sperimenta anche per organizzare le informazioni sull’acquerello e come aiuto allo studio. Il progetto è aperto alla collaborazione di altri appassionati, sia sui contenuti sia sullo sviluppo del sito, tramite GitHub.
 

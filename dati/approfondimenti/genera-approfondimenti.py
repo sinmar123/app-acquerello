@@ -163,7 +163,7 @@ def numero_tema(sez, tema):
 def piede(sez, prefisso):
     return (
         "<footer>"
-        f"<p>Quaderno di acquerello · Approfondimenti · testi del {e(data_it(sez['data']))}.</p>"
+        f"<p>Quaderno di acquerello in cornice AI · Approfondimenti · testi del {e(data_it(sez['data']))}.</p>"
         "<p>Le altre sezioni: "
         f'<a href="{prefisso}principi/">1. Principi generali</a> · '
         f'<a href="{prefisso}colori/">2. Teoria dei colori</a> · '

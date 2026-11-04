@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Genera la pagina della sezione «Principi generali» del Quaderno di acquerello.
+"""Genera la pagina della sezione «Principi generali» del Quaderno di acquerello in cornice AI.
 
 Uso: python genera-principi.py pagina
 
@@ -254,7 +254,7 @@ def pagina():
 <nav class="salti">{salti}</nav>
 <div class="intro">{intro}</div>
 {chr(10).join(sezioni)}
-<footer>Quaderno di acquerello · Principi generali · testi del {e(data)}.</footer>
+<footer>Quaderno di acquerello in cornice AI · Principi generali · testi del {e(data)}.</footer>
 {rimandi_fonti.JS}
 </body>
 </html>

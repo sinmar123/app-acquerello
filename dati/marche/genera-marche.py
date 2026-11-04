@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Genera la pagina della sezione «Marche e tubetti» del Quaderno di acquerello.
+"""Genera la pagina della sezione «Marche e tubetti» del Quaderno di acquerello in cornice AI.
 
 Uso: python genera-marche.py pagina
 
@@ -290,7 +290,7 @@ def pagina():
 </section>
 <section class="cap" id="fonti"><h2>Fonti</h2>
 <p>I riferimenti numerati portano alle fonti in fondo a ogni capitolo; la freccia riporta al testo. Ogni riga delle tabelle conserva il collegamento alla pagina ufficiale del colore e la sua data di controllo.</p></section>
-<footer>Quaderno di acquerello · Marche e tubetti · testi del {e(data_it(d['data']))}.</footer>
+<footer>Quaderno di acquerello in cornice AI · Marche e tubetti · testi del {e(data_it(d['data']))}.</footer>
 {rimandi_fonti.JS}
 </body>
 </html>

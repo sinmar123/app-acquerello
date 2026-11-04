@@ -4,6 +4,15 @@ Cronologia delle modifiche. Ordine cronologico inverso.
 
 Nota: nelle voci fino al 1/11/2026 il curatore è indicato con lo pseudonimo sinmar.
 
+## 2026-11-04 - OC - Nuovo titolo: Quaderno di acquerello in cornice AI
+
+- Su richiesta di Sandro nel topic dell’app, preparato il titolo esatto «Quaderno di acquerello in cornice AI». Allineati titolo principale della Home, titolo della scheda del browser, anteprime di condivisione, piè di pagina e nome esteso nel prompt dell’assistente. Il nome breve «Quaderno», l’indirizzo del sito e il nome del repository restano invariati.
+- Aggiornati README e CONTRIBUTING; rigenerato `lib/prompt-chat.js` dal generatore, senza modificarlo a mano. Nessuna riscrittura della premessa appena pubblicata, delle guide, delle fonti, dei dati tecnici o dei riferimenti storici; nessuna modifica a licenze, immagini, video, opere e pareri.
+- Verifiche: generazione completa senza errori, dalle sole dipendenze già disponibili. Confrontati i 45 output con la base aggiornata `1912014`: cambiano i 15 HTML e il prompt esclusivamente per il nuovo nome; gli altri 29 sono identici. Titolo H1, titolo del browser e anteprima della Home esatti, `og:site_name` allineato in tutte le 15 pagine. Collegamenti e ID di ogni pagina identici alla base, quattro capoversi della premessa invariati. `git diff --check` senza rilievi. Collaudo visivo non eseguito in questa attività.
+- Lavoro su un ramo separato dalla base aggiornata, senza modificare i sorgenti condivisi e le differenze CRLF preesistenti. La nuova richiesta riguarda il titolo: la pull request viene preparata senza unione né pubblicazione. Firma: OpenClaw / OC.
+
+Prossima azione: unire la pull request sul nuovo titolo solo dopo l’ok esplicito di Sandro per questa modifica.
+
 ## 2026-11-04 - OC - Home: premessa unica e apertura alla collaborazione
 
 - Inseriti i quattro capoversi concordati con Sandro nel topic dell’app: i primi due della revisione di stile e i due del finale successivamente riveduto. La premessa racconta l’iniziativa personale, l’uso dell’IA nello studio e nello sviluppo del sito, i limiti della rilettura e il possibile aiuto di un controllo indipendente. Il finale apre alla collaborazione su contenuti e codice, con il collegamento al repository GitHub.

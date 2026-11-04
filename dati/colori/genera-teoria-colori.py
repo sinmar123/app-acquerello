@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Genera la pagina della sezione «Teoria dei colori» del Quaderno di acquerello.
+"""Genera la pagina della sezione «Teoria dei colori» del Quaderno di acquerello in cornice AI.
 
 Uso: python genera-teoria-colori.py pagina
 
@@ -251,7 +251,7 @@ def pagina():
 <p class="sotto">{e(testi['sottotitolo'])}</p></header>
 <nav class="salti">{salti}</nav>
 {chr(10).join(sezioni)}
-<footer>Quaderno di acquerello · Teoria dei colori · testi del {e('/'.join(reversed(testi['data'].split('-'))))}. Il calcolatore usa le tabelle spettrali di
+<footer>Quaderno di acquerello in cornice AI · Teoria dei colori · testi del {e('/'.join(reversed(testi['data'].split('-'))))}. Il calcolatore usa le tabelle spettrali di
 <a href="https://github.com/rvanwijnen/spectral.js" target="_blank" rel="noopener">spectral.js</a> di Ronald van Wijnen (licenza MIT, testo della licenza nel codice della pagina); il resto del codice è scritto per il Quaderno.</footer>
 <script>
 {script}
