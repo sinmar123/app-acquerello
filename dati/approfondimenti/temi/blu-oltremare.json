@@ -389,68 +389,153 @@
   ],
   "fonti": {
     "F01": {
-      "testo": "Primaria sperimentale:. A Systematic Examination of Colour Development in Synthetic Ultramarine According to Historical Methods, PLOS ONE, 13 febbraio 2013.  DOI 10.1371/journal.pone.0050364. Letti abstract, introduzione, metodi e discussione chimica; non è una prova di acquerello su carta. La parte storica è ricostruzione bibliografica degli autori. Consultazione nella ricerca del 3 novembre 2026.",
-      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0050364"
+      "autore": "Ian Hamerton, Lauren Tedaldi, Nicholas Eastaugh",
+      "titolo": "A Systematic Examination of Colour Development in Synthetic Ultramarine According to Historical Methods",
+      "pubblicazione": "PLOS ONE, 8(2), 13 febbraio 2013, e50364.",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0050364",
+      "nota": "Studio sperimentale sulla preparazione del pigmento, non una prova di acquerello su carta. La parte storica ricostruisce studi precedenti.",
+      "consultazione": "Ricerca del 3 novembre 2026: consultati il riassunto, l’introduzione, i metodi e la discussione chimica.",
+      "registro_precedente": "Primaria sperimentale:. A Systematic Examination of Colour Development in Synthetic Ultramarine According to Historical Methods, PLOS ONE, 13 febbraio 2013.  DOI 10.1371/journal.pone.0050364. Letti abstract, introduzione, metodi e discussione chimica; non è una prova di acquerello su carta. La parte storica è ricostruzione bibliografica degli autori. Consultazione nella ricerca del 3 novembre 2026.",
+      "doi": "10.1371/journal.pone.0050364"
     },
     "F02": {
-      "testo": "Museo, sintesi tecnico-scientifica del progetto:. Fitzwilliam Museum, Ultramarine, ILLUMINATED, senza data.  Scheda letta per intero. Consultazione nella ricerca del 3 novembre 2026.",
-      "url": "https://fitzmuseum.cam.ac.uk/illuminated/lab/overview-of-artists-materials/ultramarine/type/material"
+      "autore": "Fitzwilliam Museum",
+      "titolo": "Ultramarine",
+      "pubblicazione": "Progetto ILLUMINATED: Manuscripts in the making, senza data.",
+      "url": "https://fitzmuseum.cam.ac.uk/illuminated/lab/overview-of-artists-materials/ultramarine/type/material",
+      "nota": "Scheda del museo sul pigmento e sulla sua identificazione nei manoscritti studiati.",
+      "consultazione": "Ricerca del 3 novembre 2026: scheda letta per intero.",
+      "registro_precedente": "Museo, sintesi tecnico-scientifica del progetto:. Fitzwilliam Museum, Ultramarine, ILLUMINATED, senza data.  Scheda letta per intero. Consultazione nella ricerca del 3 novembre 2026."
     },
     "F03": {
-      "testo": "Primaria indipendente per i test dell’autore:. Bruce MacEvoy, Handprint, Guide to watercolor pigments: blue, sezione PB29; senza data unica, pagina con prove e riferimenti storici non contemporanei.  Letta la sezione pertinente dal testo completo acquisito, non soltanto l’anteprima troncata. Consultazione nella ricerca del 3 novembre 2026.",
-      "url": "https://www.handprint.com/HP/WCL/waterb.html#PB29"
+      "autore": "Bruce MacEvoy",
+      "titolo": "Guide to watercolor pigments: blue",
+      "pubblicazione": "Handprint, sezione PB29; pagina aggiornata il 7 gennaio 2015.",
+      "url": "https://www.handprint.com/HP/WCL/waterb.html#PB29",
+      "nota": "Prove e osservazioni dell’autore sui prodotti esaminati, con riferimenti storici. La data della pagina non identifica quella di ogni prova.",
+      "consultazione": "Ricerca del 3 novembre 2026: letta la sezione PB29 dal testo completo acquisito, non soltanto dall’anteprima troncata. La data di revisione è stata riscontrata nello studio bibliografico del 4 novembre 2026.",
+      "registro_precedente": "Primaria indipendente per i test dell’autore:. Bruce MacEvoy, Handprint, Guide to watercolor pigments: blue, sezione PB29; senza data unica, pagina con prove e riferimenti storici non contemporanei.  Letta la sezione pertinente dal testo completo acquisito, non soltanto l’anteprima troncata. Consultazione nella ricerca del 3 novembre 2026."
     },
     "F04": {
-      "testo": "Primaria indipendente per le misure:. Bruce MacEvoy, Watercolor drying shifts, senza data accertata.  Letta l’esposizione del metodo e dei limiti; non sono state ricalcolate le misure originali. Consultazione nella ricerca del 3 novembre 2026.",
-      "url": "https://www.handprint.com/HP/WCL/cds.html"
+      "autore": "Bruce MacEvoy",
+      "titolo": "Watercolor drying shifts",
+      "pubblicazione": "Handprint, senza data accertata.",
+      "url": "https://www.handprint.com/HP/WCL/cds.html",
+      "nota": "Misure dell’autore sul cambiamento del colore durante l’asciugatura; i dati originali non sono stati ricalcolati nella ricerca.",
+      "consultazione": "Ricerca del 3 novembre 2026: consultata l’esposizione del metodo e dei limiti.",
+      "registro_precedente": "Primaria indipendente per le misure:. Bruce MacEvoy, Watercolor drying shifts, senza data accertata.  Letta l’esposizione del metodo e dei limiti; non sono state ricalcolate le misure originali. Consultazione nella ricerca del 3 novembre 2026."
     },
     "F05": {
-      "testo": "Primaria testimoniale e comparativa:. Jane Blundell, Watercolour Comparisons 1 Ultramarine Blue PB29, 18 giugno 2013, aggiornamento dichiarato 2015 e ulteriori aggiunte non datate singolarmente.  Testo letto; campioni fotografici non trattati come colorimetria. Consultazione nella ricerca del 3 novembre 2026.",
-      "url": "https://janeblundellart.blogspot.com/2013/06/watercolour-comparisons-1-ultramarine.html"
+      "autore": "Jane Blundell",
+      "titolo": "Watercolour Comparisons 1 Ultramarine Blue PB29",
+      "pubblicazione": "Jane Blundell Artist, 18 giugno 2013; aggiornamento dichiarato nel 2015, con ulteriori aggiunte non datate singolarmente.",
+      "url": "https://janeblundellart.blogspot.com/2013/06/watercolour-comparisons-1-ultramarine.html",
+      "nota": "Confronto di campioni dell’autrice. Le riproduzioni dei colori non sono misure colorimetriche.",
+      "consultazione": "Ricerca del 3 novembre 2026: testo letto; campioni fotografici non trattati come colorimetria.",
+      "registro_precedente": "Primaria testimoniale e comparativa:. Jane Blundell, Watercolour Comparisons 1 Ultramarine Blue PB29, 18 giugno 2013, aggiornamento dichiarato 2015 e ulteriori aggiunte non datate singolarmente.  Testo letto; campioni fotografici non trattati come colorimetria. Consultazione nella ricerca del 3 novembre 2026."
     },
     "F06": {
-      "testo": "Primaria commerciale:. Winsor & Newton, Professional Watercolour, tabella tecnica della gamma, senza data.  Riscontrate le righe dei prodotti citati; dichiarazioni del produttore. Consultazione nella ricerca del 3 novembre 2026.",
-      "url": "https://eu.winsornewton.com/pages/professional-watercolour"
+      "autore": "Winsor & Newton",
+      "titolo": "Professional Watercolour",
+      "pubblicazione": "Tabella tecnica della gamma, senza data.",
+      "url": "https://eu.winsornewton.com/pages/professional-watercolour",
+      "nota": "Scheda del produttore: caratteristiche dichiarate per i prodotti citati, non risultati di prove indipendenti del Quaderno.",
+      "consultazione": "Ricerca del 3 novembre 2026: riscontrate le righe dei prodotti citati. Il 4 novembre 2026 la tabella tecnica è stata nuovamente individuata nella pagina collegata.",
+      "registro_precedente": "Primaria commerciale:. Winsor & Newton, Professional Watercolour, tabella tecnica della gamma, senza data.  Riscontrate le righe dei prodotti citati; dichiarazioni del produttore. Consultazione nella ricerca del 3 novembre 2026."
     },
     "F07": {
-      "testo": "Primaria commerciale:. Da Vinci, Ultramarine (Green Shade), Watercolor, senza data.  Letta la scheda; dichiarazioni del produttore. Consultazione nella ricerca del 3 novembre 2026.",
-      "url": "https://davincipaints.com/ultramarine-green-shade-8ml-watercolor/"
+      "autore": "Da Vinci",
+      "titolo": "Ultramarine (Green Shade) (8mL Watercolor)",
+      "pubblicazione": "Senza data.",
+      "url": "https://davincipaints.com/ultramarine-green-shade-8ml-watercolor/",
+      "nota": "Scheda del produttore: caratteristiche dichiarate per questo prodotto.",
+      "consultazione": "Ricerca del 3 novembre 2026: scheda letta; dichiarazioni del produttore.",
+      "registro_precedente": "Primaria commerciale:. Da Vinci, Ultramarine (Green Shade), Watercolor, senza data.  Letta la scheda; dichiarazioni del produttore. Consultazione nella ricerca del 3 novembre 2026."
     },
     "F08": {
-      "testo": "Primaria commerciale per le proprie varianti:. Da Vinci, All About Ultramarine Blue, senza data editoriale accertata.  Letta la parte sugli acquerelli; le sezioni olio non sono trasferite all’acquerello. Consultazione nella ricerca del 3 novembre 2026.",
-      "url": "https://www.davincipaints.blog/main/all-about-ultramarine-blue"
+      "autore": "Da Vinci",
+      "titolo": "All About Ultramarine Blue",
+      "pubblicazione": "Senza data editoriale accertata.",
+      "url": "https://www.davincipaints.blog/main/all-about-ultramarine-blue",
+      "nota": "Articolo del produttore sulle proprie varianti. Le indicazioni sull’olio non sono trasferite all’acquerello.",
+      "consultazione": "Ricerca del 3 novembre 2026: letta la parte sugli acquerelli.",
+      "registro_precedente": "Primaria commerciale per le proprie varianti:. Da Vinci, All About Ultramarine Blue, senza data editoriale accertata.  Letta la parte sugli acquerelli; le sezioni olio non sono trasferite all’acquerello. Consultazione nella ricerca del 3 novembre 2026."
     },
     "F09": {
-      "testo": "Primaria commerciale:. Deep Deep Light, French Ultramarine, senza data.  Letta la scheda; racconto storico non assunto come autorità autonoma. Consultazione nella ricerca del 3 novembre 2026.",
-      "url": "https://deepdeeplight.com/product/french-ultramarine/"
+      "autore": "Deep Deep Light",
+      "titolo": "French Ultramarine",
+      "pubblicazione": "Senza data.",
+      "url": "https://deepdeeplight.com/product/french-ultramarine/",
+      "nota": "Scheda del produttore. Il racconto storico non è assunto come fonte autonoma.",
+      "consultazione": "Ricerca del 3 novembre 2026: scheda letta; racconto storico non assunto come autorità autonoma.",
+      "registro_precedente": "Primaria commerciale:. Deep Deep Light, French Ultramarine, senza data.  Letta la scheda; racconto storico non assunto come autorità autonoma. Consultazione nella ricerca del 3 novembre 2026."
     },
     "F10": {
-      "testo": "Primaria sperimentale, versione preprint:. González-Gutiérrez e collaboratori, Pattern formation by droplet evaporation and imbibition in watercolor paintings, arXiv:1909.09098v1, deposito 19 settembre 2019.  Letti metodi, risultati e discussione pertinenti; il rendering HTML mostra anche una data del 2026 che non viene confusa con quella del deposito. Non letti separatamente tutti i materiali supplementari. Consultazione nella ricerca del 3 novembre 2026.",
-      "url": "https://arxiv.org/html/1909.09098v1"
+      "autore": "Jorge González-Gutiérrez e altri",
+      "titolo": "Pattern formation by droplet evaporation and imbibition in watercolor paintings",
+      "pubblicazione": "arXiv:1909.09098v1, manoscritto di ricerca depositato il 19 settembre 2019.",
+      "url": "https://arxiv.org/html/1909.09098v1",
+      "nota": "Studio sperimentale sulla formazione delle tracce nelle gocce di acquerello. Il collegamento apre la resa HTML consultata nella ricerca.",
+      "consultazione": "Ricerca del 3 novembre 2026: consultati metodi, risultati e discussione pertinenti; non esaminati separatamente tutti i materiali supplementari. La data del 2026 nella resa HTML non coincide con quella del deposito del 2019.",
+      "registro_precedente": "Primaria sperimentale, versione preprint:. González-Gutiérrez e collaboratori, Pattern formation by droplet evaporation and imbibition in watercolor paintings, arXiv:1909.09098v1, deposito 19 settembre 2019.  Letti metodi, risultati e discussione pertinenti; il rendering HTML mostra anche una data del 2026 che non viene confusa con quella del deposito. Non letti separatamente tutti i materiali supplementari. Consultazione nella ricerca del 3 novembre 2026."
     },
     "F11": {
-      "testo": "Primaria scientifica, solo abstract:. Del Federico e collaboratori, Insight into framework destruction in ultramarine pigments, Inorganic Chemistry, 6 febbraio 2006.  DOI 10.1021/ic050903z. Abstract verificato; testo integrale non letto. Consultazione nella ricerca del 3 novembre 2026.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/16441139/"
+      "autore": "Eleonora Del Federico e altri",
+      "titolo": "Insight into Framework Destruction in Ultramarine Pigments",
+      "pubblicazione": "Inorganic Chemistry, 45(3), 6 febbraio 2006, p. 1270-1276.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16441139/",
+      "nota": "Articolo scientifico sulla degradazione del pigmento. Il collegamento apre la registrazione con il riassunto.",
+      "consultazione": "Ricerca del 3 novembre 2026: verificato soltanto il riassunto, non il testo integrale.",
+      "registro_precedente": "Primaria scientifica, solo abstract:. Del Federico e collaboratori, Insight into framework destruction in ultramarine pigments, Inorganic Chemistry, 6 febbraio 2006.  DOI 10.1021/ic050903z. Abstract verificato; testo integrale non letto. Consultazione nella ricerca del 3 novembre 2026.",
+      "doi": "10.1021/ic050903z",
+      "limite": "Consultato soltanto il riassunto; testo integrale non letto."
     },
     "F12": {
-      "testo": "Primaria scientifica, solo abstract istituzionale:. Photo-catalytic degradation of binding media of ultramarine blue containing paint layers, Polymer Degradation and Stability 144, 43-52, 1 ottobre 2017.  DOI 10.1016/j.polymdegradstab.2017.08.002. Abstract e metadati verificati, non testo integrale. Consultazione nella ricerca del 3 novembre 2026.",
-      "url": "https://research.tudelft.nl/en/publications/photo-catalytic-degradation-of-binding-media-of-ultramarine-blue-/"
+      "autore": "E. René de la Rie e altri",
+      "titolo": "Photo-catalytic degradation of binding media of ultramarine blue containing paint layers: A new perspective on the phenomenon of “ultramarine disease” in paintings",
+      "pubblicazione": "Polymer Degradation and Stability, 144, 1 ottobre 2017, p. 43-52.",
+      "url": "https://research.tudelft.nl/en/publications/photo-catalytic-degradation-of-binding-media-of-ultramarine-blue-/",
+      "nota": "Articolo scientifico: gli esperimenti riguardano olio di lino e resina, non acquerello su carta. Il collegamento apre la registrazione nel portale TU Delft.",
+      "consultazione": "Ricerca del 3 novembre 2026: verificati riassunto e metadati, non il testo integrale.",
+      "registro_precedente": "Primaria scientifica, solo abstract istituzionale:. Photo-catalytic degradation of binding media of ultramarine blue containing paint layers, Polymer Degradation and Stability 144, 43-52, 1 ottobre 2017.  DOI 10.1016/j.polymdegradstab.2017.08.002. Abstract e metadati verificati, non testo integrale. Consultazione nella ricerca del 3 novembre 2026.",
+      "doi": "10.1016/j.polymdegradstab.2017.08.002",
+      "limite": "Consultato soltanto il riassunto; testo integrale non letto."
     },
     "F13": {
-      "testo": "Fonte istituzionale di conservazione:. Canadian Conservation Institute, Basic care of works of art on paper, senza data editoriale accertata.  Letta la guida, in particolare luce, umidità, inquinanti e montaggio. Consultazione nella ricerca del 3 novembre 2026.",
-      "url": "https://www.canada.ca/en/conservation-institute/services/care-objects/paper-books/basic-care-art-paper.html"
+      "autore": "Canadian Conservation Institute",
+      "titolo": "Basic care - Works of art on paper",
+      "pubblicazione": "Senza data editoriale accertata.",
+      "url": "https://www.canada.ca/en/conservation-institute/services/care-objects/paper-books/basic-care-art-paper.html",
+      "nota": "Guida istituzionale alla conservazione delle opere su carta.",
+      "consultazione": "Ricerca del 3 novembre 2026: letta la guida, in particolare le sezioni su luce, umidità, inquinanti e montaggio.",
+      "registro_precedente": "Fonte istituzionale di conservazione:. Canadian Conservation Institute, Basic care of works of art on paper, senza data editoriale accertata.  Letta la guida, in particolare luce, umidità, inquinanti e montaggio. Consultazione nella ricerca del 3 novembre 2026."
     },
     "F14": {
-      "testo": "Fonte istituzionale con osservazioni e ricostruzione pratica:. Bodleian Libraries, Exploring ultramarine, senza data.  Pagina letta per intero; inferenze tecniche mantenute come tali. Consultazione nella ricerca del 3 novembre 2026.",
-      "url": "https://www.bodleian.ox.ac.uk/about/libraries/our-work/conservation/exploring-ultramarine"
+      "autore": "Bodleian Libraries",
+      "titolo": "Exploring ultramarine",
+      "pubblicazione": "Senza data.",
+      "url": "https://www.bodleian.ox.ac.uk/about/libraries/our-work/conservation/exploring-ultramarine",
+      "nota": "Resoconto di osservazioni e ricostruzione pratica. Le deduzioni tecniche restano distinte dalle osservazioni.",
+      "consultazione": "Ricerca del 3 novembre 2026: pagina letta per intero; inferenze tecniche mantenute come tali.",
+      "registro_precedente": "Fonte istituzionale con osservazioni e ricostruzione pratica:. Bodleian Libraries, Exploring ultramarine, senza data.  Pagina letta per intero; inferenze tecniche mantenute come tali. Consultazione nella ricerca del 3 novembre 2026."
     },
     "F15": {
-      "testo": "Primaria museale, resoconto del laboratorio:. Marina Ruiz Molina, What Lies Beneath a Tiffany Drawing, Part Two, Metropolitan Museum of Art, 26 febbraio 2018.  Letto il resoconto e riscontrati opera e analisi citate. Consultazione nella ricerca del 3 novembre 2026.",
-      "url": "https://www.metmuseum.org/perspectives/conservation-louis-comfort-tiffany"
+      "autore": "Marina Ruiz Molina",
+      "titolo": "What Lies Beneath a Tiffany Drawing, Part Two",
+      "pubblicazione": "The Metropolitan Museum of Art, 26 febbraio 2018.",
+      "url": "https://www.metmuseum.org/perspectives/conservation-louis-comfort-tiffany",
+      "nota": "Resoconto del laboratorio museale, con analisi dei pigmenti su opere della collezione. Non è una prova generale sulla durata degli acquerelli.",
+      "consultazione": "Ricerca del 3 novembre 2026: letto il resoconto e riscontrati opera e analisi citate.",
+      "registro_precedente": "Primaria museale, resoconto del laboratorio:. Marina Ruiz Molina, What Lies Beneath a Tiffany Drawing, Part Two, Metropolitan Museum of Art, 26 febbraio 2018.  Letto il resoconto e riscontrati opera e analisi citate. Consultazione nella ricerca del 3 novembre 2026."
     },
     "quaderno-prove": {
-      "testo": "Quaderno di acquerello, proposta di prove comparative, 3 novembre 2026. Adattamento del protocollo della ricerca sul blu oltremare: esercizi da svolgere sui propri materiali, non prove già eseguite né protocollo normalizzato. Le scelte di attesa e di applicazione sono convenzioni del confronto.",
-      "url": ""
+      "autore": "Quaderno di acquerello",
+      "titolo": "Proposta di prove comparative sul blu oltremare",
+      "pubblicazione": "3 novembre 2026.",
+      "url": "#pratica",
+      "nota": "Esercizi da svolgere sui propri materiali, non prove già eseguite né un protocollo normalizzato.",
+      "consultazione": "Ricerca del 3 novembre 2026: adattamento del protocollo di ricerca. Le scelte di attesa e di applicazione sono convenzioni del confronto.",
+      "registro_precedente": "Quaderno di acquerello, proposta di prove comparative, 3 novembre 2026. Adattamento del protocollo della ricerca sul blu oltremare: esercizi da svolgere sui propri materiali, non prove già eseguite né protocollo normalizzato. Le scelte di attesa e di applicazione sono convenzioni del confronto."
     }
   }
 }

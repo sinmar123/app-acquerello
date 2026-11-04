@@ -199,91 +199,434 @@
     }
   ],
   "fonti": {
-    "mann": {"testo": "Fiona Mann, «“Rather Revolution than Evolution”: Chinese White and Watercolour Painting Techniques in England 1850-1880», in Colour Matters, Open Book Publishers, 11/5/2026, capitolo 13, pp. 319-341, licenza CC BY-NC 4.0: il disegno topografico del Settecento; David Cox, che «consistently avoided using white paint»; i bianchi disponibili prima del 1834; l'ossido di zinco reso più coprente nel 1834; Frank Howard nel 1838, «the purity of one art is lost without attaining the force of the other»; George Barnard nel 1858, «by nearly all the first men of the school»; il Magazine of Art nel 1879, «It has, indeed, been rather revolution than evolution, and the whole change may be ascribed to the use of opaque white»; il bianco cinese trovato all'Ashmolean nello studio di un martin pescatore di Ruskin; John Frederick Lewis e la Society of Painters in Water Colours; Sidney Whiteford nel 1870, lo strato spesso «very easily detached».", "url": "https://doi.org/10.11647/OBP.0501.13"},
-    "ruskin-115": {"testo": "John Ruskin, The Elements of Drawing (1857), § 115, negli studi rapidi: «when it is quite dry, scratch out the highest lights with the penknife». Project Gutenberg, eBook 30325.", "url": "https://www.gutenberg.org/files/30325/30325-h/30325-h.htm"},
-    "ruskin-157": {"testo": "John Ruskin, The Elements of Drawing (1857), § 157: «Use Chinese white, well ground, to mix with your colors in order to pale them, instead of a quantity of water». Project Gutenberg, eBook 30325.", "url": "https://www.gutenberg.org/files/30325/30325-h/30325-h.htm"},
-    "ruskin-158": {"testo": "John Ruskin, The Elements of Drawing (1857), § 158: «This mixing of white with the pigments, so as to render them opaque, constitutes body-color drawing»; «you will, perhaps, have it often said to you that this body-color is “illegitimate.” It is just as legitimate as oil-painting»; «if you hear it said that the body-color looks chalky or opaque, and, as is very likely, think so yourself». Project Gutenberg, eBook 30325.", "url": "https://www.gutenberg.org/files/30325/30325-h/30325-h.htm"},
-    "ruskin-159": {"testo": "John Ruskin, The Elements of Drawing (1857), § 159: «the bloom and mist of distance are accurately and instantly represented by the film of opaque blue (quite accurately, I think, by nothing else)». Project Gutenberg, eBook 30325.", "url": "https://www.gutenberg.org/files/30325/30325-h/30325-h.htm"},
-    "ruskin-160": {"testo": "John Ruskin, The Elements of Drawing (1857), § 160: «All kinds of color are equally illegitimate, if you think they will allow you to alter at your pleasure, or blunder at your ease»; il segreto del buon colore sta nella frase di Mulready «Know what you have to do». Project Gutenberg, eBook 30325.", "url": "https://www.gutenberg.org/files/30325/30325-h/30325-h.htm"},
-    "tate": {"testo": "David Blayney Brown, «Draughtsman and Watercolourist», Tate Research Publication, dicembre 2012: Turner e la gouache; negli schizzi di Petworth del 1827, su carta blu, «patches of vivid reds, yellows, blues and white»; le luci tolte con «finger nails, brush handles, absorbent breadcrumbs or damp cloths».", "url": "https://www.tate.org.uk/art/research-publications/jmw-turner/david-blayney-brown-draughtsman-and-watercolourist-r1132588"},
-    "agnsw-hunt": {"testo": "Art Gallery of New South Wales, scheda di William Henry Hunt (testo da Victorian watercolours, 2017): «pioneered the use of Chinese white», mescolato alla gomma per un fondo duro su cui puntinare i colori; «daring use of the knife to roughen, scratch or carve into the paper».", "url": "https://www.artgallery.nsw.gov.au/collection/artists/hunt-william-henry/"},
-    "vam": {"testo": "Victoria and Albert Museum, «What is watercolour?», pagina aggiornata il 2/9/2026: in In a Shoreham Garden di Samuel Palmer, verso il 1830, i fiori sono «glossy white blobs», e alcuni grumi «have cracked and fallen off, leaving the paper bare».", "url": "https://www.vam.ac.uk/articles/what-is-watercolour"},
-    "perkinson": {"testo": "Roy Perkinson, «Observations on the Drawings of Winslow Homer», Book and Paper Group Annual 5, 1986: il bianco cinese nei disegni di Homer e l'alone bruno chiaro attorno ai tratti, che l'autore riferisce forse alla «photochemical activity of zinc white».", "url": "https://cool.culturalheritage.org/coolaic/sg/bpg/annual/v05/bp05-01.html"},
-    "brooklyn-sargent": {"testo": "Brooklyn Museum, Teaching Resource: John Singer Sargent Watercolors, 2013: in Mountain Fire il fumo è reso con «washes of color mixed with zinc white».", "url": "https://cms-files.brooklynmuseum.org/e07515da3bb8a3c6dc7ca2f8f05cad98c2a52ee9.pdf"},
-    "macevoy-vittoriani": {"testo": "Bruce MacEvoy, «victorian watercolors», handprint, revisione 8/1/2015: John Frederick Lewis al Cairo, «perfecting a meticulous bodycolor technique».", "url": "https://www.handprint.com/HP/WCL/artist12.html"},
-    "ww-storia": {"testo": "Watercolor West, «History»: la società nasce nel 1967 per promuovere ed esporre «only transparent watercolor».", "url": "https://www.watercolorwest.org/history"},
-    "twsa-storia": {"testo": "Transparent Watercolor Society of America, «History»: nata come Midwest Watercolor Society, con la prima assemblea il 6/8/1977 a Duluth; dal 2003 porta il nome attuale.", "url": "https://www.watercolors.org/history"},
-    "twsa-trasparenza": {"testo": "Transparent Watercolor Society of America, «What is Transparency?»: «No white paint is accepted»; la frase di Edgar Whitney, «white paper showing through a transparent wash is the closest approximation to light in all the media»; il criterio «if the area shines, then the light is reflecting off of the pigment and not from the paper underneath».", "url": "https://www.watercolors.org/transparency"},
-    "johnson": {"testo": "Vanessa Johnson, Jane Colbourne, Kate Nicholson, «A Digital Imaging Tool for Identifying Photoactive Zinc Oxide Watercolor Pigments», Book and Paper Group Annual 40, 2021, pp. 27-43: il bianco cinese «led to a shift away from transparent watercolor painting in England in the latter half of the 19th century» (p. 27); le quattro forme di degrado (p. 28); la crettatura (p. 29); un bianco cinese recente scartato perché conteneva biossido di titanio, e le tre carte delle prove (p. 30); i risultati delle prove (pp. 34 e 40); glicerina e miele (p. 39); «dark storage is mostly advantageous for watercolors with zinc oxide pigments» e «Low or intermittent moderate lighting» (p. 39); la persistenza dei perossidi al buio e le opere ancora fotoattive (p. 40).", "url": "https://cool.culturalheritage.org/coolaic/sg/bpg/annual/v40/bpga40-04.pdf"},
-    "twsa-2026": {"testo": "Transparent Watercolor Society of America, 2026 Prospectus, 50th National Exhibition: esclusi «Opaque white paint, of any kind, such at [sic] titanium white, Chinese white, etc.», «Gouache, acrylics, or water-soluble oils» e le riserve «not completely removed from the final painting»; «TWSA has recently utilized alternate selections due to final screening findings of heavy opacity».", "url": "https://static1.squarespace.com/static/5e08e652d2430c02f8d3baa9/t/690ad2ead6a6da62d57864ca/1762317034295/2026+TWSA+Prospectus.pdf"},
-    "ww-2025": {"testo": "Watercolor West, 57th International Juried Exhibition, Prospectus (2025): «no white paint of any kind (including those labeled “white watercolor”)».", "url": "https://www.watercolorwest.org/s/last-Prospectus.pdf"},
-    "cspwc-2026": {"testo": "Canadian Society of Painters in Water Colour, Open Water 2026, Terms & Conditions: acquerello trasparente «with minimal use of body colour so that the white of the watercolour paper reflects through the paint»; non ammessi «Gouache, egg tempera, casein, acrylic, water-based oils and archival felt pens».", "url": "https://open-water-2026.artcall.org/pages/terms-conditions"},
-    "hawaii-2026": {"testo": "Hawaiʻi Watercolor Society, 2026 Members' Show «99% Transparent»: «A maximum of 1% of the surface may be enhanced using water-soluble media, including gouache, casein, acrylics...».", "url": "https://static1.squarespace.com/static/53334bb5e4b0bce84cfa8159/t/691ce6361a58444c3d4a9492/1763501622064/Prospectus+2026+Members%27+Show-rev.pdf"},
-    "fortworth-2026": {"testo": "Society of Watercolor Artists, Fort Worth, 2026 International Juried Exhibition, Prospectus: «Acrylics, inks & gouache may be used but cannot cover more than 10% of the surface».", "url": "https://www.swawatercolor.com/_files/ugd/422748_928a37690c9c4012965517a47b7082f9.pdf"},
-    "rivers-2023": {"testo": "International Watercolor Society, IWS Irina Endorphine Art e IWS Mexico, «Rivers of Color», Città del Messico, 2023: «Medium: 95% transparent watercolor on paper».", "url": "https://endorphine-art.com/rivers-of-color/"},
-    "urbino-2025": {"testo": "UrbinoInAcquerello, Regolamento del Festival internazionale 2025, sezione Italia: «Si deve utilizzare la tecnica dell'acquerello o tecnica mista (compresa quella dell'incisione) con almeno il 70% di acquerello».", "url": "https://sc0f78c403d51ca8e.jimcontent.com/download/version/1730138219/module/7957468711/name/Artisti%20Bando%20Italiano%202025.pdf"},
-    "iws-canada-2026": {"testo": "IWS Canada, «United Through Watercolour 2026»: «Paintings must contain at least 50% water based media».", "url": "https://iwscanada.ca/united-through-watercolour-2026/"},
-    "rws": {"testo": "Royal Watercolour Society, RWS Open, «Eligibility»: «Paintings in watercolour, acrylic, gouache, ink, any other water-based media or a combination are accepted», su supporti di carta.", "url": "https://www.royalwatercoloursociety.co.uk/competition/eligibility/"},
-    "ri-215": {"testo": "Mall Galleries, Royal Institute of Painters in Water Colours, bando della 215ª mostra, iscrizioni dal 12/10/2026 al 22/1/2027: «Watercolour or water-soluble mediums including watercolour, watercolour pencil, acrylic, ink or gouache (excluding water-soluble oils)»; le opere «not being in the spirit of watercolour painting» possono essere ritirate.", "url": "https://www.mallgalleries.org.uk/open-calls/royal-institute-painters-water-colours"},
-    "aws-160": {"testo": "American Watercolor Society, Prospectus, 160th Annual International Exhibition: «Watercolor, acrylic, casein, gouache, and egg tempera are accepted».", "url": "https://americanwatercolorsociety.org/wp-content/uploads/2026/08/160th-Annual-International-Prospectus.docx.pdf"},
-    "aia-soci": {"testo": "Associazione Italiana Acquerellisti, «Come diventare soci»: opere «eseguite in acquerello puro».", "url": "https://acquerello-aia.it/i-soci/come-diventare-soci/"},
-    "aia": {"testo": "Associazione Italiana Acquerellisti, «L'AIA»: «L'AIA predilige l'acquerello “puro” che utilizzi il bianco della carta per rappresentare le luci senza interventi di altri mezzi pittorici quali tempera, pastello o altri materiali».", "url": "https://acquerello-aia.it/laia/presentazione/"},
-    "accademia-2026": {"testo": "Accademia Internazionale dell'Acquarello, «International Watercolor Academy Award 2026»: «Le opere devono essere realizzate con la tecnica pura dell'acquerello. Sono accettate sperimentazioni e innovazioni, purché non ne venga alterata l'essenza».", "url": "https://accademiainternazionaledellacquarello.com/international-watercolor-academy-award-2026/"},
-    "fabriano-2026": {"testo": "FabrianoInAcquarello, 2026 Rules & Guidelines: lo scopo è «the promotion of water media artists and of painting techniques on paper»; il bianco non è regolato.", "url": "https://www.inartefabriano.it/2026ARTISTRules.pdf"},
-    "macevoy-luce": {"testo": "Bruce MacEvoy, «the secret of glowing color», handprint, revisione 8/1/2015: gli indici di rifrazione (aria 1,0; acqua 1,33; gomma arabica 1,47; bianco di zinco 2,0; bianco di titanio 2,6); perché l'acquerello schiarisce asciugando; la spiegazione della vetrata, nata fra i pittori vittoriani, e «Transparency happens between particles and not through them»; «there is no fourth color attribute besides lightness, chroma and hue».", "url": "https://www.handprint.com/HP/WCL/tech16.html"},
-    "macevoy-bianco": {"testo": "Bruce MacEvoy, «white», guida ai pigmenti, handprint, revisione 7/1/2015: «White pigments show almost no drying shift, although they become much less opaque»; il titanio, «a slightly brighter, cleaner white than chinese white», in acquerello «will appear stiff or artificial unless used very sparingly»; «In my tests, chinese whites were slightly though consistently more opaque than titanium whites»; le tinte di zinco bluastre; il PW4 al sole «becomes somewhat brighter and noticeably more opaque after 4 to 6 weeks»; «The standard paint lightfastness tests do not catch changes in paint transparency»; il litopone, «a calcined coprecipitate of zinc sulfide and barium sulfate».", "url": "https://www.handprint.com/HP/WCL/waterw.html"},
-    "hoevel": {"testo": "Claire L. Hoevel, «A Study of the Discoloration Products Found in White Lead Paint Films», Book and Paper Group Annual 4, 1985: la biacca, carbonato basico di piombo, annerisce con l'idrogeno solforato; le gomme dell'acquerello e della gouache «offer little protection from atmospheric pollutants»; il solfuro che si forma è bruno, nero o nero argenteo.", "url": "https://cool.culturalheritage.org/coolaic/sg/bpg/annual/v04/bp04-04.html"},
-    "bianchi-scheda-1": {"testo": "Winsor & Newton, «Why are there two watercolour whites?», pagina del produttore: il Chinese White «is semi-opaque and has a blue undertone»; il bianco di titanio «is the whitest, most opaque white».", "url": "https://www.winsornewton.com/blogs/guides/tips-for-different-watercolour-whites"},
-    "bianchi-scheda-2": {"testo": "Schmincke, HORADAM Aquarell, colori 101 e 102, pagina del produttore: 101 Titanium opaque white, PW6, «highest opacity and strongest lightening power»; 102 Permanent Chinese white, PW4, «Due to transparency the best mixing white».", "url": "https://www.schmincke.de/en/produkte/aquarell/horadam-aquarell"},
-    "marche-etichetta": {"testo": "Quaderno di acquerello, Marche e tubetti, capitolo 3, «Come leggere l'etichetta».", "url": "../../marche/#etichetta"},
-    "colori-acquerello": {"testo": "Quaderno di acquerello, Teoria dei colori, capitolo 3, «L'acquerello: acqua, carta, velature»: «Nell'acquerello il bianco è quello della carta: per schiarire si aggiunge acqua, così sulla carta si deposita meno pigmento».", "url": "../../colori/#acquerello"},
-    "parks-zbukvic": {"testo": "John A. Parks, «Fleeting Moments: Plein Air Watercolor», OutdoorPainter, senza data, su Joseph Zbukvic: «I have to be careful to leave any whites that I need unpainted, perhaps areas for roofs, windshields, or reflections. So I paint around them, making negative shapes»; sul bordo ormai asciutto, «Some people try scrubbing, but you can always see the damage».", "url": "https://www.outdoorpainter.com/fleeting-moments-plein-air-watercolor/"},
-    "mascherare-scheda-1": {"testo": "Winsor & Newton, «How to use Art Masking Fluid», pagina del produttore: il liquido si stende su carta asciutta e ben collata; la versione incolore evita la macchia gialla.", "url": "https://uk.winsornewton.com/blogs/guides/how-to-use-art-masking-fluid"},
-    "mascherare-scheda-2": {"testo": "Winsor & Newton, «How long should you leave masking fluid on for?», pagina del produttore: il liquido «should not be left on the piece for longer than 12 hours».", "url": "https://eu.winsornewton.com/blogs/guides/how-to-remove-masking-fluid"},
-    "mascherare-scheda-3": {"testo": "Schmincke, scheda tecnica del liquido per mascherare, 1/7/2014, copia del distributore Deffner & Johann: «should not be left on the support for longer than two days», pena l'ingiallimento del supporto; non adatte le carte molto morbide e poco collate, «like e.g. rag paper or torchon paper».", "url": "https://deffner-johann.de/media/datasheets/1981010/EN/1981010_Technical%20Data%20Sheet_Schmincke%20Masking%20Fluid%20100%20ml_EN_DJ.pdf"},
-    "mascherare-scheda-4": {"testo": "Pébéo, Drawing Gum 250 ml, pagina del produttore: «For fine lines, or with markers: the dry film is to be removed at most one week after application»; si toglie a colori ben asciutti.", "url": "https://pebeo.com/en/produit/drawing-gum-250-ml/"},
-    "macevoy-fabriano": {"testo": "Bruce MacEvoy, pagina sulle carte Fabriano, handprint, revisione 8/1/2015: sulla carta di puro cotone, nelle tre superfici, due o tre strisce di nastro e le riserve di liquido si sono tolte senza danni.", "url": "https://www.handprint.com/HP/WCL/paper2b.html"},
-    "macevoy-hahnemuhle": {"testo": "Bruce MacEvoy, pagina sulle carte Hahnemühle, handprint, revisione 8/1/2015: sulla vecchia carta di puro cotone «Resists came off only with great effort, and left the surface damaged»; la collatura «is much too thin». Nella prova di sollevamento il verde «was impossible to lift».", "url": "https://www.handprint.com/HP/WCL/paper2c.html"},
-    "utrecht-blick": {"testo": "Utrecht Art Supplies e Dick Blick, «Masking Fluid: Time Frame» (Ask the Experts), © 2020: «Observe all package instructions»; sulle carte meno buone, una prova su un ritaglio. Il rivenditore indica anche un termine di tre o quattro settimane; è un'indicazione commerciale, non una prova comparativa dei tempi.", "url": "https://assets.ctfassets.net/f1fikihmjtrp/702DYHg4NvrFzibcfthJoT/cb543ee18a3c87148973ce6da612e2e4/PP_masking_fluid_removal.pdf"},
-    "smlt-nastro": {"testo": "SMLT Art, «Experiments with the masking tape», 10/1/2025: nessuna difficoltà sul cotone da 300 g/m² e sul cotone misto da 260 g/m², difficoltà sulla cellulosa da 280 g/m²; l'asciugacapelli o 15 minuti in congelatore facilitano la rimozione.", "url": "https://www.smltart.com/news/669/72/Experiments-with-the-masking-tape/"},
-    "principi-abbinare": {"testo": "Quaderno di acquerello, Principi generali, capitolo 3, «Acqua nel pennello e acqua nella carta»: un pennello pulito e scarico solleva il colore fresco per aprire le luci.", "url": "../../principi/#abbinare"},
-    "principi-collatura": {"testo": "Quaderno di acquerello, Principi generali, capitolo 7, «La carta: grana, grammatura, collatura»: la collatura incide molto sulla possibilità di sollevare il colore.", "url": "../../principi/#carta-tipi"},
-    "macevoy-test": {"testo": "Bruce MacEvoy, «how to test watercolor papers», handprint, revisione 8/1/2015: le prove con una striscia di nastro e strisce di liquido per mascherare, poi un verde sollevato e strofinato; «Papers made with very short cellulose fibers tend to yield a fuzzy surface that is difficult to clean up».", "url": "https://www.handprint.com/HP/WCL/paper3.html"},
-    "macevoy-arches": {"testo": "Bruce MacEvoy, pagina sulle carte Arches, handprint, revisione 8/1/2015: sulla grana fina il verde «lifted completely with no damage», sulla torchon «only with difficulty by scrubbing»; la raschiatura sembra «fracture the internal sizing» e lascia «a bruiselike discoloration under wash coats».", "url": "https://www.handprint.com/HP/WCL/paper2a.html"},
-    "penna-gel": {"testo": "Mitsubishi Pencil, scheda di sicurezza dell'inchiostro della penna gel bianca uni-ball Signo UM-153, 23/12/2021: inchiostro all'acqua con biossido di titanio.", "url": "https://cdn.shopify.com/s/files/1/0784/2178/6951/files/White_Writing_Pen_SDS.pdf?v=1751276017"},
-    "bockingford": {"testo": "St Cuthberts Mill, Bockingford, scheda tecnica aggiornata a ottobre 2025: una carta di cellulosa «superb for colour lifting techniques».", "url": "https://www.stcuthbertsmill.com/userfiles/files/Bockingford%20-%20Spec%20Sheet%20-%20updated%20Oct%2025.pdf"},
-    "zhou": {"testo": "Konstantin Sterkhov, «Zhou Tianya. Interview», 13/5/2012: «I never use white paint».", "url": "https://sterkhovart.blogspot.com/2012/05/zhou-tianya-interview.html"},
-    "mortimer": {"testo": "Eleanor Mann, «Ann Mortimer interviewed by Eleanor Mann», 20/9/2014: «I use masking fluid quite often. I never use white!».", "url": "https://www.eleanormann.co.uk/blog/ann-mortimer-interviewed-by-eleanor-mann"},
-    "kane-mondloch": {"testo": "Kelly Kane, «Put Less In, Get More Out», American Watercolor, 13/11/2024: Dan Mondloch, «I often use gouache in skies, because if you warm up a cloud in a blue sky, it can become green... I get around that with white gouache mixed with cobalt»; «Zbukvic said that gouache is the hand brake in painting».", "url": "https://americanwatercolor.net/put-less-in-get-more-out/"},
-    "yardley": {"testo": "Konstantin Sterkhov, «John Yardley. Interview», 4/6/2012: «I use a little gouache when convenient».", "url": "https://sterkhovart.blogspot.com/2012/06/john-yardley-interview.html"},
-    "mollica": {"testo": "Cristina Mollica, «Il bianco è un bel colore», CiaoArte, 3/9/2026: «Nell'acquerello il bianco è la carta»; il bianco in tubetto «va benissimo per i tocchi finali», «molto meno per recuperare aree grandi che avevi coperto per sbaglio».", "url": "https://www.ciaoarte.it/blog/il-bianco-e-un-bel-colore"},
-    "lovett-gesso": {"testo": "John Lovett, «White Gouache or Gesso»: «white gouache can be used to add soft hazy areas of light to your work».", "url": "https://www.johnlovett.com/white-gouache-or-gesso"},
-    "lovett-gouache": {"testo": "John Lovett, «Gouache and Watercolor»: «I often tint White Gouache with watercolor»; la gouache sta su una tavolozza separata, perché sugli acquerelli «it will quickly turn them to mud».", "url": "https://www.johnlovett.com/gouache-and-watercolor"},
-    "kane-castagnet": {"testo": "Kelly Kane, «An Argument Against Painting Pretty», American Watercolor Weekly, 17/4/2018: Alvaro Castagnet, «I don't preserve too many whites at the start because then I become a slave to those high-key values».", "url": "https://americanwatercolor.net/an-argument-against-painting-pretty/"},
-    "berry-castagnet": {"testo": "Stephen Berry, appunti dal workshop di Alvaro Castagnet, maggio 2014: nella tavolozza c'è il Chinese White.", "url": "https://stephenberryart.com/blog/2014/05/alvaro-castagnet-watercolor-workshop_23.html"},
-    "gurney-2008": {"testo": "James Gurney, «Gouache on Tone Paper», Gurney Journey, 22/3/2008: su carta tonata, «the sky was painted thinly with white gouache».", "url": "https://gurneyjourney.blogspot.com/2008/03/gouache-on-tone-paper.html"},
-    "gurney-2023": {"testo": "James Gurney, «What do watercolor societies say about...», Gurney Journey, 17/3/2023: la trasparenza non garantisce la luminosità.", "url": "https://gurneyjourney.blogspot.com/2023/03/what-do-watercolor-societies-say-about.html"},
-    "fracasso": {"testo": "Arteaporte, scheda di Pasqualino Fracasso: «Credo fermamente che per infrangere le regole, bisogna prima conoscerle a fondo».", "url": "https://www.arteaporte.com/artist/pasqualino-fracasso/"},
-    "curtis": {"testo": "Cassidy J. Curtis e altri, «Computer-Generated Watercolor», SIGGRAPH 1997: l'acquerello come serie di velature traslucide, composte con il modello di Kubelka e Munk.", "url": "https://grail.cs.washington.edu/wp-content/uploads/2015/08/curtis-1997-cgw.pdf"},
-    "hunterlab": {"testo": "HunterLab, «Addressing the Challenges of Optical Brightening Agents in Paper Color Measurement»: gli sbiancanti ottici «work by absorbing non-visible UV light below 400nm and emitting visible light in the 400-480nm range».", "url": "https://support.hunterlab.com/knowledgebase/article/KA-05257/en-us"},
-    "cci-1995": {"testo": "Canadian Conservation Institute, CCI Notes 11/2, «Storing Works on Paper», © 1995, pagina del 2/12/2025: 50 lux per gli acquerelli, «or as low as possible»; ultravioletto non oltre 75 µW/lm; umidità relativa sotto il 50%; temperatura massima 21 °C.", "url": "https://www.canada.ca/en/conservation-institute/services/conservation-preservation-publications/canadian-conservation-institute-notes/storing-works-paper.html"},
-    "cci-2018": {"testo": "Sherry Guild, Caring for paper objects, Canadian Conservation Institute, © 2018, pagina aggiornata il 2/12/2025: «Maintain RH below 65%»; fra i danni, «Chalking and weakening of most paints that contain photosensitizing pigments (zinc white, early titanium white)»; della gouache, «Thick applications are prone to cracking and flaking». Sconsiglia periodi con umidità relativa superiore al 75%.", "url": "https://www.canada.ca/en/conservation-institute/services/preventive-conservation/guidelines-collections/paper-objects.html"},
-    "ricerca-bianco-2026": {"testo": "Materiale verificato per la pagina 5.1, versione 2 del 1/11/2026, documento di lavoro conservato dal curatore e non pubblicato: § 2, ricognizione di 19 premi e concorsi italiani su 21 documenti letti a mano; «bianco opaco» e «bianco di corpo» assenti, gouache citata in tre bandi di grafica o illustrazione. Le domande A, B e C restano aperte per mancanza di confronti misurati comparabili e di prove sistematiche sulle carte attuali.", "url": ""},
-    "combat-2026": {"testo": "Premio Combat 2026, bando, sezione grafica; testo archiviato il 1/11/2026: «Nella sezione grafica sono ammesse le seguenti tecniche artistiche: disegno, acquerello, gouache, collage, disegno digitale, opere eseguite con tecniche grafiche varie e i diversi tipi di stampa in piano, digitale, a rilievo, in cavo».", "url": "https://www.premiocombat.it/bando"},
-    "marchionni-2026": {"testo": "Premio Marchionni 2026, bando di grafica; testo archiviato il 1/11/2026: «Sono ammesse tutte le tecniche di grafica in genere: sanguigna, carboncino, china, matita e matita grassa, pastello, gessetto, acquerello, gouache, le varie tecniche di incisione».", "url": "https://www.premiomarchionni.it/bando-premio-marchionni/"},
-    "forte-bard-2026": {"testo": "Associazione Forte di Bard, «Una montagna di... pascoli», seconda edizione 2026, concorso internazionale di grafica e illustrazione, p. 3 del PDF, categorie tecniche: «Acquerello, tempera, gouache» fra le tecniche del disegno tradizionale. Bando consultato il 1/11/2026.", "url": "https://www.fortedibard.it/wp-content/uploads/2026/01/BANDO-Una-Montagna-Di-Pascoli_ITA.pdf"},
-    "concorso-bianco-2024": {"testo": "Concorso Winsor & Newton 2024, bando conservato da Bottega del Colore: clausola «ad eccezione del bianco, permesso per le miscelazioni». Citazione riscontrata nel materiale verificato del 1/11/2026.", "url": "https://www.bottegadelcolore.it/writable/attachments/concorso_winsor_watercolour_acquarelli.pdf"},
-    "alvese-2019": {"testo": "Gruppo Alvese, «L'acqua diventa arte», secondo concorso nazionale di pittura ad acquerello, 2019. La formula «acquerello puro» compare ai punti 3 e 5; il punto 3 rinvia al punto 5. Quest'ultimo esclude le tecniche miste e «nemmeno piccoli interventi con altre tecniche (niente tempera, acrilico, china, cere, vernicette etc.)». La gouache non è nominata; la sua esclusione è una deduzione.", "url": "https://alvese.it/wp-content/uploads/2019/06/REGOLAMENTO-MODULO-ISCRIZIONE-2%C2%B0-concorso-nazionale-di-pittura-ad-acquerello-2019.pdf"},
-    "paintlist-pw21": {"testo": "Paint List, Pigment Notebook, PW21, «Blanc Fixe, Artificial Baryte»: solfato di bario artificiale, con «Permanent White» fra i nomi; riporta «Transparent, Opaque in Water». Scheda letta come testo e confermata nel registro delle verifiche del 1/11/2026; le descrizioni non sono una prova comparativa in acquerello.", "url": "https://paintlist.com/pigment-notebook/pw21"},
-    "chs-pw21": {"testo": "CHS Open Source, scheda PW21, Barium Sulfate: «Quite transparent, it is often used as a filler for other pigments»; basso indice di rifrazione e debole potere coprente. Scheda letta come testo e confermata nel registro delle verifiche del 1/11/2026.", "url": "https://chsopensource.org/products/pigments-checker/pigments-checker-modern-and-contemporary-art-pigments-list/pw-21-barium-sulfate"},
-    "paintlist-pw22": {"testo": "Paint List, Pigment Notebook, PW22, «Natural Barium Sulfate (Barytes)»: nell'estratto raccolto per la ricerca figurano il solfato di bario naturale e il nome «Permanent White». Per decisione del curatore del 1/11/2026 resta una fonte trattata come estratto, quindi una stima; non è usata per attribuire una coprenza al PW22 in acquerello.", "url": "https://paintlist.com/pigment-notebook/pw22"},
-    "zaragoza-pigmenti": {"testo": "Ayuntamiento de Zaragoza, tabella dei pigmenti, p. 3 del documento: PW6, luminosità 80,32, opaco, potere coprente elevato; PW4, luminosità 89,58, semitrasparente, potere medio. Sono dati sul pigmento in polvere, non su velature di acquerello sulla stessa carta.", "url": "https://www.zaragoza.es/sede/servicio/contratacion-publica/anuncio/73275/document.pdf"},
-    "whistler-zinco": {"testo": "Book and Paper Group Annual 38 (2019), studio su Whistler e il bianco di zinco: dopo il 1880 prevale lo zinco; le analisi ne confermano la presenza, anche in acquerelli maturi trasparenti. Mortimer Menpes: «In water colours Whistler always used Chinese white [zinc white] with every tone, to give body to the pigment». L'idea che lo zinco di Turner appaia trasparente per un'alterazione è riportata come ipotesi, non come dato accertato.", "url": "https://cool.culturalheritage.org/coolaic/sg/bpg/annual/v38/bpga38-03.pdf"},
-    "waterlow": {"testo": "Arran Open Studios, «When The Paintbrush Takes Over: Faye Waterlow», intervista di Emily Rose Mawson, 21/6/2024. Testo letto per intero nella verifica del 1/11/2026. Waterlow risponde in prima persona: «My watercolour paintings also now benefit from adding white gouache, and at times I will use a fine black liner to add definition or interest, as I do not use black or white paint in any of my watercolour paintings.» L'aggiunta di gouache bianca e il rifiuto del bianco compaiono nella stessa risposta: la contraddizione interna resta dichiarata, senza risolverla per deduzione.", "url": "https://arranopenstudios.org/2024/06/21/when-the-paintbrush-takes-over-faye-waterlow"},
-    "weight-reed": {"testo": "Janet Weight Reed, «Mixing watercolour and gouache: the transparent with the opaque», post del suo blog didattico, 30/10/2018. Testo letto per intero nella verifica del 1/11/2026. L'autrice scrive in prima persona: «I found some gouache, something I had not used before and began mixing it with watercolour». Per i lumi precisa: «permanent white gouache needs to be applied for highlights because all the white paper has been covered». Il post presenta esempi e campioni; nei commenti l'autrice conferma di insegnare.", "url": "https://jcrhumming.wordpress.com/2018/10/30/mixing-watercolour-and-gouache-the-transparent-with-the-opaque"},
-    "jay-noble": {"testo": "HACC, «Jay Noble: Paintings and Drawings», comunicato stampa del college su una mostra, 14/9/2012. Non è un'intervista. Testo letto per intero nella verifica del 1/11/2026. Il redattore scrive: «To erase pencil marks, he uses gouache, white opaque water color paint, instead of a rubber eraser.» La descrizione «white opaque water color paint» è del redattore: non sono parole di Noble fra virgolette. La fonte è citata per l'uso della gouache, non come dichiarazione dell'artista sul bianco. Il comunicato lo presenta come docente a contratto in due college.", "url": "https://www.hacc.edu/newsroom/2012/jay-noble-paintings-and-drawings-on-display-at-haccs-lancaster-campus.cfm"},
-    "kwamena-poh": {"testo": "The Ledger, «Watercolor», articolo di giornale del 10/5/2007. Citazione diretta di William Kwamena-Poh: «I don't stray from the watercolor methods of painting, but I use gouache, which is opaque.» Non nomina il bianco. Nella verifica del 1/11/2026 il testo è stato letto per intero da una copia di lettura: la pagina originale, indicata nel collegamento, rispondeva con codice 402 e non era apribile. Non è presentato come un'intervista estesa né come una lettura della pagina originale.", "url": "https://www.theledger.com/story/news/2007/05/10/watercolor/25833929007"},
-    "ruby-osorio": {"testo": "Ruby Osorio, dichiarazione d'artista su New American Paintings. La pagina è senza data; la rivista la colloca nel numero 79, Pacific Coast, dicembre 2008. Testo letto per intero nella verifica del 1/11/2026. Nella propria dichiarazione l'artista scrive: «Multiple sensibilities find expression in watercolor and gouache, which can be improvisational as well as precise». Nomina acquerello e gouache, senza parlare del bianco; non è un'intervista.", "url": "https://newamericanpaintings.com/artists/ruby-osorio"},
-    "carla-oconnor": {"testo": "American Watercolor, «In the Studio With Donna Zagotta and Carla O'Connor», intervista con domande di Donna Zagotta, 4/1/2018. Fonte F38 del materiale di ricerca del 1/11/2026: per la nuova verifica e la decisione del curatore, testo letto per intero, non più trattato come estratto. Alla domanda «Why do you prefer gouache as an opaque medium rather than oils or acrylics?», O'Connor risponde: «I consider gouache to be my mature medium because of its similar handling to oils.» Non nomina il bianco. Il profilo nell'articolo recita: «Carla O'Connor is a signature member of the American Watercolor Society, National Watercolor Society and Northwest Watercolor Society and is an AWS Dolphin Fellow.» L'articolo la presenta anche come pittrice, insegnante e giurata di livello nazionale.", "url": "https://americanwatercolor.net/in-the-studio-with-donna-zagotta-and-carla-oconnor"}
+    "mann": {
+      "testo": "Fiona Mann, «“Rather Revolution than Evolution”: Chinese White and Watercolour Painting Techniques in England 1850-1880», in Colour Matters, Open Book Publishers, 11/5/2026, capitolo 13, pp. 319-341, licenza CC BY-NC 4.0: il disegno topografico del Settecento; David Cox, che «consistently avoided using white paint»; i bianchi disponibili prima del 1834; l'ossido di zinco reso più coprente nel 1834; Frank Howard nel 1838, «the purity of one art is lost without attaining the force of the other»; George Barnard nel 1858, «by nearly all the first men of the school»; il Magazine of Art nel 1879, «It has, indeed, been rather revolution than evolution, and the whole change may be ascribed to the use of opaque white»; il bianco cinese trovato all'Ashmolean nello studio di un martin pescatore di Ruskin; John Frederick Lewis e la Society of Painters in Water Colours; Sidney Whiteford nel 1870, lo strato spesso «very easily detached».",
+      "url": "https://doi.org/10.11647/OBP.0501.13",
+      "titolo_link": "“Rather Revolution than Evolution”: Chinese White and Watercolour Painting Techniques in England 1850-1880"
+    },
+    "ruskin-115": {
+      "testo": "John Ruskin, The Elements of Drawing (1857), § 115, negli studi rapidi: «when it is quite dry, scratch out the highest lights with the penknife». Project Gutenberg, eBook 30325.",
+      "url": "https://www.gutenberg.org/files/30325/30325-h/30325-h.htm",
+      "titolo_link": "The Elements of Drawing"
+    },
+    "ruskin-157": {
+      "testo": "John Ruskin, The Elements of Drawing (1857), § 157: «Use Chinese white, well ground, to mix with your colors in order to pale them, instead of a quantity of water». Project Gutenberg, eBook 30325.",
+      "url": "https://www.gutenberg.org/files/30325/30325-h/30325-h.htm",
+      "titolo_link": "The Elements of Drawing"
+    },
+    "ruskin-158": {
+      "testo": "John Ruskin, The Elements of Drawing (1857), § 158: «This mixing of white with the pigments, so as to render them opaque, constitutes body-color drawing»; «you will, perhaps, have it often said to you that this body-color is “illegitimate.” It is just as legitimate as oil-painting»; «if you hear it said that the body-color looks chalky or opaque, and, as is very likely, think so yourself». Project Gutenberg, eBook 30325.",
+      "url": "https://www.gutenberg.org/files/30325/30325-h/30325-h.htm",
+      "titolo_link": "The Elements of Drawing"
+    },
+    "ruskin-159": {
+      "testo": "John Ruskin, The Elements of Drawing (1857), § 159: «the bloom and mist of distance are accurately and instantly represented by the film of opaque blue (quite accurately, I think, by nothing else)». Project Gutenberg, eBook 30325.",
+      "url": "https://www.gutenberg.org/files/30325/30325-h/30325-h.htm",
+      "titolo_link": "The Elements of Drawing"
+    },
+    "ruskin-160": {
+      "testo": "John Ruskin, The Elements of Drawing (1857), § 160: «All kinds of color are equally illegitimate, if you think they will allow you to alter at your pleasure, or blunder at your ease»; il segreto del buon colore sta nella frase di Mulready «Know what you have to do». Project Gutenberg, eBook 30325.",
+      "url": "https://www.gutenberg.org/files/30325/30325-h/30325-h.htm",
+      "titolo_link": "The Elements of Drawing"
+    },
+    "tate": {
+      "testo": "David Blayney Brown, «Draughtsman and Watercolourist», Tate Research Publication, dicembre 2012: Turner e la gouache; negli schizzi di Petworth del 1827, su carta blu, «patches of vivid reds, yellows, blues and white»; le luci tolte con «finger nails, brush handles, absorbent breadcrumbs or damp cloths».",
+      "url": "https://www.tate.org.uk/art/research-publications/jmw-turner/david-blayney-brown-draughtsman-and-watercolourist-r1132588",
+      "titolo_link": "Draughtsman and Watercolourist"
+    },
+    "agnsw-hunt": {
+      "testo": "Art Gallery of New South Wales, scheda di William Henry Hunt (testo da Victorian watercolours, 2017): «pioneered the use of Chinese white», mescolato alla gomma per un fondo duro su cui puntinare i colori; «daring use of the knife to roughen, scratch or carve into the paper».",
+      "url": "https://www.artgallery.nsw.gov.au/collection/artists/hunt-william-henry/",
+      "titolo_link": "scheda di William Henry Hunt"
+    },
+    "vam": {
+      "testo": "Victoria and Albert Museum, «What is watercolour?», pagina aggiornata il 2/9/2026: in In a Shoreham Garden di Samuel Palmer, verso il 1830, i fiori sono «glossy white blobs», e alcuni grumi «have cracked and fallen off, leaving the paper bare».",
+      "url": "https://www.vam.ac.uk/articles/what-is-watercolour",
+      "titolo_link": "What is watercolour?"
+    },
+    "perkinson": {
+      "testo": "Roy Perkinson, «Observations on the Drawings of Winslow Homer», Book and Paper Group Annual 5, 1986: il bianco cinese nei disegni di Homer e l'alone bruno chiaro attorno ai tratti, che l'autore riferisce forse alla «photochemical activity of zinc white».",
+      "url": "https://cool.culturalheritage.org/coolaic/sg/bpg/annual/v05/bp05-01.html",
+      "titolo_link": "Observations on the Drawings of Winslow Homer"
+    },
+    "brooklyn-sargent": {
+      "testo": "Brooklyn Museum, Teaching Resource: John Singer Sargent Watercolors, 2013: in Mountain Fire il fumo è reso con «washes of color mixed with zinc white».",
+      "url": "https://cms-files.brooklynmuseum.org/e07515da3bb8a3c6dc7ca2f8f05cad98c2a52ee9.pdf",
+      "titolo_link": "Teaching Resource: John Singer Sargent Watercolors"
+    },
+    "macevoy-vittoriani": {
+      "testo": "Bruce MacEvoy, «victorian watercolors», handprint, revisione 8/1/2015: John Frederick Lewis al Cairo, «perfecting a meticulous bodycolor technique».",
+      "url": "https://www.handprint.com/HP/WCL/artist12.html",
+      "titolo_link": "victorian watercolors"
+    },
+    "ww-storia": {
+      "testo": "Watercolor West, «History»: la società nasce nel 1967 per promuovere ed esporre «only transparent watercolor».",
+      "url": "https://www.watercolorwest.org/history",
+      "titolo_link": "History"
+    },
+    "twsa-storia": {
+      "testo": "Transparent Watercolor Society of America, «History»: nata come Midwest Watercolor Society, con la prima assemblea il 6/8/1977 a Duluth; dal 2003 porta il nome attuale.",
+      "url": "https://www.watercolors.org/history",
+      "titolo_link": "History"
+    },
+    "twsa-trasparenza": {
+      "testo": "Transparent Watercolor Society of America, «What is Transparency?»: «No white paint is accepted»; la frase di Edgar Whitney, «white paper showing through a transparent wash is the closest approximation to light in all the media»; il criterio «if the area shines, then the light is reflecting off of the pigment and not from the paper underneath».",
+      "url": "https://www.watercolors.org/transparency",
+      "titolo_link": "What is Transparency?"
+    },
+    "johnson": {
+      "testo": "Vanessa Johnson, Jane Colbourne, Kate Nicholson, «A Digital Imaging Tool for Identifying Photoactive Zinc Oxide Watercolor Pigments», Book and Paper Group Annual 40, 2021, pp. 27-43: il bianco cinese «led to a shift away from transparent watercolor painting in England in the latter half of the 19th century» (p. 27); le quattro forme di degrado (p. 28); la crettatura (p. 29); un bianco cinese recente scartato perché conteneva biossido di titanio, e le tre carte delle prove (p. 30); i risultati delle prove (pp. 34 e 40); glicerina e miele (p. 39); «dark storage is mostly advantageous for watercolors with zinc oxide pigments» e «Low or intermittent moderate lighting» (p. 39); la persistenza dei perossidi al buio e le opere ancora fotoattive (p. 40).",
+      "url": "https://cool.culturalheritage.org/coolaic/sg/bpg/annual/v40/bpga40-04.pdf",
+      "titolo_link": "A Digital Imaging Tool for Identifying Photoactive Zinc Oxide Watercolor Pigments"
+    },
+    "twsa-2026": {
+      "testo": "Transparent Watercolor Society of America, 2026 Prospectus, 50th National Exhibition: esclusi «Opaque white paint, of any kind, such at [sic] titanium white, Chinese white, etc.», «Gouache, acrylics, or water-soluble oils» e le riserve «not completely removed from the final painting»; «TWSA has recently utilized alternate selections due to final screening findings of heavy opacity».",
+      "url": "https://static1.squarespace.com/static/5e08e652d2430c02f8d3baa9/t/690ad2ead6a6da62d57864ca/1762317034295/2026+TWSA+Prospectus.pdf",
+      "titolo_link": "2026 Prospectus, 50th National Exhibition"
+    },
+    "ww-2025": {
+      "testo": "Watercolor West, 57th International Juried Exhibition, Prospectus (2025): «no white paint of any kind (including those labeled “white watercolor”)».",
+      "url": "https://www.watercolorwest.org/s/last-Prospectus.pdf",
+      "titolo_link": "57th International Juried Exhibition, Prospectus"
+    },
+    "cspwc-2026": {
+      "testo": "Canadian Society of Painters in Water Colour, Open Water 2026, Terms & Conditions: acquerello trasparente «with minimal use of body colour so that the white of the watercolour paper reflects through the paint»; non ammessi «Gouache, egg tempera, casein, acrylic, water-based oils and archival felt pens».",
+      "url": "https://open-water-2026.artcall.org/pages/terms-conditions",
+      "titolo_link": "Open Water 2026, Terms & Conditions"
+    },
+    "hawaii-2026": {
+      "testo": "Hawaiʻi Watercolor Society, 2026 Members' Show «99% Transparent»: «A maximum of 1% of the surface may be enhanced using water-soluble media, including gouache, casein, acrylics...».",
+      "url": "https://static1.squarespace.com/static/53334bb5e4b0bce84cfa8159/t/691ce6361a58444c3d4a9492/1763501622064/Prospectus+2026+Members%27+Show-rev.pdf",
+      "titolo_link": "2026 Members' Show"
+    },
+    "fortworth-2026": {
+      "testo": "Society of Watercolor Artists, Fort Worth, 2026 International Juried Exhibition, Prospectus: «Acrylics, inks & gouache may be used but cannot cover more than 10% of the surface».",
+      "url": "https://www.swawatercolor.com/_files/ugd/422748_928a37690c9c4012965517a47b7082f9.pdf",
+      "titolo_link": "2026 International Juried Exhibition, Prospectus"
+    },
+    "rivers-2023": {
+      "testo": "International Watercolor Society, IWS Irina Endorphine Art e IWS Mexico, «Rivers of Color», Città del Messico, 2023: «Medium: 95% transparent watercolor on paper».",
+      "url": "https://endorphine-art.com/rivers-of-color/",
+      "titolo_link": "Rivers of Color"
+    },
+    "urbino-2025": {
+      "testo": "UrbinoInAcquerello, Regolamento del Festival internazionale 2025, sezione Italia: «Si deve utilizzare la tecnica dell'acquerello o tecnica mista (compresa quella dell'incisione) con almeno il 70% di acquerello».",
+      "url": "https://sc0f78c403d51ca8e.jimcontent.com/download/version/1730138219/module/7957468711/name/Artisti%20Bando%20Italiano%202025.pdf",
+      "titolo_link": "Regolamento del Festival internazionale 2025"
+    },
+    "iws-canada-2026": {
+      "testo": "IWS Canada, «United Through Watercolour 2026»: «Paintings must contain at least 50% water based media».",
+      "url": "https://iwscanada.ca/united-through-watercolour-2026/",
+      "titolo_link": "United Through Watercolour 2026"
+    },
+    "rws": {
+      "testo": "Royal Watercolour Society, RWS Open, «Eligibility»: «Paintings in watercolour, acrylic, gouache, ink, any other water-based media or a combination are accepted», su supporti di carta.",
+      "url": "https://www.royalwatercoloursociety.co.uk/competition/eligibility/",
+      "titolo_link": "Eligibility"
+    },
+    "ri-215": {
+      "testo": "Mall Galleries, Royal Institute of Painters in Water Colours, bando della 215ª mostra, iscrizioni dal 12/10/2026 al 22/1/2027: «Watercolour or water-soluble mediums including watercolour, watercolour pencil, acrylic, ink or gouache (excluding water-soluble oils)»; le opere «not being in the spirit of watercolour painting» possono essere ritirate.",
+      "url": "https://www.mallgalleries.org.uk/open-calls/royal-institute-painters-water-colours",
+      "titolo_link": "bando della 215ª mostra"
+    },
+    "aws-160": {
+      "testo": "American Watercolor Society, Prospectus, 160th Annual International Exhibition: «Watercolor, acrylic, casein, gouache, and egg tempera are accepted».",
+      "url": "https://americanwatercolorsociety.org/wp-content/uploads/2026/08/160th-Annual-International-Prospectus.docx.pdf",
+      "titolo_link": "Prospectus, 160th Annual International Exhibition"
+    },
+    "aia-soci": {
+      "testo": "Associazione Italiana Acquerellisti, «Come diventare soci»: opere «eseguite in acquerello puro».",
+      "url": "https://acquerello-aia.it/i-soci/come-diventare-soci/",
+      "titolo_link": "Come diventare soci"
+    },
+    "aia": {
+      "testo": "Associazione Italiana Acquerellisti, «L'AIA»: «L'AIA predilige l'acquerello “puro” che utilizzi il bianco della carta per rappresentare le luci senza interventi di altri mezzi pittorici quali tempera, pastello o altri materiali».",
+      "url": "https://acquerello-aia.it/laia/presentazione/",
+      "titolo_link": "L'AIA"
+    },
+    "accademia-2026": {
+      "testo": "Accademia Internazionale dell'Acquarello, «International Watercolor Academy Award 2026»: «Le opere devono essere realizzate con la tecnica pura dell'acquerello. Sono accettate sperimentazioni e innovazioni, purché non ne venga alterata l'essenza».",
+      "url": "https://accademiainternazionaledellacquarello.com/international-watercolor-academy-award-2026/",
+      "titolo_link": "International Watercolor Academy Award 2026"
+    },
+    "fabriano-2026": {
+      "testo": "FabrianoInAcquarello, 2026 Rules & Guidelines: lo scopo è «the promotion of water media artists and of painting techniques on paper»; il bianco non è regolato.",
+      "url": "https://www.inartefabriano.it/2026ARTISTRules.pdf",
+      "titolo_link": "2026 Rules & Guidelines"
+    },
+    "macevoy-luce": {
+      "testo": "Bruce MacEvoy, «the secret of glowing color», handprint, revisione 8/1/2015: gli indici di rifrazione (aria 1,0; acqua 1,33; gomma arabica 1,47; bianco di zinco 2,0; bianco di titanio 2,6); perché l'acquerello schiarisce asciugando; la spiegazione della vetrata, nata fra i pittori vittoriani, e «Transparency happens between particles and not through them»; «there is no fourth color attribute besides lightness, chroma and hue».",
+      "url": "https://www.handprint.com/HP/WCL/tech16.html",
+      "titolo_link": "the secret of glowing color"
+    },
+    "macevoy-bianco": {
+      "testo": "Bruce MacEvoy, «white», guida ai pigmenti, handprint, revisione 7/1/2015: «White pigments show almost no drying shift, although they become much less opaque»; il titanio, «a slightly brighter, cleaner white than chinese white», in acquerello «will appear stiff or artificial unless used very sparingly»; «In my tests, chinese whites were slightly though consistently more opaque than titanium whites»; le tinte di zinco bluastre; il PW4 al sole «becomes somewhat brighter and noticeably more opaque after 4 to 6 weeks»; «The standard paint lightfastness tests do not catch changes in paint transparency»; il litopone, «a calcined coprecipitate of zinc sulfide and barium sulfate».",
+      "url": "https://www.handprint.com/HP/WCL/waterw.html",
+      "titolo_link": "white"
+    },
+    "hoevel": {
+      "testo": "Claire L. Hoevel, «A Study of the Discoloration Products Found in White Lead Paint Films», Book and Paper Group Annual 4, 1985: la biacca, carbonato basico di piombo, annerisce con l'idrogeno solforato; le gomme dell'acquerello e della gouache «offer little protection from atmospheric pollutants»; il solfuro che si forma è bruno, nero o nero argenteo.",
+      "url": "https://cool.culturalheritage.org/coolaic/sg/bpg/annual/v04/bp04-04.html",
+      "titolo_link": "A Study of the Discoloration Products Found in White Lead Paint Films"
+    },
+    "bianchi-scheda-1": {
+      "testo": "Winsor & Newton, «Why are there two watercolour whites?», pagina del produttore: il Chinese White «is semi-opaque and has a blue undertone»; il bianco di titanio «is the whitest, most opaque white».",
+      "url": "https://www.winsornewton.com/blogs/guides/tips-for-different-watercolour-whites",
+      "titolo_link": "Why are there two watercolour whites?"
+    },
+    "bianchi-scheda-2": {
+      "testo": "Schmincke, HORADAM Aquarell, colori 101 e 102, pagina del produttore: 101 Titanium opaque white, PW6, «highest opacity and strongest lightening power»; 102 Permanent Chinese white, PW4, «Due to transparency the best mixing white».",
+      "url": "https://www.schmincke.de/en/produkte/aquarell/horadam-aquarell",
+      "titolo_link": "HORADAM Aquarell"
+    },
+    "marche-etichetta": {
+      "testo": "Quaderno di acquerello, Marche e tubetti, capitolo 3, «Come leggere l'etichetta».",
+      "url": "../../marche/#etichetta",
+      "titolo_link": "Come leggere l'etichetta"
+    },
+    "colori-acquerello": {
+      "testo": "Quaderno di acquerello, Teoria dei colori, capitolo 3, «L'acquerello: acqua, carta, velature»: «Nell'acquerello il bianco è quello della carta: per schiarire si aggiunge acqua, così sulla carta si deposita meno pigmento».",
+      "url": "../../colori/#acquerello",
+      "titolo_link": "L'acquerello: acqua, carta, velature"
+    },
+    "parks-zbukvic": {
+      "testo": "John A. Parks, «Fleeting Moments: Plein Air Watercolor», OutdoorPainter, senza data, su Joseph Zbukvic: «I have to be careful to leave any whites that I need unpainted, perhaps areas for roofs, windshields, or reflections. So I paint around them, making negative shapes»; sul bordo ormai asciutto, «Some people try scrubbing, but you can always see the damage».",
+      "url": "https://www.outdoorpainter.com/fleeting-moments-plein-air-watercolor/",
+      "titolo_link": "Fleeting Moments: Plein Air Watercolor"
+    },
+    "mascherare-scheda-1": {
+      "testo": "Winsor & Newton, «How to use Art Masking Fluid», pagina del produttore: il liquido si stende su carta asciutta e ben collata; la versione incolore evita la macchia gialla.",
+      "url": "https://uk.winsornewton.com/blogs/guides/how-to-use-art-masking-fluid",
+      "titolo_link": "How to use Art Masking Fluid"
+    },
+    "mascherare-scheda-2": {
+      "testo": "Winsor & Newton, «How long should you leave masking fluid on for?», pagina del produttore: il liquido «should not be left on the piece for longer than 12 hours».",
+      "url": "https://eu.winsornewton.com/blogs/guides/how-to-remove-masking-fluid",
+      "titolo_link": "How long should you leave masking fluid on for?"
+    },
+    "mascherare-scheda-3": {
+      "testo": "Schmincke, scheda tecnica del liquido per mascherare, 1/7/2014, copia del distributore Deffner & Johann: «should not be left on the support for longer than two days», pena l'ingiallimento del supporto; non adatte le carte molto morbide e poco collate, «like e.g. rag paper or torchon paper».",
+      "url": "https://deffner-johann.de/media/datasheets/1981010/EN/1981010_Technical%20Data%20Sheet_Schmincke%20Masking%20Fluid%20100%20ml_EN_DJ.pdf",
+      "titolo_link": "scheda tecnica del liquido per mascherare"
+    },
+    "mascherare-scheda-4": {
+      "testo": "Pébéo, Drawing Gum 250 ml, pagina del produttore: «For fine lines, or with markers: the dry film is to be removed at most one week after application»; si toglie a colori ben asciutti.",
+      "url": "https://pebeo.com/en/produit/drawing-gum-250-ml/",
+      "titolo_link": "Drawing Gum 250 ml"
+    },
+    "macevoy-fabriano": {
+      "testo": "Bruce MacEvoy, pagina sulle carte Fabriano, handprint, revisione 8/1/2015: sulla carta di puro cotone, nelle tre superfici, due o tre strisce di nastro e le riserve di liquido si sono tolte senza danni.",
+      "url": "https://www.handprint.com/HP/WCL/paper2b.html",
+      "titolo_link": "pagina sulle carte Fabriano"
+    },
+    "macevoy-hahnemuhle": {
+      "testo": "Bruce MacEvoy, pagina sulle carte Hahnemühle, handprint, revisione 8/1/2015: sulla vecchia carta di puro cotone «Resists came off only with great effort, and left the surface damaged»; la collatura «is much too thin». Nella prova di sollevamento il verde «was impossible to lift».",
+      "url": "https://www.handprint.com/HP/WCL/paper2c.html",
+      "titolo_link": "pagina sulle carte Hahnemühle"
+    },
+    "utrecht-blick": {
+      "testo": "Utrecht Art Supplies e Dick Blick, «Masking Fluid: Time Frame» (Ask the Experts), © 2020: «Observe all package instructions»; sulle carte meno buone, una prova su un ritaglio. Il rivenditore indica anche un termine di tre o quattro settimane; è un'indicazione commerciale, non una prova comparativa dei tempi.",
+      "url": "https://assets.ctfassets.net/f1fikihmjtrp/702DYHg4NvrFzibcfthJoT/cb543ee18a3c87148973ce6da612e2e4/PP_masking_fluid_removal.pdf",
+      "titolo_link": "Masking Fluid: Time Frame"
+    },
+    "smlt-nastro": {
+      "testo": "SMLT Art, «Experiments with the masking tape», 10/1/2025: nessuna difficoltà sul cotone da 300 g/m² e sul cotone misto da 260 g/m², difficoltà sulla cellulosa da 280 g/m²; l'asciugacapelli o 15 minuti in congelatore facilitano la rimozione.",
+      "url": "https://www.smltart.com/news/669/72/Experiments-with-the-masking-tape/",
+      "titolo_link": "Experiments with the masking tape"
+    },
+    "principi-abbinare": {
+      "testo": "Quaderno di acquerello, Principi generali, capitolo 3, «Acqua nel pennello e acqua nella carta»: un pennello pulito e scarico solleva il colore fresco per aprire le luci.",
+      "url": "../../principi/#abbinare",
+      "titolo_link": "Acqua nel pennello e acqua nella carta"
+    },
+    "principi-collatura": {
+      "testo": "Quaderno di acquerello, Principi generali, capitolo 7, «La carta: grana, grammatura, collatura»: la collatura incide molto sulla possibilità di sollevare il colore.",
+      "url": "../../principi/#carta-tipi",
+      "titolo_link": "La carta: grana, grammatura, collatura"
+    },
+    "macevoy-test": {
+      "testo": "Bruce MacEvoy, «how to test watercolor papers», handprint, revisione 8/1/2015: le prove con una striscia di nastro e strisce di liquido per mascherare, poi un verde sollevato e strofinato; «Papers made with very short cellulose fibers tend to yield a fuzzy surface that is difficult to clean up».",
+      "url": "https://www.handprint.com/HP/WCL/paper3.html",
+      "titolo_link": "how to test watercolor papers"
+    },
+    "macevoy-arches": {
+      "testo": "Bruce MacEvoy, pagina sulle carte Arches, handprint, revisione 8/1/2015: sulla grana fina il verde «lifted completely with no damage», sulla torchon «only with difficulty by scrubbing»; la raschiatura sembra «fracture the internal sizing» e lascia «a bruiselike discoloration under wash coats».",
+      "url": "https://www.handprint.com/HP/WCL/paper2a.html",
+      "titolo_link": "pagina sulle carte Arches"
+    },
+    "penna-gel": {
+      "testo": "Mitsubishi Pencil, scheda di sicurezza dell'inchiostro della penna gel bianca uni-ball Signo UM-153, 23/12/2021: inchiostro all'acqua con biossido di titanio.",
+      "url": "https://cdn.shopify.com/s/files/1/0784/2178/6951/files/White_Writing_Pen_SDS.pdf?v=1751276017",
+      "titolo_link": "scheda di sicurezza dell'inchiostro della penna gel bianca uni-ball Signo UM-153"
+    },
+    "bockingford": {
+      "testo": "St Cuthberts Mill, Bockingford, scheda tecnica aggiornata a ottobre 2025: una carta di cellulosa «superb for colour lifting techniques».",
+      "url": "https://www.stcuthbertsmill.com/userfiles/files/Bockingford%20-%20Spec%20Sheet%20-%20updated%20Oct%2025.pdf",
+      "titolo_link": "Bockingford"
+    },
+    "zhou": {
+      "testo": "Konstantin Sterkhov, «Zhou Tianya. Interview», 13/5/2012: «I never use white paint».",
+      "url": "https://sterkhovart.blogspot.com/2012/05/zhou-tianya-interview.html",
+      "titolo_link": "Zhou Tianya. Interview"
+    },
+    "mortimer": {
+      "testo": "Eleanor Mann, «Ann Mortimer interviewed by Eleanor Mann», 20/9/2014: «I use masking fluid quite often. I never use white!».",
+      "url": "https://www.eleanormann.co.uk/blog/ann-mortimer-interviewed-by-eleanor-mann",
+      "titolo_link": "Ann Mortimer interviewed by Eleanor Mann"
+    },
+    "kane-mondloch": {
+      "testo": "Kelly Kane, «Put Less In, Get More Out», American Watercolor, 13/11/2024: Dan Mondloch, «I often use gouache in skies, because if you warm up a cloud in a blue sky, it can become green... I get around that with white gouache mixed with cobalt»; «Zbukvic said that gouache is the hand brake in painting».",
+      "url": "https://americanwatercolor.net/put-less-in-get-more-out/",
+      "titolo_link": "Put Less In, Get More Out"
+    },
+    "yardley": {
+      "testo": "Konstantin Sterkhov, «John Yardley. Interview», 4/6/2012: «I use a little gouache when convenient».",
+      "url": "https://sterkhovart.blogspot.com/2012/06/john-yardley-interview.html",
+      "titolo_link": "John Yardley. Interview"
+    },
+    "mollica": {
+      "testo": "Cristina Mollica, «Il bianco è un bel colore», CiaoArte, 3/9/2026: «Nell'acquerello il bianco è la carta»; il bianco in tubetto «va benissimo per i tocchi finali», «molto meno per recuperare aree grandi che avevi coperto per sbaglio».",
+      "url": "https://www.ciaoarte.it/blog/il-bianco-e-un-bel-colore",
+      "titolo_link": "Il bianco è un bel colore"
+    },
+    "lovett-gesso": {
+      "testo": "John Lovett, «White Gouache or Gesso»: «white gouache can be used to add soft hazy areas of light to your work».",
+      "url": "https://www.johnlovett.com/white-gouache-or-gesso",
+      "titolo_link": "White Gouache or Gesso"
+    },
+    "lovett-gouache": {
+      "testo": "John Lovett, «Gouache and Watercolor»: «I often tint White Gouache with watercolor»; la gouache sta su una tavolozza separata, perché sugli acquerelli «it will quickly turn them to mud».",
+      "url": "https://www.johnlovett.com/gouache-and-watercolor",
+      "titolo_link": "Gouache and Watercolor"
+    },
+    "kane-castagnet": {
+      "testo": "Kelly Kane, «An Argument Against Painting Pretty», American Watercolor Weekly, 17/4/2018: Alvaro Castagnet, «I don't preserve too many whites at the start because then I become a slave to those high-key values».",
+      "url": "https://americanwatercolor.net/an-argument-against-painting-pretty/",
+      "titolo_link": "An Argument Against Painting Pretty"
+    },
+    "berry-castagnet": {
+      "testo": "Stephen Berry, appunti dal workshop di Alvaro Castagnet, maggio 2014: nella tavolozza c'è il Chinese White.",
+      "url": "https://stephenberryart.com/blog/2014/05/alvaro-castagnet-watercolor-workshop_23.html",
+      "titolo_link": "appunti dal workshop di Alvaro Castagnet"
+    },
+    "gurney-2008": {
+      "testo": "James Gurney, «Gouache on Tone Paper», Gurney Journey, 22/3/2008: su carta tonata, «the sky was painted thinly with white gouache».",
+      "url": "https://gurneyjourney.blogspot.com/2008/03/gouache-on-tone-paper.html",
+      "titolo_link": "Gouache on Tone Paper"
+    },
+    "gurney-2023": {
+      "testo": "James Gurney, «What do watercolor societies say about...», Gurney Journey, 17/3/2023: la trasparenza non garantisce la luminosità.",
+      "url": "https://gurneyjourney.blogspot.com/2023/03/what-do-watercolor-societies-say-about.html",
+      "titolo_link": "What do watercolor societies say about..."
+    },
+    "fracasso": {
+      "testo": "Arteaporte, scheda di Pasqualino Fracasso: «Credo fermamente che per infrangere le regole, bisogna prima conoscerle a fondo».",
+      "url": "https://www.arteaporte.com/artist/pasqualino-fracasso/",
+      "titolo_link": "scheda di Pasqualino Fracasso"
+    },
+    "curtis": {
+      "testo": "Cassidy J. Curtis e altri, «Computer-Generated Watercolor», SIGGRAPH 1997: l'acquerello come serie di velature traslucide, composte con il modello di Kubelka e Munk.",
+      "url": "https://grail.cs.washington.edu/wp-content/uploads/2015/08/curtis-1997-cgw.pdf",
+      "titolo_link": "Computer-Generated Watercolor"
+    },
+    "hunterlab": {
+      "testo": "HunterLab, «Addressing the Challenges of Optical Brightening Agents in Paper Color Measurement»: gli sbiancanti ottici «work by absorbing non-visible UV light below 400nm and emitting visible light in the 400-480nm range».",
+      "url": "https://support.hunterlab.com/knowledgebase/article/KA-05257/en-us",
+      "titolo_link": "Addressing the Challenges of Optical Brightening Agents in Paper Color Measurement"
+    },
+    "cci-1995": {
+      "testo": "Canadian Conservation Institute, CCI Notes 11/2, «Storing Works on Paper», © 1995, pagina del 2/12/2025: 50 lux per gli acquerelli, «or as low as possible»; ultravioletto non oltre 75 µW/lm; umidità relativa sotto il 50%; temperatura massima 21 °C.",
+      "url": "https://www.canada.ca/en/conservation-institute/services/conservation-preservation-publications/canadian-conservation-institute-notes/storing-works-paper.html",
+      "titolo_link": "Storing Works on Paper"
+    },
+    "cci-2018": {
+      "testo": "Sherry Guild, Caring for paper objects, Canadian Conservation Institute, © 2018, pagina aggiornata il 2/12/2025: «Maintain RH below 65%»; fra i danni, «Chalking and weakening of most paints that contain photosensitizing pigments (zinc white, early titanium white)»; della gouache, «Thick applications are prone to cracking and flaking». Sconsiglia periodi con umidità relativa superiore al 75%.",
+      "url": "https://www.canada.ca/en/conservation-institute/services/preventive-conservation/guidelines-collections/paper-objects.html",
+      "titolo_link": "Caring for paper objects"
+    },
+    "ricerca-bianco-2026": {
+      "testo": "Materiale verificato per la pagina 5.1, versione 2 del 1/11/2026, documento di lavoro conservato dal curatore e non pubblicato: § 2, ricognizione di 19 premi e concorsi italiani su 21 documenti letti a mano; «bianco opaco» e «bianco di corpo» assenti, gouache citata in tre bandi di grafica o illustrazione. Le domande A, B e C restano aperte per mancanza di confronti misurati comparabili e di prove sistematiche sulle carte attuali.",
+      "url": ""
+    },
+    "combat-2026": {
+      "testo": "Premio Combat 2026, bando, sezione grafica; testo archiviato il 1/11/2026: «Nella sezione grafica sono ammesse le seguenti tecniche artistiche: disegno, acquerello, gouache, collage, disegno digitale, opere eseguite con tecniche grafiche varie e i diversi tipi di stampa in piano, digitale, a rilievo, in cavo».",
+      "url": "https://www.premiocombat.it/bando",
+      "titolo_link": "bando, sezione grafica"
+    },
+    "marchionni-2026": {
+      "testo": "Premio Marchionni 2026, bando di grafica; testo archiviato il 1/11/2026: «Sono ammesse tutte le tecniche di grafica in genere: sanguigna, carboncino, china, matita e matita grassa, pastello, gessetto, acquerello, gouache, le varie tecniche di incisione».",
+      "url": "https://www.premiomarchionni.it/bando-premio-marchionni/",
+      "titolo_link": "bando di grafica"
+    },
+    "forte-bard-2026": {
+      "testo": "Associazione Forte di Bard, «Una montagna di... pascoli», seconda edizione 2026, concorso internazionale di grafica e illustrazione, p. 3 del PDF, categorie tecniche: «Acquerello, tempera, gouache» fra le tecniche del disegno tradizionale. Bando consultato il 1/11/2026.",
+      "url": "https://www.fortedibard.it/wp-content/uploads/2026/01/BANDO-Una-Montagna-Di-Pascoli_ITA.pdf",
+      "titolo_link": "Una montagna di... pascoli"
+    },
+    "concorso-bianco-2024": {
+      "testo": "Concorso Winsor & Newton 2024, bando conservato da Bottega del Colore: clausola «ad eccezione del bianco, permesso per le miscelazioni». Citazione riscontrata nel materiale verificato del 1/11/2026.",
+      "url": "https://www.bottegadelcolore.it/writable/attachments/concorso_winsor_watercolour_acquarelli.pdf",
+      "titolo_link": "bando conservato da Bottega del Colore"
+    },
+    "alvese-2019": {
+      "testo": "Gruppo Alvese, «L'acqua diventa arte», secondo concorso nazionale di pittura ad acquerello, 2019. La formula «acquerello puro» compare ai punti 3 e 5; il punto 3 rinvia al punto 5. Quest'ultimo esclude le tecniche miste e «nemmeno piccoli interventi con altre tecniche (niente tempera, acrilico, china, cere, vernicette etc.)». La gouache non è nominata; la sua esclusione è una deduzione.",
+      "url": "https://alvese.it/wp-content/uploads/2019/06/REGOLAMENTO-MODULO-ISCRIZIONE-2%C2%B0-concorso-nazionale-di-pittura-ad-acquerello-2019.pdf",
+      "titolo_link": "L'acqua diventa arte"
+    },
+    "paintlist-pw21": {
+      "testo": "Paint List, Pigment Notebook, PW21, «Blanc Fixe, Artificial Baryte»: solfato di bario artificiale, con «Permanent White» fra i nomi; riporta «Transparent, Opaque in Water». Scheda letta come testo e confermata nel registro delle verifiche del 1/11/2026; le descrizioni non sono una prova comparativa in acquerello.",
+      "url": "https://paintlist.com/pigment-notebook/pw21",
+      "titolo_link": "Blanc Fixe, Artificial Baryte"
+    },
+    "chs-pw21": {
+      "testo": "CHS Open Source, scheda PW21, Barium Sulfate: «Quite transparent, it is often used as a filler for other pigments»; basso indice di rifrazione e debole potere coprente. Scheda letta come testo e confermata nel registro delle verifiche del 1/11/2026.",
+      "url": "https://chsopensource.org/products/pigments-checker/pigments-checker-modern-and-contemporary-art-pigments-list/pw-21-barium-sulfate",
+      "titolo_link": "PW21, Barium Sulfate"
+    },
+    "paintlist-pw22": {
+      "testo": "Paint List, Pigment Notebook, PW22, «Natural Barium Sulfate (Barytes)»: nell'estratto raccolto per la ricerca figurano il solfato di bario naturale e il nome «Permanent White». Per decisione del curatore del 1/11/2026 resta una fonte trattata come estratto, quindi una stima; non è usata per attribuire una coprenza al PW22 in acquerello.",
+      "url": "https://paintlist.com/pigment-notebook/pw22",
+      "titolo_link": "Natural Barium Sulfate (Barytes)"
+    },
+    "zaragoza-pigmenti": {
+      "testo": "Ayuntamiento de Zaragoza, tabella dei pigmenti, p. 3 del documento: PW6, luminosità 80,32, opaco, potere coprente elevato; PW4, luminosità 89,58, semitrasparente, potere medio. Sono dati sul pigmento in polvere, non su velature di acquerello sulla stessa carta.",
+      "url": "https://www.zaragoza.es/sede/servicio/contratacion-publica/anuncio/73275/document.pdf",
+      "titolo_link": "tabella dei pigmenti"
+    },
+    "whistler-zinco": {
+      "testo": "Book and Paper Group Annual 38 (2019), studio su Whistler e il bianco di zinco: dopo il 1880 prevale lo zinco; le analisi ne confermano la presenza, anche in acquerelli maturi trasparenti. Mortimer Menpes: «In water colours Whistler always used Chinese white [zinc white] with every tone, to give body to the pigment». L'idea che lo zinco di Turner appaia trasparente per un'alterazione è riportata come ipotesi, non come dato accertato.",
+      "url": "https://cool.culturalheritage.org/coolaic/sg/bpg/annual/v38/bpga38-03.pdf",
+      "titolo_link": "studio su Whistler e il bianco di zinco"
+    },
+    "waterlow": {
+      "testo": "Arran Open Studios, «When The Paintbrush Takes Over: Faye Waterlow», intervista di Emily Rose Mawson, 21/6/2024. Testo letto per intero nella verifica del 1/11/2026. Waterlow risponde in prima persona: «My watercolour paintings also now benefit from adding white gouache, and at times I will use a fine black liner to add definition or interest, as I do not use black or white paint in any of my watercolour paintings.» L'aggiunta di gouache bianca e il rifiuto del bianco compaiono nella stessa risposta: la contraddizione interna resta dichiarata, senza risolverla per deduzione.",
+      "url": "https://arranopenstudios.org/2024/06/21/when-the-paintbrush-takes-over-faye-waterlow",
+      "titolo_link": "When The Paintbrush Takes Over: Faye Waterlow"
+    },
+    "weight-reed": {
+      "testo": "Janet Weight Reed, «Mixing watercolour and gouache: the transparent with the opaque», post del suo blog didattico, 30/10/2018. Testo letto per intero nella verifica del 1/11/2026. L'autrice scrive in prima persona: «I found some gouache, something I had not used before and began mixing it with watercolour». Per i lumi precisa: «permanent white gouache needs to be applied for highlights because all the white paper has been covered». Il post presenta esempi e campioni; nei commenti l'autrice conferma di insegnare.",
+      "url": "https://jcrhumming.wordpress.com/2018/10/30/mixing-watercolour-and-gouache-the-transparent-with-the-opaque",
+      "titolo_link": "Mixing watercolour and gouache: the transparent with the opaque"
+    },
+    "jay-noble": {
+      "testo": "HACC, «Jay Noble: Paintings and Drawings», comunicato stampa del college su una mostra, 14/9/2012. Non è un'intervista. Testo letto per intero nella verifica del 1/11/2026. Il redattore scrive: «To erase pencil marks, he uses gouache, white opaque water color paint, instead of a rubber eraser.» La descrizione «white opaque water color paint» è del redattore: non sono parole di Noble fra virgolette. La fonte è citata per l'uso della gouache, non come dichiarazione dell'artista sul bianco. Il comunicato lo presenta come docente a contratto in due college.",
+      "url": "https://www.hacc.edu/newsroom/2012/jay-noble-paintings-and-drawings-on-display-at-haccs-lancaster-campus.cfm",
+      "titolo_link": "Jay Noble: Paintings and Drawings"
+    },
+    "kwamena-poh": {
+      "testo": "The Ledger, «Watercolor», articolo di giornale del 10/5/2007. Citazione diretta di William Kwamena-Poh: «I don't stray from the watercolor methods of painting, but I use gouache, which is opaque.» Non nomina il bianco. Nella verifica del 1/11/2026 il testo è stato letto per intero da una copia di lettura: la pagina originale, indicata nel collegamento, rispondeva con codice 402 e non era apribile. Non è presentato come un'intervista estesa né come una lettura della pagina originale.",
+      "url": "https://www.theledger.com/story/news/2007/05/10/watercolor/25833929007",
+      "titolo_link": "Watercolor"
+    },
+    "ruby-osorio": {
+      "testo": "Ruby Osorio, dichiarazione d'artista su New American Paintings. La pagina è senza data; la rivista la colloca nel numero 79, Pacific Coast, dicembre 2008. Testo letto per intero nella verifica del 1/11/2026. Nella propria dichiarazione l'artista scrive: «Multiple sensibilities find expression in watercolor and gouache, which can be improvisational as well as precise». Nomina acquerello e gouache, senza parlare del bianco; non è un'intervista.",
+      "url": "https://newamericanpaintings.com/artists/ruby-osorio",
+      "titolo_link": "dichiarazione d'artista su New American Paintings"
+    },
+    "carla-oconnor": {
+      "testo": "American Watercolor, «In the Studio With Donna Zagotta and Carla O'Connor», intervista con domande di Donna Zagotta, 4/1/2018. Fonte F38 del materiale di ricerca del 1/11/2026: per la nuova verifica e la decisione del curatore, testo letto per intero, non più trattato come estratto. Alla domanda «Why do you prefer gouache as an opaque medium rather than oils or acrylics?», O'Connor risponde: «I consider gouache to be my mature medium because of its similar handling to oils.» Non nomina il bianco. Il profilo nell'articolo recita: «Carla O'Connor is a signature member of the American Watercolor Society, National Watercolor Society and Northwest Watercolor Society and is an AWS Dolphin Fellow.» L'articolo la presenta anche come pittrice, insegnante e giurata di livello nazionale.",
+      "url": "https://americanwatercolor.net/in-the-studio-with-donna-zagotta-and-carla-oconnor",
+      "titolo_link": "In the Studio With Donna Zagotta and Carla O'Connor"
+    }
   }
 }

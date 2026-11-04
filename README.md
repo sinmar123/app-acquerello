@@ -29,11 +29,17 @@ Il repository è autonomo: contiene i dati, le infografiche, le illustrazioni e 
 
 ## Organizzazione dei testi
 
-### Proposta sui riferimenti bibliografici, 4 novembre 2026
+### Riferimenti bibliografici
 
-Su richiesta del curatore, preparato lo [studio sulle convenzioni italiane e sui riferimenti del Quaderno](ricerche/app-acquerello-261104-studio-riferimenti-bibliografici.md), con nove esempi prima/dopo dalle fonti del blu oltremare e modelli per libro e video. Vincolo richiesto: descrizioni italiane naturali e comprensibili, distinte dai titoli originali delle opere straniere; «fonte primaria» non è considerato un termine scorretto.
+Il formato segue lo [studio sulle convenzioni italiane e sui riferimenti del Quaderno](ricerche/app-acquerello-261104-studio-riferimenti-bibliografici.md), acquisito con la PR #68. Il 4 novembre 2026 il curatore ha chiesto di applicarlo e di controllare tutte le fonti del sito. La revisione è nella [PR #69](https://github.com/sinmar123/app-acquerello/pull/69), la cui unione e pubblicazione sono state autorizzate dal curatore il 4 novembre 2026.
 
-La proposta conserva i rimandi numerati e le fonti per capitolo, iniziando ogni voce da autore e titolo. Separa descrizione del documento, provenienza, limiti e ampiezza della lettura. Il 4 novembre 2026 il curatore ha autorizzato l’acquisizione dello studio tramite la PR #68. Le pagine e i dati del sito restano invariati; l’applicazione della proposta sarà un intervento distinto. Studio svolto senza altri agenti o corse a pagamento con altri modelli. Registrazione: CDX.
+Si conservano i numeri nel testo e le «Fonti del capitolo». Le voci riportano autore o ente responsabile e titolo, quando disponibili. Le descrizioni sono in italiano: «Scheda del produttore», «Confronto di campioni», «Consultato soltanto il riassunto; testo integrale non letto». Non si usano classificazioni isolate come «primaria commerciale». I titoli delle opere restano nella lingua originale; una descrizione redazionale non diventa un titolo d’autore inventato.
+
+Il titolo o la descrizione del documento apre la fonte nella stessa scheda, al posto di «apri». Nei riferimenti ai corsi non più disponibili, il collegamento identifica il video affine o il canale attuale e non viene attribuito al filmato originario. «Torna al testo» riporta al richiamo effettivamente seguito; senza JavaScript resta il primo richiamo della fonte nel capitolo. La barra fissa conserva il proprio calcolo dello spazio necessario sopra le ancore. Sono aumentati corpo e spaziatura delle fonti; titoli e DOI lunghi possono andare a capo.
+
+Le fonti possono mantenere `testo` e indicare in `titolo_link` la porzione esatta da collegare. Nella pagina sul blu oltremare sono separati `autore`, `titolo`, `pubblicazione`, `url`, `nota`, `consultazione` e, quando presenti, `doi` e `limite`. La nota e il limite essenziale restano visibili; il dettaglio della lettura è apribile. `registro_precedente` conserva la registrazione originaria senza riproporne l’etichetta al lettore. La generazione si ferma se manca un campo necessario o il titolo da collegare non compare nel testo. Numeri, identificativi e rimandi esistenti restano stabili.
+
+Il controllo riguarda anche gli indirizzi nei dati delle marche, degli eventi e nei cataloghi video. Una risposta negata, un limite di richieste o un mancato accesso automatico non dimostrano che la fonte sia inesistente e non autorizzano a cancellarla. Il controllo dei riferimenti non viene presentato come una nuova lettura scientifica integrale dei documenti. Il collaudo visivo su telefono resta da eseguire quando sarà disponibile un browser. Registrazione: OpenClaw / OC.
 
 Le aperture presentano il contenuto della pagina; le note di metodo e i dettagli del modello di calcolo si possono aprire a parte. Nei Principi il capitolo 8 ha collegamenti ai propri argomenti. Nella Teoria dei colori, i concetti e gli esempi precedono la storia di Munsell e i dettagli matematici del calcolatore.
 

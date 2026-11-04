@@ -201,51 +201,63 @@
   "fonti": {
     "wiki-munsell": {
       "testo": "Munsell color system, Wikipedia (inglese)",
-      "url": "https://en.wikipedia.org/wiki/Munsell_color_system"
+      "url": "https://en.wikipedia.org/wiki/Munsell_color_system",
+      "titolo_link": "Munsell color system"
     },
     "wiki-albert-munsell": {
       "testo": "Albert Henry Munsell, Wikipedia (inglese)",
-      "url": "https://en.wikipedia.org/wiki/Albert_Henry_Munsell"
+      "url": "https://en.wikipedia.org/wiki/Albert_Henry_Munsell",
+      "titolo_link": "Albert Henry Munsell"
     },
     "briggs": {
       "testo": "David Briggs, The Dimensions of Colour: hue, value, chroma",
-      "url": "http://www.huevaluechroma.com/011.php"
+      "url": "http://www.huevaluechroma.com/011.php",
+      "titolo_link": "The Dimensions of Colour: hue, value, chroma"
     },
     "handprint-valore": {
       "testo": "Bruce MacEvoy, handprint.com: tonal value",
-      "url": "https://www.handprint.com/HP/WCL/color11.html"
+      "url": "https://www.handprint.com/HP/WCL/color11.html",
+      "titolo_link": "tonal value"
     },
     "handprint-mescolanza": {
       "testo": "Bruce MacEvoy, handprint.com: additive &amp; subtractive color mixing",
-      "url": "https://www.handprint.com/HP/WCL/color5.html"
+      "url": "https://www.handprint.com/HP/WCL/color5.html",
+      "titolo_link": "additive & subtractive color mixing"
     },
     "handprint-ruota": {
       "testo": "Bruce MacEvoy, handprint.com: mixing with a color wheel (the color wheel fallacy)",
-      "url": "https://www.handprint.com/HP/WCL/color14.html"
+      "url": "https://www.handprint.com/HP/WCL/color14.html",
+      "titolo_link": "mixing with a color wheel (the color wheel fallacy)"
     },
     "wiki-km": {
       "testo": "Kubelka-Munk theory, Wikipedia (inglese)",
-      "url": "https://en.wikipedia.org/wiki/Kubelka%E2%80%93Munk_theory"
+      "url": "https://en.wikipedia.org/wiki/Kubelka%E2%80%93Munk_theory",
+      "titolo_link": "Kubelka-Munk theory"
     },
     "marche": {
       "testo": "sezione Marche e tubetti del Quaderno, con la fonte ufficiale e la data di controllo di ogni riga",
-      "url": "../marche/"
+      "url": "../marche/",
+      "titolo_link": "sezione Marche e tubetti del Quaderno"
     },
     "miscele-quaderno": {
       "testo": "Sezione Principi generali del Quaderno, capitolo 8: la tavolozza ridotta per l'aperto, sei colori con cui si ottengono i verdi, i bruni e i grigi degli esempi, e il prontuario delle 12 miscele M1-M12",
-      "url": "../principi/#tavolozza-plein-air"
+      "url": "../principi/#tavolozza-plein-air",
+      "titolo_link": "Sezione Principi generali del Quaderno"
     },
     "spectraljs": {
       "testo": "Ronald van Wijnen, spectral.js: documentazione e codice del modello di miscela, con le tabelle spettrali usate dal calcolatore",
-      "url": "https://github.com/rvanwijnen/spectral.js"
+      "url": "https://github.com/rvanwijnen/spectral.js",
+      "titolo_link": "spectral.js"
     },
     "oklab": {
       "testo": "Björn Ottosson, OKLab: lo spazio colore usato per misurare la distanza fra due colori",
-      "url": "https://bottosson.github.io/posts/oklab/"
+      "url": "https://bottosson.github.io/posts/oklab/",
+      "titolo_link": "OKLab"
     },
     "munsell-renotation": {
       "testo": "colour-science: conversione della renotation di Munsell (usata per la tabella delle tinte)",
-      "url": "https://www.colour-science.org/"
+      "url": "https://www.colour-science.org/",
+      "titolo_link": "colour-science"
     }
   }
 }

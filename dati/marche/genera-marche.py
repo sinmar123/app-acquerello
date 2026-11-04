@@ -173,17 +173,19 @@ def pagina():
     fonti_rimandi = {}
     for k, fonte in fp.items():
         data = f' (controllata il {e(data_it(fonte["controllato"]))})' if fonte.get("controllato") else ""
-        fonti_rimandi[k] = {"testo": fonte["testo"] + data, "url": fonte["url"]}
+        fonti_rimandi[k] = {**fonte, "testo": fonte["testo"] + data}
     for m in d["marche"]:
         # Le pagine generali erano già citate, senza una propria data di controllo.
         # Le date di lettura dei singoli colori restano nelle righe delle tabelle.
         fonti_rimandi[f'serie-{m["id"]}'] = {
-            "testo": f'{titoli[m["id"]]}: pagina generale della serie.',
+            "testo": f'{e(html.unescape(titoli[m["id"]]))}: pagina generale della serie.',
             "url": m["fonte_generale"],
+            "titolo_link": html.unescape(titoli[m["id"]]),
         }
     fonti_rimandi["criterio-video"] = {
         "testo": 'Video «Best Brand to Fill Watercolour Pans», per la scelta delle marche nelle tabelle.',
         "url": d["criterio_fonte"],
+        "titolo_link": "Best Brand to Fill Watercolour Pans",
     }
 
     generali = []
