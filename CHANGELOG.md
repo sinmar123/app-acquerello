@@ -4,6 +4,24 @@ Cronologia delle modifiche. Ordine cronologico inverso.
 
 Nota: nelle voci fino al 1/11/2026 il curatore è indicato con lo pseudonimo sinmar.
 
+## 2026-11-04 - OC - Acquisizione dello studio bibliografico, PR #68
+
+- Sandro ha autorizzato l’unione della PR #68 nel topic dell’app con «Ok unisci». Il perimetro resta documentale: rapporto, README e CHANGELOG; nessuna applicazione della proposta ai riferimenti visibili del sito.
+- Verificati su GitHub il ramo `cdx/261104-riferimenti-bibliografici`, i tre file della proposta, l’assenza di conflitti e il controllo «costruisci» superato. Aggiornato il README per distinguere l’acquisizione dello studio dall’eventuale modifica delle pagine.
+- Verifica locale: generazione completa riuscita; confrontate prima e dopo le impronte dei 45 file di sito e prompt, tutti identici. Nessuna modifica a JSON, generatori, video, pigmenti o fonti delle guide. Registrazione: OpenClaw / OC.
+
+Prossima azione: valutare l’applicazione della proposta bibliografica al sito in un intervento separato.
+
+## 2026-11-04 - CDX - Studio sulle convenzioni bibliografiche italiane
+
+- Incarico di Sandro dal topic app-acquerello, destinato a Ricerche: studiare convenzioni autorevoli e proporre un criterio unico prima di modificare il sito. Vincolo registrato: terminologia italiana naturale e comprensibile per le descrizioni, mantenendo distinti i titoli originali; non assumere che «fonte primaria» sia scorretto o straniero.
+- Scritto `ricerche/app-acquerello-261104-studio-riferimenti-bibliografici.md`: confronto fra norma tecnica, regole editoriali e consuetudini; numeri/autore-data, posizione delle fonti, telefono e ritorno al testo; dati per sei tipi di documento, dati mancanti e limiti della lettura. Nove esempi prima/dopo reali, modelli per libro e video e proposta unica motivata. Nessun altro agente o modello a pagamento avviato.
+- Base usata: worktree al commit `38416c4`; PR 67 riscontrata come unita tramite API GitHub. Tutte le 16 stringhe di fonte del JSON confrontate con il testo pubblicato e presenti: otto elenchi, 31 voci ripetute, 36 gruppi di richiami. Metadati degli esempi confrontati con pagine degli editori, autori, musei e archivi e con il registro DOI; conservati i limiti delle letture originarie. Testo integrale della UNI ISO 690 non consultato, limite dichiarato. PDF ICCU letto nelle p. 11-15.
+- Aggiornato README con il rinvio allo studio. Proposta non applicata: JSON, generatori e pagine pubblicate restano invariati. Registrazione firmata Codex / CDX.
+- Controlli di chiusura: generazione completa riuscita con le dipendenze isolate già presenti; confrontate le impronte dei 45 file di `site/` e del prompt considerati insieme prima e dopo, tutti identici. Rapporto con nove coppie prima/dopo, 42 collegamenti e nessun segnaposto o trattino lungo. Nessun collaudo grafico su telefono dichiarato.
+
+Prossima azione: sottoporre questa proposta editoriale a Sandro, senza applicarla al sito prima della sua decisione.
+
 ## 2026-11-03 - OC - Approfondimenti: il blu oltremare nell’acquerello
 
 - Su richiesta di Sandro, dopo la proposta nel topic Ricerche e il via del 3 novembre, preparata la pagina 5.2 in `dati/approfondimenti/temi/blu-oltremare.json`, indirizzo `/approfondimenti/blu-oltremare/`: sintesi, premessa, metodo, otto capitoli e 16 fonti, di cui 15 esterne e una proposta interna per le sei prove pratiche.
