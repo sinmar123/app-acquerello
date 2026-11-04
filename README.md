@@ -31,7 +31,7 @@ Il repository è autonomo: contiene i dati, le infografiche, le illustrazioni e 
 
 ### Riferimenti bibliografici
 
-Il formato segue lo [studio sulle convenzioni italiane e sui riferimenti del Quaderno](ricerche/app-acquerello-261104-studio-riferimenti-bibliografici.md), acquisito con la PR #68. Il 4 novembre 2026 il curatore ha chiesto di applicarlo e di controllare tutte le fonti del sito. La revisione è preparata su un ramo: la pubblicazione attende l’approvazione della relativa pull request.
+Il formato segue lo [studio sulle convenzioni italiane e sui riferimenti del Quaderno](ricerche/app-acquerello-261104-studio-riferimenti-bibliografici.md), acquisito con la PR #68. Il 4 novembre 2026 il curatore ha chiesto di applicarlo e di controllare tutte le fonti del sito. La revisione è nella [PR #69](https://github.com/sinmar123/app-acquerello/pull/69), la cui unione e pubblicazione sono state autorizzate dal curatore il 4 novembre 2026.
 
 Si conservano i numeri nel testo e le «Fonti del capitolo». Le voci riportano autore o ente responsabile e titolo, quando disponibili. Le descrizioni sono in italiano: «Scheda del produttore», «Confronto di campioni», «Consultato soltanto il riassunto; testo integrale non letto». Non si usano classificazioni isolate come «primaria commerciale». I titoli delle opere restano nella lingua originale; una descrizione redazionale non diventa un titolo d’autore inventato.
 

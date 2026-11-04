@@ -4,6 +4,14 @@ Cronologia delle modifiche. Ordine cronologico inverso.
 
 Nota: nelle voci fino al 1/11/2026 il curatore è indicato con lo pseudonimo sinmar.
 
+## 2026-11-04 - OC - Approvazione della pubblicazione del formato delle fonti, PR #69
+
+- Sandro ha autorizzato nel topic dell’app l’unione della PR #69 con «Ok unisci». Verificati il ramo `oc/261104-formato-fonti`, l’assenza di conflitti e il controllo «costruisci» superato sul commit `599054f`.
+- Aggiornato il README con il collegamento alla PR e l’autorizzazione del curatore. Nessun nuovo intervento su fonti, dati tecnici, generatori o presentazione delle pagine rispetto alla revisione approvata. La pubblicazione automatica segue l’unione su `main`; l’esito viene registrato nel giornale.
+- Resta distinta la prova visiva da eseguire con un browser reale, oggi non disponibile al bot. Verifica dell’installazione richiesta da Sandro, senza dichiarare eseguito il collaudo grafico. Firma: OpenClaw / OC.
+
+Prossima azione: eseguire il controllo visivo del formato delle fonti quando il browser sarà disponibile.
+
 ## 2026-11-04 - OC - Formato italiano delle fonti, controllo esteso a tutto il sito
 
 - Su richiesta di Sandro nel topic dell’app, applicata la proposta bibliografica acquisita nella PR #68; il successivo «Controlla tutte le fonti del sito» estende il lavoro a tutte le sezioni, non soltanto al blu oltremare. Lavoro sul ramo `oc/261104-formato-fonti`, senza unione su `main` né pubblicazione.
