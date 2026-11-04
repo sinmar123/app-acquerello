@@ -4,6 +4,14 @@ Cronologia delle modifiche. Ordine cronologico inverso.
 
 Nota: nelle voci fino al 1/11/2026 il curatore è indicato con lo pseudonimo sinmar.
 
+## 2026-11-04 - OC - Acquisizione dello studio bibliografico, PR #68
+
+- Sandro ha autorizzato l’unione della PR #68 nel topic dell’app con «Ok unisci». Il perimetro resta documentale: rapporto, README e CHANGELOG; nessuna applicazione della proposta ai riferimenti visibili del sito.
+- Verificati su GitHub il ramo `cdx/261104-riferimenti-bibliografici`, i tre file della proposta, l’assenza di conflitti e il controllo «costruisci» superato. Aggiornato il README per distinguere l’acquisizione dello studio dall’eventuale modifica delle pagine.
+- Verifica locale: generazione completa riuscita; confrontate prima e dopo le impronte dei 45 file di sito e prompt, tutti identici. Nessuna modifica a JSON, generatori, video, pigmenti o fonti delle guide. Registrazione: OpenClaw / OC.
+
+Prossima azione: valutare l’applicazione della proposta bibliografica al sito in un intervento separato.
+
 ## 2026-11-04 - CDX - Studio sulle convenzioni bibliografiche italiane
 
 - Incarico di Sandro dal topic app-acquerello, destinato a Ricerche: studiare convenzioni autorevoli e proporre un criterio unico prima di modificare il sito. Vincolo registrato: terminologia italiana naturale e comprensibile per le descrizioni, mantenendo distinti i titoli originali; non assumere che «fonte primaria» sia scorretto o straniero.

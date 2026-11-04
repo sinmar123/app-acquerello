@@ -33,7 +33,7 @@ Il repository è autonomo: contiene i dati, le infografiche, le illustrazioni e 
 
 Su richiesta del curatore, preparato lo [studio sulle convenzioni italiane e sui riferimenti del Quaderno](ricerche/app-acquerello-261104-studio-riferimenti-bibliografici.md), con nove esempi prima/dopo dalle fonti del blu oltremare e modelli per libro e video. Vincolo richiesto: descrizioni italiane naturali e comprensibili, distinte dai titoli originali delle opere straniere; «fonte primaria» non è considerato un termine scorretto.
 
-La proposta conserva i rimandi numerati e le fonti per capitolo, iniziando ogni voce da autore e titolo. Separa descrizione del documento, provenienza, limiti e ampiezza della lettura. È in attesa della valutazione del curatore: nessuna modifica alle pagine o ai dati del sito. Studio svolto senza altri agenti o corse a pagamento con altri modelli. Registrazione: CDX.
+La proposta conserva i rimandi numerati e le fonti per capitolo, iniziando ogni voce da autore e titolo. Separa descrizione del documento, provenienza, limiti e ampiezza della lettura. Il 4 novembre 2026 il curatore ha autorizzato l’acquisizione dello studio tramite la PR #68. Le pagine e i dati del sito restano invariati; l’applicazione della proposta sarà un intervento distinto. Studio svolto senza altri agenti o corse a pagamento con altri modelli. Registrazione: CDX.
 
 Le aperture presentano il contenuto della pagina; le note di metodo e i dettagli del modello di calcolo si possono aprire a parte. Nei Principi il capitolo 8 ha collegamenti ai propri argomenti. Nella Teoria dei colori, i concetti e gli esempi precedono la storia di Munsell e i dettagli matematici del calcolatore.
 
