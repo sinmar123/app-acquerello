@@ -4,6 +4,16 @@ Cronologia delle modifiche. Ordine cronologico inverso.
 
 Nota: nelle voci fino al 1/11/2026 il curatore è indicato con lo pseudonimo sinmar.
 
+## 2026-11-04 - OC - Home: premessa unica e apertura alla collaborazione
+
+- Inseriti i quattro capoversi concordati con Sandro nel topic dell’app: i primi due della revisione di stile e i due del finale successivamente riveduto. La premessa racconta l’iniziativa personale, l’uso dell’IA nello studio e nello sviluppo del sito, i limiti della rilettura e il possibile aiuto di un controllo indipendente. Il finale apre alla collaborazione su contenuti e codice, con il collegamento al repository GitHub.
+- Rimossa dalla sola Home la nota di metodo separata, assorbita nella presentazione. Restano invariate le note specifiche delle guide, le fonti, i dati tecnici, i video, le immagini, le opere e i pareri. Allineata la descrizione nel README; nessuna variazione agli stili condivisi con le altre pagine.
+- Autorizzazione: Sandro ha approvato questa revisione e ne ha chiesto la pubblicazione nel topic dell’app con «Ok pubblica» il 4 novembre 2026. L’intervento passa da un ramo e da una pull request, con unione vincolata alla testa verificata e al controllo automatico riuscito.
+- Verifiche locali: generazione completa senza errori con Pillow già disponibile, nessuna installazione; confrontati i 45 output con la base aggiornata `3727391`, cambia soltanto `site/index.html` e gli altri 44, compreso il prompt della chat, sono identici. I quattro capoversi estratti dall’HTML coincidono parola per parola con quelli approvati. Le altre parti della Home sono identiche, salvo la nota rimossa; 25 collegamenti interni validi e nessun ID duplicato. `git diff --check` senza rilievi.
+- Leggibilità: Gulpease della Home 49, contro 53 prima; la Home non è inclusa nel blocco automatico del generatore. Conservato il testo approvato, senza una nuova riscrittura. Le guide controllate restano sopra la soglia prevista. Collaudo visivo non eseguito: il browser gestito non trova un eseguibile supportato. L’esito dell’unione, della pubblicazione automatica e del confronto online viene registrato nel giornale alla chiusura. Firma: OpenClaw / OC.
+
+Prossima azione: eseguire il collaudo visivo del sito quando il browser sarà disponibile.
+
 ## 2026-11-04 - OC - Unione autorizzata dell’introduzione personale, PR #70
 
 - Sandro ha autorizzato nel topic dell’app l’unione della [PR #70](https://github.com/sinmar123/app-acquerello/pull/70) con «Ok unisci». Ricontrollati il commit `7b74601`, il ramo `oc/261104-introduzione-personale`, i tre file della proposta, l’assenza di conflitti e il controllo «costruisci» superato. Il testo coincide con i quattro capoversi approvati.
