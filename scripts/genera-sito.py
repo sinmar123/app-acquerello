@@ -974,16 +974,18 @@ def genera_home(sezioni_pronte: list[dict]) -> str:
 {barra_quaderno("")}<header class="testa">
   <div class="testa-in">
     <h1>Quaderno di acquerello</h1>
-    <p>Appunti di studio dell'acquerello, scritti da appassionati per appassionati</p>
-    <p class="nota">Il Quaderno raccoglie appunti e prove di acquerello, dai principi su acqua, colore e carta agli esercizi per soggetto. È scritto da dilettanti per dilettanti: persone che dipingono per passione e condividono ciò che imparano. Sono benvenuti anche i professionisti che vogliono contribuire.</p>
-    <p class="nota">Il sito si sviluppa con l'aiuto dell'intelligenza artificiale. Gli strumenti aiutano a cercare le fonti e a organizzare i contenuti. Nelle guide, ogni affermazione rimanda alla propria fonte; stime e limiti restano dichiarati.</p>
+    <p>Perché questo Quaderno</p>
+    <p class="nota">Dipingo ad acquerello per hobby e mi sono chiesto se i modelli di intelligenza artificiale che uso nel mio lavoro potessero aiutarmi anche a coltivare questa passione. Da questa idea è nato il Quaderno, dove raccolgo e condivido il materiale di studio che preparo con il loro aiuto.</p>
+    <p class="nota">In rete si trova moltissimo materiale sull’acquerello: video, manuali, consigli e spiegazioni, spesso dispersi e difficili da confrontare. Ho cominciato a usare questi strumenti per raccoglierlo, metterlo in ordine e ritrovare ciò che può essere utile durante lo studio.</p>
+    <p class="nota">Mi interessa anche sperimentarli come una sorta di tutor: fare domande, chiedere chiarimenti, ragionare su un esercizio o ricevere un parere su un dipinto. Il Quaderno raccoglie questo esperimento e rende consultabile il materiale che ne nasce. Le risposte dell’IA richiedono comunque un confronto con le fonti e con la pratica sul foglio.</p>
+    <p class="nota">Porto avanti il progetto da solo, nel tempo che dedico a questa passione. Alcune parti sono più sviluppate, altre ancora da approfondire. Condivido il lavoro mentre prende forma: correzioni, suggerimenti e contributi sono benvenuti.</p>
   </div>
 </header>
 <main>
   <details class="cf-origine">
     <summary>Nota di metodo</summary>
     <p>Il Quaderno ordina manuali, schede dei produttori e dimostrazioni filmate per ritrovare il passaggio utile durante lo studio. Le sintesi non sostituiscono le fonti: i video si aprono al secondo indicato e i rimandi delle guide portano ai documenti consultati. La prova sul foglio resta necessaria.</p>
-    <p>Il sito è nato nell'ottobre 2026. Lo realizziamo con l'ausilio di strumenti di intelligenza artificiale, partendo dai modelli disponibili in quel periodo. Man mano che ne escono di nuovi, li proviamo per rileggere e migliorare i testi. Testi, pagine, codice e illustrazioni nascono dal dialogo fra chi dipinge e alcuni modelli. Gemini 4 Argon risponde alle domande in fondo alle pagine. GPT-6 Astra e Claude Opus 5.5 hanno scritto i pareri sulle opere. Altri modelli aiutano a rileggere i testi. Anche le ricerche degli Approfondimenti sono fatte con l'aiuto dell'IA, con una fonte per ogni affermazione.</p>
+    <p>Il sito è nato nell'ottobre 2026. Lo realizzo con l'ausilio di strumenti di intelligenza artificiale, partendo dai modelli disponibili in quel periodo. Man mano che ne escono di nuovi, li provo per rileggere e migliorare i testi. Testi, pagine, codice e illustrazioni nascono dal dialogo fra chi dipinge e alcuni modelli. Gemini 4 Argon risponde alle domande in fondo alle pagine. GPT-6 Astra e Claude Opus 5.5 hanno scritto i pareri sulle opere. Altri modelli aiutano a rileggere i testi. Anche le ricerche degli Approfondimenti sono fatte con l'aiuto dell'IA, con una fonte per ogni affermazione.</p>
   </details>
   <section class="cf-sviluppo" aria-label="Stato del Quaderno">
     <p><strong>Il Quaderno è in costruzione.</strong> Il modulo sugli alberi è pubblicato; cieli e nuvole, fiori, acqua e riflessi, rocce e architetture sono <a href="./soggetti/">in preparazione</a>.</p>
