@@ -833,7 +833,7 @@ def inietta_elementi_comuni(html_pagina: str, sezione: dict, pagina_path: str, p
     return html_pagina
 
 
-# Home: testata ad acquerello, schede con una figurina in SVG o CSS, nota di metodo da aprire.
+# Home: testata con premessa unica e schede con una figurina in SVG o CSS.
 
 
 def icona_scheda(slug: str) -> str:
@@ -975,18 +975,13 @@ def genera_home(sezioni_pronte: list[dict]) -> str:
   <div class="testa-in">
     <h1>Quaderno di acquerello</h1>
     <p>Perché questo Quaderno</p>
-    <p class="nota">Dipingo ad acquerello per hobby e mi sono chiesto se i modelli di intelligenza artificiale che uso nel mio lavoro potessero aiutarmi anche a coltivare questa passione. Da questa idea è nato il Quaderno, dove raccolgo e condivido il materiale di studio che preparo con il loro aiuto.</p>
-    <p class="nota">In rete si trova moltissimo materiale sull’acquerello: video, manuali, consigli e spiegazioni, spesso dispersi e difficili da confrontare. Ho cominciato a usare questi strumenti per raccoglierlo, metterlo in ordine e ritrovare ciò che può essere utile durante lo studio.</p>
-    <p class="nota">Mi interessa anche sperimentarli come una sorta di tutor: fare domande, chiedere chiarimenti, ragionare su un esercizio o ricevere un parere su un dipinto. Il Quaderno raccoglie questo esperimento e rende consultabile il materiale che ne nasce. Le risposte dell’IA richiedono comunque un confronto con le fonti e con la pratica sul foglio.</p>
-    <p class="nota">Porto avanti il progetto da solo, nel tempo che dedico a questa passione. Alcune parti sono più sviluppate, altre ancora da approfondire. Condivido il lavoro mentre prende forma: correzioni, suggerimenti e contributi sono benvenuti.</p>
+    <p class="nota">Dipingo ad acquerello per hobby e uso i modelli di intelligenza artificiale nel mio lavoro. Il Quaderno nasce dalla curiosità di sperimentare questi strumenti anche nello studio della pittura e dal desiderio di condividere il materiale che preparo con il loro aiuto.</p>
+    <p class="nota">In rete si trova moltissimo materiale sull’acquerello, dai manuali ai video, ma spesso è disperso e difficile da confrontare. Uso l’IA per raccogliere le informazioni, metterle in ordine e ricavarne testi utili allo studio, oltre che per sviluppare il sito. Mi interessa anche sperimentarla come una sorta di tutor, con cui chiarire un dubbio, ragionare su un esercizio o discutere un dipinto.</p>
+    <p class="nota">Il Quaderno è nato da una mia iniziativa, ma è aperto alla collaborazione di altri appassionati. Non sempre rileggo tutto nel dettaglio prima di pubblicare, e qualcosa può sfuggirmi: un controllo indipendente può quindi aiutare a migliorare il lavoro.</p>
+    <p class="nota">Chi desidera partecipare può proporre su <a href="https://github.com/sinmar123/app-acquerello">GitHub</a> correzioni e integrazioni, contribuire con nuovi contenuti o collaborare allo sviluppo del sito.</p>
   </div>
 </header>
 <main>
-  <details class="cf-origine">
-    <summary>Nota di metodo</summary>
-    <p>Il Quaderno ordina manuali, schede dei produttori e dimostrazioni filmate per ritrovare il passaggio utile durante lo studio. Le sintesi non sostituiscono le fonti: i video si aprono al secondo indicato e i rimandi delle guide portano ai documenti consultati. La prova sul foglio resta necessaria.</p>
-    <p>Il sito è nato nell'ottobre 2026. Lo realizzo con l'ausilio di strumenti di intelligenza artificiale, partendo dai modelli disponibili in quel periodo. Man mano che ne escono di nuovi, li provo per rileggere e migliorare i testi. Testi, pagine, codice e illustrazioni nascono dal dialogo fra chi dipinge e alcuni modelli. Gemini 4 Argon risponde alle domande in fondo alle pagine. GPT-6 Astra e Claude Opus 5.5 hanno scritto i pareri sulle opere. Altri modelli aiutano a rileggere i testi. Anche le ricerche degli Approfondimenti sono fatte con l'aiuto dell'IA, con una fonte per ogni affermazione.</p>
-  </details>
   <section class="cf-sviluppo" aria-label="Stato del Quaderno">
     <p><strong>Il Quaderno è in costruzione.</strong> Il modulo sugli alberi è pubblicato; cieli e nuvole, fiori, acqua e riflessi, rocce e architetture sono <a href="./soggetti/">in preparazione</a>.</p>
     <p>Correzioni, integrazioni, video e le proprie opere si propongono dalla <a href="#suggerimenti">casella dei suggerimenti</a>.</p>

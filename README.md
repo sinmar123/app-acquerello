@@ -1,10 +1,10 @@
 # Quaderno di acquerello (`app-acquerello`)
 
-Il Quaderno nasce dall’iniziativa personale di un appassionato che dipinge ad acquerello per hobby. Il curatore usa i modelli di intelligenza artificiale nel proprio lavoro e li sperimenta anche per organizzare le informazioni sull’acquerello e come aiuto allo studio. Porta avanti il progetto da solo e lo condivide mentre cresce, aperto a correzioni e contributi.
+Il Quaderno nasce dall’iniziativa personale di un appassionato che dipinge ad acquerello per hobby. Il curatore usa i modelli di intelligenza artificiale nel proprio lavoro e li sperimenta anche per organizzare le informazioni sull’acquerello e come aiuto allo studio. Il progetto è aperto alla collaborazione di altri appassionati, sia sui contenuti sia sullo sviluppo del sito, tramite GitHub.
 
 Appunti di studio dell'acquerello aperti al pubblico: le tre consistenze della miscela e gli stati della carta, la teoria dei colori con un calcolatore di miscele, i tubetti marca per marca e gli esercizi per soggetto, a cominciare dagli alberi, con i passaggi dei video didattici indicati al secondo.
 
-L’apertura della Home, «Perché questo Quaderno», usa la prima persona e racconta questo esperimento, con il testo approvato dal curatore nel topic dell’app il 4 novembre 2026. La nota di metodo conserva i dettagli su fonti e modelli; le guide mantengono il proprio registro tecnico.
+L’apertura della Home, «Perché questo Quaderno», usa la prima persona e racconta questo esperimento, con il testo approvato dal curatore nel topic dell’app il 4 novembre 2026. La premessa unica riunisce presentazione, uso dell’IA, limiti della rilettura e invito a collaborare su GitHub, senza una nota di metodo separata nella Home. Restano invariate le note specifiche delle guide e il loro registro tecnico. Il curatore ha approvato questa revisione e ne ha chiesto la pubblicazione nello stesso topic il 4 novembre 2026.
 
 - **Sito:** [https://app-acquerello.pages.dev](https://app-acquerello.pages.dev)
 - **Repository:** [https://github.com/sinmar123/app-acquerello](https://github.com/sinmar123/app-acquerello)
