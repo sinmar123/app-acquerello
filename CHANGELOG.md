@@ -4,6 +4,23 @@ Cronologia delle modifiche. Ordine cronologico inverso.
 
 Nota: nelle voci fino al 1/11/2026 il curatore è indicato con lo pseudonimo sinmar.
 
+## 2026-11-04 - OC - Unione autorizzata dell’introduzione personale, PR #70
+
+- Sandro ha autorizzato nel topic dell’app l’unione della [PR #70](https://github.com/sinmar123/app-acquerello/pull/70) con «Ok unisci». Ricontrollati il commit `7b74601`, il ramo `oc/261104-introduzione-personale`, i tre file della proposta, l’assenza di conflitti e il controllo «costruisci» superato. Il testo coincide con i quattro capoversi approvati.
+- Tolta dal README la nota provvisoria «non è ancora pubblicata». Nessuna ulteriore modifica ai testi del sito, ai generatori, alle fonti o ai dati rispetto alla revisione approvata. L’unione resta vincolata alla testa controllata della PR; il risultato della pubblicazione automatica e il confronto della Home online con quella generata sono registrati nel giornale al termine della stessa attività.
+- La verifica dell’HTML resta distinta dal collaudo visivo nel browser, già aperto nel filone dedicato. Firma: OpenClaw / OC.
+
+Prossima azione: eseguire il controllo visivo del sito quando il browser sarà disponibile.
+
+## 2026-11-04 - OC - Introduzione personale del Quaderno
+
+- Su richiesta di Sandro nel topic dell’app, inseriti nella Home i quattro capoversi approvati, con l’ultimo inizio concordato: «Dipingo ad acquerello per hobby…» e «Da questa idea è nato il Quaderno…». L’apertura racconta l’iniziativa di un singolo appassionato, l’uso professionale dei modelli linguistici e l’esperimento per organizzare le informazioni e avere un aiuto nello studio.
+- Il sottotitolo diventa «Perché questo Quaderno»; eliminata la precedente presentazione al plurale. Nella nota di metodo cambiano soltanto «Lo realizziamo» in «Lo realizzo» e «li proviamo» in «li provo». Conservati dettagli delle fonti, modelli, sezioni e invito ai contributi; aggiornato il README.
+- Verifiche: generazione completa riuscita usando Pillow già presente in `lavoro/oc-python-deps`, senza nuove installazioni; confrontati i 45 output prima e dopo, con la sola Home diversa. I quattro capoversi estratti dall’HTML coincidono con il testo approvato; 15 pagine senza ID duplicati e 26 collegamenti interni della Home validi. Fuori dall’apertura cambiano soltanto i due verbi nella nota di metodo; prompt della chat e altre pagine identici. `git diff --check` senza rilievi. Controllo dell’HTML eseguito, prova visiva nel browser non eseguita.
+- Lavoro sul ramo `oc/261104-introduzione-personale`, dalla versione aggiornata di `origin/main` (`fe255f5`), in una copia separata. La copia principale e le sue differenze preesistenti restano intatte. Nessun intervento su dati tecnici, fonti, video, immagini, opere o pareri. Firma: OpenClaw / OC.
+
+Prossima azione: unire la pull request sull’introduzione personale solo dopo l’ok esplicito di Sandro per questa modifica.
+
 ## 2026-11-04 - OC - Approvazione della pubblicazione del formato delle fonti, PR #69
 
 - Sandro ha autorizzato nel topic dell’app l’unione della PR #69 con «Ok unisci». Verificati il ramo `oc/261104-formato-fonti`, l’assenza di conflitti e il controllo «costruisci» superato sul commit `599054f`.
