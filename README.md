@@ -4,7 +4,7 @@ Il Quaderno nasce dall’iniziativa personale di un appassionato che dipinge ad 
 
 Appunti di studio dell'acquerello aperti al pubblico: le tre consistenze della miscela e gli stati della carta, la teoria dei colori con un calcolatore di miscele, i tubetti marca per marca e gli esercizi per soggetto, a cominciare dagli alberi, con i passaggi dei video didattici indicati al secondo.
 
-L’apertura della Home, «Perché questo Quaderno», usa la prima persona e racconta questo esperimento, con il testo approvato dal curatore nel topic dell’app il 4 novembre 2026. La nota di metodo conserva i dettagli su fonti e modelli; le guide mantengono il proprio registro tecnico. La revisione è sul ramo `oc/261104-introduzione-personale` e non è ancora pubblicata.
+L’apertura della Home, «Perché questo Quaderno», usa la prima persona e racconta questo esperimento, con il testo approvato dal curatore nel topic dell’app il 4 novembre 2026. La nota di metodo conserva i dettagli su fonti e modelli; le guide mantengono il proprio registro tecnico.
 
 - **Sito:** [https://app-acquerello.pages.dev](https://app-acquerello.pages.dev)
 - **Repository:** [https://github.com/sinmar123/app-acquerello](https://github.com/sinmar123/app-acquerello)

@@ -4,6 +4,14 @@ Cronologia delle modifiche. Ordine cronologico inverso.
 
 Nota: nelle voci fino al 1/11/2026 il curatore è indicato con lo pseudonimo sinmar.
 
+## 2026-11-04 - OC - Unione autorizzata dell’introduzione personale, PR #70
+
+- Sandro ha autorizzato nel topic dell’app l’unione della [PR #70](https://github.com/sinmar123/app-acquerello/pull/70) con «Ok unisci». Ricontrollati il commit `7b74601`, il ramo `oc/261104-introduzione-personale`, i tre file della proposta, l’assenza di conflitti e il controllo «costruisci» superato. Il testo coincide con i quattro capoversi approvati.
+- Tolta dal README la nota provvisoria «non è ancora pubblicata». Nessuna ulteriore modifica ai testi del sito, ai generatori, alle fonti o ai dati rispetto alla revisione approvata. L’unione resta vincolata alla testa controllata della PR; il risultato della pubblicazione automatica e il confronto della Home online con quella generata sono registrati nel giornale al termine della stessa attività.
+- La verifica dell’HTML resta distinta dal collaudo visivo nel browser, già aperto nel filone dedicato. Firma: OpenClaw / OC.
+
+Prossima azione: eseguire il controllo visivo del sito quando il browser sarà disponibile.
+
 ## 2026-11-04 - OC - Introduzione personale del Quaderno
 
 - Su richiesta di Sandro nel topic dell’app, inseriti nella Home i quattro capoversi approvati, con l’ultimo inizio concordato: «Dipingo ad acquerello per hobby…» e «Da questa idea è nato il Quaderno…». L’apertura racconta l’iniziativa di un singolo appassionato, l’uso professionale dei modelli linguistici e l’esperimento per organizzare le informazioni e avere un aiuto nello studio.
