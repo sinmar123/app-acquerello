@@ -4,6 +4,14 @@ Cronologia delle modifiche. Ordine cronologico inverso.
 
 Nota: nelle voci fino al 1/11/2026 il curatore è indicato con lo pseudonimo sinmar.
 
+## 2026-11-07 - OC - Unione autorizzata del nuovo titolo, PR #72
+
+- Sandro ha autorizzato nel topic dell’app l’unione della [PR #72](https://github.com/sinmar123/app-acquerello/pull/72) con «Ok unisci». Ricontrollati il commit `9083dad`, gli 11 file della proposta, l’assenza di conflitti e il controllo «costruisci» superato. Il titolo approvato è «Quaderno di acquerello con IA»; la premessa resta invariata.
+- Tolta dal README la nota provvisoria di proposta non pubblicata e registrata l’autorizzazione. Nessuna ulteriore modifica ai testi del sito, ai generatori, al prompt o ai dati rispetto alla revisione approvata. L’unione resta vincolata alla testa verificata della PR e al controllo automatico riuscito; esito della pubblicazione e confronto dei 15 HTML online con quelli generati vengono registrati nel giornale alla chiusura.
+- Il confronto dell’HTML non sostituisce il collaudo visivo nel browser, che resta nel filone già aperto. Firma: OpenClaw / OC.
+
+Prossima azione: eseguire il collaudo visivo del sito quando il browser sarà disponibile.
+
 ## 2026-11-07 - OC - Titolo semplificato: Quaderno di acquerello con IA
 
 - Su richiesta di Sandro nel topic dell’app, sostituito nella proposta il titolo «Quaderno di acquerello in cornice AI» con «Quaderno di acquerello con IA». Aggiornata la stessa PR #72, ancora aperta, mantenendo il ramo esistente e senza riscriverne lo storico.

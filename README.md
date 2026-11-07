@@ -1,6 +1,6 @@
 # Quaderno di acquerello con IA (`app-acquerello`)
 
-Il titolo della proposta è «Quaderno di acquerello con IA», come richiesto dal curatore nel topic dell’app il 7 novembre 2026, al posto della formulazione precedente. La modifica è nella PR #72, non ancora pubblicata; l’indirizzo del sito e il nome del repository restano invariati.
+Il titolo è «Quaderno di acquerello con IA», come richiesto dal curatore nel topic dell’app il 7 novembre 2026. Il curatore ha autorizzato nello stesso topic l’unione e la pubblicazione della [PR #72](https://github.com/sinmar123/app-acquerello/pull/72). L’indirizzo del sito e il nome del repository restano invariati.
 
 Il Quaderno nasce dall’iniziativa personale di un appassionato che dipinge ad acquerello per hobby. Il curatore usa i modelli di intelligenza artificiale nel proprio lavoro e li sperimenta anche per organizzare le informazioni sull’acquerello e come aiuto allo studio. Il progetto è aperto alla collaborazione di altri appassionati, sia sui contenuti sia sullo sviluppo del sito, tramite GitHub.
 
