@@ -334,7 +334,7 @@ def paragrafi(frasi):
 def piede(sez, prefisso):
     return (
         "<footer>"
-        f"<p>Quaderno di acquerello · Opere · testi del {e(data_it(sez['data']))}.</p>"
+        f"<p>Quaderno di acquerello con IA · Opere · testi del {e(data_it(sez['data']))}.</p>"
         f"<p>{e(sez['diritti'])}</p>"
         "<p>Le altre sezioni: "
         f'<a href="{prefisso}principi/">1. Principi generali</a> · '
@@ -422,7 +422,7 @@ def pagina_autore(sez, autore):
         elenco = f"{modelli}, e {parere_dichiarato(dichiarate[-1])}" if modelli else parere_dichiarato(dichiarate[0])
         nota_pareri = [sez["nota_pareri"].format(elenco=elenco)]
     numero = sottosezione(sez, autore)
-    descrizione = f"{autore['nome']}: {quante(autore)}. {sez['titolo']} nel Quaderno di acquerello."
+    descrizione = f"{autore['nome']}: {quante(autore)}. {sez['titolo']} nel Quaderno di acquerello con IA."
     corpo = (
         f'<p class="filo"><a href="../">{e(sez["numero"])}. {e(sez["titolo"])}</a></p>'
         f"<h1>{e(numero)} · {e(autore['nome'])}</h1>"
