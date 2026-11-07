@@ -977,8 +977,8 @@ def genera_home(sezioni_pronte: list[dict]) -> str:
     <p>Perché questo Quaderno</p>
     <p class="nota">Dipingo ad acquerello per hobby e uso i modelli di intelligenza artificiale nel mio lavoro. Il Quaderno nasce dalla curiosità di sperimentare questi strumenti anche nello studio della pittura e dal desiderio di condividere il materiale che preparo con il loro aiuto.</p>
     <p class="nota">In rete si trova moltissimo materiale sull’acquerello, dai manuali ai video, ma spesso è disperso e difficile da confrontare. Uso l’IA per raccogliere le informazioni, metterle in ordine e ricavarne testi utili allo studio, oltre che per sviluppare il sito. Mi interessa anche sperimentarla come una sorta di tutor, con cui chiarire un dubbio, ragionare su un esercizio o discutere un dipinto.</p>
-    <p class="nota">Il Quaderno è nato da una mia iniziativa, ma è aperto alla collaborazione di altri appassionati. Non sempre rileggo tutto nel dettaglio prima di pubblicare, e qualcosa può sfuggirmi: un controllo indipendente può quindi aiutare a migliorare il lavoro.</p>
-    <p class="nota">Chi desidera partecipare può proporre su <a href="https://github.com/sinmar123/app-acquerello">GitHub</a> correzioni e integrazioni, contribuire con nuovi contenuti o collaborare allo sviluppo del sito.</p>
+    <p class="nota">Il Quaderno nasce da un’iniziativa personale ed è aperto alla collaborazione. Non sempre il tempo disponibile consente di rileggere con attenzione le pagine rielaborate dall’IA o i risultati delle ricerche approfondite. Ogni rilettura fa però emergere qualcosa da correggere o migliorare.</p>
+    <p class="nota">Il contributo dei lettori può quindi essere prezioso, anche attraverso una partecipazione come co-curatori del progetto, disponibile su <a href="https://github.com/sinmar123/app-acquerello">GitHub</a>. Il Quaderno è anche un piccolo esperimento per capire come prendersi cura, insieme, dei contenuti prodotti dall’IA.</p>
   </div>
 </header>
 <main>
