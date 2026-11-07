@@ -4,6 +4,14 @@ Cronologia delle modifiche. Ordine cronologico inverso.
 
 Nota: nelle voci fino al 1/11/2026 il curatore è indicato con lo pseudonimo sinmar.
 
+## 2026-11-07 - OC - Unione autorizzata del finale dell’introduzione, PR #73
+
+- Sandro ha autorizzato nel topic dell’app l’unione della [PR #73](https://github.com/sinmar123/app-acquerello/pull/73) con «Ok unisci». Ricontrollati la testa `a746398`, i tre file effettivi, il diff locale e quello di GitHub sulla base `6246e30`, l’assenza di conflitti e il controllo «costruisci» superato.
+- Nel README registrata l’autorizzazione al posto della nota provvisoria di proposta non pubblicata. Nessuna ulteriore modifica ai due capoversi concordati, ai primi due capoversi dell’apertura, al titolo o alle altre parti del sito. La nuova generazione è confrontata con i 45 output approvati, tutti identici.
+- Unione vincolata alla testa controllata della PR e al controllo automatico riuscito. Esito della pubblicazione sul commit di unione e confronto degli HTML serviti con quelli approvati registrati nel giornale alla chiusura. Il confronto dell’HTML resta distinto dal collaudo visivo nel browser. Firma: OpenClaw / OC.
+
+Prossima azione: eseguire il collaudo visivo del sito quando il browser sarà disponibile.
+
 ## 2026-11-07 - OC - Home: rilettura, co-curatori e cura dei contenuti IA
 
 - Inseriti negli ultimi due capoversi della premessa i testi concordati con Sandro nel topic dell’app e approvati con «Ok.. vai»: tono meno personale, limiti della rilettura delle pagine rielaborate e delle ricerche approfondite con l’IA, possibile contributo dei lettori come co-curatori. Il riferimento al futuro del lavoro umano è sostituito dalla frase ridimensionata: «Il Quaderno è anche un piccolo esperimento per capire come prendersi cura, insieme, dei contenuti prodotti dall’IA».
