@@ -4,6 +4,15 @@ Cronologia delle modifiche. Ordine cronologico inverso.
 
 Nota: nelle voci fino al 1/11/2026 il curatore è indicato con lo pseudonimo sinmar.
 
+## 2026-11-07 - OC - Home: rilettura, co-curatori e cura dei contenuti IA
+
+- Inseriti negli ultimi due capoversi della premessa i testi concordati con Sandro nel topic dell’app e approvati con «Ok.. vai»: tono meno personale, limiti della rilettura delle pagine rielaborate e delle ricerche approfondite con l’IA, possibile contributo dei lettori come co-curatori. Il riferimento al futuro del lavoro umano è sostituito dalla frase ridimensionata: «Il Quaderno è anche un piccolo esperimento per capire come prendersi cura, insieme, dei contenuti prodotti dall’IA».
+- Conservati i primi due capoversi dell’introduzione, il titolo «Quaderno di acquerello con IA», il collegamento a GitHub e tutte le parti della Home fuori dai due capoversi. Nessuna modifica a guide, fonti, dati, immagini, pareri, API o prompt della chat. README allineato al perimetro e allo stato della proposta.
+- Verifiche: generazione completa senza errori con le dipendenze già disponibili; confrontati 45 output con la base `6246e30`, cambia soltanto `site/index.html`, gli altri 44 sono identici. HTML della Home confrontato con la base sostituendo solo i due capoversi approvati: corrispondenza esatta. Collegamenti e ID preservati, 25 collegamenti interni validi e nessun ID duplicato. `git diff --check` senza rilievi. Collaudo visivo nel browser non eseguito in questa attività.
+- Lavoro sul nuovo ramo `oc/261107-introduzione-cura-condivisa`, dalla base aggiornata dopo lo squash della PR #72, senza sovrascrivere i sorgenti condivisi preesistenti. Proposta preparata con pull request, senza unione né pubblicazione. Firma: OpenClaw / OC.
+
+Prossima azione: unire la pull request sulla revisione del finale solo dopo l’ok esplicito di Sandro alla pubblicazione.
+
 ## 2026-11-07 - OC - Unione autorizzata del nuovo titolo, PR #72
 
 - Sandro ha autorizzato nel topic dell’app l’unione della [PR #72](https://github.com/sinmar123/app-acquerello/pull/72) con «Ok unisci». Ricontrollati il commit `9083dad`, gli 11 file della proposta, l’assenza di conflitti e il controllo «costruisci» superato. Il titolo approvato è «Quaderno di acquerello con IA»; la premessa resta invariata.
