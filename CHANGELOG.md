@@ -4,6 +4,15 @@ Cronologia delle modifiche. Ordine cronologico inverso.
 
 Nota: nelle voci fino al 1/11/2026 il curatore è indicato con lo pseudonimo sinmar.
 
+## 2026-11-07 - OC - Titolo semplificato: Quaderno di acquerello con IA
+
+- Su richiesta di Sandro nel topic dell’app, sostituito nella proposta il titolo «Quaderno di acquerello in cornice AI» con «Quaderno di acquerello con IA». Aggiornata la stessa PR #72, ancora aperta, mantenendo il ramo esistente e senza riscriverne lo storico.
+- Allineati titolo principale e titolo del browser della Home, nome del sito nelle anteprime, piè di pagina e nome esteso dell’assistente. Aggiornati README e CONTRIBUTING; `lib/prompt-chat.js` rigenerato dal generatore. Premessa, fonti, dati, indirizzi, nome del repository, licenze, immagini, opere e pareri restano invariati.
+- Verifiche locali: generazione completa senza errori con le dipendenze già disponibili. Confrontati 45 output con la versione precedente della PR: 15 HTML e prompt cambiano solo nel nome, gli altri 29 sono identici. H1, titolo del browser e anteprima della Home corrispondono al nuovo titolo; `og:site_name` corretto nelle 15 pagine. Quattro capoversi della premessa, collegamenti e ID identici alla versione precedente. `git diff --check` senza rilievi; collaudo visivo non eseguito in questa attività.
+- La copia condivisa è rimasta intatta: lavoro in una copia Git separata del ramo della PR, recuperata da GitHub. Nessuna unione né pubblicazione; il controllo GitHub viene rieseguito sulla nuova testa. Firma: OpenClaw / OC.
+
+Prossima azione: unire la PR #72 con il titolo aggiornato solo dopo l’ok esplicito di Sandro alla pubblicazione.
+
 ## 2026-11-04 - OC - Nuovo titolo: Quaderno di acquerello in cornice AI
 
 - Su richiesta di Sandro nel topic dell’app, preparato il titolo esatto «Quaderno di acquerello in cornice AI». Allineati titolo principale della Home, titolo della scheda del browser, anteprime di condivisione, piè di pagina e nome esteso nel prompt dell’assistente. Il nome breve «Quaderno», l’indirizzo del sito e il nome del repository restano invariati.

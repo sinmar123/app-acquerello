@@ -1,6 +1,6 @@
-# Come contribuire al Quaderno di acquerello in cornice AI
+# Come contribuire al Quaderno di acquerello con IA
 
-Il **Quaderno di acquerello in cornice AI** (`https://app-acquerello.pages.dev`) è un progetto aperto: chiunque può segnalare correzioni, proporre nuovi esempi o contribuire con dati, infografiche e sezioni.
+Il **Quaderno di acquerello con IA** (`https://app-acquerello.pages.dev`) è un progetto aperto: chiunque può segnalare correzioni, proporre nuovi esempi o contribuire con dati, infografiche e sezioni.
 
 ## 1. Segnalazioni e proposte, senza programmare
 

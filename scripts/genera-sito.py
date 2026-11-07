@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Genera il sito statico del Quaderno di acquerello in cornice AI in site/ dai sorgenti delle sezioni in dati/<sezione>/.
+"""Genera il sito statico del Quaderno di acquerello con IA in site/ dai sorgenti delle sezioni in dati/<sezione>/.
 
 Il repository è autonomo: contiene tutti i file di dati, le infografiche e gli script necessari a generare
 le pagine. Oltre alle pagine scrive lib/prompt-chat.js, il prompt di sistema della chat ricavato dai dati
@@ -386,7 +386,7 @@ def genera_prompt_chat():
     in_preparazione = ", ".join(s["titolo"] for s in soggetti["soggetti"] if s["stato"] != "pubblicato")
     regola = senza_tag(next(b["testo"] for b in capitoli["abbinare"]["blocchi"] if b["tipo"] == "p"))
 
-    prompt = f"""Sei l'assistente del «Quaderno di acquerello in cornice AI» ({SITO_URL}), appunti di studio dell'acquerello aperti al pubblico e in fase di sviluppo. Rispondi alle domande sull'acquerello, sul disegno, sul colore, sui materiali pittorici e sull'uso del Quaderno. Ogni domanda arriva preceduta, fra parentesi quadre, dalla pagina del Quaderno che si sta consultando: serve a capire il contesto e non va citata.
+    prompt = f"""Sei l'assistente del «Quaderno di acquerello con IA» ({SITO_URL}), appunti di studio dell'acquerello aperti al pubblico e in fase di sviluppo. Rispondi alle domande sull'acquerello, sul disegno, sul colore, sui materiali pittorici e sull'uso del Quaderno. Ogni domanda arriva preceduta, fra parentesi quadre, dalla pagina del Quaderno che si sta consultando: serve a capire il contesto e non va citata.
 
 Le sezioni del Quaderno:
 {sezioni}
@@ -730,7 +730,7 @@ def testa_comune(titolo, descrizione, pagina_path):
     return (f'<meta name="description" content="{e(descrizione)}">\n'
             f'<meta property="og:type" content="website">\n'
             f'<meta property="og:locale" content="it_IT">\n'
-            f'<meta property="og:site_name" content="Quaderno di acquerello in cornice AI">\n'
+            f'<meta property="og:site_name" content="Quaderno di acquerello con IA">\n'
             f'<meta property="og:title" content="{e(titolo)}">\n'
             f'<meta property="og:description" content="{e(descrizione)}">\n'
             f'<meta property="og:url" content="{SITO_URL}{pagina_path}">\n'
@@ -966,14 +966,14 @@ def genera_home(sezioni_pronte: list[dict]) -> str:
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Quaderno di acquerello in cornice AI</title>
-{testa_comune("Quaderno di acquerello in cornice AI", DESCRIZIONE_HOME, "/")}<style>
+<title>Quaderno di acquerello con IA</title>
+{testa_comune("Quaderno di acquerello con IA", DESCRIZIONE_HOME, "/")}<style>
 {STILE_HOME}</style>
 {stile_barra("0")}</head>
 <body>
 {barra_quaderno("")}<header class="testa">
   <div class="testa-in">
-    <h1>Quaderno di acquerello in cornice AI</h1>
+    <h1>Quaderno di acquerello con IA</h1>
     <p>Perché questo Quaderno</p>
     <p class="nota">Dipingo ad acquerello per hobby e uso i modelli di intelligenza artificiale nel mio lavoro. Il Quaderno nasce dalla curiosità di sperimentare questi strumenti anche nello studio della pittura e dal desiderio di condividere il materiale che preparo con il loro aiuto.</p>
     <p class="nota">In rete si trova moltissimo materiale sull’acquerello, dai manuali ai video, ma spesso è disperso e difficile da confrontare. Uso l’IA per raccogliere le informazioni, metterle in ordine e ricavarne testi utili allo studio, oltre che per sviluppare il sito. Mi interessa anche sperimentarla come una sorta di tutor, con cui chiarire un dubbio, ragionare su un esercizio o discutere un dipinto.</p>
@@ -994,7 +994,7 @@ def genera_home(sezioni_pronte: list[dict]) -> str:
 </main>
 {blocco_sugg}
 <footer>
-  Quaderno di acquerello in cornice AI · progetto aperto su <a href="{REPO_URL}" target="_blank" rel="noopener">GitHub</a>
+  Quaderno di acquerello con IA · progetto aperto su <a href="{REPO_URL}" target="_blank" rel="noopener">GitHub</a>
   (testi, dati e illustrazioni <a href="https://creativecommons.org/licenses/by/4.0/deed.it" target="_blank" rel="noopener">CC BY 4.0</a>, codice MIT)
   · <a href="./informativa/">Informativa sulla privacy</a>
 </footer>
@@ -1058,7 +1058,7 @@ protezione dei dati personali. Questa pagina descrive il sito com'è al {INFORMA
     barra = barra_quaderno("informativa", 1).replace('href="#assistente-ai"', 'href="../#assistente-ai"').replace('href="#suggerimenti"', 'href="../#suggerimenti"')
     if 'href="#' in barra:
         raise SystemExit("genera-sito: la barra dell'informativa ha collegamenti interni che la pagina non contiene")
-    titolo = "Informativa sulla privacy · Quaderno di acquerello in cornice AI"
+    titolo = "Informativa sulla privacy · Quaderno di acquerello con IA"
     descrizione = "Cookie, video di YouTube, assistente e suggerimenti: come il sito tratta i dati di chi lo visita."
     return f"""<!doctype html>
 <html lang="it">
@@ -1072,7 +1072,7 @@ protezione dei dati personali. Questa pagina descrive il sito com'è al {INFORMA
 <body>
 {barra}{corpo}
 <footer>
-  Quaderno di acquerello in cornice AI · progetto aperto su <a href="{REPO_URL}" target="_blank" rel="noopener">GitHub</a>
+  Quaderno di acquerello con IA · progetto aperto su <a href="{REPO_URL}" target="_blank" rel="noopener">GitHub</a>
 </footer>
 </body>
 </html>
