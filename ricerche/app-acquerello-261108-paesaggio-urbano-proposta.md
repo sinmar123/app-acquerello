@@ -4,7 +4,7 @@ Ricerca e realizzazione proposta, 8 novembre 2026. OpenClaw / OC.
 
 ## Stato e perimetro
 
-La prima ricognizione selezionava i riferimenti senza descriverne i gesti. Con «ok va», messaggio 567 nel topic app-acquerello dell’8 novembre 2026, il curatore ha autorizzato l’analisi e la realizzazione del modulo. La [PR #75](https://github.com/sinmar123/app-acquerello/pull/75) viene aggiornata sullo stesso ramo; il modulo non è ancora pubblicato.
+La prima ricognizione selezionava i riferimenti senza descriverne i gesti. Con «ok va», messaggio 567 nel topic app-acquerello dell’8 novembre 2026, il curatore ha autorizzato l’analisi e la realizzazione del modulo. La [PR #75](https://github.com/sinmar123/app-acquerello/pull/75) è stata aggiornata sullo stesso ramo. Con il successivo «vai» nel topic dell’app l’8 novembre 2026, il curatore ne ha autorizzato l’unione e la pubblicazione; segue la verifica online.
 
 S6 occupa la categoria già prevista per architetture e scorci urbani, senza aggiungerne una settima. La pagina proposta è **4.6, S6 · Paesaggio urbano: vicoli, scale e luce**, percorso `/urbano/`. Il numero resta quello del sesto soggetto; non dipende dall’ordine di completamento dei moduli.
 
@@ -71,6 +71,6 @@ La presentazione di [Tecniche moderne di acquerello paesaggistico](https://www.d
 
 Non viene usato come riferimento urbano il video gratuito di Igor Sava descritto dall’editore come paesaggio rurale invernale. Nessuna nuova corsa di ricerca a pagamento è stata avviata.
 
-Prossima azione: rivedere la PR #75 sul modulo S6; unione e pubblicazione solo con un nuovo via libera esplicito di Sandro nel topic dell’app.
+Prossima azione: Unire la PR #75 autorizzata, verificare la pubblicazione del modulo S6 e registrare l’esito.
 
 Firma: OpenClaw / OC.

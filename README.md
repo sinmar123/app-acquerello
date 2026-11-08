@@ -24,15 +24,15 @@ Su richiesta del curatore, la bibliografia della proposta contiene ora 13 fonti 
 
 La generazione completa e i controlli sui rimandi sono riusciti. Il collaudo visivo nel browser non è stato eseguito perché non è disponibile un eseguibile supportato. Il curatore ha autorizzato unione e pubblicazione con «Pubblica» nel topic dell’app l’8 novembre 2026, messaggio 557. Coordinamento: OpenClaw / OC.
 
-## S6, paesaggio urbano: proposta realizzata, non pubblicata
+## S6, paesaggio urbano: pubblicazione autorizzata, 8 novembre 2026
 
-Con «ok va» nel topic dell’app l’8 novembre 2026, il curatore ha autorizzato l’analisi dei tre video e lo sviluppo del modulo proposto. La [PR #75](https://github.com/sinmar123/app-acquerello/pull/75), sullo stesso ramo, comprende ora **4.6 S6 · Paesaggio urbano: vicoli, scale e luce**, percorso `/urbano/`. Nessuna unione o pubblicazione è autorizzata da quel messaggio.
+Con «ok va» nel topic dell’app l’8 novembre 2026, il curatore ha autorizzato l’analisi dei tre video e lo sviluppo del modulo proposto. La [PR #75](https://github.com/sinmar123/app-acquerello/pull/75), sullo stesso ramo, comprende ora **4.6 S6 · Paesaggio urbano: vicoli, scale e luce**, percorso `/urbano/`. Quel primo messaggio riguardava lo sviluppo. Con il successivo «vai», nello stesso topic l’8 novembre 2026, il curatore ha autorizzato l’unione e la pubblicazione della PR #75.
 
 Tre esempi ospitano quattro studi guidati, quattro infografiche SVG in tre fasi e otto estratti video. Il vicolo con scalinata è una prova autonoma ispirata all’esercitazione del corso; seguono la lettura di case e luce e due vedute urbane. Le schede separano i gesti osservati dagli esercizi proposti. Gli stati della carta e le tinte degli schemi non sono misure o ricette ricavate dai filmati.
 
 Zbukvic documenta disegno, lavaggio e riflessi; il filmato di Castagnet a Cadaqués serve a leggere il dipinto finito, non a ricostruirne l’esecuzione. La demo Iocco/Zangarelli mostra una veduta con edifici, acqua e barche, non una piazza. La [ricerca aggiornata](ricerche/app-acquerello-261108-paesaggio-urbano-proposta.md) registra fonti, copertura e tempi. Cinque estratti si guardano nel lettore della pagina; i tre passaggi della demo italiana si aprono direttamente su YouTube, che ne impedisce l’incorporamento. Fotografie del corso e fotogrammi di studio non fanno parte del repository pubblico. OpenClaw / OC.
 
-Dati e generatori: [`dati/urbano/`](dati/urbano/). Sono allineati Soggetti, Home, barra, informativa sui video, elenco delle pagine accettate dalle API e prompt generato. Il modulo Alberi e i suoi dati restano invariati. Unione e pubblicazione richiedono un nuovo via libera esplicito nel topic dell’app.
+Dati e generatori: [`dati/urbano/`](dati/urbano/). Sono allineati Soggetti, Home, barra, informativa sui video, elenco delle pagine accettate dalle API e prompt generato. Il modulo Alberi e i suoi dati restano invariati. L’unione e la pubblicazione sono autorizzate; dopo l’esecuzione si verifica la pagina online contro gli HTML approvati.
 
 ## Sezioni
 

@@ -4,6 +4,14 @@ Cronologia delle modifiche. Ordine cronologico inverso.
 
 Nota: nelle voci fino al 1/11/2026 il curatore è indicato con lo pseudonimo sinmar.
 
+## 2026-11-08 - OC - Autorizzazione alla pubblicazione del modulo S6
+
+- Sandro ha autorizzato l’unione e la pubblicazione della [PR #75](https://github.com/sinmar123/app-acquerello/pull/75) con «vai» nel topic app-acquerello l’8 novembre 2026. Controllata la testa `4cc2e4ae4bb8748e4938fff765371fdd9bc1306c`: quattordici file previsti, base `55398e2ec8822c2ed7327361c4b805c469264994`, controllo «costruisci» riuscito e unione disponibile.
+- Il via libera è registrato soltanto in README, CHANGELOG e ricerca: dati, generatori, testi del sito e prompt della chat restano invariati. Rigenerazione completa riuscita e tutti gli output confrontati byte per byte con la testa approvata, senza differenze. Restano validi il collaudo mobile e desktop e i controlli sui passaggi video già documentati.
+- Il nuovo commit documentale sarà ricontrollato su GitHub prima dell’unione; seguiranno riscontro del workflow di pubblicazione e confronto HTTP delle 17 pagine. Nessuna nuova ricerca o modifica dei contenuti approvati. Firma: OpenClaw / OC.
+
+Prossima azione: Unire la PR #75 autorizzata, verificare la pubblicazione del modulo S6 e registrare l’esito.
+
 ## 2026-11-08 - OC - Modulo S6, paesaggio urbano: realizzazione proposta
 
 - Con «ok va» nel topic app-acquerello, messaggio 567, il curatore ha autorizzato l’analisi dei tre video e la realizzazione della proposta S6. Preparata la pagina 4.6, `/urbano/`, con tre esempi, quattro studi guidati, quattro infografiche in tre fasi e otto passaggi video. Il vicolo con scalinata resta una prova autonoma, distinta dai soggetti dei maestri.
