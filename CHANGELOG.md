@@ -4,6 +4,33 @@ Cronologia delle modifiche. Ordine cronologico inverso.
 
 Nota: nelle voci fino al 1/11/2026 il curatore è indicato con lo pseudonimo sinmar.
 
+## 2026-11-08 - OC - Autorizzazione alla pubblicazione della scheda Wada
+
+- Sandro ha autorizzato l’unione e la pubblicazione della PR #74 con «Pubblica» nel topic app-acquerello, messaggio 557 dell’8 novembre 2026. Controllata la testa `0c7640efc4f797fabd5f9e61856550606536c476`: sette file previsti, controllo «costruisci» riuscito e diff complessivo GitHub identico alla copia locale, con le sole intestazioni di contesto normalizzate.
+- Aggiornato esclusivamente lo stato documentale in README e CHANGELOG. La scheda resta quella approvata: sette capitoli, 13 fonti esterne senza autocitazioni, quattro prove proposte e nota su autori, tempi e costi. Fonte ICC e testi tecnici invariati. Il collaudo visivo nel browser resta non eseguito per assenza di un eseguibile supportato. Firma: OpenClaw / OC.
+
+Prossima azione: completare l’unione autorizzata della PR #74 e verificare la pubblicazione; poi registrare l’esito.
+
+## 2026-11-08 - OC - Fonti Wada senza autocitazioni
+
+- Su richiesta del curatore, eliminate dalla bibliografia della pagina Wada le due voci interne, sulle prove del Quaderno e sulla nota documentale della ricerca, con i loro 14 richiami. Restano 13 fonti esterne. Le quattro prove rimangono proposte non eseguite; i blocchi che descrivono soltanto il metodo redazionale non si autocitano. Nessuna modifica ai testi, alla nota apribile su autori, tempi e costi o ai dati della fonte ICC.
+- Riscontrato il formato effettivo della voce ICC nell’HTML generato: autore, titolo collegato, descrizione e dettagli della consultazione apribili. Il segnalibro `<a id="fonte-icc"></a>` appartiene al testo Markdown di revisione, non al testo visibile della pagina.
+- Verifiche: generazione completa riuscita; confrontati i 46 output della proposta precedente, 45 identici e modificata soltanto la pagina Wada. Controllati 16 HTML e 1.355 collegamenti interni, senza destinazioni mancanti o ID duplicati. Gulpease Wada 68, sopra la soglia 52. Confronto semantico del JSON: cambiano solo bibliografia, richiami e tipo di quattro blocchi di metodo; tutte le parole della pagina restano invariate. UTF-8 strict senza BOM o caratteri corrotti. Collaudo visivo nel browser non eseguito.
+- Aggiornamento della proposta sul ramo della PR #74, senza unione o pubblicazione. Firma: OpenClaw / OC.
+
+Prossima azione: Rivedere la PR #74 e svolgere il collaudo visivo quando disponibile; unione e pubblicazione solo con nuovo via libera esplicito di Sandro.
+
+## 2026-11-08 - OC - Approfondimento proposto sugli abbinamenti di Sanzo Wada
+
+- Creato il tema 5.3, `sanzo-wada`, dal dossier consegnato da Ricerche: sette capitoli, 15 fonti, nota di metodo apribile e quattro prove dichiarate come proposte non eseguite. Nessuna nuova ricerca a pagamento. Presentati repertorio storico ed edizioni moderne, tinte/valori/superfici, istruzioni dell’appendice, accostamento/mescolanza/velatura e limiti di stampa, schermo e pittura.
+- Applicate le correzioni del confronto: apparato storico e proporzioni riconosciuti, nessuna attribuzione del 60-30-10, mantenute aperte le discrepanze editoriali 161/165 e sulle datazioni, nessuno schiarimento o vantaggio della velatura dichiarato universale. Dati bibliografici confrontati con Seigensha EN/JP e CiNii; riaperti i passaggi NDL 8, 16, 17, 20 e 21 e le fonti tecniche decisive. Esito coerente con il confronto consegnato, senza dichiarare letti integralmente i libri moderni.
+- Nota richiesta dal curatore su ricercatori, tempi e costi: cinque rapporti riusciti, Kimi rifiutato e Grok Build non avviato. Durate confrontate con dossier e log; 2,769431 USD ricostruiti, circa 2,77 USD, limitati alle tre corse DashScope riuscite. Gemini e costi effettivi non esposti restano distinti dalla previsione iniziale. Quota GPT e durata non misurata di verifica e coordinamento dichiarate. Nota di provenienza aggiunta in `ricerche/`.
+- Integrati il tema nell’elenco e nella Home mediante i generatori esistenti e il riepilogo nel prompt della chat. Il piè di pagina delle questioni usa la data del singolo tema: i testi precedenti restano al 3 novembre, la nuova pagina all’8 novembre. Nessun’altra guida, immagine o API modificata.
+- Verifiche: generazione completa riuscita con Pillow già disponibile, senza installazioni; Gulpease della nuova pagina 69, sopra la soglia 52. Controllate 16 pagine e 1.379 rimandi interni: nessun collegamento mancante o ID duplicato. Confrontati i 45 output della base `c69b3ec`: 41 identici, cambiano soltanto Home, elenco Approfondimenti, sitemap e prompt generato; aggiunta la sola pagina Wada. UTF-8 strict senza BOM, caratteri corrotti o mojibake nei file modificati. Collaudo visivo non eseguito: browser del bot senza eseguibile supportato.
+- Lavoro in una copia Git separata, su ramo dedicato e revisione da sottoporre al curatore. Non sovrascritti i sorgenti dello snapshot condiviso né i registri della consegna di Ricerche. Nessuna unione o pubblicazione. Firma: OpenClaw / OC.
+
+Prossima azione: revisione del curatore della nuova pagina e collaudo visivo quando disponibile; unione e pubblicazione solo dopo un nuovo via libera esplicito.
+
 ## 2026-11-07 - OC - Unione autorizzata del finale dell’introduzione, PR #73
 
 - Sandro ha autorizzato nel topic dell’app l’unione della [PR #73](https://github.com/sinmar123/app-acquerello/pull/73) con «Ok unisci». Ricontrollati la testa `a746398`, i tre file effettivi, il diff locale e quello di GitHub sulla base `6246e30`, l’assenza di conflitti e il controllo «costruisci» superato.
