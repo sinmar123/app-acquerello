@@ -4,6 +4,17 @@ Cronologia delle modifiche. Ordine cronologico inverso.
 
 Nota: nelle voci fino al 1/11/2026 il curatore è indicato con lo pseudonimo sinmar.
 
+## 2026-11-08 - OC - Modulo S6, paesaggio urbano: realizzazione proposta
+
+- Con «ok va» nel topic app-acquerello, messaggio 567, il curatore ha autorizzato l’analisi dei tre video e la realizzazione della proposta S6. Preparata la pagina 4.6, `/urbano/`, con tre esempi, quattro studi guidati, quattro infografiche in tre fasi e otto passaggi video. Il vicolo con scalinata resta una prova autonoma, distinta dai soggetti dei maestri.
+- Riscontrati otto intervalli con 175 campioni visivi, uno per secondo; letti anche i sottotitoli inglesi di Zbukvic. Castagnet a Cadaqués serve a leggere il dipinto finito, non a ricostruirne i lavaggi. La demo Iocco/Zangarelli mostra una veduta con edifici, acqua e barche, non una piazza. Nessuna visione continua integrale dichiarata. Fotografie del corso e campioni dei video restano fuori dal repository e dal sito; nessuna ricetta di pigmenti dedotta dalle immagini. Le prove non sono state eseguite e gli stati della carta riguardano le proposte, non misure dal filmato.
+- Integrati Soggetti, Home e sua figura del vicolo, barra, informativa, sitemap, pagine accettate dalle API e prompt della chat. I nomi degli esempi sono letti dal JSON del modulo. Riutilizzati stile e lettore degli Alberi senza modificarne dati o procedimenti. Nuovo generatore con controlli su tempi, durate, tre fasi, rimandi e segmenti inutilizzati.
+- Verifiche: generazione completa riuscita, 17 HTML e 1.444 rimandi interni validi, nessun ID duplicato; Gulpease della nuova pagina 80, sopra la soglia 52. Rispetto ai 46 output della base: 28 identici, 18 aggiornati e aggiunta la pagina urbana; sulle 13 pagine preesistenti fuori da Home, Soggetti e informativa cambia soltanto il collegamento nella barra. Base rigenerata e confrontata con tutti i 46 hash iniziali. `git diff --check` senza rilievi; file modificati UTF-8 strict senza BOM o caratteri corrotti.
+- Collaudo effettivo in Chromium temporaneo a 412 e 1280 pixel: nessuno sbordamento orizzontale, dodici schemi SVG controllati, rimandi del modulo sotto la barra e nessun errore JavaScript. Riproduzione reale di Zbukvic e Castagnet; su Zbukvic verificati metà velocità, ripetizione, arresto a 573,81 s per fine impostata a 574 s e riavvio. Nessuna richiesta a YouTube o Google prima del clic. La demo italiana restituisce il codice 150 nonostante i metadati favorevoli: rispettato il blocco, i tre passaggi aprono YouTube al minuto indicato e dichiarano l’assenza di arresto automatico. Verificati i tre collegamenti e il caricamento degli Alberi con i 32 estratti esistenti.
+- Aggiornamento sullo stesso ramo della PR #75, senza unione o pubblicazione e senza nuove corse di ricerca a pagamento. README, istruzioni dell’app e documento di ricerca allineati. Firma: OpenClaw / OC.
+
+Prossima azione: Rivedere la PR #75 sul modulo S6; unione e pubblicazione solo con un nuovo via libera esplicito di Sandro nel topic dell’app.
+
 ## 2026-11-08 - OC - Ricerca preliminare per S6, paesaggio urbano
 
 - Dal nuovo esercizio del corso, su richiesta del curatore, preparata una proposta per S6, «Architetture e scorci urbani», con un primo esempio di vicolo e scalinata. Tre fotografie conservate soltanto nella cartella locale di lavoro, senza attribuire con certezza località, autori o pigmenti.

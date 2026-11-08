@@ -1,0 +1,203 @@
+{
+  "apertura": {
+    "titolo": "S6 · Paesaggio urbano: vicoli, scale e luce",
+    "sommario": "Tre esempi, quattro studi guidati e otto estratti da tre video. Il percorso parte dal vicolo con scalinata e si apre a case, strade e vedute con acqua.",
+    "premessa": [
+      "Il modulo prende spunto da un esercizio di un corso avanzato di acquerello: un vicolo con scalinata, muri blu e facciate in luce. Il soggetto invita a studiare piani, valori e profondità, prima dei piccoli dettagli.",
+      "Le fotografie del corso restano materiale di studio interno. Lo schema del vicolo è un disegno autonomo, non una riproduzione delle fotografie. Non si attribuiscono al docente i procedimenti proposti qui.",
+      "Ogni scheda distingue ciò che si vede nel video da una prova proposta per il foglio. Le tre fasi dell’infografica descrivono questa prova: non ricostruiscono passaggi assenti dalle riprese."
+    ],
+    "metodo": [
+      "Consultazione dell’8 novembre 2026: lettura visiva dei tre filmati a intervalli e controllo degli otto estratti con un campione per secondo. Non si dichiara una visione continua integrale.",
+      "Per Zbukvic sono stati letti anche i sottotitoli inglesi. Le note sugli altri due video descrivono solo quanto è visibile: non riportano né traducono il parlato.",
+      "Il filmato di Castagnet è usato per leggere il dipinto finito, non per documentare la sua esecuzione. Nella demo Iocco/Zangarelli si osserva una veduta con edifici, acqua e barche; i singoli gesti non sono attribuiti separatamente ai due autori.",
+      "Gli stati della carta sono indicazioni per le prove proposte. Non sono misure dell’umidità nei video. Le tinte degli schemi sono convenzionali, non campioni di pigmenti o ricette dei maestri.",
+      "La prova nel browser ha confermato il lettore per Zbukvic e Castagnet. Per la demo italiana YouTube non consente la riproduzione incorporata: i tre passaggi aprono la pagina originale al minuto indicato."
+    ]
+  },
+  "video": {
+    "81w9PBZOmZ8": {
+      "titolo": "Joseph Zbukvic paints an amazing street scene in watercolour I Colour In Your Life",
+      "autore": "Joseph Zbukvic",
+      "canale": "Colour in Your Life",
+      "durata_s": 1440,
+      "consultato_il": "2026-11-08",
+      "limite": "Episodio con intervista e dimostrazione. Estratti confrontati anche con i sottotitoli inglesi."
+    },
+    "myuEQfSbtEw": {
+      "titolo": "Watercolor lesson by Alvaro Castagnet in Cadaques",
+      "autore": "Alvaro Castagnet",
+      "canale": "Angela Barbi (Enjoy Painting Catalonia)",
+      "durata_s": 428,
+      "consultato_il": "2026-11-08",
+      "limite": "Spiegazione e presentazione del dipinto finito. Qui si studia il risultato visibile, senza ricavarne una sequenza esecutiva."
+    },
+    "i-owFItvqag": {
+      "titolo": "Master Demo - MASSIMILIANO IOCCO, ROBERTO ZANGARELLI",
+      "autore": "Massimiliano Iocco e Roberto Zangarelli",
+      "canale": "FermoInAcquarello",
+      "durata_s": 3011,
+      "consultato_il": "2026-11-08",
+      "limite": "Osservazione visiva della dimostrazione al tavolo. Nessuna trascrizione del parlato o attribuzione dei singoli gesti a uno dei due autori. Il video non è disponibile nel lettore incorporato: i passaggi si aprono su YouTube."
+    }
+  },
+  "esempi": [
+    {
+      "voce": "U1 Vicolo e scalinata",
+      "breve": "Vicolo e scale",
+      "descrizione": "Un esercizio sui rapporti fra facciate, salita e ombre. Il primo studio è a valori, prima di cercare il colore delle pareti.",
+      "modalita": [
+        {
+          "id": "U1-a",
+          "titolo": "Prima i piani, poi i gradini",
+          "tipo": "Applicazione proposta al vicolo",
+          "schema": "vicolo",
+          "osservazione": "Zbukvic imposta il disegno della strada e dei veicoli. In seguito lavora una grande massa scura di edifici e ne ammorbidisce parte del bordo.",
+          "proposta": "Per il vicolo si potrebbe partire da tre valori: carta chiara, tono medio e scuro. La scalinata verrebbe definita solo dopo le masse dei muri.",
+          "procedimento": "Si propone un piccolo studio con un solo colore già noto. Si disegnano i due lati del vicolo e pochi gradini campione. Si stende un tono chiaro, lasciando libere le facciate in luce. Dopo l’asciugatura si aggiungono le ombre scelte, poi porte e pochi bordi dei gradini. È un adattamento al nuovo soggetto, non una dimostrazione di scale di Zbukvic.",
+          "controllo": "Coprendo i dettagli, il vicolo dovrebbe restare leggibile. Se la salita scompare, si rivedono le larghezze dei gradini e il rapporto fra chiari e scuri.",
+          "segmenti": [
+            "Z1",
+            "Z3"
+          ],
+          "fasi": [
+            {
+              "titolo": "Disegno essenziale",
+              "carta": "asciutta",
+              "attrezzo": "Matita",
+              "testo": "Si tracciano i piani dei muri e alcuni gradini, confrontandone le larghezze con il riferimento. Porte e vasi possono attendere."
+            },
+            {
+              "titolo": "Chiari e mezzi toni",
+              "carta": "asciutta",
+              "attrezzo": "Pennello largo",
+              "testo": "Si propone un primo tono leggero sulle zone scelte. Le facciate più luminose restano carta. Si lascia asciugare."
+            },
+            {
+              "titolo": "Ombre e pochi accenti",
+              "carta": "asciutta",
+              "attrezzo": "Pennello a punta",
+              "testo": "Si uniscono le ombre che nel riferimento sono contigue. Bastano pochi bordi di gradini, porte e vasi per completare lo studio."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "voce": "U2 Un angolo di case",
+      "breve": "Case e luce",
+      "descrizione": "Il dipinto di Castagnet a Cadaqués offre un confronto fra grandi zone scure, facciate e una fascia chiara lungo gli edifici.",
+      "modalita": [
+        {
+          "id": "U2-a",
+          "titolo": "Leggere il dipinto per masse",
+          "tipo": "Lettura del risultato e prova proposta",
+          "schema": "case",
+          "osservazione": "Nell’inquadratura del dipinto finito si distinguono una grande massa scura, la parete degli edifici e una fascia chiara con piccole figure. Il mare compare sul lato.",
+          "proposta": "Si potrebbe ridurre un proprio scorcio a poche macchie, prima di descrivere finestre e tegole. Il video serve al confronto del risultato, non all’ordine dei lavaggi.",
+          "procedimento": "Si propone di scegliere una fotografia con una facciata illuminata. In un primo schizzo si segnano solo le zone da lasciare chiare. Si aggiunge un tono medio, poi uno scuro in poche forme ampie. I dettagli entrano soltanto se aiutano a distinguere i piani. La sequenza è un esercizio redazionale: non viene attribuita a Castagnet.",
+          "controllo": "Lo studio dovrebbe conservare una zona di luce riconoscibile anche senza finestre. Si confrontano i due schizzi, non i nomi dei colori.",
+          "segmenti": [
+            "C1"
+          ],
+          "fasi": [
+            {
+              "titolo": "Cercare la luce",
+              "carta": "asciutta",
+              "attrezzo": "Matita",
+              "testo": "Si sceglie una fascia o una facciata da tenere chiara. Si segnano poche forme, senza copiare ogni finestra."
+            },
+            {
+              "titolo": "Riunire i valori",
+              "carta": "asciutta",
+              "attrezzo": "Pennello largo",
+              "testo": "Si propone un tono medio per separare i piani. Dopo l’asciugatura, si raccolgono gli scuri in poche masse."
+            },
+            {
+              "titolo": "Scegliere gli accenti",
+              "carta": "asciutta",
+              "attrezzo": "Pennello a punta",
+              "testo": "Si aggiungono poche aperture o figure. La fascia chiara resta continua dove lo richiede il riferimento scelto."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "voce": "U3 Strade e vedute urbane",
+      "breve": "Strade e vedute",
+      "descrizione": "Due confronti: la strada bagnata di Zbukvic e la veduta con acqua e barche della dimostrazione italiana. Non sono lo stesso soggetto del vicolo.",
+      "modalita": [
+        {
+          "id": "U3-a",
+          "titolo": "Strada: lavaggio e riflessi",
+          "tipo": "Gesti osservati e prova proposta",
+          "schema": "strada",
+          "osservazione": "Zbukvic guida il bordo carico del lavaggio intorno alle sagome chiare. Più avanti bagna la strada e inserisce segni scuri che si allungano sotto i veicoli.",
+          "proposta": "Per uno scorcio di strada si potrebbe provare un fondo chiaro, poche masse di edifici e riflessi limitati ad alcune zone bagnate.",
+          "procedimento": "Si propone un piccolo studio separato dal vicolo. Si prepara il disegno e si conserva carta chiara per i veicoli. Si stende un lavaggio leggero e si lascia asciugare. Si aggiungono gli edifici, senza chiudere tutte le luci. Per la prova dei riflessi si bagna una zona della strada e vi si posa poco colore. La nuova sequenza semplifica l’esercizio: non riproduce tutta la gestione dei tempi mostrata dall’autore.",
+          "controllo": "I riflessi non dovrebbero occupare tutta la strada. Si confrontano una prova su zona bagnata e una su carta asciutta, lasciando invariati disegno e miscela.",
+          "segmenti": [
+            "Z2",
+            "Z4"
+          ],
+          "fasi": [
+            {
+              "titolo": "Fondo chiaro",
+              "carta": "asciutta",
+              "attrezzo": "Pennello largo",
+              "testo": "Si propone un lavaggio leggero. Si conserva carta per le sagome chiare e si lascia asciugare prima degli edifici."
+            },
+            {
+              "titolo": "Masse degli edifici",
+              "carta": "asciutta",
+              "attrezzo": "Pennello a punta",
+              "testo": "Si aggiungono i piani più scuri ai lati della strada. Si evitano contorni uniformi intorno a ogni luce."
+            },
+            {
+              "titolo": "Riflessi su zona bagnata",
+              "carta": "bagnata",
+              "attrezzo": "Pennello a punta",
+              "testo": "Si bagna soltanto una parte della strada. Si provano segni sotto alcuni veicoli, senza ripassarli di continuo."
+            }
+          ]
+        },
+        {
+          "id": "U3-b",
+          "titolo": "Veduta: campiture e segni brevi",
+          "tipo": "Gesti osservati e prova proposta",
+          "schema": "veduta",
+          "osservazione": "Nella demo Iocco/Zangarelli un pennello aggiunge colore alle architetture ancora chiare. Seguono segni più minuti sugli edifici; in un passaggio avanzato si interviene vicino alle barche.",
+          "proposta": "Per una veduta con edifici e acqua si potrebbe separare lo studio delle campiture da quello degli accenti. I particolari non devono necessariamente comparire tutti.",
+          "procedimento": "Si propone uno schizzo con una fila di edifici e uno spazio d’acqua in basso. Si stendono tinte leggere e si lascia asciugare. Si distinguono poi alcuni volumi, conservando parti chiare. Infine si scelgono poche finestre, linee verticali e una barca in primo piano. Le soste fra gli strati sono una scelta della prova; non si deduce dal filmato lo stato esatto della carta.",
+          "controllo": "Si osserva lo studio da lontano prima di aggiungere altre finestre. Se i volumi si confondono, si correggono i valori invece di moltiplicare i segni.",
+          "segmenti": [
+            "I1",
+            "I2",
+            "I3"
+          ],
+          "fasi": [
+            {
+              "titolo": "Campiture leggere",
+              "carta": "asciutta",
+              "attrezzo": "Pennello largo",
+              "testo": "Si propone un fondo chiaro per cielo, edifici e acqua. Si conservano parti di carta e si lascia asciugare."
+            },
+            {
+              "titolo": "Distinguere i volumi",
+              "carta": "asciutta",
+              "attrezzo": "Pennello a punta",
+              "testo": "Si scelgono alcuni lati in ombra e pochi tetti. Le campiture restano leggibili anche senza i particolari."
+            },
+            {
+              "titolo": "Pochi segni finali",
+              "carta": "asciutta",
+              "attrezzo": "Pennello a punta",
+              "testo": "Si aggiungono una barca e pochi segni sugli edifici. Si confronta il loro peso con quello delle masse iniziali."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

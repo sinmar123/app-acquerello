@@ -3,7 +3,7 @@
   "sottotitolo": "Esempi, infografiche e passaggi dei video didattici",
   "introduzione": [
     "Ogni modulo studia un soggetto attraverso più modalità tratte dai video, con infografiche in tre fasi e passaggi indicati al secondo.",
-    "Il modulo sugli alberi è pubblicato. Gli altri cinque sono in preparazione; le schede ne presentano il contenuto previsto."
+    "Sono disponibili i moduli su alberi e paesaggio urbano. Gli altri quattro sono in preparazione; le schede ne presentano il contenuto previsto."
   ],
   "soggetti": [
     {
@@ -55,12 +55,19 @@
     },
     {
       "codice": "S6",
-      "stato": "in_programma",
-      "etichetta_stato": "In preparazione",
-      "titolo": "Architetture e scorci urbani",
-      "sottotitolo": "Edifici, ombre e intonaci",
-      "descrizione": "Il modulo studierà le ombre collegate, la trama dei muri e gli accenti finali in case, borghi e scorci urbani.",
-      "badge": ["Ombre collegate", "Trama dei muri", "Luce e controluce", "Accenti finali"]
+      "stato": "pubblicato",
+      "etichetta_stato": "Disponibile",
+      "titolo": "Paesaggio urbano",
+      "sottotitolo": "Vicoli, scale e luce",
+      "descrizione": "Tre esempi e quattro studi guidati: dal vicolo con scalinata alle case, alla strada bagnata e alle vedute con acqua. Gesti osservati e prove proposte restano distinti.",
+      "badge": [
+        "3 esempi",
+        "4 infografiche in tre fasi",
+        "8 estratti video",
+        "prove proposte"
+      ],
+      "href": "../urbano/",
+      "sottovoci_da": "urbano"
     }
   ]
 }

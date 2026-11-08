@@ -11,7 +11,10 @@ QUI = os.path.dirname(os.path.abspath(__file__))
 FONTE = os.path.join(QUI, "soggetti.json")
 # I nomi degli esempi di un modulo pubblicato si leggono dai dati del modulo: così la sezione
 # Soggetti non può dare a un esempio un nome diverso da quello della sua pagina.
-MODULI = {"alberi": (os.path.join(QUI, "..", "alberi", "pit-261014-video-gesti-alberi.json"), "../alberi/")}
+MODULI = {
+    "alberi": (os.path.join(QUI, "..", "alberi", "pit-261014-video-gesti-alberi.json"), "../alberi/", "alberi"),
+    "urbano": (os.path.join(QUI, "..", "urbano", "urbano.json"), "../urbano/", "esempi"),
+}
 PAGINA = os.path.join(QUI, "soggetti.html")
 
 e = lambda t: html.escape(str(t or ""))
@@ -59,9 +62,9 @@ footer { margin-top: 28px; border-top: 1px solid #ddd; padding-top: 12px; font-s
 
 
 def sottovoci_da(modulo):
-    percorso, href = MODULI[modulo]
+    percorso, href, elenco = MODULI[modulo]
     voci = []
-    for t in json.load(open(percorso, encoding="utf-8"))["alberi"]:
+    for t in json.load(open(percorso, encoding="utf-8"))[elenco]:
         sigla, nome = t["voce"].split(" ", 1)
         voci.append({"sigla": sigla, "titolo": nome, "href": f"{href}#{sigla}"})
     return voci

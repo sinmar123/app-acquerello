@@ -63,7 +63,7 @@ SEZIONI = [
         "breve": "Soggetti",
         "nome_form": "Soggetti (Alberi, Nuvole, Fiori...)",
         "titolo": "Soggetti: esercizi per tema",
-        "sottotitolo": "Un modulo pubblicato sugli alberi e cinque in preparazione",
+        "sottotitolo": "Alberi e paesaggio urbano, con quattro moduli in preparazione",
         "script_genera": DATI_DIR / "soggetti" / "genera-soggetti.py",
         "html_generato": DATI_DIR / "soggetti" / "soggetti.html",
     },
@@ -77,6 +77,17 @@ SEZIONI = [
         "sottotitolo": "Sei esempi di alberi, siepi e arbusti, sviluppati in 25 modalità tratte dai video, con un'infografica in tre fasi per ciascuna",
         "script_genera": DATI_DIR / "alberi" / "pit-261013-video-gesti.py",
         "html_generato": DATI_DIR / "alberi" / "pit-261014-video-gesti-alberi.html",
+    },
+    {
+        "slug": "urbano",
+        "numero": "4.6",
+        "breve": "Paesaggio urbano",
+        "modulo_di": "soggetti",
+        "nome_form": "Soggetti (Alberi, Nuvole, Fiori...)",
+        "titolo": "S6 · Paesaggio urbano: vicoli, scale e luce",
+        "sottotitolo": "Tre esempi, quattro studi guidati con infografiche e otto estratti da tre video",
+        "script_genera": DATI_DIR / "urbano" / "genera-urbano.py",
+        "html_generato": DATI_DIR / "urbano" / "urbano.html",
     },
     {
         "slug": "approfondimenti",
@@ -356,6 +367,7 @@ def genera_prompt_chat():
     tavolozza = json.loads((DATI_DIR / "colori" / "tavolozza.json").read_text(encoding="utf-8"))
     alberi = json.loads((DATI_DIR / "alberi" / "pit-261014-video-gesti-alberi.json").read_text(encoding="utf-8"))
     soggetti = json.loads((DATI_DIR / "soggetti" / "soggetti.json").read_text(encoding="utf-8"))
+    urbano = json.loads((DATI_DIR / "urbano" / "urbano.json").read_text(encoding="utf-8"))
     capitoli = {c["id"]: c for c in principi["capitoli"]}
 
     def voci(capitolo, indice):
@@ -383,6 +395,9 @@ def genera_prompt_chat():
         sigla, nome = t["voce"].split(" ", 1)
         modalita = "; ".join(re.sub(r"^Modalità \d+:\s*", "", m["titolo"]) for m in t.get("modalita", []))
         esempi.append(f"- {sigla} {nome}. Modalità: {modalita}.")
+    esempi_urbani = []
+    for t in urbano["esempi"]:
+        esempi_urbani.append(f"- {t['voce']}: " + "; ".join(m["titolo"] for m in t["modalita"]) + ".")
     in_preparazione = ", ".join(s["titolo"] for s in soggetti["soggetti"] if s["stato"] != "pubblicato")
     regola = senza_tag(next(b["testo"] for b in capitoli["abbinare"]["blocchi"] if b["tipo"] == "p"))
 
@@ -413,6 +428,10 @@ Le 12 miscele della tavolozza ridotta, M1-M12 ({SITO_URL}/principi/#miscele). {d
 
 Il modulo S1, alberi, siepi e arbusti ({SITO_URL}/alberi/), con le modalità tratte dai video:
 {chr(10).join(esempi)}
+
+Il modulo S6, paesaggio urbano ({SITO_URL}/urbano/), distingue i gesti osservati dalle prove proposte, non eseguite:
+{chr(10).join(esempi_urbani)}
+I tre riferimenti sono Zbukvic (disegno, lavaggio, riflessi), Castagnet a Cadaqués (solo lettura del dipinto finito), Iocco/Zangarelli (veduta con edifici, acqua e barche, non una piazza). Le fasi e gli stati della carta riguardano le prove proposte. Non sono ricette dei maestri; i pigmenti non sono identificati.
 
 Moduli in preparazione: {in_preparazione}.
 
@@ -872,6 +891,10 @@ def icona_scheda(slug: str) -> str:
                 '<rect x="8" y="8" width="48" height="42" rx="2" fill="#a07a52"/><rect x="13" y="13" width="38" height="32" fill="#fffdf8"/>'
                 '<rect x="15" y="15" width="34" height="15" fill="#7fa3cf" fill-opacity=".6"/><circle cx="40" cy="21" r="3.5" fill="#e8b24a" fill-opacity=".85"/>'
                 '<path d="M15 34Q24 25 32 31T49 28V43H15Z" fill="#6f8f5a" fill-opacity=".8"/></svg>')
+    if slug == "urbano":  # facciate e gradini, figura disegnata
+        return ('<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M5 8l20 10v25L5 57ZM59 8L39 18v25l20 14Z" '
+                'fill="#a7bfd6" stroke="#526b88" stroke-width="1.5"/><path d="M25 43h14M21 48h22M16 54h32M10 60h44" '
+                'stroke="#3f6292" stroke-width="3"/><rect x="28" y="25" width="8" height="16" fill="#ead9b4"/></svg>')
     if slug == "alberi":  # albero con chioma e tronco
         return ('<svg viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="57" rx="22" ry="4" fill="#6f8f5a" fill-opacity=".35"/><path d="M30 58V38h4v20Z" fill="#7a5236"/><path d="M32 46l-7-6M32 43l6-5" stroke="#7a5236" stroke-width="2" stroke-linecap="round"/><circle cx="32" cy="25" r="15" fill="#4f7d45" fill-opacity=".85"/><circle cx="21" cy="32" r="10" fill="#6f9a52" fill-opacity=".8"/><circle cx="43" cy="31" r="11" fill="#3f6a3a" fill-opacity=".8"/><circle cx="27" cy="19" r="6" fill="#9cc07a" fill-opacity=".55"/></svg>')
     return ""
@@ -983,7 +1006,7 @@ def genera_home(sezioni_pronte: list[dict]) -> str:
 </header>
 <main>
   <section class="cf-sviluppo" aria-label="Stato del Quaderno">
-    <p><strong>Il Quaderno è in costruzione.</strong> Il modulo sugli alberi è pubblicato; cieli e nuvole, fiori, acqua e riflessi, rocce e architetture sono <a href="./soggetti/">in preparazione</a>.</p>
+    <p><strong>Il Quaderno è in costruzione.</strong> I moduli sugli alberi e sul paesaggio urbano sono disponibili; cieli e nuvole, fiori, acqua e riflessi e rocce sono <a href="./soggetti/">in preparazione</a>.</p>
     <p>Correzioni, integrazioni, video e le proprie opere si propongono dalla <a href="#suggerimenti">casella dei suggerimenti</a>.</p>
   </section>
 
@@ -1035,7 +1058,7 @@ caratteri, script o immagini da altri siti. Il sito non chiede di registrarsi.</
 connessioni, per esempio l'indirizzo IP, per consegnare le pagine.</p>
 
 <h2>I video di YouTube</h2>
-<p>Nella sezione <a href="../alberi/">Alberi</a> i passaggi dei video si guardano col lettore di YouTube. Finché non si
+<p>Nei moduli <a href="../alberi/">Alberi</a> e <a href="../urbano/">Paesaggio urbano</a> i passaggi dei video si guardano col lettore di YouTube. Finché non si
 preme «Guarda il video», la pagina non carica nulla da YouTube o da Google: al posto del lettore c'è un riquadro del
 sito, senza immagini del video.</p>
 <p>Premendo il pulsante, il browser scarica il lettore ufficiale di YouTube. Da quel momento YouTube, cioè Google,
