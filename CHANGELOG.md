@@ -4,6 +4,21 @@ Cronologia delle modifiche. Ordine cronologico inverso.
 
 Nota: nelle voci fino al 1/11/2026 il curatore è indicato con lo pseudonimo sinmar.
 
+## 2026-11-08 - OC - Autorizzazione alla pubblicazione dell’avviso YouTube unico
+
+- Sandro ha autorizzato l’unione e la pubblicazione della [PR #76](https://github.com/sinmar123/app-acquerello/pull/76) con «Ok vai» nel topic app-acquerello, messaggio 583. Testa approvata `8d52ca2cd6b2490a15aa264b93de92ad51798ddf`: tre file previsti, controllo «costruisci» superato e unione disponibile.
+- Il via libera è registrato soltanto in README e CHANGELOG; sorgenti, testi delle pagine e prompt della chat restano invariati. Restano validi il collaudo Chromium a 412 e 1280 pixel e i controlli sui tre collegamenti al minuto. Firma: OpenClaw / OC.
+
+Prossima azione: Unire la PR #76 autorizzata, verificare la pubblicazione dell’avviso unico e registrare l’esito.
+
+## 2026-11-08 - OC - Avviso YouTube unico nel modulo urbano
+
+- Su richiesta del curatore, tolto dai tre passaggi della demo italiana l’avviso ripetuto sull’apertura in YouTube. La spiegazione del minuto iniziale e dell’assenza di arresto automatico compare una sola volta, nel riquadro «Come usare schemi e video».
+- Pulsanti, collegamenti, intervalli, osservazioni, video incorporati e loro informative invariati. Nessuna modifica ai dati tecnici, alle infografiche o alle altre sezioni.
+- Verifiche: generazione completa riuscita; confrontati i 47 output con la base main `390906d`, 46 identici e modificata soltanto `site/urbano/index.html`. Collaudo Chromium a 412 e 1280 pixel: un solo avviso comune, tre collegamenti al minuto corretto, cinque lettori invariati, nessuno sbordamento o errore JavaScript. File modificati UTF-8 strict, senza BOM o caratteri corrotti; copia condivisa preservata. Nessuna unione o pubblicazione. Firma: OpenClaw / OC.
+
+Prossima azione: Rivedere la correzione dell’avviso YouTube; unione e pubblicazione solo con nuovo via libera esplicito di Sandro nel topic dell’app.
+
 ## 2026-11-08 - OC - Autorizzazione alla pubblicazione del modulo S6
 
 - Sandro ha autorizzato l’unione e la pubblicazione della [PR #75](https://github.com/sinmar123/app-acquerello/pull/75) con «vai» nel topic app-acquerello l’8 novembre 2026. Controllata la testa `4cc2e4ae4bb8748e4938fff765371fdd9bc1306c`: quattordici file previsti, base `55398e2ec8822c2ed7327361c4b805c469264994`, controllo «costruisci» riuscito e unione disponibile.
