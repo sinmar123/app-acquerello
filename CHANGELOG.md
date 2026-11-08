@@ -4,6 +4,17 @@ Cronologia delle modifiche. Ordine cronologico inverso.
 
 Nota: nelle voci fino al 1/11/2026 il curatore è indicato con lo pseudonimo sinmar.
 
+## 2026-11-08 - OC - Approfondimento proposto sugli abbinamenti di Sanzo Wada
+
+- Creato il tema 5.3, `sanzo-wada`, dal dossier consegnato da Ricerche: sette capitoli, 15 fonti, nota di metodo apribile e quattro prove dichiarate come proposte non eseguite. Nessuna nuova ricerca a pagamento. Presentati repertorio storico ed edizioni moderne, tinte/valori/superfici, istruzioni dell’appendice, accostamento/mescolanza/velatura e limiti di stampa, schermo e pittura.
+- Applicate le correzioni del confronto: apparato storico e proporzioni riconosciuti, nessuna attribuzione del 60-30-10, mantenute aperte le discrepanze editoriali 161/165 e sulle datazioni, nessuno schiarimento o vantaggio della velatura dichiarato universale. Dati bibliografici confrontati con Seigensha EN/JP e CiNii; riaperti i passaggi NDL 8, 16, 17, 20 e 21 e le fonti tecniche decisive. Esito coerente con il confronto consegnato, senza dichiarare letti integralmente i libri moderni.
+- Nota richiesta dal curatore su ricercatori, tempi e costi: cinque rapporti riusciti, Kimi rifiutato e Grok Build non avviato. Durate confrontate con dossier e log; 2,769431 USD ricostruiti, circa 2,77 USD, limitati alle tre corse DashScope riuscite. Gemini e costi effettivi non esposti restano distinti dalla previsione iniziale. Quota GPT e durata non misurata di verifica e coordinamento dichiarate. Nota di provenienza aggiunta in `ricerche/`.
+- Integrati il tema nell’elenco e nella Home mediante i generatori esistenti e il riepilogo nel prompt della chat. Il piè di pagina delle questioni usa la data del singolo tema: i testi precedenti restano al 3 novembre, la nuova pagina all’8 novembre. Nessun’altra guida, immagine o API modificata.
+- Verifiche: generazione completa riuscita con Pillow già disponibile, senza installazioni; Gulpease della nuova pagina 69, sopra la soglia 52. Controllate 16 pagine e 1.379 rimandi interni: nessun collegamento mancante o ID duplicato. Confrontati i 45 output della base `c69b3ec`: 41 identici, cambiano soltanto Home, elenco Approfondimenti, sitemap e prompt generato; aggiunta la sola pagina Wada. UTF-8 strict senza BOM, caratteri corrotti o mojibake nei file modificati. Collaudo visivo non eseguito: browser del bot senza eseguibile supportato.
+- Lavoro in una copia Git separata, su ramo dedicato e revisione da sottoporre al curatore. Non sovrascritti i sorgenti dello snapshot condiviso né i registri della consegna di Ricerche. Nessuna unione o pubblicazione. Firma: OpenClaw / OC.
+
+Prossima azione: revisione del curatore della nuova pagina e collaudo visivo quando disponibile; unione e pubblicazione solo dopo un nuovo via libera esplicito.
+
 ## 2026-11-07 - OC - Unione autorizzata del finale dell’introduzione, PR #73
 
 - Sandro ha autorizzato nel topic dell’app l’unione della [PR #73](https://github.com/sinmar123/app-acquerello/pull/73) con «Ok unisci». Ricontrollati la testa `a746398`, i tre file effettivi, il diff locale e quello di GitHub sulla base `6246e30`, l’assenza di conflitti e il controllo «costruisci» superato.

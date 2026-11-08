@@ -249,7 +249,7 @@ def pagina_tema(sez, tema):
         f'<div class="intro"><h2>Premessa</h2>{premessa}</div>'
         + nota_metodo
         + "\n".join(capitoli)
-        + piede(sez, "../../")
+        + piede({**sez, "data": tema["data"]}, "../../")
     )
     titolo = f"{numero} · {tema['titolo']} · {sez['titolo']}"
     return documento(titolo, tema["sottotitolo"], corpo, rimandi_fonti.JS), len(citate)
