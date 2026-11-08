@@ -4,6 +4,15 @@ Cronologia delle modifiche. Ordine cronologico inverso.
 
 Nota: nelle voci fino al 1/11/2026 il curatore è indicato con lo pseudonimo sinmar.
 
+## 2026-11-08 - OC - Sanzo Wada: chiarezza espositiva e registro da pubblicazione
+
+- Il curatore ha richiesto di rendere comprensibile la scheda senza semplificarne i contenuti, mantenendo uno stile da pubblicazione di alto livello. Ha poi indicato il lavoro di Bruce MacEvoy come riferimento espositivo. Sviluppata una prosa autonoma, con definizioni, nessi argomentativi, esempi dichiarati e distinzione fra dati, interpretazioni e proposte.
+- Riscritti sintesi, premessa e tutti i sette capitoli: identità dei libri, lettura di tinta/valore/croma e superfici, indicazioni storiche, differenze fra accostamento/miscela/velatura, trasferimento sulla carta e quattro prove. Discrepanze bibliografiche spostate nel capitolo finale. Esplicitato che cambiare l’estensione non garantisce un’inversione della dominante. Nessun tema originario eliminato, nessuna ricetta di pigmenti inventata; esempi redazionali distinti da Wada e prove sempre dichiarate non eseguite.
+- Fonti bibliografiche, relativi dettagli e rendiconto su autori, modelli, tempi e costi confrontati con la base e identici. Mantenuti tutti i dati numerici dei capitoli e gli identificativi dei sette capitoli. Riscontri mirati su cataloghi editoriali, Handprint, ICC e README del dataset; nessuna lettura integrale dei libri o dell’appendice storica dichiarata e nessuna nuova ricerca multi-modello a pagamento.
+- Verifiche: generazione completa riuscita; dei 47 output, 45 identici alla base main `72e3aee`, modificati solo la pagina Wada e il prompt della chat. Nel prompt cambia esclusivamente la sintesi Wada; istruzioni e altre sezioni identiche. Gulpease Wada 61, sopra la soglia 52. Rilettura integrale; Chromium a 412 e 1280 pixel: sette capitoli, quattro prove e tre tabelle completi, tredici fonti presenti, rendiconto apribile identico, ancore valide, nessun ID duplicato, sbordamento o errore JavaScript. File modificati UTF-8 strict senza BOM o caratteri corrotti. Nessuna unione o pubblicazione. Firma: OpenClaw / OC.
+
+Prossima azione: Rivedere la riscrittura della scheda Sanzo Wada; unione e pubblicazione solo con nuovo via libera esplicito di Sandro nel topic dell’app.
+
 ## 2026-11-08 - OC - Premessa urbana senza corso e riserve prima del blu
 
 - Su richiesta del curatore, la premessa parte direttamente dal vicolo con scalinata: tolti il riferimento al corso avanzato e il capoverso su fotografie e docente. Conservata la distinzione fra osservazione dei video e prove proposte.
