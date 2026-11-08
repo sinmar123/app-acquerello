@@ -4,6 +4,35 @@ Cronologia delle modifiche. Ordine cronologico inverso.
 
 Nota: nelle voci fino al 1/11/2026 il curatore è indicato con lo pseudonimo sinmar.
 
+## 2026-11-08 - OC - Autorizzazione alla pubblicazione del modulo S6
+
+- Sandro ha autorizzato l’unione e la pubblicazione della [PR #75](https://github.com/sinmar123/app-acquerello/pull/75) con «vai» nel topic app-acquerello l’8 novembre 2026. Controllata la testa `4cc2e4ae4bb8748e4938fff765371fdd9bc1306c`: quattordici file previsti, base `55398e2ec8822c2ed7327361c4b805c469264994`, controllo «costruisci» riuscito e unione disponibile.
+- Il via libera è registrato soltanto in README, CHANGELOG e ricerca: dati, generatori, testi del sito e prompt della chat restano invariati. Rigenerazione completa riuscita e tutti gli output confrontati byte per byte con la testa approvata, senza differenze. Restano validi il collaudo mobile e desktop e i controlli sui passaggi video già documentati.
+- Il nuovo commit documentale sarà ricontrollato su GitHub prima dell’unione; seguiranno riscontro del workflow di pubblicazione e confronto HTTP delle 17 pagine. Nessuna nuova ricerca o modifica dei contenuti approvati. Firma: OpenClaw / OC.
+
+Prossima azione: Unire la PR #75 autorizzata, verificare la pubblicazione del modulo S6 e registrare l’esito.
+
+## 2026-11-08 - OC - Modulo S6, paesaggio urbano: realizzazione proposta
+
+- Con «ok va» nel topic app-acquerello, messaggio 567, il curatore ha autorizzato l’analisi dei tre video e la realizzazione della proposta S6. Preparata la pagina 4.6, `/urbano/`, con tre esempi, quattro studi guidati, quattro infografiche in tre fasi e otto passaggi video. Il vicolo con scalinata resta una prova autonoma, distinta dai soggetti dei maestri.
+- Riscontrati otto intervalli con 175 campioni visivi, uno per secondo; letti anche i sottotitoli inglesi di Zbukvic. Castagnet a Cadaqués serve a leggere il dipinto finito, non a ricostruirne i lavaggi. La demo Iocco/Zangarelli mostra una veduta con edifici, acqua e barche, non una piazza. Nessuna visione continua integrale dichiarata. Fotografie del corso e campioni dei video restano fuori dal repository e dal sito; nessuna ricetta di pigmenti dedotta dalle immagini. Le prove non sono state eseguite e gli stati della carta riguardano le proposte, non misure dal filmato.
+- Integrati Soggetti, Home e sua figura del vicolo, barra, informativa, sitemap, pagine accettate dalle API e prompt della chat. I nomi degli esempi sono letti dal JSON del modulo. Riutilizzati stile e lettore degli Alberi senza modificarne dati o procedimenti. Nuovo generatore con controlli su tempi, durate, tre fasi, rimandi e segmenti inutilizzati.
+- Verifiche: generazione completa riuscita, 17 HTML e 1.444 rimandi interni validi, nessun ID duplicato; Gulpease della nuova pagina 80, sopra la soglia 52. Rispetto ai 46 output della base: 28 identici, 18 aggiornati e aggiunta la pagina urbana; sulle 13 pagine preesistenti fuori da Home, Soggetti e informativa cambia soltanto il collegamento nella barra. Base rigenerata e confrontata con tutti i 46 hash iniziali. `git diff --check` senza rilievi; file modificati UTF-8 strict senza BOM o caratteri corrotti.
+- Collaudo effettivo in Chromium temporaneo a 412 e 1280 pixel: nessuno sbordamento orizzontale, dodici schemi SVG controllati, rimandi del modulo sotto la barra e nessun errore JavaScript. Riproduzione reale di Zbukvic e Castagnet; su Zbukvic verificati metà velocità, ripetizione, arresto a 573,81 s per fine impostata a 574 s e riavvio. Nessuna richiesta a YouTube o Google prima del clic. La demo italiana restituisce il codice 150 nonostante i metadati favorevoli: rispettato il blocco, i tre passaggi aprono YouTube al minuto indicato e dichiarano l’assenza di arresto automatico. Verificati i tre collegamenti e il caricamento degli Alberi con i 32 estratti esistenti.
+- Aggiornamento sullo stesso ramo della PR #75, senza unione o pubblicazione e senza nuove corse di ricerca a pagamento. README, istruzioni dell’app e documento di ricerca allineati. Firma: OpenClaw / OC.
+
+Prossima azione: Rivedere la PR #75 sul modulo S6; unione e pubblicazione solo con un nuovo via libera esplicito di Sandro nel topic dell’app.
+
+## 2026-11-08 - OC - Ricerca preliminare per S6, paesaggio urbano
+
+- Dal nuovo esercizio del corso, su richiesta del curatore, preparata una proposta per S6, «Architetture e scorci urbani», con un primo esempio di vicolo e scalinata. Tre fotografie conservate soltanto nella cartella locale di lavoro, senza attribuire con certezza località, autori o pigmenti.
+- Selezionati tre riferimenti YouTube: Zbukvic, Colour in Your Life, 24 minuti; Castagnet a Cadaqués, EPC, 7 minuti e 8 secondi; Iocco e Zangarelli, FermoInAcquarello, 50 minuti e 11 secondi. Distinto il trailer di Castagnet a Genova, 1 minuto e 26 secondi, da una lezione completa. Indicata come alternativa commerciale, non YouTube gratuito, la presentazione del corso italiano di Zangarelli.
+- Titoli, canali, disponibilità e durate riscontrati nel player pubblico; soggetti confrontati con descrizioni, organizzatori e copertine. Nessuna visione integrale, trascrizione acquisita o attribuzione di gesti al secondo. Scartato come riferimento urbano il video gratuito di Sava descritto come paesaggio rurale invernale.
+- Verifiche: generazione completa riuscita; tutti i 46 output confrontati con la base e identici, incluso il prompt della chat. Titoli, canali e durate dei quattro video selezionati confrontati con i JSON del player; UTF-8 strict senza BOM o caratteri corrotti. Nessun nuovo componente da collaudare nel browser.
+- Acquisizione solo documentale: nessuna modifica a dati, generatori, immagini pubbliche o pagine del sito; nessuna nuova corsa di ricerca a pagamento. Testo completo e proposta nel documento di ricerca. Firma: OpenClaw / OC.
+
+Prossima azione: rivedere la proposta S6 e scegliere i video per l’analisi dei passaggi; il modulo del sito non è ancora realizzato.
+
 ## 2026-11-08 - OC - Autorizzazione alla pubblicazione della scheda Wada
 
 - Sandro ha autorizzato l’unione e la pubblicazione della PR #74 con «Pubblica» nel topic app-acquerello, messaggio 557 dell’8 novembre 2026. Controllata la testa `0c7640efc4f797fabd5f9e61856550606536c476`: sette file previsti, controllo «costruisci» riuscito e diff complessivo GitHub identico alla copia locale, con le sole intestazioni di contesto normalizzate.
