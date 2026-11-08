@@ -1,6 +1,6 @@
 # Quaderno di acquerello con IA (`app-acquerello`)
 
-Correzione proposta, 8 novembre 2026 (OC): l’avviso sui passaggi aperti in YouTube compare una sola volta in «Come usare schemi e video», non più in ciascuno dei tre passaggi della demo italiana. Pulsanti e minutaggi invariati. Generazione completa e collaudo browser a 412 e 1280 pixel riusciti; cambia soltanto la pagina urbana, gli altri 46 output sono identici. Ramo `oc/261108-avviso-youtube-unico`; unione e pubblicazione in attesa di un nuovo via libera di Sandro. Firma: OpenClaw / OC.
+Correzione proposta, 8 novembre 2026 (OC): l’avviso sui passaggi aperti in YouTube compare una sola volta in «Come usare schemi e video», non più in ciascuno dei tre passaggi della demo italiana. Pulsanti e minutaggi invariati. Generazione completa e collaudo browser a 412 e 1280 pixel riusciti; cambia soltanto la pagina urbana, gli altri 46 output sono identici. Il curatore ha autorizzato l’unione e la pubblicazione della [PR #76](https://github.com/sinmar123/app-acquerello/pull/76) con «Ok vai» nel topic dell’app l’8 novembre 2026, messaggio 583. Contenuti approvati invariati; seguirà il riscontro della pubblicazione. Firma: OpenClaw / OC.
 
 Il titolo è «Quaderno di acquerello con IA», come richiesto dal curatore nel topic dell’app il 7 novembre 2026. Il curatore ha autorizzato nello stesso topic l’unione e la pubblicazione della [PR #72](https://github.com/sinmar123/app-acquerello/pull/72). L’indirizzo del sito e il nome del repository restano invariati.
 
