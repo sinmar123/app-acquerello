@@ -31,10 +31,18 @@ def disegna(schema, fase, ident, titolo):
         if fase == 3:
             b += [pol("174,56 213,26 213,141 174,117", "#3d5480"),
                   pol("27,46 53,63 53,126 27,144", "#6d90b8"),
-                  rect(111,88,17,28,"#526884"),
-                  pol("14,177 33,177 30,195 18,195","#ad754b"),
-                  pol("191,142 205,142 203,156 194,156","#929b60")]
+                  rect(111,88,17,28,"#526884")]
             b += [linea(24,178,19,162,"#3e6a51",3),linea(199,145,205,131,"#3e6a51",3)]
+        # Riserve prima del blu, poi piccoli accenti caldi: schema, non campioni di colore.
+        riserva = escape(ident + "-riserva")
+        if fase < 3:
+            b.append(f'<defs><pattern id="{riserva}" width="5" height="5" patternUnits="userSpaceOnUse"><rect width="5" height="5" fill="#fff2c9"/><path d="M0,5 L5,0" stroke="#b8a46b" stroke-width="1"/></pattern></defs>')
+        for punti, caldo in [("14,177 33,177 30,195 18,195", "#ad754b"),
+                              ("191,142 205,142 203,156 194,156", "#c37a52"),
+                              ("168,154 174,154 174,160 168,160", "#c37a52")]:
+            b.append(pol(punti, f"url(#{riserva})" if fase < 3 else caldo, "#a18b5e" if fase < 3 else "none"))
+        if fase < 3:
+            b += ['<text x="5" y="164" font-size="10" fill="#6d603b">Riserva</text>', linea(29,166,24,177,"#8c7c4a")]
     elif schema == "case":
         b += [pol("0,210 0,113 102,85 132,118 172,123 240,178 240,210", "#d8dfdf" if fase > 1 else "#fffdf7", bordo),
               pol("138,0 240,0 240,178 172,123 132,118", "#d8b893" if fase > 1 else "#fffdf7", bordo),

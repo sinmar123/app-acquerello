@@ -3,8 +3,7 @@
     "titolo": "S6 · Paesaggio urbano: vicoli, scale e luce",
     "sommario": "Tre esempi, quattro studi guidati e otto estratti da tre video. Il percorso parte dal vicolo con scalinata e si apre a case, strade e vedute con acqua.",
     "premessa": [
-      "Il modulo prende spunto da un esercizio di un corso avanzato di acquerello: un vicolo con scalinata, muri blu e facciate in luce. Il soggetto invita a studiare piani, valori e profondità, prima dei piccoli dettagli.",
-      "Le fotografie del corso restano materiale di studio interno. Lo schema del vicolo è un disegno autonomo, non una riproduzione delle fotografie. Non si attribuiscono al docente i procedimenti proposti qui.",
+      "Il percorso parte da un vicolo con scalinata, muri blu e facciate in luce. Il soggetto invita a studiare piani, valori e profondità, prima dei piccoli dettagli.",
       "Ogni scheda distingue ciò che si vede nel video da una prova proposta per il foglio. Le tre fasi dell’infografica descrivono questa prova: non ricostruiscono passaggi assenti dalle riprese."
     ],
     "metodo": [
@@ -12,7 +11,8 @@
       "Per Zbukvic sono stati letti anche i sottotitoli inglesi. Le note sugli altri due video descrivono solo quanto è visibile: non riportano né traducono il parlato.",
       "Il filmato di Castagnet è usato per leggere il dipinto finito, non per documentare la sua esecuzione. Nella demo Iocco/Zangarelli si osserva una veduta con edifici, acqua e barche; i singoli gesti non sono attribuiti separatamente ai due autori.",
       "Gli stati della carta sono indicazioni per le prove proposte. Non sono misure dell’umidità nei video. Le tinte degli schemi sono convenzionali, non campioni di pigmenti o ricette dei maestri.",
-      "La prova nel browser ha confermato il lettore per Zbukvic e Castagnet. Per la demo italiana YouTube non consente la riproduzione incorporata: i tre passaggi aprono la pagina originale al minuto indicato."
+      "La prova nel browser ha confermato il lettore per Zbukvic e Castagnet. Per la demo italiana YouTube non consente la riproduzione incorporata: i tre passaggi aprono la pagina originale al minuto indicato.",
+      "La riserva di vasi e accenti caldi prima del blu segue un’indicazione diretta del curatore sullo studio del vicolo. Non è un passaggio attribuito ai tre video."
     ]
   },
   "video": {
@@ -45,7 +45,7 @@
     {
       "voce": "U1 Vicolo e scalinata",
       "breve": "Vicolo e scale",
-      "descrizione": "Un esercizio sui rapporti fra facciate, salita e ombre. Il primo studio è a valori, prima di cercare il colore delle pareti.",
+      "descrizione": "Un esercizio sui rapporti fra facciate, salita e ombre. Nell’esempio di partenza, vasi e accenti caldi sono stati riservati con mascheratore prima del blu.",
       "modalita": [
         {
           "id": "U1-a",
@@ -53,8 +53,8 @@
           "tipo": "Applicazione proposta al vicolo",
           "schema": "vicolo",
           "osservazione": "Zbukvic imposta il disegno della strada e dei veicoli. In seguito lavora una grande massa scura di edifici e ne ammorbidisce parte del bordo.",
-          "proposta": "Per il vicolo si potrebbe partire da tre valori: carta chiara, tono medio e scuro. La scalinata verrebbe definita solo dopo le masse dei muri.",
-          "procedimento": "Si propone un piccolo studio con un solo colore già noto. Si disegnano i due lati del vicolo e pochi gradini campione. Si stende un tono chiaro, lasciando libere le facciate in luce. Dopo l’asciugatura si aggiungono le ombre scelte, poi porte e pochi bordi dei gradini. È un adattamento al nuovo soggetto, non una dimostrazione di scale di Zbukvic.",
+          "proposta": "Per il vicolo si potrebbe partire da tre valori: carta chiara, tono medio e scuro. Nella prova a colori si riservano vasi e accenti caldi prima del blu; la scalinata viene definita dopo le masse dei muri.",
+          "procedimento": "Si propone prima un piccolo studio di chiari e scuri, con un colore già noto. Per la prova a colori si disegnano i muri, pochi gradini e le forme dei vasi. Sulla carta asciutta si riservano con mascheratore i vasi e i piccoli accenti caldi. Si lascia asciugare il liquido prima di stendere il blu, conservando le facciate in luce. A colore asciutto si rimuove il mascheratore e si colorano le riserve con toni caldi. Si aggiungono ombre, porte e pochi bordi dei gradini. La mascheratura segue l’indicazione del curatore; la sequenza è una proposta per il vicolo, non una dimostrazione di scale di Zbukvic.",
           "controllo": "Coprendo i dettagli, il vicolo dovrebbe restare leggibile. Se la salita scompare, si rivedono le larghezze dei gradini e il rapporto fra chiari e scuri.",
           "segmenti": [
             "Z1",
@@ -62,22 +62,22 @@
           ],
           "fasi": [
             {
-              "titolo": "Disegno essenziale",
+              "titolo": "Disegno e riserve",
               "carta": "asciutta",
-              "attrezzo": "Matita",
-              "testo": "Si tracciano i piani dei muri e alcuni gradini, confrontandone le larghezze con il riferimento. Porte e vasi possono attendere."
+              "attrezzo": "Matita e mascheratore",
+              "testo": "Si impostano muri e gradini. Su carta asciutta si riservano vasi e accenti caldi con mascheratore, lasciandolo asciugare prima del blu."
             },
             {
-              "titolo": "Chiari e mezzi toni",
+              "titolo": "Stesura del blu",
               "carta": "asciutta",
               "attrezzo": "Pennello largo",
-              "testo": "Si propone un primo tono leggero sulle zone scelte. Le facciate più luminose restano carta. Si lascia asciugare."
+              "testo": "Si stende il blu intorno alle riserve ormai asciutte. Le facciate in luce restano chiare. Si lascia asciugare il colore."
             },
             {
-              "titolo": "Ombre e pochi accenti",
+              "titolo": "Accenti caldi e ombre",
               "carta": "asciutta",
               "attrezzo": "Pennello a punta",
-              "testo": "Si uniscono le ombre che nel riferimento sono contigue. Bastano pochi bordi di gradini, porte e vasi per completare lo studio."
+              "testo": "A colore asciutto si toglie il mascheratore e si colorano le riserve con toni caldi. Si completano ombre, porte e pochi gradini."
             }
           ]
         }

@@ -4,6 +4,15 @@ Cronologia delle modifiche. Ordine cronologico inverso.
 
 Nota: nelle voci fino al 1/11/2026 il curatore è indicato con lo pseudonimo sinmar.
 
+## 2026-11-08 - OC - Premessa urbana senza corso e riserve prima del blu
+
+- Su richiesta del curatore, la premessa parte direttamente dal vicolo con scalinata: tolti il riferimento al corso avanzato e il capoverso su fotografie e docente. Conservata la distinzione fra osservazione dei video e prove proposte.
+- Integrata l’indicazione diretta del curatore: nello studio di partenza, vasi e accenti caldi sono stati riservati con mascheratore prima della stesura del blu. Aggiornati descrizione, proposta, procedimento e tre fasi dell’esempio U1; lo schema mostra le riserve tratteggiate prima e durante il blu, poi gli accenti caldi. La nota di metodo identifica la provenienza dell’indicazione senza attribuirla ai video.
+- Aggiunto il rinvio a «Il bianco nell’acquerello», capitolo sulle riserve, per le fonti sull’uso del liquido. Riscontrata la pagina ufficiale «How to use Art Masking Fluid», già citata in quella sezione: carta asciutta e mascheratore asciutto prima del lavaggio. Nessun nuovo pigmento o minuto video dedotto, nessuna nuova corsa di ricerca a pagamento.
+- Verifiche: generazione completa riuscita; confrontati tutti i 47 output con la base main `d6b4b69`, 46 identici e modificata soltanto `site/urbano/index.html`. Confronto semantico del JSON: cambiano solo premessa, nota di metodo e studio U1; altri esempi, osservazioni dei video e segmenti invariati. Collaudo Chromium a 412 e 1280 pixel: premessa senza riferimenti al corso, riserve nelle prime due fasi, rinvio alle fonti funzionante, dodici schemi, cinque lettori e tre collegamenti conservati, nessuno sbordamento, ID duplicato o errore JavaScript. File modificati UTF-8 strict senza BOM o caratteri corrotti; nessuna unione o pubblicazione. Firma: OpenClaw / OC.
+
+Prossima azione: Rivedere la premessa e la mascheratura del vicolo; unione e pubblicazione solo con nuovo via libera esplicito di Sandro nel topic dell’app.
+
 ## 2026-11-08 - OC - Autorizzazione alla pubblicazione dell’avviso YouTube unico
 
 - Sandro ha autorizzato l’unione e la pubblicazione della [PR #76](https://github.com/sinmar123/app-acquerello/pull/76) con «Ok vai» nel topic app-acquerello, messaggio 583. Testa approvata `8d52ca2cd6b2490a15aa264b93de92ad51798ddf`: tre file previsti, controllo «costruisci» superato e unione disponibile.
