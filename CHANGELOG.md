@@ -4,6 +4,13 @@ Cronologia delle modifiche. Ordine cronologico inverso.
 
 Nota: nelle voci fino al 1/11/2026 il curatore è indicato con lo pseudonimo sinmar.
 
+## 2026-11-08 - OC - Autorizzazione alla pubblicazione della scheda Wada
+
+- Sandro ha autorizzato l’unione e la pubblicazione della PR #74 con «Pubblica» nel topic app-acquerello, messaggio 557 dell’8 novembre 2026. Controllata la testa `0c7640efc4f797fabd5f9e61856550606536c476`: sette file previsti, controllo «costruisci» riuscito e diff complessivo GitHub identico alla copia locale, con le sole intestazioni di contesto normalizzate.
+- Aggiornato esclusivamente lo stato documentale in README e CHANGELOG. La scheda resta quella approvata: sette capitoli, 13 fonti esterne senza autocitazioni, quattro prove proposte e nota su autori, tempi e costi. Fonte ICC e testi tecnici invariati. Il collaudo visivo nel browser resta non eseguito per assenza di un eseguibile supportato. Firma: OpenClaw / OC.
+
+Prossima azione: completare l’unione autorizzata della PR #74 e verificare la pubblicazione; poi registrare l’esito.
+
 ## 2026-11-08 - OC - Fonti Wada senza autocitazioni
 
 - Su richiesta del curatore, eliminate dalla bibliografia della pagina Wada le due voci interne, sulle prove del Quaderno e sulla nota documentale della ricerca, con i loro 14 richiami. Restano 13 fonti esterne. Le quattro prove rimangono proposte non eseguite; i blocchi che descrivono soltanto il metodo redazionale non si autocitano. Nessuna modifica ai testi, alla nota apribile su autori, tempi e costi o ai dati della fonte ICC.

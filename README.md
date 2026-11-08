@@ -14,15 +14,15 @@ L’apertura della Home, «Perché questo Quaderno», racconta l’esperimento e
 
 Il repository è autonomo: contiene i dati, le infografiche, le illustrazioni e gli script che generano l'intero sito. **Il Quaderno è in costruzione:** alle sezioni generali (*Principi generali*, *Teoria dei colori*, *Marche e tubetti*) si aggiunge un modulo per ogni soggetto; il primo, sugli alberi, è pubblicato, e seguiranno cieli e nuvole, fiori, acqua e riflessi, rocce, architetture. La sezione *Approfondimenti* dedica una pagina a ogni questione che torna spesso fra chi dipinge, con il bianco e il blu oltremare nell'acquerello. La sezione *Eventi* raccoglie il calendario, la scheda di ogni evento (locandina, programma e fotografie) e l'archivio per anno. La sezione *Opere di non professionisti* raccoglie gli acquerelli di appassionati, una sottosezione per autore, a cominciare da quelli di sinmar. Correzioni, integrazioni e nuovi video si propongono con la casella in fondo a ogni pagina o secondo [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
-## Revisione proposta: Sanzo Wada, 8 novembre 2026
+## Sanzo Wada: pubblicazione autorizzata, 8 novembre 2026
 
-La nuova pagina **5.3, Gli abbinamenti di Sanzo Wada nell’acquerello**, è preparata sul ramo `oc/261108-sanzo-wada`, non ancora pubblicata. Sorgente: [`sanzo-wada.json`](dati/approfondimenti/temi/sanzo-wada.json). Sette capitoli distinguono storia, lettura degli accordi, appendice, operazioni pittoriche e limiti del trasferimento sulla carta. Le quattro prove sono proposte non eseguite.
+La nuova pagina **5.3, Gli abbinamenti di Sanzo Wada nell’acquerello**, è stata preparata nel ramo `oc/261108-sanzo-wada` per la [PR #74](https://github.com/sinmar123/app-acquerello/pull/74). Sorgente: [`sanzo-wada.json`](dati/approfondimenti/temi/sanzo-wada.json). Sette capitoli distinguono storia, lettura degli accordi, appendice, operazioni pittoriche e limiti del trasferimento sulla carta. Le quattro prove sono proposte non eseguite.
 
 La nota apribile in pagina e la [nota documentale su autori, tempi e costi](ricerche/app-acquerello-261108-sanzo-wada-metodo.md) distinguono i cinque rapporti riusciti, Kimi rifiutato e Grok Build non avviato. I circa 2,77 USD ricostruiti riguardano soltanto le tre corse DashScope riuscite; non sono il totale fatturato. Nessuna nuova ricerca a pagamento è stata avviata per creare la pagina.
 
 Su richiesta del curatore, la bibliografia della proposta contiene ora 13 fonti esterne, senza autocitazioni del Quaderno. Restano la nota di metodo e le quattro prove proposte, non eseguite. I segnalibri del testo Markdown di revisione non sono caratteri visibili nella pagina generata.
 
-La generazione completa e i controlli sui rimandi sono riusciti. Il collaudo visivo nel browser non è stato eseguito perché non è disponibile un eseguibile supportato. La revisione viene sottoposta al curatore: unione e pubblicazione sono escluse da questo incarico. Coordinamento: OpenClaw / OC.
+La generazione completa e i controlli sui rimandi sono riusciti. Il collaudo visivo nel browser non è stato eseguito perché non è disponibile un eseguibile supportato. Il curatore ha autorizzato unione e pubblicazione con «Pubblica» nel topic dell’app l’8 novembre 2026, messaggio 557. Coordinamento: OpenClaw / OC.
 
 ## Sezioni
 
