@@ -74,7 +74,6 @@ def video(r, v):
     if r["incorporabile"] == "no":
         return (f'<div class="video-esterno" id="{e(r["passo"])}" data-id="{e(r["video"])}" data-inizio="{s}" data-fine="{f}">'
                 f'<p class="pv-tit">{e(r["etichetta"])}</p><p class="pv-dati">Da {e(r["inizio"])} a {e(r["fine"])} ({f-s} s). {e(v["autore"])}.</p>'
-                '<p>Questo video si guarda su YouTube. Il link apre il minuto indicato; la riproduzione non si ferma da sola alla fine del passaggio.</p>'
                 f'<a class="apri-youtube" href="{e(link)}" target="_blank" rel="noopener">Apri il passaggio su YouTube ↗</a>'
                 f'<p class="nel-video">{e(r["osservazione"])}</p></div>')
     return (f'<div class="video" id="{e(r["passo"])}" data-passo="{e(r["passo"])}" data-id="{e(r["video"])}" data-inizio="{s}" data-fine="{f}">'
@@ -135,7 +134,7 @@ def pagina():
              '<p>Gli stati della carta nelle fasi riguardano la prova proposta. La tinta degli schemi non identifica un pigmento.</p>'
              '<p><b>Guarda il video</b> apre il lettore ufficiale e lo ferma al termine dell’estratto. <b>Da capo</b> lo riavvia; '
              '<b>Lento</b> imposta metà velocità; <b>Ripeti</b> attiva la ripetizione. <b>YouTube ↗</b> apre il punto nella pagina originale.</p>'
-             '<p>I tre passaggi della demo Iocco/Zangarelli si aprono su YouTube, che non consente qui il lettore incorporato. Il collegamento mantiene il minuto d’inizio.</p>'
+             '<p>I tre passaggi della demo Iocco/Zangarelli si aprono su YouTube, che non consente qui il lettore incorporato. Il link apre il minuto indicato; la riproduzione non si ferma da sola alla fine del passaggio.</p>'
              '<p>Per acqua, bordi e asciugatura: <a href="../principi/#carta-umidita">gli stati della carta nei Principi</a>. '
              'Per lavorare con pochi colori: <a href="../principi/#tavolozza-plein-air">la tavolozza ridotta</a>, non obbligatoria.</p></div>'
              '<details id="metodo"><summary>Fonti e limiti della consultazione</summary>'
