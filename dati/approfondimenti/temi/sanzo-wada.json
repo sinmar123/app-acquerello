@@ -100,8 +100,7 @@
           "tipo": "p",
           "testo": "Non è stato contato il contenuto del volume moderno. Queste divergenze restano aperte: non si ricava un totale sommando quantità riferite a categorie o edizioni diverse.",
           "fonti": [
-            "editore-2-jp",
-            "dossier"
+            "editore-2-jp"
           ]
         }
       ]
@@ -215,8 +214,7 @@
                 "Uno strato sopra un fondo asciutto: colore risultante, trasparenza ed eventuale riattivazione."
               ],
               "fonti": [
-                "velature",
-                "prove"
+                "velature"
               ]
             }
           ]
@@ -225,16 +223,14 @@
           "tipo": "p",
           "testo": "Una combinazione del repertorio presenta colori da osservare insieme. Non prescrive di mescolarli tutti per ottenere una tinta unica. L’applicazione pittorica richiederebbe una scelta ulteriore: quali campiture mantenere separate e quali trasformare.",
           "fonti": [
-            "editore-1",
-            "prove"
+            "editore-1"
           ]
         },
         {
           "tipo": "p",
           "testo": "Le prove personali di MacEvoy non mostrano una superiorità cromatica automatica di più velature rispetto a una stesura alla concentrazione adatta. Il risultato non diventa, a sua volta, una regola per ogni pittura. Anche l’inversione degli strati è una domanda da provare, non una differenza garantita.",
           "fonti": [
-            "velature",
-            "prove"
+            "velature"
           ]
         }
       ]
@@ -262,8 +258,7 @@
           "tipo": "p",
           "testo": "L’appendice storica invita a considerare il materiale. Nell’acquerello andrebbero registrati almeno colori effettivi, carta, diluizione e modo di applicazione. Non si deduce dal repertorio un obbligo generale di usare solo cotone, una grammatura minima o un’esclusione del nero.",
           "fonti": [
-            "appendice-neutri",
-            "prove"
+            "appendice-neutri"
           ]
         },
         {
@@ -281,11 +276,8 @@
       "titolo": "6. Prove con i colori disponibili",
       "blocchi": [
         {
-          "tipo": "p",
-          "testo": "Le quattro prove seguenti sono proposte del Quaderno, non esercizi attribuiti a Wada. Non sono state eseguite e non se ne anticipano i risultati. Si potrebbero usare i materiali già disponibili, cambiando una variabile alla volta.",
-          "fonti": [
-            "prove"
-          ]
+          "tipo": "nota",
+          "testo": "Le quattro prove seguenti sono proposte del Quaderno, non esercizi attribuiti a Wada. Non sono state eseguite e non se ne anticipano i risultati. Si potrebbero usare i materiali già disponibili, cambiando una variabile alla volta."
         },
         {
           "tipo": "titoletto",
@@ -296,7 +288,6 @@
           "tipo": "p",
           "testo": "Si prepara una coppia di colori e si dipingono campiture con estensione diversa. Poi si inverte il colore dominante. Carta, preparazioni e concentrazione restano uguali. Il confronto avviene a secco, senza fissare in anticipo una proporzione migliore.",
           "fonti": [
-            "prove",
             "appendice-uso"
           ]
         },
@@ -306,11 +297,8 @@
           "testo": "Le tre operazioni"
         },
         {
-          "tipo": "p",
-          "testo": "Con la stessa coppia si preparano campiture accostate, una miscela e due velature con ordine invertito. Il fondo deve asciugare prima della velatura. Si annotano colore finale, bordi ed eventuale riattivazione, senza attendersi differenze obbligatorie.",
-          "fonti": [
-            "prove"
-          ]
+          "tipo": "nota",
+          "testo": "Con la stessa coppia si preparano campiture accostate, una miscela e due velature con ordine invertito. Il fondo deve asciugare prima della velatura. Si annotano colore finale, bordi ed eventuale riattivazione, senza attendersi differenze obbligatorie."
         },
         {
           "tipo": "titoletto",
@@ -321,7 +309,6 @@
           "tipo": "p",
           "testo": "Si ripete un accordo in piccolo e su un formato maggiore, mantenendo proporzioni e materiali. Si osserva se l’effetto cambia. La fonte storica suggerisce la domanda, ma non anticipa il risultato della prova.",
           "fonti": [
-            "prove",
             "appendice-scala"
           ]
         },
@@ -334,16 +321,12 @@
           "tipo": "p",
           "testo": "Si confronta la stessa coppia a contatto e separata dal bianco della carta oppure da una striscia neutra. Il confronto riguarda l’effetto della separazione, non la ricerca di un accordo valido per tutti.",
           "fonti": [
-            "prove",
             "appendice-neutri"
           ]
         },
         {
-          "tipo": "p",
-          "testo": "Per ogni prova si registrano la fonte della combinazione, i pigmenti se noti, la carta, l’acqua, la luce e lo stato di asciugatura. Si annota ciò che si osserva, senza trasformare un singolo esito in una regola.",
-          "fonti": [
-            "prove"
-          ]
+          "tipo": "nota",
+          "testo": "Per ogni prova si registrano la fonte della combinazione, i pigmenti se noti, la carta, l’acqua, la luce e lo stato di asciugatura. Si annota ciò che si osserva, senza trasformare un singolo esito in una regola."
         }
       ]
     },
@@ -353,11 +336,8 @@
       "titolo": "7. Fonti, limiti e lavoro svolto",
       "blocchi": [
         {
-          "tipo": "p",
-          "testo": "La ricerca ha prodotto cinque rapporti effettivi. La nota apribile «Come è stata svolta la ricerca», dopo la premessa, riporta autori, modelli, tempi e costi presunti. Distingue le corse riuscite dai tentativi non conclusi e le stime dagli addebiti sconosciuti.",
-          "fonti": [
-            "dossier"
-          ]
+          "tipo": "nota",
+          "testo": "La ricerca ha prodotto cinque rapporti effettivi. La nota apribile «Come è stata svolta la ricerca», dopo la premessa, riporta autori, modelli, tempi e costi presunti. Distingue le corse riuscite dai tentativi non conclusi e le stime dagli addebiti sconosciuti."
         },
         {
           "tipo": "p",
@@ -374,9 +354,7 @@
           "testo": "Restano aperti il censimento completo dei fascicoli storici e le discrepanze del secondo volume. Non sono state compiute misure colorimetriche fra originali, ristampe e dipinti. Le applicazioni all’acquerello restano proposte da confrontare sulla carta.",
           "fonti": [
             "catalogo",
-            "editore-2-jp",
-            "prove",
-            "dossier"
+            "editore-2-jp"
           ]
         }
       ]
@@ -486,22 +464,6 @@
       "url": "https://github.com/mattdesl/dictionary-of-colour-combinations",
       "nota": "L’autore dichiara correzioni e una propria conversione CMYK-RGB. I valori digitali non sono misure certificate delle tavole storiche.",
       "consultazione": "8 novembre 2026: aperto il README; nessuna palette importata nel sito e nessuna licenza del libro dedotta da quella del codice."
-    },
-    "prove": {
-      "autore": "Quaderno di acquerello con IA",
-      "titolo": "Quattro prove sugli accostamenti di Sanzo Wada",
-      "pubblicazione": "Proposta didattica, 8 novembre 2026.",
-      "url": "#prove",
-      "nota": "Prove proposte sui propri materiali, non eseguite; nessun risultato pittorico o colorimetrico già misurato.",
-      "consultazione": "Adattamento dichiarato delle domande emerse dalla ricerca e dall’appendice storica. Non sono esercizi attribuiti a Wada."
-    },
-    "dossier": {
-      "autore": "OpenClaw / OC, coordinamento; Codex / CDX, confronto e riscontri",
-      "titolo": "Sanzo Wada: autori, tempi e costi della ricerca",
-      "pubblicazione": "Ricerche del 7-8 novembre 2026; nota documentale del Quaderno.",
-      "url": "https://github.com/sinmar123/app-acquerello/blob/oc/261108-sanzo-wada/ricerche/app-acquerello-261108-sanzo-wada-metodo.md",
-      "nota": "Cinque rapporti riusciti; Kimi rifiutato e Grok Build non avviato. Stime economiche distinte dagli addebiti non disponibili.",
-      "consultazione": "Dati confrontati con il dossier di consegna, il confronto e i log di lancio. Durata della verifica e del coordinamento non misurata separatamente."
     }
   }
 }

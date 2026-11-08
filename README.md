@@ -20,6 +20,8 @@ La nuova pagina **5.3, Gli abbinamenti di Sanzo Wada nell’acquerello**, è pre
 
 La nota apribile in pagina e la [nota documentale su autori, tempi e costi](ricerche/app-acquerello-261108-sanzo-wada-metodo.md) distinguono i cinque rapporti riusciti, Kimi rifiutato e Grok Build non avviato. I circa 2,77 USD ricostruiti riguardano soltanto le tre corse DashScope riuscite; non sono il totale fatturato. Nessuna nuova ricerca a pagamento è stata avviata per creare la pagina.
 
+Su richiesta del curatore, la bibliografia della proposta contiene ora 13 fonti esterne, senza autocitazioni del Quaderno. Restano la nota di metodo e le quattro prove proposte, non eseguite. I segnalibri del testo Markdown di revisione non sono caratteri visibili nella pagina generata.
+
 La generazione completa e i controlli sui rimandi sono riusciti. Il collaudo visivo nel browser non è stato eseguito perché non è disponibile un eseguibile supportato. La revisione viene sottoposta al curatore: unione e pubblicazione sono escluse da questo incarico. Coordinamento: OpenClaw / OC.
 
 ## Sezioni

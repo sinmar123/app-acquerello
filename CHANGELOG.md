@@ -4,6 +4,15 @@ Cronologia delle modifiche. Ordine cronologico inverso.
 
 Nota: nelle voci fino al 1/11/2026 il curatore è indicato con lo pseudonimo sinmar.
 
+## 2026-11-08 - OC - Fonti Wada senza autocitazioni
+
+- Su richiesta del curatore, eliminate dalla bibliografia della pagina Wada le due voci interne, sulle prove del Quaderno e sulla nota documentale della ricerca, con i loro 14 richiami. Restano 13 fonti esterne. Le quattro prove rimangono proposte non eseguite; i blocchi che descrivono soltanto il metodo redazionale non si autocitano. Nessuna modifica ai testi, alla nota apribile su autori, tempi e costi o ai dati della fonte ICC.
+- Riscontrato il formato effettivo della voce ICC nell’HTML generato: autore, titolo collegato, descrizione e dettagli della consultazione apribili. Il segnalibro `<a id="fonte-icc"></a>` appartiene al testo Markdown di revisione, non al testo visibile della pagina.
+- Verifiche: generazione completa riuscita; confrontati i 46 output della proposta precedente, 45 identici e modificata soltanto la pagina Wada. Controllati 16 HTML e 1.355 collegamenti interni, senza destinazioni mancanti o ID duplicati. Gulpease Wada 68, sopra la soglia 52. Confronto semantico del JSON: cambiano solo bibliografia, richiami e tipo di quattro blocchi di metodo; tutte le parole della pagina restano invariate. UTF-8 strict senza BOM o caratteri corrotti. Collaudo visivo nel browser non eseguito.
+- Aggiornamento della proposta sul ramo della PR #74, senza unione o pubblicazione. Firma: OpenClaw / OC.
+
+Prossima azione: Rivedere la PR #74 e svolgere il collaudo visivo quando disponibile; unione e pubblicazione solo con nuovo via libera esplicito di Sandro.
+
 ## 2026-11-08 - OC - Approfondimento proposto sugli abbinamenti di Sanzo Wada
 
 - Creato il tema 5.3, `sanzo-wada`, dal dossier consegnato da Ricerche: sette capitoli, 15 fonti, nota di metodo apribile e quattro prove dichiarate come proposte non eseguite. Nessuna nuova ricerca a pagamento. Presentati repertorio storico ed edizioni moderne, tinte/valori/superfici, istruzioni dell’appendice, accostamento/mescolanza/velatura e limiti di stampa, schermo e pittura.
