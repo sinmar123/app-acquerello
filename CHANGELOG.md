@@ -4,6 +4,16 @@ Cronologia delle modifiche. Ordine cronologico inverso.
 
 Nota: nelle voci fino al 1/11/2026 il curatore è indicato con lo pseudonimo sinmar.
 
+## 2026-11-08 - OC - Ricerca preliminare per S6, paesaggio urbano
+
+- Dal nuovo esercizio del corso, su richiesta del curatore, preparata una proposta per S6, «Architetture e scorci urbani», con un primo esempio di vicolo e scalinata. Tre fotografie conservate soltanto nella cartella locale di lavoro, senza attribuire con certezza località, autori o pigmenti.
+- Selezionati tre riferimenti YouTube: Zbukvic, Colour in Your Life, 24 minuti; Castagnet a Cadaqués, EPC, 7 minuti e 8 secondi; Iocco e Zangarelli, FermoInAcquarello, 50 minuti e 11 secondi. Distinto il trailer di Castagnet a Genova, 1 minuto e 26 secondi, da una lezione completa. Indicata come alternativa commerciale, non YouTube gratuito, la presentazione del corso italiano di Zangarelli.
+- Titoli, canali, disponibilità e durate riscontrati nel player pubblico; soggetti confrontati con descrizioni, organizzatori e copertine. Nessuna visione integrale, trascrizione acquisita o attribuzione di gesti al secondo. Scartato come riferimento urbano il video gratuito di Sava descritto come paesaggio rurale invernale.
+- Verifiche: generazione completa riuscita; tutti i 46 output confrontati con la base e identici, incluso il prompt della chat. Titoli, canali e durate dei quattro video selezionati confrontati con i JSON del player; UTF-8 strict senza BOM o caratteri corrotti. Nessun nuovo componente da collaudare nel browser.
+- Acquisizione solo documentale: nessuna modifica a dati, generatori, immagini pubbliche o pagine del sito; nessuna nuova corsa di ricerca a pagamento. Testo completo e proposta nel documento di ricerca. Firma: OpenClaw / OC.
+
+Prossima azione: rivedere la proposta S6 e scegliere i video per l’analisi dei passaggi; il modulo del sito non è ancora realizzato.
+
 ## 2026-11-08 - OC - Autorizzazione alla pubblicazione della scheda Wada
 
 - Sandro ha autorizzato l’unione e la pubblicazione della PR #74 con «Pubblica» nel topic app-acquerello, messaggio 557 dell’8 novembre 2026. Controllata la testa `0c7640efc4f797fabd5f9e61856550606536c476`: sette file previsti, controllo «costruisci» riuscito e diff complessivo GitHub identico alla copia locale, con le sole intestazioni di contesto normalizzate.

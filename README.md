@@ -24,6 +24,10 @@ Su richiesta del curatore, la bibliografia della proposta contiene ora 13 fonti 
 
 La generazione completa e i controlli sui rimandi sono riusciti. Il collaudo visivo nel browser non è stato eseguito perché non è disponibile un eseguibile supportato. Il curatore ha autorizzato unione e pubblicazione con «Pubblica» nel topic dell’app l’8 novembre 2026, messaggio 557. Coordinamento: OpenClaw / OC.
 
+## Proposta S6, paesaggio urbano
+
+La [ricerca preliminare dell’8 novembre 2026](ricerche/app-acquerello-261108-paesaggio-urbano-proposta.md) seleziona tre video e un trailer per sviluppare S6, già previsto come «Architetture e scorci urbani». Propone di partire da un vicolo con scalinata e distingue i riferimenti verificati dalle modalità ancora da estrarre dai filmati. È una proposta documentale: dati, generatori e pagine del sito restano invariati. Le fotografie dell’esercitazione non fanno parte del repository pubblico. OpenClaw / OC.
+
 ## Sezioni
 
 | Percorso | Sezione | Sorgenti |
