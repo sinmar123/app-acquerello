@@ -1,42 +1,43 @@
 {
   "id": "sanzo-wada",
   "ordine": 3,
-  "data": "2026-11-08",
+  "data": "2026-11-09",
   "titolo": "Gli abbinamenti di Sanzo Wada nell’acquerello",
-  "sottotitolo": "Un repertorio storico per studiare colori e superfici, con quattro prove proposte sulla carta",
-  "scheda": "I due volumi moderni, le indicazioni dell’appendice storica e il passaggio dagli accostamenti alle prove ad acquerello",
+  "sottotitolo": "Dalle tavole di colore alle scelte di composizione, superficie e stesura",
+  "scheda": "I repertori, gli standard di Ostwald e la lettura contemporanea con tinta, valore e croma, fino alle prove sulla carta",
   "sintesi": [
     {
-      "testo": "Il repertorio degli anni Trenta e i volumi moderni sono oggetti diversi. Il primo volume moderno raccoglie 348 abbinamenti.",
+      "testo": "I due volumi moderni rendono accessibili materiali del repertorio storico, ma hanno contenuti e funzioni diversi. Il primo raccoglie 348 abbinamenti; il secondo comprende combinazioni stagionali ed esempi applicati.",
       "capitolo": "libri"
     },
     {
-      "testo": "La scelta delle tinte non basta: contano anche il chiaro e scuro, l’intensità e l’estensione delle superfici.",
+      "testo": "Tinta, valore e croma sono qui uno strumento contemporaneo di lettura degli accordi, non il metodo attribuito a Wada. Estensione e contesto della campitura intervengono nella composizione.",
       "capitolo": "leggere"
     },
     {
-      "testo": "L’appendice storica dà indicazioni su proporzioni, dominante e dimensione del campione. Non viene qui attribuito a Wada il 60-30-10.",
+      "testo": "Ostwald è documentato nell’ordinamento dei campioni standard del 1930 e nell’appendice storica. Le istruzioni su superfici e scala non provano che tutti gli abbinamenti derivino da formule teoriche.",
       "capitolo": "appendice"
     },
     {
-      "testo": "Accostare campiture, mescolare pigmenti e sovrapporre velature sono operazioni da distinguere.",
+      "testo": "Accostamento, miscela e velatura producono situazioni diverse. Una tavola di colori accostati non specifica una ricetta per mescolare pigmenti o sovrapporre strati.",
       "capitolo": "operazioni"
     },
     {
-      "testo": "Nomi e codici digitali non assicurano la replica con i tubetti. Il confronto va fatto anche sulla stesura asciutta.",
+      "testo": "Il trasferimento sulla carta richiede un confronto fra materiali reali e campioni asciutti. Le riproduzioni del libro e i codici digitali non identificano da soli un colore ad acquerello.",
       "capitolo": "trasferire"
     },
     {
-      "testo": "Le quattro prove del Quaderno sono proposte da svolgere, non risultati già ottenuti.",
+      "testo": "Quattro prove proposte esaminano superfici, operazioni pittoriche, dimensione del campione e separazione mediante un neutro. Ogni confronto isola una domanda, senza anticipare l’esito.",
       "capitolo": "prove"
     }
   ],
   "premessa": [
-    "Una tavola di colori può suggerire un accostamento senza spiegare come dipingerlo. Nell’acquerello occorre scegliere anche la diluizione, le superfici e il rapporto con il bianco della carta.",
-    "Il repertorio di Sanzo Wada potrebbe servire per studiare queste relazioni. La pagina distingue ciò che documentano i libri e l’appendice dalle applicazioni proposte dal Quaderno."
+    "La scelta delle tinte, l’estensione delle campiture e il materiale pittorico sono problemi distinti. Un accordo scelto nel libro richiede di essere interpretato attraverso queste decisioni, prima di diventare un dipinto.",
+    "Il lavoro di Sanzo Wada offre un repertorio visivo e, nell’appendice storica, indicazioni sul suo impiego. Per l’acquerello occorre individuare quali relazioni conservare e verificarle con i colori, la carta e le stesure effettivamente utilizzati.",
+    "La pagina distingue il contenuto delle edizioni e dell’appendice dagli strumenti usati oggi per leggerle. Tinta, valore e croma rimandano al sistema storico di Munsell; Bruce MacEvoy è citato per le proprie analisi contemporanee. Nessuno dei due riferimenti viene assunto come spiegazione automatica del metodo di Wada."
   ],
   "nota_metodo": [
-    "La ricerca documentale si è svolta il 7 e l’8 novembre 2026 con l’aiuto dell’intelligenza artificiale. Sono disponibili cinque rapporti: GPT, Qwen, GLM, DeepSeek e Gemini. L’accordo fra modelli non è stato trattato come una prova.",
+    "La ricerca documentale iniziale si è svolta il 7 e l’8 novembre 2026 con l’aiuto dell’intelligenza artificiale. Sono disponibili cinque rapporti: GPT, Qwen, GLM, DeepSeek e Gemini. L’accordo fra modelli non è stato trattato come una prova.",
     "OpenClaw / OC ha coordinato gli avvii. Il confronto e i riscontri mirati delle fonti sono firmati Codex / CDX. Non esiste una misura separata affidabile del tempo di verifica, scrittura e coordinamento.",
     "GPT, openai/gpt-6.1-sol con ragionamento high nel bot OpenClaw, ha prodotto un rapporto autonomo e registrato 11 query. La sua durata non è stata misurata separatamente. È stata usata la quota del piano ChatGPT, senza una corsa API aggiuntiva.",
     "Qwen, qwen3.8-max via DashScope: 54 minuti e 50 secondi; 20 ricerche e 21 estrazioni; costo ricostruito circa 1,69 USD. GLM, glm-5.2: 6 minuti e 10 secondi; 22 ricerche e 3 estrazioni; circa 0,40 USD. DeepSeek, deepseek-v4-pro: 7 minuti e 30 secondi; 33 ricerche e 2 estrazioni; circa 0,68 USD.",
@@ -45,19 +46,30 @@
     "Kimi, kimi-k3, è stato rifiutato per quota gratuita esaurita: nessun rapporto, 10 secondi registrati dal lanciatore e costo non esposto. Grok Build non è stato avviato per problemi di accesso. Non si presentano quindi sette ricerche riuscite.",
     "La previsione iniziale era 4,70-7,10 USD per i quattro tentativi DashScope e Gemini; lo scenario prudente era 25,80 USD, non garantito. Non è un consuntivo. Il totale effettivo resta sconosciuto: i 2,77 USD non comprendono l’eventuale addebito Kimi, piano ed esecuzione Gemini, abbonamento e coordinamento.",
     "Qwen, GLM e DeepSeek hanno usato lo stesso strumento di ricerca DashScope. Non sono tre indici indipendenti. Neppure la presenza di una fonte su piattaforme diverse dimostra, da sola, che il suo contenuto sia corretto.",
-    "Sono state riscontrate fonti decisive e immagini selezionate dell’appendice storica. I libri moderni e l’intero apparato storico non sono stati letti integralmente. Le traduzioni dal giapponese sono riassunti di lavoro. Nessuna delle quattro prove pittoriche è stata eseguita."
+    "Sono state riscontrate fonti decisive e immagini selezionate dell’appendice storica. I libri moderni e l’intero apparato storico non sono stati letti integralmente. Le traduzioni dal giapponese sono riassunti di lavoro. Nessuna delle quattro prove pittoriche è stata eseguita.",
+    "Il 9 novembre 2026 è stata svolta una seconda ricerca sulla storia di tinta, valore e croma, poi usata per questa integrazione. Quattro corse sono concluse, GPT-6 Astra, GLM 5.2, DeepSeek v4 Pro e Gemini standard; Qwen 3.8 Max ha restituito materiale parziale e un errore del server, senza rilancio. Modelli, tempi, consumi e limiti sono distinti nella nota del nuovo approfondimento dedicato.",
+    "La seconda ricerca aggiunge la verifica della prima edizione Munsell del 1905, il documento Wada del 1930 e la notizia istituzionale del 1956. Circa 1,47 USD è soltanto la stima GLM e DeepSeek di questa integrazione; non comprende Qwen, Gemini e preparazione del piano e non va sommata ai 2,77 USD come se si ottenesse un totale completo. Nessun nuovo addebito complessivo è stato accertato."
   ],
   "capitoli": [
     {
       "id": "libri",
       "breve": "I libri",
-      "titolo": "1. Il repertorio storico e i due volumi moderni",
+      "titolo": "1. Che cosa contengono i libri di Wada",
       "blocchi": [
         {
           "tipo": "p",
-          "testo": "Sanzo Wada (1883-1967) fu pittore e progettista attivo anche nella moda e nei costumi. Il catalogo CiNii registra il suo <i>Haishoku sōkan</i>, pubblicato da Hakubisha nel 1933-1934: sei volumi e un opuscolo esplicativo. Quella raccolta non coincide con il tascabile moderno.",
+          "testo": "Sanzo Wada (1883-1967) fu pittore e progettista, attivo anche nella moda e nei costumi. Il suo <i>Haishoku sōkan</i>, pubblicato da Hakubisha nel 1933-1934, è registrato dal catalogo CiNii in sei volumi, accompagnati da un opuscolo esplicativo. È questa raccolta storica a costituire il riferimento bibliografico di partenza.",
           "fonti": [
             "editore-1",
+            "catalogo"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "I due volumi moderni di Seigensha presentano quel lavoro in forme editoriali diverse. Il primo riunisce abbinamenti da osservare come insiemi di campioni; il secondo amplia il confronto con combinazioni stagionali e applicazioni. Nessuno dei due va confuso con l’intero insieme dei fascicoli storici.",
+          "fonti": [
+            "editore-1",
+            "editore-2",
             "catalogo"
           ]
         },
@@ -65,13 +77,13 @@
           "tipo": "tabella",
           "intestazione": [
             "Volume moderno",
-            "Edizione e contenuto"
+            "Contenuto e impiego"
           ],
           "righe": [
             {
               "celle": [
-                "A Dictionary of Color Combinations",
-                "Seigensha, 2010: 352 pagine e 348 abbinamenti. Le anteprime mostrano coppie, terne e gruppi di quattro colori."
+                "<i>A Dictionary of Color Combinations</i>, 2010",
+                "352 pagine e 348 abbinamenti. Le anteprime mostrano coppie, terne e gruppi di quattro colori: il confronto riguarda anzitutto i colori presentati insieme."
               ],
               "fonti": [
                 "editore-1"
@@ -79,8 +91,8 @@
             },
             {
               "celle": [
-                "A Dictionary of Color Combinations Vol. 2",
-                "Seigensha, 2020: 336 pagine. Comprende 72 combinazioni stagionali, da tre a sette colori, e applicazioni a moda, interni e grafica."
+                "<i>A Dictionary of Color Combinations Vol. 2</i>, 2020",
+                "336 pagine, con 72 combinazioni stagionali da tre a sette colori e applicazioni a moda, interni e grafica. Gli esempi mostrano il passaggio dall’accordo alla sua organizzazione in un oggetto o in un progetto."
               ],
               "fonti": [
                 "editore-2"
@@ -90,16 +102,9 @@
         },
         {
           "tipo": "p",
-          "testo": "Il secondo volume riprende la serie B e una raccolta di disegni del 1938. Le schede dell’editore non concordano su tutti i dettagli: quella giapponese indica sia 161 sia 165 esempi applicati. La datazione della serie B è 1934-1935 in giapponese e 1935-1936 in inglese.",
+          "testo": "Il secondo volume riprende la serie storica B e una raccolta di disegni del 1938. Le sue tavole appartengono quindi a un percorso editoriale diverso da quello del primo volume; le discrepanze nelle schede dell’editore sono discusse nel capitolo finale.",
           "fonti": [
             "editore-2",
-            "editore-2-jp"
-          ]
-        },
-        {
-          "tipo": "p",
-          "testo": "Non è stato contato il contenuto del volume moderno. Queste divergenze restano aperte: non si ricava un totale sommando quantità riferite a categorie o edizioni diverse.",
-          "fonti": [
             "editore-2-jp"
           ]
         }
@@ -107,92 +112,192 @@
     },
     {
       "id": "leggere",
-      "breve": "Leggere una tavola",
-      "titolo": "2. Tinte, valori e superfici",
+      "breve": "Leggere gli accordi",
+      "titolo": "2. Come si legge un accordo cromatico",
       "blocchi": [
         {
           "tipo": "p",
-          "testo": "Le anteprime mostrano campiture accostate, identificate da nomi. Il nome aiuta a ritrovare il campione, ma non descrive da solo la sua funzione nell’insieme.",
+          "testo": "Nelle tavole del primo volume, ogni combinazione presenta colori accostati in campiture distinte. Un accordo cromatico descrive questi colori osservati insieme e le relazioni che si stabiliscono fra loro.",
           "fonti": [
             "editore-1"
           ]
         },
         {
           "tipo": "p",
-          "testo": "La tinta distingue, per esempio, un rosso da un blu. Il valore indica il chiaro e scuro; il croma esprime l’intensità rispetto al grigio. Per leggere un accordo, conviene considerare questi aspetti insieme. MacEvoy ne propone una lettura che include superficie e contesto.",
+          "testo": "Per descrivere un accordo si possono distinguere tinta, valore e croma. Munsell formula questa terna nel 1905 e la collega a scale e notazione. Qui viene usata come strumento di lettura odierno: la sua anteriorità non dimostra che Wada abbia costruito gli abbinamenti secondo quel sistema.",
+          "fonti": [
+            "munsell-1905",
+            "munsell-1907"
+          ]
+        },
+        {
+          "tipo": "nota",
+          "testo": "L’approfondimento <a href=\"../attributi-colore/\">Come nascono tinta, valore e croma</a> ricostruisce gli antecedenti e distingue croma da saturazione. MacEvoy resta un autore tecnico contemporaneo, citato sotto per le proprie analisi di composizione e pratica pittorica."
+        },
+        {
+          "tipo": "tabella",
+          "intestazione": [
+            "Attributo",
+            "Significato nella lettura"
+          ],
+          "righe": [
+            {
+              "celle": [
+                "Tinta",
+                "La qualità che distingue famiglie cromatiche, come rosso e blu. Il nome della tinta non descrive da solo il chiaro-scuro o il croma."
+              ],
+              "fonti": [
+                "munsell-1905"
+              ]
+            },
+            {
+              "celle": [
+                "Valore",
+                "Il grado di chiaro-scuro. Un numero di valore Munsell appartiene a una scala specifica; non è una quantità d’acqua o una percentuale di pigmento."
+              ],
+              "fonti": [
+                "munsell-1905"
+              ]
+            },
+            {
+              "celle": [
+                "Croma",
+                "Nel confronto Munsell si osservano gradi più o meno cromatici a tinta e valore uguali. Non è un sinonimo rigoroso di saturazione; il lessico CIE distingue il riferimento del giudizio."
+              ],
+              "fonti": [
+                "munsell-1907",
+                "cie-croma"
+              ]
+            }
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Due campioni della stessa famiglia possono dunque produrre effetti diversi se cambiano valore o croma. L’analisi dell’accordo riguarda anche queste differenze: riconoscere le sole tinte non descrive ancora la struttura del colore nel dipinto.",
           "fonti": [
             "relazioni"
           ]
         },
         {
           "tipo": "p",
-          "testo": "Una campitura estesa e un piccolo accento non hanno lo stesso ruolo. L’appendice di Wada affronta proprio l’effetto dell’estensione e della forza relativa dei colori. La forma regolare del campione non impone superfici uguali nel dipinto.",
+          "testo": "A questi attributi si aggiunge l’estensione della campitura, cioè l’area visibile occupata da un colore. La stessa coppia assume rapporti diversi se uno dei colori copre una zona ampia e l’altro compare soltanto in pochi dettagli. L’appendice storica affronta espressamente questo problema.",
           "fonti": [
             "appendice-uso",
             "appendice-scala"
           ]
         },
         {
+          "tipo": "p",
+          "testo": "Nella lettura pittorica si può distinguere la dominante, che caratterizza il tono complessivo del dipinto, dall’accento, che concentra un contrasto in una zona circoscritta. Sono funzioni nella composizione, non proprietà fisse dei colori. L’appendice mostra che anche una parte piccola dell’abbigliamento può contribuire a unificare l’insieme: prevalenza visiva e superficie maggiore non sono sinonimi.",
+          "fonti": [
+            "relazioni",
+            "appendice-scala"
+          ]
+        },
+        {
           "tipo": "nota",
-          "testo": "Come proposta del Quaderno, prima di dipingere si potrebbe scegliere quale rapporto conservare: il chiaro e scuro, un accento intenso oppure una dominante. La scelta guiderebbe la prova, senza garantirne l’esito."
+          "testo": "Un esempio di lettura, non tratto da Wada: si potrebbe considerare una coppia formata da un azzurro chiaro e attenuato e da un rosso più scuro e intenso. Per descriverne l’impiego occorrerebbe indicare anche quale colore occupa la zona ampia e quale compare nei dettagli. Invertendo le superfici si manterrebbe la coppia, ma cambierebbe l’organizzazione cromatica da esaminare."
+        },
+        {
+          "tipo": "nota",
+          "testo": "Per una prova ad acquerello si potrebbe scegliere quale relazione conservare dell’accordo: il rapporto fra chiari e scuri, una dominante oppure il contrasto di un accento intenso. Questa scelta darebbe un obiettivo al confronto con la tavola, prima della ricerca delle singole tinte."
         }
       ]
     },
     {
       "id": "appendice",
-      "breve": "Le indicazioni storiche",
-      "titolo": "3. Che cosa spiega l’appendice",
+      "breve": "Le istruzioni storiche",
+      "titolo": "3. Gli standard e l’appendice: teoria, proporzioni e scala",
       "blocchi": [
         {
           "tipo": "p",
-          "testo": "Il fascicolo <i>附說</i>, appendice del 1935, contiene un apparato teorico e istruzioni d’uso. Alle pagine 8-9 presenta il sistema di Wilhelm Ostwald. Non è quindi corretto dedurre dalle sole tavole che manchi ogni spiegazione.",
+          "testo": "Un documento precedente al repertorio chiarisce il lavoro sugli standard. Nella conferenza <i>On Standards of Colour</i> del 1930, Wada presenta il progetto e poi passa la parola al tecnico del gruppo. A p. 8 il tecnico descrive la scelta di Ostwald per ordinare 500 campioni e le corrispondenze registrate mediante dischi rotanti.",
+          "fonti": [
+            "wada-1930"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Questa testimonianza documenta l’impiego di Ostwald nella classificazione degli standard. Non prova che tutti gli abbinamenti del repertorio successivo siano stati ricavati da regole ostwaldiane: ordinare i campioni e scegliere le loro combinazioni sono questioni distinte.",
+          "fonti": [
+            "wada-1930",
+            "editore-1"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Accanto alle tavole sono disponibili testi esplicativi. L’appendice qui consultata è il fascicolo <i>附說</i> del 1935, con spiegazioni teoriche e indicazioni per utilizzare il repertorio. Alle pagine 8-9 presenta il sistema di Wilhelm Ostwald: un apparato che va distinto dalle sole campiture dei volumi moderni.",
           "fonti": [
             "appendice-teoria"
           ]
         },
         {
           "tipo": "p",
-          "testo": "Alle pagine 32-33 il testo descrive i campioni di uguale forma e superficie. Suggerisce di assegnare al colore più debole una superficie maggiore e a quello più forte una minore. Propone anche ritagli bianchi o grigi per ridurre l’area esposta. È una descrizione del consiglio storico, non una percentuale ideale.",
+          "testo": "Alle pagine 32-33 il testo considera campioni di uguale forma e superficie. Suggerisce di dare più spazio al colore visivamente più debole e meno a quello più forte. Propone inoltre ritagli bianchi o grigi con cui ridurre l’area esposta dei campioni. Il dispositivo consente di cambiare la quantità visibile di un colore mantenendo invariata la combinazione.",
           "fonti": [
             "appendice-uso"
           ]
         },
         {
           "tipo": "p",
-          "testo": "Alle pagine 34-35 la dominante può trovarsi anche in una piccola parte dell’abbigliamento. Il testo avverte inoltre che un accordo valutato su un campione piccolo può apparire diverso su superfici estese.",
+          "testo": "La questione non è soltanto quali colori accostare, ma quanto spazio assegnare a ciascuno. L’uguaglianza dei campioni serve al confronto nel repertorio; non stabilisce che le aree del futuro dipinto debbano essere uguali. Le indicazioni dell’appendice sono qualitative e non prescrivono una proporzione numerica unica.",
+          "fonti": [
+            "appendice-uso"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Alle pagine 34-35, una piccola parte dell’abbigliamento può contribuire a unificare l’insieme. Il testo avverte anche che un accordo valutato su un campione piccolo può apparire diverso quando viene esteso. Sono due problemi distinti: il ruolo assegnato a una parte e la dimensione alla quale l’accordo viene osservato.",
           "fonti": [
             "appendice-scala"
           ]
         },
         {
           "tipo": "p",
-          "testo": "Le pagine 24-25 considerano separazioni mediante neutri e differenze dovute al materiale. Queste indicazioni documentano una pratica storica: non dimostrano una legge universale del gusto.",
+          "testo": "Le pagine 24-25 trattano la separazione mediante neutri e le differenze legate al materiale. Interporre un neutro modifica il contatto fra le campiture; cambiare materiale modifica le condizioni in cui i colori si presentano. La relazione cromatica non viene perciò considerata indipendente dal modo in cui è realizzata.",
           "fonti": [
             "appendice-neutri"
           ]
         },
         {
           "tipo": "nota",
-          "testo": "I passaggi sono riassunti dal giapponese storico, non citazioni letterali. In questa pagina non si attribuisce a Wada il 60-30-10, né si trasformano le sue indicazioni in prescrizioni obbligatorie per l’acquerello."
+          "testo": "Questi passaggi sono riassunti di lavoro dal giapponese storico, non citazioni letterali o un’edizione critica. Documentano le indicazioni dell’appendice, non una legge universale del gusto. Non si attribuisce a Wada lo schema percentuale 60-30-10, né si trasformano i consigli storici in prescrizioni obbligatorie per l’acquerello."
+        },
+        {
+          "tipo": "p",
+          "testo": "Nella cronologia biografica pubblicata da Tōbunken, la voce del 1956 registra il completamento di tavole Munsell migliorate. Non specifica lì responsabilità tecniche e collaboratori. Il dato testimonia un riferimento successivo, non dimostra il metodo con cui furono scelti gli abbinamenti degli anni Trenta.",
+          "fonti": [
+            "wada-biografia"
+          ]
         }
       ]
     },
     {
       "id": "operazioni",
-      "breve": "Tre operazioni",
-      "titolo": "4. Accostare, mescolare, velare",
+      "breve": "Accostare, mescolare, velare",
+      "titolo": "4. Dall’accordo alla tecnica: tre operazioni diverse",
       "blocchi": [
+        {
+          "tipo": "p",
+          "testo": "Nelle tavole del repertorio i colori sono presentati insieme come superfici distinte. Per utilizzarli in un dipinto occorre decidere che cosa fare con i materiali: mantenere separate le campiture, mescolare i colori oppure sovrapporre strati. Queste operazioni non rispondono alla stessa domanda.",
+          "fonti": [
+            "editore-1",
+            "relazioni"
+          ]
+        },
         {
           "tipo": "tabella",
           "intestazione": [
             "Operazione",
-            "Che cosa si confronta"
+            "Che cosa si realizza",
+            "Che cosa si osserva"
           ],
           "righe": [
             {
               "celle": [
                 "Accostare",
-                "Campiture separate: relazione visiva, bordi e quantità delle superfici."
+                "Campiture distinte, ciascuna con il proprio colore.",
+                "Il rapporto fra i colori, la loro estensione e il bordo che li separa. È il confronto più vicino alla disposizione dei campioni del repertorio."
               ],
               "fonti": [
                 "editore-1",
@@ -202,7 +307,8 @@
             {
               "celle": [
                 "Mescolare",
-                "Pigmenti combinati nella tavolozza o sulla carta: il nuovo colore ottenuto con quei materiali."
+                "Pigmenti combinati nella tavolozza o nella stessa zona della carta.",
+                "Il colore risultante da quei materiali e da quelle proporzioni. I colori di partenza non rimangono campiture indipendenti."
               ],
               "fonti": [
                 "velature"
@@ -211,7 +317,8 @@
             {
               "celle": [
                 "Velare",
-                "Uno strato sopra un fondo asciutto: colore risultante, trasparenza ed eventuale riattivazione."
+                "Una stesura sovrapposta a un fondo già asciutto.",
+                "Il risultato dei due strati, la trasparenza e l’eventuale riattivazione del fondo durante l’applicazione."
               ],
               "fonti": [
                 "velature"
@@ -221,49 +328,67 @@
         },
         {
           "tipo": "p",
-          "testo": "Una combinazione del repertorio presenta colori da osservare insieme. Non prescrive di mescolarli tutti per ottenere una tinta unica. L’applicazione pittorica richiederebbe una scelta ulteriore: quali campiture mantenere separate e quali trasformare.",
+          "testo": "Un abbinamento di più colori non prescrive quindi di mescolarli tutti. La miscela produce un nuovo colore; l’accostamento conserva invece le differenze fra le campiture. Per studiare un accordo, la decisione tecnica dovrebbe rendere osservabile la relazione che interessa, anziché sostituirla senza accorgersene con un’altra.",
           "fonti": [
-            "editore-1"
+            "editore-1",
+            "relazioni"
           ]
         },
         {
           "tipo": "p",
-          "testo": "Le prove personali di MacEvoy non mostrano una superiorità cromatica automatica di più velature rispetto a una stesura alla concentrazione adatta. Il risultato non diventa, a sua volta, una regola per ogni pittura. Anche l’inversione degli strati è una domanda da provare, non una differenza garantita.",
+          "testo": "La velatura introduce un problema ulteriore: il risultato dipende anche dalla stesura del fondo e da quella successiva. Nei propri confronti MacEvoy non riscontra una superiorità cromatica automatica di più velature rispetto a una stesura alla concentrazione adatta. Il dato riguarda le sue prove; non stabilisce una graduatoria fra tecniche valida per ogni materiale.",
           "fonti": [
             "velature"
           ]
+        },
+        {
+          "tipo": "nota",
+          "testo": "Per il Quaderno, anche l’ordine degli strati può diventare una domanda sperimentale. Due velature con ordine invertito andrebbero confrontate senza presumere in anticipo che debbano produrre colori diversi."
         }
       ]
     },
     {
       "id": "trasferire",
       "breve": "Dalla tavola alla carta",
-      "titolo": "5. Stampa, schermo e acquerello",
+      "titolo": "5. Il confronto con stampa, schermo e colore asciutto",
       "blocchi": [
         {
           "tipo": "p",
-          "testo": "Fra tavola storica, ristampa, fotografia e schermo intervengono più passaggi. La gestione del colore usa profili per collegare i valori di dispositivi diversi; una corrispondenza esatta non è sempre possibile. Non si giudica quindi la fedeltà di una pittura soltanto dalla foto del libro.",
+          "testo": "La tavola storica, la ristampa, la fotografia e l’immagine sullo schermo sono oggetti diversi. Nel passaggio fra dispositivi, la gestione del colore usa profili che descrivono le condizioni di riproduzione. Una corrispondenza esatta non è sempre possibile. La fotografia del libro, da sola, non costituisce quindi un riferimento sufficiente per giudicare la fedeltà di una stesura.",
           "fonti": [
             "icc"
           ]
         },
         {
           "tipo": "p",
-          "testo": "Un dataset contemporaneo dichiara una propria conversione CMYK-RGB e correzioni ai dati precedenti. I suoi codici HEX sono elaborazioni digitali, non misure certificate delle tavole. Né un codice né un nome storico identificano, da soli, il pigmento di un tubetto.",
+          "testo": "Anche i repertori digitali richiedono di distinguere il campione dai dati che lo descrivono. Il dataset di Matt DesLauriers dichiara correzioni e una propria conversione dai valori per la stampa, CMYK, a quelli per lo schermo, RGB. I codici HEX sono una forma di rappresentazione di questi valori digitali, non misure certificate delle tavole storiche.",
           "fonti": [
-            "dataset"
+            "dataset",
+            "icc"
           ]
         },
         {
           "tipo": "p",
-          "testo": "L’appendice storica invita a considerare il materiale. Nell’acquerello andrebbero registrati almeno colori effettivi, carta, diluizione e modo di applicazione. Non si deduce dal repertorio un obbligo generale di usare solo cotone, una grammatura minima o un’esclusione del nero.",
+          "testo": "Un codice digitale non specifica quali pigmenti impiegare, in quali proporzioni mescolarli o quanto diluirli. Anche un nome storico identifica un campione nel repertorio, non la formulazione di un tubetto contemporaneo. Fra il riferimento e il dipinto rimane il lavoro di preparare e confrontare i propri campioni.",
           "fonti": [
-            "appendice-neutri"
+            "dataset",
+            "velature"
+          ]
+        },
+        {
+          "tipo": "nota",
+          "testo": "Per l’applicazione proposta dal Quaderno si potrebbero registrare i colori effettivi, la carta, la diluizione e il modo di stesura. Le indicazioni storiche sul materiale non vengono assunte come un obbligo di usare solo cotone, rispettare una grammatura minima o escludere il nero."
+        },
+        {
+          "tipo": "p",
+          "testo": "Il confronto sulla carta comprende anche l’asciugatura. Nelle misure pubblicate da MacEvoy su 75 pigmenti o miscele, oltre un terzo dei campioni si scurisce. Il cambiamento non consiste dunque sempre in uno schiarimento; la sua entità dipende dalle condizioni della prova. Quelle misure non forniscono percentuali da applicare a qualsiasi stesura.",
+          "fonti": [
+            "asciugatura"
           ]
         },
         {
           "tipo": "p",
-          "testo": "L’asciugatura non comporta sempre uno schiarimento. Nelle misure pubblicate da MacEvoy, su 75 pigmenti o miscele, oltre un terzo dei campioni si scurisce. Sono prove in condizioni definite, non percentuali applicabili a ogni stesura. Si osservano quindi i propri campioni anche da asciutti.",
+          "testo": "Per valutare un accordo destinato a un dipinto asciutto occorre quindi osservare i campioni anche dopo l’asciugatura. Un rapporto convincente durante la stesura può richiedere una nuova valutazione quando l’acqua è evaporata. Il riferimento utile è il risultato ottenuto con i propri materiali, non una correzione astratta attribuita a tutti gli acquerelli.",
           "fonti": [
             "asciugatura"
           ]
@@ -272,42 +397,57 @@
     },
     {
       "id": "prove",
-      "breve": "Quattro prove proposte",
-      "titolo": "6. Prove con i colori disponibili",
+      "breve": "Le prove proposte",
+      "titolo": "6. Quattro prove per formulare un confronto",
       "blocchi": [
         {
           "tipo": "nota",
-          "testo": "Le quattro prove seguenti sono proposte del Quaderno, non esercizi attribuiti a Wada. Non sono state eseguite e non se ne anticipano i risultati. Si potrebbero usare i materiali già disponibili, cambiando una variabile alla volta."
+          "testo": "Le quattro prove seguenti sono proposte del Quaderno, non esercizi attribuiti a Wada. Non sono state eseguite. Ciascuna mette a confronto una scelta precisa; materiali e condizioni vanno mantenuti quanto più possibile costanti e descritti, senza anticipare il risultato."
         },
         {
           "tipo": "titoletto",
           "id": "superfici",
-          "testo": "Superfici e dominante"
+          "testo": "Superfici: quale colore prevale quando cambia la sua estensione?"
         },
         {
           "tipo": "p",
-          "testo": "Si prepara una coppia di colori e si dipingono campiture con estensione diversa. Poi si inverte il colore dominante. Carta, preparazioni e concentrazione restano uguali. Il confronto avviene a secco, senza fissare in anticipo una proporzione migliore.",
+          "testo": "Si scelgono due colori e si preparano due piccoli studi sulla stessa carta. Nel primo, un colore occupa una superficie ampia e l’altro una parte ridotta; nel secondo si inverte il rapporto fra le aree. Preparazioni e concentrazioni restano uguali nei due studi.",
           "fonti": [
             "appendice-uso"
           ]
         },
         {
+          "tipo": "p",
+          "testo": "A colore asciutto si osserva quale campitura caratterizza l’insieme e quale emerge per contrasto. L’inversione delle superfici non viene assunta come un’inversione automatica della dominante: è proprio questo rapporto che la prova permette di esaminare. Non viene fissata una proporzione ideale.",
+          "fonti": [
+            "appendice-uso",
+            "appendice-scala"
+          ]
+        },
+        {
           "tipo": "titoletto",
           "id": "operazioni",
-          "testo": "Le tre operazioni"
+          "testo": "Operazioni: che cosa cambia fra accostamento, miscela e velatura?"
         },
         {
           "tipo": "nota",
-          "testo": "Con la stessa coppia si preparano campiture accostate, una miscela e due velature con ordine invertito. Il fondo deve asciugare prima della velatura. Si annotano colore finale, bordi ed eventuale riattivazione, senza attendersi differenze obbligatorie."
+          "testo": "Con la stessa coppia si preparano campiture accostate, una miscela e due velature con ordine invertito. Ogni fondo deve essere asciutto prima della stesura successiva. Si annotano proporzioni e diluizioni, colore finale, bordi ed eventuale riattivazione del fondo. Il confronto è descrittivo: non presuppone che gli esiti siano sempre diversi o che una tecnica debba risultare superiore."
         },
         {
           "tipo": "titoletto",
           "id": "dimensione",
-          "testo": "Dimensione del campione"
+          "testo": "Scala: il rapporto si conserva quando il campione diventa più grande?"
         },
         {
           "tipo": "p",
-          "testo": "Si ripete un accordo in piccolo e su un formato maggiore, mantenendo proporzioni e materiali. Si osserva se l’effetto cambia. La fonte storica suggerisce la domanda, ma non anticipa il risultato della prova.",
+          "testo": "Si ripete lo stesso accordo in un campione piccolo e in uno di formato maggiore, conservando i rapporti fra le superfici e gli stessi materiali. Cambia la dimensione complessiva, non l’assegnazione dei colori alle parti. Si dichiarano luce e condizioni di osservazione.",
+          "fonti": [
+            "appendice-scala"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Il confronto riguarda l’effetto dell’estensione: un colore sembra acquistare o perdere rilievo, oppure il rapporto resta simile? La fonte storica suggerisce la domanda; l’esito deve essere osservato nei due studi e non dedotto in anticipo dalla tavola.",
           "fonti": [
             "appendice-scala"
           ]
@@ -315,33 +455,40 @@
         {
           "tipo": "titoletto",
           "id": "neutro",
-          "testo": "Un neutro interposto"
+          "testo": "Separazione: che cosa cambia se fra due colori si interpone un neutro?"
         },
         {
           "tipo": "p",
-          "testo": "Si confronta la stessa coppia a contatto e separata dal bianco della carta oppure da una striscia neutra. Il confronto riguarda l’effetto della separazione, non la ricerca di un accordo valido per tutti.",
+          "testo": "Si confronta la stessa coppia a contatto e separata dal bianco della carta oppure da una striscia neutra. Colori e superfici delle due campiture rimangono invariati. La nuova condizione è il bordo interposto, che interrompe il loro contatto diretto.",
+          "fonti": [
+            "appendice-neutri"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Si osservano la distinzione delle campiture e il ruolo del loro confine nell’insieme. La prova serve a descrivere un cambiamento di relazione, non a stabilire che la separazione renda ogni abbinamento più armonioso.",
           "fonti": [
             "appendice-neutri"
           ]
         },
         {
           "tipo": "nota",
-          "testo": "Per ogni prova si registrano la fonte della combinazione, i pigmenti se noti, la carta, l’acqua, la luce e lo stato di asciugatura. Si annota ciò che si osserva, senza trasformare un singolo esito in una regola."
+          "testo": "Per ogni studio si registrano la fonte della combinazione, i pigmenti se noti, la carta, l’acqua, la luce e lo stato di asciugatura. Le osservazioni vanno riferite a quelle condizioni. Un singolo esito non costituisce una regola generale."
         }
       ]
     },
     {
       "id": "ricerca",
       "breve": "Fonti e limiti",
-      "titolo": "7. Fonti, limiti e lavoro svolto",
+      "titolo": "7. Ambito delle fonti e questioni aperte",
       "blocchi": [
         {
           "tipo": "nota",
-          "testo": "La ricerca ha prodotto cinque rapporti effettivi. La nota apribile «Come è stata svolta la ricerca», dopo la premessa, riporta autori, modelli, tempi e costi presunti. Distingue le corse riuscite dai tentativi non conclusi e le stime dagli addebiti sconosciuti."
+          "testo": "La prima ricerca ha prodotto cinque rapporti; la successiva integrazione storica ne aggiunge quattro conclusi e un testo parziale. La nota apribile dopo la premessa distingue i due incarichi, le corse riuscite, le stime e gli addebiti sconosciuti."
         },
         {
           "tipo": "p",
-          "testo": "Le schede editoriali documentano le edizioni moderne, non una loro lettura integrale. Dell’appendice storica sono stati riscontrati passaggi selezionati. Le indicazioni sul gusto e sull’armonia restano attribuite al loro contesto storico.",
+          "testo": "Le schede editoriali documentano le edizioni moderne e le loro anteprime; non equivalgono a una lettura integrale dei due libri. Dell’appendice storica sono stati riscontrati passaggi selezionati. Le indicazioni su gusto e armonia vengono riferite al loro contesto storico, mentre le prove ad acquerello sono presentate come proposte contemporanee.",
           "fonti": [
             "editore-1",
             "editore-2",
@@ -350,12 +497,34 @@
           ]
         },
         {
+          "tipo": "titoletto",
+          "id": "discrepanze",
+          "testo": "Le discrepanze bibliografiche del secondo volume"
+        },
+        {
           "tipo": "p",
-          "testo": "Restano aperti il censimento completo dei fascicoli storici e le discrepanze del secondo volume. Non sono state compiute misure colorimetriche fra originali, ristampe e dipinti. Le applicazioni all’acquerello restano proposte da confrontare sulla carta.",
+          "testo": "Le due schede dell’editore non concordano su tutti i dettagli. Quella giapponese indica sia 161 sia 165 esempi applicati; la serie B è datata al 1934-1935 in giapponese e al 1935-1936 in inglese. Queste divergenze non sono risolte mediante una somma dei dati: quantità, categorie ed edizioni devono essere tenute distinte.",
           "fonti": [
-            "catalogo",
+            "editore-2",
             "editore-2-jp"
           ]
+        },
+        {
+          "tipo": "nota",
+          "testo": "Il contenuto del secondo volume moderno non è stato contato. Le discrepanze restano aperte; i dati della tabella iniziale non sono un censimento completo dei materiali storici."
+        },
+        {
+          "tipo": "p",
+          "testo": "Resta da completare anche il censimento dei fascicoli storici. La ricerca non comprende misure colorimetriche di confronto fra originali, ristampe e dipinti. Per questa ragione distingue l’identificazione delle edizioni dalla corrispondenza dei colori e dalle applicazioni pittoriche proposte per il confronto sulla carta.",
+          "fonti": [
+            "catalogo",
+            "editore-2-jp",
+            "icc"
+          ]
+        },
+        {
+          "tipo": "nota",
+          "testo": "La lettura con HVC adottata in questa pagina rimane una proposta di analisi. La documentazione disponibile non ricostruisce il procedimento con cui Wada ha scelto ogni combinazione, né autorizza a presentare MacEvoy come un suo antecedente storico."
         }
       ]
     }
@@ -464,6 +633,46 @@
       "url": "https://github.com/mattdesl/dictionary-of-colour-combinations",
       "nota": "L’autore dichiara correzioni e una propria conversione CMYK-RGB. I valori digitali non sono misure certificate delle tavole storiche.",
       "consultazione": "8 novembre 2026: aperto il README; nessuna palette importata nel sito e nessuna licenza del libro dedotta da quella del codice."
+    },
+    "munsell-1905": {
+      "autore": "Albert H. Munsell",
+      "titolo": "A Color Notation",
+      "pubblicazione": "Boston, Geo. H. Ellis Co., prima edizione, 1905, pp. 14-15 e 21-22, §§ 20-23 e 40-43.",
+      "url": "https://archive.org/download/acolornotation00munsgoog/acolornotation00munsgoog.pdf",
+      "nota": "La prima edizione formula tinta, valore e croma e ne presenta la notazione. Non viene confusa con la seconda edizione.",
+      "consultazione": "9 novembre 2026. Frontespizio e passi indicati controllati sulle immagini. Originale del § 20: “The three color qualities are hue, value, and chroma”. Non lettura integrale del volume."
+    },
+    "munsell-1907": {
+      "autore": "Albert H. Munsell",
+      "titolo": "A Color Notation",
+      "pubblicazione": "Boston, Geo. H. Ellis Co., seconda edizione riveduta e ampliata, 1907.",
+      "url": "https://www.gutenberg.org/cache/epub/26054/pg26054-images.html",
+      "nota": "Testo sui confronti, sulla notazione e sui limiti diseguali di croma. La nota al § 31 cita Runge e Lambert.",
+      "consultazione": "9 novembre 2026. Letti frontespizio, §§ 20-35, passi sulla notazione e §§ 123-127; non collazionato integralmente con la prima edizione. Il copyright 1905 non data questa edizione."
+    },
+    "cie-croma": {
+      "autore": "Commission Internationale de l’Éclairage, CIE",
+      "titolo": "e-ILV, chroma, 17-22-074",
+      "pubblicazione": "CIE S 017:2020, International Lighting Vocabulary, seconda edizione.",
+      "url": "https://cie.co.at/eilvterm/17-22-074",
+      "nota": "Pienezza cromatica valutata rispetto alla luminosità percepita di un riferimento similmente illuminato, grigio, bianco o altamente trasmittente.",
+      "consultazione": "9 novembre 2026. Lette definizione e note. Conservato il riferimento anche grigio della versione 2020; nessuna formula numerica universale ricavata dalla definizione verbale."
+    },
+    "wada-1930": {
+      "autore": "Sanzo Wada; spiegazione operativa affidata al tecnico del suo gruppo",
+      "titolo": "標準色の話 / On Standards of Colour",
+      "pubblicazione": "照明学会雑誌, 14(1), 1930, pp. 5-9, DOI 10.2150/jieij1917.14.5.",
+      "url": "https://www.jstage.jst.go.jp/article/jieij1917/14/1/14_1_5/_article/-char/ja",
+      "nota": "La scelta di Ostwald riguarda l’ordinamento di campioni standard. Non documenta la generazione di ogni abbinamento del repertorio successivo.",
+      "consultazione": "9 novembre 2026. Letti testo estratto delle cinque pagine e immagini selezionate: p. 7, passaggio al tecnico; p. 8, ordinamento dei 500 campioni. Traduzione di lavoro dal giapponese, non edizione critica."
+    },
+    "wada-biografia": {
+      "autore": "Tokyo National Research Institute for Cultural Properties, Tōbunken",
+      "titolo": "和田三造, notizia biografica dal 日本美術年鑑",
+      "pubblicazione": "日本美術年鑑, edizione Shōwa 43, 1968, pp. 148-149; banca dati istituzionale.",
+      "url": "https://www.tobunken.go.jp/materials/bukko/9183.html",
+      "nota": "Nella cronologia personale, la voce del 1956 registra il completamento di tavole Munsell migliorate. Non specifica lì ruoli tecnici e collaboratori.",
+      "consultazione": "9 novembre 2026. Letta la pagina e riscontrato il passo “改良マンセル色票系完成” sotto 昭和31年. Il dato successivo non è una prova dell’origine degli abbinamenti degli anni Trenta."
     }
   }
 }

@@ -1,0 +1,863 @@
+{
+  "id": "attributi-colore",
+  "ordine": 4,
+  "data": "2026-11-09",
+  "titolo": "Come nascono tinta, valore e croma",
+  "sottotitolo": "Gli antecedenti, il contributo di Munsell e le distinzioni utili per leggere un acquerello",
+  "scheda": "Dagli ordinamenti dei campioni alla notazione di Munsell: una storia documentata, senza un unico scopritore",
+  "sintesi": [
+    {
+      "testo": "La terna non nasce in un solo momento. Ordinare campioni, confrontare mescolanze luminose e descrivere l’apparenza sono problemi diversi, anche quando si impiegano tre grandezze.",
+      "capitolo": "domande"
+    },
+    {
+      "testo": "Mayer, Lambert e Runge precedono Munsell con ordinamenti che comprendono colori cromatici, bianco e nero. Le loro costruzioni non sono già la stessa terna HVC.",
+      "capitolo": "antecedenti"
+    },
+    {
+      "testo": "Munsell formula esplicitamente hue, value e chroma nel 1905 e li collega a notazione, scale e campioni. Il sistema continua a svilupparsi e viene riveduto nel Novecento.",
+      "capitolo": "munsell"
+    },
+    {
+      "testo": "Croma e saturazione non sono sinonimi rigorosi. Cambia il riferimento del giudizio; chiarezza, luminosità percepita e luminanza descrivono a loro volta aspetti distinti.",
+      "capitolo": "lessico"
+    },
+    {
+      "testo": "Wada opera dopo Munsell, ma l’anteriorità non dimostra una derivazione. Ostwald è documentato nel lavoro sugli standard; HVC può essere usato oggi per leggere gli abbinamenti.",
+      "capitolo": "wada"
+    },
+    {
+      "testo": "Le operazioni pittoriche non isolano necessariamente un solo attributo. Le prove proposte confrontano campioni asciutti e registrano anche le variazioni congiunte.",
+      "capitolo": "prove"
+    }
+  ],
+  "premessa": [
+    "Dire che un colore è rosso non precisa quanto sia chiaro né quanto appaia vicino a un neutro. Tinta, valore e croma permettono di separare queste domande e di descrivere confronti altrimenti affidati a nomi generici.",
+    "La domanda storica richiede però una distinzione ulteriore: riconoscere differenze cromatiche non equivale a costruire una scala, una notazione o una teoria delle mescolanze. L’origine della terna si comprende seguendo questi problemi, senza cercare un solo inventore per tutti.",
+    "Il percorso arriva a Sanzo Wada e alla pratica dell’acquerello. La storia delle fonti rimane distinta dagli strumenti usati oggi per analizzare un accordo e dalle prove che il Quaderno propone."
+  ],
+  "nota_metodo": [
+    "Ricerca del 9 novembre 2026, coordinata da OpenClaw / OC su una domanda comune. GPT, GLM, DeepSeek e Gemini hanno concluso; Qwen ha restituito un testo parziale prima di un errore del server. Non sono cinque corse riuscite. Nessun rilancio Qwen.",
+    "GPT-6 Astra, ragionamento high, sottoagente nativo nel bot: 54 query registrate e 32 unità documentarie dichiarate, distinguendo testi, estratti, riassunti e cataloghi. Durata non misurata separatamente; quota del piano ChatGPT, nessuna corsa API aggiuntiva.",
+    "GLM 5.2 via DashScope: 7 minuti e 31 secondi circa, 31 chiamate di ricerca e 4 estrazioni, costo ricostruito circa 0,57 USD. DeepSeek v4 Pro via DashScope: 8 minuti e 28 secondi circa, 40 chiamate di ricerca e 3 estrazioni, circa 0,90 USD. Le stime usano consumi restituiti, tariffe Singapore e cache implicita; non sono addebiti letti in console.",
+    "Qwen 3.8 Max via DashScope: circa 44 minuti e 11 secondi, 17 chiamate di ricerca, molte con più query, e 27 estrazioni. Chiusura response.failed; bibliografia interrotta e consumi non restituiti. Il costo non è noto, non zero.",
+    "Gemini Deep Research standard, agente deep-research-preview-04-2026: 41 ricerche Google, 1.450.376 token totali dichiarati. Raccolta in 8 minuti e 50 secondi, non durata esatta sui server. Addebito non esposto. La preparazione del piano ha consumi separati e non monetizzati.",
+    "Le corse a consumo sono partite in parallelo: le durate non vanno sommate. Circa 1,47 USD è soltanto la stima parziale di GLM e DeepSeek, non il costo totale con Qwen, Gemini e piano. La previsione approvata per le quattro corse era 3,70-6,10 USD, con scenario prudente di circa 18,80 USD, non un tetto garantito.",
+    "I cinque corpi dei rapporti sono stati letti integralmente, per 285.281 caratteri complessivi, con letture a parti e arbitraggio dei passaggi controversi. I lettori delegati Codex / CDX hanno indicato copertura, dati trovati e dati non documentati. Il consenso fra modelli non è stato considerato una prova; Qwen, GLM e DeepSeek condividono gli strumenti web DashScope.",
+    "Il controllo dei rapporti non equivale alla lettura integrale dei libri citati. Le fonti dichiarano i passi realmente consultati; le traduzioni dal giapponese sono di lavoro. Non sono state eseguite prove pittoriche, misure colorimetriche o verifiche delle tabelle numeriche di rinotazione."
+  ],
+  "capitoli": [
+    {
+      "id": "domande",
+      "breve": "Le tre domande",
+      "titolo": "1. Che cosa si vuole descrivere",
+      "blocchi": [
+        {
+          "tipo": "p",
+          "testo": "La tinta distingue famiglie cromatiche, come rosso e blu. Il valore descrive il chiaro e lo scuro; il croma permette di distinguere campioni più cromatici da campioni più vicini al neutro. Nel confronto Munsell si può mantenere uguale tinta e valore per osservare gradi diversi di croma.",
+          "fonti": [
+            "munsell-1905",
+            "munsell-1907"
+          ]
+        },
+        {
+          "tipo": "nota",
+          "testo": "Si potrebbero confrontare due azzurri simili per chiarezza, uno più cromatico e uno attenuato. Chiamarli entrambi “azzurro chiaro” lascerebbe senza nome proprio la differenza cercata. È un esempio redazionale, non una coppia misurata."
+        },
+        {
+          "tipo": "p",
+          "testo": "Questa descrizione non stabilisce come fabbricare il colore. Tre coordinate di una miscela luminosa indicano quantità di componenti; tre attributi descrivono qualità dell’apparenza. Il fatto che entrambi gli schemi impieghino tre elementi non li rende equivalenti.",
+          "fonti": [
+            "grassmann",
+            "maxwell"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Nemmeno una terna descrive da sola ogni aspetto di un dipinto. Lucentezza, trasparenza, tessitura e disposizione delle campiture richiedono altre osservazioni. Anche l’apparenza cromatica va riferita alla luce e al contesto in cui si guarda.",
+          "fonti": [
+            "macevoy",
+            "cie-cam"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Occorre quindi distinguere tre lavori: ordinare campioni, stabilire uguaglianze visive fra mescolanze e descrivere ciò che appare. Nella storia questi lavori si incontrano, ma non producono automaticamente le stesse scale.",
+          "fonti": [
+            "munsell-1907",
+            "maxwell",
+            "cie-cam"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "antecedenti",
+      "breve": "Prima di Munsell",
+      "titolo": "2. Campioni, triangoli, piramidi e sfera",
+      "blocchi": [
+        {
+          "tipo": "titoletto",
+          "testo": "Mayer: comunicazione e pubblicazione non coincidono",
+          "id": "mayer-comunicazione-e-pubblicazione-non-coincidono"
+        },
+        {
+          "tipo": "p",
+          "testo": "Il testo di Tobias Mayer reca una comunicazione del 18 novembre 1758, ma l’edizione esaminata è del 1775. Compare negli <i>Opera inedita</i> curati da Lichtenberg. Citare solo uno dei due anni nasconde la differenza fra presentazione del lavoro e pubblicazione del testo completo.",
+          "fonti": [
+            "mayer"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Mayer assume rosso, giallo e blu, considera separatamente bianco e nero e ordina rapporti fra componenti. Nei §§ 16-18 il triangolo comprende 91 campioni. È una costruzione quantitativa delle mescolanze: non usa tinta, valore e croma come coordinate e non dimostra che tre pigmenti reali possano produrre ogni colore.",
+          "fonti": [
+            "mayer"
+          ]
+        },
+        {
+          "tipo": "titoletto",
+          "testo": "Lambert: una ricezione già documentata nel 1772",
+          "id": "lambert-una-ricezione-gia-documentata-nel-1772"
+        },
+        {
+          "tipo": "p",
+          "testo": "La piramide cromatica di Johann Heinrich Lambert è pubblicata nel 1772, prima degli <i>Opera</i> di Mayer. Non c’è contraddizione: Lambert richiama il resoconto della comunicazione del 1758. La successione riguarda documenti differenti, non un’impossibile conoscenza anticipata del volume postumo.",
+          "fonti": [
+            "lambert"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "La piramide dispone i campioni in un ordinamento materiale. Non basta la presenza di tre dimensioni per identificarla con un sistema HVC: occorre chiedere quali differenze siano ordinate e che cosa significhi ogni posizione.",
+          "fonti": [
+            "lambert",
+            "munsell-1907"
+          ]
+        },
+        {
+          "tipo": "titoletto",
+          "testo": "Runge: relazioni per il pittore, non una scala Munsell",
+          "id": "runge-relazioni-per-il-pittore-non-una-scala-munsell"
+        },
+        {
+          "tipo": "p",
+          "testo": "Nella <i>Farben-Kugel</i> del 1810 Philipp Otto Runge dispone colori cromatici, poli bianco e nero e un interno verso il grigio. Il testo distingue il problema pittorico delle relazioni fra colori dall’indagine sull’origine fisica della luce.",
+          "fonti": [
+            "runge"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "La sfera rende visibili relazioni, ma la sua regolarità non dimostra che distanze uguali corrispondano a differenze visive uguali. Munsell nomina Runge e Lambert nella seconda edizione del proprio libro: sono precedenti riconosciuti, non una somiglianza ricostruita soltanto a posteriori.",
+          "fonti": [
+            "runge",
+            "munsell-1907"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "luci",
+      "breve": "Le mescolanze luminose",
+      "titolo": "3. Helmholtz, Grassmann e Maxwell: che cosa si confronta",
+      "blocchi": [
+        {
+          "tipo": "p",
+          "testo": "Nel 1852 Helmholtz discute la composizione delle luci e l’effetto sull’osservatore. Richiama la differenza rispetto alle miscele di sostanze coloranti. Mescolare fasci luminosi e mescolare paste non sono due modi materialmente equivalenti di eseguire la stessa operazione.",
+          "fonti": [
+            "helmholtz"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Grassmann affronta nel 1853 le mescolanze luminose e le loro equivalenze. A p. 70 distingue «la tinta, l’intensità del colore e l’intensità del bianco mescolato». La formulazione non coincide con hue, value e chroma: aggiornarne tacitamente il lessico cambierebbe il problema trattato.",
+          "fonti": [
+            "grassmann"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Maxwell propone un confronto particolarmente chiaro. Nel saggio comunicato il 19 marzo 1855 distingue <i>shade</i>, <i>hue</i> e <i>tint</i>: chiaro-scuro, differenza di tinta e maggiore purezza o neutralità. È un’anticipazione pertinente della distinzione descrittiva, non l’identità delle successive scale Munsell.",
+          "fonti": [
+            "maxwell"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Il fascicolo degli atti che contiene il saggio è datato 1857 dall’editore. I dischi dipinti in rotazione consentono confronti numerici senza mescolare le paste. I numeri descrivono la composizione del confronto visivo, non diventano per questo valori HVC.",
+          "fonti": [
+            "maxwell"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Una corrispondenza visiva non identifica necessariamente gli spettri dei campioni. Questa ricerca sull’uguagliamento delle luci contribuisce alla colorimetria; non fornisce da sola la ricetta per una stesura ad acquerello.",
+          "fonti": [
+            "maxwell",
+            "cie-xyz"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "munsell",
+      "breve": "Il contributo di Munsell",
+      "titolo": "4. Una notazione fondata su tinta, valore e croma",
+      "blocchi": [
+        {
+          "tipo": "p",
+          "testo": "Nel 1905 Munsell scrive esplicitamente: «Le tre qualità del colore sono tinta, valore e croma». Il frontespizio del facsimile controllato reca Boston, Geo. H. Ellis Co., 1905. La formulazione è dunque verificata nella prima edizione, non desunta dal copyright di un’edizione successiva.",
+          "fonti": [
+            "munsell-1905"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "La proposta collega le distinzioni a una notazione utilizzabile. La tinta riceve una sigla; valore e croma sono indicati separatamente, nella forma H V/C. La scala del valore pone nero e bianco agli estremi 0 e 10. Il numero descrive una posizione nel sistema, non una percentuale di pigmento o di luce riflessa.",
+          "fonti": [
+            "munsell-1905",
+            "rinotazione"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "La novità non si riduce quindi ai nomi degli attributi. Munsell vuole rendere confrontabili i campioni, registrare le differenze e insegnare a riconoscerle. Le scale cercano un ordinamento percettivo, invece di imporre ai colori una figura regolare scelta in anticipo.",
+          "fonti": [
+            "munsell-1907"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "La seconda edizione, del 1907, conserva la sfera come modello introduttivo e spiega perché non descrive tutto il solido. A tinte e valori diversi corrispondono massimi di croma diversi: alcuni colori si estendono più lontano dal neutro di altri. L’albero cromatico rappresenta queste estensioni diseguali.",
+          "fonti": [
+            "munsell-1907"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Il croma Munsell non è perciò una percentuale universale da zero a cento. Separare tre coordinate non significa nemmeno che ogni loro combinazione sia disponibile in un campione materiale.",
+          "fonti": [
+            "munsell-1907"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "La distinzione concettuale non garantisce una variazione materiale isolata. Già il § 23 del 1905 avverte che uno scolorimento può cambiare anche tinta e valore. Una trasformazione osservata sul foglio non va quindi chiamata “solo croma” prima di avere confrontato gli altri attributi.",
+          "fonti": [
+            "munsell-1905"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "novecento",
+      "breve": "Le revisioni",
+      "titolo": "5. Il sistema continua a cambiare",
+      "blocchi": [
+        {
+          "tipo": "p",
+          "testo": "La ricostruzione di Dorothy Nickerson distingue l’<i>Atlas</i> del 1915 dal <i>Munsell Book of Color</i> del 1929. Il primo libro del 1905 non contiene già, in forma definitiva, tutti i campioni e le revisioni del sistema successivo.",
+          "fonti": [
+            "nickerson"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Nel 1943 Newhall, Nickerson e Judd pubblicano il rapporto finale sulla rinotazione Munsell. Il riassunto descrive la revisione di tutte e tre le dimensioni, a partire dalle stime visive del 1940. Il solido viene modificato e ampliato, cercando una migliore corrispondenza fra intervalli e differenze percepite.",
+          "fonti": [
+            "rinotazione"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "La specificazione avviene nel sistema colorimetrico ICI, denominazione inglese della CIE, con illuminante C. Non si tratta soltanto di aggiungere misure agli stessi campioni invariati. Occorre distinguere l’ordinamento, le tavole numeriche e le sue realizzazioni materiali.",
+          "fonti": [
+            "rinotazione"
+          ]
+        },
+        {
+          "tipo": "tabella",
+          "intestazione": [
+            "Sistema",
+            "Che cosa descrive",
+            "Distinzione necessaria"
+          ],
+          "righe": [
+            {
+              "celle": [
+                "CIE 1931 XYZ",
+                "Un sistema colorimetrico di riferimento basato su funzioni di uguagliamento.",
+                "Y è proporzionale alla luminanza; non è il valore Munsell V."
+              ],
+              "fonti": [
+                "cie-xyz"
+              ]
+            },
+            {
+              "celle": [
+                "CIELAB, 1976",
+                "Uno spazio approssimativamente uniforme con correlati di chiarezza, croma e tinta.",
+                "L* e il croma CIELAB non hanno gli stessi numeri delle scale Munsell."
+              ],
+              "fonti": [
+                "cie-lab"
+              ]
+            },
+            {
+              "celle": [
+                "CIECAM16, CIE 248:2022",
+                "Un modello che collega tristimoli e attributi percettivi in funzione delle condizioni di visione.",
+                "La previsione dell’apparenza richiede il contesto; non misura la riuscita di una composizione."
+              ],
+              "fonti": [
+                "cie-cam"
+              ]
+            }
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Nomi simili non rendono intercambiabili le coordinate. Un confronto numerico richiede di dichiarare sistema, condizioni e trasformazioni. La somiglianza fra le parole “chiarezza” e “valore” non autorizza a sostituire direttamente una scala con l’altra.",
+          "fonti": [
+            "cie-lab",
+            "rinotazione"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lessico",
+      "breve": "Croma e saturazione",
+      "titolo": "6. Un lessico per non confondere i giudizi",
+      "blocchi": [
+        {
+          "tipo": "p",
+          "testo": "Il lessico CIE distingue attributi che nell’uso comune vengono spesso riuniti sotto “intensità” o “luminosità”. Qui si adottano chiarezza per <i>lightness</i>, luminosità percepita per <i>brightness</i> e pienezza cromatica per <i>colourfulness</i>. Sono convenzioni esplicative dichiarate; i termini inglesi mantengono il riferimento preciso.",
+          "fonti": [
+            "cie-lightness",
+            "cie-brightness",
+            "cie-colourfulness"
+          ]
+        },
+        {
+          "tipo": "tabella",
+          "intestazione": [
+            "Termine",
+            "Domanda e riferimento del giudizio"
+          ],
+          "righe": [
+            {
+              "celle": [
+                "Tinta, hue",
+                "A quale famiglia cromatica somiglia il colore? Non è una definizione generale mediante una singola lunghezza d’onda."
+              ],
+              "fonti": [
+                "cie-tinta"
+              ]
+            },
+            {
+              "celle": [
+                "Luminosità percepita, brightness",
+                "Quanto l’area sembra emettere, trasmettere o riflettere luce? Il giudizio è percettivo."
+              ],
+              "fonti": [
+                "cie-brightness"
+              ]
+            },
+            {
+              "celle": [
+                "Chiarezza, lightness",
+                "Come si confronta quella luminosità percepita con un’area similmente illuminata che appare bianca o altamente trasmittente?"
+              ],
+              "fonti": [
+                "cie-lightness"
+              ]
+            },
+            {
+              "celle": [
+                "Pienezza cromatica, colourfulness",
+                "Quanto l’area appare cromatica? Il termine non indica da solo la concentrazione della pasta."
+              ],
+              "fonti": [
+                "cie-colourfulness"
+              ]
+            },
+            {
+              "celle": [
+                "Croma, chroma",
+                "La pienezza cromatica è valutata rispetto alla luminosità percepita di un riferimento similmente illuminato, che appare grigio, bianco o altamente trasmittente."
+              ],
+              "fonti": [
+                "cie-croma"
+              ]
+            },
+            {
+              "celle": [
+                "Saturazione, saturation",
+                "La pienezza cromatica è valutata rispetto alla luminosità percepita dell’area stessa. È questo riferimento a distinguerla dal croma."
+              ],
+              "fonti": [
+                "cie-saturazione"
+              ]
+            },
+            {
+              "celle": [
+                "Luminanza, luminance",
+                "È una grandezza fotometrica direzionale, espressa in candele per metro quadrato. Non coincide con la sensazione di luminosità."
+              ],
+              "fonti": [
+                "cie-luminanza"
+              ]
+            }
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Nella saturazione il riferimento è dunque l’area osservata; nel croma è un’altra area di riferimento. Chiamarli sinonimi elimina proprio questa distinzione. Le definizioni verbali non forniscono però una formula universale da applicare indifferentemente ai numeri Munsell, CIELAB o alle codifiche digitali.",
+          "fonti": [
+            "cie-croma",
+            "cie-saturazione",
+            "cie-lab"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Anche le indicazioni di costanza del lessico CIE hanno condizioni ed eccezioni. Non autorizzano ad affermare che il croma rimanga sempre identico al cambiare della luce. Il confronto deve mantenere esplicite le condizioni di osservazione.",
+          "fonti": [
+            "cie-croma",
+            "cie-saturazione"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Il valore Munsell è una scala specifica per il chiaro-scuro. Nel discorso pittorico il termine può indicare più largamente quel rapporto visivo; quando si assegna un numero occorre precisare il sistema. Non è la quantità d’acqua, né la luminanza misurata espressa con un nome diverso.",
+          "fonti": [
+            "munsell-1905",
+            "rinotazione",
+            "cie-luminanza"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wada",
+      "breve": "Dove si colloca Wada",
+      "titolo": "7. Storia degli standard e lettura degli abbinamenti",
+      "blocchi": [
+        {
+          "tipo": "p",
+          "testo": "Wada lavora quando la formulazione Munsell è già pubblicata. Nella conferenza <i>On Standards of Colour</i> del 1930 presenta il progetto dei campioni standard; a p. 7 cede la parola al tecnico del proprio gruppo. La spiegazione seguente indica la scelta di Ostwald per ordinare 500 campioni.",
+          "fonti": [
+            "wada-1930"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "È una prova documentaria dell’impiego di Ostwald in quel lavoro, non una derivazione ricostruita dalla somiglianza delle figure. Non prova invece che le 348 combinazioni della riedizione moderna siano state tutte generate da regole ostwaldiane. Classificare campioni e scegliere abbinamenti rimangono operazioni da distinguere.",
+          "fonti": [
+            "wada-1930",
+            "wada-editore"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "La cronologia istituzionale Tōbunken registra inoltre, nel 1956, il completamento di tavole Munsell migliorate. Il passo non dettaglia ruoli tecnici o collaboratori. Il riferimento successivo impedisce di negare in generale ogni rapporto con Munsell, ma non può essere retrodatato al metodo degli abbinamenti degli anni Trenta.",
+          "fonti": [
+            "wada-biografia"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Usare oggi tinta, valore e croma per leggere Wada sarebbe quindi una scelta di analisi esplicita. Consentirebbe di descrivere differenze fra campioni senza presentare quella lettura come il procedimento storico con cui furono selezionati.",
+          "fonti": [
+            "munsell-1907",
+            "wada-1930"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "MacEvoy si colloca su un altro piano ancora: è un autore tecnico contemporaneo che sviluppa analisi per il pittore. Le sue indicazioni possono aiutare a formulare confronti; non gli si attribuiscono l’origine di HVC né le intenzioni di Wada.",
+          "fonti": [
+            "macevoy"
+          ]
+        },
+        {
+          "tipo": "nota",
+          "testo": "La pagina <a href=\"../sanzo-wada/\">Gli abbinamenti di Sanzo Wada nell’acquerello</a> sviluppa separatamente le edizioni, le istruzioni dell’appendice e il trasferimento sulla carta. Le prove del Quaderno non sono esercizi attribuiti a Wada."
+        }
+      ]
+    },
+    {
+      "id": "prove",
+      "breve": "Guardare le stesure",
+      "titolo": "8. Quattro confronti proposti per l’acquerello",
+      "blocchi": [
+        {
+          "tipo": "nota",
+          "testo": "Le prove seguenti sono proposte del Quaderno e non sono state eseguite. Servirebbero a distinguere le domande di osservazione, senza promettere ricette capaci di cambiare un solo attributo."
+        },
+        {
+          "tipo": "titoletto",
+          "testo": "Una famiglia di tinta, valori diversi",
+          "id": "una-famiglia-di-tinta-valori-diversi"
+        },
+        {
+          "tipo": "nota",
+          "testo": "Si potrebbero preparare più stesure della stessa miscela, sulla stessa carta. A colore asciutto si ordinerebbero prima i campioni dal chiaro allo scuro, annotando poi eventuali cambi di tinta e di croma. La diluizione non verrebbe assunta come una variazione pura del valore."
+        },
+        {
+          "tipo": "titoletto",
+          "testo": "Valori simili, croma diverso",
+          "id": "valori-simili-croma-diverso"
+        },
+        {
+          "tipo": "nota",
+          "testo": "Si potrebbero cercare due campioni simili per chiaro-scuro, uno più vicino al neutro e uno più cromatico. L’obiettivo sarebbe confrontare il risultato, non dimostrare che l’aggiunta di grigio conserva necessariamente tinta e valore. La preparazione effettiva andrebbe descritta."
+        },
+        {
+          "tipo": "titoletto",
+          "testo": "Tinte diverse, un confronto di chiaro-scuro",
+          "id": "tinte-diverse-un-confronto-di-chiaro-scuro"
+        },
+        {
+          "tipo": "nota",
+          "testo": "Si potrebbero accostare campioni di famiglie diverse e cercare una chiarezza confrontabile. Una fotografia convertita in grigio potrebbe aiutare a porre la domanda, ma non certificherebbe l’uguaglianza percettiva: ripresa e conversione sono ulteriori condizioni del confronto."
+        },
+        {
+          "tipo": "titoletto",
+          "testo": "Il campione resta uguale, cambia il contorno",
+          "id": "il-campione-resta-uguale-cambia-il-contorno"
+        },
+        {
+          "tipo": "nota",
+          "testo": "Lo stesso ritaglio potrebbe essere spostato fra due contorni differenti, mantenendo la luce. Si registrerebbe l’eventuale differenza di apparenza senza attribuirla a una modifica del pigmento. Il campione materiale e il suo contesto verrebbero annotati separatamente."
+        },
+        {
+          "tipo": "p",
+          "testo": "La distinzione fra coordinate non implica indipendenza delle trasformazioni materiali. Anche il testo Munsell ammette cambi congiunti; l’analisi contemporanea considera condizioni e contesto. Una scheda di prova dovrebbe quindi registrare ciò che varia, senza forzarlo entro una sola categoria.",
+          "fonti": [
+            "munsell-1905",
+            "macevoy"
+          ]
+        },
+        {
+          "tipo": "nota",
+          "testo": "Per ogni confronto si potrebbero indicare pigmenti se noti, carta, modo di stesura, luce e stato di asciugatura. Non si assegnerebbero numeri Munsell senza campioni o un procedimento di riferimento adeguato. Le osservazioni rimarrebbero riferite ai materiali provati."
+        }
+      ]
+    },
+    {
+      "id": "cronologia",
+      "breve": "Cronologia e limiti",
+      "titolo": "9. Le date descrivono opere e problemi diversi",
+      "blocchi": [
+        {
+          "tipo": "tabella",
+          "intestazione": [
+            "Data",
+            "Documento o sviluppo"
+          ],
+          "righe": [
+            {
+              "celle": [
+                "1758 / 1775",
+                "Comunicazione di Mayer e pubblicazione postuma del testo completo esaminato."
+              ],
+              "fonti": [
+                "mayer"
+              ]
+            },
+            {
+              "celle": [
+                "1772 / 1810",
+                "Piramide di Lambert e Farben-Kugel di Runge: antecedenti di ordinamento, non scale HVC identiche."
+              ],
+              "fonti": [
+                "lambert",
+                "runge"
+              ]
+            },
+            {
+              "celle": [
+                "1852 / 1853",
+                "Helmholtz e Grassmann sulle mescolanze luminose e le loro differenze rispetto ai coloranti."
+              ],
+              "fonti": [
+                "helmholtz",
+                "grassmann"
+              ]
+            },
+            {
+              "celle": [
+                "1855 / 1857",
+                "Comunicazione di Maxwell e data editoriale del fascicolo che la contiene."
+              ],
+              "fonti": [
+                "maxwell"
+              ]
+            },
+            {
+              "celle": [
+                "1905 / 1907",
+                "Prima e seconda edizione di A Color Notation; non sono lo stesso esemplare."
+              ],
+              "fonti": [
+                "munsell-1905",
+                "munsell-1907"
+              ]
+            },
+            {
+              "celle": [
+                "1915 / 1929 / 1943",
+                "Atlas, Book of Color e rapporto finale sulla rinotazione Munsell."
+              ],
+              "fonti": [
+                "nickerson",
+                "rinotazione"
+              ]
+            },
+            {
+              "celle": [
+                "1930 / 1956",
+                "Conferenza Wada sull’ordinamento degli standard e successivo riferimento biografico alle tavole Munsell migliorate."
+              ],
+              "fonti": [
+                "wada-1930",
+                "wada-biografia"
+              ]
+            },
+            {
+              "celle": [
+                "1931 / 1976 / 2022",
+                "XYZ, CIELAB e pubblicazione CIECAM16: strumenti con scopi e coordinate differenti."
+              ],
+              "fonti": [
+                "cie-xyz",
+                "cie-lab",
+                "cie-cam"
+              ]
+            }
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Questa ricostruzione attribuirebbe a Munsell lo sviluppo di un sistema esplicito di notazione e campioni secondo HVC, non la scoperta isolata di ogni precedente distinzione del colore. I testi di Runge e Maxwell mostrano perché il solo conteggio di tre proprietà non basta a stabilire un’identità storica.",
+          "fonti": [
+            "munsell-1905",
+            "munsell-1907",
+            "runge",
+            "maxwell"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "I riferimenti permettono di ritrovare i passi decisivi, ma non costituiscono una storia completa della scienza del colore. Le fonti indicano edizioni e parti lette: una scheda bibliografica, un riassunto e un originale consultato per pagine non vengono presentati come letture equivalenti.",
+          "fonti": [
+            "mayer",
+            "rinotazione",
+            "wada-editore"
+          ]
+        },
+        {
+          "tipo": "nota",
+          "testo": "Rimangono fuori una ricostruzione completa delle influenze personali, la lettura integrale degli apparati di Wada e la verifica delle tabelle colorimetriche. Non si deduce un primo inventore assoluto da una selezione di documenti, né un metodo pittorico universale da queste distinzioni."
+        }
+      ]
+    }
+  ],
+  "fonti": {
+    "munsell-1905": {
+      "autore": "Albert H. Munsell",
+      "titolo": "A Color Notation",
+      "pubblicazione": "Boston, Geo. H. Ellis Co., prima edizione, 1905, pp. 14-15 e 21-22, §§ 20-23 e 40-43.",
+      "url": "https://archive.org/download/acolornotation00munsgoog/acolornotation00munsgoog.pdf",
+      "nota": "La prima edizione formula tinta, valore e croma e ne presenta la notazione. Non viene confusa con la seconda edizione.",
+      "consultazione": "9 novembre 2026. Frontespizio e passi indicati controllati sulle immagini. Originale del § 20: “The three color qualities are hue, value, and chroma”. Non lettura integrale del volume."
+    },
+    "munsell-1907": {
+      "autore": "Albert H. Munsell",
+      "titolo": "A Color Notation",
+      "pubblicazione": "Boston, Geo. H. Ellis Co., seconda edizione riveduta e ampliata, 1907.",
+      "url": "https://www.gutenberg.org/cache/epub/26054/pg26054-images.html",
+      "nota": "Testo sui confronti, sulla notazione e sui limiti diseguali di croma. La nota al § 31 cita Runge e Lambert.",
+      "consultazione": "9 novembre 2026. Letti frontespizio, §§ 20-35, passi sulla notazione e §§ 123-127; non collazionato integralmente con la prima edizione. Il copyright 1905 non data questa edizione."
+    },
+    "mayer": {
+      "autore": "Tobias Mayer; edizione a cura di Georg Christoph Lichtenberg",
+      "titolo": "De affinitate colorum commentatio, in Opera inedita",
+      "pubblicazione": "Göttingen, 1775, frontespizio interno p. 31, testo pp. 33-42.",
+      "url": "https://doi.org/10.3931/e-rara-8854",
+      "nota": "Il frontespizio interno data la comunicazione al 18 novembre 1758; i §§ 16-18 presentano l’ordinamento triangolare.",
+      "consultazione": "9 novembre 2026. Catalogo e immagini del frontespizio interno e delle pp. 33 e 37. Non lettura integrale degli Opera inedita."
+    },
+    "lambert": {
+      "autore": "Johann Heinrich Lambert",
+      "titolo": "Beschreibung einer mit dem Calauschen Wachse ausgemalten Farbenpyramide",
+      "pubblicazione": "Berlin, Haude & Spener, 1772, sezione IV, pp. 29-30.",
+      "url": "https://doi.org/10.3931/e-rara-3770",
+      "nota": "Il testo riprende esplicitamente il resoconto della comunicazione di Mayer del 1758. La piramide non viene identificata con la terna HVC.",
+      "consultazione": "9 novembre 2026. Catalogo e p. 29 in immagine; ulteriori passi selezionati nella ricerca. Non lettura integrale delle 126 pagine."
+    },
+    "runge": {
+      "autore": "Philipp Otto Runge",
+      "titolo": "Farben-Kugel",
+      "pubblicazione": "Hamburg, Friedrich Perthes, 1810, corpo del testo, pp. 1-15.",
+      "url": "https://www.tha.de/~harsch/germanica/Chronologie/19Jh/Runge/run_kkug.html",
+      "nota": "Trascrizione universitaria del testo sulla sfera cromatica, con bianco, nero e relazioni verso il grigio.",
+      "consultazione": "9 novembre 2026. Letta la trascrizione del corpo, non tutti gli scritti allegati al volume. Non collazionata riga per riga con il facsimile."
+    },
+    "helmholtz": {
+      "autore": "Hermann Helmholtz",
+      "titolo": "Ueber die Theorie der zusammengesetzten Farben",
+      "pubblicazione": "Archiv für Anatomie, Physiologie und wissenschaftliche Medicin, 1852, pp. 461-482.",
+      "url": "https://www.boscarol.com/wikipdf/1852.0-helmholtz.pdf",
+      "nota": "Riproduzione del testo originale sulla composizione delle luci e sulla differenza rispetto alle miscele di sostanze coloranti.",
+      "consultazione": "9 novembre 2026. Nella ricerca controllati frontespizio annuale e pp. 461-464. Il sito ospita la scansione, non sostituisce l’autore della fonte. Non letto l’intero Handbuch."
+    },
+    "grassmann": {
+      "autore": "Hermann Grassmann",
+      "titolo": "Zur Theorie der Farbenmischung",
+      "pubblicazione": "Annalen der Physik und Chemie, 89, 1853, pp. 69-84, in particolare p. 70.",
+      "url": "https://www.boscarol.com/wikipdf/1854-grassmann.pdf",
+      "nota": "La formulazione originale distingue tinta, intensità del colore e intensità del bianco mescolato, non HVC.",
+      "consultazione": "9 novembre 2026. Controllata la p. 70 in immagine. Originale: “den Farbenton, die Intensität der Farbe, und die Intensität des beigemischten Weiß”. Il nome del file non data l’articolo; la traduzione inglese è del 1854."
+    },
+    "maxwell": {
+      "autore": "James Clerk Maxwell",
+      "titolo": "Experiments on Colour, as perceived by the Eye, with Remarks on Colour-Blindness",
+      "pubblicazione": "Transactions of the Royal Society of Edinburgh, 21(2), pp. 275-298. Comunicazione 19 marzo 1855; fascicolo datato 1857 dall’editore.",
+      "url": "https://doi.org/10.1017/S0080456800032117",
+      "nota": "A p. 279 distingue shade, hue e tint. Gli esperimenti impiegano anche dischi dipinti in rotazione, senza mescolare le paste.",
+      "consultazione": "9 novembre 2026. Passi del testo originale e immagine di p. 279, con metadati Cambridge e Crossref. Riproduzione leggibile: jimworthey.com/archive/Maxwell_1855_OCRtext.pdf. Non lettura integrale del saggio."
+    },
+    "nickerson": {
+      "autore": "Dorothy Nickerson",
+      "titolo": "History of the Munsell Color System and Its Scientific Application",
+      "pubblicazione": "Journal of the Optical Society of America, 30(12), 1940, pp. 575-586.",
+      "url": "https://doi.org/10.1364/JOSA.30.000575",
+      "nota": "Ricostruzione dello sviluppo del sistema, dell’Atlas del 1915 e del Book of Color del 1929.",
+      "consultazione": "9 novembre 2026. Nella ricerca lette introduzione, cronologia del diario e sezioni iniziali in trascrizione; non consultato direttamente il diario di Munsell."
+    },
+    "rinotazione": {
+      "autore": "Sidney M. Newhall, Dorothy Nickerson, Deane B. Judd",
+      "titolo": "Final Report of the O.S.A. Subcommittee on the Spacing of the Munsell Colors",
+      "pubblicazione": "Journal of the Optical Society of America, 33(7), 1943, pp. 385-418.",
+      "url": "https://opg.optica.org/josa/abstract.cfm?uri=josa-33-7-385",
+      "nota": "Il riassunto descrive la revisione di tutte e tre le dimensioni a partire dalle stime visive del 1940 e la specificazione ICI con illuminante C.",
+      "consultazione": "9 novembre 2026. Letti riassunto e dati editoriali, non l’articolo e le tabelle integrali. Non ricalcolata la rinotazione."
+    },
+    "cie-tinta": {
+      "autore": "Commission Internationale de l’Éclairage, CIE",
+      "titolo": "e-ILV, hue, 17-22-067",
+      "pubblicazione": "CIE S 017:2020, International Lighting Vocabulary, seconda edizione.",
+      "url": "https://cie.co.at/eilvterm/17-22-067",
+      "nota": "Definizione percettiva della tinta; non un’identità generale con una lunghezza d’onda.",
+      "consultazione": "9 novembre 2026. Lette definizione e note della voce, non lo standard integrale."
+    },
+    "cie-brightness": {
+      "autore": "Commission Internationale de l’Éclairage, CIE",
+      "titolo": "e-ILV, brightness, 17-22-059",
+      "pubblicazione": "CIE S 017:2020, International Lighting Vocabulary, seconda edizione.",
+      "url": "https://cie.co.at/eilvterm/17-22-059",
+      "nota": "Attributo percettivo relativo a quanto un’area appare emettere, trasmettere o riflettere luce.",
+      "consultazione": "9 novembre 2026. Lette definizione e note. “Luminosità percepita” è la resa esplicativa adottata qui."
+    },
+    "cie-lightness": {
+      "autore": "Commission Internationale de l’Éclairage, CIE",
+      "titolo": "e-ILV, lightness, 17-22-063",
+      "pubblicazione": "CIE S 017:2020, International Lighting Vocabulary, seconda edizione.",
+      "url": "https://cie.co.at/eilvterm/17-22-063",
+      "nota": "Il giudizio è relativo a un’area similmente illuminata che appare bianca o altamente trasmittente.",
+      "consultazione": "9 novembre 2026. Lette definizione e note: l’attributo è riferito ai colori percepiti in relazione. Non viene identificato numericamente con il valore Munsell."
+    },
+    "cie-colourfulness": {
+      "autore": "Commission Internationale de l’Éclairage, CIE",
+      "titolo": "e-ILV, colourfulness, 17-22-072",
+      "pubblicazione": "CIE S 017:2020, International Lighting Vocabulary, seconda edizione.",
+      "url": "https://cie.co.at/eilvterm/17-22-072",
+      "nota": "Attributo relativo a quanto un’area appare cromatica. Qui è reso con pienezza cromatica.",
+      "consultazione": "9 novembre 2026. Lette definizione e note. La resa italiana è una convenzione redazionale dichiarata."
+    },
+    "cie-saturazione": {
+      "autore": "Commission Internationale de l’Éclairage, CIE",
+      "titolo": "e-ILV, saturation, 17-22-073",
+      "pubblicazione": "CIE S 017:2020, International Lighting Vocabulary, seconda edizione.",
+      "url": "https://cie.co.at/eilvterm/17-22-073",
+      "nota": "Pienezza cromatica valutata in proporzione alla luminosità percepita dell’area stessa.",
+      "consultazione": "9 novembre 2026. Lette definizione e note. Le costanze indicate sono approssimate e condizionate, non leggi universali."
+    },
+    "cie-croma": {
+      "autore": "Commission Internationale de l’Éclairage, CIE",
+      "titolo": "e-ILV, chroma, 17-22-074",
+      "pubblicazione": "CIE S 017:2020, International Lighting Vocabulary, seconda edizione.",
+      "url": "https://cie.co.at/eilvterm/17-22-074",
+      "nota": "Pienezza cromatica valutata rispetto alla luminosità percepita di un riferimento similmente illuminato, grigio, bianco o altamente trasmittente.",
+      "consultazione": "9 novembre 2026. Lette definizione e note. Conservato il riferimento anche grigio della versione 2020; nessuna formula numerica universale ricavata dalla definizione verbale."
+    },
+    "cie-luminanza": {
+      "autore": "Commission Internationale de l’Éclairage, CIE",
+      "titolo": "e-ILV, luminance, 17-21-050",
+      "pubblicazione": "CIE S 017:2020, International Lighting Vocabulary, seconda edizione.",
+      "url": "https://cie.co.at/eilvterm/17-21-050",
+      "nota": "Grandezza fotometrica direzionale, espressa in candele per metro quadrato. Non è una sensazione.",
+      "consultazione": "9 novembre 2026. Letta la voce per distinguere quantità fotometrica e apparenza."
+    },
+    "cie-xyz": {
+      "autore": "Commission Internationale de l’Éclairage, CIE",
+      "titolo": "CIE 1931 standard colorimetric system [X, Y, Z]",
+      "pubblicazione": "Voce ufficiale e-ILV 150.",
+      "url": "https://cie.co.at/eilv/150",
+      "nota": "Sistema di riferimento colorimetrico; Y è proporzionale alla luminanza. Non coincide con HVC.",
+      "consultazione": "9 novembre 2026. Letta la definizione e le note, non gli atti originali del 1931."
+    },
+    "cie-lab": {
+      "autore": "Commission Internationale de l’Éclairage, CIE",
+      "titolo": "CIE 1976 L*a*b* colour space",
+      "pubblicazione": "Voce ufficiale e-ILV 157.",
+      "url": "https://cie.co.at/eilv/157",
+      "nota": "Spazio approssimativamente uniforme, con correlati di chiarezza, croma e tinta; scale diverse da quelle Munsell.",
+      "consultazione": "9 novembre 2026. Letta la voce e le relazioni disponibili, non presentata come misura universale dell’apparenza."
+    },
+    "cie-cam": {
+      "autore": "Commission Internationale de l’Éclairage, CIE",
+      "titolo": "The CIE 2016 Colour Appearance Model for Colour Management Systems: CIECAM16",
+      "pubblicazione": "CIE 248:2022, DOI 10.25039/TR.248.2022.",
+      "url": "https://cie.co.at/publications/cie-2016-colour-appearance-model-colour-management-systems-ciecam16",
+      "nota": "La trasformazione dai tristimoli ai correlati percettivi dipende dalle condizioni di visione.",
+      "consultazione": "9 novembre 2026. Letta la presentazione ufficiale, non le 38 pagine del rapporto tecnico."
+    },
+    "wada-1930": {
+      "autore": "Sanzo Wada; spiegazione operativa affidata al tecnico del suo gruppo",
+      "titolo": "標準色の話 / On Standards of Colour",
+      "pubblicazione": "照明学会雑誌, 14(1), 1930, pp. 5-9, DOI 10.2150/jieij1917.14.5.",
+      "url": "https://www.jstage.jst.go.jp/article/jieij1917/14/1/14_1_5/_article/-char/ja",
+      "nota": "La scelta di Ostwald riguarda l’ordinamento di campioni standard. Non documenta la generazione di ogni abbinamento del repertorio successivo.",
+      "consultazione": "9 novembre 2026. Letti testo estratto delle cinque pagine e immagini selezionate: p. 7, passaggio al tecnico; p. 8, ordinamento dei 500 campioni. Traduzione di lavoro dal giapponese, non edizione critica."
+    },
+    "wada-editore": {
+      "autore": "Seigensha",
+      "titolo": "配色事典: 大正・昭和の色彩ノート / A Dictionary of Color Combinations",
+      "pubblicazione": "Edizione moderna, 2010, ISBN 978-4-86152-247-5.",
+      "url": "https://www.seigensha.com/books/978-4-86152-247-5/",
+      "nota": "La scheda presenta 348 abbinamenti del repertorio storico in una nuova veste editoriale.",
+      "consultazione": "9 novembre 2026. Letta la scheda ufficiale, non il libro e il commento integrali."
+    },
+    "wada-biografia": {
+      "autore": "Tokyo National Research Institute for Cultural Properties, Tōbunken",
+      "titolo": "和田三造, notizia biografica dal 日本美術年鑑",
+      "pubblicazione": "日本美術年鑑, edizione Shōwa 43, 1968, pp. 148-149; banca dati istituzionale.",
+      "url": "https://www.tobunken.go.jp/materials/bukko/9183.html",
+      "nota": "Nella cronologia personale, la voce del 1956 registra il completamento di tavole Munsell migliorate. Non specifica lì ruoli tecnici e collaboratori.",
+      "consultazione": "9 novembre 2026. Letta la pagina e riscontrato il passo “改良マンセル色票系完成” sotto 昭和31年. Il dato successivo non è una prova dell’origine degli abbinamenti degli anni Trenta."
+    },
+    "macevoy": {
+      "autore": "Bruce MacEvoy",
+      "titolo": "colormaking attributes",
+      "pubblicazione": "Handprint, senza data originaria accertata.",
+      "url": "https://www.handprint.com/HP/WCL/color3.html",
+      "nota": "Analisi contemporanea degli attributi e delle condizioni di osservazione, non fonte primaria dei contributi storici.",
+      "consultazione": "9 novembre 2026. Letti introduzione e passi pertinenti. Le sue relazioni didattiche non sono esportate come formule valide per ogni scala; nessuna banca dati di pigmenti verificata integralmente."
+    }
+  }
+}
