@@ -1,0 +1,551 @@
+{
+  "id": "rudolf-steiner",
+  "ordine": 5,
+  "data": "2026-11-09",
+  "titolo": "Rudolf Steiner e il colore",
+  "sottotitolo": "Dall’esperienza alla forma",
+  "scheda": "Goethe, colori-immagine e colori-splendore, forma dal colore e trasmissione della pratica ad acquerello",
+  "sintesi": [
+    {
+      "testo": "Per Steiner la pittura nasce dalle relazioni fra i colori. La forma dovrebbe emergere da quelle relazioni, anziché ricevere il colore soltanto dopo essere stata disegnata.",
+      "capitolo": "forma-colore",
+      "fonti": [
+        "ga-291",
+        "ga-291a"
+      ]
+    },
+    {
+      "testo": "La distinzione fra colori-immagine e colori-splendore appartiene alla sua concezione spirituale della realtà. Non classifica la trasparenza dei pigmenti o la lucentezza delle superfici.",
+      "capitolo": "immagine-splendore",
+      "fonti": [
+        "ga-291"
+      ]
+    },
+    {
+      "testo": "Giallo, blu e rosso suggeriscono, nel suo discorso, modi diversi di distribuire il colore sulla superficie. L’acqua interessa anche per il passaggio dalla materia fluida alla forma fissata.",
+      "capitolo": "acqua-superficie",
+      "fonti": [
+        "ga-291"
+      ]
+    },
+    {
+      "testo": "Gli sviluppi di Henni Geck, Gerard Wagner e delle scuole Waldorf richiedono attribuzioni distinte. Le proposte pratiche del Quaderno sono confronti da provare, non lezioni originali di Steiner.",
+      "capitolo": "trasmissione",
+      "fonti": [
+        "ga-291a",
+        "goetheanum-geck",
+        "wagner",
+        "cardiff"
+      ]
+    }
+  ],
+  "premessa": [
+    {
+      "testo": "Un oggetto può essere disegnato e poi colorato. Un dipinto può anche nascere dall’incontro fra zone colorate, prima che il soggetto assuma un contorno preciso. Rudolf Steiner pone questa seconda possibilità al centro della propria riflessione sulla pittura. Il suo interesse riguarda il modo in cui il colore partecipa alla nascita della forma.",
+      "fonti": [
+        "ga-291",
+        "ga-291a"
+      ]
+    },
+    {
+      "testo": "Steiner fu il fondatore dell’antroposofia, una concezione che attribuisce all’attività umana la possibilità di conoscere una realtà spirituale. Le sue riflessioni artistiche appartengono a questo progetto. Il colore vi appare come qualcosa che si può osservare e dipingere, ma anche come manifestazione di rapporti spirituali.",
+      "fonti": [
+        "ga-291",
+        "kuuva",
+        "steiner-biografia"
+      ]
+    },
+    {
+      "testo": "Per comprenderlo occorre tenere insieme questi aspetti, senza confonderli. Le sue descrizioni del sentire artistico non sono misure colorimetriche; le corrispondenze spirituali esprimono le tesi dell’autore. La pagina segue il loro sviluppo fino alle indicazioni pittoriche e alla ricezione successiva. Un lettore può studiare questa proposta senza aderire alle sue premesse.",
+      "fonti": [
+        "ga-291",
+        "kuuva"
+      ]
+    }
+  ],
+  "nota_metodo": [
+    "La pagina deriva dalla ricerca documentale del 9 novembre 2026 affidata al topic Ricerche e dalla proposta editoriale approvata dal curatore. Il suo via libera all’integrazione è del 9 novembre 2026. La ricerca non è stata rilanciata per costruire la pagina.",
+    "OpenClaw / OC ha coordinato e verificato la ricerca; il testo editoriale iniziale è firmato Codex / CDX. L’integrazione nei sorgenti e il collaudo sono di OpenClaw / OC. Non esiste una misura separata affidabile del tempo di verifica, redazione e coordinamento.",
+    "Sono disponibili quattro rapporti: GPT-6 Astra high nativo sul piano a canone, GLM 5.2, DeepSeek v4 Pro e Gemini Deep Research standard. Qwen 3.8 Max è stato interrotto dal timeout dello strumento, senza rapporto finale o dati completi sui consumi; non è stato rilanciato. Kimi e Grok non sono stati avviati.",
+    "GPT dichiara 20 minuti e 32 secondi e 25 query. GLM ha registrato 308,9 secondi, 23 ricerche e 3 estrazioni; DeepSeek 359,8 secondi, 28 ricerche e nessuna estrazione. Per Gemini il ritiro ha richiesto 470 secondi: sono dichiarate 34 ricerche e 1.215.170 token complessivi. Sono misure diverse, non tempi da sommare né conteggi di opere lette integralmente.",
+    "Il preventivo approvato era 3,7-6,1 USD, con scenario prudente di circa 18,8 USD non garantito. Circa 0,363 USD è soltanto la stima GLM, con ipotesi sulle ricerche fatturate, non un costo complessivo. Qwen, DeepSeek, Gemini e il piano Gemini non sono qui monetizzati; nessun totale effettivamente addebitato è stato riscontrato. Il piano Gemini ha dichiarato 6.048 token, distinti dalla ricerca.",
+    "Qwen, GLM e DeepSeek hanno usato gli stessi strumenti DashScope. L’accordo fra modelli non è stato assunto come prova; sono stati controllati passi primari e fonti istituzionali e storico-critiche. La copertura delle consultazioni è indicata nelle fonti finali.",
+    "Non sono stati collazionati tutti gli stenogrammi, le prime edizioni, gli originali pittorici o un’edizione italiana integrale. Non si ricostruiscono inventari complessivi degli schizzi o ricette storiche di pigmenti. Le tre esperienze del capitolo finale sono proposte redazionali non eseguite."
+  ],
+  "capitoli": [
+    {
+      "id": "forma-colore",
+      "breve": "Forma e colore",
+      "titolo": "1. Una forma che nasce dal colore",
+      "blocchi": [
+        {
+          "tipo": "p",
+          "testo": "Nel procedimento criticato da Steiner, il pittore stabilisce prima una figura e ne riempie poi le parti. Il colore trova già assegnati il proprio posto e i propri limiti. Nella proposta alternativa, la figura prende forma attraverso il rapporto fra le zone colorate. Il disegno rimane, ma nasce dall’attività pittorica.",
+          "fonti": [
+            "ga-291"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Le indicazioni del 1921 raccolte in <i>Farbenerkenntnis</i> rendono concreto questo cambiamento. Nel rapporto fra cielo blu e mare verde, il problema non consiste soltanto nel collocare una linea fra due oggetti riconoscibili. Conta il modo in cui le due aree si incontrano e producono un limite. La forma dell’orizzonte appartiene a quell’incontro, anziché precederlo come una separazione astratta.",
+          "fonti": [
+            "ga-291a"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Nel discorso del 9 giugno 1923 Steiner precisa che superare il disegno non significa eliminarlo. Accostare colori arbitrariamente non realizza la sua proposta. Il pittore dovrebbe ricavare il disegno dal colore e dai rapporti di chiaroscuro.",
+          "fonti": [
+            "ga-291"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Anche il significato del dipinto dovrebbe svilupparsi nel lavoro con i colori. Steiner contesta l’idea di formulare prima un messaggio e di assegnare poi alle tinte il compito di rappresentarlo. Nel discorso del maggio 1921 rifiuta la riduzione della pittura a un codice nel quale ogni colore significa convenzionalmente qualcos’altro.",
+          "fonti": [
+            "ga-291",
+            "ga-291a"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Questa posizione non lo rende un teorico dell’astrazione pura. Nei suoi ragionamenti compaiono immagini cristiane; il passo del 1923 discute proprio la possibilità di far emergere una figura della Vergine. Il problema è come il contenuto diventi pittura, attraverso il colore e il chiaroscuro, anziché essere soltanto illustrato.",
+          "fonti": [
+            "ga-291"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "goethe",
+      "breve": "Goethe",
+      "titolo": "2. Goethe come punto di partenza",
+      "blocchi": [
+        {
+          "tipo": "p",
+          "testo": "Il rapporto con Goethe precede le conferenze antroposofiche sul colore. Fra il 1884 e il 1897 Steiner curò e introdusse gli scritti scientifici goethiani per l’edizione di Kürschner. Il lavoro sul colore si sviluppa quindi anche da una lunga attività di lettura e interpretazione.",
+          "fonti": [
+            "catalogo-2018"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Goethe dedica attenzione a ciò che accade nell’esperienza visiva, alle condizioni in cui i colori appaiono e ai loro effetti sull’osservatore. La sua <i>Farbenlehre</i> distingue aspetti fisiologici, fisici e chimici; comprende inoltre gli effetti sensibili e morali del colore. Non è soltanto una raccolta di emozioni associate alle tinte.",
+          "fonti": [
+            "goethe"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Un esempio riguarda il significato. Goethe distingue l’uso simbolico, che ritiene aderente all’effetto del colore, dall’uso allegorico fondato su una convenzione. Attribuire il verde alla speranza richiede che il significato del segno sia già noto. Il rapporto fra esperienza e interpretazione è dunque presente anche prima di Steiner.",
+          "fonti": [
+            "goethe"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Steiner riprende questo interesse, ma cambia la portata della domanda. Nelle conferenze del 1921 vuole comprendere che cosa si manifesti nel colore, fino a collegarlo alla vita, all’anima e allo spirito. Presenta le proprie distinzioni come un proseguimento del lavoro goethiano, non come una semplice ripetizione.",
+          "fonti": [
+            "ga-291"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Il rapporto con la fisica è conflittuale. Steiner polemizza con spiegazioni materiali del colore e rivendica una conoscenza capace di coglierne l’essenza spirituale. Ridurre il suo discorso a un’aggiunta poetica alla scienza moderna ne attenuerebbe indebitamente la pretesa. Per il lettore rimangono distinti il riconoscimento di quella pretesa e la sua accettazione.",
+          "fonti": [
+            "ga-291"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vita-anima-spirito",
+      "breve": "Vita, anima, spirito",
+      "titolo": "3. Vita, anima e spirito: le parole della distinzione",
+      "blocchi": [
+        {
+          "tipo": "p",
+          "testo": "Il nucleo del discorso si trova nelle tre conferenze tenute a Dornach il 6, 7 e 8 maggio 1921. Per seguirlo occorre chiarire alcune parole prima di distribuirle fra i colori. L’inanimato, il vivente, l’animico e lo spirituale designano, per Steiner, realtà differenti e collegate.",
+          "fonti": [
+            "ga-291"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Il vivente riguarda ciò che distingue l’organismo dalla materia priva di vita. L’animico riguarda l’anima, il sentire e l’esperienza interiore. Lo spirituale non equivale soltanto all’attività mentale: appartiene alla realtà sovrasensibile ammessa dall’antroposofia. Queste sono categorie della sua dottrina, non parti anatomiche o grandezze misurate.",
+          "fonti": [
+            "ga-291"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "La distinzione fra immagine e splendore si costruisce su quel lessico. In questa pagina <i>Bildfarben</i> è reso con «colori-immagine» e <i>Glanzfarben</i> con «colori-splendore». Sono traduzioni redazionali dal tedesco. «Immagine» indica il manifestarsi di qualcosa attraverso altro; «splendore» indica un manifestarsi attivo di ciò che appare.",
+          "fonti": [
+            "ga-291"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Nessuno dei due termini descrive semplicemente una finitura superficiale. «Splendore» non significa vernice lucida; «immagine» non significa che il colore sia necessariamente opaco o coprente. La distinzione non stabilisce nemmeno quali tubetti contengano pigmenti trasparenti. Riguarda il modo in cui Steiner interpreta l’apparire del colore.",
+          "fonti": [
+            "ga-291"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "immagine-splendore",
+      "breve": "Immagine e splendore",
+      "titolo": "4. Colori-immagine e colori-splendore",
+      "blocchi": [
+        {
+          "tipo": "p",
+          "testo": "Steiner include fra i colori-immagine il verde, il fiore di pesco, il bianco e il nero. L’elenco comprende dunque tinte e colori acromatici. La loro appartenenza alla famiglia dipende dal rapporto con l’inanimato, la vita, l’anima e lo spirito, non da una proprietà materiale comune.",
+          "fonti": [
+            "ga-291"
+          ]
+        },
+        {
+          "tipo": "titoletto",
+          "id": "il-verde-e-l-immagine-della-vita",
+          "testo": "Il verde e l’immagine della vita"
+        },
+        {
+          "tipo": "p",
+          "testo": "Per il verde, Steiner distingue la vita della pianta dal suo apparire colorato. Il verde non sarebbe il principio che la rende vivente: ne costituirebbe l’immagine nel mondo materiale. Il termine «morta», che accompagna questa immagine nel testo, indica proprio tale differenza. Non significa che una pianta verde sia morta.",
+          "fonti": [
+            "ga-291"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Il passaggio è comprensibile soltanto entro la distinzione steineriana fra manifestazione e principio vitale. Non è una spiegazione del funzionamento biologico della pianta. La proposizione riguarda ciò che il verde rappresenterebbe nel suo ordinamento della realtà.",
+          "fonti": [
+            "ga-291"
+          ]
+        },
+        {
+          "tipo": "titoletto",
+          "id": "il-fiore-di-pesco-e-l-immagine-dell-anima",
+          "testo": "Il fiore di pesco e l’immagine dell’anima"
+        },
+        {
+          "tipo": "p",
+          "testo": "Il <i>Pfirsichblüt</i> è il color fiore di pesco, non l’arancione del frutto. Steiner lo collega all’incarnato umano e vi vede l’immagine vivente dell’anima. Il corpo, nella sua lettura, porta all’esterno qualcosa dell’esperienza interiore. La vita corporea rende visibile l’anima senza coincidere con essa.",
+          "fonti": [
+            "ga-291"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Il riferimento resta storico e dottrinale. Non definisce un colore valido per tutti gli incarnati umani. Nei passi considerati, il fiore di pesco non riceve un pigmento preciso o una formula di miscela riproducibile. Trasformarlo nel nome di una ricetta perderebbe il rapporto che Steiner cerca di descrivere.",
+          "fonti": [
+            "ga-291"
+          ]
+        },
+        {
+          "tipo": "titoletto",
+          "id": "il-bianco-e-il-nero",
+          "testo": "Il bianco e il nero"
+        },
+        {
+          "tipo": "p",
+          "testo": "Nel bianco Steiner pone l’immagine dello spirito nell’esperienza dell’anima. Il ragionamento passa attraverso il rapporto fra luce, coscienza e percezione di sé. Il bianco non è qui soltanto una superficie chiara: diventa il termine di una relazione fra animico e spirituale.",
+          "fonti": [
+            "ga-291"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Nel nero il rapporto cambia ancora. Steiner lo definisce immagine spirituale dell’inanimato e lo discute attraverso l’oscurità, il carbone e il segno nero sulla superficie bianca. Non propone quattro associazioni emotive equivalenti. Ogni colore occupa un rapporto diverso fra ciò che si manifesta e il modo della manifestazione.",
+          "fonti": [
+            "ga-291"
+          ]
+        },
+        {
+          "tipo": "titoletto",
+          "id": "giallo-blu-e-rosso",
+          "testo": "Giallo, blu e rosso"
+        },
+        {
+          "tipo": "p",
+          "testo": "Per i colori-splendore Steiner assegna al giallo lo splendore dello spirito, al blu quello dell’animico e al rosso quello del vivente. Nella sua argomentazione, queste tinte esprimono un’attività che si manifesta verso l’esterno. La distribuzione sulla superficie contribuisce a rendere percepibile tale attività.",
+          "fonti": [
+            "ga-291"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "La differenza fra immagine e splendore non si esaurisce però in due elenchi. Nel discorso sulla pittura Steiner considera trasformazioni del loro carattere: una tinta può ricevere una funzione diversa entro una figura. Per esempio, descrive il passaggio di colori-splendore al carattere d’immagine nella rappresentazione umana. La relazione pittorica conta insieme alla classificazione.",
+          "fonti": [
+            "ga-291"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "movimento-spazio",
+      "breve": "Movimento e spazio",
+      "titolo": "5. Il movimento del colore e lo spazio del dipinto",
+      "blocchi": [
+        {
+          "tipo": "p",
+          "testo": "La conferenza del 7 maggio porta le distinzioni sulla superficie da dipingere. Il movimento non riguarda soltanto uno spostamento materiale del colore ancora bagnato. Riguarda soprattutto il modo in cui una stesura, guardata dal pittore, suggerisce espansione, raccoglimento o permanenza.",
+          "fonti": [
+            "ga-291"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Il giallo viene descritto più intenso al centro e progressivamente più debole verso l’esterno. Steiner vi riconosce un carattere che tende a irradiarsi. Per il blu propone la disposizione opposta: una zona più intensa al margine, raccolta attorno a un interno più chiaro. Il blu suggerirebbe un movimento verso l’interno.",
+          "fonti": [
+            "ga-291"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Il rosso mantiene invece, nella descrizione, una relativa quiete. Si afferma come superficie uniforme, senza dover sfumare dal centro o raccogliersi dal bordo. Il suo carattere non coincide quindi con una generica eccitazione: nel passo specifico è proprio la permanenza della superficie rossa a distinguerlo.",
+          "fonti": [
+            "ga-291"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Steiner collega queste disposizioni al sentire artistico. Non presenta misure di energia o risultati di prove condotte con osservatori e campioni controllati. Discute anche situazioni figurative che complicano le indicazioni, come il blu uniforme nella pittura di Fra Angelico. Il soggetto e la configurazione dell’immagine modificano il problema.",
+          "fonti": [
+            "ga-291"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Un secondo tema riguarda lo spazio. Nel discorso del 2 giugno 1923 Steiner contrappone il ritirarsi del blu all’avvicinarsi del rosso e del giallo. Parla di prospettiva cromatica: la superficie può suggerire vicinanza e distanza attraverso il colore, senza affidare tutto alla convergenza delle linee.",
+          "fonti": [
+            "ga-291"
+          ]
+        },
+        {
+          "tipo": "nota",
+          "testo": "Questo principio artistico non stabilisce che ogni rosso debba apparire davanti a ogni blu. Per il Quaderno sarebbe più utile trattarlo come una domanda compositiva: che cosa cambia nella distanza percepita quando cambia il rapporto cromatico? La risposta andrebbe osservata nel dipinto concreto, senza assumerla già dimostrata dalla descrizione di Steiner."
+        }
+      ]
+    },
+    {
+      "id": "acqua-superficie",
+      "breve": "L’acqua",
+      "titolo": "6. L’acqua, il recipiente e la superficie",
+      "blocchi": [
+        {
+          "tipo": "p",
+          "testo": "Il legame con l’acquerello ha un fondamento nei testi. Nella conferenza dell’8 maggio 1921 Steiner parla di colore acquoso conservato in un recipiente e portato sulla superficie dal pennello. Gli interessa il momento in cui ciò che era fluido viene fissato e assume una forma.",
+          "fonti": [
+            "ga-291"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "La fluidità conta anche come esperienza del pittore. La superficie conclusa dovrebbe conservare qualcosa della luminosità e dell’attività avvertite nel colore prima della fissazione. Steiner contrappone questo rapporto alla materia colorata già preparata sulla tavolozza, che giudica artisticamente meno vitale. È una sua presa di posizione estetica, non una prova contro l’uso contemporaneo della tavolozza.",
+          "fonti": [
+            "ga-291"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Il passaggio contiene anche una spiegazione cosmologica. Steiner collega il fluido e il fisso alla propria interpretazione spirituale dell’evoluzione del mondo. L’attenzione all’acqua non nasce quindi come una prescrizione tecnica isolata: appartiene alla ricerca di una corrispondenza fra il dipingere e il suo modo di concepire la realtà.",
+          "fonti": [
+            "ga-291"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Questi passi, da soli, non definiscono un protocollo completo di bagnato su bagnato. Un colore acquoso può essere distinto dalla condizione di un supporto preventivamente bagnato. Il passo citato documenta la prima attenzione; non basta per attribuire a Steiner ogni modalità di stesura poi praticata nelle scuole che ne portano il nome.",
+          "fonti": [
+            "ga-291",
+            "cardiff"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Anche l’interesse per i colori vegetali richiede un’attribuzione precisa. Steiner riferisce l’impiego di sostanze vegetali per il Goetheanum, cercando una particolare luminosità delle superfici. Il passo documenta una scelta per quell’edificio. Non stabilisce una superiorità generale dei colori vegetali per la pittura odierna, né ne dimostra la durata alla luce.",
+          "fonti": [
+            "ga-291"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trasmissione",
+      "breve": "La trasmissione",
+      "titolo": "7. Da Henni Geck alla pratica delle scuole",
+      "blocchi": [
+        {
+          "tipo": "p",
+          "testo": "La trasmissione passa anche attraverso opere ed esercitazioni. Secondo la ricostruzione editoriale raccolta in GA 291a, Henni Geck chiese a Steiner un percorso per il lavoro pittorico. La scheda del Goetheanum sulla serie delle atmosfere naturali colloca la richiesta nel giugno 1922. Steiner rispose con schizzi a pastello; Geck ne sviluppò le indicazioni ad acquerello.",
+          "fonti": [
+            "ga-291a",
+            "goetheanum-geck"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Questo passaggio distingue lo spunto dalla sua elaborazione. Uno schizzo a pastello non documenta, da solo, il modo di stendere un acquerello. La realizzazione successiva può interpretare il motivo senza essere una copia materiale del primo lavoro. La documentazione conserva perciò sia le indicazioni iniziali sia il ruolo di chi le ha trasmesse.",
+          "fonti": [
+            "ga-291a",
+            "goetheanum-geck"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Gerard Wagner appartiene a una fase ulteriore. Secondo la scuola che ne conserva il lavoro, nel 1928 divenne allievo di Geck. Sviluppò la ricerca sul rapporto fra colore e forma a partire dagli schizzi d’esercitazione. Questi sviluppi sono parte della sua opera, pur nel dichiarato riferimento a Steiner.",
+          "fonti": [
+            "wagner"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Le pratiche educative contemporanee costituiscono un altro livello. La scuola Steiner di Cardiff descrive, in una pagina del 2023, il lavoro con acquerelli su carta bagnata. L’attività lascia spazio al fluire e all’incontro dei colori prima della definizione di un’immagine. La fonte documenta come quella scuola presenta una propria pratica. Non dimostra che ogni suo passaggio sia stato formulato personalmente da Steiner.",
+          "fonti": [
+            "cardiff"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Per seguire questa storia servono quindi attribuzioni riconoscibili. Le conferenze trasmettono la parola dell’autore; appunti e testimonianze conservano indicazioni attraverso altri. Geck e Wagner elaborano percorsi pittorici; le scuole organizzano attività educative. Riunire tutto sotto una sola «tecnica di Steiner» renderebbe meno comprensibili sia l’origine sia le trasformazioni.",
+          "fonti": [
+            "ga-291",
+            "ga-291a",
+            "wagner",
+            "cardiff"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "leggere-oggi",
+      "breve": "Leggerlo oggi",
+      "titolo": "8. Leggerlo oggi e mettere a confronto le indicazioni",
+      "blocchi": [
+        {
+          "tipo": "p",
+          "testo": "Lo studio di Sari Kuuva affronta il colore steineriano attraverso l’estetica della religione. Considera come certe immagini e pratiche rendano riconoscibile una concezione spirituale e ne favoriscano la trasmissione. Questa lettura consente di studiare il rapporto fra opere, idee e comunità senza assumere le corrispondenze antroposofiche come risultati scientifici.",
+          "fonti": [
+            "kuuva"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Per chi dipinge, il Quaderno proporrebbe di mantenere distinta la descrizione dall’interpretazione. Una zona blu può essere osservata nei suoi margini e nella sua intensità. Il raccoglimento che Steiner vi attribuisce è già una lettura; il rapporto con l’animico appartiene alla sua dottrina. Separare questi passaggi aiuterebbe a capire che cosa si sta effettivamente confrontando sul foglio.",
+          "fonti": [
+            "ga-291"
+          ]
+        },
+        {
+          "tipo": "nota",
+          "testo": "Le tre esperienze seguenti sarebbero proposte del Quaderno, ispirate ai problemi incontrati nella lettura. Non sono state eseguite e non ricostruiscono lezioni storiche. Non prevedono un risultato corretto in anticipo."
+        },
+        {
+          "tipo": "titoletto",
+          "id": "centro-e-margine",
+          "testo": "Centro e margine"
+        },
+        {
+          "tipo": "nota",
+          "testo": "Si potrebbero confrontare due distribuzioni di una stessa tinta: più intensa al centro e più intensa al bordo. Il confronto andrebbe poi ripetuto con un’altra tinta. Il problema sarebbe osservare se cambia l’impressione di espansione o raccoglimento. Anche una mancata corrispondenza con l’attesa suggerita da Steiner avrebbe valore per la descrizione."
+        },
+        {
+          "tipo": "titoletto",
+          "id": "una-forma-dall-incontro",
+          "testo": "Una forma dall’incontro"
+        },
+        {
+          "tipo": "nota",
+          "testo": "Si potrebbero accostare due aree colorate prima di scegliere il soggetto. L’osservazione riguarderebbe il limite che si forma e le eventuali figure riconoscibili. Il confronto con un contorno deciso prima della stesura aiuterebbe a distinguere due modi di impostare il lavoro. Non implicherebbe che uno debba sostituire sempre l’altro."
+        },
+        {
+          "tipo": "titoletto",
+          "id": "colore-acquoso-e-carta-bagnata",
+          "testo": "Colore acquoso e carta bagnata"
+        },
+        {
+          "tipo": "nota",
+          "testo": "Si potrebbe confrontare una stesura acquosa su supporto asciutto con una su supporto bagnato. Il confronto servirebbe a distinguere la fluidità della miscela dalla condizione della carta. Le eventuali osservazioni riguarderebbero il comportamento della stesura, non la conferma di una cosmologia o l’attribuzione storica di entrambe le operazioni a Steiner."
+        },
+        {
+          "tipo": "nota",
+          "testo": "Queste proposte non fissano pigmenti, dosi o tempi. Un protocollo tecnico richiederebbe una preparazione successiva e dichiarata, insieme alla documentazione dei risultati."
+        }
+      ]
+    }
+  ],
+  "fonti": {
+    "ga-291": {
+      "autore": "Rudolf Steiner",
+      "titolo": "Das Wesen der Farben, GA 291",
+      "pubblicazione": "Rudolf Steiner Verlag, Dornach, quarta edizione 1991.",
+      "url": "https://odysseetheater.org/GA/Buecher/GA_291.pdf",
+      "nota": "I richiami numerati rinviano ai documenti, non ai rapporti dei modelli. Le espressioni italiane «colori-immagine», «colori-splendore» e «animico» sono scelte esplicative dal tedesco. Non è stata collazionata un’edizione italiana integrale. Le descrizioni dell’autore sono parafrasi attribuite, salvo i brevi appigli originali riportati nelle note. Il nucleo comprende tre conferenze del 6, 7 e 8 maggio 1921, pp. 23-74; seguono nove interventi del periodo 1914-1924. Il colophon distingue la composizione GA del 1973 dall’edizione qui usata. Le note pp. 233-234 descrivono la precedente storia editoriale, avviata nel 1929, e le modifiche alla raccolta. Le trascrizioni derivano da stenogrammi non rivisti dall’oratore. Per questa stesura sono stati riscontrati direttamente i passi pp. 30-37, 43-51, 65, 70-73, 164, 171, 185-186 e 233, non l’intero volume. I quattro rapporti d’immagine sono alle pp. 35-37; i tre rapporti di splendore a p. 51. Il breve originale «im Wasser aufgelöst im Tiegel», p. 71, indica qui il colore nell’acqua, nel recipiente: non viene assunto come definizione chimica di dissoluzione del pigmento."
+    },
+    "ga-291a": {
+      "autore": "Rudolf Steiner e altri; a cura e con commenti di Hella Wiesberger e Heinrich O. Proskauer",
+      "titolo": "Farbenerkenntnis, GA 291a",
+      "pubblicazione": "Rudolf Steiner Verlag, Dornach, prima edizione GA 1990.",
+      "url": "https://odysseetheater.org/GA/Buecher/GA_291a.pdf",
+      "nota": "Materiali, testimonianze e commenti di provenienza diversa. Le indicazioni del 26 agosto 1921, pp. 350-352, si distinguono dalla ricostruzione di Wiesberger sul lavoro con Geck, pp. 272-273. Entrambi i passi sono stati riscontrati direttamente per questa stesura; non è stato letto l’intero volume. Il frontespizio reca l’arco 1889-1925; il catalogo 2018 indica 1894-1925. Le due diciture non sono state uniformate. Non vengono riproposti conteggi complessivi degli schizzi, rimasti da collazionare."
+    },
+    "goetheanum-geck": {
+      "autore": "Goetheanum, Sezione per le arti figurative",
+      "titolo": "Sun, moon and trees - Nature Moods",
+      "pubblicazione": "Scheda della mostra del 2022.",
+      "url": "https://sbk.goetheanum.org/en/events/conferences-workshops/singleview/sonne-mond-und-baeume-naturstimmungen",
+      "nota": "Letta integralmente. Documenta la richiesta di Geck nel giugno 1922, la natura a pastello degli schizzi e una ricezione non uniforme. È una fonte istituzionale della tradizione; lo sviluppo ad acquerello è riferito nella ricostruzione editoriale della fonte 2."
+    },
+    "wagner": {
+      "autore": "Rudolf Steiner Malschule",
+      "titolo": "Gerard Wagner",
+      "pubblicazione": "Pagina biografica della scuola.",
+      "url": "https://www.rudolf-steiner-malschule.ch/who-we-are/gerard-wagner/",
+      "nota": "Letta integralmente. L’inizio dello studio con Geck nel 1928 e il successivo lavoro sugli schizzi sono attribuiti alla fonte. Non è una ricostruzione storiografica indipendente."
+    },
+    "cardiff": {
+      "autore": "Cardiff Steiner School",
+      "titolo": "Wet-on-Wet Painting in Kindergarten",
+      "pubblicazione": "25 marzo 2023.",
+      "url": "https://www.cardiffsteiner.org.uk/2023/03/25/inside-the-kindergarten/wet-wet-painting-kindergarten/",
+      "nota": "Letta integralmente. Documenta la pratica contemporanea descritta, con colore acquoso su carta bagnata. Le testimonianze riportate non sono citazioni di Steiner."
+    },
+    "kuuva": {
+      "autore": "Sari Kuuva",
+      "titolo": "“My soul must live with the colour”. The Transformative Potential of Colours Described by Rudolf Steiner",
+      "pubblicazione": "Approaching Religion, 14(1), 2024, pp. 37-54. Versione pubblicata nel deposito dell’Università di Jyväskylä, CC BY 4.0.",
+      "url": "https://jyx.jyu.fi/bitstreams/de2e170e-beaa-4cf2-a389-d2c88f9a0998/download",
+      "nota": ", CC BY 4.0. Per questa stesura riscontrate pp. 37-38 e 49-52; lettura integrale dichiarata dal ricercatore nel dossier precedente, non ripetuta qui. Il saggio è usato per l’impostazione storico-interpretativa. Il termine 1923 riferito alla raccolta GA 291 a p. 37 è corretto in 1924 sulla fonte primaria.",
+      "doi": "10.30664/ar.135987"
+    },
+    "steiner-biografia": {
+      "autore": "Rudolf Steiner Malschule",
+      "titolo": "Rudolf Steiner",
+      "pubblicazione": "Presentazione istituzionale.",
+      "url": "https://www.rudolf-steiner-malschule.ch/rudolf-steiner/",
+      "nota": "Letta integralmente. Usata per l’identificazione del fondatore dell’antroposofia e come autodescrizione della tradizione pittorica della scuola."
+    },
+    "catalogo-2018": {
+      "autore": "Rudolf Steiner Verlag",
+      "titolo": "Gesamtverzeichnis 2018",
+      "pubblicazione": "Catalogo ufficiale, 2018.",
+      "url": "https://www.rudolf-steiner.com/wp-content/uploads/Rudolf-Steiner-Verlag-Gesamtverzeichnis-2018.pdf",
+      "nota": "Scheda GA 1, p. PDF 6, per il lavoro sugli scritti scientifici di Goethe nel 1884-1897; schede GA 291 e 291a, p. PDF 37. Usato nel dossier per identità e cronologie editoriali, non come prova di lettura integrale delle opere."
+    },
+    "goethe": {
+      "autore": "Johann Wolfgang Goethe",
+      "titolo": "Zur Farbenlehre",
+      "pubblicazione": "Testo tedesco: presentazione del percorso didattico e §§ 915-920.",
+      "url": "https://www.textlog.de/7067.html",
+      "nota": "Letti i passi indicati, non l’intera opera. La prima pagina distingue i colori fisiologici, fisici e chimici; la seconda spiega la differenza fra effetto e significato convenzionale.",
+      "link_aggiuntivi": [
+        {
+          "testo": "uso allegorico, simbolico e mistico, §§ 915-920",
+          "url": "https://www.textlog.de/6834.html"
+        }
+      ]
+    }
+  }
+}

@@ -345,7 +345,7 @@ def riassunto_approfondimenti():
     """Testo della chat ricavato dalle questioni degli Approfondimenti: per ognuna la sintesi in cima alla pagina
     e, se c'è, il capitolo «In pratica» con le proposte del Quaderno, così la chat non contraddice la pagina."""
     blocchi = [f"Approfondimenti ({SITO_URL}/approfondimenti/): una pagina per ogni questione che torna spesso fra chi "
-               "dipinge ad acquerello, con le fonti in fondo a ogni capitolo; le valutazioni del Quaderno sono dichiarate."]
+               "dipinge ad acquerello, con le fonti in fondo alla pagina; le valutazioni del Quaderno sono dichiarate."]
     for v in sottosezioni_approfondimenti():
         tema = v["tema"]
         righe = [f"\n{v['numero']} {v['titolo']} ({SITO_URL}/{v['href']}). {tema['scheda']}.", "In sintesi:"]

@@ -14,6 +14,8 @@ il suo «ordine», per esempio 5.1. La pagina si apre con la sintesi, i cui punt
 rimandano ai capitoli, e la premessa. Il campo facoltativo «nota_metodo», un
 elenco di paragrafi, aggiunge un riquadro «Nota di metodo» dopo la premessa.
 Seguono i capitoli e un unico elenco delle fonti in fondo alla pagina.
+La sintesi può avere «fonti»; la premessa accetta stringhe o oggetti con
+«testo» e «fonti». Senza questi campi, l’output dei temi esistenti non cambia.
 La numerazione è continua; i rimandi tornano al passo effettivamente citato.
 I vecchi indirizzi delle fonti per capitolo restano validi come alias.
 
@@ -146,8 +148,8 @@ def carica_temi():
         ordini.add(tema["ordine"])
         date.fromisoformat(tema["data"])
         id_capitoli = [c["id"] for c in tema["capitoli"]]
-        if "bibliografia" in id_capitoli:
-            errore(f"{path.name}: «bibliografia» è riservato all’elenco finale delle fonti")
+        if set(id_capitoli) & {"bibliografia", "sintesi", "premessa"}:
+            errore(f"{path.name}: bibliografia, sintesi e premessa sono id riservati")
         if len(set(id_capitoli)) != len(id_capitoli):
             errore(f"{path.name}: due capitoli con lo stesso id")
         for punto in tema["sintesi"]:
@@ -270,6 +272,14 @@ class FontiTema(rimandi_fonti.Capitolo):
 def pagina_tema(sez, tema):
     capitoli = []
     F = FontiTema(tema)
+    F.apri_capitolo("sintesi")
+    sintesi_rif = [F.rif(p.get("fonti"), f"{tema['id']}, sintesi {i + 1}", obbligatorio=False)
+                   for i, p in enumerate(tema["sintesi"])]
+    F.apri_capitolo("premessa")
+    premessa = "".join(
+        f"<p>{p['testo']}{F.rif(p.get('fonti'), f'premessa {i + 1}')}</p>"
+        if isinstance(p, dict) else f"<p>{p}</p>"
+        for i, p in enumerate(tema["premessa"]))
     numeri = {c["id"]: c["titolo"].split(".")[0] for c in tema["capitoli"]}
     for c in tema["capitoli"]:
         F.apri_capitolo(c["id"])
@@ -283,9 +293,8 @@ def pagina_tema(sez, tema):
     if mancano:
         errore(f"{tema['id']}: fonti mai citate: {', '.join(mancano)}")
     salti = "".join(f'<a href="#{e(c["id"])}">{e(c["breve"])}</a>' for c in tema["capitoli"]) + '<a href="#bibliografia">Fonti</a>'
-    sintesi = "".join(f'<li>{p["testo"]} <a class="al-cap" href="#{e(p["capitolo"])}">capitolo {e(numeri[p["capitolo"]])}</a></li>'
-                      for p in tema["sintesi"])
-    premessa = "".join(f"<p>{p}</p>" for p in tema["premessa"])
+    sintesi = "".join(f'<li>{p["testo"]}{rif} <a class="al-cap" href="#{e(p["capitolo"])}">capitolo {e(numeri[p["capitolo"]])}</a></li>'
+                      for p, rif in zip(tema["sintesi"], sintesi_rif))
     nota_metodo = ""
     if tema.get("nota_metodo"):
         paragrafi = "".join(f"<p>{e(p)}</p>" for p in tema["nota_metodo"])

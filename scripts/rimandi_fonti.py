@@ -2,7 +2,8 @@
 
 Le voci possono mantenere «testo» e indicare «titolo_link», una porzione
 esatta da collegare. In alternativa separano autore, titolo, pubblicazione,
-nota e consultazione. Le cautele essenziali restano sempre visibili.
+nota e consultazione. «link_aggiuntivi» permette di collegare più passi di
+una stessa opera, senza moltiplicare le voci. Le cautele restano visibili.
 Formato editoriale: README.md, Organizzazione dei testi. Dopo una modifica
 si rigenera il sito con scripts/genera-sito.py.
 """
@@ -98,6 +99,11 @@ class Capitolo:
                 doi = html.escape('https://doi.org/' + f["doi"], quote=True)
                 testo += f' <a href="{doi}">{doi}</a>.'
             testo += '</p>'
+            for link in f.get("link_aggiuntivi", []):
+                if not link.get("testo") or not link.get("url"):
+                    raise SystemExit(f"{self.sezione}: collegamento incompleto nella fonte «{k}»")
+                testo += ('<p class="fonte-link"><a href="' + html.escape(link["url"], quote=True)
+                          + '">' + html.escape(link["testo"], quote=True) + '</a>.</p>')
             if f.get("limite"):
                 testo += f'<p class="fonte-limite"><strong>{html.escape(f["limite"], quote=True)}</strong></p>'
             testo += f'<p class="fonte-nota">{html.escape(f["nota"], quote=True)}</p>'
