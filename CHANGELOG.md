@@ -4,6 +4,17 @@ Cronologia delle modifiche. Ordine cronologico inverso.
 
 Nota: nelle voci fino al 1/11/2026 il curatore è indicato con lo pseudonimo sinmar.
 
+## 2026-11-09 - OC - Origine di tinta, valore e croma e revisione storica Wada
+
+- Su richiesta del curatore, completato il confronto di GPT-6 Astra, GLM 5.2, DeepSeek v4 Pro, Gemini standard e Qwen 3.8 Max. Quattro rapporti conclusi e uno parziale: Qwen ha terminato con errore del server, senza rilancio. Letti i cinque testi, con riscontri sui passaggi decisivi; i rapporti non sono trattati come fonti primarie.
+- Aggiunto l’approfondimento 5.4, «Come nascono tinta, valore e croma», con nove capitoli e 24 fonti: antecedenti Mayer-Lambert-Runge, Helmholtz-Grassmann-Maxwell, prima e seconda edizione Munsell, revisioni e colorimetria CIE, lessico e croma-saturazione. Cronologia e quattro confronti pittorici proposti, non eseguiti. Nessun primo inventore assoluto dedotto dalla selezione documentaria.
+- Integrata Wada: Munsell come autore storico di HVC e MacEvoy come autore tecnico contemporaneo. Il documento originale del 1930 attesta Ostwald per ordinare gli standard; il riferimento Tōbunken del 1956 non è retrodatato. La lettura HVC odierna non viene attribuita al procedimento storico degli abbinamenti. Conservati i quattro capitoli su libri, operazioni, trasferimento e prove e tutte le tredici fonti precedenti; cinque nuove fonti, 18 complessive.
+- Nota pubblica su autori, tempi, attività e limiti economici: circa 1,47 USD è la sola stima GLM e DeepSeek, non un costo totale. Qwen, Gemini e piano restano non monetizzati. Saldi, account e grezzi non trasferiti nel repository; nessuna modifica ad Alibaba o a limiti-ai.
+- Verifiche: generazione completa riuscita, Gulpease 62 per la nuova pagina e 60 per Wada. Collaudo Chromium a 412 e 1280 pixel: capitoli e tabelle completi, rimandi e ritorni alle fonti, apertura delle note e collegamenti reciproci funzionanti; nessuno sbordamento o errore JavaScript. Nuova pagina in Home, Approfondimenti, sitemap e sintesi della chat. Rispetto alla precedente testa della PR cambiano soltanto quattro file di site e il prompt della chat, si aggiunge una pagina; gli altri output sono identici. Collegamenti interni e ID controllati senza rilievi. Sorgenti condivisi preservati e file modificati UTF-8 strict senza BOM o caratteri corrotti. Nessuna unione o pubblicazione. Firma: OpenClaw / OC.
+
+Prossima azione: Rivedere il nuovo approfondimento su tinta, valore e croma e la scheda Wada nella PR #78; unione e pubblicazione solo con nuovo via libera esplicito di Sandro nel topic dell’app.
+
+
 ## 2026-11-08 - OC - Sanzo Wada: chiarezza espositiva e registro da pubblicazione
 
 - Il curatore ha richiesto di rendere comprensibile la scheda senza semplificarne i contenuti, mantenendo uno stile da pubblicazione di alto livello. Ha poi indicato il lavoro di Bruce MacEvoy come riferimento espositivo. Sviluppata una prosa autonoma, con definizioni, nessi argomentativi, esempi dichiarati e distinzione fra dati, interpretazioni e proposte.

@@ -1,21 +1,21 @@
 {
   "id": "sanzo-wada",
   "ordine": 3,
-  "data": "2026-11-08",
+  "data": "2026-11-09",
   "titolo": "Gli abbinamenti di Sanzo Wada nell’acquerello",
   "sottotitolo": "Dalle tavole di colore alle scelte di composizione, superficie e stesura",
-  "scheda": "I due volumi moderni, le indicazioni dell’appendice storica e il passaggio dagli accostamenti alle prove ad acquerello",
+  "scheda": "I repertori, gli standard di Ostwald e la lettura contemporanea con tinta, valore e croma, fino alle prove sulla carta",
   "sintesi": [
     {
       "testo": "I due volumi moderni rendono accessibili materiali del repertorio storico, ma hanno contenuti e funzioni diversi. Il primo raccoglie 348 abbinamenti; il secondo comprende combinazioni stagionali ed esempi applicati.",
       "capitolo": "libri"
     },
     {
-      "testo": "Un accordo si legge considerando insieme tinta, valore, croma ed estensione delle campiture. La funzione di dominante o accento dipende dalla composizione, non dal nome del colore.",
+      "testo": "Tinta, valore e croma sono qui uno strumento contemporaneo di lettura degli accordi, non il metodo attribuito a Wada. Estensione e contesto della campitura intervengono nella composizione.",
       "capitolo": "leggere"
     },
     {
-      "testo": "L’appendice storica discute l’uso dei campioni, le superfici assegnate ai colori e la loro scala. Le sue indicazioni permettono di porre domande precise alla prova pittorica.",
+      "testo": "Ostwald è documentato nell’ordinamento dei campioni standard del 1930 e nell’appendice storica. Le istruzioni su superfici e scala non provano che tutti gli abbinamenti derivino da formule teoriche.",
       "capitolo": "appendice"
     },
     {
@@ -34,10 +34,10 @@
   "premessa": [
     "La scelta delle tinte, l’estensione delle campiture e il materiale pittorico sono problemi distinti. Un accordo scelto nel libro richiede di essere interpretato attraverso queste decisioni, prima di diventare un dipinto.",
     "Il lavoro di Sanzo Wada offre un repertorio visivo e, nell’appendice storica, indicazioni sul suo impiego. Per l’acquerello occorre individuare quali relazioni conservare e verificarle con i colori, la carta e le stesure effettivamente utilizzati.",
-    "La pagina distingue il contenuto documentato delle edizioni e dell’appendice dalle applicazioni proposte dal Quaderno. Le analisi contemporanee di Bruce MacEvoy aiutano a discutere i problemi pittorici; non vengono presentate come formulazioni di Wada."
+    "La pagina distingue il contenuto delle edizioni e dell’appendice dagli strumenti usati oggi per leggerle. Tinta, valore e croma rimandano al sistema storico di Munsell; Bruce MacEvoy è citato per le proprie analisi contemporanee. Nessuno dei due riferimenti viene assunto come spiegazione automatica del metodo di Wada."
   ],
   "nota_metodo": [
-    "La ricerca documentale si è svolta il 7 e l’8 novembre 2026 con l’aiuto dell’intelligenza artificiale. Sono disponibili cinque rapporti: GPT, Qwen, GLM, DeepSeek e Gemini. L’accordo fra modelli non è stato trattato come una prova.",
+    "La ricerca documentale iniziale si è svolta il 7 e l’8 novembre 2026 con l’aiuto dell’intelligenza artificiale. Sono disponibili cinque rapporti: GPT, Qwen, GLM, DeepSeek e Gemini. L’accordo fra modelli non è stato trattato come una prova.",
     "OpenClaw / OC ha coordinato gli avvii. Il confronto e i riscontri mirati delle fonti sono firmati Codex / CDX. Non esiste una misura separata affidabile del tempo di verifica, scrittura e coordinamento.",
     "GPT, openai/gpt-6.1-sol con ragionamento high nel bot OpenClaw, ha prodotto un rapporto autonomo e registrato 11 query. La sua durata non è stata misurata separatamente. È stata usata la quota del piano ChatGPT, senza una corsa API aggiuntiva.",
     "Qwen, qwen3.8-max via DashScope: 54 minuti e 50 secondi; 20 ricerche e 21 estrazioni; costo ricostruito circa 1,69 USD. GLM, glm-5.2: 6 minuti e 10 secondi; 22 ricerche e 3 estrazioni; circa 0,40 USD. DeepSeek, deepseek-v4-pro: 7 minuti e 30 secondi; 33 ricerche e 2 estrazioni; circa 0,68 USD.",
@@ -46,7 +46,9 @@
     "Kimi, kimi-k3, è stato rifiutato per quota gratuita esaurita: nessun rapporto, 10 secondi registrati dal lanciatore e costo non esposto. Grok Build non è stato avviato per problemi di accesso. Non si presentano quindi sette ricerche riuscite.",
     "La previsione iniziale era 4,70-7,10 USD per i quattro tentativi DashScope e Gemini; lo scenario prudente era 25,80 USD, non garantito. Non è un consuntivo. Il totale effettivo resta sconosciuto: i 2,77 USD non comprendono l’eventuale addebito Kimi, piano ed esecuzione Gemini, abbonamento e coordinamento.",
     "Qwen, GLM e DeepSeek hanno usato lo stesso strumento di ricerca DashScope. Non sono tre indici indipendenti. Neppure la presenza di una fonte su piattaforme diverse dimostra, da sola, che il suo contenuto sia corretto.",
-    "Sono state riscontrate fonti decisive e immagini selezionate dell’appendice storica. I libri moderni e l’intero apparato storico non sono stati letti integralmente. Le traduzioni dal giapponese sono riassunti di lavoro. Nessuna delle quattro prove pittoriche è stata eseguita."
+    "Sono state riscontrate fonti decisive e immagini selezionate dell’appendice storica. I libri moderni e l’intero apparato storico non sono stati letti integralmente. Le traduzioni dal giapponese sono riassunti di lavoro. Nessuna delle quattro prove pittoriche è stata eseguita.",
+    "Il 9 novembre 2026 è stata svolta una seconda ricerca sulla storia di tinta, valore e croma, poi usata per questa integrazione. Quattro corse sono concluse, GPT-6 Astra, GLM 5.2, DeepSeek v4 Pro e Gemini standard; Qwen 3.8 Max ha restituito materiale parziale e un errore del server, senza rilancio. Modelli, tempi, consumi e limiti sono distinti nella nota del nuovo approfondimento dedicato.",
+    "La seconda ricerca aggiunge la verifica della prima edizione Munsell del 1905, il documento Wada del 1930 e la notizia istituzionale del 1956. Circa 1,47 USD è soltanto la stima GLM e DeepSeek di questa integrazione; non comprende Qwen, Gemini e preparazione del piano e non va sommata ai 2,77 USD come se si ottenesse un totale completo. Nessun nuovo addebito complessivo è stato accertato."
   ],
   "capitoli": [
     {
@@ -122,10 +124,15 @@
         },
         {
           "tipo": "p",
-          "testo": "Per descrivere tali relazioni occorre distinguere tre attributi del colore. Il nome di una tinta, da solo, non precisa né quanto il campione sia chiaro né quanto sia intenso. MacEvoy considera questi aspetti insieme alle superfici e al contesto della composizione.",
+          "testo": "Per descrivere un accordo si possono distinguere tinta, valore e croma. Munsell formula questa terna nel 1905 e la collega a scale e notazione. Qui viene usata come strumento di lettura odierno: la sua anteriorità non dimostra che Wada abbia costruito gli abbinamenti secondo quel sistema.",
           "fonti": [
-            "relazioni"
+            "munsell-1905",
+            "munsell-1907"
           ]
+        },
+        {
+          "tipo": "nota",
+          "testo": "L’approfondimento <a href=\"../attributi-colore/\">Come nascono tinta, valore e croma</a> ricostruisce gli antecedenti e distingue croma da saturazione. MacEvoy resta un autore tecnico contemporaneo, citato sotto per le proprie analisi di composizione e pratica pittorica."
         },
         {
           "tipo": "tabella",
@@ -137,28 +144,29 @@
             {
               "celle": [
                 "Tinta",
-                "La qualità che distingue, per esempio, un rosso da un blu. Individua una famiglia cromatica, ma non ne descrive da sola il carattere chiaro, scuro o attenuato."
+                "La qualità che distingue famiglie cromatiche, come rosso e blu. Il nome della tinta non descrive da solo il chiaro-scuro o il croma."
               ],
               "fonti": [
-                "relazioni"
+                "munsell-1905"
               ]
             },
             {
               "celle": [
                 "Valore",
-                "Il grado di chiarezza o scurezza. Il rapporto fra i valori permette di distinguere le zone chiare, i mezzi toni e gli scuri della composizione."
+                "Il grado di chiaro-scuro. Un numero di valore Munsell appartiene a una scala specifica; non è una quantità d’acqua o una percentuale di pigmento."
               ],
               "fonti": [
-                "relazioni"
+                "munsell-1905"
               ]
             },
             {
               "celle": [
                 "Croma",
-                "Il grado di intensità cromatica rispetto a un grigio dello stesso valore. Distingue un colore intenso da uno più attenuato, anche quando la tinta rimane simile."
+                "Nel confronto Munsell si osservano gradi più o meno cromatici a tinta e valore uguali. Non è un sinonimo rigoroso di saturazione; il lessico CIE distingue il riferimento del giudizio."
               ],
               "fonti": [
-                "relazioni"
+                "munsell-1907",
+                "cie-croma"
               ]
             }
           ]
@@ -199,8 +207,23 @@
     {
       "id": "appendice",
       "breve": "Le istruzioni storiche",
-      "titolo": "3. Dall’appendice: proporzioni, dominante e scala",
+      "titolo": "3. Gli standard e l’appendice: teoria, proporzioni e scala",
       "blocchi": [
+        {
+          "tipo": "p",
+          "testo": "Un documento precedente al repertorio chiarisce il lavoro sugli standard. Nella conferenza <i>On Standards of Colour</i> del 1930, Wada presenta il progetto e poi passa la parola al tecnico del gruppo. A p. 8 il tecnico descrive la scelta di Ostwald per ordinare 500 campioni e le corrispondenze registrate mediante dischi rotanti.",
+          "fonti": [
+            "wada-1930"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Questa testimonianza documenta l’impiego di Ostwald nella classificazione degli standard. Non prova che tutti gli abbinamenti del repertorio successivo siano stati ricavati da regole ostwaldiane: ordinare i campioni e scegliere le loro combinazioni sono questioni distinte.",
+          "fonti": [
+            "wada-1930",
+            "editore-1"
+          ]
+        },
         {
           "tipo": "p",
           "testo": "Accanto alle tavole sono disponibili testi esplicativi. L’appendice qui consultata è il fascicolo <i>附說</i> del 1935, con spiegazioni teoriche e indicazioni per utilizzare il repertorio. Alle pagine 8-9 presenta il sistema di Wilhelm Ostwald: un apparato che va distinto dalle sole campiture dei volumi moderni.",
@@ -239,6 +262,13 @@
         {
           "tipo": "nota",
           "testo": "Questi passaggi sono riassunti di lavoro dal giapponese storico, non citazioni letterali o un’edizione critica. Documentano le indicazioni dell’appendice, non una legge universale del gusto. Non si attribuisce a Wada lo schema percentuale 60-30-10, né si trasformano i consigli storici in prescrizioni obbligatorie per l’acquerello."
+        },
+        {
+          "tipo": "p",
+          "testo": "Nella cronologia biografica pubblicata da Tōbunken, la voce del 1956 registra il completamento di tavole Munsell migliorate. Non specifica lì responsabilità tecniche e collaboratori. Il dato testimonia un riferimento successivo, non dimostra il metodo con cui furono scelti gli abbinamenti degli anni Trenta.",
+          "fonti": [
+            "wada-biografia"
+          ]
         }
       ]
     },
@@ -454,7 +484,7 @@
       "blocchi": [
         {
           "tipo": "nota",
-          "testo": "La ricerca ha prodotto cinque rapporti effettivi. La nota apribile «Come è stata svolta la ricerca», dopo la premessa, conserva autori, modelli, tempi e costi presunti. Distingue le corse riuscite dai tentativi non conclusi e le stime dagli addebiti sconosciuti."
+          "testo": "La prima ricerca ha prodotto cinque rapporti; la successiva integrazione storica ne aggiunge quattro conclusi e un testo parziale. La nota apribile dopo la premessa distingue i due incarichi, le corse riuscite, le stime e gli addebiti sconosciuti."
         },
         {
           "tipo": "p",
@@ -491,6 +521,10 @@
             "editore-2-jp",
             "icc"
           ]
+        },
+        {
+          "tipo": "nota",
+          "testo": "La lettura con HVC adottata in questa pagina rimane una proposta di analisi. La documentazione disponibile non ricostruisce il procedimento con cui Wada ha scelto ogni combinazione, né autorizza a presentare MacEvoy come un suo antecedente storico."
         }
       ]
     }
@@ -599,6 +633,46 @@
       "url": "https://github.com/mattdesl/dictionary-of-colour-combinations",
       "nota": "L’autore dichiara correzioni e una propria conversione CMYK-RGB. I valori digitali non sono misure certificate delle tavole storiche.",
       "consultazione": "8 novembre 2026: aperto il README; nessuna palette importata nel sito e nessuna licenza del libro dedotta da quella del codice."
+    },
+    "munsell-1905": {
+      "autore": "Albert H. Munsell",
+      "titolo": "A Color Notation",
+      "pubblicazione": "Boston, Geo. H. Ellis Co., prima edizione, 1905, pp. 14-15 e 21-22, §§ 20-23 e 40-43.",
+      "url": "https://archive.org/download/acolornotation00munsgoog/acolornotation00munsgoog.pdf",
+      "nota": "La prima edizione formula tinta, valore e croma e ne presenta la notazione. Non viene confusa con la seconda edizione.",
+      "consultazione": "9 novembre 2026. Frontespizio e passi indicati controllati sulle immagini. Originale del § 20: “The three color qualities are hue, value, and chroma”. Non lettura integrale del volume."
+    },
+    "munsell-1907": {
+      "autore": "Albert H. Munsell",
+      "titolo": "A Color Notation",
+      "pubblicazione": "Boston, Geo. H. Ellis Co., seconda edizione riveduta e ampliata, 1907.",
+      "url": "https://www.gutenberg.org/cache/epub/26054/pg26054-images.html",
+      "nota": "Testo sui confronti, sulla notazione e sui limiti diseguali di croma. La nota al § 31 cita Runge e Lambert.",
+      "consultazione": "9 novembre 2026. Letti frontespizio, §§ 20-35, passi sulla notazione e §§ 123-127; non collazionato integralmente con la prima edizione. Il copyright 1905 non data questa edizione."
+    },
+    "cie-croma": {
+      "autore": "Commission Internationale de l’Éclairage, CIE",
+      "titolo": "e-ILV, chroma, 17-22-074",
+      "pubblicazione": "CIE S 017:2020, International Lighting Vocabulary, seconda edizione.",
+      "url": "https://cie.co.at/eilvterm/17-22-074",
+      "nota": "Pienezza cromatica valutata rispetto alla luminosità percepita di un riferimento similmente illuminato, grigio, bianco o altamente trasmittente.",
+      "consultazione": "9 novembre 2026. Lette definizione e note. Conservato il riferimento anche grigio della versione 2020; nessuna formula numerica universale ricavata dalla definizione verbale."
+    },
+    "wada-1930": {
+      "autore": "Sanzo Wada; spiegazione operativa affidata al tecnico del suo gruppo",
+      "titolo": "標準色の話 / On Standards of Colour",
+      "pubblicazione": "照明学会雑誌, 14(1), 1930, pp. 5-9, DOI 10.2150/jieij1917.14.5.",
+      "url": "https://www.jstage.jst.go.jp/article/jieij1917/14/1/14_1_5/_article/-char/ja",
+      "nota": "La scelta di Ostwald riguarda l’ordinamento di campioni standard. Non documenta la generazione di ogni abbinamento del repertorio successivo.",
+      "consultazione": "9 novembre 2026. Letti testo estratto delle cinque pagine e immagini selezionate: p. 7, passaggio al tecnico; p. 8, ordinamento dei 500 campioni. Traduzione di lavoro dal giapponese, non edizione critica."
+    },
+    "wada-biografia": {
+      "autore": "Tokyo National Research Institute for Cultural Properties, Tōbunken",
+      "titolo": "和田三造, notizia biografica dal 日本美術年鑑",
+      "pubblicazione": "日本美術年鑑, edizione Shōwa 43, 1968, pp. 148-149; banca dati istituzionale.",
+      "url": "https://www.tobunken.go.jp/materials/bukko/9183.html",
+      "nota": "Nella cronologia personale, la voce del 1956 registra il completamento di tavole Munsell migliorate. Non specifica lì ruoli tecnici e collaboratori.",
+      "consultazione": "9 novembre 2026. Letta la pagina e riscontrato il passo “改良マンセル色票系完成” sotto 昭和31年. Il dato successivo non è una prova dell’origine degli abbinamenti degli anni Trenta."
     }
   }
 }
