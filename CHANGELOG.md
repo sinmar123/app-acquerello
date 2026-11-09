@@ -1,5 +1,15 @@
 # CHANGELOG - app-acquerello
 
+## 2026-11-09 - OC - Rudolf Steiner: nuova pagina autonoma dai testi approvati
+
+- Dopo il via libera del curatore alla proposta editoriale, integrato l’approfondimento 5.5 «Rudolf Steiner e il colore. Dall’esperienza alla forma» in `dati/approfondimenti/temi/rudolf-steiner.json`: sintesi, premessa, otto capitoli e nove fonti in un solo apparato finale. Tutti i paragrafi e i titoli del testo approvato sono stati confrontati con l’HTML, senza omissioni o riscritture. Tre esperienze redazionali non eseguite, distinte dalle indicazioni storiche e dalla pratica successiva di Geck, Wagner e delle scuole.
+- Nuovo ramo `oc/261109-rudolf-steiner`, con base `oc/261109-ostwald-munsell` alla testa della [PR #79](https://github.com/sinmar123/app-acquerello/pull/79), per riusarne le fonti finali senza duplicare le modifiche di Ostwald. La PR #79 resta invariata e deve precedere questa integrazione. Nessuna unione o pubblicazione autorizzata.
+- Rimandi facoltativi anche in sintesi e premessa; la stessa opera può avere più collegamenti puntuali senza duplicare la voce bibliografica. Indicazioni nei generatori e in AGENTS.md allineate. Nessuna modifica alla resa delle pagine precedenti. Home, elenco degli approfondimenti, sitemap e sintesi della chat includono la nuova pagina; corretta nel prompt la descrizione della collocazione finale delle fonti.
+- Nota apribile su autori, attività, tempi e costi della ricerca già conclusa: quattro rapporti, Qwen interrotto senza rapporto e nessun rilancio. Stime e addebiti restano distinti, senza inventare un costo totale. Nessuna nuova corsa a consumo o modifica ad altre app.
+- Verifiche: generazione completa riuscita, Gulpease 62; sei collaudi Chromium, pagina e due indici a 412 e 1280 pixel, senza sbordamenti o errori JavaScript. Tutte le nove fonti, i ritorni da richiami ripetuti e i collegamenti alle opere approvate funzionano. Controllati 1.714 collegamenti interni e risorse su 19 pagine, nessun rinvio rotto o ID duplicato. Dei 48 output di base, 44 restano identici; cambiano soltanto Home, indice degli Approfondimenti, sitemap e prompt della chat, e si aggiunge la pagina Steiner. Settanta sorgenti dello snapshot condiviso preservati; UTF-8 strict senza BOM o caratteri corrotti. Firma: OpenClaw / OC.
+
+Prossima azione: Rivedere la PR Steiner dopo la PR #79; unione e pubblicazione solo con via libera esplicito di Sandro per ciascuna PR nel topic app-acquerello.
+
 Cronologia delle modifiche. Ordine cronologico inverso.
 
 Nota: nelle voci fino al 1/11/2026 il curatore è indicato con lo pseudonimo sinmar.

@@ -1,5 +1,11 @@
 # Quaderno di acquerello con IA (`app-acquerello`)
 
+Nuova pagina Steiner pronta per la revisione, 9 novembre 2026 (OC): **5.5, Rudolf Steiner e il colore. Dall’esperienza alla forma**, sorgente [`rudolf-steiner.json`](dati/approfondimenti/temi/rudolf-steiner.json). Testo approvato dal curatore: sintesi, premessa, otto capitoli, nove fonti tutte in fondo e tre esperienze non eseguite. Generazione completa, confronto integrale del testo e sei collaudi mobile/desktop superati; 1.714 collegamenti e risorse verificati su 19 pagine. Nota apribile con autori, tempi e limiti economici della ricerca precedente; nessuna nuova corsa a consumo.
+
+Ramo `oc/261109-rudolf-steiner` basato sulla testa `5ded0fe8c597a5b5a5a9ab8ab61394e6275ee867` della [PR #79](https://github.com/sinmar123/app-acquerello/pull/79), che resta invariata. La proposta Steiner contiene soltanto la nuova pagina e l’integrazione necessaria; la #79 deve essere unita per prima, poi la base della PR Steiner potrà passare a `main`. Nessuna unione o pubblicazione. Firma: OpenClaw / OC.
+
+Prossima azione: Rivedere la PR Steiner dopo la PR #79; unione e pubblicazione solo con via libera esplicito di Sandro per ciascuna PR nel topic app-acquerello.
+
 Integrazione Munsell-Ostwald pronta, 9 novembre 2026 (OC): sviluppata la spiegazione del sistema Ostwald e il confronto con Munsell in entrambi gli approfondimenti. La storia della terna passa a dieci capitoli e 27 fonti; Wada resta di sette capitoli con 21 fonti. Manuale originale Ostwald, sesta edizione del 1921, controllato per passi; distinzione fra quote del modello, ricette pittoriche, ordinamento e proposte di armonia. Fonti del 1930, appendice e prove precedenti preservate. Generazione e collaudo Chromium a 412 e 1280 pixel superati; 1.562 collegamenti interni verificati. Nessuna unione o pubblicazione. Firma: OpenClaw / OC.
 
 Fonti degli Approfondimenti raccolte in un solo elenco finale, 9 novembre 2026 (OC): tutti e quattro i temi mantengono i rimandi numerati nel testo e il ritorno al punto citato. Le fonti ripetute tra capitoli compaiono una sola volta, senza modificare il testo dei capitoli o perdere le vecchie ancore. Collaudo a 412 e 1280 pixel superato. Steiner sarà un approfondimento autonomo, da ricerca ancora da pianificare e approvare. Firma: OpenClaw / OC.
