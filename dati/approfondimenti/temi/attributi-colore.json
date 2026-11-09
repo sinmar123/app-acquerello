@@ -3,8 +3,8 @@
   "ordine": 4,
   "data": "2026-11-09",
   "titolo": "Come nascono tinta, valore e croma",
-  "sottotitolo": "Gli antecedenti, il contributo di Munsell e le distinzioni utili per leggere un acquerello",
-  "scheda": "Dagli ordinamenti dei campioni alla notazione di Munsell: una storia documentata, senza un unico scopritore",
+  "sottotitolo": "Gli antecedenti, Munsell e Ostwald, fino alla lettura degli accordi di Wada",
+  "scheda": "Dagli antecedenti alla terna di Munsell e al diverso sistema di Ostwald: coordinate, campioni e rapporto con Wada",
   "sintesi": [
     {
       "testo": "La terna non nasce in un solo momento. Ordinare campioni, confrontare mescolanze luminose e descrivere l’apparenza sono problemi diversi, anche quando si impiegano tre grandezze.",
@@ -23,7 +23,11 @@
       "capitolo": "lessico"
     },
     {
-      "testo": "Wada opera dopo Munsell, ma l’anteriorità non dimostra una derivazione. Ostwald è documentato nel lavoro sugli standard; HVC può essere usato oggi per leggere gli abbinamenti.",
+      "testo": "Ostwald ordina i colori mediante la tinta e le quote di colore pieno, bianco e nero. Queste quote non coincidono con valore e croma Munsell e non sono dosi da trasferire ai tubetti.",
+      "capitolo": "ostwald"
+    },
+    {
+      "testo": "Per gli standard di Wada è documentato il sistema Ostwald. La terna di Munsell può descrivere oggi gli accordi, ma la sua anteriorità non dimostra il metodo storico con cui furono scelti.",
       "capitolo": "wada"
     },
     {
@@ -34,7 +38,7 @@
   "premessa": [
     "Dire che un colore è rosso non precisa quanto sia chiaro né quanto appaia vicino a un neutro. Tinta, valore e croma permettono di separare queste domande e di descrivere confronti altrimenti affidati a nomi generici.",
     "La domanda storica richiede però una distinzione ulteriore: riconoscere differenze cromatiche non equivale a costruire una scala, una notazione o una teoria delle mescolanze. L’origine della terna si comprende seguendo questi problemi, senza cercare un solo inventore per tutti.",
-    "Il percorso arriva a Sanzo Wada e alla pratica dell’acquerello. La storia delle fonti rimane distinta dagli strumenti usati oggi per analizzare un accordo e dalle prove che il Quaderno propone."
+    "Il percorso comprende due sistemi distinti del primo Novecento: quello di Munsell e quello di Wilhelm Ostwald. Il confronto chiarisce perché la lettura odierna degli accordi di Wada mediante tinta, valore e croma non coincida con il sistema documentato per i suoi standard storici."
   ],
   "nota_metodo": [
     "Ricerca del 9 novembre 2026, coordinata da OpenClaw / OC su una domanda comune. GPT, GLM, DeepSeek e Gemini hanno concluso; Qwen ha restituito un testo parziale prima di un errore del server. Non sono cinque corse riuscite. Nessun rilancio Qwen.",
@@ -44,7 +48,8 @@
     "Gemini Deep Research standard, agente deep-research-preview-04-2026: 41 ricerche Google, 1.450.376 token totali dichiarati. Raccolta in 8 minuti e 50 secondi, non durata esatta sui server. Addebito non esposto. La preparazione del piano ha consumi separati e non monetizzati.",
     "Le corse a consumo sono partite in parallelo: le durate non vanno sommate. Circa 1,47 USD è soltanto la stima parziale di GLM e DeepSeek, non il costo totale con Qwen, Gemini e piano. La previsione approvata per le quattro corse era 3,70-6,10 USD, con scenario prudente di circa 18,80 USD, non un tetto garantito.",
     "I cinque corpi dei rapporti sono stati letti integralmente, per 285.281 caratteri complessivi, con letture a parti e arbitraggio dei passaggi controversi. I lettori delegati Codex / CDX hanno indicato copertura, dati trovati e dati non documentati. Il consenso fra modelli non è stato considerato una prova; Qwen, GLM e DeepSeek condividono gli strumenti web DashScope.",
-    "Il controllo dei rapporti non equivale alla lettura integrale dei libri citati. Le fonti dichiarano i passi realmente consultati; le traduzioni dal giapponese sono di lavoro. Non sono state eseguite prove pittoriche, misure colorimetriche o verifiche delle tabelle numeriche di rinotazione."
+    "Il controllo dei rapporti non equivale alla lettura integrale dei libri citati. Le fonti dichiarano i passi realmente consultati; le traduzioni dal giapponese sono di lavoro. Non sono state eseguite prove pittoriche, misure colorimetriche o verifiche delle tabelle numeriche di rinotazione.",
+    "Integrazione su Munsell e Ostwald del 9 novembre 2026, OpenClaw / OC: letti passi selezionati della sesta edizione di Die Farbenfibel (1921), confrontati con Munsell e schede istituzionali. Le pagine consultate sono dichiarate nelle fonti. Nessuna nuova corsa multi-modello a consumo; le stime precedenti non sono un costo di questa integrazione."
   ],
   "capitoli": [
     {
@@ -441,9 +446,165 @@
       ]
     },
     {
+      "id": "ostwald",
+      "breve": "Munsell e Ostwald",
+      "titolo": "7. Munsell e Ostwald: due modi di ordinare il colore",
+      "blocchi": [
+        {
+          "tipo": "p",
+          "testo": "Wilhelm Ostwald, chimico fisico e studioso del colore, sviluppa un proprio sistema di ordinamento. La sesta edizione di <i>Die Farbenfibel</i> qui consultata è del 1921 e conserva una prefazione alla prima edizione datata ottobre 1916. La notazione HVC di Munsell è già pubblicata nel 1905: i due sistemi vanno confrontati nelle loro definizioni, non trattati come tappe equivalenti di una sola terna.",
+          "fonti": [
+            "ostwald-biografia",
+            "ostwald-1921",
+            "munsell-1905"
+          ]
+        },
+        {
+          "tipo": "titoletto",
+          "testo": "Il triangolo di una tinta",
+          "id": "il-triangolo-di-una-tinta"
+        },
+        {
+          "tipo": "p",
+          "testo": "Ostwald distingue il colore pieno, chiamato <i>Vollfarbe</i>, dal bianco e dal nero. Nel modello, il colore pieno rappresenta la componente cromatica senza quota bianca o nera. Non indica la purezza chimica di un pigmento. Per ogni tinta si considerano le diverse combinazioni dei tre elementi.",
+          "fonti": [
+            "ostwald-1921"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Le quote di colore pieno, bianco e nero sommano a cento quando sono espresse in centesimi. Non sono tre variabili indipendenti: nota la tinta, due quote determinano la terza. La notazione pratica unisce un numero per la tinta e due lettere per i contenuti di bianco e nero.",
+          "fonti": [
+            "ostwald-1921"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Per rappresentare questi rapporti Ostwald dispone colore pieno, bianco e nero ai vertici di un triangolo. Il lato fra colore pieno e bianco contiene le serie chiare; quello verso il nero, le serie scure. Il lato bianco-nero contiene i grigi, mentre l’interno comprende le combinazioni dei tre elementi. Ogni triangolo riguarda una tinta.",
+          "fonti": [
+            "ostwald-1921"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "I triangoli delle diverse tinte si riuniscono nel doppio cono: bianco e nero occupano le estremità dell’asse comune, i colori pieni la circonferenza intermedia. La figura rende leggibile l’organizzazione del modello. Non coincide con il solido Munsell, che ammette estensioni massime di croma diseguali fra le tinte e i valori.",
+          "fonti": [
+            "ostwald-1921",
+            "munsell-1907"
+          ]
+        },
+        {
+          "tipo": "titoletto",
+          "testo": "Che cosa cambia rispetto a Munsell",
+          "id": "che-cosa-cambia-rispetto-a-munsell"
+        },
+        {
+          "tipo": "tabella",
+          "intestazione": [
+            "Questione",
+            "Munsell",
+            "Ostwald"
+          ],
+          "righe": [
+            {
+              "celle": [
+                "Come si descrive il campione",
+                "Tinta, valore e croma: H V/C.",
+                "Tinta e quote di colore pieno, bianco e nero; due quote bastano perché il totale è fissato."
+              ],
+              "fonti": [
+                "munsell-1905",
+                "ostwald-1921"
+              ]
+            },
+            {
+              "celle": [
+                "Come si legge il chiaro-scuro",
+                "Il valore appartiene alla scala specifica che collega nero e bianco.",
+                "Le quote di bianco e nero collocano il campione nel triangolo della tinta. Non sono numeri di valore Munsell."
+              ],
+              "fonti": [
+                "munsell-1905",
+                "ostwald-1921"
+              ]
+            },
+            {
+              "celle": [
+                "Come si distingue la componente cromatica",
+                "Il croma varia rispetto al neutro a tinta e valore fissati.",
+                "Il contenuto di colore pieno completa le quote di bianco e nero. Non è il croma Munsell espresso in percentuale."
+              ],
+              "fonti": [
+                "munsell-1907",
+                "ostwald-1921"
+              ]
+            },
+            {
+              "celle": [
+                "Come si rappresenta l’insieme",
+                "Il solido completo ha limiti di croma diseguali; la sfera è introduttiva.",
+                "Triangoli di tinta riuniti in un doppio cono."
+              ],
+              "fonti": [
+                "munsell-1907",
+                "ostwald-1921"
+              ]
+            }
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Entrambi gli autori collegano l’ordinamento a confronti visivi e campioni materiali. La distinzione non oppone quindi un sistema soltanto percettivo a uno privo di osservazione visiva. Cambiano le grandezze adottate e la costruzione delle scale. Passare dall’uno all’altro richiede di confrontare il campione, non di rinominare le coordinate.",
+          "fonti": [
+            "munsell-1907",
+            "ostwald-1921"
+          ]
+        },
+        {
+          "tipo": "titoletto",
+          "testo": "Quote del modello e lavoro sul foglio",
+          "id": "quote-del-modello-e-lavoro-sul-foglio"
+        },
+        {
+          "tipo": "p",
+          "testo": "Il riferimento al bianco non prescrive l’aggiunta di un pigmento bianco. A p. 21 Ostwald considera sia la miscela con bianco sia strati più sottili di acquerello sul foglio bianco. A p. 23 avverte però che mescolare con bianco o diluire con acqua modifica spesso anche la tinta. La serie ordinata del modello e la trasformazione reale del colore non sono la stessa operazione.",
+          "fonti": [
+            "ostwald-1921"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Anche Munsell distingue gli attributi senza garantire che una trasformazione materiale ne cambi soltanto uno. Per leggere un campione più chiaro occorre dunque esaminare anche tinta e croma. Il nome del procedimento, come diluizione o aggiunta di bianco, non basta a stabilire quali coordinate siano rimaste costanti.",
+          "fonti": [
+            "munsell-1905",
+            "munsell-1907",
+            "ostwald-1921"
+          ]
+        },
+        {
+          "tipo": "titoletto",
+          "testo": "Dall’ordinamento alle proposte di armonia",
+          "id": "dallordinamento-alle-proposte-di-armonia"
+        },
+        {
+          "tipo": "p",
+          "testo": "Ostwald sviluppa anche una teoria dell’armonia, nella quale l’ordine dei colori orienta la scelta delle combinazioni. Anche Munsell dedica una parte del proprio libro all’armonia. La descrizione di un campione e la proposta di un accordo sono però problemi distinti: conoscere il sistema di classificazione non documenta, da solo, come un autore abbia scelto ogni abbinamento.",
+          "fonti": [
+            "ostwald-ricerca",
+            "munsell-1907",
+            "wada-1930"
+          ]
+        },
+        {
+          "tipo": "nota",
+          "testo": "Per Wada questa distinzione è decisiva. Il capitolo seguente esamina la fonte del 1930 sugli standard; la <a href=\"../sanzo-wada/#appendice\">scheda dedicata</a> sviluppa l’uso del sistema Ostwald e le indicazioni dell’appendice storica."
+        }
+      ]
+    },
+    {
       "id": "wada",
       "breve": "Dove si colloca Wada",
-      "titolo": "7. Storia degli standard e lettura degli abbinamenti",
+      "titolo": "8. Storia degli standard e lettura degli abbinamenti",
       "blocchi": [
         {
           "tipo": "p",
@@ -491,7 +652,7 @@
     {
       "id": "prove",
       "breve": "Guardare le stesure",
-      "titolo": "8. Quattro confronti proposti per l’acquerello",
+      "titolo": "9. Quattro confronti proposti per l’acquerello",
       "blocchi": [
         {
           "tipo": "nota",
@@ -550,7 +711,7 @@
     {
       "id": "cronologia",
       "breve": "Cronologia e limiti",
-      "titolo": "9. Le date descrivono opere e problemi diversi",
+      "titolo": "10. Le date descrivono opere e problemi diversi",
       "blocchi": [
         {
           "tipo": "tabella",
@@ -605,6 +766,15 @@
               "fonti": [
                 "munsell-1905",
                 "munsell-1907"
+              ]
+            },
+            {
+              "celle": [
+                "1916 / 1921",
+                "Prefazione alla prima edizione di Die Farbenfibel e sesta edizione Ostwald qui consultata. Il 1916 è la data della prefazione conservata, non quella del frontespizio del 1921."
+              ],
+              "fonti": [
+                "ostwald-1921"
               ]
             },
             {
@@ -681,7 +851,7 @@
       "pubblicazione": "Boston, Geo. H. Ellis Co., seconda edizione riveduta e ampliata, 1907.",
       "url": "https://www.gutenberg.org/cache/epub/26054/pg26054-images.html",
       "nota": "Testo sui confronti, sulla notazione e sui limiti diseguali di croma. La nota al § 31 cita Runge e Lambert.",
-      "consultazione": "9 novembre 2026. Letti frontespizio, §§ 20-35, passi sulla notazione e §§ 123-127; non collazionato integralmente con la prima edizione. Il copyright 1905 non data questa edizione."
+      "consultazione": "9 novembre 2026. Letti frontespizio, §§ 20-35, passi sulla notazione e §§ 123-127; non collazionato integralmente con la prima edizione. Il copyright 1905 non data questa edizione. Integrazione del 9 novembre: riaperti anche §§ 146-155 sull’armonia."
     },
     "mayer": {
       "autore": "Tobias Mayer; edizione a cura di Georg Christoph Lichtenberg",
@@ -858,6 +1028,30 @@
       "url": "https://www.handprint.com/HP/WCL/color3.html",
       "nota": "Analisi contemporanea degli attributi e delle condizioni di osservazione, non fonte primaria dei contributi storici.",
       "consultazione": "9 novembre 2026. Letti introduzione e passi pertinenti. Le sue relazioni didattiche non sono esportate come formule valide per ogni scala; nessuna banca dati di pigmenti verificata integralmente."
+    },
+    "ostwald-1921": {
+      "autore": "Wilhelm Ostwald; Science History Institute, digitalizzazione",
+      "titolo": "Die Farbenfibel",
+      "pubblicazione": "Leipzig, Verlag Unesma, sesta edizione migliorata, 1921. Frontespizio, prefazione alla prima edizione e pp. 9, 17, 21, 23, 25, 27-29, 33 e 37.",
+      "url": "https://digital.sciencehistory.org/works/3f462642b",
+      "nota": "Originale sulle quote di colore pieno, bianco e nero, sul triangolo di una tinta e sulla notazione. A p. 23 distingue le variazioni di tinta prodotte da bianco e diluizione. La data 1921 appartiene all’esemplare consultato, non alla prima formulazione del sistema.",
+      "consultazione": "9 novembre 2026. Osservati direttamente frontespizio della sesta edizione, prefazione alla prima datata ottobre 1916, indice e pagine indicate. Non lettura integrale delle 46 pagine. Riassunti di lavoro dal tedesco in caratteri gotici, non citazioni letterali. A p. 28 è verificata l’equazione r + w + s = 100 e la sufficienza di tinta e due quote. A p. 33, numero di tinta e due lettere; a p. 37, doppio cono. Le scansioni non sono usate come campioni colorimetrici."
+    },
+    "ostwald-ricerca": {
+      "autore": "Ulrike Köckritz, Wilhelm-Ostwald-Gesellschaft",
+      "titolo": "Der Farbforscher",
+      "pubblicazione": "Scheda istituzionale, 1 marzo 2015.",
+      "url": "https://www.wilhelm-ostwald.de/joomla/index.php/de/wilhelm-ostwald/der-farbforscher",
+      "nota": "Presentazione dei triangoli, del doppio cono e della teoria dell’armonia. La descrizione delle collezioni non è una misura eseguita dal Quaderno.",
+      "consultazione": "9 novembre 2026. Letto il corpo della scheda, dal periodo di ricerca 1914-1932 alla nota bibliografica. Usata per il quadro del sistema e il distinto interesse per l’armonia, non per attribuire procedimenti a Wada."
+    },
+    "ostwald-biografia": {
+      "autore": "Wilhelm Ostwald Park, museo e archivio",
+      "titolo": "Biography: Physical chemist, Nobel laureate and polymath",
+      "pubblicazione": "Scheda istituzionale, senza data di pubblicazione dichiarata.",
+      "url": "https://wilhelm-ostwald-park.de/en/biografie",
+      "nota": "Identità di Wilhelm Ostwald e attività di ricerca sul colore. Le date generali della biografia non sostituiscono quelle del frontespizio dell’esemplare consultato.",
+      "consultazione": "9 novembre 2026. Letto il corpo biografico, con i paragrafi sulla chimica fisica e sulla ricerca e produzione di strumenti per il colore."
     }
   }
 }

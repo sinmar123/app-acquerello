@@ -32,6 +32,14 @@ Scartati l’attribuzione a Wada del 60-30-10, l’identità croma-saturazione, 
 
 Le fonti nelle due pagine dichiarano edizioni, pagine e parti consultate. Non sono dichiarate letture integrali dei libri moderni o dell’appendice storica; le traduzioni dal giapponese sono di lavoro. Nessuna prova pittorica, misura colorimetrica o verifica delle tabelle numeriche di rinotazione è stata eseguita.
 
+## Integrazione Munsell-Ostwald del 9 novembre 2026
+
+Su richiesta del curatore, OpenClaw / OC ha sviluppato una spiegazione autonoma in entrambi gli approfondimenti. Aggiunti il confronto delle coordinate, il triangolo di una tinta, il doppio cono e la distinzione fra classificazione, proposte di armonia e trasformazioni materiali. Questa integrazione non ha richiesto nuove corse multi-modello a consumo; i costi della ricerca iniziale restano quelli parziali indicati sopra.
+
+Letti direttamente frontespizio della sesta edizione della Farbenfibel (1921), prefazione alla prima datata ottobre 1916, indice e pagine 9, 17, 21, 23, 25, 27-29, 33 e 37 nelle [scansioni dello Science History Institute](https://digital.sciencehistory.org/works/3f462642b). Le pagine 21 e 23 distinguono l’ordinamento teorico dalle variazioni osservate con bianco e diluizione; le pagine 28-29 descrivono le quote e il triangolo, la 33 la notazione e la 37 il doppio cono. Non è una lettura integrale del volume e non sono misure sui campioni digitalizzati. Riassunti di lavoro dal tedesco, non citazioni letterali.
+
+Riaperti i passi Munsell 1907 sulle coordinate, sui limiti del solido e sull’armonia (§§ 146-155). Letti i corpi delle schede istituzionali Wilhelm-Ostwald-Gesellschaft e Wilhelm Ostwald Park. L’integrazione non estende la lettura parziale dell’appendice Wada già dichiarata e non dimostra il procedimento di scelta di tutte le combinazioni. Le prove pittoriche precedenti restano proposte, non eseguite.
+
 Firma: OpenClaw / OC.
 
-Prossima azione: Rivedere le due pagine nella PR #78; unione e pubblicazione solo con nuovo via libera esplicito del curatore.
+Prossima azione: Rivedere l’integrazione Munsell-Ostwald nei due approfondimenti; unione e pubblicazione solo con nuovo via libera esplicito di Sandro nel topic dell’app.
