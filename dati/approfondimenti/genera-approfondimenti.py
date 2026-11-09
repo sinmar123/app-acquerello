@@ -13,8 +13,9 @@ Ogni questione è una sottosezione: il numero della sezione in sezione.json più
 il suo «ordine», per esempio 5.1. La pagina si apre con la sintesi, i cui punti
 rimandano ai capitoli, e la premessa. Il campo facoltativo «nota_metodo», un
 elenco di paragrafi, aggiunge un riquadro «Nota di metodo» dopo la premessa.
-Seguono i capitoli, con le fonti numerate in fondo a ognuno come nei Principi
-generali (scripts/rimandi_fonti.py).
+Seguono i capitoli e un unico elenco delle fonti in fondo alla pagina.
+La numerazione è continua; i rimandi tornano al passo effettivamente citato.
+I vecchi indirizzi delle fonti per capitolo restano validi come alias.
 
 Blocchi dei capitoli: «p» (paragrafo), «lista» (con «numerata» per l'elenco
 numerato), «tabella» (intestazione e righe, con la colonna delle fonti),
@@ -75,7 +76,7 @@ nav.salti a { flex: none; text-decoration: none; color: #2c4f3a; border: 1px sol
 .metodo { background: #f1f3f6; border: 1px solid #cdd6df; border-radius: 8px; padding: 10px 14px; margin: 12px 0; }
 .metodo summary { cursor: pointer; font-weight: 600; color: #2c4f3a; }
 .intro p, .metodo p { margin: 6px 0; }
-section.cap { border-top: 3px solid #3d6b4f; padding-top: 14px; margin-top: 26px; }
+section.cap, section.bibliografia { border-top: 3px solid #3d6b4f; padding-top: 14px; margin-top: 26px; }
 .voci { padding-left: 22px; } .voci li { margin-bottom: 6px; }
 p.nota { font-style: italic; color: #444; }
 .tab { overflow-x: auto; }
@@ -145,6 +146,8 @@ def carica_temi():
         ordini.add(tema["ordine"])
         date.fromisoformat(tema["data"])
         id_capitoli = [c["id"] for c in tema["capitoli"]]
+        if "bibliografia" in id_capitoli:
+            errore(f"{path.name}: «bibliografia» è riservato all’elenco finale delle fonti")
         if len(set(id_capitoli)) != len(id_capitoli):
             errore(f"{path.name}: due capitoli con lo stesso id")
         for punto in tema["sintesi"]:
@@ -216,22 +219,70 @@ def blocco(b, c, F, dove):
     return f'<div class="tab"><table class="riass"><tr>{testa}</tr>{"".join(righe)}</table></div>'
 
 
+
+class FontiTema(rimandi_fonti.Capitolo):
+    """Un solo elenco per pagina, con alias per i vecchi indirizzi per capitolo."""
+
+    def __init__(self, tema):
+        super().__init__("bibliografia", tema["fonti"], f"approfondimenti, {tema['id']}")
+        self.alias = {}
+
+    def apri_capitolo(self, id_capitolo):
+        self.capitolo = id_capitolo
+        self.ordine_capitolo = []
+        self.rimandi_capitolo = 0
+
+    def rif(self, chiavi, dove, obbligatorio=True):
+        if not chiavi:
+            if obbligatorio:
+                raise SystemExit(f"{self.sezione}: frase senza fonte in {dove}")
+            return ""
+        self.rimandi_capitolo += 1
+        rid = f"{self.capitolo}-r{self.rimandi_capitolo}"
+        numeri = set()
+        for k in chiavi:
+            if k not in self.fonti:
+                raise SystemExit(f"{self.sezione}: fonte «{k}» non definita ({dove})")
+            if k not in self.ordine:
+                self.ordine.append(k)
+                self.prima[k] = rid
+            if k not in self.ordine_capitolo:
+                self.ordine_capitolo.append(k)
+                precedente = f"{self.capitolo}-f{len(self.ordine_capitolo)}"
+                self.alias.setdefault(k, []).append(precedente)
+            numeri.add(self.ordine.index(k) + 1)
+        link = ", ".join(f'<a href="#bibliografia-f{n}" aria-label="Fonte {n}">{n}</a>'
+                         for n in sorted(numeri))
+        return f'<sup class="rif" id="{rid}">[{link}]</sup>'
+
+    def elenco(self):
+        voci = []
+        for n, k in enumerate(self.ordine, 1):
+            alias = "".join(f'<span id="{e(id_vecchio)}" class="fonte-alias" aria-hidden="true"></span>'
+                            for id_vecchio in self.alias.get(k, []))
+            voci.append(f'<li id="bibliografia-f{n}">{alias}{self.voce(k)} '
+                        f'<a class="torna" href="#{e(self.prima[k])}" '
+                        f'aria-label="Torna al testo che cita la fonte {n}">↩ Torna al testo</a></li>')
+        return ('<section class="bibliografia" id="bibliografia"><h2>Fonti</h2>'
+                f'<div class="fonti-cap"><ol>{"".join(voci)}</ol></div></section>')
+
+
 def pagina_tema(sez, tema):
-    capitoli, citate = [], set()
+    capitoli = []
+    F = FontiTema(tema)
     numeri = {c["id"]: c["titolo"].split(".")[0] for c in tema["capitoli"]}
     for c in tema["capitoli"]:
-        F = rimandi_fonti.Capitolo(c["id"], tema["fonti"], f"approfondimenti, {tema['id']}")
+        F.apri_capitolo(c["id"])
         corpo = [f'<section class="cap" id="{e(c["id"])}"><h2>{e(c["titolo"])}</h2>']
         for i, b in enumerate(c["blocchi"]):
             corpo.append(blocco(b, c, F, f'{tema["id"]}, {c["id"]}, blocco {i + 1}'))
-        corpo.append(F.elenco())
         corpo.append("</section>")
         capitoli.append("\n".join(corpo))
-        citate.update(F.ordine)
+    citate = set(F.ordine)
     mancano = [k for k in tema["fonti"] if k not in citate]
     if mancano:
         errore(f"{tema['id']}: fonti mai citate: {', '.join(mancano)}")
-    salti = "".join(f'<a href="#{e(c["id"])}">{e(c["breve"])}</a>' for c in tema["capitoli"])
+    salti = "".join(f'<a href="#{e(c["id"])}">{e(c["breve"])}</a>' for c in tema["capitoli"]) + '<a href="#bibliografia">Fonti</a>'
     sintesi = "".join(f'<li>{p["testo"]} <a class="al-cap" href="#{e(p["capitolo"])}">capitolo {e(numeri[p["capitolo"]])}</a></li>'
                       for p in tema["sintesi"])
     premessa = "".join(f"<p>{p}</p>" for p in tema["premessa"])
@@ -249,6 +300,7 @@ def pagina_tema(sez, tema):
         f'<div class="intro"><h2>Premessa</h2>{premessa}</div>'
         + nota_metodo
         + "\n".join(capitoli)
+        + F.elenco()
         + piede({**sez, "data": tema["data"]}, "../../")
     )
     titolo = f"{numero} · {tema['titolo']} · {sez['titolo']}"

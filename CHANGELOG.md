@@ -4,6 +4,17 @@ Cronologia delle modifiche. Ordine cronologico inverso.
 
 Nota: nelle voci fino al 1/11/2026 il curatore è indicato con lo pseudonimo sinmar.
 
+## 2026-11-09 - OC - Munsell-Ostwald e fonti finali negli Approfondimenti
+
+- Su richiesta del curatore, sviluppato il confronto fra Munsell e Wilhelm Ostwald prima del passaggio a Wada. L’approfondimento sulla terna comprende ora dieci capitoli e 27 fonti; la scheda Wada resta di sette capitoli, con 21 fonti.
+- Nuovo capitolo autonomo: identità di Ostwald, colore pieno, quote di bianco e nero, dipendenza delle tre quote, triangolo di una tinta, doppio cono e notazione. Tabella di confronto con valore e croma Munsell; ordinamento, proposte di armonia e procedimenti pittorici distinti. La sesta edizione della Farbenfibel (1921) è distinta dalla prefazione alla prima (ottobre 1916).
+- Nella scheda Wada il capitolo storico spiega il sistema senza richiedere la lettura dell’altra pagina. Conservati tutti i paragrafi storici precedenti, con la distinzione fra standard del 1930, appendice del 1935 e notizia sulle tavole Munsell del 1956. Sintesi, premessa e rinvii reciproci allineati; quattro prove e capitoli tecnici preservati.
+- Tre nuove fonti in ciascuna pagina: manuale originale Ostwald (pagine e sesta edizione riscontrate sulle scansioni), Wilhelm-Ostwald-Gesellschaft e museo Wilhelm Ostwald Park. Distinta la lettura di passi selezionati da una lettura integrale. Nessuna nuova ricerca multi-modello a consumo; rendiconto precedente preservato e integrato con il nuovo lavoro.
+- Su successiva indicazione del curatore, raccolte tutte le fonti in fondo a ciascuno dei quattro approfondimenti: numerazione continua, voci non duplicate, voce «Fonti» nell’indice e ritorno al richiamo seguito. Conservate le vecchie ancore e tutti i testi dei capitoli durante lo spostamento. Nessuna modifica al sistema delle fonti di Principi, Teoria dei colori o Marche.
+- Verifiche: generazione completa riuscita, Gulpease 63 per la terna e 61 per Wada; Chromium a 412 e 1280 pixel, note, fonti, ritorni e collegamenti reciproci funzionanti, nessuno sbordamento o errore JavaScript. Verificati 1.562 collegamenti interni su 18 pagine, senza ID duplicati o rinvii rotti. Rispetto alla base b892e05 cambiano dodici dei 64 output, tutti previsti: i quattro approfondimenti, i relativi indici, la home e il prompt. Gli altri 52 sono identici. Il collaudo della nuova impaginazione verifica tutti e quattro i temi alle due larghezze, compreso il ritorno da citazioni ripetute della stessa fonte. UTF-8 strict senza BOM o caratteri corrotti; sorgenti della copia condivisa preservati. Nessuna unione o pubblicazione. Firma: OpenClaw / OC.
+
+Prossima azione: Rivedere l’integrazione Munsell-Ostwald e le fonti finali; unione e pubblicazione solo con nuovo via libera di Sandro nel topic dell’app. Preparare poi la ricerca per un approfondimento autonomo su Rudolf Steiner.
+
 ## 2026-11-09 - OC - Origine di tinta, valore e croma e revisione storica Wada
 
 - Su richiesta del curatore, completato il confronto di GPT-6 Astra, GLM 5.2, DeepSeek v4 Pro, Gemini standard e Qwen 3.8 Max. Quattro rapporti conclusi e uno parziale: Qwen ha terminato con errore del server, senza rilancio. Letti i cinque testi, con riscontri sui passaggi decisivi; i rapporti non sono trattati come fonti primarie.
