@@ -1,5 +1,13 @@
 # CHANGELOG - app-acquerello
 
+## 2026-11-09 - OC - Steiner: acquerello esplicitato in apertura della premessa
+
+- Inserita come primo paragrafo della premessa la formulazione proposta al curatore: nelle indicazioni pittoriche qui esaminate, Steiner privilegia il colore acquoso, mantenuto fluido nel recipiente e steso con il pennello; l’acquerello è un riferimento centrale per la forma che nasce dal colore. Richiamo alla fonte GA 291 già presente, con riscontri dichiarati alle pp. 65 e 71. Nessuna generalizzazione a tutte le riflessioni dell’autore o attribuzione di un protocollo tecnico completo.
+- Conservati tutti i paragrafi precedenti, sintesi, otto capitoli, nove fonti, nota di metodo e tre esperienze non eseguite. Nessuna nuova ricerca. Modificato soltanto il JSON della pagina, oltre ai file di governo.
+- Verifiche: generazione completa riuscita, Gulpease 62; dei 49 output, 48 identici alla base e modificata soltanto la pagina Steiner. Due collaudi Chromium, 412 e 1280 pixel, con nuovo paragrafo visibile, rimando e ritorno alla fonte funzionanti, nessun errore JavaScript o sbordamento. Confrontati testo e struttura con la versione precedente: unica aggiunta il paragrafo proposto. UTF-8 strict senza BOM o caratteri corrotti; sorgenti dello snapshot condiviso preservati. Ramo `oc/261109-steiner-acquerello`; nessuna unione o pubblicazione. Firma: OpenClaw / OC.
+
+Prossima azione: Rivedere la precisazione nella premessa di Steiner; unione e pubblicazione solo con nuovo via libera esplicito di Sandro nel topic app-acquerello.
+
 ## 2026-11-09 - OC - Rudolf Steiner: nuova pagina autonoma dai testi approvati
 
 - Dopo il via libera del curatore alla proposta editoriale, integrato l’approfondimento 5.5 «Rudolf Steiner e il colore. Dall’esperienza alla forma» in `dati/approfondimenti/temi/rudolf-steiner.json`: sintesi, premessa, otto capitoli e nove fonti in un solo apparato finale. Tutti i paragrafi e i titoli del testo approvato sono stati confrontati con l’HTML, senza omissioni o riscritture. Tre esperienze redazionali non eseguite, distinte dalle indicazioni storiche e dalla pratica successiva di Geck, Wagner e delle scuole.

@@ -1,5 +1,9 @@
 # Quaderno di acquerello con IA (`app-acquerello`)
 
+Precisazione sull’acquerello pronta, 9 novembre 2026 (OC): la premessa di [Rudolf Steiner](dati/approfondimenti/temi/rudolf-steiner.json) si apre ora con il paragrafo proposto al curatore sul colore acquoso, fluido nel recipiente e steso con il pennello, e sull’acquerello come riferimento centrale delle indicazioni esaminate. Richiamo a GA 291, pp. 65 e 71, fonte già presente. Testi precedenti e apparato finale conservati. Generazione e collaudo mobile/desktop superati; cambia soltanto l’HTML della pagina Steiner, altri 48 output identici. Ramo `oc/261109-steiner-acquerello`, nessuna unione o pubblicazione. Firma: OpenClaw / OC.
+
+Prossima azione: Rivedere la precisazione nella premessa di Steiner; unione e pubblicazione solo con nuovo via libera esplicito di Sandro nel topic app-acquerello.
+
 Nuova pagina Steiner pronta per la revisione, 9 novembre 2026 (OC): **5.5, Rudolf Steiner e il colore. Dall’esperienza alla forma**, sorgente [`rudolf-steiner.json`](dati/approfondimenti/temi/rudolf-steiner.json). Testo approvato dal curatore: sintesi, premessa, otto capitoli, nove fonti tutte in fondo e tre esperienze non eseguite. Generazione completa, confronto integrale del testo e sei collaudi mobile/desktop superati; 1.714 collegamenti e risorse verificati su 19 pagine. Nota apribile con autori, tempi e limiti economici della ricerca precedente; nessuna nuova corsa a consumo.
 
 Ramo `oc/261109-rudolf-steiner` basato sulla testa `5ded0fe8c597a5b5a5a9ab8ab61394e6275ee867` della [PR #79](https://github.com/sinmar123/app-acquerello/pull/79), che resta invariata. La proposta Steiner contiene soltanto la nuova pagina e l’integrazione necessaria; la #79 deve essere unita per prima, poi la base della PR Steiner potrà passare a `main`. Nessuna unione o pubblicazione. Firma: OpenClaw / OC.
