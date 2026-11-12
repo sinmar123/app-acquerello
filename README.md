@@ -1,5 +1,11 @@
 # Quaderno di acquerello con IA (`app-acquerello`)
 
+Apertura degli Approfondimenti aggiornata, 12 novembre 2026 (OC Acquerello): «Come nascono gli Approfondimenti» spiega il metodo anche a chi non conosce l’IA. Testo approvato da Sandro per la pubblicazione nel messaggio 927 del topic app-acquerello. Il capitolo sul blu intenso resta separato in attesa di definire la collocazione, poiché la pagina generale non è ancora redatta. Firma: OC (Acquerello).
+
+Generazione completa e collaudo mobile/desktop superati; testo conforme alla proposta approvata, un solo HTML cambia e 48 output restano identici.
+
+Prossima azione: Pubblicare l’apertura autorizzata; riscontrare il sito online.
+
 Precisazione sull’acquerello pronta, 9 novembre 2026 (OC): la premessa di [Rudolf Steiner](dati/approfondimenti/temi/rudolf-steiner.json) si apre ora con il paragrafo proposto al curatore sul colore acquoso, fluido nel recipiente e steso con il pennello, e sull’acquerello come riferimento centrale delle indicazioni esaminate. Richiamo a GA 291, pp. 65 e 71, fonte già presente. Testi precedenti e apparato finale conservati. Generazione e collaudo mobile/desktop superati; cambia soltanto l’HTML della pagina Steiner, altri 48 output identici. Ramo `oc/261109-steiner-acquerello`, nessuna unione o pubblicazione. Firma: OpenClaw / OC.
 
 Prossima azione: Rivedere la precisazione nella premessa di Steiner; unione e pubblicazione solo con nuovo via libera esplicito di Sandro nel topic app-acquerello.

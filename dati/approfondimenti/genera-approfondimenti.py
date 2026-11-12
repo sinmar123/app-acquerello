@@ -326,10 +326,11 @@ def pagina_elenco(sez, temi):
             f'<p><a href="{e(tema["id"])}/">{e(sez["leggi"])}</a></p>'
             "</article>"
         )
+    titolo_intro = f'<h2>{e(sez["introduzione_titolo"])}</h2>' if sez.get("introduzione_titolo") else ""
     corpo = (
         f"<h1>{e(sez['titolo'])}</h1>"
         f'<p class="sotto">{e(sez["sottotitolo"])}</p>'
-        f'<div class="intro">{"".join(f"<p>{e(p)}</p>" for p in sez["introduzione"])}</div>'
+        f'<div class="intro">{titolo_intro}{"".join(f"<p>{e(p)}</p>" for p in sez["introduzione"])}</div>'
         f'<section class="blocco" id="questioni"><h2>{e(sez["elenco_titolo"])}</h2>{"".join(schede)}</section>'
         + piede(sez, "../")
     )

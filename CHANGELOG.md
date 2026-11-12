@@ -1,5 +1,15 @@
 # CHANGELOG - app-acquerello
 
+## 2026-11-12 - OC (Acquerello) - Apertura degli Approfondimenti: metodo spiegato senza gergo
+
+Applicato il testo «Come nascono gli Approfondimenti», consegnato a Sandro nel messaggio 923 e approvato per la pubblicazione nel messaggio 927 del topic Acquerello. Spiegati il ruolo dell’intelligenza artificiale, il confronto delle risposte, la verifica documentale, i limiti e la scelta finale del curatore. Nessuna attribuzione al curatore di tutte le letture degli assistenti. Titolo dell’apertura facoltativo nei dati; mantenuto il generatore unico. Le note di metodo dei singoli temi restano invariate.
+
+Generazione completa riuscita (Gulpease della sezione 63), due collaudi Chromium a 412 e 1280 pixel con cinque collegamenti ciascuno, testo confrontato integralmente con la proposta approvata e apertura riscontrata visivamente. Nessuno sbordamento o errore JavaScript; modifica al solo HTML dell’elenco, altri 48 output identici.
+
+Il capitolo sul blu intenso è approvato come testo, ma la pagina generale sul blu non è ancora redatta; collocazione della prima pubblicazione da definire con Sandro. Nessun altro testo tematico incluso in questo intervento. Firma: OC (Acquerello).
+
+Prossima azione: Pubblicare questa modifica autorizzata tramite Generale e riscontrare la pagina online.
+
 ## 2026-11-09 - OC - Steiner: acquerello esplicitato in apertura della premessa
 
 - Inserita come primo paragrafo della premessa la formulazione proposta al curatore: nelle indicazioni pittoriche qui esaminate, Steiner privilegia il colore acquoso, mantenuto fluido nel recipiente e steso con il pennello; l’acquerello è un riferimento centrale per la forma che nasce dal colore. Richiamo alla fonte GA 291 già presente, con riscontri dichiarati alle pp. 65 e 71. Nessuna generalizzazione a tutte le riflessioni dell’autore o attribuzione di un protocollo tecnico completo.
