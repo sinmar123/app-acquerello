@@ -1,12 +1,16 @@
 {
-  "data": "2026-11-09",
+  "data": "2026-11-12",
   "numero": "5",
   "titolo": "Approfondimenti",
   "sottotitolo": "Fatti, opinioni e domande aperte, con le fonti",
   "introduzione": [
-    "Manuali, pittori e regolamenti non dicono sempre la stessa cosa. Ogni approfondimento confronta le fonti e distingue i fatti dalle opinioni attribuite agli autori. Le valutazioni del Quaderno sono dichiarate come tali.",
-    "Le questioni riguardano il bianco, il blu oltremare PB29, gli abbinamenti di Sanzo Wada, la storia di tinta, valore e croma e la concezione del colore di Rudolf Steiner. Si passa dai materiali e dalle mescolanze ai rapporti fra colori e superfici, distinguendo contributi storici, concezioni artistiche e letture contemporanee. Le ricerche sono svolte con l’aiuto dell’intelligenza artificiale e ogni affermazione rimanda alla propria fonte. Altri temi si possono proporre dalla casella dei suggerimenti."
+    "Queste pagine partono da domande sull’acquerello, sui colori e sulla loro storia. Raccolgono fonti, spiegano i punti di accordo e mantengono visibili quelli controversi. Non sono resoconti di prove in studio, salvo quando una prova è descritta espressamente come eseguita.",
+    "La ricerca e la scrittura si avvalgono di programmi di intelligenza artificiale, detti anche AI o IA. Sono strumenti che producono risposte a domande e aiutano a cercare, confrontare e organizzare informazioni. Possono però sbagliare, attribuire a un autore parole che non ha scritto o indicare riferimenti inesatti. Una risposta convincente non è, da sola, una fonte.",
+    "Quando si usano più programmi, si confrontano i risultati, cercando anche contraddizioni e omissioni. L’accordo fra risposte diverse non dimostra che una notizia sia vera: i programmi possono riprendere lo stesso errore. Per i punti decisivi si riaprono i documenti e si controllano i passi pertinenti. Se una notizia deriva soltanto da un estratto o dal riassunto di uno studio, questo limite resta dichiarato.",
+    "Il testo distingue ciò che una fonte documenta, l’opinione del suo autore e le valutazioni proposte dal Quaderno. Le fonti sono richiamate nel testo e raccolte in fondo alla pagina. Dove è presente, la nota di metodo precisa gli strumenti usati, le verifiche svolte e i limiti di quella ricerca. I controlli svolti dagli assistenti non implicano che il curatore abbia letto personalmente tutte le fonti.",
+    "Sandro cura il Quaderno, valuta i testi e decide che cosa pubblicare. Le proposte di esercizio restano proposte finché non sono state eseguite e documentate. Nuove fonti e segnalazioni possono portare a correzioni: si possono proporre nella casella dei suggerimenti, in fondo alla pagina."
   ],
   "elenco_titolo": "Le questioni",
-  "leggi": "Leggi la pagina"
+  "leggi": "Leggi la pagina",
+  "introduzione_titolo": "Come nascono gli Approfondimenti"
 }
