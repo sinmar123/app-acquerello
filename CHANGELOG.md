@@ -1,5 +1,15 @@
 # CHANGELOG - app-acquerello
 
+## 2026-11-14 - OC (Acquerello) - Oltremare integrato nella pagina sul blu
+
+Su via libera specifico di Sandro nel topic Acquerello, messaggio 1057 («ok vai»), applicata la proposta di riunire le due pagine senza perdere i contenuti. Il tema unico **5.2, Il blu e i blu nell’acquerello** occupa la posizione precedentemente riservata all’oltremare; le altre quattro questioni conservano numeri e contenuti. Undici capitoli complessivi: il capitolo 5 sul blu oltremare PB29 conserva gli otto capitoli precedenti come paragrafi 5.1-5.8, con indice interno; il blu intenso diventa capitolo 6. Tutti i 35 blocchi del testo precedente sull’oltremare sono conservati integralmente, salvo gli identificativi delle fonti. Aperture e rimandi sono raccordati alla pagina unificata. Le 16 fonti precedenti sono conservate in 12 nuove voci e quattro voci comuni, senza duplicare le opere; totale 51 fonti. Restano i limiti delle letture e la natura non eseguita delle sei prove.
+
+Il vecchio indirizzo dell’oltremare è una pagina di solo rinvio, con canonical e noindex, esclusa da menu e sitemap. Una mappa di 94 ancore porta ai paragrafi e ai riferimenti bibliografici effettivi, evitando di confondere i vecchi «tinta», «conservazione» e numeri di fonte con quelli del blu generale. Il fallback senza JavaScript apre il capitolo. Indici, numerazione e prompt della chat sono rigenerati dai sorgenti. I generatori supportano l’indice interno e le pagine trasferite, senza cambiare gli altri temi.
+
+Generazione completa superata, Gulpease 65 per il blu; due collaudi Chromium a 412 e 1280 pixel: undici capitoli confrontati coi dati, otto paragrafi e sei prove conservati, 51 fonti, rimando e ritorno al punto esatto, indici e vecchi indirizzi funzionanti. Tutte le 94 vecchie ancore provate nel browser, più ingresso senza frammento, frammento ignoto o malformato, index.html e fallback senza JavaScript. Nessuno sbordamento o errore JavaScript. Venti file HTML (19 pagine di contenuto e un rinvio), 1.882 collegamenti interni/risorse senza errori o ID duplicati. Degli output precedenti, 59/67 identici: cambiano soltanto i due temi riuniti, i due indici e la sitemap (comprese le corrispondenti copie intermedie). Nessuna ricerca a consumo, prova fisica, modifica delle opere o configurazione OpenClaw. Firma: OC (Acquerello).
+
+Prossima azione: Generale esegue PR, merge e rilascio nel perimetro approvato; Acquerello riscontra online pagina, indici e vecchi collegamenti.
+
 ## 2026-11-14 - OC (Acquerello) - Il blu e i blu nell’acquerello, pubblicazione autorizzata
 
 Integrato il nuovo approfondimento 5.6 «Il blu e i blu nell’acquerello», dalla proposta completa consegnata al curatore e approvata esplicitamente per inserimento e pubblicazione nel topic Acquerello, messaggio 1014. Sintesi, premessa, nota di metodo, dieci capitoli e 39 fonti in un unico elenco finale. Il capitolo 5 sul blu intenso fa parte della pagina generale; la monografia sull’oltremare resta autonoma e invariata. Nessuna nuova ricerca a consumo e nessuna prova fisica dichiarata eseguita.

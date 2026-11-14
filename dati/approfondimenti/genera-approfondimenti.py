@@ -284,6 +284,10 @@ def pagina_tema(sez, tema):
     for c in tema["capitoli"]:
         F.apri_capitolo(c["id"])
         corpo = [f'<section class="cap" id="{e(c["id"])}"><h2>{e(c["titolo"])}</h2>']
+        if c.get("indice_interno"):
+            voci = "".join(f'<li><a href="#{e(c["id"])}-{e(b["id"])}">{e(b["testo"])}</a></li>'
+                           for b in c["blocchi"] if b["tipo"] == "titoletto")
+            corpo.append(f'<nav class="intro sottoindice" aria-label="Paragrafi del capitolo"><p><b>In questo capitolo</b></p><ul class="voci">{voci}</ul></nav>')
         for i, b in enumerate(c["blocchi"]):
             corpo.append(blocco(b, c, F, f'{tema["id"]}, {c["id"]}, blocco {i + 1}'))
         corpo.append("</section>")
@@ -337,6 +341,45 @@ def pagina_elenco(sez, temi):
     return documento(sez["titolo"], sez["sottotitolo"], corpo)
 
 
+def pagina_trasferita(tema, vecchia, testo_destinazione):
+    """Rinvio con mappa dei frammenti, che non sono trasmessi al server HTTP.
+
+    Non è un secondo tema: canonical, noindex e fallback portano alla pagina unificata.
+    Il costruttore del sito copia il rinvio senza aggiungerlo a menu, chat o sitemap.
+    """
+    if not ID_OK.fullmatch(vecchia["id"]) or vecchia["id"] == tema["id"]:
+        errore("identificativo non valido per una pagina trasferita")
+    ancore = vecchia.get("ancore", {})
+    for ancora in [vecchia["ancora"], *ancore.values()]:
+        if f'id="{e(ancora)}"' not in testo_destinazione:
+            errore(f'pagina trasferita {vecchia["id"]}: ancora mancante {ancora}')
+    url = f'/approfondimenti/{tema["id"]}/'
+    arrivo = url + "#" + vecchia["ancora"]
+    mappa = json.dumps(ancore, ensure_ascii=True).replace("<", "\\u003c")
+    return f'''<!doctype html>
+<html lang="it"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="pagina-trasferita" content="{e(arrivo)}">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://app-acquerello.pages.dev{e(url)}">
+<title>Il blu oltremare, capitolo della pagina sul blu</title>
+<script>
+(function () {{
+  var mappa = {mappa};
+  var ancora = location.hash.slice(1);
+  try {{ ancora = decodeURIComponent(ancora); }} catch (e) {{ ancora = ""; }}
+  var nuova = Object.prototype.hasOwnProperty.call(mappa, ancora) ? mappa[ancora] : {json.dumps(vecchia["ancora"])};
+  location.replace({json.dumps(url)} + location.search + "#" + nuova);
+}})();
+</script>
+<noscript><meta http-equiv="refresh" content="0;url={e(arrivo)}"></noscript>
+</head><body><h1>Il blu oltremare</h1>
+<p>Il testo è ora un capitolo dell’approfondimento generale sul blu.</p>
+<p><a href="{e(arrivo)}">Leggi il capitolo sul blu oltremare</a>.</p>
+</body></html>
+'''
+
+
 def pagina():
     sez = carica_json(QUI / "sezione.json")
     for campo in ("data", "numero", "titolo", "sottotitolo", "introduzione", "elenco_titolo", "leggi"):
@@ -354,6 +397,13 @@ def pagina():
         testo, n_fonti = pagina_tema(sez, tema)
         (cartella / "index.html").write_text(testo, encoding="utf-8", newline="\n")
         print(f"pagina: {tema['id']}, {len(tema['capitoli'])} capitoli, {n_fonti} fonti")
+        for vecchia in tema.get("pagine_precedenti", []):
+            if any(t["id"] == vecchia["id"] for t in temi):
+                errore(f'pagina trasferita ancora presente fra i temi: {vecchia["id"]}')
+            cartella_vecchia = PAGINE / vecchia["id"]
+            cartella_vecchia.mkdir()
+            (cartella_vecchia / "index.html").write_text(
+                pagina_trasferita(tema, vecchia, testo), encoding="utf-8", newline="\n")
     print(f"pagina: {ELENCO.name}, {len(temi)} question{'e' if len(temi) == 1 else 'i'}")
 
 
