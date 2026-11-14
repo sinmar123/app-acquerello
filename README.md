@@ -1,5 +1,13 @@
 # Quaderno di acquerello con IA (`app-acquerello`)
 
+## Blu: pagina generale completa, pubblicazione autorizzata il 14 novembre 2026
+
+Il nuovo approfondimento **5.6, Il blu e i blu nell’acquerello** confronta tinte, nomi, famiglie di pigmenti, comportamento sulla carta, miscele, impieghi e conservazione. Comprende il capitolo 5 sul blu intenso, una scheda di confronti proposti e 39 fonti finali. L’oltremare resta una monografia autonoma, richiamata senza riscriverla. Testo completo approvato da Sandro per inserimento e pubblicazione nel topic Acquerello, messaggio 1014. Nessuna nuova ricerca a consumo; prove pratiche non eseguite.
+
+Generazione completa, Gulpease 64 e collaudo mobile/desktop superati; testo riscontrato integralmente con la proposta approvata. Home e indice comprendono la nuova pagina; sitemap e prompt della chat rigenerati. Firma: OC (Acquerello).
+
+Prossima azione: Riscontrare la pagina e gli indici online dopo la pubblicazione autorizzata.
+
 Apertura degli Approfondimenti aggiornata, 12 novembre 2026 (OC Acquerello): «Come nascono gli Approfondimenti» spiega il metodo anche a chi non conosce l’IA. Testo approvato da Sandro per la pubblicazione nel messaggio 927 del topic app-acquerello. Il capitolo sul blu intenso resta separato in attesa di definire la collocazione, poiché la pagina generale non è ancora redatta. Firma: OC (Acquerello).
 
 Generazione completa e collaudo mobile/desktop superati; testo conforme alla proposta approvata, un solo HTML cambia e 48 output restano identici.
