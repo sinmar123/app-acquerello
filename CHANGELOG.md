@@ -1,5 +1,15 @@
 # CHANGELOG - app-acquerello
 
+## 2026-11-14 - OC (Acquerello) - Il blu e i blu nell’acquerello, pubblicazione autorizzata
+
+Integrato il nuovo approfondimento 5.6 «Il blu e i blu nell’acquerello», dalla proposta completa consegnata al curatore e approvata esplicitamente per inserimento e pubblicazione nel topic Acquerello, messaggio 1014. Sintesi, premessa, nota di metodo, dieci capitoli e 39 fonti in un unico elenco finale. Il capitolo 5 sul blu intenso fa parte della pagina generale; la monografia sull’oltremare resta autonoma e invariata. Nessuna nuova ricerca a consumo e nessuna prova fisica dichiarata eseguita.
+
+Testo dei capitoli, tabelle, sintesi e premesse confrontato integralmente con il Markdown approvato, senza omissioni o riscritture. Per le sei righe del protocollo non eseguito sono esplicitati i rimandi alle basi metodologiche già comprese nelle fonti, senza aggiungere risultati. Home, elenco, sitemap e sintesi della chat comprendono il tema. Nessun cambiamento al generatore, alle altre pagine tematiche o alle loro fonti.
+
+Generazione completa e Gulpease 64 per la nuova pagina. Due collaudi Chromium, a 412 e 1280 pixel, con dieci capitoli e 39 fonti, confronto dei blocchi con i dati, apertura del metodo, rimando e ritorno al passo effettivamente citato e navigazione dai due indici. Nessuno sbordamento o errore JavaScript. Venti pagine e 1.913 collegamenti interni/risorse controllati senza errori o ID duplicati. Dei 48 output preesistenti, 45 identici; modificati soltanto Home, indice degli Approfondimenti e sitemap, aggiunta la pagina blu. Prompt della chat rigenerato. Firma: OC (Acquerello).
+
+Prossima azione: Eseguire le operazioni GitHub autorizzate tramite Generale e riscontrare la produzione online; nessun nuovo via libera richiesto per questo perimetro già approvato.
+
 ## 2026-11-12 - OC (Acquerello) - Apertura degli Approfondimenti: metodo spiegato senza gergo
 
 Applicato il testo «Come nascono gli Approfondimenti», consegnato a Sandro nel messaggio 923 e approvato per la pubblicazione nel messaggio 927 del topic Acquerello. Spiegati il ruolo dell’intelligenza artificiale, il confronto delle risposte, la verifica documentale, i limiti e la scelta finale del curatore. Nessuna attribuzione al curatore di tutte le letture degli assistenti. Titolo dell’apertura facoltativo nei dati; mantenuto il generatore unico. Le note di metodo dei singoli temi restano invariate.

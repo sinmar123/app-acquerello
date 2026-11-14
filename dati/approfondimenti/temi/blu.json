@@ -1,0 +1,1249 @@
+{
+  "id": "blu",
+  "ordine": 6,
+  "data": "2026-11-14",
+  "titolo": "Il blu e i blu nell’acquerello",
+  "sottotitolo": "Tinte, pigmenti e scelte sulla carta",
+  "scheda": "Il blu e i blu nell’acquerello: tinte, pigmenti e scelte sulla carta",
+  "sintesi": [
+    {
+      "testo": "Un blu si riconosce dalla tinta, ma si sceglie anche per la stesura. Nome, pigmento e formulazione non sono la stessa cosa. Si veda il capitolo 4.",
+      "capitolo": "pigmenti"
+    },
+    {
+      "testo": "Ceruleo, indaco e turchese possono indicare materiali diversi. La mappa del capitolo 2 aiuta a leggere i nomi senza scambiarli per formule.",
+      "capitolo": "nomi"
+    },
+    {
+      "testo": "Nei due prodotti documentati, «blu intenso» indica un blu ftalo PB15. Il capitolo 5 distingue il nome commerciale dalle varianti e dalle proprietà.",
+      "capitolo": "blu-intenso"
+    },
+    {
+      "testo": "Trasparenza, forza colorante e macchiatura rispondono a domande diverse. Un blu trasparente può lasciare un residuo tenace nella carta. Si veda il capitolo 6.",
+      "capitolo": "stesura"
+    },
+    {
+      "testo": "Le miscele si confrontano con gli stessi colori di partenza. Premiscela, incontro sul bagnato e velatura sono procedimenti distinti, spiegati nel capitolo 7.",
+      "capitolo": "miscele"
+    },
+    {
+      "testo": "Il capitolo 9 propone confronti sui propri materiali, non prove già eseguite. Il capitolo 10 distingue resistenza alla luce e conservazione dell’opera.",
+      "capitolo": "conservazione"
+    }
+  ],
+  "premessa": [
+    "Quale blu conviene usare per un cielo, un verde o un’ombra? La domanda richiede di conoscere il colore steso e i materiali impiegati. Questa pagina confronta famiglie di blu, nomi e comportamenti nell’acquerello; non propone un solo blu adatto a ogni soggetto.",
+    "L’oltremare resta oggetto di una <a href=\"../../approfondimenti/blu-oltremare/\">pagina autonoma</a>. Qui interessa il confronto con ftalo, Prussia, cobalti, cerulei, indantrone e blu-verdi. Per il lessico si rimanda anche a <a href=\"../../approfondimenti/attributi-colore/\">tinta, valore e croma</a>; per confezioni e gamme a <a href=\"../../marche/\">Marche e tubetti</a>."
+  ],
+  "nota_metodo": [
+    "La pagina deriva dalla ricerca documentale dell’11 novembre 2026 e dal supplemento sul blu intenso del 12 novembre. Tre contributi completi, GPT, Gemini e DeepSeek, sono stati confrontati con fonti e schede. I contributi parziali non sono stati presentati come ricerche concluse. L’accordo fra strumenti di intelligenza artificiale non è stato considerato una prova.",
+    "Le fonti finali distinguono schede di prodotto, studi, testimonianze e letture parziali. Le classificazioni dei produttori riguardano i prodotti descritti. Le prove indipendenti datate non certificano tutte le formulazioni oggi in commercio.",
+    "Le esperienze proposte dal Quaderno non sono state eseguite. Non si riportano campioni pittorici simulati, misure di colore o dosi ricavate da immagini. Le proposte di scelta non costituiscono una nuova tavolozza ufficiale."
+  ],
+  "capitoli": [
+    {
+      "id": "tinta",
+      "breve": "Che cosa vediamo",
+      "titolo": "1. Che cosa vediamo quando diciamo blu",
+      "blocchi": [
+        {
+          "tipo": "titoletto",
+          "id": "passo-1",
+          "testo": "Apparire blu e contenere un pigmento blu"
+        },
+        {
+          "tipo": "p",
+          "testo": "Il colore percepito dipende dalla luce, dall’area osservata, dal contorno e dalle condizioni dell’osservatore. Non è una proprietà dell’esperienza visiva separabile da queste condizioni. Due confronti condotti con luci diverse possono quindi porre domande diverse.",
+          "fonti": [
+            "F01"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Il pigmento è invece una materia in particelle, normalmente insolubile nel mezzo che la contiene. Una dispersione non è una soluzione. Nell’acquerello, osservare il colore significa osservare il risultato della stesura sulla carta, non una materia astratta indipendente dal supporto.",
+          "fonti": [
+            "F02",
+            "F03"
+          ]
+        },
+        {
+          "tipo": "titoletto",
+          "id": "passo-4",
+          "testo": "Tinta, valore e croma"
+        },
+        {
+          "tipo": "p",
+          "testo": "La <b>tinta</b> distingue, per esempio, un blu più verdastro da uno più violaceo. Il <b>valore</b>, nell’uso pittorico, riguarda il chiaro-scuro; la chiarezza CIE confronta l’area con un riferimento bianco similmente illuminato. Un numero di valore richiede però una scala dichiarata, non una quantità d’acqua.",
+          "fonti": [
+            "F04",
+            "F05"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Il <b>croma</b> esprime la pienezza cromatica rispetto alla luminosità percepita di un riferimento grigio, bianco o altamente trasmittente, similmente illuminato. La <b>saturazione</b> rapporta invece la pienezza cromatica alla luminosità percepita dell’area stessa. Non sono sinonimi rigorosi. Nel seguito «vivido», «smorzato» e «profondo» restano descrizioni qualitative, non misure.",
+          "fonti": [
+            "F06",
+            "F07"
+          ]
+        },
+        {
+          "tipo": "nota",
+          "testo": "Come proposta di lettura del Quaderno, sarebbe utile confrontare ogni blu in una stesura concentrata e in una diluita, entrambe asciutte. Un confronto del solo scuro non risponderebbe alla domanda su come il colore appare in una campitura chiara."
+        }
+      ]
+    },
+    {
+      "id": "nomi",
+      "breve": "Nomi dei blu",
+      "titolo": "2. La mappa dei nomi: verde, violetto, chiaro, profondo",
+      "blocchi": [
+        {
+          "tipo": "titoletto",
+          "id": "passo-1",
+          "testo": "Nomi che orientano e nomi che identificano"
+        },
+        {
+          "tipo": "p",
+          "testo": "Le denominazioni possono descrivere una tinta, richiamare una materia storica o distinguere un prodotto nella gamma. Le schede documentano, per esempio, più formulazioni chiamate indaco e più pigmenti per i cerulei. Questa mappa serve a riconoscere le ambiguità, non a fissare confini uguali per tutti.",
+          "fonti": [
+            "F08",
+            "F09",
+            "F10"
+          ]
+        },
+        {
+          "tipo": "tabella",
+          "intestazione": [
+            "Nome incontrato",
+            "Come leggerlo"
+          ],
+          "righe": [
+            {
+              "celle": [
+                "Oltremare",
+                "Nelle gamme esaminate compare come PB29, ma anche in miscela con PB15. «French» o «finest» non bastano a uniformare i prodotti."
+              ],
+              "fonti": [
+                "F08",
+                "F09"
+              ]
+            },
+            {
+              "celle": [
+                "Cobalto",
+                "PB28 e il cobalto profondo PB74 sono pigmenti distinti. Una versione imitativa può contenere oltremare e bianco."
+              ],
+              "fonti": [
+                "F09"
+              ]
+            },
+            {
+              "celle": [
+                "Ceruleo",
+                "Può indicare PB35, PB36 oppure un’imitazione a base di ftalo. Il nome non garantisce la stessa composizione."
+              ],
+              "fonti": [
+                "F10",
+                "F09"
+              ]
+            },
+            {
+              "celle": [
+                "Ftalo",
+                "Comprende varianti verso il verde e verso il rosso. La dicitura PB15 senza suffisso non autorizza a completare il codice."
+              ],
+              "fonti": [
+                "F10",
+                "F11"
+              ]
+            },
+            {
+              "celle": [
+                "Prussia",
+                "Il codice PB27 è documentato nei prodotti esaminati. È distinto dai blu ftalo anche quando entrambi appaiono molto scuri."
+              ],
+              "fonti": [
+                "F08"
+              ]
+            },
+            {
+              "celle": [
+                "Indantrone",
+                "PB60, chiamato anche indanthrene nelle fonti, non è un altro nome dell’indaco."
+              ],
+              "fonti": [
+                "F10"
+              ]
+            },
+            {
+              "celle": [
+                "Indaco",
+                "Può indicare un colorante storico o una miscela moderna. Si legge la composizione, non soltanto il nome."
+              ],
+              "fonti": [
+                "F09",
+                "F08"
+              ]
+            },
+            {
+              "celle": [
+                "Turchese e blu-verde",
+                "Sono documentati PB16, PB36, PG50 e miscele. La zona cromatica non corrisponde a una sola ricetta."
+              ],
+              "fonti": [
+                "F10",
+                "F08"
+              ]
+            },
+            {
+              "celle": [
+                "Blu di manganese",
+                "PB33 è il materiale delle prove storiche di MacEvoy; un’imitazione documentata usa invece PB15. Nome simile non significa identità."
+              ],
+              "fonti": [
+                "F12",
+                "F08"
+              ]
+            },
+            {
+              "celle": [
+                "Smalto",
+                "Il materiale storico è vetro blu macinato; un acquerello specialistico dichiara PB32, un altro prodotto chiamato Smalt dichiara PV15."
+              ],
+              "fonti": [
+                "F13",
+                "F14",
+                "F08"
+              ]
+            }
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "La parola inglese <i>hue</i> ha due usi da distinguere. Nel lessico del colore significa tinta; in nomi come <i>cobalt blue hue</i> può segnalare una versione imitativa. La ricetta si ricava dalla scheda, non dalla traduzione isolata della parola.",
+          "fonti": [
+            "F04",
+            "F09"
+          ]
+        },
+        {
+          "tipo": "titoletto",
+          "id": "passo-5",
+          "testo": "Blu caldo e blu freddo"
+        },
+        {
+          "tipo": "p",
+          "testo": "Jane Blundell distingue il ftalo verso il verde da quello verso il rosso e presenta il secondo come più caldo. È un confronto dichiarato dall’autrice, non una temperatura fisica del pigmento.",
+          "fonti": [
+            "F15"
+          ]
+        },
+        {
+          "tipo": "nota",
+          "testo": "Per il Quaderno sarebbe più chiaro indicare prima la direzione: «più verdastro» o «più violaceo» rispetto a un altro campione. L’eventuale parola «caldo» o «freddo» accompagnerebbe quel confronto, senza sostituirlo."
+        }
+      ]
+    },
+    {
+      "id": "storia",
+      "breve": "Storia",
+      "titolo": "3. Materiali antichi e blu sintetici: poche svolte documentate",
+      "blocchi": [
+        {
+          "tipo": "titoletto",
+          "id": "passo-1",
+          "testo": "Sintetico non significa necessariamente recente"
+        },
+        {
+          "tipo": "p",
+          "testo": "Un grumo di blu egizio conservato al Metropolitan Museum è datato circa 1473-1458 a.C. La scheda descrive un pigmento preparato artificialmente mediante riscaldamento di componenti minerali. La data appartiene al reperto, non dimostra il momento dell’invenzione.",
+          "fonti": [
+            "F16"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Il blu maya è un materiale differente, composto da indaco e paligorskite. Uno studio sui campioni di Chichén Itzá e Palenque ne confronta l’argilla con possibili fonti. Il riassunto documenta quel problema archeologico; non certifica i prodotti moderni chiamati «blu maya».",
+          "fonti": [
+            "F17"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Cennino Cennini descrive invece la lavorazione del lapislazzuli e la separazione dell’oltremare in più tratte. La sua testimonianza distingue la pietra, il procedimento e il pregio del risultato. Non descrive una ricetta standard di acquerello contemporaneo. Per il passaggio al PB29 si rimanda alla monografia sull’oltremare.",
+          "fonti": [
+            "F18"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Lo smalto è vetro colorato al cobalto e ridotto in polvere. La National Gallery ne richiama l’uso pittorico fra Cinquecento e Settecento. Quel periodo d’impiego non costituisce una data certa del primo uso assoluto.",
+          "fonti": [
+            "F13"
+          ]
+        },
+        {
+          "tipo": "titoletto",
+          "id": "passo-6",
+          "testo": "Nuovi materiali e nuove possibilità"
+        },
+        {
+          "tipo": "p",
+          "testo": "Kirby e Saunders collocano la prima preparazione del blu di Prussia intorno al 1704 a Berlino. La sua storia non coincide con quella dell’adozione nelle stampe giapponesi. Per la <i>Grande onda</i>, il Metropolitan Museum documenta uso congiunto di indaco e Prussia, con miscela e sovrastampa. Non una semplice sostituzione del primo con il secondo.",
+          "fonti": [
+            "F19",
+            "F20"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Per l’oltremare sintetico, la scheda storica del produttore richiama Guimet e il 1828. Questa data non stabilisce la prima vendita specifica per acquerello. Il Quaderno mantiene distinta la storia della preparazione da quella degli impieghi su carta.",
+          "fonti": [
+            "F21"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Un caso recente è YInMn, descritto dall’Oregon State University come scoperta del 2009. Il nome richiama ittrio, indio e manganese. Una scheda di acquerello ne dichiara il codice PB86; l’esistenza del prodotto non basta a dimostrarne prestazioni universali o superiorità rispetto agli altri blu.",
+          "fonti": [
+            "F22",
+            "F23"
+          ]
+        },
+        {
+          "tipo": "nota",
+          "testo": "Questi episodi non formano una storia sociale completa del blu. Per alcune famiglie restano da ricostruire le prime vendite per acquerello e i primi impieghi su opere analizzate."
+        }
+      ]
+    },
+    {
+      "id": "pigmenti",
+      "breve": "Pigmenti",
+      "titolo": "4. Dal nome al pigmento, dal pigmento al tubetto",
+      "blocchi": [
+        {
+          "tipo": "titoletto",
+          "id": "passo-1",
+          "testo": "Che cosa dice il codice"
+        },
+        {
+          "tipo": "p",
+          "testo": "Nel Colour Index, il nome generico raggruppa coloranti secondo classe d’impiego, tinta e numero progressivo. PB significa <i>Pigment Blue</i>: il numero non misura qualità, potere colorante o resistenza. I suffissi dopo i due punti possono distinguere differenze chimiche o modificazioni cristalline.",
+          "fonti": [
+            "F11"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Per leggere un acquerello sarebbe utile separare tre informazioni: il nome scelto nella gamma, i pigmenti dichiarati e le proprietà del prodotto. Il codice identifica il colorante essenziale, ma non descrive tutta la formulazione. Gli additivi possono modificarne dispersione e scorrimento.",
+          "fonti": [
+            "F11"
+          ]
+        },
+        {
+          "tipo": "titoletto",
+          "id": "passo-4",
+          "testo": "Famiglie da confrontare"
+        },
+        {
+          "tipo": "nota",
+          "testo": "La tabella raccoglie identità e proprietà dichiarate nei documenti consultati. Non offre una graduatoria quantitativa. La cartella del maggio 2021 è un documento datato; le altre schede sono riscontri di gamma, non analisi dei tubetti posseduti dal lettore."
+        },
+        {
+          "tipo": "tabella",
+          "intestazione": [
+            "Pigmento",
+            "Famiglia o denominazione",
+            "Indicazione documentata per il confronto"
+          ],
+          "righe": [
+            {
+              "celle": [
+                "PB15:3 e PB15:6",
+                "Blu ftalo verso il verde e verso il rosso",
+                "Nella cartella consultata: trasparenti, fortemente macchianti e non granulanti. Non una regola per ogni PB15."
+              ],
+              "fonti": [
+                "F10"
+              ]
+            },
+            {
+              "celle": [
+                "PB16",
+                "Ftalo senza metallo, blu-turchese",
+                "Nella stessa cartella è distinto dai ftalo PB15 e dichiarato fortemente macchiante."
+              ],
+              "fonti": [
+                "F10"
+              ]
+            },
+            {
+              "celle": [
+                "PB27",
+                "Blu di Prussia",
+                "Esempi di prodotti trasparenti e macchianti; la permanenza richiede il confronto del capitolo 10."
+              ],
+              "fonti": [
+                "F08",
+                "F19"
+              ]
+            },
+            {
+              "celle": [
+                "PB28",
+                "Blu di cobalto",
+                "Prodotti documentati con deposito granulante. Da distinguere dalle imitazioni e dal PB74."
+              ],
+              "fonti": [
+                "F10",
+                "F09"
+              ]
+            },
+            {
+              "celle": [
+                "PB29",
+                "Blu oltremare",
+                "Lavature e tessitura sono trattate nella pagina autonoma; qui interessa confrontarle con le altre famiglie."
+              ],
+              "fonti": [
+                "F10"
+              ]
+            },
+            {
+              "celle": [
+                "PB35 e PB36",
+                "Ceruleo e ceruleo di cromo",
+                "Entrambi presenti come granulanti nella cartella consultata, ma con codici e classificazioni di macchiatura distinti."
+              ],
+              "fonti": [
+                "F10"
+              ]
+            },
+            {
+              "celle": [
+                "PB60",
+                "Blu indantrone",
+                "Blu scuro documentato come Indanthrone o Indanthrene; il nome non lo rende indaco."
+              ],
+              "fonti": [
+                "F10",
+                "F08"
+              ]
+            },
+            {
+              "celle": [
+                "PB74",
+                "Cobalto profondo",
+                "Prodotto dichiarato granulante. È distinto dal cobalto PB28."
+              ],
+              "fonti": [
+                "F09"
+              ]
+            },
+            {
+              "celle": [
+                "PB66",
+                "Indaco",
+                "Riscontrato in miscela con PB15:1. Le proprietà di quella miscela non sono una prova del PB66 isolato."
+              ],
+              "fonti": [
+                "F09"
+              ]
+            },
+            {
+              "celle": [
+                "PG50",
+                "Turchese al cobalto",
+                "Un codice della famiglia dei verdi può comparire in colori commercializzati come blu-verdi."
+              ],
+              "fonti": [
+                "F10"
+              ]
+            },
+            {
+              "celle": [
+                "PB86",
+                "YInMn",
+                "La scheda del prodotto dichiara alta coprenza e forte potere colorante; non sono misure del Quaderno."
+              ],
+              "fonti": [
+                "F23"
+              ]
+            }
+          ]
+        },
+        {
+          "tipo": "titoletto",
+          "id": "passo-7",
+          "testo": "Un pigmento non significa una formulazione unica"
+        },
+        {
+          "tipo": "p",
+          "testo": "Un ceruleo imitativo può contenere bianco di zinco PW4 e ftalo PB15:3. Un cobalto imitativo può contenere PW4 e PB29. Il confronto non è quindi soltanto fra tinte: cambia anche la composizione.",
+          "fonti": [
+            "F09"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "La dicitura «indaco» è un altro esempio. Una scheda dichiara PB66 e PB15:1; un’altra PB15, PBk6 e PV19; la cartella del 2021 riporta PB60 e PBk6. Non si attribuisce a tutte queste miscele il comportamento del colorante storico.",
+          "fonti": [
+            "F09",
+            "F08",
+            "F10"
+          ]
+        },
+        {
+          "tipo": "nota",
+          "testo": "Come criterio del Quaderno, un singolo pigmento sarebbe utile per rendere più leggibile una prova di miscela. Non costituirebbe però una garanzia di qualità superiore. Una miscela pronta potrebbe rispondere bene a uno scopo preciso, purché ne siano noti i componenti."
+        }
+      ]
+    },
+    {
+      "id": "blu-intenso",
+      "breve": "Blu intenso",
+      "titolo": "5. Il «blu intenso»: dal nome commerciale al pigmento",
+      "blocchi": [
+        {
+          "tipo": "titoletto",
+          "id": "passo-1",
+          "testo": "Un nome da leggere insieme all’etichetta"
+        },
+        {
+          "tipo": "p",
+          "testo": "«Blu intenso» può essere il nome di un colore in commercio, non soltanto una descrizione di un blu molto vivace. Nei due acquerelli qui riscontrati, la denominazione corrisponde al blu ftalo e il pigmento dichiarato è PB15. Il nome inglese è <i>Intense Blue</i>; quello francese, <i>Bleu intense</i>. Questa corrispondenza riguarda i prodotti documentati, non ogni colore venduto con un nome simile.",
+          "fonti": [
+            "F24",
+            "F25",
+            "F26"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "La dicitura non va quindi trattata come un nuovo pigmento, distinto dal ftalo. PB15 è il codice del blu di ftalocianina di rame. Il nome commerciale e il codice rispondono a domande diverse: come si chiama il colore nella gamma e quale colorante contiene.",
+          "fonti": [
+            "F24",
+            "F26"
+          ]
+        },
+        {
+          "tipo": "titoletto",
+          "id": "passo-4",
+          "testo": "PB15 non significa una sola variante"
+        },
+        {
+          "tipo": "p",
+          "testo": "La famiglia dei blu ftalo comprende versioni diverse. Una cartella di acquerelli distingue, per esempio, PB15:3, presentato verso il verde, e PB15:6, presentato verso il rosso. Il suffisso dopo i due punti fa parte dell’identificazione; non è una misura dell’intensità né della qualità. Il Colour Index spiega che i suffissi possono distinguere anche modificazioni cristalline.",
+          "fonti": [
+            "F10",
+            "F11"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Se la scheda riporta soltanto PB15, si conserva quella dicitura. Non si aggiunge :3 perché il campione sembra verdastro o perché un altro produttore usa quel codice. È una cautela di lettura del Quaderno: un dato mancante non si ricava dal nome o da un’immagine.",
+          "fonti": [
+            "F26",
+            "F11"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Anche uno stesso codice non descrive l’intera formulazione. Il Colour Index distingue la sostanza responsabile del colore dagli additivi, che possono modificare dispersione e scorrimento. Due prodotti PB15 non sono quindi dichiarati identici soltanto perché condividono quel codice.",
+          "fonti": [
+            "F11"
+          ]
+        },
+        {
+          "tipo": "titoletto",
+          "id": "passo-8",
+          "testo": "Tre proprietà da non confondere"
+        },
+        {
+          "tipo": "p",
+          "testo": "Il ftalo verso il verde è descritto da Jane Blundell come un blu di forte potere colorante, trasparente e macchiante. Sono tre indicazioni distinte. Il potere colorante riguarda la sua influenza nelle miscele; la trasparenza riguarda la visibilità del fondo; la macchiatura riguarda il colore che resta nella carta dopo il tentativo di rimozione. Per questo capitolo non sono state eseguite misure di queste proprietà.",
+          "fonti": [
+            "F27",
+            "F28"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "La tabella ufficiale del prodotto chiamato <i>Intense Blue</i> dichiara trasparenza e macchiatura. La cartella che distingue PB15:3 e PB15:6 li classifica entrambi come fortemente macchianti e non granulanti. Queste sono dichiarazioni sui prodotti delle rispettive gamme, non risultati di prove del Quaderno.",
+          "fonti": [
+            "F26",
+            "F10"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Non vale però la regola «PB15 non granula mai». Una scheda ufficiale riporta un acquerello imitazione del blu di manganese, a base di PB15, classificato granulante. Il codice, da solo, non basta dunque a prevedere l’aspetto della stesura.",
+          "fonti": [
+            "F08"
+          ]
+        },
+        {
+          "tipo": "titoletto",
+          "id": "passo-12",
+          "testo": "Impieghi e miscele"
+        },
+        {
+          "tipo": "p",
+          "testo": "Blundell propone il ftalo verso il verde come blu trasparente da miscela e da velatura. La sua preferenza riguarda una tavolozza precisa, non impone un blu obbligatorio per tutti i soggetti. Qui per velatura si intende uno strato steso sopra un fondo asciutto, distinto dal mescolare due colori sulla tavolozza.",
+          "fonti": [
+            "F27"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Come proposta pratica del Quaderno, un blu di forte potere colorante si potrebbe aggiungere poco per volta a una miscela già preparata. Sarebbe utile confrontarlo con il blu oltremare PB29 per capire quale dei due risponde meglio all’effetto cercato. Nella tavolozza descritta da Blundell, l’oltremare offre una stesura granulante, mentre il ftalo verso il verde offre un’altra possibilità trasparente e macchiante. Non sono due intensità dello stesso materiale.",
+          "fonti": [
+            "F27"
+          ]
+        },
+        {
+          "tipo": "nota",
+          "testo": "Non si assegnano al «blu intenso» dosi universali per cieli, mare o ombre. La proposta è confrontare le stesure e le miscele del prodotto effettivamente posseduto, senza dedurre gli impieghi dalla sola scritta sulla confezione."
+        },
+        {
+          "tipo": "titoletto",
+          "id": "passo-16",
+          "testo": "Come confrontarlo sulla carta"
+        },
+        {
+          "tipo": "nota",
+          "testo": "<b>Proposta di esperienza del Quaderno, non eseguita.</b> Si potrebbero stendere il blu intenso e un blu già noto sulla stessa carta. Per ciascuno si preparerebbero una campitura concentrata e una diluita, annotando il prodotto e il codice del pigmento. Dopo l’asciugatura, si confronterebbero tinta, uniformità del deposito e residuo lasciato da un tentativo di sollevamento con acqua e pennello pulito."
+        },
+        {
+          "tipo": "nota",
+          "testo": "Per leggere il confronto sarebbe importante annotare anche la carta e il modo di stendere e rimuovere il colore. Senza condizioni comuni, una differenza non si potrebbe attribuire soltanto al pigmento. L’esperienza proposta servirebbe a conoscere i propri materiali, non a misurare la resistenza alla luce o a classificare tutte le marche."
+        },
+        {
+          "tipo": "p",
+          "testo": "In sintesi, «blu intenso» è un punto di partenza per leggere l’etichetta. Nei casi documentati conduce al blu ftalo PB15; non garantisce una variante precisa né un comportamento identico fra prodotti.",
+          "fonti": [
+            "F24",
+            "F25",
+            "F26",
+            "F11"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stesura",
+      "breve": "Stesura",
+      "titolo": "6. Trasparenza, macchiatura e tessitura: leggere una stesura",
+      "blocchi": [
+        {
+          "tipo": "titoletto",
+          "id": "passo-1",
+          "testo": "Quattro domande distinte"
+        },
+        {
+          "tipo": "p",
+          "testo": "La <b>trasparenza</b> riguarda quanto rimane visibile il fondo nella stesura considerata. La <b>forza colorante</b> riguarda l’influenza del colore su una miscela. La <b>macchiatura</b> riguarda il residuo nella carta dopo la rimozione. La <b>sollevabilità</b> descrive l’esito dell’operazione usata per rimuoverlo. MacEvoy distingue questi aspetti e non identifica macchiatura e forza colorante.",
+          "fonti": [
+            "F28"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Un colore poco coprente può lasciare un residuo tenace. Per confrontare la rimozione occorre precisare carta, asciugatura, pennello e passaggi. Il risultato riguarda quel sistema e quell’operazione; non basta a classificare per sempre tutti i colori con lo stesso codice.",
+          "fonti": [
+            "F28"
+          ]
+        },
+        {
+          "tipo": "titoletto",
+          "id": "passo-4",
+          "testo": "Il deposito visibile e i processi che lo formano"
+        },
+        {
+          "tipo": "p",
+          "testo": "Nel linguaggio pittorico, la <b>granulazione</b> indica un aspetto disuniforme della stesura. La <b>flocculazione</b> riguarda l’aggregazione delle particelle. Non sono due nomi della stessa osservazione: un medium può favorire l’aggregazione e modificare la trama senza cambiare il pigmento.",
+          "fonti": [
+            "F29"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Lo studio di González-Gutiérrez e collaboratori confronta gocce di acquerello su carta in diverse condizioni. Concentrazione e distribuzione dell’acqua cambiano le forme del deposito. È una ricerca sperimentale su quel sistema, non una classifica di tutti i blu né una prova che ogni granulo visibile abbia la stessa causa.",
+          "fonti": [
+            "F03"
+          ]
+        },
+        {
+          "tipo": "nota",
+          "testo": "Come proposta del Quaderno, il primo confronto fra due blu si potrebbe fare sulla stessa carta, senza medium e con lo stesso modo di stendere. Si cambierebbe poi una sola condizione. Sarebbe così più chiaro che cosa si sta confrontando, senza dedurre il meccanismo da una fotografia."
+        },
+        {
+          "tipo": "titoletto",
+          "id": "passo-8",
+          "testo": "Colore umido e colore asciutto"
+        },
+        {
+          "tipo": "p",
+          "testo": "MacEvoy tratta il cambiamento in asciugatura come una caratteristica da osservare nei campioni. Non fornisce una percentuale da trasferire a qualsiasi prodotto attuale. Per l’impiego dei propri colori sarebbe utile conservare due letture distinte, umida e asciutta, sotto la stessa luce.",
+          "fonti": [
+            "F28"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "miscele",
+      "breve": "Miscele",
+      "titolo": "7. Verdi, violetti, neutri: mescolare o velare",
+      "blocchi": [
+        {
+          "tipo": "titoletto",
+          "id": "passo-1",
+          "testo": "La coppia di partenza conta"
+        },
+        {
+          "tipo": "p",
+          "testo": "Nel tutorial floreale di Julie King, il giallo di cadmio è mescolato sia al cobalto sia al ftalo. L’autrice prepara verdi diversi e li usa nelle foglie. La fonte nomina quei colori, ma non ne dichiara i codici: qui non vengono aggiunti per congettura.",
+          "fonti": [
+            "F30"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Per i violetti, MacEvoy documenta miscele di oltremare PB29 con magenta PR122 o rosa PV19. Il risultato riguarda i materiali considerati dall’autore, non tutti i rossi né tutte le formulazioni di quei pigmenti.",
+          "fonti": [
+            "F12"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Per i neutri, la sua tabella dei complementari da miscela comprende cobalto PB28 con terra d’ombra naturale PBr7 e Prussia PB27 con rosso veneziano PR101. Sono punti di partenza documentati, non dosi universali.",
+          "fonti": [
+            "F31"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Il metodo di MacEvoy distingue la ricerca della tinta da quella del croma e del valore. Un grigio voluto non è una miscela fallita. La scelta dipende dal colore cercato, non dall’obbligo di ottenere sempre la massima vivacità.",
+          "fonti": [
+            "F32"
+          ]
+        },
+        {
+          "tipo": "titoletto",
+          "id": "passo-6",
+          "testo": "Tre procedimenti"
+        },
+        {
+          "tipo": "p",
+          "testo": "Nella <b>premiscela</b>, i colori sono riuniti in tavolozza prima della stesura. Nell’<b>incontro sul bagnato</b>, si portano separatamente a contatto sul foglio umido. La distribuzione dell’acqua partecipa al risultato; il solo rapporto iniziale fra le paste non descrive il deposito finale.",
+          "fonti": [
+            "F32",
+            "F03"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "La <b>velatura</b> è un altro strato steso sopra un fondo asciutto. Nel procedimento urbano di Danny Hawk, le ombre seguono l’asciugatura della prima stesura e richiedono attenzione a non trascinarla. Una ripresa che rimuove il fondo non equivale a una sovrapposizione rimasta integra.",
+          "fonti": [
+            "F33"
+          ]
+        },
+        {
+          "tipo": "nota",
+          "testo": "Il Quaderno propone di confrontare la stessa coppia nei tre procedimenti, senza darne per identici tinta e tessitura finali. Per le velature si potrebbe anche invertire l’ordine e annotare le differenze osservate."
+        },
+        {
+          "tipo": "titoletto",
+          "id": "passo-10",
+          "testo": "Schiarire con acqua o aggiungere bianco"
+        },
+        {
+          "tipo": "p",
+          "testo": "L’acqua e il bianco non sono materiali intercambiabili. Nell’esempio imitativo PW4 più PB29, il bianco fa parte della composizione; non è semplice diluizione del cobalto PB28. Il tema della carta risparmiata e dei pigmenti bianchi è sviluppato nella <a href=\"../../approfondimenti/bianco/\">pagina sul bianco</a>.",
+          "fonti": [
+            "F09"
+          ]
+        },
+        {
+          "tipo": "nota",
+          "testo": "Come esperienza proposta, si potrebbero affiancare una lavatura diluita di un blu e una miscela dello stesso blu con bianco. Si confronterebbero visibilità del fondo, tinta e trama, senza chiamare equivalenti i due modi di schiarire."
+        }
+      ]
+    },
+    {
+      "id": "impieghi",
+      "breve": "Impieghi",
+      "titolo": "8. Cieli, acqua, ombre e altri soggetti: esempi di scelte",
+      "blocchi": [
+        {
+          "tipo": "titoletto",
+          "id": "passo-1",
+          "testo": "Cieli e ombre"
+        },
+        {
+          "tipo": "p",
+          "testo": "Jowita Marczuk usa cobalto chiaro e Siena bruciata per attenuare il blu del cielo e preparare grigi per le nuvole. Conserva le zone bianche e ricerca transizioni morbide sul foglio ancora bagnato. Sono scelte del suo procedimento, non proporzioni obbligatorie per ogni paesaggio.",
+          "fonti": [
+            "F34"
+          ]
+        },
+        {
+          "tipo": "nota",
+          "testo": "La lettura proposta dal Quaderno è che la scelta del blu dipenderebbe anche dal grado di attenuazione cercato. Un cielo non richiederebbe sempre il blu più vivido disponibile. La coppia blu e terra offrirebbe un confronto utile fra campitura cromatica e grigio."
+        },
+        {
+          "tipo": "titoletto",
+          "id": "passo-4",
+          "testo": "Acqua e riflessi"
+        },
+        {
+          "tipo": "p",
+          "testo": "Cesc Farré attribuisce un ruolo centrale al turchese al cobalto PG50 nei propri soggetti d’acqua. Lo descrive come una tinta luminosa, da combinare con blu e grigi. La preferenza appartiene alla sua pratica, non dimostra che PG50 sia necessario per dipingere l’acqua.",
+          "fonti": [
+            "F35"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Nel parco berlinese di Danny Hawk, i riflessi riprendono parti del cielo, degli edifici e della vegetazione. Il disegno d’acqua non è trattato come una campitura blu separata dal resto del soggetto.",
+          "fonti": [
+            "F33"
+          ]
+        },
+        {
+          "tipo": "titoletto",
+          "id": "passo-7",
+          "testo": "Neve, fiori e architettura"
+        },
+        {
+          "tipo": "p",
+          "testo": "Caroline Furlong impiega oltremare e due miscele scure per costruire un paesaggio innevato, conservando il bianco della carta. Le stesure colorate descrivono anche ombre e ondulazioni. La scelta non diventa una ricetta cromatica per qualsiasi neve.",
+          "fonti": [
+            "F36"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Julie King alterna cobalto, oltremare e magenta nei fiori, con passaggi su asciutto e sul bagnato. La variazione dei blu partecipa alla forma dei petali; il nome del fiore non determina un pigmento obbligatorio.",
+          "fonti": [
+            "F30"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Hawk costruisce invece facciate e ombre con passaggi successivi e miscele adattate alle parti dell’edificio. Il colore indicato nella sua tavolozza come oltremare non viene qui trasformato in PB29 puro: il prodotto documentato nella gamma contiene anche PB15.",
+          "fonti": [
+            "F33",
+            "F09"
+          ]
+        },
+        {
+          "tipo": "nota",
+          "testo": "Come criterio di scelta del Quaderno, prima del nome del blu si potrebbero precisare il valore cercato, la direzione di tinta e il tipo di deposito. La scelta del materiale risponderebbe così a un’esigenza riconoscibile del dipinto."
+        }
+      ]
+    },
+    {
+      "id": "confronti",
+      "breve": "Confronti",
+      "titolo": "9. Scegliere e confrontare i propri blu",
+      "blocchi": [
+        {
+          "tipo": "titoletto",
+          "id": "passo-1",
+          "testo": "Uno, due o più blu"
+        },
+        {
+          "tipo": "nota",
+          "testo": "<b>Proposta del Quaderno.</b> Un solo blu potrebbe essere sufficiente quando le sue miscele e la sua tessitura rispondono al lavoro previsto. La scelta avrebbe però limiti da riconoscere, non da nascondere con l’idea di un primario capace di tutto."
+        },
+        {
+          "tipo": "nota",
+          "testo": "Due blu si potrebbero scegliere per una differenza di tinta, per esempio più verdastro e più violaceo, oppure per una differenza di deposito. Se cambiano insieme tinta e trama, il confronto amplierebbe due possibilità distinte. Un terzo blu avrebbe senso per un’esigenza che i primi non soddisfano nelle prove svolte."
+        },
+        {
+          "tipo": "nota",
+          "testo": "Questi criteri non sostituiscono la tavolozza ridotta descritta nei <a href=\"../../principi/#tavolozza-plein-air\">Principi, per il lavoro con pochi colori</a>. Non prescrivono nuovi acquisti né un numero obbligatorio di blu."
+        },
+        {
+          "tipo": "titoletto",
+          "id": "passo-5",
+          "testo": "Una scheda di confronto"
+        },
+        {
+          "tipo": "nota",
+          "testo": "<b>Tutte le esperienze seguenti sono proposte del Quaderno, non eseguite.</b> La scheda aiuterebbe a conoscere i materiali posseduti, non a certificare un pigmento o un’intera gamma."
+        },
+        {
+          "tipo": "nota",
+          "testo": "Prima di stendere, si potrebbero annotare prodotto, codice completo, carta e grana, pennello, acqua, stato del foglio ed eventuali medium. Quantità, temperatura e tempi si registrerebbero soltanto se misurati. Per la lettura finale si manterrebbero luce e contesto comuni."
+        },
+        {
+          "tipo": "tabella",
+          "intestazione": [
+            "Confronto proposto",
+            "Procedura da rendere comune",
+            "Che cosa annotare"
+          ],
+          "righe": [
+            {
+              "celle": [
+                "Concentrato e diluito",
+                "Si preparerebbero campiture e diluizioni con lo stesso metodo.",
+                "Tinta e chiaro-scuro dopo l’asciugatura, non soltanto a umido."
+              ],
+              "fonti": [
+                "F28"
+              ]
+            },
+            {
+              "celle": [
+                "Visibilità del fondo",
+                "Si attraverserebbe un segno scuro, prima verificato resistente all’acqua.",
+                "Quanto il segno resta visibile; il saggio non sarebbe una misura assoluta della coprenza."
+              ],
+              "fonti": [
+                "F28"
+              ]
+            },
+            {
+              "celle": [
+                "Sollevamento",
+                "Su campione asciutto si userebbero lo stesso pennello, acqua e numero di passaggi.",
+                "Residuo e danno della carta, tenuti distinti."
+              ],
+              "fonti": [
+                "F28"
+              ]
+            },
+            {
+              "celle": [
+                "Deposito",
+                "Si ripeterebbe una lavatura sulla stessa carta, cambiando poi una sola condizione.",
+                "Zone uniformi, accumuli e separazioni visibili, senza diagnosi microscopiche."
+              ],
+              "fonti": [
+                "F03"
+              ]
+            },
+            {
+              "celle": [
+                "Miscele",
+                "Si manterrebbero lo stesso giallo, magenta e terra, cambiando soltanto il blu.",
+                "Tinte raggiunte, neutri e distribuzione dei componenti."
+              ],
+              "fonti": [
+                "F31",
+                "F32"
+              ]
+            },
+            {
+              "celle": [
+                "Velature",
+                "Si sovrapporrebbero gli stessi colori su fondo asciutto, poi si invertirebbe l’ordine.",
+                "Variazione del colore e trascinamento del primo strato."
+              ],
+              "fonti": [
+                "F33"
+              ]
+            }
+          ]
+        },
+        {
+          "tipo": "nota",
+          "testo": "Si potrebbero affiancare almeno due ripetizioni per riconoscere una differenza occasionale di stesura. Se i risultati divergessero molto, sarebbe utile ripetere quel confronto prima di classificare il colore."
+        },
+        {
+          "tipo": "nota",
+          "testo": "Uguali quantità di pasta confronterebbero i prodotti così forniti, non uguali quantità di pigmento puro. Campiture portate a chiarezza visiva simile risponderebbero invece a una domanda sull’apparenza. La scheda dovrebbe precisare quale confronto si cerca."
+        },
+        {
+          "tipo": "titoletto",
+          "id": "passo-11",
+          "testo": "Osservazione e interpretazione"
+        },
+        {
+          "tipo": "nota",
+          "testo": "Una nota come «restano zone blu e brune separate» descriverebbe il foglio. «I componenti si sono distribuiti in modo diverso durante il deposito» sarebbe già un’interpretazione. La dimensione delle particelle o la composizione del legante non si potrebbero ricavare da quella sola osservazione."
+        },
+        {
+          "tipo": "nota",
+          "testo": "Le fotografie potrebbero documentare le prove mantenendo luce, esposizione e riferimento neutro. Non sostituirebbero i campioni né diventerebbero misure colorimetriche. Il confronto non comprenderebbe test chimici su opere o esposizioni al sole presentate come certificazioni di permanenza."
+        }
+      ]
+    },
+    {
+      "id": "conservazione",
+      "breve": "Conservazione",
+      "titolo": "10. Permanenza, conservazione e cose ancora incerte",
+      "blocchi": [
+        {
+          "tipo": "titoletto",
+          "id": "passo-1",
+          "testo": "Che cosa permette di dire una classificazione"
+        },
+        {
+          "tipo": "p",
+          "testo": "Una scheda di prodotto dichiara una classe secondo una scala. Una prova indipendente descrive campioni e condizioni. Sono informazioni diverse: il nome della classe non garantisce da solo una durata in anni in qualsiasi ambiente. Le prove di MacEvoy documentano un proprio metodo e materiali datati, non ogni formulazione successiva.",
+          "fonti": [
+            "F37"
+          ]
+        },
+        {
+          "tipo": "nota",
+          "testo": "Per leggere un’etichetta sarebbe utile mantenere la scala originale e la sua fonte. Una voce mancante non diventerebbe automaticamente una cattiva classificazione. Non si ricaverebbe una graduatoria comune mettendo insieme scale diverse senza conoscerne i criteri."
+        },
+        {
+          "tipo": "titoletto",
+          "id": "passo-4",
+          "testo": "Il caso del blu di Prussia"
+        },
+        {
+          "tipo": "p",
+          "testo": "Kirby e Saunders hanno studiato lavature in gomma arabica su carta e, separatamente, miscele con bianco di piombo in olio. I due gruppi non sono la stessa prova. Nei campioni ad acquerello, preparazione e composizione influenzavano lo scolorimento; il campione moderno chiamato «insolubile» cambiava meno degli altri tipi considerati.",
+          "fonti": [
+            "F19"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Gli autori distinguono recuperi parziali dopo periodi al buio e modifiche irreversibili dopo esposizioni prolungate. Il risultato non dimostra che ogni PB27 attuale scolorisca nello stesso modo, né che ogni cambiamento del proprio foglio sia reversibile. Una classe favorevole dichiarata per un prodotto non annulla le condizioni dello studio.",
+          "fonti": [
+            "F19"
+          ]
+        },
+        {
+          "tipo": "titoletto",
+          "id": "passo-7",
+          "testo": "Conservare il foglio, non soltanto il blu"
+        },
+        {
+          "tipo": "p",
+          "testo": "Il Canadian Conservation Institute collega il danno luminoso all’intensità e alla durata dell’esposizione. Eliminare gli ultravioletti non elimina tutto il rischio dovuto alla luce visibile. Non si può quindi promettere la conservazione indefinita di un acquerello in base al solo vetro protettivo.",
+          "fonti": [
+            "F38"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "La guida istituzionale sulle opere su carta considera anche ambiente e protezione del supporto. Come criterio del Quaderno, la valutazione riguarderebbe l’intero foglio, con i suoi materiali e le sue condizioni d’esposizione, non soltanto il codice del blu.",
+          "fonti": [
+            "F39"
+          ]
+        },
+        {
+          "tipo": "titoletto",
+          "id": "passo-10",
+          "testo": "Le domande ancora aperte"
+        },
+        {
+          "tipo": "nota",
+          "testo": "Nel corpus raccolto mancano confronti omogenei di lungo periodo, in gomma e su carta, per indaco naturale, PB66 isolato, smalto e PB86. Le schede documentano materiali e dichiarazioni, non colmano da sole quella lacuna sperimentale."
+        },
+        {
+          "tipo": "nota",
+          "testo": "Non sono state stabilite tutte le prime adozioni dei blu sintetici nell’acquerello. La mappa dei prodotti non è un censimento mondiale e le prove proposte non hanno ancora risultati. Questi limiti circoscrivono le conclusioni senza impedire il confronto dei propri blu sulla carta."
+        }
+      ]
+    }
+  ],
+  "fonti": {
+    "F01": {
+      "testo": "CIE, e-ILV, 17-22-040: perceived colour. Definizione e nota sulle condizioni di osservazione, lette il 14 novembre 2026.",
+      "titolo_link": "e-ILV, 17-22-040: perceived colour",
+      "url": "https://cie.co.at/eilvterm/17-22-040"
+    },
+    "F02": {
+      "testo": "Colour Index, SDC / AATCC, Definitions of a dye and a pigment. Definizioni CPMA ed ETAD lette il 14 novembre 2026.",
+      "titolo_link": "Definitions of a dye and a pigment",
+      "url": "https://v1.colour-index.com/definitions-of-a-dye-and-a-pigment"
+    },
+    "F03": {
+      "testo": "Jorge González-Gutiérrez e collaboratori, Pattern formation by droplet evaporation and imbibition in watercolor paintings. Preprint, 2019, arXiv:1909.09098. Abstract riletto; metodi e discussione letti selettivamente nel dossier. Non lettura integrale né verifica di tutte le figure.",
+      "titolo_link": "Pattern formation by droplet evaporation and imbibition in watercolor paintings",
+      "url": "https://arxiv.org/pdf/1909.09098"
+    },
+    "F04": {
+      "testo": "CIE, e-ILV, 17-22-067: hue. Definizione letta il 14 novembre 2026.",
+      "titolo_link": "e-ILV, 17-22-067: hue",
+      "url": "https://cie.co.at/eilvterm/17-22-067"
+    },
+    "F05": {
+      "testo": "CIE, e-ILV, 17-22-063: lightness. Definizione letta il 14 novembre 2026.",
+      "titolo_link": "e-ILV, 17-22-063: lightness",
+      "url": "https://cie.co.at/eilvterm/17-22-063"
+    },
+    "F06": {
+      "testo": "CIE, e-ILV, 17-22-074: chroma. Definizione letta il 14 novembre 2026.",
+      "titolo_link": "e-ILV, 17-22-074: chroma",
+      "url": "https://cie.co.at/eilvterm/17-22-074"
+    },
+    "F07": {
+      "testo": "CIE, e-ILV, 17-22-073: saturation. Definizione letta il 14 novembre 2026.",
+      "titolo_link": "e-ILV, 17-22-073: saturation",
+      "url": "https://cie.co.at/eilvterm/17-22-073"
+    },
+    "F08": {
+      "testo": "Winsor & Newton, Professional Watercolour: composizione e proprietà. Dichiarazioni del produttore. Righe dei blu, indaco e turchesi riscontrate nel dossier e riaperte il 14 novembre 2026. Non analisi dei prodotti.",
+      "titolo_link": "Professional Watercolour: composizione e proprietà",
+      "url": "https://www.winsornewton.com/pages/professional-watercolour"
+    },
+    "F09": {
+      "testo": "Schmincke, HORADAM Aquarell. Dichiarazioni del produttore. Codici e composizioni selezionati, articoli 14477-14509, verificati nel dossier e riaperti per i casi citati. Non si deducono proprietà dalle icone non lette.",
+      "titolo_link": "HORADAM Aquarell",
+      "url": "https://www.schmincke.de/en/produkte/aquarell/horadam-aquarell"
+    },
+    "F10": {
+      "testo": "DANIEL SMITH, Watercolors Pigment Characteristics Listing, maggio 2021. Cartella datata del produttore, non attestazione delle ricette 2026. Righe selezionate per blu e indaco, pp. 3, 7 e 13 e traduzioni; non lettura integrale delle 36 pagine.",
+      "titolo_link": "Watercolors Pigment Characteristics Listing, maggio 2021",
+      "url": "https://danielsmith.com/wp-content/uploads/2021/05/DS-Watercolor-pigment-characteristics.pdf"
+    },
+    "F11": {
+      "testo": "Colour Index, SDC / AATCC, Colour Index Generic Name. Definizione, numero progressivo, additivi e suffissi letti il 14 novembre 2026.",
+      "titolo_link": "Colour Index Generic Name",
+      "url": "https://v1.colour-index.com/colour-index-generic-name"
+    },
+    "F12": {
+      "testo": "Bruce MacEvoy, Guide to watercolor pigments: blue, Handprint. Prove originali e repertorio di campioni datati, in gran parte 2004. Letti i passi pertinenti a PB29, PB33 e miscele; non certificazione delle gamme attuali.",
+      "titolo_link": "Guide to watercolor pigments: blue, Handprint",
+      "url": "https://www.handprint.com/HP/WCL/waterb.html"
+    },
+    "F13": {
+      "testo": "National Gallery, Londra, Smalt, Glossary. Voce breve letta integralmente. Materiale e periodo d’impiego, non prima attestazione assoluta.",
+      "titolo_link": "Smalt, Glossary",
+      "url": "https://www.nationalgallery.org.uk/paintings/glossary/smalt"
+    },
+    "F14": {
+      "testo": "Greenleaf & Blueberry, Smalt Watercolor Paint. Scheda commerciale: PB32 e proprietà dichiarate. Non adottato il primato storico promozionale.",
+      "titolo_link": "Smalt Watercolor Paint",
+      "url": "https://www.greenleafblueberry.com/products/smalt-half-pan"
+    },
+    "F15": {
+      "testo": "Jane Blundell, Blue Watercolour Swatches. Testimonianza e campioni dell’autrice. Passi su ftalo verso verde/rosso; non misura di una temperatura del pigmento.",
+      "titolo_link": "Blue Watercolour Swatches",
+      "url": "https://www.janeblundellart.com/blue-watercolour-swatches.html"
+    },
+    "F16": {
+      "testo": "Metropolitan Museum of Art, Lump of Blue Paste, inv. 36.3.202. Scheda del reperto: circa 1473-1458 a.C., preparazione del blu egizio. Non data dell’invenzione.",
+      "titolo_link": "Lump of Blue Paste, inv. 36.3.202",
+      "url": "https://www.metmuseum.org/art/collection/search/568012"
+    },
+    "F17": {
+      "testo": "Dean E. Arnold e collaboratori, USGS, The first direct evidence of pre-columbian sources of palygorskite for Maya Blue. Journal of Archaeological Science, 2012, DOI 10.1016/j.jas.2012.02.036. Letto soltanto il riassunto della scheda, non l’articolo integrale.",
+      "titolo_link": "The first direct evidence of pre-columbian sources of palygorskite for Maya Blue",
+      "url": "https://www.usgs.gov/publications/first-direct-evidence-pre-columbian-sources-palygorskite-maya-blue"
+    },
+    "F18": {
+      "testo": "Cennino Cennini, Il libro dell’arte, capitolo LXII, edizione 1859. Testimonianza storica nella trascrizione Wikisource, già letta nel dossier; non manoscritto autografo né prova di ricetta contemporanea.",
+      "titolo_link": "Il libro dell’arte, capitolo LXII, edizione 1859",
+      "url": "https://it.wikisource.org/wiki/Il_libro_dell%27arte/Capitolo_LXII"
+    },
+    "F19": {
+      "testo": "Jo Kirby e David Saunders, Fading and Colour Change of Prussian Blue: Methods of Manufacture and the Influence of Extenders. National Gallery Technical Bulletin 25, 2004, pp. 73-99. Introduzione, metodi e risultati pertinenti, conclusioni pp. 87-88: lettura selettiva, non intero apparato analitico.",
+      "titolo_link": "Fading and Colour Change of Prussian Blue: Methods of Manufacture and the Influence of Extenders",
+      "url": "https://www.nationalgallery.org.uk/media/15510/kirby_saunders2004.pdf"
+    },
+    "F20": {
+      "testo": "Marco Leona, Metropolitan Museum of Art, The Great Wave: Anatomy of an Icon. 10 aprile 2020. Letto il resoconto delle analisi e della doppia stampa; tecnica xilografica, non prova ad acquerello.",
+      "titolo_link": "The Great Wave: Anatomy of an Icon",
+      "url": "https://www.metmuseum.org/de/essays/hokusai-great-wave"
+    },
+    "F21": {
+      "testo": "Winsor & Newton, Professional Watercolour: French Ultramarine. Cenno storico del produttore su Guimet e 1828; non documento coevo né prima vendita per acquerello.",
+      "titolo_link": "Professional Watercolour: French Ultramarine",
+      "url": "https://www.winsornewton.com/products/professional-watercolour-french-ultramarine"
+    },
+    "F22": {
+      "testo": "Srila Nayak e Debbie Farris, Oregon State University, YInMn Blue captures the world’s attention. 13 luglio 2016. Comunicazione dell’istituzione sulla scoperta del 2009 e sugli elementi del pigmento.",
+      "titolo_link": "YInMn Blue captures the world’s attention",
+      "url": "https://science.oregonstate.edu/IMPACT/2016/07/yinmn-blue-captures-worlds-attention-teens-architects-artists-industry-and-beyond"
+    },
+    "F23": {
+      "testo": "Greenleaf & Blueberry, YInMn Blue Watercolor Paint. PB86, coprenza e forza colorante dichiarati dal produttore; nessuna prova comparativa del Quaderno.",
+      "titolo_link": "YInMn Blue Watercolor Paint",
+      "url": "https://www.greenleafblueberry.com/products/yinmn-blue-full-pan"
+    },
+    "F24": {
+      "testo": "Winsor & Newton, What are the origins and meanings of Quinacridone and Phthalo?. Letto il passo che identifica la ftalocianina di rame PB15 in Cotman Intense Blue; non usato per primati storici.",
+      "titolo_link": "What are the origins and meanings of Quinacridone and Phthalo?",
+      "url": "https://eu.winsornewton.com/blogs/guides/meaning-of-quinacridone-and-phthalo"
+    },
+    "F25": {
+      "testo": "Lefranc Bourgeois, Nuancier Aquarelle, p. 1. Bleu intense, 327, PB15. PDF ufficiale letto e riscontrato visivamente il 12 e il 14 novembre 2026; suffisso non dichiarato.",
+      "titolo_link": "Nuancier Aquarelle, p. 1",
+      "url": "https://cdn.shopify.com/s/files/1/0891/3990/4844/files/LB-Nuancier-Aquarelle.pdf?v=1742223358"
+    },
+    "F26": {
+      "testo": "Winsor & Newton, Cotman Watercolour: composizione e proprietà. Riga Intense Blue (Phthalo Blue): PB15, trasparente, macchiante. Dichiarazione del produttore riscontrata il 14 novembre 2026.",
+      "titolo_link": "Cotman Watercolour: composizione e proprietà",
+      "url": "https://uk.winsornewton.com/pages/cotman-watercolour"
+    },
+    "F27": {
+      "testo": "Jane Blundell, sul sito DANIEL SMITH, The Ultimate Watercolor Mixing Selection For Beginners. Introduzione e passi su ftalo e oltremare letti il 12 novembre 2026 per il capitolo approvato. Nuova apertura il 14 novembre respinta con 403; non dichiarata una nuova lettura. Preferenze attribuite all’autrice.",
+      "titolo_link": "The Ultimate Watercolor Mixing Selection For Beginners",
+      "url": "https://danielsmith.com/artists/insights/jane-blundell-the-ultimate-watercolor-mixing-selection/"
+    },
+    "F28": {
+      "testo": "Bruce MacEvoy, What the ratings mean, Handprint. Metodo originale dell’autore: trasparenza, macchiatura, forza colorante e asciugatura. Lettura selettiva; scale non trasferite ai campioni del Quaderno.",
+      "titolo_link": "What the ratings mean, Handprint",
+      "url": "https://www.handprint.com/HP/WCL/pigmt8.html"
+    },
+    "F29": {
+      "testo": "Winsor & Newton / Colart, Watercolour mediums. Opuscolo del produttore. Passi su agente bagnante, gomma e medium di granulazione/flocculazione; non prove indipendenti né lettura integrale.",
+      "titolo_link": "Watercolour mediums",
+      "url": "https://colart.s3.amazonaws.com/assetfiles/c4c67c92-fed1-477b-8a70-0680af4b1a47.pdf"
+    },
+    "F30": {
+      "testo": "Julie King, Spring Heart. Tutorial dell’autrice: materiali e fasi pertinenti a verdi e fiori. Nessun codice CI aggiunto ai nomi non accompagnati da composizione.",
+      "titolo_link": "Spring Heart",
+      "url": "https://juliehking.co.uk/tutorial/spring-heart/"
+    },
+    "F31": {
+      "testo": "Bruce MacEvoy, Watercolor mixing complements, Handprint. Prove originali: metodo e coppie PB28/PBr7 e PB27/PR101. Non si importano dosi universali o misure come risultati del Quaderno.",
+      "titolo_link": "Watercolor mixing complements, Handprint",
+      "url": "https://www.handprint.com/HP/WCL/mixtable.html"
+    },
+    "F32": {
+      "testo": "Bruce MacEvoy, Basic mixing method, Handprint. Metodo pittorico dell’autore; passaggi su tinta, croma e scelta della miscela, senza adottare una tavolozza obbligatoria.",
+      "titolo_link": "Basic mixing method, Handprint",
+      "url": "https://www.handprint.com/HP/WCL/mix.html"
+    },
+    "F33": {
+      "testo": "Danny Hawk, sul sito Schmincke, Urban Sketch: Berlin Park in the Summer. Tutorial originale, fasi su strati asciutti e riflessi. I prodotti nominati non sono trasformati per congettura in pigmenti singoli.",
+      "titolo_link": "Urban Sketch: Berlin Park in the Summer",
+      "url": "https://www.schmincke.de/en/know-how/watercolour/urban-sketch-berlin-park-in-the-summer-danny-hawk"
+    },
+    "F34": {
+      "testo": "Jowita Marczuk, sul sito Schmincke, Landscape painting. Procedimento dell’autrice, fasi sul cielo e sulle ombre con cobalto chiaro e Siena bruciata; non ricetta universale.",
+      "titolo_link": "Landscape painting",
+      "url": "https://www.schmincke.de/en/know-how/watercolour/landscape-painting-jowita-marczuk"
+    },
+    "F35": {
+      "testo": "Cesc Farré, intervista sul sito Schmincke, Cesc Farré: favourite colours. Letto il passo sul turchese al cobalto PG50 per i soggetti d’acqua. Preferenza dell’autore.",
+      "titolo_link": "Cesc Farré: favourite colours",
+      "url": "https://www.schmincke.de/en/company/ambassadors/cesc-farre"
+    },
+    "F36": {
+      "testo": "Caroline Furlong, Society of East Anglian Watercolourists, Tutorial: Winter Landscape. 15 gennaio 2021. Materiali e procedimento su neve, carta risparmiata e ombre; non adottata come legge la spiegazione fisica semplificata.",
+      "titolo_link": "Tutorial: Winter Landscape",
+      "url": "https://eastanglianwatercolourists.co.uk/2021/01/15/tutorial-winter-landscape-by-caroline-furlong/"
+    },
+    "F37": {
+      "testo": "Bruce MacEvoy, 2004 lightfastness tests, Handprint. Procedura e campioni dell’autore, datati 2004. Non una durata garantita per le ricette attuali.",
+      "titolo_link": "2004 lightfastness tests, Handprint",
+      "url": "https://www.handprint.com/HP/WCL/litetest.html"
+    },
+    "F38": {
+      "testo": "Stefan Michalski, Canadian Conservation Institute, Agent of Deterioration: Light, Ultraviolet and Infrared. Guida istituzionale. Passi su dose, luce visibile e ultravioletti; nessuna soglia trasformata in garanzia assoluta.",
+      "titolo_link": "Agent of Deterioration: Light, Ultraviolet and Infrared",
+      "url": "https://www.canada.ca/en/conservation-institute/services/agents-deterioration/light.html"
+    },
+    "F39": {
+      "testo": "Canadian Conservation Institute, Basic care: Works of art on paper. Guida istituzionale: luce, ambiente e protezione delle opere su carta, lettura selettiva.",
+      "titolo_link": "Basic care: Works of art on paper",
+      "url": "https://www.canada.ca/en/conservation-institute/services/care-objects/paper-books/basic-care-art-paper.html"
+    }
+  }
+}
