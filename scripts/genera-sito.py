@@ -1209,6 +1209,10 @@ def main():
                 sorgente = html_extra.read_text(encoding="utf-8")
                 dest = dest_dir / rel
                 dest.parent.mkdir(parents=True, exist_ok=True)
+                if '<meta name="pagina-trasferita"' in sorgente:
+                    dest.write_text(sorgente, encoding="utf-8", newline="\n")
+                    print(f"[{s['slug']}] Rinvio {dest.relative_to(APP_DIR).as_posix()}")
+                    continue
                 dest.write_text(
                     inietta_elementi_comuni(sorgente, s, pagina_path, prof),
                     encoding="utf-8", newline="\n")

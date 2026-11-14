@@ -1,5 +1,13 @@
 # Quaderno di acquerello con IA (`app-acquerello`)
 
+## Blu e oltremare: pagina unica, 14 novembre 2026
+
+Scelta del curatore nel topic Acquerello, messaggio 1057: l’oltremare non resta una pagina autonoma, ma entra come capitolo 5 dell’approfondimento **5.2, Il blu e i blu nell’acquerello**. Gli otto paragrafi mantengono tutti i contenuti e le fonti della monografia; il blu intenso passa al capitolo 6. La pagina ha undici capitoli e 51 fonti uniche, con limiti di consultazione e prove non eseguite espliciti. Le altre questioni mantengono numerazione e contenuti.
+
+Il vecchio indirizzo porta al capitolo e conserva 94 riferimenti a passi e fonti tramite una mappa dei frammenti. Generazione, confronto dei contenuti, collegamenti e browser mobile/desktop superati; nessuna nuova ricerca a consumo. Firma: OC (Acquerello).
+
+Prossima azione: Generale pubblica la modifica autorizzata; Acquerello verifica online la pagina unica e i vecchi collegamenti.
+
 ## Blu: pagina generale completa, pubblicazione autorizzata il 14 novembre 2026
 
 Il nuovo approfondimento **5.6, Il blu e i blu nell’acquerello** confronta tinte, nomi, famiglie di pigmenti, comportamento sulla carta, miscele, impieghi e conservazione. Comprende il capitolo 5 sul blu intenso, una scheda di confronti proposti e 39 fonti finali. L’oltremare resta una monografia autonoma, richiamata senza riscriverla. Testo completo approvato da Sandro per inserimento e pubblicazione nel topic Acquerello, messaggio 1014. Nessuna nuova ricerca a consumo; prove pratiche non eseguite.
