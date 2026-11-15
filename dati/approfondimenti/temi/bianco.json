@@ -18,11 +18,9 @@
     "Le fonti sono state cercate e confrontate con l’aiuto dell’intelligenza artificiale, secondo il metodo descritto nella nota seguente."
   ],
   "nota_metodo": [
-    "La ricerca sul bianco nell’acquerello è iniziata il 27 ottobre 2026 ed è stata aggiornata il 1° novembre. Più strumenti di intelligenza artificiale hanno cercato le fonti, confrontato i risultati e aiutato a preparare il testo.",
-    "Grok Build (grok-4.7), Codex (gpt-6-astra) e Gemini Deep Research (deep-research-preview-04-2026) hanno condotto ricerche separate sulle sette domande iniziali. Grok Build e Codex hanno lavorato senza conoscere i risultati reciproci. Consensus ha cercato gli articoli scientifici, consultati attraverso i loro riassunti.",
-    "Claude Code ha riletto le fonti decisive e preparato la sintesi. Una verifica successiva ha impiegato DeepSeek (deepseek-v4-pro), Kimi (kimi-k3.1-pro) e GLM (glm-5.3). DeepSeek e Kimi hanno svolto nuove ricerche e consegnato sintesi complete; GLM non ha prodotto una sintesi utilizzabile.",
-    "Le risposte concordi dei modelli sono state tenute distinte dalle affermazioni verificate nel documento originale. Sono stati riesaminati i documenti decisivi e le sei testimonianze dei pittori sulla gouache. Per i concorsi italiani sono stati consultati 21 documenti relativi a 19 premi: le conclusioni riguardano questi bandi, non tutti i concorsi.",
-    "La pagina distingue i testi letti direttamente dalle informazioni ricavate da estratti o dai soli riassunti degli articoli scientifici. Le citazioni inglesi sono tradotte; il passo originale compare nella fonte in fondo al capitolo. Le informazioni non confermate restano dichiarate incerte e il capitolo 8 raccoglie le tre domande ancora aperte.",
+    "La ricerca sul bianco nell’acquerello è stata svolta fra il 27 ottobre e il 1° novembre 2026 con l’aiuto di più strumenti di intelligenza artificiale per cercare le fonti, confrontare i risultati e preparare la sintesi, tenendo sempre distinte le risposte concordi dei modelli dalle verifiche sui documenti originali.",
+    "Sono stati riesaminati direttamente i testi storici decisivi, le schede sui pigmenti, le sei testimonianze di pittori sulla gouache e 21 regolamenti relativi a 19 premi e concorsi italiani, oltre a una selezione di bandi internazionali: le conclusioni sui concorsi riguardano i regolamenti esaminati e non l’insieme di tutti i premi.",
+    "La pagina distingue i testi letti per intero dalle notizie ricavate da estratti o dai soli riassunti degli articoli scientifici. Le citazioni in inglese sono tradotte nel testo, con il passo originale riportato nella voce della fonte; il capitolo 8 raccoglie le tre domande rimaste aperte.",
     "Il curatore ha scelto i contenuti e rivisto il testo prima della pubblicazione."
   ],
   "capitoli": [

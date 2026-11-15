@@ -84,8 +84,8 @@ SEZIONI = [
         "breve": "Paesaggio urbano",
         "modulo_di": "soggetti",
         "nome_form": "Soggetti (Alberi, Nuvole, Fiori...)",
-        "titolo": "S6 · Paesaggio urbano: vicoli, scale e luce",
-        "sottotitolo": "Tre esempi, quattro studi guidati con infografiche e otto estratti da tre video",
+        "titolo": "S6 · Paesaggio urbano",
+        "sottotitolo": "Tre esempi di vicoli, facciate e strade, sviluppati in 6 modalità tratte dai video, con un'infografica in tre fasi per ciascuna",
         "script_genera": DATI_DIR / "urbano" / "genera-urbano.py",
         "html_generato": DATI_DIR / "urbano" / "urbano.html",
     },
@@ -397,7 +397,9 @@ def genera_prompt_chat():
         esempi.append(f"- {sigla} {nome}. Modalità: {modalita}.")
     esempi_urbani = []
     for t in urbano["esempi"]:
-        esempi_urbani.append(f"- {t['voce']}: " + "; ".join(m["titolo"] for m in t["modalita"]) + ".")
+        sigla, nome = t["voce"].split(" ", 1)
+        modalita = "; ".join(f"{re.sub(r'^Modalità \d+:\s*', '', m['titolo'])} ({m['autore']})" for m in t["modalita"])
+        esempi_urbani.append(f"- {sigla} {nome}. Modalità: {modalita}.")
     in_preparazione = ", ".join(s["titolo"] for s in soggetti["soggetti"] if s["stato"] != "pubblicato")
     regola = senza_tag(next(b["testo"] for b in capitoli["abbinare"]["blocchi"] if b["tipo"] == "p"))
 
@@ -429,9 +431,8 @@ Le 12 miscele della tavolozza ridotta, M1-M12 ({SITO_URL}/principi/#miscele). {d
 Il modulo S1, alberi, siepi e arbusti ({SITO_URL}/alberi/), con le modalità tratte dai video:
 {chr(10).join(esempi)}
 
-Il modulo S6, paesaggio urbano ({SITO_URL}/urbano/), distingue i gesti osservati dalle prove proposte, non eseguite:
+Il modulo S6, paesaggio urbano ({SITO_URL}/urbano/), con le sei modalità tratte dai video didattici e proposte di colore per lo studio e per la tavolozza ridotta all'aperto:
 {chr(10).join(esempi_urbani)}
-I tre riferimenti sono Zbukvic (disegno, lavaggio, riflessi), Castagnet a Cadaqués (solo lettura del dipinto finito), Iocco/Zangarelli (veduta con edifici, acqua e barche, non una piazza). Le fasi e gli stati della carta riguardano le prove proposte. Non sono ricette dei maestri; i pigmenti non sono identificati.
 
 Moduli in preparazione: {in_preparazione}.
 

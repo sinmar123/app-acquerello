@@ -1,201 +1,222 @@
 {
+  "data": "2026-11-15",
+  "nota": "Modulo S6 · Paesaggio urbano: 3 esempi (vicoli e scalinate, facciate al sole con ombra portata, strade bagnate e figure in scala), sviluppati in 6 modalità tratte da 6 video incorporabili con infografica SVG in 3 fasi, proposta colori doppia (studio e tavolozza ridotta all'aperto M1-M12) e 15 estratti verificati al secondo.",
   "apertura": {
-    "titolo": "S6 · Paesaggio urbano: vicoli, scale e luce",
-    "sommario": "Tre esempi, quattro studi guidati e otto estratti da tre video. Il percorso parte dal vicolo con scalinata e si apre a case, strade e vedute con acqua.",
+    "titolo": "S6 · Paesaggio urbano: vicoli, facciate, riflessi e figure nei video",
+    "sommario": "Il modulo raccoglie tre temi classici del paesaggio urbano ad acquerello: i vicoli a gradini fra muri colorati, le facciate chiare attraversate da una grande ombra portata e le strade cittadine con riflessi sul bagnato e passanti in scala. Li studia attraverso {modalita} modalità tratte da {video} video didattici. Ogni modalità unisce i colori e i pennelli usati nel video, un'infografica in tre fasi e i passaggi del video indicati al secondo.",
     "premessa": [
-      "Il percorso parte da un vicolo con scalinata, muri blu e facciate in luce. Il soggetto invita a studiare piani, valori e profondità, prima dei piccoli dettagli.",
-      "Ogni scheda distingue ciò che si vede nel video da una prova proposta per il foglio. Le tre fasi dell’infografica descrivono questa prova: non ricostruiscono passaggi assenti dalle riprese."
+      {
+        "testo": "In uno scorcio urbano non conviene contare le finestre, i mattoni o i balconi. La luce si regge sul disegno dei valori tonali: la carta risparmiata per le pareti al sole, un tono medio caldo o azzurro per i piani secondari e una sola massa d'ombra continua che unisce muri, sporgenze e strada. Prima degli esercizi è utile ripassare consistenze della miscela e stati della carta nei Principi generali.",
+        "link": [
+          {
+            "parola": "Principi generali",
+            "href": "../principi/"
+          }
+        ]
+      },
+      {
+        "testo": "Ogni esempio mette a confronto due modi diversi di affrontare lo stesso soggetto. La scheda indica il principio del metodo, i colori e gli attrezzi visti nel video e le tre fasi operative. La descrizione estesa e la sintesi dei passaggi parlati si aprono a richiesta.",
+        "link": []
+      },
+      {
+        "testo": "Per i colori, in studio si possono seguire i pigmenti usati dagli autori oppure i propri tubetti abituali. Quando si dipinge dal vero o in viaggio conviene invece ridurre il peso: le proposte per l'aperto richiamano i sei colori e le miscele M1-M12 del capitolo In studio e all'aperto dei Principi generali. Per proteggere piccoli dettagli chiari dentro un muro scuro si possono vedere anche le tecniche descritte nella pagina sul bianco e sulle riserve.",
+        "link": [
+          {
+            "parola": "In studio e all'aperto",
+            "href": "../principi/#tavolozza-plein-air"
+          },
+          {
+            "parola": "pagina sul bianco e sulle riserve",
+            "href": "../approfondimenti/bianco/#riserve"
+          }
+        ]
+      }
     ],
     "metodo": [
-      "Consultazione dell’8 novembre 2026: lettura visiva dei tre filmati a intervalli e controllo degli otto estratti con un campione per secondo. Non si dichiara una visione continua integrale.",
-      "Per Zbukvic sono stati letti anche i sottotitoli inglesi. Le note sugli altri due video descrivono solo quanto è visibile: non riportano né traducono il parlato.",
-      "Il filmato di Castagnet è usato per leggere il dipinto finito, non per documentare la sua esecuzione. Nella demo Iocco/Zangarelli si osserva una veduta con edifici, acqua e barche; i singoli gesti non sono attribuiti separatamente ai due autori.",
-      "Gli stati della carta sono indicazioni per le prove proposte. Non sono misure dell’umidità nei video. Le tinte degli schemi sono convenzionali, non campioni di pigmenti o ricette dei maestri.",
-      "La prova nel browser ha confermato il lettore per Zbukvic e Castagnet. Per la demo italiana YouTube non consente la riproduzione incorporata: i tre passaggi aprono la pagina originale al minuto indicato.",
-      "La riserva di vasi e accenti caldi prima del blu segue un’indicazione diretta del curatore sullo studio del vicolo. Non è un passaggio attribuito ai tre video."
+      "I sei video e i quindici passaggi sono stati verificati il 15 novembre 2026 sui fotogrammi estratti al secondo e, dove presenti, sui sottotitoli o sulle scritte in sovrimpressione dei tutorial. Tutti i sei video consentono la riproduzione nel lettore incorporato di YouTube.",
+      "Le infografiche in tre fasi sono disegni didattici realizzati per il Quaderno: traducono in schema la sequenza del video per guidare una prova autonoma su carta, senza riprodurre né ricalcare i fotogrammi degli autori."
     ]
   },
   "video": {
+    "U42ElDnlZ9U": {
+      "titolo": "Street in Chefchaouen",
+      "autore": "Thomas W. Schaller",
+      "canale": "thomas w schaller - watercolor artist",
+      "durata_s": 5168,
+      "consultato_il": "2026-11-15",
+      "nota_fonte": "Dimostrazione completa in tempo reale in inglese (86 min)."
+    },
+    "cxph-T5wD7s": {
+      "titolo": "Watercolor painting of Greece alley scene, light & shadow, easy tutorial for beginners",
+      "autore": "Sudarshana Pal",
+      "canale": "Sudarshana Pal Art",
+      "durata_s": 811,
+      "consultato_il": "2026-11-15",
+      "nota_fonte": "Lezione passo passo con didascalie in inglese su carta 100% cotone a grana fina, 300 g/mq."
+    },
+    "rL498h0dTPQ": {
+      "titolo": "GET MORE LIGHT with DARKS in this Greek Village Scene in Watercolor",
+      "autore": "Tim Wilmot",
+      "canale": "Watercolor with Tim Wilmot",
+      "durata_s": 5780,
+      "consultato_il": "2026-11-15",
+      "nota_fonte": "Dimostrazione commentata in inglese su villaggio greco con case bianche al sole (96 min)."
+    },
+    "ulTt1yB50Lk": {
+      "titolo": "How to Add Shadow to an Urban Sketch - Beginners Tips",
+      "autore": "Doug Jackson",
+      "canale": "Doug's Sketching School",
+      "durata_s": 1202,
+      "consultato_il": "2026-11-15",
+      "nota_fonte": "Lezione in inglese dedicata all'impostazione delle ombre nello schizzo urbano."
+    },
     "81w9PBZOmZ8": {
-      "titolo": "Joseph Zbukvic paints an amazing street scene in watercolour I Colour In Your Life",
+      "titolo": "Joseph Zbukvic paints an amazing street scene in watercolour",
       "autore": "Joseph Zbukvic",
       "canale": "Colour in Your Life",
       "durata_s": 1440,
-      "consultato_il": "2026-11-08",
-      "limite": "Episodio con intervista e dimostrazione. Estratti confrontati anche con i sottotitoli inglesi."
+      "consultato_il": "2026-11-15",
+      "nota_fonte": "Dimostrazione commentata in inglese in studio su scena stradale con tram, auto e pioggia."
     },
-    "myuEQfSbtEw": {
-      "titolo": "Watercolor lesson by Alvaro Castagnet in Cadaques",
-      "autore": "Alvaro Castagnet",
-      "canale": "Angela Barbi (Enjoy Painting Catalonia)",
-      "durata_s": 428,
-      "consultato_il": "2026-11-08",
-      "limite": "Spiegazione e presentazione del dipinto finito. Qui si studia il risultato visibile, senza ricavarne una sequenza esecutiva."
-    },
-    "i-owFItvqag": {
-      "titolo": "Master Demo - MASSIMILIANO IOCCO, ROBERTO ZANGARELLI",
-      "autore": "Massimiliano Iocco e Roberto Zangarelli",
-      "canale": "FermoInAcquarello",
-      "durata_s": 3011,
-      "consultato_il": "2026-11-08",
-      "limite": "Osservazione visiva della dimostrazione al tavolo. Nessuna trascrizione del parlato o attribuzione dei singoli gesti a uno dei due autori. Il video non è disponibile nel lettore incorporato: i passaggi si aprono su YouTube."
+    "NI4LlLKMl7o": {
+      "titolo": "Paint PEOPLE Easily in Any Scene - a Watercolor Cityscape Tutorial",
+      "autore": "Juliene Sinclair",
+      "canale": "Juliene Sinclair",
+      "durata_s": 777,
+      "consultato_il": "2026-11-15",
+      "nota_fonte": "Lezione dedicata alla costruzione rapida dei passanti e alla loro scala nella strada."
     }
   },
   "esempi": [
     {
-      "voce": "U1 Vicolo e scalinata",
-      "breve": "Vicolo e scale",
-      "descrizione": "Un esercizio sui rapporti fra facciate, salita e ombre. Nell’esempio di partenza, vasi e accenti caldi sono stati riservati con mascheratore prima del blu.",
+      "voce": "U1 Vicoli, scalinate e muri colorati",
+      "breve": "Vicoli e scalinate",
+      "descrizione": "Un vicolo stretto sale a gradini fra due quinte di muro: la luce scende dall'alto, accende le pedate o il centro del passaggio e stacca i vasi, le porte e le ombre oblique.",
+      "colori_studio": "In studio funzionano bene ocra gialla (PY43), terra d'ombra naturale (PBr7) e terra di Siena bruciata (PR101) per gli intonaci caldi; blu cobalto (PB28), blu oltremare (PB29) e un blu turchese o manganese per i muri mediterranei; viola minerale o diossazina (PV16, PV23) e grigio di Payne per le ombre; ossido rosso o rosso di cadmio (PR101, PR108) per i vasi in terracotta.",
+      "colori_aperto": "All'aperto, coi 6 colori della tavolozza ridotta, si usano M5 (arancio al tè) per l'intonaco caldo, ceruleo e oltremare (M12) per i muri azzurri, M6 (rame) e M7 (rosso cupo) per i vasi, M8 (viola) unito a M10 (scuro) per le quinte e per i denti d'ombra sui gradini.",
+      "pennelli": "Pennello piatto da 12-18 mm per gli spigoli dei muri e i gradini, tondo medio-grande (n. 8-12) per i fondi e le velature d'ombra, tondo piccolo (n. 4-6) per vasi, porte e accenti.",
+      "esercizio": "Su mezzo foglio in verticale traccia una scalinata stretta fra due muri convergenti. Prova prima a lasciare bianchi i gradini centrali tagliando l'ombra a dente di sega col pennello piatto. In una seconda prova su muri blu molto carichi, se fatichi a girare attorno a una fila di vasi di terracotta illuminati dal sole, puoi proteggerli su carta asciutta col liquido per mascherare, stendere il muro blu, togliere la gomma a carta asciutta e dipingere infine i vasi in rosso caldo.",
+      "controllo": "Le alzate in ombra e le pedate lasciate chiare devono leggersi al primo sguardo, senza ripassare ogni gradino con linee di contorno.",
+      "attenzione": [
+        "chiudere tutta la rampa con lo stesso grigio perdendo il bianco delle pedate",
+        "spargere il sale quando la pozza è ancora specchiante d'acqua o già asciutta",
+        "stendere l'ombra portata finale prima che muri e vasi sotto siano ben asciutti"
+      ],
       "modalita": [
         {
-          "id": "U1-a",
-          "titolo": "Prima i piani, poi i gradini",
-          "tipo": "Applicazione proposta al vicolo",
-          "schema": "vicolo",
-          "osservazione": "Zbukvic imposta il disegno della strada e dei veicoli. In seguito lavora una grande massa scura di edifici e ne ammorbidisce parte del bordo.",
-          "proposta": "Per il vicolo si potrebbe partire da tre valori: carta chiara, tono medio e scuro. Nella prova a colori si riservano vasi e accenti caldi prima del blu; la scalinata viene definita dopo le masse dei muri.",
-          "procedimento": "Si propone prima un piccolo studio di chiari e scuri, con un colore già noto. Per la prova a colori si disegnano i muri, pochi gradini e le forme dei vasi. Sulla carta asciutta si riservano con mascheratore i vasi e i piccoli accenti caldi. Si lascia asciugare il liquido prima di stendere il blu, conservando le facciate in luce. A colore asciutto si rimuove il mascheratore e si colorano le riserve con toni caldi. Si aggiungono ombre, porte e pochi bordi dei gradini. La mascheratura segue l’indicazione del curatore; la sequenza è una proposta per il vicolo, non una dimostrazione di scale di Zbukvic.",
-          "controllo": "Coprendo i dettagli, il vicolo dovrebbe restare leggibile. Se la salita scompare, si rivedono le larghezze dei gradini e il rapporto fra chiari e scuri.",
+          "id": "U1-M1",
+          "titolo": "Modalità 1: La strada blu a gradini per tre valori e pennello piatto",
+          "autore": "Thomas W. Schaller",
+          "proposta": "Schaller organizza il vicolo di Chefchaouen in una grande forma scura a U che abbraccia la scalinata lasciata bianca al centro. Usa il pennello piatto scarico per la grana dell'intonaco al sole e lo spigolo dello stesso pennello per incidere l'ombra a dente di sega sui gradini.",
+          "colori_video": "Terra d'ombra naturale, ocra gialla e terra di Siena bruciata per i muri caldi; blu cobalto, blu oltremare e blu di manganese per i muri azzurri; viola minerale e tinta neutra per le ombre; tocchi di arancio di cadmio e lavanda (all'aperto: M5 al tè, ceruleo + BO, M8 + M10 per le ombre).",
+          "pennelli_video": "Pennello piatto sintetico da 18 mm e da 12 mm (usato di piatto per le pareti a secco e di taglio per i gradini), più un pennello morbido a goccia per le fusioni umide.",
           "segmenti": [
-            "Z1",
-            "Z3"
+            "U1-M1a",
+            "U1-M1b",
+            "U1-M1c"
           ],
-          "fasi": [
-            {
-              "titolo": "Disegno e riserve",
-              "carta": "asciutta",
-              "attrezzo": "Matita e mascheratore",
-              "testo": "Si impostano muri e gradini. Su carta asciutta si riservano vasi e accenti caldi con mascheratore, lasciandolo asciugare prima del blu."
-            },
-            {
-              "titolo": "Stesura del blu",
-              "carta": "asciutta",
-              "attrezzo": "Pennello largo",
-              "testo": "Si stende il blu intorno alle riserve ormai asciutte. Le facciate in luce restano chiare. Si lascia asciugare il colore."
-            },
-            {
-              "titolo": "Accenti caldi e ombre",
-              "carta": "asciutta",
-              "attrezzo": "Pennello a punta",
-              "testo": "A colore asciutto si toglie il mascheratore e si colorano le riserve con toni caldi. Si completano ombre, porte e pochi gradini."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "voce": "U2 Un angolo di case",
-      "breve": "Case e luce",
-      "descrizione": "Il dipinto di Castagnet a Cadaqués offre un confronto fra grandi zone scure, facciate e una fascia chiara lungo gli edifici.",
-      "modalita": [
-        {
-          "id": "U2-a",
-          "titolo": "Leggere il dipinto per masse",
-          "tipo": "Lettura del risultato e prova proposta",
-          "schema": "case",
-          "osservazione": "Nell’inquadratura del dipinto finito si distinguono una grande massa scura, la parete degli edifici e una fascia chiara con piccole figure. Il mare compare sul lato.",
-          "proposta": "Si potrebbe ridurre un proprio scorcio a poche macchie, prima di descrivere finestre e tegole. Il video serve al confronto del risultato, non all’ordine dei lavaggi.",
-          "procedimento": "Si propone di scegliere una fotografia con una facciata illuminata. In un primo schizzo si segnano solo le zone da lasciare chiare. Si aggiunge un tono medio, poi uno scuro in poche forme ampie. I dettagli entrano soltanto se aiutano a distinguere i piani. La sequenza è un esercizio redazionale: non viene attribuita a Castagnet.",
-          "controllo": "Lo studio dovrebbe conservare una zona di luce riconoscibile anche senza finestre. Si confrontano i due schizzi, non i nomi dei colori.",
-          "segmenti": [
-            "C1"
-          ],
-          "fasi": [
-            {
-              "titolo": "Cercare la luce",
-              "carta": "asciutta",
-              "attrezzo": "Matita",
-              "testo": "Si sceglie una fascia o una facciata da tenere chiara. Si segnano poche forme, senza copiare ogni finestra."
-            },
-            {
-              "titolo": "Riunire i valori",
-              "carta": "asciutta",
-              "attrezzo": "Pennello largo",
-              "testo": "Si propone un tono medio per separare i piani. Dopo l’asciugatura, si raccolgono gli scuri in poche masse."
-            },
-            {
-              "titolo": "Scegliere gli accenti",
-              "carta": "asciutta",
-              "attrezzo": "Pennello a punta",
-              "testo": "Si aggiungono poche aperture o figure. La fascia chiara resta continua dove lo richiede il riferimento scelto."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "voce": "U3 Strade e vedute urbane",
-      "breve": "Strade e vedute",
-      "descrizione": "Due confronti: la strada bagnata di Zbukvic e la veduta con acqua e barche della dimostrazione italiana. Non sono lo stesso soggetto del vicolo.",
-      "modalita": [
-        {
-          "id": "U3-a",
-          "titolo": "Strada: lavaggio e riflessi",
-          "tipo": "Gesti osservati e prova proposta",
-          "schema": "strada",
-          "osservazione": "Zbukvic guida il bordo carico del lavaggio intorno alle sagome chiare. Più avanti bagna la strada e inserisce segni scuri che si allungano sotto i veicoli.",
-          "proposta": "Per uno scorcio di strada si potrebbe provare un fondo chiaro, poche masse di edifici e riflessi limitati ad alcune zone bagnate.",
-          "procedimento": "Si propone un piccolo studio separato dal vicolo. Si prepara il disegno e si conserva carta chiara per i veicoli. Si stende un lavaggio leggero e si lascia asciugare. Si aggiungono gli edifici, senza chiudere tutte le luci. Per la prova dei riflessi si bagna una zona della strada e vi si posa poco colore. La nuova sequenza semplifica l’esercizio: non riproduce tutta la gestione dei tempi mostrata dall’autore.",
-          "controllo": "I riflessi non dovrebbero occupare tutta la strada. Si confrontano una prova su zona bagnata e una su carta asciutta, lasciando invariati disegno e miscela.",
-          "segmenti": [
-            "Z2",
-            "Z4"
-          ],
-          "fasi": [
-            {
-              "titolo": "Fondo chiaro",
-              "carta": "asciutta",
-              "attrezzo": "Pennello largo",
-              "testo": "Si propone un lavaggio leggero. Si conserva carta per le sagome chiare e si lascia asciugare prima degli edifici."
-            },
-            {
-              "titolo": "Masse degli edifici",
-              "carta": "asciutta",
-              "attrezzo": "Pennello a punta",
-              "testo": "Si aggiungono i piani più scuri ai lati della strada. Si evitano contorni uniformi intorno a ogni luce."
-            },
-            {
-              "titolo": "Riflessi su zona bagnata",
-              "carta": "bagnata",
-              "attrezzo": "Pennello a punta",
-              "testo": "Si bagna soltanto una parte della strada. Si provano segni sotto alcuni veicoli, senza ripassarli di continuo."
-            }
-          ]
+          "procedimento": "Il disegno a matita fissa poche verticali e la pendenza dei gradini, evitando i dettagli minuti. Nella prima fase si passano i muri illuminati con un velo caldo di terra d'ombra naturale e ocra gialla, tenendo il pennello piatto quasi scarico così da far affiorare il bianco ruvido della carta, e si lasciano cadere tocchi di blu cobalto a umido. Nella seconda fase si costruisce la grande quinta in ombra a sinistra in viola e blu; col taglio del piatto da 12 mm si disegnano i denti d'ombra obliqui sulle alzate, risparmiando la carta bianca sulle pedate centrali. Nella terza fase si satura lo zoccolo blu intenso dei muri bassi accanto alla rampa, salvando un filo bianco per il corrimano e accendendo un piccolo contrappunto arancio sopra l'arco della porta."
         },
         {
-          "id": "U3-b",
-          "titolo": "Veduta: campiture e segni brevi",
-          "tipo": "Gesti osservati e prova proposta",
-          "schema": "veduta",
-          "osservazione": "Nella demo Iocco/Zangarelli un pennello aggiunge colore alle architetture ancora chiare. Seguono segni più minuti sugli edifici; in un passaggio avanzato si interviene vicino alle barche.",
-          "proposta": "Per una veduta con edifici e acqua si potrebbe separare lo studio delle campiture da quello degli accenti. I particolari non devono necessariamente comparire tutti.",
-          "procedimento": "Si propone uno schizzo con una fila di edifici e uno spazio d’acqua in basso. Si stendono tinte leggere e si lascia asciugare. Si distinguono poi alcuni volumi, conservando parti chiare. Infine si scelgono poche finestre, linee verticali e una barca in primo piano. Le soste fra gli strati sono una scelta della prova; non si deduce dal filmato lo stato esatto della carta.",
-          "controllo": "Si osserva lo studio da lontano prima di aggiungere altre finestre. Se i volumi si confondono, si correggono i valori invece di moltiplicare i segni.",
+          "id": "U1-M2",
+          "titolo": "Modalità 2: Vicolo mediterraneo con trama al sale, luce sollevata e velatura d'ombra",
+          "autore": "Sudarshana Pal",
+          "proposta": "Il vicolo si costruisce dal chiaro allo scuro per velature successive: prima i colori locali leggeri dei muri con pochi grani di sale per l'intonaco scabro, poi piante e vasi aprendo la luce col pennello umido, infine una sola velatura trasparente viola-grigia che taglia in diagonale tutta la scena.",
+          "colori_video": "Ocra gialla, terra di Siena bruciata e rosso chiaro per i muri; blu oltremare e blu di Prussia per la porta; giallo limone, blu cobalto e verde vescica per i rampicanti; rosso veneziano e rosso di cadmio per i vasi; grigio di Payne e viola diossazina per le ombre portate (all'aperto: M5, BO, M1 + M3, M6, M8 + M10 diluiti).",
+          "pennelli_video": "Tondo medio-grande n. 10-12 per i fondi e le ombre, tondo n. 6 per vasi e piante, qualche grano di sale fino per il muro in mattoni.",
           "segmenti": [
-            "I1",
-            "I2",
-            "I3"
+            "U1-M2a",
+            "U1-M2b",
+            "U1-M2c"
           ],
-          "fasi": [
-            {
-              "titolo": "Campiture leggere",
-              "carta": "asciutta",
-              "attrezzo": "Pennello largo",
-              "testo": "Si propone un fondo chiaro per cielo, edifici e acqua. Si conservano parti di carta e si lascia asciugare."
-            },
-            {
-              "titolo": "Distinguere i volumi",
-              "carta": "asciutta",
-              "attrezzo": "Pennello a punta",
-              "testo": "Si scelgono alcuni lati in ombra e pochi tetti. Le campiture restano leggibili anche senza i particolari."
-            },
-            {
-              "titolo": "Pochi segni finali",
-              "carta": "asciutta",
-              "attrezzo": "Pennello a punta",
-              "testo": "Si aggiungono una barca e pochi segni sugli edifici. Si confronta il loro peso con quello delle masse iniziali."
-            }
-          ]
+          "procedimento": "Si bagna il primo tratto dei muri e si stende un velo leggero di ocra gialla e terra di Siena bruciata, lasciando luminoso il fondo del vicolo; sulla spalla destra più carica, mentre il colore è umido e non allagato, si pizzicano pochi grani di sale che assorbendo il pigmento suggeriscono la pietra corrosa. Asciugato il fondo e spazzolato via il sale, si dipingono le chiome verdi bagnato su bagnato e la fila dei vasi in rosso veneziano e rosso chiaro; prima che la terracotta asciughi, si passa un pennello pulito e appena umido sul fianco sinistro di ogni vaso per sollevare una striscia di luce. Quando tutto il foglio è ben asciutto, si prepara una miscela trasparente al tè-latte di grigio di Payne e viola e si stendono con decisione le grandi ombre portate oblique sui due lati e sul selciato."
+        }
+      ]
+    },
+    {
+      "voce": "U2 Facciate al sole e grande ombra portata",
+      "breve": "Facciate e ombra",
+      "descrizione": "Una casa imbiancata a calce o la facciata principale di una strada brillano al sole solo se attorno a loro il cielo, una quinta laterale e una grande ombra portata a terra costruiscono il contrasto.",
+      "colori_studio": "Blu cobalto (PB28) e blu ceruleo (PB35) per il cielo terso; terra di Siena naturale (PBr7) o ocra gialla (PY43) per i riflessi caldi sulle facciate e sul selciato; blu oltremare (PB29) mescolato con terra di Siena bruciata (PR101) o terra d'ombra bruciata (PBr7) per i grigi-viola delle grandi ombre portate.",
+      "colori_aperto": "Coi 6 colori ridotti: ceruleo e oltremare (M12) per scontornare il cielo attorno ai tetti bianchi; M5 molto diluito al tè per il calore della pietra; M11 (grigio caldo) più carico di oltremare o M8 + M10 al latte per la grande ombra obliqua su muri e strada.",
+      "pennelli": "Pennello morbido a goccia (mop o quill medio-grande) che tiene molta miscela ma conserva una punta fine per scontornare tetti, balconi e spigoli in una sola passata.",
+      "esercizio": "Scegli uno scorcio con due soli edifici e il sole di lato. Correggi a matita le linee verticali dei muri perché non cadano verso il centro, lascia la facciata principale quasi a carta bianca e collega in un'unica campitura continua la parete in ombra e l'ombra proiettata di traverso sulla strada.",
+      "controllo": "La grande ombra portata deve restare trasparente e decisa, con il bordo netto dove batte il sole e senza buchi o ripassi che la rendano fangosa.",
+      "attenzione": [
+        "coprire di grigio anche la facciata al sole spegnendo il bianco della carta",
+        "copiare le linee verticali storte di una fotografia scattata col grandangolo dal basso",
+        "spezzettare l'ombra in tante macchie separate invece di chiuderla in una forma sola"
+      ],
+      "modalita": [
+        {
+          "id": "U2-M1",
+          "titolo": "Modalità 1: Case bianche al sole per contrasto di cielo e ombre nette",
+          "autore": "Tim Wilmot",
+          "proposta": "Per dipingere muri imbiancati a calce non si dipinge il bianco: si lascia intatta la carta e la si fa brillare scontornandola prima col cielo azzurro intenso e poi con ombre geometriche nitide sotto tetti, balconi e scala.",
+          "colori_video": "Blu cobalto e blu ceruleo in parti uguali per il cielo; veli leggerissimi di terra di Siena naturale sulle zone secondarie; blu oltremare spento con terra di Siena bruciata e una punta di cremisi per i grigi freddi delle ombre (all'aperto: M12 per il cielo, M8 + M11 per le ombre).",
+          "pennelli_video": "Pennello morbido a goccia sintetico per il cielo e pennello in vajo a punta fine per tagliare gli spigoli delle ombre su carta asciutta.",
+          "segmenti": [
+            "U2-M1a",
+            "U2-M1b"
+          ],
+          "procedimento": "Con il foglio tenuto leggermente inclinato si prepara una miscela generosa di blu cobalto e blu ceruleo. Partendo dall'alto su carta asciutta si stende il cielo e, usando la punta del pennello a goccia, si scontorna con cura il profilo superiore dei tetti piani e del comignolo bianco, che balzano subito avanti sul blu. Dopo aver sistemato i toni medi della casa in fondo e del furgoncino in ombra, si lavora sulle pareti rimaste bianche a sinistra: con un grigio-azzurro trasparente su carta asciutta si tirano in pochi colpi sicuri i triangoli obliqui delle ombre portate dai balconi e dalle mensole, unendoli alla massa d'ombra sulla strada."
+        },
+        {
+          "id": "U2-M2",
+          "titolo": "Modalità 2: Raddrizzare le verticali e chiudere la strada con l'ombra in primo piano",
+          "autore": "Doug Jackson",
+          "proposta": "Dopo aver raddrizzato a matita le verticali distorte dalla foto, un primo lavaggio continuo unisce cielo, facciate e asfalto. Quando tutto è asciutto, una sola grande ombra scura scende dall'edificio di destra e attraversa la strada, spingendo lo sguardo verso la facciata illuminata.",
+          "colori_video": "Blu cobalto per il cielo; terra di Siena naturale smorzata con poco blu oltremare per i muri chiari e il fondo stradale; blu oltremare carico con terra di Siena bruciata o bruno caldo per la grande ombra portata (all'aperto: ceruleo/BO, M5 + punta di BO al tè, M10/M11 al latte-miele per l'ombra).",
+          "pennelli_video": "Pennello medio a goccia (quill) per il primo lavaggio continuo e pennello grande ben carico per stendere l'ombra finale senza fermarsi.",
+          "segmenti": [
+            "U2-M2a",
+            "U2-M2b"
+          ],
+          "procedimento": "Nel disegno preparatorio si evita di copiare la convergenza verso l'alto tipica del telefono: gli spigoli verticali dei palazzi si tracciano paralleli ai bordi laterali del foglio. Il primo passaggio di colore è un lavaggio unico dall'alto in basso: azzurro mosso nel cielo, poi terra di Siena naturale molto diluita sulle facciate e un beige-grigio leggero fino al selciato. Una volta asciugato completamente il foglio, si carica bene un pennello grande con blu oltremare e terra bruna: si copre in ombra la quinta destra e, senza perdere il bordo umido, si trascina la campitura in diagonale su tutto il primo piano della strada e sulle figure in controluce."
+        }
+      ]
+    },
+    {
+      "voce": "U3 Strade in città, riflessi sul bagnato e figure in scala",
+      "breve": "Strade, riflessi e figure",
+      "descrizione": "In un viale cittadino contano l'atmosfera unitaria che lega palazzi e asfalto, i punti luce risparmiati dei fari, i riflessi verticali se piove e la scala coerente delle persone che camminano.",
+      "colori_studio": "Una triade semplice di giallo caldo, rosso o cremisi (PV19) e blu cobalto o oltremare (PB28, PB29) mescolati direttamente sul foglio per ottenere grigi urbani cangianti, più terra d'ombra bruciata (PBr7) o grigio di Payne per gli accenti scuri di auto e passanti.",
+      "colori_aperto": "Coi 6 colori ridotti: M11 (grigio caldo) e M9 (grigio-lilla) lasciati fondere sul foglio per gli edifici nella foschia e l'asfalto; M5 e M6 per riflessi caldi e fanali; M10 (scuro al miele) per sagome di auto, ombre sotto le ruote e passanti.",
+      "pennelli": "Pennello morbido a goccia per condurre il cordone d'acqua continuo, piatto o tondo medio per le pennellate verticali dei riflessi, tondo piccolo a punta fine (n. 2-4) o rigger per gambe, cavi e pali.",
+      "esercizio": "Dividi il foglio in due prove rapide. Sopra dipingi un tratto di strada bagnata: risparmia due piccoli quadratini bianchi per i fari di un'auto, inumidisci con acqua pulita una fascia sotto il veicolo e lascia cadere due pennellate verticali scure senza più toccarle. Sotto traccia una linea sottile ad altezza d'occhio e disegna cinque passanti a distanze diverse tenendo tutte le teste degli adulti vicine a quella linea.",
+      "controllo": "I riflessi sull'asfalto devono scendere rigorosamente verticali e sfumati; le figure devono avere spalle più larghe dei piedi e toccare terra con un'ombra sottile.",
+      "attenzione": [
+        "inclinare i riflessi sull'asfalto bagnato invece di tirarli dritti in verticale",
+        "disegnare braccia, volti e piedi rigidi invece di una sagoma rapida a cuneo",
+        "mettere le teste dei passanti lontani più in alto o più in basso rispetto a chi cammina vicino su terreno in piano"
+      ],
+      "modalita": [
+        {
+          "id": "U3-M1",
+          "titolo": "Modalità 1: Strada sotto la pioggia con la «goccia guida», fari bianchi e riflessi verticali",
+          "autore": "Joseph Zbukvic",
+          "proposta": "Zbukvic lega palazzi, tram, automobili e strada in un solo lavaggio atmosferico guidando verso il basso il cordone d'acqua carico di colore («Mr Bead»). Risparmia a carta bianca i fari delle auto e ottiene l'asfalto bagnato posando pennellate verticali su una fascia pre-inumidita.",
+          "colori_video": "Grigi neutri ma vivi ottenuti mescolando tre primari (giallo caldo, cremisi/rosso e blu cobalto o oltremare) in proporzioni variabili da calde a fredde, con bruni e scuri al miele per veicoli, ombre sotto le auto e figure (all'aperto: M9 + M11 al latte per il lavaggio, M6 e M10 per auto e riflessi).",
+          "pennelli_video": "Pennello morbido a goccia (mop) per il grande lavaggio continuo, tondo sintetico a punta fine per auto e figure, rigger per i cavi del tram.",
+          "segmenti": [
+            "U3-M1a",
+            "U3-M1b",
+            "U3-M1c"
+          ],
+          "procedimento": "A matita morbida si fissa l'orizzonte appena sotto metà foglio e si accennano la sagoma frontale del tram e le auto, decidendo subito dove lasciare la carta bianca per i fari. Tenendo la tavola inclinata, si avvia dall'alto il lavaggio atmosferico degli edifici e si accompagna verso il basso il cordone liquido che si forma al bordo inferiore della campitura: variando dentro la goccia il rapporto fra caldo e freddo si scende fino all'asfalto, girando attorno ai tetti lucidi e ai fari bianchi dei veicoli. Quando il piano stradale ha preso forma, si bagna con sola acqua pulita una striscia sotto le auto e vi si posano pennellate verticali calde e scure, lasciate espandere senza ripassarle; un taglio scuro orizzontale sotto le ruote ancora infine le vetture a terra."
+        },
+        {
+          "id": "U3-M2",
+          "titolo": "Modalità 2: Passanti credibili con busto «a carota» e teste alla stessa quota",
+          "autore": "Juliene Sinclair",
+          "proposta": "Le persone danno subito scala agli edifici se restano semplici sagome in movimento: testa piccola leggermente staccata dal collo, busto a cuneo più largo alle spalle che ai fianchi, gambe affusolate e tutte le teste degli adulti allineate sulla linea dell'orizzonte.",
+          "colori_video": "Colori vivaci o neutri a consistenza latte-miele per i busti (blu oltremare, rosso caldo, ocra), bruno scuro o grigio di Payne per le gambe e velatura leggera grigio-azzurra per le ombre sul marciapiede (all'aperto: BO, M6, M10 per busti e gambe, M11 diluito per le ombre a terra).",
+          "pennelli_video": "Tondo piccolo-medio n. 4-6 con punta elastica e ben raccolta.",
+          "segmenti": [
+            "U3-M2a",
+            "U3-M2b"
+          ],
+          "procedimento": "Prima di entrare nel dipinto si prova il gesto fuori campo: un piccolo tocco ovale per la testa, un filo d'aria per il collo e sotto un busto triangolare smussato («a carota»), largo alle spalle e stretto al bacino, da cui scendono due tratti sottili per le gambe, uno leggermente più corto o staccato per suggerire il passo. Portato il metodo nella veduta urbana con sfondo chiaro già asciutto, si dispongono passanti singoli, coppie accostate che si fondono parzialmente a umido e bambini più bassi: su una strada in piano tutte le teste degli adulti sfiorano la stessa quota orizzontale, mentre i piedi scendono verso il basso per chi è in primo piano. Una breve ombra obliqua ai piedi collega ogni figura al pavimento."
         }
       ]
     }

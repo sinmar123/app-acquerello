@@ -1,8 +1,18 @@
 # CHANGELOG - app-acquerello
 
+## 2026-11-15 - AGY - Rifacimento modulo S6 (Paesaggio urbano), pulizia telemetria e uniformazione sinmar
+
+- **Modulo 4.6 S6 · Paesaggio urbano (`/urbano/`) rifatto sul modello degli Alberi**: sostituiti gli schemi astratti e i passaggi non incorporabili con tre esempi completi (`U1` vicoli, scalinate e muri colorati; `U2` facciate al sole e grande ombra portata; `U3` strade in città, riflessi sul bagnato e figure in scala), sei modalità tratte da sei video didattici tutti riproducibili nel lettore incorporato (Thomas W. Schaller, Sudarshana Pal, Tim Wilmot, Doug Jackson, Joseph Zbukvic, Juliene Sinclair) e quindici estratti verificati al secondo sui fotogrammi e sui sottotitoli il 15/11/2026.
+- **Infografiche e tavolozze di S6**: disegnate in `dati/urbano/infografiche.py` diciotto illustrazioni SVG figurative passo-passo (tre fasi per modalità) con stati della carta, attrezzo e gettoni colore generici privi di nomi commerciali; aggiunte a ogni esempio la doppia proposta di colore (in studio e tavolozza ridotta `M1`-`M12` per l'aperto), l'esercizio guidato (compresa l'alternativa con liquido per mascherare rinviata a `/approfondimenti/bianco/#riserve`) e i riquadri finali di controllo ed errori da evitare. Allineati `dati/soggetti/soggetti.json` (`Pubblicato`, badge e conteggi), `scripts/genera-sito.py` e `lib/prompt-chat.js`.
+- **Pulizia editoriale e rimozione telemetria interna**: riscritto `README.md` per il pubblico esterno con mappa completa delle sezioni aggiornata; spostata fuori dal tracciamento Git la cartella interna `ricerche/` (conservata localmente in `lavoro/ricerche-storiche-oc/`); riscritti in forma sobria per il lettore i riquadri apribili `nota_metodo` dei cinque temi in `dati/approfondimenti/temi/*.json`, eliminando addebiti API in USD, conteggi di secondi/token e sigle interne degli agenti; corretto il refuso `, CC BY 4.0.` nella fonte `kuuva` di `rudolf-steiner.json`.
+- **Uniformazione pseudonimo `sinmar`**: rinominate con `git mv` le undici fotografie di Sestri Levante (`wsl-2026-sinmar-01.jpg`..`11.jpg`), rimossi su indicazione del curatore i tre collegamenti finali ai post social esterni in `watercolor-sestri-levante-2026.json`, e aggiornati i riferimenti in `dati/approfondimenti/sezione.json`, `dati/eventi/idee-interviste.md` e nella prosa storica di questo registro.
+- **Verifiche**: generazione completa `python scripts/genera-sito.py` superata senza avvisi (Gulpease `urbano` 63, `soggetti` 81, zero marche fuori sezione); verificati UTF-8 senza BOM, 1.906 collegamenti interni e ancore su tutte le 20 pagine generate in `site/`, e resa visiva desktop (1280 px) e mobile (390 px) in Chromium. Pubblicazione autorizzata dal curatore. Firma: Antigravity / AGY.
+
+Prossima azione: nessuna; dopo l'unione della pull request su `main`, verificare il rilascio automatico su Cloudflare Pages.
+
 ## 2026-11-14 - OC (Acquerello) - Oltremare integrato nella pagina sul blu
 
-Su via libera specifico di Sandro nel topic Acquerello, messaggio 1057 («ok vai»), applicata la proposta di riunire le due pagine senza perdere i contenuti. Il tema unico **5.2, Il blu e i blu nell’acquerello** occupa la posizione precedentemente riservata all’oltremare; le altre quattro questioni conservano numeri e contenuti. Undici capitoli complessivi: il capitolo 5 sul blu oltremare PB29 conserva gli otto capitoli precedenti come paragrafi 5.1-5.8, con indice interno; il blu intenso diventa capitolo 6. Tutti i 35 blocchi del testo precedente sull’oltremare sono conservati integralmente, salvo gli identificativi delle fonti. Aperture e rimandi sono raccordati alla pagina unificata. Le 16 fonti precedenti sono conservate in 12 nuove voci e quattro voci comuni, senza duplicare le opere; totale 51 fonti. Restano i limiti delle letture e la natura non eseguita delle sei prove.
+Su via libera specifico di sinmar nel topic Acquerello, messaggio 1057 («ok vai»), applicata la proposta di riunire le due pagine senza perdere i contenuti. Il tema unico **5.2, Il blu e i blu nell’acquerello** occupa la posizione precedentemente riservata all’oltremare; le altre quattro questioni conservano numeri e contenuti. Undici capitoli complessivi: il capitolo 5 sul blu oltremare PB29 conserva gli otto capitoli precedenti come paragrafi 5.1-5.8, con indice interno; il blu intenso diventa capitolo 6. Tutti i 35 blocchi del testo precedente sull’oltremare sono conservati integralmente, salvo gli identificativi delle fonti. Aperture e rimandi sono raccordati alla pagina unificata. Le 16 fonti precedenti sono conservate in 12 nuove voci e quattro voci comuni, senza duplicare le opere; totale 51 fonti. Restano i limiti delle letture e la natura non eseguita delle sei prove.
 
 Il vecchio indirizzo dell’oltremare è una pagina di solo rinvio, con canonical e noindex, esclusa da menu e sitemap. Una mappa di 94 ancore porta ai paragrafi e ai riferimenti bibliografici effettivi, evitando di confondere i vecchi «tinta», «conservazione» e numeri di fonte con quelli del blu generale. Il fallback senza JavaScript apre il capitolo. Indici, numerazione e prompt della chat sono rigenerati dai sorgenti. I generatori supportano l’indice interno e le pagine trasferite, senza cambiare gli altri temi.
 
@@ -22,11 +32,11 @@ Prossima azione: Eseguire le operazioni GitHub autorizzate tramite Generale e ri
 
 ## 2026-11-12 - OC (Acquerello) - Apertura degli Approfondimenti: metodo spiegato senza gergo
 
-Applicato il testo «Come nascono gli Approfondimenti», consegnato a Sandro nel messaggio 923 e approvato per la pubblicazione nel messaggio 927 del topic Acquerello. Spiegati il ruolo dell’intelligenza artificiale, il confronto delle risposte, la verifica documentale, i limiti e la scelta finale del curatore. Nessuna attribuzione al curatore di tutte le letture degli assistenti. Titolo dell’apertura facoltativo nei dati; mantenuto il generatore unico. Le note di metodo dei singoli temi restano invariate.
+Applicato il testo «Come nascono gli Approfondimenti», consegnato a sinmar nel messaggio 923 e approvato per la pubblicazione nel messaggio 927 del topic Acquerello. Spiegati il ruolo dell’intelligenza artificiale, il confronto delle risposte, la verifica documentale, i limiti e la scelta finale del curatore. Nessuna attribuzione al curatore di tutte le letture degli assistenti. Titolo dell’apertura facoltativo nei dati; mantenuto il generatore unico. Le note di metodo dei singoli temi restano invariate.
 
 Generazione completa riuscita (Gulpease della sezione 63), due collaudi Chromium a 412 e 1280 pixel con cinque collegamenti ciascuno, testo confrontato integralmente con la proposta approvata e apertura riscontrata visivamente. Nessuno sbordamento o errore JavaScript; modifica al solo HTML dell’elenco, altri 48 output identici.
 
-Il capitolo sul blu intenso è approvato come testo, ma la pagina generale sul blu non è ancora redatta; collocazione della prima pubblicazione da definire con Sandro. Nessun altro testo tematico incluso in questo intervento. Firma: OC (Acquerello).
+Il capitolo sul blu intenso è approvato come testo, ma la pagina generale sul blu non è ancora redatta; collocazione della prima pubblicazione da definire con sinmar. Nessun altro testo tematico incluso in questo intervento. Firma: OC (Acquerello).
 
 Prossima azione: Pubblicare questa modifica autorizzata tramite Generale e riscontrare la pagina online.
 
@@ -36,7 +46,7 @@ Prossima azione: Pubblicare questa modifica autorizzata tramite Generale e risco
 - Conservati tutti i paragrafi precedenti, sintesi, otto capitoli, nove fonti, nota di metodo e tre esperienze non eseguite. Nessuna nuova ricerca. Modificato soltanto il JSON della pagina, oltre ai file di governo.
 - Verifiche: generazione completa riuscita, Gulpease 62; dei 49 output, 48 identici alla base e modificata soltanto la pagina Steiner. Due collaudi Chromium, 412 e 1280 pixel, con nuovo paragrafo visibile, rimando e ritorno alla fonte funzionanti, nessun errore JavaScript o sbordamento. Confrontati testo e struttura con la versione precedente: unica aggiunta il paragrafo proposto. UTF-8 strict senza BOM o caratteri corrotti; sorgenti dello snapshot condiviso preservati. Ramo `oc/261109-steiner-acquerello`; nessuna unione o pubblicazione. Firma: OpenClaw / OC.
 
-Prossima azione: Rivedere la precisazione nella premessa di Steiner; unione e pubblicazione solo con nuovo via libera esplicito di Sandro nel topic app-acquerello.
+Prossima azione: Rivedere la precisazione nella premessa di Steiner; unione e pubblicazione solo con nuovo via libera esplicito di sinmar nel topic app-acquerello.
 
 ## 2026-11-09 - OC - Rudolf Steiner: nuova pagina autonoma dai testi approvati
 
@@ -46,7 +56,7 @@ Prossima azione: Rivedere la precisazione nella premessa di Steiner; unione e pu
 - Nota apribile su autori, attività, tempi e costi della ricerca già conclusa: quattro rapporti, Qwen interrotto senza rapporto e nessun rilancio. Stime e addebiti restano distinti, senza inventare un costo totale. Nessuna nuova corsa a consumo o modifica ad altre app.
 - Verifiche: generazione completa riuscita, Gulpease 62; sei collaudi Chromium, pagina e due indici a 412 e 1280 pixel, senza sbordamenti o errori JavaScript. Tutte le nove fonti, i ritorni da richiami ripetuti e i collegamenti alle opere approvate funzionano. Controllati 1.714 collegamenti interni e risorse su 19 pagine, nessun rinvio rotto o ID duplicato. Dei 48 output di base, 44 restano identici; cambiano soltanto Home, indice degli Approfondimenti, sitemap e prompt della chat, e si aggiunge la pagina Steiner. Settanta sorgenti dello snapshot condiviso preservati; UTF-8 strict senza BOM o caratteri corrotti. Firma: OpenClaw / OC.
 
-Prossima azione: Rivedere la PR Steiner dopo la PR #79; unione e pubblicazione solo con via libera esplicito di Sandro per ciascuna PR nel topic app-acquerello.
+Prossima azione: Rivedere la PR Steiner dopo la PR #79; unione e pubblicazione solo con via libera esplicito di sinmar per ciascuna PR nel topic app-acquerello.
 
 Cronologia delle modifiche. Ordine cronologico inverso.
 
@@ -61,7 +71,7 @@ Nota: nelle voci fino al 1/11/2026 il curatore è indicato con lo pseudonimo sin
 - Su successiva indicazione del curatore, raccolte tutte le fonti in fondo a ciascuno dei quattro approfondimenti: numerazione continua, voci non duplicate, voce «Fonti» nell’indice e ritorno al richiamo seguito. Conservate le vecchie ancore e tutti i testi dei capitoli durante lo spostamento. Nessuna modifica al sistema delle fonti di Principi, Teoria dei colori o Marche.
 - Verifiche: generazione completa riuscita, Gulpease 63 per la terna e 61 per Wada; Chromium a 412 e 1280 pixel, note, fonti, ritorni e collegamenti reciproci funzionanti, nessuno sbordamento o errore JavaScript. Verificati 1.562 collegamenti interni su 18 pagine, senza ID duplicati o rinvii rotti. Rispetto alla base b892e05 cambiano dodici dei 64 output, tutti previsti: i quattro approfondimenti, i relativi indici, la home e il prompt. Gli altri 52 sono identici. Il collaudo della nuova impaginazione verifica tutti e quattro i temi alle due larghezze, compreso il ritorno da citazioni ripetute della stessa fonte. UTF-8 strict senza BOM o caratteri corrotti; sorgenti della copia condivisa preservati. Nessuna unione o pubblicazione. Firma: OpenClaw / OC.
 
-Prossima azione: Rivedere l’integrazione Munsell-Ostwald e le fonti finali; unione e pubblicazione solo con nuovo via libera di Sandro nel topic dell’app. Preparare poi la ricerca per un approfondimento autonomo su Rudolf Steiner.
+Prossima azione: Rivedere l’integrazione Munsell-Ostwald e le fonti finali; unione e pubblicazione solo con nuovo via libera di sinmar nel topic dell’app. Preparare poi la ricerca per un approfondimento autonomo su Rudolf Steiner.
 
 ## 2026-11-09 - OC - Origine di tinta, valore e croma e revisione storica Wada
 
@@ -71,7 +81,7 @@ Prossima azione: Rivedere l’integrazione Munsell-Ostwald e le fonti finali; un
 - Nota pubblica su autori, tempi, attività e limiti economici: circa 1,47 USD è la sola stima GLM e DeepSeek, non un costo totale. Qwen, Gemini e piano restano non monetizzati. Saldi, account e grezzi non trasferiti nel repository; nessuna modifica ad Alibaba o a limiti-ai.
 - Verifiche: generazione completa riuscita, Gulpease 62 per la nuova pagina e 60 per Wada. Collaudo Chromium a 412 e 1280 pixel: capitoli e tabelle completi, rimandi e ritorni alle fonti, apertura delle note e collegamenti reciproci funzionanti; nessuno sbordamento o errore JavaScript. Nuova pagina in Home, Approfondimenti, sitemap e sintesi della chat. Rispetto alla precedente testa della PR cambiano soltanto quattro file di site e il prompt della chat, si aggiunge una pagina; gli altri output sono identici. Collegamenti interni e ID controllati senza rilievi. Sorgenti condivisi preservati e file modificati UTF-8 strict senza BOM o caratteri corrotti. Nessuna unione o pubblicazione. Firma: OpenClaw / OC.
 
-Prossima azione: Rivedere il nuovo approfondimento su tinta, valore e croma e la scheda Wada nella PR #78; unione e pubblicazione solo con nuovo via libera esplicito di Sandro nel topic dell’app.
+Prossima azione: Rivedere il nuovo approfondimento su tinta, valore e croma e la scheda Wada nella PR #78; unione e pubblicazione solo con nuovo via libera esplicito di sinmar nel topic dell’app.
 
 
 ## 2026-11-08 - OC - Sanzo Wada: chiarezza espositiva e registro da pubblicazione
@@ -81,7 +91,7 @@ Prossima azione: Rivedere il nuovo approfondimento su tinta, valore e croma e la
 - Fonti bibliografiche, relativi dettagli e rendiconto su autori, modelli, tempi e costi confrontati con la base e identici. Mantenuti tutti i dati numerici dei capitoli e gli identificativi dei sette capitoli. Riscontri mirati su cataloghi editoriali, Handprint, ICC e README del dataset; nessuna lettura integrale dei libri o dell’appendice storica dichiarata e nessuna nuova ricerca multi-modello a pagamento.
 - Verifiche: generazione completa riuscita; dei 47 output, 45 identici alla base main `72e3aee`, modificati solo la pagina Wada e il prompt della chat. Nel prompt cambia esclusivamente la sintesi Wada; istruzioni e altre sezioni identiche. Gulpease Wada 61, sopra la soglia 52. Rilettura integrale; Chromium a 412 e 1280 pixel: sette capitoli, quattro prove e tre tabelle completi, tredici fonti presenti, rendiconto apribile identico, ancore valide, nessun ID duplicato, sbordamento o errore JavaScript. File modificati UTF-8 strict senza BOM o caratteri corrotti. Nessuna unione o pubblicazione. Firma: OpenClaw / OC.
 
-Prossima azione: Rivedere la riscrittura della scheda Sanzo Wada; unione e pubblicazione solo con nuovo via libera esplicito di Sandro nel topic dell’app.
+Prossima azione: Rivedere la riscrittura della scheda Sanzo Wada; unione e pubblicazione solo con nuovo via libera esplicito di sinmar nel topic dell’app.
 
 ## 2026-11-08 - OC - Premessa urbana senza corso e riserve prima del blu
 
@@ -90,11 +100,11 @@ Prossima azione: Rivedere la riscrittura della scheda Sanzo Wada; unione e pubbl
 - Aggiunto il rinvio a «Il bianco nell’acquerello», capitolo sulle riserve, per le fonti sull’uso del liquido. Riscontrata la pagina ufficiale «How to use Art Masking Fluid», già citata in quella sezione: carta asciutta e mascheratore asciutto prima del lavaggio. Nessun nuovo pigmento o minuto video dedotto, nessuna nuova corsa di ricerca a pagamento.
 - Verifiche: generazione completa riuscita; confrontati tutti i 47 output con la base main `d6b4b69`, 46 identici e modificata soltanto `site/urbano/index.html`. Confronto semantico del JSON: cambiano solo premessa, nota di metodo e studio U1; altri esempi, osservazioni dei video e segmenti invariati. Collaudo Chromium a 412 e 1280 pixel: premessa senza riferimenti al corso, riserve nelle prime due fasi, rinvio alle fonti funzionante, dodici schemi, cinque lettori e tre collegamenti conservati, nessuno sbordamento, ID duplicato o errore JavaScript. File modificati UTF-8 strict senza BOM o caratteri corrotti; nessuna unione o pubblicazione. Firma: OpenClaw / OC.
 
-Prossima azione: Rivedere la premessa e la mascheratura del vicolo; unione e pubblicazione solo con nuovo via libera esplicito di Sandro nel topic dell’app.
+Prossima azione: Rivedere la premessa e la mascheratura del vicolo; unione e pubblicazione solo con nuovo via libera esplicito di sinmar nel topic dell’app.
 
 ## 2026-11-08 - OC - Autorizzazione alla pubblicazione dell’avviso YouTube unico
 
-- Sandro ha autorizzato l’unione e la pubblicazione della [PR #76](https://github.com/sinmar123/app-acquerello/pull/76) con «Ok vai» nel topic app-acquerello, messaggio 583. Testa approvata `8d52ca2cd6b2490a15aa264b93de92ad51798ddf`: tre file previsti, controllo «costruisci» superato e unione disponibile.
+- sinmar ha autorizzato l’unione e la pubblicazione della [PR #76](https://github.com/sinmar123/app-acquerello/pull/76) con «Ok vai» nel topic app-acquerello, messaggio 583. Testa approvata `8d52ca2cd6b2490a15aa264b93de92ad51798ddf`: tre file previsti, controllo «costruisci» superato e unione disponibile.
 - Il via libera è registrato soltanto in README e CHANGELOG; sorgenti, testi delle pagine e prompt della chat restano invariati. Restano validi il collaudo Chromium a 412 e 1280 pixel e i controlli sui tre collegamenti al minuto. Firma: OpenClaw / OC.
 
 Prossima azione: Unire la PR #76 autorizzata, verificare la pubblicazione dell’avviso unico e registrare l’esito.
@@ -105,11 +115,11 @@ Prossima azione: Unire la PR #76 autorizzata, verificare la pubblicazione dell�
 - Pulsanti, collegamenti, intervalli, osservazioni, video incorporati e loro informative invariati. Nessuna modifica ai dati tecnici, alle infografiche o alle altre sezioni.
 - Verifiche: generazione completa riuscita; confrontati i 47 output con la base main `390906d`, 46 identici e modificata soltanto `site/urbano/index.html`. Collaudo Chromium a 412 e 1280 pixel: un solo avviso comune, tre collegamenti al minuto corretto, cinque lettori invariati, nessuno sbordamento o errore JavaScript. File modificati UTF-8 strict, senza BOM o caratteri corrotti; copia condivisa preservata. Nessuna unione o pubblicazione. Firma: OpenClaw / OC.
 
-Prossima azione: Rivedere la correzione dell’avviso YouTube; unione e pubblicazione solo con nuovo via libera esplicito di Sandro nel topic dell’app.
+Prossima azione: Rivedere la correzione dell’avviso YouTube; unione e pubblicazione solo con nuovo via libera esplicito di sinmar nel topic dell’app.
 
 ## 2026-11-08 - OC - Autorizzazione alla pubblicazione del modulo S6
 
-- Sandro ha autorizzato l’unione e la pubblicazione della [PR #75](https://github.com/sinmar123/app-acquerello/pull/75) con «vai» nel topic app-acquerello l’8 novembre 2026. Controllata la testa `4cc2e4ae4bb8748e4938fff765371fdd9bc1306c`: quattordici file previsti, base `55398e2ec8822c2ed7327361c4b805c469264994`, controllo «costruisci» riuscito e unione disponibile.
+- sinmar ha autorizzato l’unione e la pubblicazione della [PR #75](https://github.com/sinmar123/app-acquerello/pull/75) con «vai» nel topic app-acquerello l’8 novembre 2026. Controllata la testa `4cc2e4ae4bb8748e4938fff765371fdd9bc1306c`: quattordici file previsti, base `55398e2ec8822c2ed7327361c4b805c469264994`, controllo «costruisci» riuscito e unione disponibile.
 - Il via libera è registrato soltanto in README, CHANGELOG e ricerca: dati, generatori, testi del sito e prompt della chat restano invariati. Rigenerazione completa riuscita e tutti gli output confrontati byte per byte con la testa approvata, senza differenze. Restano validi il collaudo mobile e desktop e i controlli sui passaggi video già documentati.
 - Il nuovo commit documentale sarà ricontrollato su GitHub prima dell’unione; seguiranno riscontro del workflow di pubblicazione e confronto HTTP delle 17 pagine. Nessuna nuova ricerca o modifica dei contenuti approvati. Firma: OpenClaw / OC.
 
@@ -124,7 +134,7 @@ Prossima azione: Unire la PR #75 autorizzata, verificare la pubblicazione del mo
 - Collaudo effettivo in Chromium temporaneo a 412 e 1280 pixel: nessuno sbordamento orizzontale, dodici schemi SVG controllati, rimandi del modulo sotto la barra e nessun errore JavaScript. Riproduzione reale di Zbukvic e Castagnet; su Zbukvic verificati metà velocità, ripetizione, arresto a 573,81 s per fine impostata a 574 s e riavvio. Nessuna richiesta a YouTube o Google prima del clic. La demo italiana restituisce il codice 150 nonostante i metadati favorevoli: rispettato il blocco, i tre passaggi aprono YouTube al minuto indicato e dichiarano l’assenza di arresto automatico. Verificati i tre collegamenti e il caricamento degli Alberi con i 32 estratti esistenti.
 - Aggiornamento sullo stesso ramo della PR #75, senza unione o pubblicazione e senza nuove corse di ricerca a pagamento. README, istruzioni dell’app e documento di ricerca allineati. Firma: OpenClaw / OC.
 
-Prossima azione: Rivedere la PR #75 sul modulo S6; unione e pubblicazione solo con un nuovo via libera esplicito di Sandro nel topic dell’app.
+Prossima azione: Rivedere la PR #75 sul modulo S6; unione e pubblicazione solo con un nuovo via libera esplicito di sinmar nel topic dell’app.
 
 ## 2026-11-08 - OC - Ricerca preliminare per S6, paesaggio urbano
 
@@ -138,7 +148,7 @@ Prossima azione: rivedere la proposta S6 e scegliere i video per l’analisi dei
 
 ## 2026-11-08 - OC - Autorizzazione alla pubblicazione della scheda Wada
 
-- Sandro ha autorizzato l’unione e la pubblicazione della PR #74 con «Pubblica» nel topic app-acquerello, messaggio 557 dell’8 novembre 2026. Controllata la testa `0c7640efc4f797fabd5f9e61856550606536c476`: sette file previsti, controllo «costruisci» riuscito e diff complessivo GitHub identico alla copia locale, con le sole intestazioni di contesto normalizzate.
+- sinmar ha autorizzato l’unione e la pubblicazione della PR #74 con «Pubblica» nel topic app-acquerello, messaggio 557 dell’8 novembre 2026. Controllata la testa `0c7640efc4f797fabd5f9e61856550606536c476`: sette file previsti, controllo «costruisci» riuscito e diff complessivo GitHub identico alla copia locale, con le sole intestazioni di contesto normalizzate.
 - Aggiornato esclusivamente lo stato documentale in README e CHANGELOG. La scheda resta quella approvata: sette capitoli, 13 fonti esterne senza autocitazioni, quattro prove proposte e nota su autori, tempi e costi. Fonte ICC e testi tecnici invariati. Il collaudo visivo nel browser resta non eseguito per assenza di un eseguibile supportato. Firma: OpenClaw / OC.
 
 Prossima azione: completare l’unione autorizzata della PR #74 e verificare la pubblicazione; poi registrare l’esito.
@@ -150,7 +160,7 @@ Prossima azione: completare l’unione autorizzata della PR #74 e verificare la 
 - Verifiche: generazione completa riuscita; confrontati i 46 output della proposta precedente, 45 identici e modificata soltanto la pagina Wada. Controllati 16 HTML e 1.355 collegamenti interni, senza destinazioni mancanti o ID duplicati. Gulpease Wada 68, sopra la soglia 52. Confronto semantico del JSON: cambiano solo bibliografia, richiami e tipo di quattro blocchi di metodo; tutte le parole della pagina restano invariate. UTF-8 strict senza BOM o caratteri corrotti. Collaudo visivo nel browser non eseguito.
 - Aggiornamento della proposta sul ramo della PR #74, senza unione o pubblicazione. Firma: OpenClaw / OC.
 
-Prossima azione: Rivedere la PR #74 e svolgere il collaudo visivo quando disponibile; unione e pubblicazione solo con nuovo via libera esplicito di Sandro.
+Prossima azione: Rivedere la PR #74 e svolgere il collaudo visivo quando disponibile; unione e pubblicazione solo con nuovo via libera esplicito di sinmar.
 
 ## 2026-11-08 - OC - Approfondimento proposto sugli abbinamenti di Sanzo Wada
 
@@ -165,7 +175,7 @@ Prossima azione: revisione del curatore della nuova pagina e collaudo visivo qua
 
 ## 2026-11-07 - OC - Unione autorizzata del finale dell’introduzione, PR #73
 
-- Sandro ha autorizzato nel topic dell’app l’unione della [PR #73](https://github.com/sinmar123/app-acquerello/pull/73) con «Ok unisci». Ricontrollati la testa `a746398`, i tre file effettivi, il diff locale e quello di GitHub sulla base `6246e30`, l’assenza di conflitti e il controllo «costruisci» superato.
+- sinmar ha autorizzato nel topic dell’app l’unione della [PR #73](https://github.com/sinmar123/app-acquerello/pull/73) con «Ok unisci». Ricontrollati la testa `a746398`, i tre file effettivi, il diff locale e quello di GitHub sulla base `6246e30`, l’assenza di conflitti e il controllo «costruisci» superato.
 - Nel README registrata l’autorizzazione al posto della nota provvisoria di proposta non pubblicata. Nessuna ulteriore modifica ai due capoversi concordati, ai primi due capoversi dell’apertura, al titolo o alle altre parti del sito. La nuova generazione è confrontata con i 45 output approvati, tutti identici.
 - Unione vincolata alla testa controllata della PR e al controllo automatico riuscito. Esito della pubblicazione sul commit di unione e confronto degli HTML serviti con quelli approvati registrati nel giornale alla chiusura. Il confronto dell’HTML resta distinto dal collaudo visivo nel browser. Firma: OpenClaw / OC.
 
@@ -173,16 +183,16 @@ Prossima azione: eseguire il collaudo visivo del sito quando il browser sarà di
 
 ## 2026-11-07 - OC - Home: rilettura, co-curatori e cura dei contenuti IA
 
-- Inseriti negli ultimi due capoversi della premessa i testi concordati con Sandro nel topic dell’app e approvati con «Ok.. vai»: tono meno personale, limiti della rilettura delle pagine rielaborate e delle ricerche approfondite con l’IA, possibile contributo dei lettori come co-curatori. Il riferimento al futuro del lavoro umano è sostituito dalla frase ridimensionata: «Il Quaderno è anche un piccolo esperimento per capire come prendersi cura, insieme, dei contenuti prodotti dall’IA».
+- Inseriti negli ultimi due capoversi della premessa i testi concordati con sinmar nel topic dell’app e approvati con «Ok.. vai»: tono meno personale, limiti della rilettura delle pagine rielaborate e delle ricerche approfondite con l’IA, possibile contributo dei lettori come co-curatori. Il riferimento al futuro del lavoro umano è sostituito dalla frase ridimensionata: «Il Quaderno è anche un piccolo esperimento per capire come prendersi cura, insieme, dei contenuti prodotti dall’IA».
 - Conservati i primi due capoversi dell’introduzione, il titolo «Quaderno di acquerello con IA», il collegamento a GitHub e tutte le parti della Home fuori dai due capoversi. Nessuna modifica a guide, fonti, dati, immagini, pareri, API o prompt della chat. README allineato al perimetro e allo stato della proposta.
 - Verifiche: generazione completa senza errori con le dipendenze già disponibili; confrontati 45 output con la base `6246e30`, cambia soltanto `site/index.html`, gli altri 44 sono identici. HTML della Home confrontato con la base sostituendo solo i due capoversi approvati: corrispondenza esatta. Collegamenti e ID preservati, 25 collegamenti interni validi e nessun ID duplicato. `git diff --check` senza rilievi. Collaudo visivo nel browser non eseguito in questa attività.
 - Lavoro sul nuovo ramo `oc/261107-introduzione-cura-condivisa`, dalla base aggiornata dopo lo squash della PR #72, senza sovrascrivere i sorgenti condivisi preesistenti. Proposta preparata con pull request, senza unione né pubblicazione. Firma: OpenClaw / OC.
 
-Prossima azione: unire la pull request sulla revisione del finale solo dopo l’ok esplicito di Sandro alla pubblicazione.
+Prossima azione: unire la pull request sulla revisione del finale solo dopo l’ok esplicito di sinmar alla pubblicazione.
 
 ## 2026-11-07 - OC - Unione autorizzata del nuovo titolo, PR #72
 
-- Sandro ha autorizzato nel topic dell’app l’unione della [PR #72](https://github.com/sinmar123/app-acquerello/pull/72) con «Ok unisci». Ricontrollati il commit `9083dad`, gli 11 file della proposta, l’assenza di conflitti e il controllo «costruisci» superato. Il titolo approvato è «Quaderno di acquerello con IA»; la premessa resta invariata.
+- sinmar ha autorizzato nel topic dell’app l’unione della [PR #72](https://github.com/sinmar123/app-acquerello/pull/72) con «Ok unisci». Ricontrollati il commit `9083dad`, gli 11 file della proposta, l’assenza di conflitti e il controllo «costruisci» superato. Il titolo approvato è «Quaderno di acquerello con IA»; la premessa resta invariata.
 - Tolta dal README la nota provvisoria di proposta non pubblicata e registrata l’autorizzazione. Nessuna ulteriore modifica ai testi del sito, ai generatori, al prompt o ai dati rispetto alla revisione approvata. L’unione resta vincolata alla testa verificata della PR e al controllo automatico riuscito; esito della pubblicazione e confronto dei 15 HTML online con quelli generati vengono registrati nel giornale alla chiusura.
 - Il confronto dell’HTML non sostituisce il collaudo visivo nel browser, che resta nel filone già aperto. Firma: OpenClaw / OC.
 
@@ -190,27 +200,27 @@ Prossima azione: eseguire il collaudo visivo del sito quando il browser sarà di
 
 ## 2026-11-07 - OC - Titolo semplificato: Quaderno di acquerello con IA
 
-- Su richiesta di Sandro nel topic dell’app, sostituito nella proposta il titolo «Quaderno di acquerello in cornice AI» con «Quaderno di acquerello con IA». Aggiornata la stessa PR #72, ancora aperta, mantenendo il ramo esistente e senza riscriverne lo storico.
+- Su richiesta di sinmar nel topic dell’app, sostituito nella proposta il titolo «Quaderno di acquerello in cornice AI» con «Quaderno di acquerello con IA». Aggiornata la stessa PR #72, ancora aperta, mantenendo il ramo esistente e senza riscriverne lo storico.
 - Allineati titolo principale e titolo del browser della Home, nome del sito nelle anteprime, piè di pagina e nome esteso dell’assistente. Aggiornati README e CONTRIBUTING; `lib/prompt-chat.js` rigenerato dal generatore. Premessa, fonti, dati, indirizzi, nome del repository, licenze, immagini, opere e pareri restano invariati.
 - Verifiche locali: generazione completa senza errori con le dipendenze già disponibili. Confrontati 45 output con la versione precedente della PR: 15 HTML e prompt cambiano solo nel nome, gli altri 29 sono identici. H1, titolo del browser e anteprima della Home corrispondono al nuovo titolo; `og:site_name` corretto nelle 15 pagine. Quattro capoversi della premessa, collegamenti e ID identici alla versione precedente. `git diff --check` senza rilievi; collaudo visivo non eseguito in questa attività.
 - La copia condivisa è rimasta intatta: lavoro in una copia Git separata del ramo della PR, recuperata da GitHub. Nessuna unione né pubblicazione; il controllo GitHub viene rieseguito sulla nuova testa. Firma: OpenClaw / OC.
 
-Prossima azione: unire la PR #72 con il titolo aggiornato solo dopo l’ok esplicito di Sandro alla pubblicazione.
+Prossima azione: unire la PR #72 con il titolo aggiornato solo dopo l’ok esplicito di sinmar alla pubblicazione.
 
 ## 2026-11-04 - OC - Nuovo titolo: Quaderno di acquerello in cornice AI
 
-- Su richiesta di Sandro nel topic dell’app, preparato il titolo esatto «Quaderno di acquerello in cornice AI». Allineati titolo principale della Home, titolo della scheda del browser, anteprime di condivisione, piè di pagina e nome esteso nel prompt dell’assistente. Il nome breve «Quaderno», l’indirizzo del sito e il nome del repository restano invariati.
+- Su richiesta di sinmar nel topic dell’app, preparato il titolo esatto «Quaderno di acquerello in cornice AI». Allineati titolo principale della Home, titolo della scheda del browser, anteprime di condivisione, piè di pagina e nome esteso nel prompt dell’assistente. Il nome breve «Quaderno», l’indirizzo del sito e il nome del repository restano invariati.
 - Aggiornati README e CONTRIBUTING; rigenerato `lib/prompt-chat.js` dal generatore, senza modificarlo a mano. Nessuna riscrittura della premessa appena pubblicata, delle guide, delle fonti, dei dati tecnici o dei riferimenti storici; nessuna modifica a licenze, immagini, video, opere e pareri.
 - Verifiche: generazione completa senza errori, dalle sole dipendenze già disponibili. Confrontati i 45 output con la base aggiornata `1912014`: cambiano i 15 HTML e il prompt esclusivamente per il nuovo nome; gli altri 29 sono identici. Titolo H1, titolo del browser e anteprima della Home esatti, `og:site_name` allineato in tutte le 15 pagine. Collegamenti e ID di ogni pagina identici alla base, quattro capoversi della premessa invariati. `git diff --check` senza rilievi. Collaudo visivo non eseguito in questa attività.
 - Lavoro su un ramo separato dalla base aggiornata, senza modificare i sorgenti condivisi e le differenze CRLF preesistenti. La nuova richiesta riguarda il titolo: la pull request viene preparata senza unione né pubblicazione. Firma: OpenClaw / OC.
 
-Prossima azione: unire la pull request sul nuovo titolo solo dopo l’ok esplicito di Sandro per questa modifica.
+Prossima azione: unire la pull request sul nuovo titolo solo dopo l’ok esplicito di sinmar per questa modifica.
 
 ## 2026-11-04 - OC - Home: premessa unica e apertura alla collaborazione
 
-- Inseriti i quattro capoversi concordati con Sandro nel topic dell’app: i primi due della revisione di stile e i due del finale successivamente riveduto. La premessa racconta l’iniziativa personale, l’uso dell’IA nello studio e nello sviluppo del sito, i limiti della rilettura e il possibile aiuto di un controllo indipendente. Il finale apre alla collaborazione su contenuti e codice, con il collegamento al repository GitHub.
+- Inseriti i quattro capoversi concordati con sinmar nel topic dell’app: i primi due della revisione di stile e i due del finale successivamente riveduto. La premessa racconta l’iniziativa personale, l’uso dell’IA nello studio e nello sviluppo del sito, i limiti della rilettura e il possibile aiuto di un controllo indipendente. Il finale apre alla collaborazione su contenuti e codice, con il collegamento al repository GitHub.
 - Rimossa dalla sola Home la nota di metodo separata, assorbita nella presentazione. Restano invariate le note specifiche delle guide, le fonti, i dati tecnici, i video, le immagini, le opere e i pareri. Allineata la descrizione nel README; nessuna variazione agli stili condivisi con le altre pagine.
-- Autorizzazione: Sandro ha approvato questa revisione e ne ha chiesto la pubblicazione nel topic dell’app con «Ok pubblica» il 4 novembre 2026. L’intervento passa da un ramo e da una pull request, con unione vincolata alla testa verificata e al controllo automatico riuscito.
+- Autorizzazione: sinmar ha approvato questa revisione e ne ha chiesto la pubblicazione nel topic dell’app con «Ok pubblica» il 4 novembre 2026. L’intervento passa da un ramo e da una pull request, con unione vincolata alla testa verificata e al controllo automatico riuscito.
 - Verifiche locali: generazione completa senza errori con Pillow già disponibile, nessuna installazione; confrontati i 45 output con la base aggiornata `3727391`, cambia soltanto `site/index.html` e gli altri 44, compreso il prompt della chat, sono identici. I quattro capoversi estratti dall’HTML coincidono parola per parola con quelli approvati. Le altre parti della Home sono identiche, salvo la nota rimossa; 25 collegamenti interni validi e nessun ID duplicato. `git diff --check` senza rilievi.
 - Leggibilità: Gulpease della Home 49, contro 53 prima; la Home non è inclusa nel blocco automatico del generatore. Conservato il testo approvato, senza una nuova riscrittura. Le guide controllate restano sopra la soglia prevista. Collaudo visivo non eseguito: il browser gestito non trova un eseguibile supportato. L’esito dell’unione, della pubblicazione automatica e del confronto online viene registrato nel giornale alla chiusura. Firma: OpenClaw / OC.
 
@@ -218,7 +228,7 @@ Prossima azione: eseguire il collaudo visivo del sito quando il browser sarà di
 
 ## 2026-11-04 - OC - Unione autorizzata dell’introduzione personale, PR #70
 
-- Sandro ha autorizzato nel topic dell’app l’unione della [PR #70](https://github.com/sinmar123/app-acquerello/pull/70) con «Ok unisci». Ricontrollati il commit `7b74601`, il ramo `oc/261104-introduzione-personale`, i tre file della proposta, l’assenza di conflitti e il controllo «costruisci» superato. Il testo coincide con i quattro capoversi approvati.
+- sinmar ha autorizzato nel topic dell’app l’unione della [PR #70](https://github.com/sinmar123/app-acquerello/pull/70) con «Ok unisci». Ricontrollati il commit `7b74601`, il ramo `oc/261104-introduzione-personale`, i tre file della proposta, l’assenza di conflitti e il controllo «costruisci» superato. Il testo coincide con i quattro capoversi approvati.
 - Tolta dal README la nota provvisoria «non è ancora pubblicata». Nessuna ulteriore modifica ai testi del sito, ai generatori, alle fonti o ai dati rispetto alla revisione approvata. L’unione resta vincolata alla testa controllata della PR; il risultato della pubblicazione automatica e il confronto della Home online con quella generata sono registrati nel giornale al termine della stessa attività.
 - La verifica dell’HTML resta distinta dal collaudo visivo nel browser, già aperto nel filone dedicato. Firma: OpenClaw / OC.
 
@@ -226,24 +236,24 @@ Prossima azione: eseguire il controllo visivo del sito quando il browser sarà d
 
 ## 2026-11-04 - OC - Introduzione personale del Quaderno
 
-- Su richiesta di Sandro nel topic dell’app, inseriti nella Home i quattro capoversi approvati, con l’ultimo inizio concordato: «Dipingo ad acquerello per hobby…» e «Da questa idea è nato il Quaderno…». L’apertura racconta l’iniziativa di un singolo appassionato, l’uso professionale dei modelli linguistici e l’esperimento per organizzare le informazioni e avere un aiuto nello studio.
+- Su richiesta di sinmar nel topic dell’app, inseriti nella Home i quattro capoversi approvati, con l’ultimo inizio concordato: «Dipingo ad acquerello per hobby…» e «Da questa idea è nato il Quaderno…». L’apertura racconta l’iniziativa di un singolo appassionato, l’uso professionale dei modelli linguistici e l’esperimento per organizzare le informazioni e avere un aiuto nello studio.
 - Il sottotitolo diventa «Perché questo Quaderno»; eliminata la precedente presentazione al plurale. Nella nota di metodo cambiano soltanto «Lo realizziamo» in «Lo realizzo» e «li proviamo» in «li provo». Conservati dettagli delle fonti, modelli, sezioni e invito ai contributi; aggiornato il README.
 - Verifiche: generazione completa riuscita usando Pillow già presente in `lavoro/oc-python-deps`, senza nuove installazioni; confrontati i 45 output prima e dopo, con la sola Home diversa. I quattro capoversi estratti dall’HTML coincidono con il testo approvato; 15 pagine senza ID duplicati e 26 collegamenti interni della Home validi. Fuori dall’apertura cambiano soltanto i due verbi nella nota di metodo; prompt della chat e altre pagine identici. `git diff --check` senza rilievi. Controllo dell’HTML eseguito, prova visiva nel browser non eseguita.
 - Lavoro sul ramo `oc/261104-introduzione-personale`, dalla versione aggiornata di `origin/main` (`fe255f5`), in una copia separata. La copia principale e le sue differenze preesistenti restano intatte. Nessun intervento su dati tecnici, fonti, video, immagini, opere o pareri. Firma: OpenClaw / OC.
 
-Prossima azione: unire la pull request sull’introduzione personale solo dopo l’ok esplicito di Sandro per questa modifica.
+Prossima azione: unire la pull request sull’introduzione personale solo dopo l’ok esplicito di sinmar per questa modifica.
 
 ## 2026-11-04 - OC - Approvazione della pubblicazione del formato delle fonti, PR #69
 
-- Sandro ha autorizzato nel topic dell’app l’unione della PR #69 con «Ok unisci». Verificati il ramo `oc/261104-formato-fonti`, l’assenza di conflitti e il controllo «costruisci» superato sul commit `599054f`.
+- sinmar ha autorizzato nel topic dell’app l’unione della PR #69 con «Ok unisci». Verificati il ramo `oc/261104-formato-fonti`, l’assenza di conflitti e il controllo «costruisci» superato sul commit `599054f`.
 - Aggiornato il README con il collegamento alla PR e l’autorizzazione del curatore. Nessun nuovo intervento su fonti, dati tecnici, generatori o presentazione delle pagine rispetto alla revisione approvata. La pubblicazione automatica segue l’unione su `main`; l’esito viene registrato nel giornale.
-- Resta distinta la prova visiva da eseguire con un browser reale, oggi non disponibile al bot. Verifica dell’installazione richiesta da Sandro, senza dichiarare eseguito il collaudo grafico. Firma: OpenClaw / OC.
+- Resta distinta la prova visiva da eseguire con un browser reale, oggi non disponibile al bot. Verifica dell’installazione richiesta da sinmar, senza dichiarare eseguito il collaudo grafico. Firma: OpenClaw / OC.
 
 Prossima azione: eseguire il controllo visivo del formato delle fonti quando il browser sarà disponibile.
 
 ## 2026-11-04 - OC - Formato italiano delle fonti, controllo esteso a tutto il sito
 
-- Su richiesta di Sandro nel topic dell’app, applicata la proposta bibliografica acquisita nella PR #68; il successivo «Controlla tutte le fonti del sito» estende il lavoro a tutte le sezioni, non soltanto al blu oltremare. Lavoro sul ramo `oc/261104-formato-fonti`, senza unione su `main` né pubblicazione.
+- Su richiesta di sinmar nel topic dell’app, applicata la proposta bibliografica acquisita nella PR #68; il successivo «Controlla tutte le fonti del sito» estende il lavoro a tutte le sezioni, non soltanto al blu oltremare. Lavoro sul ramo `oc/261104-formato-fonti`, senza unione su `main` né pubblicazione.
 - Esaminate tutte le 164 registrazioni bibliografiche nei dati: 42 nei Principi, 12 nella Teoria dei colori, otto nelle Marche, 86 nel Bianco e 16 nel Blu oltremare. Allineate anche le sette citazioni composte dal generatore delle Marche. Per ogni collegamento il titolo o una descrizione effettivamente presente nella voce prende il posto del generico «apri». Le descrizioni redazionali non sono presentate come titoli originali inventati.
 - Blu oltremare: eliminate dalla presentazione le etichette isolate «primaria…». Le 16 voci separano autore, titolo, pubblicazione, nota e consultazione; i DOI sono cliccabili. Le schede del produttore, i confronti di campioni, i due studi letti soltanto nel riassunto e i limiti di trasferibilità restano riconoscibili e sempre visibili. I dettagli della lettura sono apribili; la precedente registrazione completa resta nei dati. La fonte interna rimanda alle prove proposte, non a risultati già ottenuti. La tabella tecnica della gamma citata è stata ritrovata nella pagina ufficiale, risolvendo il dubbio segnalato nello studio bibliografico.
 - Nelle altre guide si conservano testi e citazioni delle fonti, con i loro limiti, aggiungendo il titolo da collegare. La fonte prima chiamata soltanto «Video sulla scelta della carta» ora indica The Mind of Watercolor e «Watercolor Paper Types, Comparing & Choosing», riscontrati nei metadati pubblici del video. Conservati appunti di studio, indirizzo e passaggi citati. Nei corsi non più disponibili, il collegamento identifica il video affine o il canale attuale, non quello originario.
@@ -252,11 +262,11 @@ Prossima azione: eseguire il controllo visivo del formato delle fonti quando il 
 - Collegamenti esterni: 249 indirizzi distinti nei dati e nei cataloghi video, ricondotti a 228 richieste senza duplicare i passaggi dello stesso video; 197 risposte HTTP riuscite, di cui una schermata di verifica di PubMed, e 31 accessi non confermati dal controllo automatico (chiusure della connessione, tempi scaduti, 402, 403, 429 o 500). Recuperati i metadati di 81 video; riscontrate con il lettore web anche pagine di Handprint, museo, istituto di conservazione, artista ed evento. Non cancellati riferimenti per un blocco tecnico o una limitazione d’accesso. Non si tratta di una nuova verifica scientifica integrale delle fonti.
 - Controllo visivo su telefono e prova reale da tastiera non eseguiti: il browser gestito non trova un eseguibile supportato. Nessuna immagine, opera, parere, tabella commerciale o dato tecnico modificato. Firma: OpenClaw / OC.
 
-Prossima azione: unire la pull request sul formato delle fonti solo dopo l’ok esplicito di Sandro per questa modifica.
+Prossima azione: unire la pull request sul formato delle fonti solo dopo l’ok esplicito di sinmar per questa modifica.
 
 ## 2026-11-04 - OC - Acquisizione dello studio bibliografico, PR #68
 
-- Sandro ha autorizzato l’unione della PR #68 nel topic dell’app con «Ok unisci». Il perimetro resta documentale: rapporto, README e CHANGELOG; nessuna applicazione della proposta ai riferimenti visibili del sito.
+- sinmar ha autorizzato l’unione della PR #68 nel topic dell’app con «Ok unisci». Il perimetro resta documentale: rapporto, README e CHANGELOG; nessuna applicazione della proposta ai riferimenti visibili del sito.
 - Verificati su GitHub il ramo `cdx/261104-riferimenti-bibliografici`, i tre file della proposta, l’assenza di conflitti e il controllo «costruisci» superato. Aggiornato il README per distinguere l’acquisizione dello studio dall’eventuale modifica delle pagine.
 - Verifica locale: generazione completa riuscita; confrontate prima e dopo le impronte dei 45 file di sito e prompt, tutti identici. Nessuna modifica a JSON, generatori, video, pigmenti o fonti delle guide. Registrazione: OpenClaw / OC.
 
@@ -264,38 +274,38 @@ Prossima azione: valutare l’applicazione della proposta bibliografica al sito 
 
 ## 2026-11-04 - CDX - Studio sulle convenzioni bibliografiche italiane
 
-- Incarico di Sandro dal topic app-acquerello, destinato a Ricerche: studiare convenzioni autorevoli e proporre un criterio unico prima di modificare il sito. Vincolo registrato: terminologia italiana naturale e comprensibile per le descrizioni, mantenendo distinti i titoli originali; non assumere che «fonte primaria» sia scorretto o straniero.
+- Incarico di sinmar dal topic app-acquerello, destinato a Ricerche: studiare convenzioni autorevoli e proporre un criterio unico prima di modificare il sito. Vincolo registrato: terminologia italiana naturale e comprensibile per le descrizioni, mantenendo distinti i titoli originali; non assumere che «fonte primaria» sia scorretto o straniero.
 - Scritto `ricerche/app-acquerello-261104-studio-riferimenti-bibliografici.md`: confronto fra norma tecnica, regole editoriali e consuetudini; numeri/autore-data, posizione delle fonti, telefono e ritorno al testo; dati per sei tipi di documento, dati mancanti e limiti della lettura. Nove esempi prima/dopo reali, modelli per libro e video e proposta unica motivata. Nessun altro agente o modello a pagamento avviato.
 - Base usata: worktree al commit `38416c4`; PR 67 riscontrata come unita tramite API GitHub. Tutte le 16 stringhe di fonte del JSON confrontate con il testo pubblicato e presenti: otto elenchi, 31 voci ripetute, 36 gruppi di richiami. Metadati degli esempi confrontati con pagine degli editori, autori, musei e archivi e con il registro DOI; conservati i limiti delle letture originarie. Testo integrale della UNI ISO 690 non consultato, limite dichiarato. PDF ICCU letto nelle p. 11-15.
 - Aggiornato README con il rinvio allo studio. Proposta non applicata: JSON, generatori e pagine pubblicate restano invariati. Registrazione firmata Codex / CDX.
 - Controlli di chiusura: generazione completa riuscita con le dipendenze isolate già presenti; confrontate le impronte dei 45 file di `site/` e del prompt considerati insieme prima e dopo, tutti identici. Rapporto con nove coppie prima/dopo, 42 collegamenti e nessun segnaposto o trattino lungo. Nessun collaudo grafico su telefono dichiarato.
 
-Prossima azione: sottoporre questa proposta editoriale a Sandro, senza applicarla al sito prima della sua decisione.
+Prossima azione: sottoporre questa proposta editoriale a sinmar, senza applicarla al sito prima della sua decisione.
 
 ## 2026-11-03 - OC - Approfondimenti: il blu oltremare nell’acquerello
 
-- Su richiesta di Sandro, dopo la proposta nel topic Ricerche e il via del 3 novembre, preparata la pagina 5.2 in `dati/approfondimenti/temi/blu-oltremare.json`, indirizzo `/approfondimenti/blu-oltremare/`: sintesi, premessa, metodo, otto capitoli e 16 fonti, di cui 15 esterne e una proposta interna per le sei prove pratiche.
+- Su richiesta di sinmar, dopo la proposta nel topic Ricerche e il via del 3 novembre, preparata la pagina 5.2 in `dati/approfondimenti/temi/blu-oltremare.json`, indirizzo `/approfondimenti/blu-oltremare/`: sintesi, premessa, metodo, otto capitoli e 16 fonti, di cui 15 esterne e una proposta interna per le sei prove pratiche.
 - Identità e storia del PB29, tinta e asciugatura, granulazione, lavature e velature, mescolanze, luce e conservazione, caso museale di Frederick Wilson, prove sui propri materiali. Dichiarazioni commerciali, osservazioni dei campioni, esperimenti e proposte del Quaderno restano distinti. Due studi di conservazione restano dichiarati letti solo nell’abstract; nessun trasferimento automatico da olio o resina all’acquerello. Nessuna classifica commerciale né marca nel corpo della guida.
 - Aggiornati apertura degli Approfondimenti, README, descrizione in AGENTS e prompt della chat generato. Home, elenco dei temi e sitemap ricevono la pagina dal generatore esistente; non cambiano API, generatori o testi della pagina sul bianco.
 - Verifica: generazione completa riuscita, pagina 5.2 con Gulpease 67; testi dei capitoli confrontati fra JSON e HTML e riferimenti esterni confrontati con il rapporto verificato del 3 novembre. Controllati 40 testi di capitolo fra JSON e HTML e 1.257 collegamenti locali su 15 pagine, senza errori; `git diff --check` senza rilievi. La verifica grafica nel browser non è stata eseguita: nel container non è disponibile un browser supportato. Pillow 12.3.0 usato da una copia isolata nella cartella di lavoro ignorata da Git, senza modificare l’ambiente condiviso.
 
 -- OC
 
-Prossima azione: revisione della pagina da parte di Sandro; unire la pull request su main soltanto dopo il suo ok esplicito per questa modifica.
+Prossima azione: revisione della pagina da parte di sinmar; unire la pull request su main soltanto dopo il suo ok esplicito per questa modifica.
 
 ## 2026-11-03 - OC - Titolo della sezione Alberi
 
-- Su richiesta di Sandro nel topic dell'app, tolto «ad acquerello» dal nome del modulo S1 nella Home e dal titolo della pagina Alberi. Conservati la numerazione, il sottotitolo descrittivo e il percorso `/alberi/`.
+- Su richiesta di sinmar nel topic dell'app, tolto «ad acquerello» dal nome del modulo S1 nella Home e dal titolo della pagina Alberi. Conservati la numerazione, il sottotitolo descrittivo e il percorso `/alberi/`.
 - Allineati la nota descrittiva dei dati, README e prompt della chat generato. Nessuna modifica alle spiegazioni, ai pigmenti, alle fonti, alle modalità o ai video; i titoli originali dei video restano invariati.
 - Verifica: generazione completa riuscita; titolo della Home e della pagina confrontati con la richiesta. Collegamenti e ancore delle 14 pagine identici alla revisione precedente; JSON tecnico invariato salvo titolo e nota descrittiva; il prompt cambia solo nel nome della sezione. `git diff --check` senza rilievi. Modifica su ramo dedicato, senza pubblicazione.
 
 -- OC
 
-Prossima azione: unire la pull request su main solo dopo l'ok esplicito di Sandro per questa modifica.
+Prossima azione: unire la pull request su main solo dopo l'ok esplicito di sinmar per questa modifica.
 
 ## 2026-11-03 - OC - Revisione di stile approvata per tutte le sezioni
 
-- Applicate le proposte del documento locale `lavoro/app-acquerello-261102-proposte-stile.md`, approvate da Sandro nel topic dell'app il 2/11/2026 con «Ok fai tutte le modifiche proposte». Nessuna unione su `main` o pubblicazione.
+- Applicate le proposte del documento locale `lavoro/app-acquerello-261102-proposte-stile.md`, approvate da sinmar nel topic dell'app il 2/11/2026 con «Ok fai tutte le modifiche proposte». Nessuna unione su `main` o pubblicazione.
 - Home: presentazione ridotta, tolto l'elenco che ripeteva le schede, distinti modulo disponibile e moduli in preparazione. I dettagli sui modelli restano nella Nota di metodo apribile. Testata confrontata con la versione iniziale: da 183 a 88 parole, contando titolo, sottotitolo e paragrafi.
 - Eventi: aperture riscritte in prosa compiuta; nell'archivio compare l'anno corretto e la scheda apre con date e luogo. Negli Alberi, tutte le 25 modalità hanno titoli brevi e sintesi iniziali; procedimenti estesi e sintesi dei passaggi sono apribili. Conservati colori, autori, attrezzi, esercizi, infografiche e 32 segmenti video.
 - Principi: obiettivo della sezione prima delle note di metodo, con collegamenti agli argomenti del capitolo 8. Teoria dei colori: definizioni ed esempi prima di storia e dettagli; modello matematico e taratura separati dall'uso del calcolatore. Precisato l'ambito dell'acquerello trasparente nella frase sul bianco della carta, con il rimando all'Approfondimento. Limiti e taratura provvisoria restano visibili e invariati.
@@ -307,7 +317,7 @@ Prossima azione: unire la pull request su main solo dopo l'ok esplicito di Sandr
 
 -- OC
 
-Prossima azione: inviare il ramo oc/261102-proposte-stile e aprire la pull request con accesso GitHub abilitato; unire su main solo dopo l'ok esplicito di Sandro per questa revisione.
+Prossima azione: inviare il ramo oc/261102-proposte-stile e aprire la pull request con accesso GitHub abilitato; unire su main solo dopo l'ok esplicito di sinmar per questa revisione.
 
 ## 2026-11-02 - OC - Proposte di stile per le pagine pubbliche
 
@@ -329,7 +339,7 @@ Prossima azione: valutare le proposte di stile con il curatore, partendo da Home
 
 -- OC
 
-Prossima azione: collegare GitHub a OpenClaw, inviare il ramo oc/261102-nota-metodo-bianco e aprire la pull request; unire su main solo dopo l'ok esplicito di Sandro.
+Prossima azione: collegare GitHub a OpenClaw, inviare il ramo oc/261102-nota-metodo-bianco e aprire la pull request; unire su main solo dopo l'ok esplicito di sinmar.
 
 ## 2026-11-01 - GBOT-codex - Approfondimenti: nota di metodo sulla ricerca del bianco
 
@@ -365,36 +375,36 @@ Prossima azione: revisione del curatore; l'unione su `main`, che pubblica il sit
 
 ## 2026-11-01 - GBOT-codex - Il curatore si presenta come sinmar anche negli indirizzi
 
-- Su richiesta di Sandro, tolto il nome del curatore dalla nota della chat e dall'informativa. Il titolare resta indicato con l'account GitHub `sinmar123`, contattabile tramite una segnalazione sul repository; l'informativa precisa che usa lo pseudonimo `sinmar` e che il nome si può chiedere con la stessa segnalazione.
-- L'id dell'autore diventa `sinmar` e la sua pagina passa a `/opere/sinmar/`. Sandro ha rinominato con `git mv` il JSON dell'autore e la cartella delle fotografie. Opere, pareri e immagini restano invariati; menu, sitemap e prompt della chat usano il nuovo indirizzo.
+- Su richiesta di sinmar, tolto il nome del curatore dalla nota della chat e dall'informativa. Il titolare resta indicato con l'account GitHub `sinmar123`, contattabile tramite una segnalazione sul repository; l'informativa precisa che usa lo pseudonimo `sinmar` e che il nome si può chiedere con la stessa segnalazione.
+- L'id dell'autore diventa `sinmar` e la sua pagina passa a `/opere/sinmar/`. sinmar ha rinominato con `git mv` il JSON dell'autore e la cartella delle fotografie. Opere, pareri e immagini restano invariati; menu, sitemap e prompt della chat usano il nuovo indirizzo.
 - Aggiunta in `scripts/genera-sito.py` la lista `REINDIRIZZAMENTI_PAGINE`, con il controllo della pagina di arrivo: `/opere/alessandro-sanvitale/` rinvia a `/opere/sinmar/` con codice 301. Restano i rinvii di `/studio-plein-air` e il controllo dell'ancora di arrivo. Rimossi da `site/` i file generati della vecchia pagina, le copie delle fotografie al vecchio percorso e la pagina obsoleta di Studio ed en plein air; conservate le cartelle vuote.
 - Controlli: `python scripts/genera-sito.py` senza errori; Gulpease delle pagine controllate da 56 a 95, home 53. Sitemap con il nuovo indirizzo e senza il vecchio; nessun nome completo nei file di `site/`, vecchio id solo nella regola di rinvio. Restano 13 opere e 26 pareri; il JSON cambia solo nell'id, le fotografie sono identiche e le voci storiche del CHANGELOG restano intatte. Verificati anche gli errori per pagina o ancora di arrivo mancanti.
 
 -- GBOT-codex
 
-Prossima azione: verificare le modifiche e preparare commit e pull request fuori dalla sandbox; l'unione su `main`, che pubblica il sito, aspetta l'ok di Sandro.
+Prossima azione: verificare le modifiche e preparare commit e pull request fuori dalla sandbox; l'unione su `main`, che pubblica il sito, aspetta l'ok di sinmar.
 
 ## 2026-11-01 - GBOT-codex - Home: prima i dilettanti, poi una dichiarazione più esplicita sull'IA
 
-- Su richiesta di Sandro, riordinate le tre note della testata in `scripts/genera-sito.py`: sito scritto da dilettanti per dilettanti, ruolo dell'intelligenza artificiale, apertura ai contributi.
-- Su richiesta di Sandro del 1° novembre, sostituita solo la frase «Lo realizziamo in gran parte con l'intelligenza artificiale.»: il sito si realizza con l'ausilio di strumenti di IA, partendo dai modelli disponibili nell'ottobre 2026; man mano che ne escono di nuovi, si provano per rileggere e migliorare i testi.
+- Su richiesta di sinmar, riordinate le tre note della testata in `scripts/genera-sito.py`: sito scritto da dilettanti per dilettanti, ruolo dell'intelligenza artificiale, apertura ai contributi.
+- Su richiesta di sinmar del 1° novembre, sostituita solo la frase «Lo realizziamo in gran parte con l'intelligenza artificiale.»: il sito si realizza con l'ausilio di strumenti di IA, partendo dai modelli disponibili nell'ottobre 2026; man mano che ne escono di nuovi, si provano per rileggere e migliorare i testi.
 - In questa revisione restano invariati il resto della nota sull'IA e le altre due note, già riordinate e semplificate. Restano quindi il dialogo da cui nascono testi, pagine, codice e illustrazioni, i nomi Gemini 4 Argon, GPT-6 Astra e Claude Opus 5.5, i loro compiti e il richiamo alle fonti degli Approfondimenti.
 - Controlli: `python scripts/genera-sito.py` senza errori; tutte le pagine controllate sopra 52. Misurata anche la home, esclusa dal controllo ordinario: Gulpease da 50 a 53 rispetto a `main`; le tre note passano da 52 a 63. Testi del generatore confrontati con quelli in `site/index.html`: coincidono e seguono l'ordine richiesto. `lib/prompt-chat.js` invariato nel contenuto.
 - Sul W520 la sandbox di Codex non può scrivere nella cartella `.git` del repository; dopo aver verificato le modifiche, Grok Bot esegue commit, push e apertura della pull request fuori dalla sandbox.
 
 -- GBOT-codex
 
-Prossima azione: revisione dei testi da parte di Sandro; l'unione su `main` aspetta il suo ok.
+Prossima azione: revisione dei testi da parte di sinmar; l'unione su `main` aspetta il suo ok.
 
 ## 2026-10-31 - GBOT-codex - Il Quaderno dichiara l'aiuto dell'IA, le opere si firmano sinmar
 
-- **Home** (`scripts/genera-sito.py`): nuova nota prima di quella sui dilettanti. Dice che il Quaderno nasce nell'ottobre 2026 e che anche le pagine, l'architettura del sito e i testi sono stati sviluppati con l'aiuto di strumenti di intelligenza artificiale, con i modelli per compito: Gemini 4 Argon per l'assistente in fondo alle pagine, GPT-6 Astra e Claude Opus 5.5 per i pareri sulle opere, altri modelli per rileggere i testi; aggiunge che le ricerche degli Approfondimenti sono state fatte con gli stessi strumenti e che ogni affermazione porta la sua fonte. Testo proposto a Sandro e approvato.
+- **Home** (`scripts/genera-sito.py`): nuova nota prima di quella sui dilettanti. Dice che il Quaderno nasce nell'ottobre 2026 e che anche le pagine, l'architettura del sito e i testi sono stati sviluppati con l'aiuto di strumenti di intelligenza artificiale, con i modelli per compito: Gemini 4 Argon per l'assistente in fondo alle pagine, GPT-6 Astra e Claude Opus 5.5 per i pareri sulle opere, altri modelli per rileggere i testi; aggiunge che le ricerche degli Approfondimenti sono state fatte con gli stessi strumenti e che ogni affermazione porta la sua fonte. Testo proposto a sinmar e approvato.
 - **Approfondimenti** (`dati/approfondimenti/sezione.json`): l'introduzione chiude dicendo che le ricerche dietro le pagine sono ricerche approfondite fatte con l'aiuto dell'IA, con la fonte per ogni affermazione.
 - **Contributi** (`scripts/genera-sito.py`, riquadro dei suggerimenti, e `CONTRIBUTING.md` § 4): con l'invio si dichiara di essere l'autore del contributo, di avere il diritto di pubblicarlo e di acconsentire alla pubblicazione del nome o dello pseudonimo indicato. La firma facoltativa resta com'e.
-- **Pubblicazione delle opere** (`dati/opere/sezione.json`, ultimo paragrafo dell'introduzione, e `CONTRIBUTING.md` § 4): chi propone i propri acquerelli dichiara di essere l'autore o di avere il diritto di pubblicarli, acconsente alla pubblicazione delle fotografie nel Quaderno e nel repository pubblico, sceglie il nome o lo pseudonimo con cui firmarsi; le opere restano sue, fuori dalla licenza CC BY 4.0; le foto si pubblicano ridotte e senza i dati di scatto, quindi senza la posizione; il consenso si revoca chiedendo la rimozione dalla casella dei suggerimenti. Testo proposto a Sandro e approvato con «No va bene», cioe va bene cosi.
+- **Pubblicazione delle opere** (`dati/opere/sezione.json`, ultimo paragrafo dell'introduzione, e `CONTRIBUTING.md` § 4): chi propone i propri acquerelli dichiara di essere l'autore o di avere il diritto di pubblicarli, acconsente alla pubblicazione delle fotografie nel Quaderno e nel repository pubblico, sceglie il nome o lo pseudonimo con cui firmarsi; le opere restano sue, fuori dalla licenza CC BY 4.0; le foto si pubblicano ridotte e senza i dati di scatto, quindi senza la posizione; il consenso si revoca chiedendo la rimozione dalla casella dei suggerimenti. Testo proposto a sinmar e approvato con «No va bene», cioe va bene cosi.
 - **Pseudonimo**: l'autore della 7.1 ora si firma `sinmar`, nel campo `nome` di `dati/opere/autori/alessandro-sanvitale.json` e nell'apertura della `presentazione` («sinmar dipinge ad acquerello per passione dal 27 settembre 2021...»); il resto della presentazione resta identico. Cambiati anche i 12 crediti «foto di sinmar» della scheda `watercolor-sestri-levante-2026`, e le due citazioni in `README.md` e `AGENTS.md`. Il nome vero resta solo nell'informativa privacy, dove il titolare del trattamento deve restare identificabile.
 - Controlli: `python scripts/genera-sito.py` senza errori; leggibilita di tutte le pagine sopra 52 (la sezione Opere scende da 64 a 59 per il paragrafo nuovo); resta il nome vero solo nelle righe dell'informativa presenti in ogni pagina.
-- Prossima azione: l'unione della pull request in `main` aspetta l'ok di Sandro.
+- Prossima azione: l'unione della pull request in `main` aspetta l'ok di sinmar.
 
 -- GBOT-codex
 
@@ -412,27 +422,27 @@ Prossima azione: revisione dei testi da parte di Sandro; l'unione su `main` aspe
 
 ## 2026-10-31 - GBOT-codex - Opere: rimosso il foglio n. 104
 
-- Su richiesta di Sandro, rimossa la voce dell'opera con file `20230130-213802.jpg` e numero `104` da `dati/opere/autori/alessandro-sanvitale.json`. Nell'elenco restano 13 opere. Presentazione, come leggere le opere, dichiarazione dei pareri dell'IA e ordine restano invariati.
-- La fotografia `dati/opere/immagini/alessandro-sanvitale/20230130-213802.jpg` è stata tolta dal repository su richiesta di Sandro, senza archiviarla in un'altra cartella.
-- Sempre su richiesta di Sandro, sciolto il riferimento al foglio 104 nella frase d'apertura del parere dell'IA del foglio 107, rendendola autonoma senza aggiungere valutazioni. La parte «Da migliorare», gli altri pareri e le altre opere restano invariati.
+- Su richiesta di sinmar, rimossa la voce dell'opera con file `20230130-213802.jpg` e numero `104` da `dati/opere/autori/alessandro-sanvitale.json`. Nell'elenco restano 13 opere. Presentazione, come leggere le opere, dichiarazione dei pareri dell'IA e ordine restano invariati.
+- La fotografia `dati/opere/immagini/alessandro-sanvitale/20230130-213802.jpg` è stata tolta dal repository su richiesta di sinmar, senza archiviarla in un'altra cartella.
+- Sempre su richiesta di sinmar, sciolto il riferimento al foglio 104 nella frase d'apertura del parere dell'IA del foglio 107, rendendola autonoma senza aggiungere valutazioni. La parte «Da migliorare», gli altri pareri e le altre opere restano invariati.
 - Controlli: `python scripts/genera-sito.py` senza errori; nella pagina generata dell'autore compaiono 13 opere. Confronto del JSON con la versione precedente: nessuna differenza oltre alla rimozione del foglio 104 e all'apertura del parere del 107. Eliminata anche la copia residua della foto dalla cartella generata `site/`.
 - Il generatore aggiorna soltanto il conteggio delle opere da 14 a 13 in `lib/prompt-chat.js`.
-- Prossima azione: l'unione su `main` aspetta l'ok di Sandro.
+- Prossima azione: l'unione su `main` aspetta l'ok di sinmar.
 
 -- GBOT-codex
 
 ## 2026-10-31 - GBOT-app-acquerello - Opere: la presentazione non nomina più l'insegnante
 
-- Richiesta di Sandro del 31/10/2026: togliere il nome della sua insegnante dalla presentazione della sua pagina nelle Opere e dalle voci del CHANGELOG, perché non è sicuro che lei sia d'accordo a comparire.
+- Richiesta di sinmar del 31/10/2026: togliere il nome della sua insegnante dalla presentazione della sua pagina nelle Opere e dalle voci del CHANGELOG, perché non è sicuro che lei sia d'accordo a comparire.
 - **Presentazione** (`dati/opere/autori/alessandro-sanvitale.json`): «sinmar dipinge ad acquerello per passione dal 27 settembre 2021, il giorno del suo primo foglio. Negli anni ha seguito corsi di acquerello e oggi frequenta un corso avanzato dedicato al paesaggio. Questa pagina raccoglie una scelta dei suoi acquerelli, primo foglio compreso.» Il nome esce anche dalle tre voci del 28 ottobre 2026 che lo citavano, dove ora si legge «la sua insegnante»; il resto di quelle voci resta com'era.
 - Controlli: `python scripts/genera-sito.py` senza errori. Una ricerca in tutti i file del repository non trova più il nome.
-- Prossima azione: la decisione di Sandro sull'unione della pull request in `main`, che pubblica il sito.
+- Prossima azione: la decisione di sinmar sull'unione della pull request in `main`, che pubblica il sito.
 
 -- GBOT-app-acquerello
 
 ## 2026-10-29 - CC - Nuova sezione 5. Approfondimenti, con la pagina 5.1 Il bianco nell'acquerello
 
-- Richiesta di Sandro del 29/10/2026: una sezione per le questioni che tornano spesso fra chi dipinge, a cominciare dal bianco, partendo dalla ricerca del 27-28/10. Nome, posto e testi proposti in chat e approvati da lui prima di toccare l'app.
+- Richiesta di sinmar del 29/10/2026: una sezione per le questioni che tornano spesso fra chi dipinge, a cominciare dal bianco, partendo dalla ricerca del 27-28/10. Nome, posto e testi proposti in chat e approvati da lui prima di toccare l'app.
 - **Sezione** (`dati/approfondimenti/`): `sezione.json`, un JSON per questione in `temi/` e `genera-approfondimenti.py` (comando `pagina`). L'elenco sta in `/approfondimenti/`, ogni questione in `/approfondimenti/<id>/`; ogni questione è una sottosezione numerata (5.1), anche in home, rientrata sotto la 5.
 - **Pagina 5.1, Il bianco nell'acquerello** (`temi/bianco.json`): sintesi in cinque punti con il rimando ai capitoli, premessa e otto capitoli. Sono: da dove viene la regola; società e concorsi, con la tabella dei bandi; i pigmenti bianchi; le riserve; i pittori; perché la carta sembra più luminosa; la conservazione; in pratica, con le sette proposte del Quaderno e le domande aperte. 69 fonti, tutte verificate nel report v2 della ricerca, che resta fuori dal repository, elencate in fondo a ogni capitolo con il passo originale delle citazioni tradotte. I paragrafi di Ruskin usati (§§ 115, 157-160) sono stati riscontrati il 29/10/2026 sul testo di Project Gutenberg.
 - **Marche**: nessuna nel testo. Per la coprenza dichiarata dei due bianchi e per i tempi del liquido per mascherare le fonti sono pagine di produttori, citate per nome nell'elenco delle fonti, come proposto in chat. Il controllo delle marche di `scripts/genera-sito.py` (`righe_da_controllare`) salta il solo campo `fonti` dei JSON degli Approfondimenti; le chiavi delle fonti non contengono nomi di marca.
@@ -447,7 +457,7 @@ Prossima azione: revisione dei testi da parte di Sandro; l'unione su `main` aspe
 
 ## 2026-10-29 - CC - Marche e tubetti diventa una guida generale
 
-- Richiesta di Sandro del 29/10/2026: la parte su marche e tubetti deve essere generale, non costruita sui sei colori, che restano un esempio. Testi proposti e approvati in chat prima di toccare l'app.
+- Richiesta di sinmar del 29/10/2026: la parte su marche e tubetti deve essere generale, non costruita sui sei colori, che restano un esempio. Testi proposti e approvati in chat prima di toccare l'app.
 - **Titolo e apertura** (`marche.json`): «Marche e tubetti: come orientarsi fra i colori in commercio»; sottotitolo e introduzione nuovi. L'introduzione dice da dove vengono gli esempi, cioè sei serie di cinque marche lette sulle pagine ufficiali, e che il Quaderno non consiglia una marca.
 - **Capitoli**:
   1. Tubetti e pastiglie, con le misure dei tubetti di ogni serie.
@@ -467,14 +477,14 @@ Prossima azione: revisione dei testi da parte di Sandro; l'unione su `main` aspe
 
 ## 2026-10-29 - CC - Prima pagina riscritta, sei colori solo nel capitolo dell'aperto, Alberi con sommario e indice
 
-- Richieste di Sandro del 28 e 29/10/2026. I testi sono stati proposti e approvati in chat prima di toccare l'app, come lui ha chiesto.
+- Richieste di sinmar del 28 e 29/10/2026. I testi sono stati proposti e approvati in chat prima di toccare l'app, come lui ha chiesto.
 - **Prima pagina** (`scripts/genera-sito.py`):
   - sottotitolo «Appunti di studio dell'acquerello, scritti da appassionati per appassionati»;
-  - premessa in due capoversi: il sito è fatto da dilettanti, «nel senso originario della parola: persone che si dilettano a dipingere ad acquerello e non ne fanno un mestiere»; l'ultima frase, sui professionisti benvenuti, resta quella di Sandro del 25/10;
+  - premessa in due capoversi: il sito è fatto da dilettanti, «nel senso originario della parola: persone che si dilettano a dipingere ad acquerello e non ne fanno un mestiere»; l'ultima frase, sui professionisti benvenuti, resta quella di sinmar del 25/10;
   - nota di metodo riscritta senza paroloni: materiale vastissimo, difficoltà di ritrovarlo col pennello in mano, aiuto dell'intelligenza artificiale per leggere, confrontare e ordinare le fonti, fonte per ogni affermazione delle guide, ultima parola alla prova sul foglio;
   - riquadro «in costruzione» con sette voci: entrano la guida a Marche e tubetti, la sezione dei Soggetti come raccolta dei temi che si incontrano dipingendo e lo spazio per le opere di non professionisti, senza nomi; l'invito alla casella dei suggerimenti compare una volta sola;
   - descrizione per i motori di ricerca allineata.
-- **Sei colori**, per Sandro marginali: si trattano come parte del lavoro all'aperto, dove conviene usare pochi colori.
+- **Sei colori**, per sinmar marginali: si trattano come parte del lavoro all'aperto, dove conviene usare pochi colori.
   - Principi, capitolo 8: il paragrafo diventa «All'aperto: lavorare con pochi colori», con il testo approvato; l'apertura del capitolo, la dotazione e il prontuario parlano di «tavolozza ridotta». È l'unico punto del sito che presenta i sei colori.
   - Teoria dei colori: esce il capitolo 4 «Sei colori proposti» con le schede dei colori. Il calcolatore, ora capitolo 4, si apre con una nota: lavora con la tavolozza ridotta del capitolo 8, e nella scelta di un tubetto conta il pigmento. Le tre fonti del capitolo tolto restano citate nella nota.
   - Tolti dalle schede in home (Principi, Teoria dei colori, Marche), dall'introduzione dei Principi, dalla descrizione del modulo S1 nei Soggetti e dal messaggio del calcolatore sui colori fuori portata. In Marche la legenda rimanda al capitolo 8 invece che al capitolo tolto.
@@ -493,8 +503,8 @@ Prossima azione: revisione dei testi da parte di Sandro; l'unione su `main` aspe
 
 ## 2026-10-28 - CC - Opere: introduzione sviluppata e ordine delle opere scelto da ogni autore
 
-- Richiesta di Sandro del 28/10/2026, dopo la pubblicazione della #50: l'introduzione non lo convinceva, era troppo sintetica; doveva dire meglio che gli autori sono dilettanti e non professionisti. L'ordine delle opere lo decide ogni autore: lui ha voluto il cronologico inverso, e va scritto nella sua pagina.
-- **Introduzione della sezione** (`sezione.json`), quattro capoversi al posto di due frasi. Chi sono gli autori: «dilettanti, nel senso originario della parola: persone che si dilettano a dipingere», che non vivono di pittura. Perché si mostrano i fogli: le tappe di un percorso, con le riuscite e gli errori di chi sta imparando, accanto ai principi e alle tecniche delle altre sezioni; il 29/10/2026, su richiesta di Sandro, esce il paragone col museo e il capoverso si apre con «Mostriamo questi fogli per quello che sono», testo approvato da lui in chat. Come funziona: ogni autore ha una sottosezione e decide come presentarsi, ordine dei fogli, notizie, parere dell'IA se lo desidera. Infine l'invito a proporre le proprie opere dalla casella dei suggerimenti. Il titolo resta «Opere di non professionisti», come la nota in home.
+- Richiesta di sinmar del 28/10/2026, dopo la pubblicazione della #50: l'introduzione non lo convinceva, era troppo sintetica; doveva dire meglio che gli autori sono dilettanti e non professionisti. L'ordine delle opere lo decide ogni autore: lui ha voluto il cronologico inverso, e va scritto nella sua pagina.
+- **Introduzione della sezione** (`sezione.json`), quattro capoversi al posto di due frasi. Chi sono gli autori: «dilettanti, nel senso originario della parola: persone che si dilettano a dipingere», che non vivono di pittura. Perché si mostrano i fogli: le tappe di un percorso, con le riuscite e gli errori di chi sta imparando, accanto ai principi e alle tecniche delle altre sezioni; il 29/10/2026, su richiesta di sinmar, esce il paragone col museo e il capoverso si apre con «Mostriamo questi fogli per quello che sono», testo approvato da lui in chat. Come funziona: ogni autore ha una sottosezione e decide come presentarsi, ordine dei fogli, notizie, parere dell'IA se lo desidera. Infine l'invito a proporre le proprie opere dalla casella dei suggerimenti. Il titolo resta «Opere di non professionisti», come la nota in home.
 - **Ordine scelto dall'autore**: campo nuovo `ordine_opere` (`dal_piu_recente` o `dal_primo`) nel JSON di ogni autore; il generatore ordina di conseguenza e la pagina lo dichiara con una frase di `sezione.json` («Ha scelto di presentare i suoi acquerelli dal più recente al primo, così da poterne seguire il percorso a ritroso.»). Per la 6.1, `dal_piu_recente`. Il generatore si ferma se il valore non è uno dei due.
 - **Pagina 6.1** (`autori/alessandro-sanvitale.json`): la presentazione aggiunge che la pagina raccoglie una scelta dei suoi acquerelli, primo foglio compreso; le righe su titoli, date e numeri diventano sue (`come_leggere`), perché un altro autore potrebbe intitolare le opere in altro modo.
 - **Chat**: il riassunto dice che gli autori sono dilettanti, che ognuno sceglie ordine e presentazione, e che nella 6.1 ci sono i pareri dell'IA.
@@ -506,43 +516,43 @@ Prossima azione: revisione dei testi da parte di Sandro; l'unione su `main` aspe
 
 ## 2026-10-28 - CC - Opere: un parere dell'IA sotto ogni acquerello della 6.1, scritto da Claude Opus 5.5
 
-- Idea di Sandro del 28/10/2026: far leggere gli acquerelli a un'intelligenza artificiale e mettere sotto ciascuno un breve commento su che cosa va e che cosa non va, precisando che è di Claude Opus 5.5. Il tono l'ha approvato su due prove, il primo e l'ultimo acquerello.
+- Idea di sinmar del 28/10/2026: far leggere gli acquerelli a un'intelligenza artificiale e mettere sotto ciascuno un breve commento su che cosa va e che cosa non va, precisando che è di Claude Opus 5.5. Il tono l'ha approvato su due prove, il primo e l'ultimo acquerello.
 - **Pareri** (`autori/alessandro-sanvitale.json`, campo `parere` di ogni opera): due frasi, «Funziona» e «Da migliorare», scritte da Claude Opus 5.5 il 28/10/2026 guardando le 14 foto a piena risoluzione. Solo ciò che si vede nella foto: composizione, valori, sfumature, bianchi lasciati, prospettiva; niente nomi di pigmenti o di marche. Il parere del n. 107 lo confronta col n. 104, che ha lo stesso soggetto.
 - **Pagina**: sotto ogni foto un riquadro «Parere dell'IA (Claude Opus 5.5)», chiuso finché non lo si apre, così la galleria resta pulita. L'introduzione dice chi ha scritto i pareri, quando e su che cosa: «Sotto ogni acquerello, il «Parere dell'IA» è un breve commento scritto il 28 ottobre 2026 da Claude Opus 5.5, un modello di intelligenza artificiale di Anthropic, guardando la fotografia: che cosa funziona e che cosa si potrebbe migliorare. Va preso come un parere, e la foto può falsare i colori.» Modello, produttore e data stanno in `pareri_ia` dell'autore.
 - **Generatore** (`genera-opere.py`): si ferma se un parere non ha le due parti o se l'autore che ha pareri non dichiara modello, produttore e data. Provato con due errori messi apposta e poi tolti.
 - **Documenti**: `README.md`, `AGENTS.md`, `CONTRIBUTING.md` § 3 (i pareri solo se l'autore li chiede, col modello dichiarato).
 - Controlli: `python scripts/genera-sito.py` senza errori; 14 riquadri nella pagina; Gulpease della pagina 6.1 a 70, le altre invariate. Pagina vista in Chrome coi riquadri aperti.
-- Prossima azione: Sandro rilegge i pareri; poi le risposte su n. 107, n. 124 e licenza e il via del curatore. L'unione su `main` pubblica il sito.
+- Prossima azione: sinmar rilegge i pareri; poi le risposte su n. 107, n. 124 e licenza e il via del curatore. L'unione su `main` pubblica il sito.
 
 -- CC
 
 ## 2026-10-28 - CC - Opere: testi riscritti con il tono di una piccola mostra
 
-- Richiesta di Sandro del 28/10/2026: lo stile dei testi della sezione lasciava a desiderare. Riscritti con il tono adatto a una raccolta di acquerelli, invece del registro da manuale tecnico delle guide; i fatti restano quelli dati da Sandro.
-- **Sezione** (`sezione.json`): sottotitolo, anche in home, «Acquerelli di chi dipinge per passione, raccolti autore per autore». Presentazione: «Questa sezione raccoglie gli acquerelli di chi dipinge per passione. Ogni autore ha la sua pagina, con i fogli in ordine di tempo, dal più recente al primo, così da poterne seguire il percorso. Chi desidera esporre qui i propri acquerelli può proporlo dalla casella dei suggerimenti, in fondo alla pagina.» La chiusa della seconda frase era «scorrendola si vede come è cambiata la mano»: su richiesta di Sandro è diventata «così da poterne seguire il percorso». L'elenco si intitola «Gli autori», il collegamento dice «Guarda gli acquerelli».
+- Richiesta di sinmar del 28/10/2026: lo stile dei testi della sezione lasciava a desiderare. Riscritti con il tono adatto a una raccolta di acquerelli, invece del registro da manuale tecnico delle guide; i fatti restano quelli dati da sinmar.
+- **Sezione** (`sezione.json`): sottotitolo, anche in home, «Acquerelli di chi dipinge per passione, raccolti autore per autore». Presentazione: «Questa sezione raccoglie gli acquerelli di chi dipinge per passione. Ogni autore ha la sua pagina, con i fogli in ordine di tempo, dal più recente al primo, così da poterne seguire il percorso. Chi desidera esporre qui i propri acquerelli può proporlo dalla casella dei suggerimenti, in fondo alla pagina.» La chiusa della seconda frase era «scorrendola si vede come è cambiata la mano»: su richiesta di sinmar è diventata «così da poterne seguire il percorso». L'elenco si intitola «Gli autori», il collegamento dice «Guarda gli acquerelli».
 - **Pagina 6.1** (`autori/alessandro-sanvitale.json`): «sinmar dipinge ad acquerello per passione dal 27 settembre 2021: il primo foglio, dipinto quel giorno, chiude la pagina. Dal 2021 al 2024 ha frequentato i corsi di acquerello tenuti dalla sua insegnante, e oggi segue con la stessa insegnante il corso avanzato dedicato al paesaggio.» Segue un paragrafo su come leggere titoli e date, che nomina la sezione. Esce la frase «Questa sottosezione fa parte della sezione...»: la collocazione la danno il rimando «6. Opere di non professionisti» in cima alla pagina e il numero 6.1 nel titolo.
 - Il conteggio, in pagina e in home, diventa «14 acquerelli dipinti fra il 2021 e il 2024». Il piè di pagina dice «Gli acquerelli appartengono ai loro autori e sono esclusi dalla licenza CC BY 4.0 del Quaderno.»
 - Controlli: `python scripts/genera-sito.py` senza errori; Gulpease della pagina 6.1 a 91, le altre invariate; le due pagine viste in Chrome.
-- Prossima azione: Sandro indica la data scritta sul foglio n. 107 e conferma il n. 124 e la licenza delle opere; poi il via del curatore. L'unione su `main` pubblica il sito.
+- Prossima azione: sinmar indica la data scritta sul foglio n. 107 e conferma il n. 124 e la licenza delle opere; poi il via del curatore. L'unione su `main` pubblica il sito.
 
 -- CC
 
 ## 2026-10-28 - CC - Opere: sinmar diventa la sottosezione 6.1, con la presentazione
 
-- Richiesta di Sandro del 28/10/2026: la sezione deve dire che raccoglie opere di non professionisti, e la sua pagina ne è una sottosezione. Nella presentazione: ha iniziato ad acquerello il 27 settembre 2021, ha seguito i corsi di acquerello tenuti dalla sua insegnante dal 2021 al 2024 e ora segue con la stessa insegnante un corso avanzato di acquerello sul paesaggio.
+- Richiesta di sinmar del 28/10/2026: la sezione deve dire che raccoglie opere di non professionisti, e la sua pagina ne è una sottosezione. Nella presentazione: ha iniziato ad acquerello il 27 settembre 2021, ha seguito i corsi di acquerello tenuti dalla sua insegnante dal 2021 al 2024 e ora segue con la stessa insegnante un corso avanzato di acquerello sul paesaggio.
 - **Sottosezioni**: ogni autore ha un `ordine` nel suo JSON e diventa la sottosezione 6.1, 6.2 e così via. La pagina dell'autore si apre con «6. Opere di non professionisti» e il titolo «6.1 · sinmar». Nell'elenco della sezione e in home l'autore compare col suo numero; in home la scheda sta rientrata sotto la 6, come «4.1 Alberi» sotto i Soggetti. La barra in cima resta con la sola voce «6 Opere». `scripts/genera-sito.py` si ferma se il numero della sezione in `dati/opere/sezione.json` non è quello di `SEZIONI`.
 - **Testi** (`sezione.json`): l'introduzione della sezione è una breve presentazione in tre frasi, seguita dal collegamento alla pagina di ogni autore («Vedi le opere»): «Questa sezione raccoglie opere di non professionisti: acquerelli di appassionati che non dipingono per mestiere. Ogni autore ha una sottosezione con le sue opere, dalla più recente. Chi vuole proporre le proprie opere può scriverlo nella casella dei suggerimenti in fondo alla pagina.» Le regole su titoli, date e numeri restano solo nella pagina dell'autore, che si apre con «Questa sottosezione fa parte della sezione Opere di non professionisti: acquerelli di appassionati che non dipingono per mestiere.» Il sottotitolo dice «una sottosezione per autore».
-- **Presentazione** (`autori/alessandro-sanvitale.json`): «sinmar ha iniziato a dipingere ad acquerello il 27 settembre 2021: il primo acquerello, di quel giorno, è l'ultimo della pagina. Dal 2021 al 2024 ha seguito i corsi di acquerello tenuti dalla sua insegnante, e attualmente segue con la stessa insegnante un corso avanzato di acquerello sul paesaggio.» Il nome della docente è scritto come nei file del corso. Su indicazione di Sandro la presentazione non dice che cura il sito, che in futuro sarà curato da molti; lo stesso nel README.
-- **Primo acquerello**: l'opera del 27/9/2021 (foto delle 22.03) porta sotto il titolo la nota «il primo acquerello», nel campo nuovo `nota`. La data coincide con quella che Sandro indica come inizio.
+- **Presentazione** (`autori/alessandro-sanvitale.json`): «sinmar ha iniziato a dipingere ad acquerello il 27 settembre 2021: il primo acquerello, di quel giorno, è l'ultimo della pagina. Dal 2021 al 2024 ha seguito i corsi di acquerello tenuti dalla sua insegnante, e attualmente segue con la stessa insegnante un corso avanzato di acquerello sul paesaggio.» Il nome della docente è scritto come nei file del corso. Su indicazione di sinmar la presentazione non dice che cura il sito, che in futuro sarà curato da molti; lo stesso nel README.
+- **Primo acquerello**: l'opera del 27/9/2021 (foto delle 22.03) porta sotto il titolo la nota «il primo acquerello», nel campo nuovo `nota`. La data coincide con quella che sinmar indica come inizio.
 - **Chat**: il prompt elenca gli autori col numero di sottosezione.
 - Controlli: `python scripts/genera-sito.py` senza errori. Gulpease: sottosezione 6.1 90, le altre pagine invariate; la pagina della sezione resta sotto le 100 parole, quindi l'indice non si calcola. Pagine e home viste in Chrome: intestazione con la sezione e la sottosezione, scheda 6.1 rientrata in home.
-- Prossima azione: Sandro indica la data scritta sul foglio n. 107 e conferma il n. 124 e la licenza delle opere; poi il via del curatore. L'unione su `main` pubblica il sito.
+- Prossima azione: sinmar indica la data scritta sul foglio n. 107 e conferma il n. 124 e la licenza delle opere; poi il via del curatore. L'unione su `main` pubblica il sito.
 
 -- CC
 
 ## 2026-10-27 - CC - Nuova sezione 6. Opere di non professionisti, con gli acquerelli di sinmar
 
-- Richiesta di Sandro del 27/10/2026: una sezione per le opere di non professionisti, a cominciare dalle sue, con le 14 foto che ha raccolto. Come titolo la data, con il giorno della settimana e l'ora quando si trovano, e il numero che lui scrive sul foglio.
+- Richiesta di sinmar del 27/10/2026: una sezione per le opere di non professionisti, a cominciare dalle sue, con le 14 foto che ha raccolto. Come titolo la data, con il giorno della settimana e l'ora quando si trovano, e il numero che lui scrive sul foglio.
 - **Sezione** (`dati/opere/`): `sezione.json` con i testi, un JSON per autore in `autori/` (per ora `alessandro-sanvitale.json`), le foto in `immagini/alessandro-sanvitale/` e `genera-opere.py` (comando `pagina`). Il generatore scrive l'elenco degli autori, `/opere/`, e una pagina per autore, `/opere/alessandro-sanvitale/`, con le opere dalla più recente in una griglia; un clic apre la foto a grandezza piena.
 - **Titoli e date**. Il titolo è la data in cui l'acquerello è stato dipinto, con il giorno della settimana calcolato dal generatore e l'ora quando è nota. Su cinque fogli c'è una scritta a mano nel margine, letta sulla foto ingrandita:
   - n. 104: «17-1-23 lezione 12ª / 24-1-23 lez. 13ª», due sedute, martedì 17 e martedì 24 gennaio 2023;
@@ -557,13 +567,13 @@ Prossima azione: revisione dei testi da parte di Sandro; l'unione su `main` aspe
 - **Documenti**: `README.md` (tabella delle sezioni e licenza), `AGENTS.md`, `CONTRIBUTING.md` (§ 1 come proporre le proprie opere, § 3 regole della sezione, § 4 diritti).
 - Controlli: `python scripts/genera-sito.py` senza errori, compreso il controllo sui nomi di marca. Gulpease: Principi 68, Colori 75, Marche 59, Soggetti 66, Alberi 72, Eventi 95, scheda Sestri Levante 80, Opere 74, pagina di sinmar 102. Pagine provate in Chrome a 1280 pixel e, dentro un riquadro, a 360 e 390 pixel: griglia a tre colonne sul computer e a una sul telefono, nessuno scorrimento di lato. Le 14 foto rispondono e ognuna sta sotto il suo titolo. `lib/prompt-chat.js` rigenerato. In attesa del via del curatore per l'unione su `main`.
 - 28/10/2026: unito nel ramo `main` con le #48 e #49; conflitti solo in README, CHANGELOG e nel prompt generato, risolti tenendo le due parti. Rigenerato senza errori; il piè di pagina delle Opere porta anche il collegamento all'informativa sulla privacy, che le pagine della sezione rispettano (nessun cookie, nessuno script o carattere di altri siti). Gulpease invariati, Informativa 64.
-- Prossima azione: Sandro indica la data scritta sul foglio n. 107 e conferma il n. 124; poi il via del curatore. L'unione su `main` pubblica il sito.
+- Prossima azione: sinmar indica la data scritta sul foglio n. 107 e conferma il n. 124; poi il via del curatore. L'unione su `main` pubblica il sito.
 
 -- CC
 
 ## 2026-10-27 - GBOT-app-acquerello - Alberi: sesta modalità per le chiome tonde, il tondo caricato chiaro e scuro (Christopher Stephen)
 
-- Richiesta di Sandro del 27/10/2026: aggiungere la terza tecnica del video di Christopher Stephen «Three Watercolour Tree Techniques YOU NEED TO KNOW !!!» (`TPU6woga-6M`) come nuova modalità di A3. Le prime due tecniche del video, bagnato su bagnato e spugna naturale, in A3 ci sono già.
+- Richiesta di sinmar del 27/10/2026: aggiungere la terza tecnica del video di Christopher Stephen «Three Watercolour Tree Techniques YOU NEED TO KNOW !!!» (`TPU6woga-6M`) come nuova modalità di A3. Le prime due tecniche del video, bagnato su bagnato e spugna naturale, in A3 ci sono già.
 - **Modalità A3-M6** (`dati/alberi/pit-261014-video-gesti-alberi.json`): titolo, proposta, colori e pennelli presi solo dalla trascrizione automatica in inglese, coi colori come li nomina l'autore (giallo di cadmio, terra di Siena naturale, blu, terra di Siena bruciata). L'autore non dice il numero dei pennelli e non precisa il blu: la scheda non li aggiunge. Manca, rispetto alle altre schede, la corrispondenza coi 6 colori proposti, che resta da decidere. La descrizione di A3 passa da cinque a sei modalità.
 - **Estratto A3-6** (`pit-261013-video-gesti-segmenti.csv`): da 10:52 a 14:11, 199 secondi, dall'acqua con lo spruzzino fino all'ombra del tronco. I secondi vengono dalle parole della trascrizione e vanno rifiniti guardando il video. Il video entra in `pit-261013-alberi-selezione-video.csv` sotto V11 con durata 973 secondi e anno 2026 letti dai metadati pubblici di YouTube; visualizzazioni e iscritti restano vuoti.
 - **Infografica A3-M6** (`pit-261015-infografiche.py`): tre fasi, le due pozze e il tondo caricato sui due lati, il pennello ruotato fra chiaro e scuro, tronco e rami. Nuovo campione `blu`, senza altro nome, perché l'autore dice solo «blue».
@@ -575,7 +585,7 @@ Prossima azione: revisione dei testi da parte di Sandro; l'unione su `main` aspe
 
 ## 2026-10-27 - GBOT-app-acquerello - Video degli Alberi caricati solo al clic e informativa sulla privacy
 
-- Richiesta di Sandro del 27/10/2026: nessun contatto con YouTube o Google finché chi visita non sceglie di guardare un video, e una breve informativa sulla privacy collegata dal piè di pagina.
+- Richiesta di sinmar del 27/10/2026: nessun contatto con YouTube o Google finché chi visita non sceglie di guardare un video, e una breve informativa sulla privacy collegata dal piè di pagina.
 - **Riquadro prima del video** (`dati/alberi/pit-261013-video-gesti.py`): al posto del pulsante «Guarda il gesto» ogni estratto mostra un riquadro del sito, senza miniature di YouTube, col titolo del passaggio, la durata, i minuti, il titolo del video e l'autore. Sotto, la frase «Il video è ospitato su YouTube: aprendolo, YouTube (Google) riceverà alcuni dati della tua visita.» e i collegamenti all'informativa del sito, alla privacy di Google e ai Termini di YouTube. Il pulsante «Guarda il video» crea il lettore ufficiale con gli stessi punti di inizio e di fine.
 - **Lettore**: già prima lo script di YouTube si caricava solo al clic; ora la regola è scritta nel codice e spiegata in pagina. Comandi del lettore visibili (`controls: 1`), partenza automatica solo dopo il clic, spazio del lettore di almeno 200 × 200 pixel anche sui telefoni stretti. Il Referer resta quello della pagina (`strict-origin-when-cross-origin`, come nell'intestazione già inviata da Cloudflare). Nessuna libreria esterna. Il file `_headers` non c'è nel repository e non serve aggiungerlo.
 - **Informativa** (`/informativa/`, scritta da `scripts/genera-sito.py`): titolare e contatto come nella nota della chat, senza indirizzo né telefono; nessun cookie proprio, nessuno strumento di statistica o di tracciamento, nessun carattere o script di altri siti, verificato nel codice e nelle pagine pubblicate; i video caricati solo al clic, poi valgono l'informativa di Google e i Termini di YouTube; due righe su chat e suggerimenti con rinvio alle loro note. La pagina entra nella `sitemap.xml`; non entra nel menu della casella dei suggerimenti né negli elenchi `PAGINE_VALIDE`, perché non ha i riquadri della chat.
@@ -587,7 +597,7 @@ Prossima azione: revisione dei testi da parte di Sandro; l'unione su `main` aspe
 
 ## 2026-10-25 - GBOT-app-acquerello - Home: tolta la fila dei sei colori proposti
 
-- Decisione di Sandro del 25/10/2026: in home la fila dei campioni dei sei colori proposti, sotto la testata e senza didascalia, non serve più.
+- Decisione di sinmar del 25/10/2026: in home la fila dei campioni dei sei colori proposti, sotto la testata e senza didascalia, non serve più.
 - **Generatore** (`scripts/genera-sito.py`): escono le funzioni `striscia_tavolozza()` e `colori_tavolozza()`, usate solo dalla home, il blocco `<section class="tavolozza">` sotto la testata e le regole CSS che servivano solo a quel blocco (`.tavolozza`, `.goccia`, `.m-pig`, anche nella versione per schermi stretti). La home passa dalla testata direttamente alla nota di metodo. Nessun file immagine tolto: la fila era disegnata in CSS dai valori di `dati/colori/tavolozza.json`, che resta e serve alle altre pagine.
 - La sezione Teoria dei colori (`/colori/`) non cambia: le schede dei sei colori restano dove sono. Restano anche i sottotitoli delle schede in home che nominano i sei colori, perché descrivono le sezioni.
 - Controlli: `python scripts/genera-sito.py` senza errori. In home non restano titoletti, spazi vuoti o classi della fila. In attesa del via del curatore per l'unione su `main`.
@@ -597,15 +607,15 @@ Prossima azione: revisione dei testi da parte di Sandro; l'unione su `main` aspe
 
 ## 2026-10-25 - GBOT-app-acquerello - Sestri Levante: locandina del festival e foto del 24 e 25 ottobre
 
-- Richiesta di Sandro del 25/10/2026: altre foto sulla scheda di Watercolor Sestri Levante, la demo di Cesc Farré per prima nella giornata del 24/10 e la locandina del festival al posto di «locandina da aggiungere». Foto di sinmar, ore di Europa/Roma dai dati delle foto.
+- Richiesta di sinmar del 25/10/2026: altre foto sulla scheda di Watercolor Sestri Levante, la demo di Cesc Farré per prima nella giornata del 24/10 e la locandina del festival al posto di «locandina da aggiungere». Foto di sinmar, ore di Europa/Roma dai dati delle foto.
 - **Locandina** (`locandina` in `schede/watercolor-sestri-levante-2026.json`, file `wsl-2026-locandina.jpg`): la copertina del programma «Programma 23-24-25 ottobre, Watercolor Sestri Levante 2026», col refuso della copertina lasciato com'è. Didascalia: «Locandina del festival, copertina del programma. Il dipinto è un acquerello di Felice Feltracco». Rimando al programma ufficiale.
 - **Foto accanto al programma**, sette nuove (`wsl-2026-sandro-05.jpg`-`11.jpg`):
   - `s24-farre`: Cesc Farré, demo in Sala Agave, 24/10/2026 alle 10.54. Ora la giornata del 24 si apre con Farré, prima di Igli Arapi.
   - `d25-feltracco`: Felice Feltracco, demo in sala, 25/10/2026 alle 10.48.
   - `d25-fracasso`: Pasqualino Fracasso, en plein air in piazza, alle 11.56.
   - `d25-premiazione`: premiazione del concorso «Fermo Immagine» alle 12.20, la sala con le opere selezionate alle 12.26 e alle 12.30, la locandina del concorso alle 12.30.
-- **Foto di Farré già in scheda** (`farre-sestri-2026-sandro.jpg`): era un'altra inquadratura della stessa demo, senza ora nei dati, e compariva solo nella sezione Fotografie. Su decisione di Sandro esce dalla scheda e il file esce dal repo. Nessun'altra pagina la usava. Le voci più vecchie del CHANGELOG che la citano restano come storia.
-- **Foto 09** (`wsl-2026-sandro-09.jpg`, la sala con le opere selezionate, alle 12.26): su decisione di Sandro è sostituita da un altro suo scatto della stessa sala, del 25/10/2026 alle 12.26. Didascalia e ora restano le stesse. La foto 10 resta com'è.
+- **Foto di Farré già in scheda** (`farre-sestri-2026-sandro.jpg`): era un'altra inquadratura della stessa demo, senza ora nei dati, e compariva solo nella sezione Fotografie. Su decisione di sinmar esce dalla scheda e il file esce dal repo. Nessun'altra pagina la usava. Le voci più vecchie del CHANGELOG che la citano restano come storia.
+- **Foto 09** (`wsl-2026-sandro-09.jpg`, la sala con le opere selezionate, alle 12.26): su decisione di sinmar è sostituita da un altro suo scatto della stessa sala, del 25/10/2026 alle 12.26. Didascalia e ora restano le stesse. La foto 10 resta com'è.
 - **Generatore**: `genera-eventi.py` accetta una `didascalia` facoltativa per la locandina, scritta prima del credito; l'elenco delle foto legate nella sezione Fotografie segue l'ordine del programma, non più la sola ora (prima le foto del 25 mattina finivano tra quelle del 24). `scripts/genera-sito.py` passa la didascalia della locandina alla chat.
 - Immagini raddrizzate secondo l'orientamento delle foto originali, lato lungo 1600 pixel, senza dati EXIF e quindi senza posizione GPS, come le foto già in scheda.
 - Controlli: `python scripts/genera-sito.py` senza errori, compreso il controllo sui nomi di marca. Gulpease: Principi 68, Colori 75, Marche 59, Soggetti 66, Alberi 72, Eventi 95, scheda Sestri Levante 80. La scheda mostra la locandina e le foto nell'ordine del programma. `lib/prompt-chat.js` rigenerato. In attesa del via del curatore per l'unione su `main`.
@@ -615,7 +625,7 @@ Prossima azione: revisione dei testi da parte di Sandro; l'unione su `main` aspe
 
 ## 2026-10-25 - GBOT-app-acquerello - Sestri Levante: tolto il profilo su X
 
-- Decisione di Sandro del 25/10/2026: nel riquadro «L'evento sui social» della scheda di Watercolor Sestri Levante il link al suo profilo non serve. Il riquadro resta solo su questa scheda.
+- Decisione di sinmar del 25/10/2026: nel riquadro «L'evento sui social» della scheda di Watercolor Sestri Levante il link al suo profilo non serve. Il riquadro resta solo su questa scheda.
 - **Dati** (`social` in `schede/watercolor-sestri-levante-2026.json`): esce la voce «Profilo di sinmar su X» (`https://x.com/alessandro_snv`). Restano i tre post: «Demo di Cesc Farré, post del 24/10/2026», «Riassunto della giornata e quattro foto, post del 24/10/2026» e «Demo di Felice Feltracco, post del 25/10/2026».
 - **Generatore**: `genera-eventi.py` e `scripts/genera-sito.py` copiano i link del campo `social` e non aggiungono il profilo da soli. In `README.md`, `AGENTS.md` e `CONTRIBUTING.md` il riquadro è descritto in generale, senza quella voce. Le voci già scritte nel CHANGELOG restano come storia.
 - **Chat**: `lib/prompt-chat.js` elenca i tre post, solo per la scheda, e non il profilo.
@@ -636,7 +646,7 @@ Prossima azione: revisione dei testi da parte di Sandro; l'unione su `main` aspe
 
 ## 2026-10-25 - GBOT-app-acquerello - Nota di metodo: il sito è in costruzione
 
-- Richiesta di Sandro: la nota di metodo si apre dicendo che il sito è in costruzione. Dove il testo parla del sito (che cosa contiene, come è ordinato), «Quaderno» diventa «sito». Il nome nel titolo e nella testata resta «Quaderno di acquerello». La nota sopra la nota di metodo resta com'è, e così il riquadro «Il Quaderno è in costruzione».
+- Richiesta di sinmar: la nota di metodo si apre dicendo che il sito è in costruzione. Dove il testo parla del sito (che cosa contiene, come è ordinato), «Quaderno» diventa «sito». Il nome nel titolo e nella testata resta «Quaderno di acquerello». La nota sopra la nota di metodo resta com'è, e così il riquadro «Il Quaderno è in costruzione».
 - **Nota di metodo** (`genera_home` in `scripts/genera-sito.py`). In apertura, la frase «Il sito è in costruzione.» Poi il testo di prima, con una sostituzione:
   - «Il Quaderno nasce» diventa «Il sito nasce».
 - Testo prima: «Chi oggi apprende una disciplina pratica dispone di una documentazione vastissima, distribuita tra manuali, schede tecniche e centinaia di ore di dimostrazioni filmate; la vera difficoltà sta nel ricondurre una materia tanto dispersa a un criterio ordinato e consultabile mentre si lavora. Gli strumenti di intelligenza artificiale permettono di compiere a monte questo lavoro di spoglio, confronto e classificazione, così da aiutare a esercitarsi con più consapevolezza. Il Quaderno nasce dall'applicazione di tale approccio allo studio dell'acquerello: ordina il comportamento di acqua, carta e pigmenti, indica al secondo le sequenze esecutive nei video didattici e affianca al tavolo da lavoro strumenti di riscontro, dal calcolatore colorimetrico all'assistente tecnico integrato nelle pagine.»
@@ -648,7 +658,7 @@ Prossima azione: revisione dei testi da parte di Sandro; l'unione su `main` aspe
 
 ## 2026-10-24 - GBOT-app-acquerello - Home: non professionisti, al posto di dilettanti
 
-- Correzione di Sandro sulla nota in home: «dilettante» e «dilettanti» diventano «non professionista» e «non professionisti». Il 25/10/2026 Sandro fissa il testo definitivo. La nota di metodo resta.
+- Correzione di sinmar sulla nota in home: «dilettante» e «dilettanti» diventano «non professionista» e «non professionisti». Il 25/10/2026 sinmar fissa il testo definitivo. La nota di metodo resta.
 - **Nota** (`genera_home`): «Questo sito è sviluppato da non professionisti e si rivolge a chi condivide la stessa passione. Raccoglie ciò che si impara strada facendo, con i limiti di chi non è un maestro, ed è aperto ai contributi di tutti gli appassionati. Anche i professionisti che vi trovassero qualcosa di utile, o volessero aiutarci a migliorarlo, saranno i benvenuti.»
 - **Descrizione per i motori di ricerca** (`DESCRIZIONE_HOME`, anche `og:description`) e **README**: in apertura, «Questo sito è sviluppato da non professionisti e si rivolge a chi condivide la stessa passione.»
 - Cercate le occorrenze entrate con le due modifiche della home. Sostituite in `scripts/genera-sito.py` (nota e descrizione) e in `README.md`. In `lib/prompt-chat.js`, `CONTRIBUTING.md` e `AGENTS.md` non ce n'erano. Le voci già scritte nel CHANGELOG restano come storia.
@@ -659,7 +669,7 @@ Prossima azione: revisione dei testi da parte di Sandro; l'unione su `main` aspe
 
 ## 2026-10-24 - GBOT-app-acquerello - Home: Quaderno aperto ai contributi
 
-- Richiesta di Sandro: la nota sotto l'introduzione non deve suonare come il quaderno di una sola persona. Il sito è aperto ad altri contributi. La nota di metodo segue lo stesso tono, da appassionati che imparano, non da esperti.
+- Richiesta di sinmar: la nota sotto l'introduzione non deve suonare come il quaderno di una sola persona. Il sito è aperto ad altri contributi. La nota di metodo segue lo stesso tono, da appassionati che imparano, non da esperti.
 - **Nota** (`genera_home` in `scripts/genera-sito.py`): «Il Quaderno nasce tra dilettanti ed è rivolto ad altri dilettanti. Raccoglie ciò che si impara strada facendo, con i limiti di chi non è un maestro, ed è aperto ai contributi di tutti gli appassionati.» I sei campioni, le schede delle sezioni e l'informativa restano com'erano.
 - **Descrizione per i motori di ricerca** (`DESCRIZIONE_HOME`): in apertura, «Il Quaderno nasce tra dilettanti ed è rivolto ad altri dilettanti.» Il resto della descrizione resta.
 - **README**: la riga di apertura, nello stesso senso.
@@ -676,7 +686,7 @@ Prossima azione: revisione dei testi da parte di Sandro; l'unione su `main` aspe
 
 ## 2026-10-24 - GBOT-app-acquerello - Riquadro social in fondo alla scheda di Sestri Levante
 
-- Richiesta di Sandro: in fondo alla sola scheda di Watercolor Sestri Levante, un riquadro di link testuali. Non entra nel piè di pagina del sito, né nel calendario, né nell'archivio, né nelle altre sezioni.
+- Richiesta di sinmar: in fondo alla sola scheda di Watercolor Sestri Levante, un riquadro di link testuali. Non entra nel piè di pagina del sito, né nel calendario, né nell'archivio, né nelle altre sezioni.
 - **Dati** (`social` in `schede/watercolor-sestri-levante-2026.json`): titolo e tre link https. Il campo è generico: senza `social` la scheda non ha il riquadro. Il generatore si ferma se manca il titolo, se un link non è https o se un indirizzo è ripetuto.
 - **Testo del riquadro**: «L'evento sui social». I link: «Profilo di sinmar su X»; «Demo di Cesc Farré, post del 24/10/2026»; «Riassunto della giornata e quattro foto, post del 24/10/2026». Sono ancore, con `target="_blank"` e `rel="noopener"`, come gli altri link esterni del sito. Niente widget, embed, script o immagini esterne.
 - **Chat**: il prompt elenca questi link solo per la scheda che li ha, e chiede di non inventarne altri.
@@ -706,7 +716,7 @@ Prossima azione: revisione dei testi da parte di Sandro; l'unione su `main` aspe
 
 ## 2026-10-24 - GBOT-app-acquerello - Home: quaderno di un dilettante per dilettanti
 
-- Richiesta di Sandro: precisare in home, con registro curato, che il Quaderno è di un dilettante e si rivolge ad altri dilettanti. Raccoglie ciò che si impara strada facendo, con i limiti di chi non è un maestro, e si offre come un aiuto tra appassionati.
+- Richiesta di sinmar: precisare in home, con registro curato, che il Quaderno è di un dilettante e si rivolge ad altri dilettanti. Raccoglie ciò che si impara strada facendo, con i limiti di chi non è un maestro, e si offre come un aiuto tra appassionati.
 - **Home** (`genera_home` in `scripts/genera-sito.py`): sotto l'introduzione della testata, due frasi compiute, nello stesso tono della pagina. La fila dei sei campioni, le schede delle sezioni e la nota di metodo restano com'erano. Testo: «Questo è il quaderno di un dilettante, rivolto ad altri dilettanti. Raccoglie ciò che si impara strada facendo, con i limiti di chi non è un maestro, e si offre come un aiuto tra appassionati.»
 - **Descrizione per i motori di ricerca** (`DESCRIZIONE_HOME`): in apertura, «Quaderno di un dilettante, rivolto ad altri dilettanti.» Il resto della descrizione resta.
 - **README**: una riga in apertura, nello stesso senso.
@@ -717,10 +727,10 @@ Prossima azione: revisione dei testi da parte di Sandro; l'unione su `main` aspe
 
 ## 2026-10-24 - GBOT-app-acquerello - Eventi: solo locandina, programma e foto
 
-- Decisione di Sandro, a sezione già in linea: ogni scheda tiene solo la locandina, il programma e le fotografie di chi ha partecipato. Ogni foto porta il nome di chi l'ha scattata. Calendario e archivio per anno restano l'elenco degli eventi.
+- Decisione di sinmar, a sezione già in linea: ogni scheda tiene solo la locandina, il programma e le fotografie di chi ha partecipato. Ogni foto porta il nome di chi l'ha scattata. Calendario e archivio per anno restano l'elenco degli eventi.
 - **Tolto dalle pagine** (`genera-eventi.py`, `sezione.json`, `schede/watercolor-sestri-levante-2026.json`, `scripts/genera-sito.py`): interviste e `domande.json`, racconti «io c'ero», segni coperto o non coperto sul programma, schede demo (soggetto, tecnica, carte, colori, lezione, collegamenti) e il riquadro dei contributi. La foto di Cesc Farré resta fra le fotografie, con credito «foto di sinmar» e didascalia «Cesc Farré, demo del 24/10/2026». Escono il testo «less is more» e il racconto.
 - **Locandina di Sestri Levante**: il 24/10/2026 il catalogo `wp-json` di `https://watercolorsestrilevante.it` non ha un file il cui titolo o la cui didascalia dica locandina. La pagina offre «Scarica il programma», che è un PDF, non la locandina. Lo spazio in scheda resta «locandina da aggiungere».
-- **Interviste, fuori dal sito** (`dati/eventi/idee-interviste.md`): l'idea non si perde. Il file, non copiato in `site/`, annota le domande del primo giro, le due serie proposte per un secondo giro (maestri con nome e cognome; amatori e chi dipinge per strada, solo il nome) e il punto aperto sulle marche nelle risposte. L'idea è sospesa, in attesa di Sandro.
+- **Interviste, fuori dal sito** (`dati/eventi/idee-interviste.md`): l'idea non si perde. Il file, non copiato in `site/`, annota le domande del primo giro, le due serie proposte per un secondo giro (maestri con nome e cognome; amatori e chi dipinge per strada, solo il nome) e il punto aperto sulle marche nelle risposte. L'idea è sospesa, in attesa di sinmar.
 - **Documenti**: `README.md`, `AGENTS.md`, `CONTRIBUTING.md` e il prompt della chat. Il controllo sui nomi di marca resta quello di prima.
 - Controlli: `python3 scripts/genera-sito.py` senza errori. Gulpease: Principi 68, Colori 75, Marche 59, Soggetti 66, Alberi 72, Eventi 95, scheda Sestri Levante 93. L'archivio 2026 resta sotto le 100 parole, quindi l'indice non si calcola. `lib/prompt-chat.js` rigenerato. In attesa del via del curatore per l'unione su `main`.
 - Prossima azione: via del curatore. L'unione su `main` pubblica il sito. La locandina di Sestri Levante e le interviste restano in attesa.
@@ -729,7 +739,7 @@ Prossima azione: revisione dei testi da parte di Sandro; l'unione su `main` aspe
 
 ## 2026-10-24 - GBOT-app-acquerello - Sezione Eventi, primo caso Sestri Levante
 
-- **Nuova sezione 5, Eventi** (`dati/eventi/`), proposta da Sandro e approvata nella scaletta del 24/10/2026. Un file JSON per evento in `schede/`. `genera-eventi.py` scrive il calendario (`/eventi/`), la scheda (`/eventi/<anno>/<slug>/`) e l'archivio dell'anno (`/eventi/<anno>/`). In calendario un evento è in corso, in arrivo o passato secondo la data di Europe/Rome al momento della generazione.
+- **Nuova sezione 5, Eventi** (`dati/eventi/`), proposta da sinmar e approvata nella scaletta del 24/10/2026. Un file JSON per evento in `schede/`. `genera-eventi.py` scrive il calendario (`/eventi/`), la scheda (`/eventi/<anno>/<slug>/`) e l'archivio dell'anno (`/eventi/<anno>/`). In calendario un evento è in corso, in arrivo o passato secondo la data di Europe/Rome al momento della generazione.
 - **Barra e home** (`scripts/genera-sito.py`): voce «5 Eventi», scheda in home con un calendario disegnato in SVG, riga nel riquadro «in costruzione». Nella testata e nella descrizione per i motori di ricerca si nominano anche gli eventi. La barra resta su più righe, senza scorrimento di lato; sulle schede i collegamenti della barra risalgono alla radice del sito. Chat e suggerimenti accettano anche l'indirizzo di una scheda.
 - **Testi della sezione** (`sezione.json`, `domande.json`): calendario, racconti firmati che non coprono tutto l'evento, quattro domande fisse uguali per tutti e una quinta, «Perché sei qui oggi?», solo per chi dipinge per strada. Le quattro: «Come hai cominciato con l'acquerello?»; «Che materiali usi: carta (marca e grammatura), pennelli e marche di colori, con la tavolozza?»; «Un consiglio per chi dipinge en plein air?»; «Un errore da evitare?». La seconda rimanda a Marche e tubetti; la risposta, quando c'è, si riporta come detta da chi parla. I campi vuoti sono segnati «da completare». La nota sui contributi usa la casella Suggerimenti, che non riceve file. Il contatto per le foto resta «da completare»: non è stato inventato un indirizzo.
 - **Watercolor Sestri Levante 2026** (`schede/watercolor-sestri-levante-2026.json`): 23-25 ottobre 2026, Sala Agave, ex Convento dell'Annunziata, Sestri Levante. Il programma è quello letto il 24/10/2026 da `https://watercolorsestrilevante.it/#programma`: 21 voci, con orari e nomi della pagina. Sono stati normalizzati solo gli spazi, l'accento su «venerdì» e il trattino della premiazione, sostituito da un punto perché il sito non usa il trattino lungo. La premiazione non ha un orario di fine, e non ne è stato aggiunto uno. Nel programma il laboratorio è firmato «Yana Wihlem»; la biografia della stessa pagina scrive «Yana Wilhelm»: in scheda compaiono entrambe le grafie.
@@ -743,8 +753,8 @@ Prossima azione: revisione dei testi da parte di Sandro; l'unione su `main` aspe
 
 ## 2026-10-24 - GBOT-app-acquerello - I sei colori come proposta
 
-- Richiesta di Sandro: in tutto il sito i sei colori (giallo limone PY175, ceruleo PB15, cremisi PR206, terra di Siena bruciata PR101, terra d'ombra bruciata PBr7+PY42, blu oltremare PB29) si leggono come proposta, un punto di partenza che si può ridurre, ampliare o cambiare. Stessi colori, stessi pigmenti, stesse miscele M1-M12, stesse fonti e stessi ancoraggi. Dove bastava una formula breve, «i sei colori di base» diventa «i sei colori proposti».
-- **Home** (`scripts/genera-sito.py`), decisione finale di Sandro del 24/10/2026: la fila dei sei colori resta in apertura, come immagine di presentazione. Nome e pigmento restano sull'etichetta di ogni campione. Non c'è alcuna didascalia sotto: esce la frase «I sei colori di base della tavolozza, col nome comune e il pigmento. Le tinte sono indicative, come nel calcolatore.» Non entra una frase nuova al suo posto.
+- Richiesta di sinmar: in tutto il sito i sei colori (giallo limone PY175, ceruleo PB15, cremisi PR206, terra di Siena bruciata PR101, terra d'ombra bruciata PBr7+PY42, blu oltremare PB29) si leggono come proposta, un punto di partenza che si può ridurre, ampliare o cambiare. Stessi colori, stessi pigmenti, stesse miscele M1-M12, stesse fonti e stessi ancoraggi. Dove bastava una formula breve, «i sei colori di base» diventa «i sei colori proposti».
+- **Home** (`scripts/genera-sito.py`), decisione finale di sinmar del 24/10/2026: la fila dei sei colori resta in apertura, come immagine di presentazione. Nome e pigmento restano sull'etichetta di ogni campione. Non c'è alcuna didascalia sotto: esce la frase «I sei colori di base della tavolozza, col nome comune e il pigmento. Le tinte sono indicative, come nel calcolatore.» Non entra una frase nuova al suo posto.
 - **Schede della home e descrizioni per i motori di ricerca** (sottotitoli in `SEZIONI`): «la tavolozza ridotta e le sue 12 miscele» diventa «i sei colori proposti e le 12 miscele»; «i sei colori di base e un calcolatore» diventa «i sei colori proposti e un calcolatore»; «I sei colori di base nelle serie in commercio» diventa «I sei colori proposti nelle serie in commercio».
 - **Principi generali**, capitolo 8 e introduzione (`dati/principi/principi.json`, titolo del blocco in `genera-principi.py`): «tavolozza ridotta» e «sei colori di base» diventano «sei colori proposti». Il paragrafo dei sei colori chiude con «È un punto di partenza: si può ridurre, ampliare o cambiare.» Il titolo del blocco è «I sei colori proposti». «nel tubetto della tavolozza» diventa «nel tubetto proposto». La data in calce passa al 24/10/2026. Le tre voci di fonte interne che nominavano i sei colori seguono le nuove formule; gli URL restano uguali.
 - **Teoria dei colori**: il capitolo 4 si intitola «4. Sei colori proposti, come punto di partenza» (voce dell'indice: «Sei colori»; l'ancora resta `#tavolozza`). Il paragrafo di apertura dice che si possono ridurre, ampliare o cambiare. Subito dopo, con fatti già nel Quaderno: «Mescolando questi sei colori si ottengono altri colori, fra cui i verdi, i bruni e i grigi degli esempi. Il prontuario è quello delle 12 miscele M1-M12. Il calcolatore cerca la miscela più vicina a un colore dato e segnala ciò che resta fuori dalla loro portata.» I rimandi vanno a `/principi/#miscele` e a `#calcolatore`. Fonte nuova del capitolo, interna: il capitolo 8 dei Principi. Nel calcolatore, «fuori dalla portata dei sei tubetti» diventa «fuori dalla portata dei sei colori proposti» e «dei sei tubetti» nei limiti diventa «dei sei tubetti proposti». Data in calce: 24/10/2026.
@@ -760,7 +770,7 @@ Prossima azione: revisione dei testi da parte di Sandro; l'unione su `main` aspe
 
 ## 2026-10-23 - GBOT-app-acquerello - Fonti esterne del capitolo 8
 
-- **Principi generali** (`dati/principi/principi.json`): nel capitolo 8, «In studio e all'aperto», le frasi che citavano solo il testo del Quaderno prendono le pagine approvate da Sandro il 23/10/2026, dove il passo c'è davvero. Il tono resta di proposta. Nessun colore e nessuna miscela nuovi. L'elenco dei colori pronti (ocra, vescica, perilene e gli altri) resta su `alberi-studio-aperto` e, dove il passo non è nella sezione Alberi, sul testo del Quaderno.
+- **Principi generali** (`dati/principi/principi.json`): nel capitolo 8, «In studio e all'aperto», le frasi che citavano solo il testo del Quaderno prendono le pagine approvate da sinmar il 23/10/2026, dove il passo c'è davvero. Il tono resta di proposta. Nessun colore e nessuna miscela nuovi. L'elenco dei colori pronti (ocra, vescica, perilene e gli altri) resta su `alberi-studio-aperto` e, dove il passo non è nella sezione Alberi, sul testo del Quaderno.
 - **Fonti aggiunte** (i Principi passano da 36 a 42 fonti; il capitolo 8 le numera insieme alle quattro già sue):
   - Bruce MacEvoy, Handprint, «Painting outdoors» (`tech32.html`): vento, temperatura e umidità, asciugatura imprevedibile, controllo del bagnato sulla carta.
   - Bruce MacEvoy, Handprint, «Wet in wet» (`tech23.html`): il vento accelera l'evaporazione, l'umidità la rallenta, il sole diretto scalda il vapore; sulla carta umida, all'aperto, un colore più concentrato (la sua «creamy dilution»). Nella cella all'aperto della riga sull'asciugatura entra una frase in questo senso. «Cremosa» non è una quarta consistenza del Quaderno.
@@ -781,7 +791,7 @@ Prossima azione: revisione dei testi da parte di Sandro; l'unione su `main` aspe
 
 ## 2026-10-23 - GBOT-app-acquerello - Capitolo 8 in tono di proposta
 
-- **Principi generali** (`dati/principi/principi.json`): nel capitolo 8, «In studio e all'aperto», le indicazioni che suonavano obbligatorie sono riformulate come proposte, come chiesto da Sandro il 23/10/2026. Stessi fatti, stessi colori, stesse miscele M1-M12, stesse fonti. Nell'introduzione, «è trattato nel capitolo 8» diventa «è proposto nel capitolo 8». La data dei testi in calce alla pagina passa al 23/10/2026.
+- **Principi generali** (`dati/principi/principi.json`): nel capitolo 8, «In studio e all'aperto», le indicazioni che suonavano obbligatorie sono riformulate come proposte, come chiesto da sinmar il 23/10/2026. Stessi fatti, stessi colori, stesse miscele M1-M12, stesse fonti. Nell'introduzione, «è trattato nel capitolo 8» diventa «è proposto nel capitolo 8». La data dei testi in calce alla pagina passa al 23/10/2026.
 - **Dosi** (`dati/alberi/pit-261014-video-gesti-alberi.json`): il riquadro «Come leggere le dosi» è letto dal capitolo 8 e compare anche nella sezione Alberi e nel prompt della chat. «Si prepara sempre prima il colore dominante» diventa «Conviene preparare prima il colore dominante». L'ordine della ricetta non cambia. Resta «da verificare sempre sulla carta» nella nota del calcolatore: è l'avvertenza di controllo sulla carta, non un'indicazione di pittura.
 - Frasi del capitolo, prima e dopo:
   - «la dotazione e la tavolozza più adatte» diventa «Spesso conviene allora rivedere la dotazione e la tavolozza.»
