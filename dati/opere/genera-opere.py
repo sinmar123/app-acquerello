@@ -336,14 +336,6 @@ def piede(sez, prefisso):
         "<footer>"
         f"<p>Quaderno di acquerello con IA · Opere · testi del {e(data_it(sez['data']))}.</p>"
         f"<p>{e(sez['diritti'])}</p>"
-        "<p>Le altre sezioni: "
-        f'<a href="{prefisso}principi/">1. Principi generali</a> · '
-        f'<a href="{prefisso}colori/">2. Teoria dei colori</a> · '
-        f'<a href="{prefisso}marche/">3. Marche e tubetti</a> · '
-        f'<a href="{prefisso}soggetti/">4. Soggetti</a> · '
-        f'<a href="{prefisso}alberi/">4.1 Alberi</a> · '
-        f'<a href="{prefisso}approfondimenti/">5. Approfondimenti</a> · '
-        f'<a href="{prefisso}eventi/">6. Eventi</a>.</p>'
         "</footer>"
     )
 

@@ -138,7 +138,7 @@ h1 { font-size: 1.45em; line-height: 1.2; margin: 18px 0 4px; color: #2c4f3a; }
 h2 { font-size: 1.3em; margin: 0 0 6px; color: #2c4f3a; }
 a { color: #2c6a4a; }
 .sotto { color: #444; margin: 0 0 10px; }
-nav.salti { position: sticky; top: 0; z-index: 5; display: flex; gap: 6px; overflow-x: auto; padding: 8px 0;
+nav.salti { display: flex; flex-wrap: wrap; gap: 6px; padding: 8px 0;
             background: #fbfaf7; border-bottom: 1px solid #e3e0d8; }
 nav.salti a { flex: none; text-decoration: none; color: #2c4f3a; border: 1px solid #3d6b4f; border-radius: 16px;
               padding: 3px 12px; font-weight: 600; }
@@ -254,7 +254,7 @@ def pagina():
 <nav class="salti">{salti}</nav>
 <div class="intro">{intro}</div>
 {chr(10).join(sezioni)}
-<footer>Quaderno di acquerello con IA · Principi generali · testi del {e(data)}.</footer>
+<footer><p>Quaderno di acquerello con IA · Principi generali · testi del {e(data)}.</p></footer>
 {rimandi_fonti.JS}
 </body>
 </html>

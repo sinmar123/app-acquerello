@@ -62,7 +62,7 @@ a { color: #2c6a4a; }
 .sotto { color: #444; margin: 0 0 12px; }
 .filo { font-size: .92em; margin: 0 0 12px; }
 .filo a { font-weight: 600; text-decoration: none; }
-nav.salti { position: sticky; top: 0; z-index: 5; display: flex; gap: 6px; overflow-x: auto; padding: 8px 0;
+nav.salti { display: flex; flex-wrap: wrap; gap: 6px; padding: 8px 0;
             background: #fbfaf7; border-bottom: 1px solid #e3e0d8; }
 nav.salti a { flex: none; text-decoration: none; color: #2c4f3a; border: 1px solid #3d6b4f; border-radius: 16px;
               padding: 3px 12px; font-weight: 600; }
@@ -283,18 +283,9 @@ def salti(voci):
 
 
 def piede(sez, prof):
-    r = radice(prof)
     return (
         "<footer>"
         f"<p>Quaderno di acquerello con IA · Eventi · testi del {e(data_it(sez['data']))}.</p>"
-        "<p>Le altre sezioni: "
-        f'<a href="{r}principi/">1. Principi generali</a> · '
-        f'<a href="{r}colori/">2. Teoria dei colori</a> · '
-        f'<a href="{r}marche/">3. Marche e tubetti</a> · '
-        f'<a href="{r}soggetti/">4. Soggetti</a> · '
-        f'<a href="{r}alberi/">4.1 Alberi</a> · '
-        f'<a href="{r}approfondimenti/">5. Approfondimenti</a> · '
-        f'<a href="{r}opere/">7. Opere di non professionisti</a>.</p>'
         "</footer>"
     )
 

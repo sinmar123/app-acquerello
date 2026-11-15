@@ -61,7 +61,7 @@ SEZIONI = [
         "slug": "soggetti",
         "numero": "4",
         "breve": "Soggetti",
-        "nome_form": "Soggetti (Alberi, Nuvole, Fiori...)",
+        "nome_form": "Soggetti (Alberi, Paesaggio urbano...)",
         "titolo": "Soggetti: esercizi per tema",
         "sottotitolo": "Alberi e paesaggio urbano, con quattro moduli in preparazione",
         "script_genera": DATI_DIR / "soggetti" / "genera-soggetti.py",
@@ -72,7 +72,7 @@ SEZIONI = [
         "numero": "4.1",
         "breve": "Alberi",
         "modulo_di": "soggetti",
-        "nome_form": "Soggetti (Alberi, Nuvole, Fiori...)",
+        "nome_form": "Soggetti (Alberi, Paesaggio urbano...)",
         "titolo": "S1 · Alberi",
         "sottotitolo": "Sei esempi di alberi, siepi e arbusti, sviluppati in 25 modalità tratte dai video, con un'infografica in tre fasi per ciascuna",
         "script_genera": DATI_DIR / "alberi" / "pit-261013-video-gesti.py",
@@ -83,7 +83,7 @@ SEZIONI = [
         "numero": "4.6",
         "breve": "Paesaggio urbano",
         "modulo_di": "soggetti",
-        "nome_form": "Soggetti (Alberi, Nuvole, Fiori...)",
+        "nome_form": "Soggetti (Alberi, Paesaggio urbano...)",
         "titolo": "S6 · Paesaggio urbano",
         "sottotitolo": "Tre esempi di vicoli, facciate e strade, sviluppati in 6 modalità tratte dai video, con un'infografica in tre fasi per ciascuna",
         "script_genera": DATI_DIR / "urbano" / "genera-urbano.py",
@@ -137,7 +137,7 @@ OPZIONI_SEZIONE = [
     "Principi",
     "Teoria dei colori",
     "Confronto marche",
-    "Soggetti (Alberi, Nuvole, Fiori...)",
+    "Soggetti (Alberi, Paesaggio urbano...)",
     "Approfondimenti",
     "Eventi",
     "Opere",
@@ -263,9 +263,16 @@ def riassunto_eventi():
             locandina = f"{testa}{loc['credito']}. Fonte: {loc['fonte']['url']}"
         else:
             locandina = "locandina da aggiungere."
-        foto = []
-        for f in ev.get("foto", []):
-            foto.append(f"- {f['didascalia']}. {f['credito']}.")
+        foto_ev = ev.get("foto", [])
+        if foto_ev:
+            autori_foto = sorted({f["credito"] for f in foto_ev if f.get("credito")})
+            dettaglio_autori = f" ({'; '.join(autori_foto)})" if autori_foto else ""
+            riassunto_foto = (
+                f"{len(foto_ev)} scatt{'o' if len(foto_ev) == 1 else 'i'}{dettaglio_autori}, "
+                "ciascuno con didascalia nella pagina dell'evento."
+            )
+        else:
+            riassunto_foto = "nessuna."
         social = ev.get("social")
         if social:
             righe_social = "\n".join(f"- {voce['etichetta']}: {voce['url']}" for voce in social["link"])
@@ -278,7 +285,7 @@ def riassunto_eventi():
             f"Programma letto il {fonte['letto']} da {fonte['url']}.\n"
             f"Locandina: {locandina}\n"
             f"Programma:\n{programma}\n"
-            f"Fotografie:\n" + ("\n".join(foto) if foto else "- Nessuna.")
+            f"Fotografie: {riassunto_foto}"
             + testo_social
         )
     if len(blocchi) == 1:
@@ -359,10 +366,65 @@ def riassunto_approfondimenti():
     return "\n".join(blocchi)
 
 
+def pulisci_trattini(testo):
+    return senza_tag(testo).replace("\u2014", "-").replace("\u2013", "-")
+
+
+def riassunto_colori(tavolozza):
+    """Testo della chat ricavato da dati/colori/teoria-colori.json e tavolozza.json."""
+    tc = json.loads((DATI_DIR / "colori" / "teoria-colori.json").read_text(encoding="utf-8"))
+    blocchi = [f"Teoria dei colori ({SITO_URL}/colori/). {pulisci_trattini(tc['sottotitolo'])}"]
+    for cap in tc["capitoli"]:
+        par = " ".join(
+            pulisci_trattini(p["testo"] if isinstance(p, dict) else p)
+            for p in cap.get("paragrafi", [])
+        )
+        blocchi.append(f"- {cap['titolo']}: {par}")
+        if cap["id"] == "calcolatore":
+            mod = " ".join(pulisci_trattini(p["testo"]) for p in cap.get("modello", []))
+            tar = pulisci_trattini(cap["taratura"]["testo"]) if cap.get("taratura") else ""
+            carta_hex = tavolozza.get("carta", {}).get("srgb", "#FBF8F1")
+            stati = {c.get("stato", "provvisorio") for c in tavolozza["colori"]}
+            stato_str = "tarati su carta reale" if stati == {"tarato"} else "provvisori, stimati a occhio in attesa di taratura su carta"
+            blocchi.append(
+                f"  Modello e taratura ({SITO_URL}/colori/#calcolatore): {mod} "
+                f"Bianco della carta nel calcolatore: {carta_hex}; campioni dei sei colori attualmente {stato_str}. {tar}"
+            )
+    return "\n".join(blocchi)
+
+
+def riassunto_marche():
+    """Testo della chat ricavato da dati/marche/marche.json: etichetta, differenze di pigmento e sei serie."""
+    md = json.loads((DATI_DIR / "marche" / "marche.json").read_text(encoding="utf-8"))
+    trasp = md["trasparenza"]
+    righe = [
+        f"Marche e tubetti ({SITO_URL}/marche/): guida alla lettura dell'etichetta e confronto di sei serie di cinque produttori "
+        "sulle pagine ufficiali. " + " ".join(pulisci_trattini(p) for p in md["introduzione"]),
+        f"Criterio di selezione delle serie: {pulisci_trattini(md['criterio'])}",
+        "Differenze principali a parità di nome commerciale:",
+    ]
+    for voce in md["stesso_nome"]:
+        righe.append(f"- {pulisci_trattini(voce['testo'])}")
+    righe.append("Le sei serie confrontate e i tubetti corrispondenti ai sei colori della tavolozza ridotta:")
+    for m in md["marche"]:
+        corrisp = []
+        for r in m["righe"]:
+            if "assente" in r:
+                corrisp.append(f"{r['colore']}: assente")
+                continue
+            var = f" ({r['variante']})" if r.get("variante") else ""
+            gran = ", granulante" if r.get("granulante") else ""
+            corrisp.append(f"{r['nome_commerciale']}{var} [{r['pigmenti']}, {trasp[r['trasparenza']]}{gran}]")
+        scheda = pulisci_trattini(m.get("scheda", ""))
+        righe.append(f"- {m['marca']} {m['serie']} ({SITO_URL}/marche/#{m['id']}): {scheda} Tubetti: {'; '.join(corrisp)}.")
+    return "\n".join(righe)
+
+
 def genera_prompt_chat():
     """Scrive lib/prompt-chat.js col prompt di sistema della chat, ricavato dai dati del sito: sezioni,
-    consistenze e stati della carta dei Principi, tavolozza, le 12 miscele con la convenzione delle dosi,
-    esempi e modalità degli Alberi, moduli in preparazione. Così la chat non può contraddire le pagine con dati scritti a mano."""
+    consistenze e stati della carta dei Principi, teoria dei colori e calcolatore, marche e tubetti, tavolozza e
+    12 miscele, esempi e modalità degli Alberi e del Paesaggio urbano, approfondimenti, eventi e opere.
+    Così la chat non può contraddire le pagine con dati scritti a mano."""
     principi = json.loads((DATI_DIR / "principi" / "principi.json").read_text(encoding="utf-8"))
     tavolozza = json.loads((DATI_DIR / "colori" / "tavolozza.json").read_text(encoding="utf-8"))
     alberi = json.loads((DATI_DIR / "alberi" / "pit-261014-video-gesti-alberi.json").read_text(encoding="utf-8"))
@@ -377,6 +439,12 @@ def genera_prompt_chat():
                 for v in liste[indice]["voci"]]
 
     sezioni = "\n".join(f"- {s['numero']}. {s['titolo']} ({SITO_URL}/{s['slug']}/)" for s in SEZIONI)
+    stati_tav = {c.get("stato", "provvisorio") for c in tavolozza["colori"]}
+    nota_stato_tav = (
+        "i campioni del calcolatore sono tarati su carta reale"
+        if stati_tav == {"tarato"}
+        else "i colori del calcolatore sono provvisori, stimati a occhio"
+    )
     colori = "\n".join(
         f"- {c['nome']} ({c['pigmento']}"
         + (f", {c['trasparenza_tubetto']} nel tubetto proposto" if c.get("trasparenza_tubetto") else "")
@@ -398,7 +466,7 @@ def genera_prompt_chat():
     esempi_urbani = []
     for t in urbano["esempi"]:
         sigla, nome = t["voce"].split(" ", 1)
-        modalita = "; ".join(f"{re.sub(r'^Modalità \d+:\s*', '', m['titolo'])} ({m['autore']})" for m in t["modalita"])
+        modalita = "; ".join(re.sub(r"^Modalità \d+:\s*", "", m["titolo"]) + f" ({m['autore']})" for m in t["modalita"])
         esempi_urbani.append(f"- {sigla} {nome}. Modalità: {modalita}.")
     in_preparazione = ", ".join(s["titolo"] for s in soggetti["soggetti"] if s["stato"] != "pubblicato")
     regola = senza_tag(next(b["testo"] for b in capitoli["abbinare"]["blocchi"] if b["tipo"] == "p"))
@@ -422,11 +490,15 @@ I momenti intermedi, riconoscibili dal lucido dell'acqua:
 La regola di fondo:
 - {regola}
 
-La tavolozza ridotta per l'aperto, nel capitolo 8 dei Principi ({SITO_URL}/principi/#tavolozza-plein-air): sei colori per quando conviene lavorare con pochi tubetti, all'aperto o in viaggio; si possono ridurre, ampliare o cambiare (i colori del calcolatore sono provvisori, stimati a occhio):
+La tavolozza ridotta per l'aperto, nel capitolo 8 dei Principi ({SITO_URL}/principi/#tavolozza-plein-air): sei colori per quando conviene lavorare con pochi tubetti, all'aperto o in viaggio; si possono ridurre, ampliare o cambiare ({nota_stato_tav}):
 {colori}
 
 Le 12 miscele della tavolozza ridotta, M1-M12 ({SITO_URL}/principi/#miscele). {dosi['testo']} Le dosi: {convenzione}.
 {chr(10).join(miscele)}
+
+{riassunto_colori(tavolozza)}
+
+{riassunto_marche()}
 
 Il modulo S1, alberi, siepi e arbusti ({SITO_URL}/alberi/), con le modalità tratte dai video:
 {chr(10).join(esempi)}
@@ -760,16 +832,16 @@ def testa_comune(titolo, descrizione, pagina_path):
 
 # Barra delle sezioni in cima a ogni pagina, home compresa, che resta visibile scorrendo. Non scorre di lato:
 # quando le voci non stanno su una riga vanno a capo, sul telefono più compatte. Nelle sezioni l'indice dei
-# capitoli (nav.salti), fisso anch'esso, scende sotto la barra. Uno script misura l'altezza reale della barra e
-# dell'indice (--barra-h e --salti-h), così scroll-padding-top tiene sotto le due barre il capitolo o la fonte
-# raggiunti con un collegamento; senza script valgono le altezze di riserva qui sotto. Il margine allarga la
-# barra fino ai bordi della finestra: nelle sezioni il body è centrato e largo al massimo 760-820 px, e --sb
-# (larghezza della barra di scorrimento verticale, misurata dallo script; zero sui dispositivi touch, dove la
-# barra di scorrimento non occupa spazio) evita lo scorrimento di lato.
+# capitoli (nav.salti) resta nel flusso ordinario in cima alla pagina con voci a capo, senza doppia barra fissa.
+# Uno script misura l'altezza reale della barra (--barra-h), così scroll-padding-top tiene sotto la barra il
+# capitolo o la fonte raggiunti con un collegamento; senza script vale l'altezza di riserva qui sotto. Il margine
+# allarga la barra fino ai bordi della finestra: nelle sezioni il body è centrato e largo al massimo 760-820 px, e
+# --sb (larghezza della barra di scorrimento verticale, misurata dallo script; zero sui dispositivi touch) evita lo
+# scorrimento di lato.
 BARRA_ALTEZZA = 42
 STILE_BARRA = """<style id="stile-barra">
-:root{--barra-h:%(altezza)dpx;--salti-h:48px}
-html{scroll-padding-top:calc(var(--barra-h) + var(--salti-h) + 8px)}
+:root{--barra-h:%(altezza)dpx}
+html{scroll-padding-top:calc(var(--barra-h) + 12px) !important}
 #barra-quaderno{position:sticky;top:0;z-index:50;display:flex;flex-wrap:wrap;align-items:center;gap:3px 2px;min-height:%(altezza)dpx;margin:%(margine)s;
 padding:5px 8px;background:#263529;font:600 .84rem/1.15 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 #barra-quaderno a{flex:none;white-space:nowrap;color:#e6ece3;text-decoration:none;padding:6px 9px;border-radius:6px}
@@ -778,7 +850,8 @@ padding:5px 8px;background:#263529;font:600 .84rem/1.15 system-ui,-apple-system,
 #barra-quaderno .bq-n{display:inline-block;margin-right:5px;padding:2px 4px;border-radius:4px;background:rgba(255,255,255,.16);font-size:.76rem}
 #barra-quaderno a[aria-current="page"] .bq-n{background:#263529;color:#f7f2e7}
 #barra-quaderno .bq-spazio{flex:1 0 6px}
-nav.salti{top:var(--barra-h)}
+nav.salti{position:static;display:flex;flex-wrap:wrap}
+footer .piede-sezioni,footer .piede-informativa{margin:6px 0 0;font-size:.92em;color:#5a4d3b}
 @media (max-width:600px){
 :root{--barra-h:66px}
 #barra-quaderno{gap:2px 1px;padding:4px 5px;font-size:.76rem}
@@ -810,10 +883,10 @@ def barra_quaderno(slug_pagina: str, profondita: int | None = None) -> str:
     voci += [f'<a href="{radice}{s["slug"]}/"{corrente(s["slug"])}><span class="bq-n">{s["numero"]}</span>{e(s["breve"])}</a>'
              for s in SEZIONI]
     voci.append('<span class="bq-spazio"></span><a href="#assistente-ai">🎨 Assistente</a><a href="#suggerimenti">💬 Suggerimenti</a>')
-    # altezza reale della barra e dell'indice dei capitoli, che cambia quando le voci vanno a capo
+    # altezza reale della barra, che cambia quando le voci vanno a capo
     script = ("<script>(function(){var r=document.documentElement,b=document.getElementById('barra-quaderno');if(!b)return;"
-              "function m(){var s=document.querySelector('nav.salti');r.style.setProperty('--barra-h',b.offsetHeight+'px');"
-              "r.style.setProperty('--salti-h',(s?s.offsetHeight:0)+'px');r.style.setProperty('--sb',(matchMedia('(pointer:coarse)').matches?0:innerWidth-r.clientWidth)+'px');}"
+              "function m(){r.style.setProperty('--barra-h',b.offsetHeight+'px');"
+              "r.style.setProperty('--sb',(matchMedia('(pointer:coarse)').matches?0:innerWidth-r.clientWidth)+'px');}"
               "m();addEventListener('load',m);addEventListener('resize',m);if(window.ResizeObserver)new ResizeObserver(m).observe(b);})();</script>")
     return f'<nav id="barra-quaderno" aria-label="Sezioni del Quaderno">{"".join(voci)}</nav>\n{script}\n'
 
@@ -838,7 +911,16 @@ def inietta_elementi_comuni(html_pagina: str, sezione: dict, pagina_path: str, p
 
     if 'class="piede-informativa"' not in html_pagina:
         radice = "../" * (1 if profondita is None else profondita)
-        nota = f'<p class="piede-informativa"><a href="{radice}informativa/">Informativa sulla privacy</a></p>'
+        altre = " · ".join(
+            f'<a href="{radice}{s["slug"]}/">{s["numero"]}{"" if "." in s["numero"] else "."} {e(s["breve"])}</a>'
+            for s in SEZIONI
+            if s["slug"] != sezione["slug"]
+        )
+        nota = (
+            f'<p class="piede-sezioni">Le altre sezioni: {altre}.</p>'
+            f'<p class="piede-informativa"><a href="{radice}informativa/">Informativa sulla privacy</a>'
+            f' · <a href="{REPO_URL}" target="_blank" rel="noopener">Progetto su GitHub</a></p>'
+        )
         pos = html_pagina.rfind("</footer>")
         if pos < 0:
             raise SystemExit(f"genera-sito: la pagina {pagina_path} non ha il piè di pagina per l'informativa")
