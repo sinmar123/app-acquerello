@@ -92,15 +92,26 @@ def schede_tavolozza(tav):
     carte = []
     for c in tav["colori"]:
         tras = f" · nel tubetto proposto: {e(c['trasparenza_tubetto'])}" if c.get("trasparenza_tubetto") else ""
+        stato = c.get("stato", "provvisorio")
+        cls_stato = " tarato" if "tarat" in stato.lower() else ""
+        forza_val = float(c.get("forza", 1.0))
+        forza_txt = f" · forza {forza_val:.2f}".replace(".", ",") if abs(forza_val - 1.0) > 0.01 else ""
         carte.append(f"""<div class="tubo">
-  <div class="tubo-camp" style="background:{e(c['srgb'])}"><span>provvisorio</span></div>
+  <div class="tubo-camp{cls_stato}" style="background:{e(c['srgb'])}"><span>{e(stato)}</span></div>
   <div class="tubo-txt">
     <b>{e(c['nome'])}</b><br>
-    Pigmento <b>{e(c['pigmento'])}</b>{tras}<br>
+    Pigmento <b>{e(c['pigmento'])}</b>{tras}{e(forza_txt)}<br>
     <span class="nota-tubo">{e(c['note'])}</span>
   </div>
 </div>""")
-    return '<div class="tubi">' + "\n".join(carte) + "</div>"
+    carta = tav.get("carta", {})
+    riga_carta = ""
+    if carta.get("srgb"):
+        riga_carta = (
+            f'<p class="aiuto carta-rif"><span class="camp-carta" style="background:{e(carta["srgb"])}"></span>'
+            f'Bianco della carta nel modello: <code>{e(carta["srgb"])}</code> ({e(carta.get("fonte", ""))}).</p>'
+        )
+    return '<h3>I sei colori di partenza nel calcolatore</h3><div class="tubi">' + "\n".join(carte) + "</div>" + riga_carta
 
 
 CALCOLATORE_HTML = """
@@ -143,7 +154,7 @@ h2 { font-size: 1.3em; margin: 0 0 6px; color: #2c4f3a; }
 h3 { font-size: 1.05em; margin: 14px 0 6px; color: #2c4f3a; }
 a { color: #2c6a4a; }
 .sotto { color: #444; margin: 0 0 10px; }
-nav.salti { position: sticky; top: 0; z-index: 5; display: flex; gap: 6px; overflow-x: auto; padding: 8px 0;
+nav.salti { display: flex; flex-wrap: wrap; gap: 6px; padding: 8px 0;
             background: #fbfaf7; border-bottom: 1px solid #e3e0d8; }
 nav.salti a { flex: none; text-decoration: none; color: #2c4f3a; border: 1px solid #3d6b4f; border-radius: 16px;
               padding: 3px 12px; font-weight: 600; }
@@ -159,7 +170,10 @@ figure { margin: 12px 0; } figcaption { font-size: .85em; color: #555; margin-to
 @media (max-width: 560px) { .tubi { grid-template-columns: 1fr; } }
 .tubo { display: flex; gap: 10px; background: #fff; border: 1px solid #c9d8cd; border-radius: 10px; padding: 8px; }
 .tubo-camp { flex: none; width: 64px; border-radius: 6px; border: 1px solid rgba(0,0,0,.15); display: flex; align-items: flex-end; justify-content: center; }
-.tubo-camp span { font-size: .62em; background: rgba(255,255,255,.85); border-radius: 4px; padding: 0 3px; margin-bottom: 3px; color: #4a3010; }
+.tubo-camp span { font-size: .62em; background: rgba(255,255,255,.88); border-radius: 4px; padding: 0 4px; margin-bottom: 3px; color: #4a3010; }
+.tubo-camp.tarato span { color: #1b4b2e; background: rgba(235,248,239,.92); }
+.carta-rif { display: flex; align-items: center; gap: 7px; margin: 4px 0 12px; }
+.camp-carta { display: inline-block; width: 22px; height: 16px; border-radius: 3px; border: 1px solid rgba(0,0,0,.22); flex: none; }
 .tubo-txt { font-size: .88em; line-height: 1.35; } .cot { color: #555; } .nota-tubo { color: #6b5e4c; font-size: .95em; }
 .strum { background: #eef4ef; border: 2px solid #3d6b4f; border-radius: 12px; padding: 10px 14px 14px; margin: 16px 0; }
 .strum h3 { margin-top: 2px; } .aiuto { font-size: .9em; color: #354a3d; margin: 0 0 8px; }
@@ -212,11 +226,16 @@ def pagina():
         if c["id"] == "munsell":
             corpo.append(scala_valori())
             corpo.append(ruota_tinte(mun["tinte"]))
-        if c["id"] == "tavolozza":
-            corpo.append(schede_tavolozza(tav))
         if c["id"] == "calcolatore":
-            corpo.append('<div class="avviso"><b>Prima di usarlo.</b><ul>'
-                         + "".join(f"<li>{con_rimando(x, f'limite {i}')}</li>" for i, x in enumerate(c["limiti"], 1)) + "</ul></div>")
+            corpo.append(schede_tavolozza(tav))
+            tutti_tarati = all(col.get("stato") == "tarato" for col in tav["colori"])
+            limiti_res = []
+            for i, x in enumerate(c["limiti"], 1):
+                if tutti_tarati and isinstance(x, str) and "provvisori" in x:
+                    x = ("Vale solo per i tubetti <b>tarati</b>: i sei campioni e le forze tintorie sono ricavati da "
+                         "una prova reale su carta; cambiando marca, serie o carta il risultato varia.")
+                limiti_res.append(f"<li>{con_rimando(x, f'limite {i}')}</li>")
+            corpo.append('<div class="avviso"><b>Prima di usarlo.</b><ul>' + "".join(limiti_res) + "</ul></div>")
             # la frase su OKLab sta nel codice del calcolatore, e la sua fonte con lei
             corpo.append(CALCOLATORE_HTML.format(rif_oklab=F.rif(["oklab", "spectraljs"], "calcolatore, Trova la miscela")))
             modello = "".join(f'<p>{con_rimando(p, "modello di calcolo")}</p>' for p in c.get("modello", []))
@@ -251,8 +270,8 @@ def pagina():
 <p class="sotto">{e(testi['sottotitolo'])}</p></header>
 <nav class="salti">{salti}</nav>
 {chr(10).join(sezioni)}
-<footer>Quaderno di acquerello con IA · Teoria dei colori · testi del {e('/'.join(reversed(testi['data'].split('-'))))}. Il calcolatore usa le tabelle spettrali di
-<a href="https://github.com/rvanwijnen/spectral.js" target="_blank" rel="noopener">spectral.js</a> di Ronald van Wijnen (licenza MIT, testo della licenza nel codice della pagina); il resto del codice è scritto per il Quaderno.</footer>
+<footer><p>Quaderno di acquerello con IA · Teoria dei colori · testi del {e('/'.join(reversed(testi['data'].split('-'))))}. Il calcolatore usa le tabelle spettrali di
+<a href="https://github.com/rvanwijnen/spectral.js" target="_blank" rel="noopener">spectral.js</a> di Ronald van Wijnen (licenza MIT, testo della licenza nel codice della pagina); il resto del codice è scritto per il Quaderno.</p></footer>
 <script>
 {script}
 </script>

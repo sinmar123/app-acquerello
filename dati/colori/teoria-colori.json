@@ -1,5 +1,5 @@
 {
-  "data": "2026-11-03",
+  "data": "2026-11-15",
   "nota": "Testi della sezione Teoria dei colori. Un paragrafo con una fonte è un oggetto {testo, fonti}: il generatore numera le fonti e le elenca in fondo al capitolo; i testi delle fonti sono citati e collegati, non copiati. Rimandi controllati sulle pagine delle fonti il 21/10/2026. I campi possono contenere semplici tag html (b, i, a, br).",
   "titolo": "Teoria dei colori",
   "sottotitolo": "Tinta, valore e croma secondo Munsell; perché i pigmenti non si mescolano come le luci; il ruolo dell'acqua e della carta; un calcolatore di miscele.",
@@ -182,9 +182,10 @@
         }
       ],
       "taratura": {
-        "testo": "Taratura sui propri tubetti, per chi scarica il codice del progetto: ogni colore si stende pieno (miele) su un pezzo della stessa carta e si fotografa alla luce del giorno accanto a un cartoncino bianco, oppure si misura con un colorimetro; i sei valori sRGB si sostituiscono poi in <code>dati/colori/tavolozza.json</code>. Il campo <code>forza</code> corregge un tubetto che in miscela si rivela più forte o più debole del previsto.",
+        "testo": "Taratura sui propri tubetti, per chi scarica il codice del progetto: con lo script <code>dati/colori/taratura-campioni.py</code> si prepara su un unico foglio della propria carta una griglia 4 × 4 (carta lasciata bianca, i sei colori stesi al miele e otto miscele 1:1 a parti uguali) e la si fotografa asciutta alla luce diffusa del giorno. Lo strumento normalizza l'esposizione sul bianco di riferimento, ricava i sei valori <code>srgb</code> e stima insieme i coefficienti <code>forza</code> che riducono lo scarto in OKLab sulle otto miscele reali, aggiornando <code>dati/colori/tavolozza.json</code>.",
         "fonti": [
-          "spectraljs"
+          "spectraljs",
+          "oklab"
         ]
       },
       "modello": [

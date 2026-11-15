@@ -84,7 +84,7 @@ def controlla(d, colori):
             for k in v["marche"]:
                 if k not in ids:
                     errore(f"{cap}, voce {i}: serie «{k}» inesistente")
-    for p in d["introduzione"] + [d["criterio"], d["nota_trasparenza"], d["stesso_nome_intro"], d["esempio_intro"]]:
+    for p in d["introduzione"] + [d["criterio"], d["nota_trasparenza"], d["stesso_nome_intro"], d["esempio_intro"]] + list(d.get("note_colonna_tavolozza", {}).values()):
         controlla_testo(p, "apertura")
     fp = d["fonti_pagine"]
     for k, f in fp.items():
@@ -128,19 +128,20 @@ h1 { font-size: 1.45em; line-height: 1.2; margin: 18px 0 4px; color: #2c4f3a; }
 h2 { font-size: 1.3em; margin: 0 0 6px; color: #2c4f3a; }
 a { color: #2c6a4a; }
 .sotto { color: #444; margin: 0 0 10px; }
-nav.salti { position: sticky; top: 0; z-index: 5; display: flex; gap: 6px; overflow-x: auto; padding: 8px 0;
+nav.salti { display: flex; flex-wrap: wrap; gap: 6px; padding: 8px 0;
             background: #fbfaf7; border-bottom: 1px solid #e3e0d8; }
 nav.salti a { flex: none; text-decoration: none; color: #2c4f3a; border: 1px solid #3d6b4f; border-radius: 16px;
               padding: 3px 12px; font-weight: 600; }
 .intro { background: #eef4ef; border: 1px solid #cadbce; border-radius: 8px; padding: 10px 12px; margin: 12px 0; }
 .intro p { margin: 4px 0; }
+.intro p.nota-fonti { font-size: .88em; color: #555; margin-top: 6px; }
 section.cap { border-top: 3px solid #3d6b4f; padding-top: 14px; margin-top: 26px; }
 .nota-serie { color: #444; font-size: .92em; margin: 0 0 8px; }
 .tab { overflow-x: auto; }
 table.tub { width: 100%; border-collapse: collapse; font-size: .86em; }
 table.tub th, table.tub td { border: 1px solid #d8d2c4; padding: 5px 6px; vertical-align: top; text-align: left; }
 table.tub th { background: #eef4ef; color: #2c4f3a; }
-table.tub td.pig { font-weight: 700; white-space: nowrap; }
+table.tub td.pig { font-weight: 700; min-width: 5.5em; }
 table.tub .var { display: block; font-size: .85em; color: #6b5e4c; }
 table.tub .nota { display: block; font-size: .88em; color: #555; margin-top: 3px; }
 table.tub td.assente { color: #555; font-style: italic; }
@@ -208,14 +209,16 @@ def pagina():
             f' · <a href="#{e(m["id"])}">Tabella della serie</a></p></article>')
 
     # capitolo 6: le tabelle della tavolozza ridotta, una per serie
+    note_col = d.get("note_colonna_tavolozza", {})
     tabelle = []
     for m in d["marche"]:
         righe = []
         for cid in ordine:
             for r in [r for r in m["righe"] if r["colore"] == cid]:
                 c = colori[cid]
+                nota_tav = f'<span class="var">{e(note_col[cid])}</span>' if cid in note_col else ""
                 var = f'<span class="var">{e(r["variante"])}</span>' if r.get("variante") else ""
-                col = f'<td>{e(c["nome"])} ({e(c["pigmento"])}){var}</td>'
+                col = f'<td>{e(c["nome"])} ({e(c["pigmento"])}){nota_tav}{var}</td>'
                 fonte = (f'<td class="fonte"><a href="{e(r["fonte"])}" target="_blank" rel="noopener">pagina ufficiale</a>'
                          f'<br><small>controllata il {e(data_it(r["controllato"]))}</small></td>')
                 if "assente" in r:
@@ -257,8 +260,10 @@ def pagina():
     salti = ('<a href="#apertura">Apertura</a>'
              + "".join(f'<a href="#{e(c["id"])}">{e(c["breve"])}</a>' for c in d["capitoli_generali"])
              + '<a href="#etichetta">L\'etichetta</a><a href="#stesso-nome">Stesso nome</a><a href="#serie">Le sei serie</a>'
-             + '<a href="#esempio">Un esempio</a><a href="#fonti">Fonti</a>')
-    intro = "".join(f"<p>{e(p)}</p>" for p in d["introduzione"])
+             + '<a href="#esempio">Un esempio</a>')
+    intro = ("".join(f"<p>{e(p)}</p>" for p in d["introduzione"])
+             + '<p class="nota-fonti">I riferimenti numerati portano alle fonti in fondo a ogni capitolo; la freccia riporta al testo. '
+               'Ogni riga delle tabelle conserva il collegamento alla pagina ufficiale del colore e la sua data di controllo.</p>')
     pagina_html = f"""<!doctype html>
 <html lang="it">
 <head>
@@ -288,9 +293,7 @@ def pagina():
 {chr(10).join(tabelle)}
 {F_esempio.elenco()}
 </section>
-<section class="cap" id="fonti"><h2>Fonti</h2>
-<p>I riferimenti numerati portano alle fonti in fondo a ogni capitolo; la freccia riporta al testo. Ogni riga delle tabelle conserva il collegamento alla pagina ufficiale del colore e la sua data di controllo.</p></section>
-<footer>Quaderno di acquerello con IA · Marche e tubetti · testi del {e(data_it(d['data']))}.</footer>
+<footer><p>Quaderno di acquerello con IA · Marche e tubetti · testi del {e(data_it(d['data']))}.</p></footer>
 {rimandi_fonti.JS}
 </body>
 </html>

@@ -575,7 +575,7 @@ h2 { font-size: 1.3em; margin: 0 0 4px; color: #2c4f3a; }
 h3 { font-size: 1.05em; margin: 14px 0 6px; color: #2c4f3a; }
 .sotto, .dove { color: #444; margin: 0 0 10px; }
 .sig { font-size: .75em; color: #fff; background: #3d6b4f; border-radius: 5px; padding: 1px 7px; vertical-align: 2px; }
-nav.salti { position: sticky; top: 0; z-index: 5; display: flex; gap: 6px; overflow-x: auto; padding: 8px 0;
+nav.salti { display: flex; flex-wrap: wrap; gap: 6px; padding: 8px 0;
             background: #fbfaf7; border-bottom: 1px solid #e3e0d8; }
 nav.salti a { flex: none; text-decoration: none; color: #2c4f3a; border: 1px solid #3d6b4f; border-radius: 16px;
               padding: 3px 12px; font-weight: 600; }

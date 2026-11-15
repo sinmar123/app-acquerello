@@ -10,7 +10,7 @@ const SEZIONI_VALIDE = [
   "Principi",
   "Teoria dei colori",
   "Confronto marche",
-  "Soggetti (Alberi, Nuvole, Fiori...)",
+  "Soggetti (Alberi, Paesaggio urbano...)",
   "Approfondimenti",
   "Eventi",
   "Opere"

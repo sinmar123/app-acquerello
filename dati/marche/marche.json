@@ -1,12 +1,12 @@
 {
- "data": "2026-11-03",
+ "data": "2026-11-15",
  "nota": "Dati dei tubetti presi solo dalle pagine ufficiali dei produttori, con il link e la data di controllo su ogni riga. I colori (id e nome comune) vengono da dati/colori/tavolozza.json. GBOT-app-acquerello, 18/10/2026. Dal 29/10/2026 la sezione è generale: le tabelle dei sei colori della tavolozza ridotta stanno in fondo, come esempio (scelta del curatore).",
  "titolo": "Marche e tubetti: come orientarsi fra i colori in commercio",
  "sottotitolo": "Leggere l’etichetta e confrontare le serie",
  "introduzione": [
   "Questa guida aiuta a leggere l'etichetta e a confrontare i colori in commercio: formati, serie, pigmenti, trasparenza e resistenza alla luce. Gli esempi riguardano sei serie di cinque marche e rimandano alle pagine ufficiali dei produttori. Il Quaderno non propone una classifica: prima dell'acquisto, fa fede l'etichetta del tubetto."
  ],
- "criterio": "Oltre alla serie usata negli esercizi (Cotman) e alla serie superiore della stessa marca, le tabelle comprendono le marche confrontate nel video «Best Brand to Fill Watercolour Pans», raccolto nei materiali del Quaderno: Daniel Smith, Schmincke, Van Gogh e Maimeri Blu. Per ogni colore è riportato il tubetto con il nome più vicino; quando la serie ne ha due, per esempio il ceruleo vero e un'imitazione, sono riportati entrambi.",
+ "criterio": "Le tabelle mettono a confronto sei serie di cinque produttori: la linea per chi comincia usata negli esercizi (Winsor & Newton Cotman), la linea professionale della stessa marca (Winsor & Newton Professional) e le quattro serie esaminate nel video «Best Brand to Fill Watercolour Pans», raccolto nei materiali del Quaderno, ossia una seconda linea per studenti e artisti (Royal Talens Van Gogh, senza la linea superiore Rembrandt) e tre linee per artisti (Daniel Smith Extra Fine, Schmincke HORADAM e Maimeri Blu). Per ogni colore è riportato il tubetto con il nome più vicino; quando la serie ne ha due, per esempio il ceruleo vero e un'imitazione, sono riportati entrambi.",
  "criterio_fonte": "https://www.youtube.com/watch?v=F-wkzt94-OA",
  "trasparenza": {
   "T": "trasparente",
@@ -321,8 +321,10 @@
      "controllato": "2026-10-18"
     }
    ],
-   "scheda": "Le pagine ufficiali di ogni colore riportano il pigmento, la trasparenza e il codice SKU, che nelle tabelle in fondo sta al posto del numero breve del colore.",
-   "fonti_scheda": []
+   "scheda": "Serie per artisti Extra Fine Watercolors; le schede ufficiali dei singoli colori riportano pigmenti col Colour Index, trasparenza, eventuale granulazione, resistenza alla luce su scala da I a IV e codice SKU a nove cifre al posto del numero breve del colore (ampiezza complessiva della gamma e formati in ml non sono indicati qui perché il catalogo generale del sito non è consultabile automaticamente).",
+   "fonti_scheda": [
+    "daniel-smith-colore"
+   ]
   },
   {
    "id": "schmincke",
@@ -649,6 +651,12 @@
      "controllato": "2026-10-29",
      "titolo_link": "Van Gogh Watercolour Tube 10 ml"
    },
+   "daniel-smith-colore": {
+     "testo": "Daniel Smith, Extra Fine Watercolors, scheda ufficiale di un colore (French Ultramarine): denominazione della linea, codice SKU, pigmento, trasparenza, granulazione e scala di resistenza alla luce",
+     "url": "https://danielsmith.com/color-stories/watercolors/french-ultramarine-watercolor/",
+     "controllato": "2026-10-18",
+     "titolo_link": "French Ultramarine"
+   },
    "schmincke-serie": {
      "testo": "Schmincke, HORADAM Aquarell: presentazione della serie, colori, formati, resistenza alla luce, gruppi di prezzo",
      "url": "https://www.schmincke.de/en/produkte/aquarell/horadam-aquarell",
@@ -720,5 +728,8 @@
   ]
  },
  "stesso_nome_intro": "Due tubetti con lo stesso nome possono avere pigmenti diversi, e due tubetti con nomi diversi lo stesso pigmento: prima dell'acquisto conviene controllare il pigmento. I produttori, poi, a volte cambiano la formula senza cambiare il nome: il cremisi Cotman usato negli esercizi ha PR206 sull'etichetta, mentre la formula attuale indicata sul sito è PR179. Gli esempi che seguono vengono dalle tabelle in fondo alla pagina; tra parentesi quadre le serie da cui vengono.",
- "esempio_intro": "Le tabelle che seguono cercano nelle sei serie i colori della tavolozza ridotta per l'aperto, descritta nel <a href=\"../principi/#tavolozza-plein-air\">capitolo 8 dei Principi generali</a>: per ogni colore il tubetto con il nome più vicino, il numero, i pigmenti e la trasparenza."
+ "esempio_intro": "Le tabelle che seguono cercano nelle sei serie i colori della tavolozza ridotta per l'aperto, descritta nel <a href=\"../principi/#tavolozza-plein-air\">capitolo 8 dei Principi generali</a>: per ogni colore il tubetto con il nome più vicino, il numero, i pigmenti e la trasparenza.",
+ "note_colonna_tavolozza": {
+  "cremisi": "formula precedente del tubetto; nelle serie attuali PR179 o altri pigmenti"
+ }
 }
