@@ -70,13 +70,10 @@
     }
   ],
   "nota_metodo": [
-    "La pagina deriva dalla ricerca documentale del 9 novembre 2026 affidata al topic Ricerche e dalla proposta editoriale approvata dal curatore. Il suo via libera all’integrazione è del 9 novembre 2026. La ricerca non è stata rilanciata per costruire la pagina.",
-    "OpenClaw / OC ha coordinato e verificato la ricerca; il testo editoriale iniziale è firmato Codex / CDX. L’integrazione nei sorgenti e il collaudo sono di OpenClaw / OC. Non esiste una misura separata affidabile del tempo di verifica, redazione e coordinamento.",
-    "Sono disponibili quattro rapporti: GPT-6 Astra high nativo sul piano a canone, GLM 5.2, DeepSeek v4 Pro e Gemini Deep Research standard. Qwen 3.8 Max è stato interrotto dal timeout dello strumento, senza rapporto finale o dati completi sui consumi; non è stato rilanciato. Kimi e Grok non sono stati avviati.",
-    "GPT dichiara 20 minuti e 32 secondi e 25 query. GLM ha registrato 308,9 secondi, 23 ricerche e 3 estrazioni; DeepSeek 359,8 secondi, 28 ricerche e nessuna estrazione. Per Gemini il ritiro ha richiesto 470 secondi: sono dichiarate 34 ricerche e 1.215.170 token complessivi. Sono misure diverse, non tempi da sommare né conteggi di opere lette integralmente.",
-    "Il preventivo approvato era 3,7-6,1 USD, con scenario prudente di circa 18,8 USD non garantito. Circa 0,363 USD è soltanto la stima GLM, con ipotesi sulle ricerche fatturate, non un costo complessivo. Qwen, DeepSeek, Gemini e il piano Gemini non sono qui monetizzati; nessun totale effettivamente addebitato è stato riscontrato. Il piano Gemini ha dichiarato 6.048 token, distinti dalla ricerca.",
-    "Qwen, GLM e DeepSeek hanno usato gli stessi strumenti DashScope. L’accordo fra modelli non è stato assunto come prova; sono stati controllati passi primari e fonti istituzionali e storico-critiche. La copertura delle consultazioni è indicata nelle fonti finali.",
-    "Non sono stati collazionati tutti gli stenogrammi, le prime edizioni, gli originali pittorici o un’edizione italiana integrale. Non si ricostruiscono inventari complessivi degli schizzi o ricette storiche di pigmenti. Le tre esperienze del capitolo finale sono proposte redazionali non eseguite."
+    "La pagina nasce da una ricerca documentale svolta il 9 novembre 2026 con l’aiuto di più strumenti di intelligenza artificiale, confrontando i materiali raccolti e verificando i passaggi decisivi sulle fonti primarie, istituzionali e storico-critiche. L’accordo fra modelli non è stato assunto come prova.",
+    "Sono stati controllati passi delle conferenze sul colore di Steiner (GA 291 e GA 291a), della Farbenlehre di Goethe, dello studio critico di Sari Kuuva (2024) e delle schede istituzionali del Goetheanum, della Rudolf Steiner Malschule e del catalogo editoriale; la copertura esatta di ciascuna lettura è indicata nelle fonti in fondo alla pagina.",
+    "Non sono stati collazionati tutti gli stenogrammi, le prime edizioni, gli originali pittorici o un’edizione italiana integrale, né si ricostruiscono inventari completi degli schizzi o ricette storiche di pigmenti. Le tre esperienze del capitolo finale sono proposte di osservazione del Quaderno, non eseguite.",
+    "Il curatore ha scelto l’impostazione e rivisto il testo prima della pubblicazione."
   ],
   "capitoli": [
     {
@@ -523,7 +520,7 @@
       "titolo": "“My soul must live with the colour”. The Transformative Potential of Colours Described by Rudolf Steiner",
       "pubblicazione": "Approaching Religion, 14(1), 2024, pp. 37-54. Versione pubblicata nel deposito dell’Università di Jyväskylä, CC BY 4.0.",
       "url": "https://jyx.jyu.fi/bitstreams/de2e170e-beaa-4cf2-a389-d2c88f9a0998/download",
-      "nota": ", CC BY 4.0. Per questa stesura riscontrate pp. 37-38 e 49-52; lettura integrale dichiarata dal ricercatore nel dossier precedente, non ripetuta qui. Il saggio è usato per l’impostazione storico-interpretativa. Il termine 1923 riferito alla raccolta GA 291 a p. 37 è corretto in 1924 sulla fonte primaria.",
+      "nota": "Per questa stesura sono state riscontrate le pp. 37-38 e 49-52. Il saggio è usato per l’impostazione storico-interpretativa; il riferimento all’anno 1923 per la raccolta GA 291 a p. 37 è corretto in 1924 sulla fonte primaria.",
       "doi": "10.30664/ar.135987"
     },
     "steiner-biografia": {

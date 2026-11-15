@@ -2,7 +2,7 @@
 
 Questo file non è una pagina del sito. `genera-eventi.py` non lo legge e `scripts/genera-sito.py` non lo copia in `site/`.
 
-L'idea delle interviste è sospesa, in attesa di Sandro. Il 24/10/2026 la scheda pubblicata tiene solo locandina, programma e fotografie.
+L'idea delle interviste è sospesa, in attesa di decisione del curatore. Il 24/10/2026 la scheda pubblicata tiene solo locandina, programma e fotografie.
 
 ## Domande del primo giro
 
@@ -37,4 +37,4 @@ La seconda domanda rimandava a Marche e tubetti. La risposta, quando c'era, anda
 
 ## Punto aperto sulle marche
 
-Le risposte sui materiali nominano marche di carta, pennelli e colori. Resta da decidere se, in una scheda futura, si possano citare come dette da chi parla, con il rimando a Marche e tubetti. Il controllo del sito, che ferma i nomi di marca fuori da quella sezione, non è stato cambiato. Finché Sandro non decide, le interviste non tornano nelle pagine.
+Le risposte sui materiali nominano marche di carta, pennelli e colori. Resta da decidere se, in una scheda futura, si possano citare come dette da chi parla, con il rimando a Marche e tubetti. Il controllo del sito, che ferma i nomi di marca fuori da quella sezione, non è stato cambiato. Finché il curatore non decide, le interviste non tornano nelle pagine.

@@ -56,15 +56,15 @@
     {
       "codice": "S6",
       "stato": "pubblicato",
-      "etichetta_stato": "Disponibile",
+      "etichetta_stato": "Pubblicato",
       "titolo": "Paesaggio urbano",
-      "sottotitolo": "Vicoli, scale e luce",
-      "descrizione": "Tre esempi e quattro studi guidati: dal vicolo con scalinata alle case, alla strada bagnata e alle vedute con acqua. Gesti osservati e prove proposte restano distinti.",
+      "sottotitolo": "Dai vicoli a gradini fra muri colorati alle facciate bianche con grande ombra portata, fino alle strade bagnate e ai passanti in scala",
+      "descrizione": "Tre esempi classici del paesaggio urbano ad acquerello, studiati attraverso sei modalità tratte dai video didattici, con infografica in tre fasi, passaggi al secondo e proposte di colore per lo studio e per l'aperto.",
       "badge": [
         "3 esempi",
-        "4 infografiche in tre fasi",
-        "8 estratti video",
-        "prove proposte"
+        "6 modalità con infografica",
+        "15 estratti video",
+        "colori per studio e aperto"
       ],
       "href": "../urbano/",
       "sottovoci_da": "urbano"
