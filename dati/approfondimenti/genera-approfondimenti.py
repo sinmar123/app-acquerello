@@ -221,6 +221,16 @@ class FontiTema(rimandi_fonti.Capitolo):
     def __init__(self, tema):
         super().__init__("bibliografia", tema["fonti"], f"approfondimenti, {tema['id']}")
         self.alias = {}
+        self.ancore_fonti = tema.get("ancore_fonti", {})
+        if self.ancore_fonti:
+            if (set(self.ancore_fonti) != set(self.fonti)
+                    or len(set(self.ancore_fonti.values())) != len(self.fonti)
+                    or any(not re.fullmatch(r"bibliografia-[a-z0-9-]+", v)
+                           for v in self.ancore_fonti.values())):
+                errore(f"{tema['id']}: mappa delle ancore bibliografiche incompleta o non valida")
+
+    def ancora_fonte(self, k):
+        return self.ancore_fonti.get(k, f"bibliografia-f{self.ordine.index(k) + 1}")
 
     def apri_capitolo(self, id_capitolo):
         self.capitolo = id_capitolo
@@ -246,7 +256,7 @@ class FontiTema(rimandi_fonti.Capitolo):
                 precedente = f"{self.capitolo}-f{len(self.ordine_capitolo)}"
                 self.alias.setdefault(k, []).append(precedente)
             numeri.add(self.ordine.index(k) + 1)
-        link = ", ".join(f'<a href="#bibliografia-f{n}" aria-label="Fonte {n}">{n}</a>'
+        link = ", ".join(f'<a href="#{e(self.ancora_fonte(self.ordine[n - 1]))}" aria-label="Fonte {n}">{n}</a>'
                          for n in sorted(numeri))
         return f'<sup class="rif" id="{rid}">[{link}]</sup>'
 
@@ -255,7 +265,7 @@ class FontiTema(rimandi_fonti.Capitolo):
         for n, k in enumerate(self.ordine, 1):
             alias = "".join(f'<span id="{e(id_vecchio)}" class="fonte-alias" aria-hidden="true"></span>'
                             for id_vecchio in self.alias.get(k, []))
-            voci.append(f'<li id="bibliografia-f{n}">{alias}{self.voce(k)} '
+            voci.append(f'<li id="{e(self.ancora_fonte(k))}">{alias}{self.voce(k)} '
                         f'<a class="torna" href="#{e(self.prima[k])}" '
                         f'aria-label="Torna al testo che cita la fonte {n}">↩ Torna al testo</a></li>')
         return ('<section class="bibliografia" id="bibliografia"><h2>Fonti</h2>'

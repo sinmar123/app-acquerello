@@ -1,10 +1,10 @@
 {
   "id": "blu",
   "ordine": 2,
-  "data": "2026-11-14",
+  "data": "2026-11-16",
   "titolo": "Il blu e i blu nell’acquerello",
   "sottotitolo": "Tinte, pigmenti e scelte sulla carta",
-  "scheda": "Tinte, nomi, pigmenti, miscele e impieghi dei blu, con un capitolo sul blu oltremare PB29 e uno sul blu intenso",
+  "scheda": "Tinte, nomi, pigmenti, miscele e impieghi dei blu, con capitoli sul blu oltremare PB29, su Yves Klein e sul blu intenso",
   "sintesi": [
     {
       "testo": "Un blu si riconosce dalla tinta, ma si sceglie anche per la stesura. Nome, pigmento e formulazione non sono la stessa cosa. Si veda il capitolo 4.",
@@ -19,19 +19,23 @@
       "capitolo": "oltremare"
     },
     {
-      "testo": "Nei due prodotti documentati, «blu intenso» indica un blu ftalo PB15. Il capitolo 6 distingue il nome commerciale dalle varianti e dalle proprietà.",
+      "testo": "Nell’opera di Yves Klein il blu è il centro dell’esperienza. Pigmento, legante e superficie distinguono l’IKB dall’acquerello; il deposito Soleau non equivale a un brevetto.",
+      "capitolo": "yves-klein"
+    },
+    {
+      "testo": "Nei due prodotti documentati, «blu intenso» indica un blu ftalo PB15. Il capitolo 7 distingue il nome commerciale dalle varianti e dalle proprietà.",
       "capitolo": "blu-intenso"
     },
     {
-      "testo": "Trasparenza, forza colorante e macchiatura rispondono a domande diverse. Un blu trasparente può lasciare un residuo tenace nella carta. Si veda il capitolo 7.",
+      "testo": "Trasparenza, forza colorante e macchiatura rispondono a domande diverse. Un blu trasparente può lasciare un residuo tenace nella carta. Si veda il capitolo 8.",
       "capitolo": "stesura"
     },
     {
-      "testo": "Le miscele si confrontano con gli stessi colori di partenza. Premiscela, incontro sul bagnato e velatura sono procedimenti distinti, spiegati nel capitolo 8.",
+      "testo": "Le miscele si confrontano con gli stessi colori di partenza. Premiscela, incontro sul bagnato e velatura sono procedimenti distinti, spiegati nel capitolo 9.",
       "capitolo": "miscele"
     },
     {
-      "testo": "Il capitolo 10 propone confronti sui propri materiali, non prove già eseguite. Il capitolo 11 distingue resistenza alla luce e conservazione dell’opera.",
+      "testo": "Il capitolo 11 propone confronti sui propri materiali, non prove già eseguite. Il capitolo 12 distingue resistenza alla luce e conservazione dell’opera.",
       "capitolo": "conservazione"
     }
   ],
@@ -40,10 +44,10 @@
     "Il <a href=\"#oltremare\">capitolo 5 sul blu oltremare PB29</a> ne approfondisce storia, stesure, mescolanze e conservazione. Il confronto comprende ftalo, Prussia, cobalti, cerulei, indantrone e blu-verdi. Per il lessico si rimanda anche a <a href=\"../../approfondimenti/attributi-colore/\">tinta, valore e croma</a>; per confezioni e gamme a <a href=\"../../marche/\">Marche e tubetti</a>."
   ],
   "nota_metodo": [
-    "La pagina riunisce la ricerca generale sui pigmenti blu nell’acquerello (11-12 novembre 2026) e lo studio monografico sul blu oltremare PB29 (3 novembre 2026), svolti con l’aiuto di più strumenti di intelligenza artificiale e verificati sulle fonti tecniche, storiche e di prodotto. L’accordo fra risposte dei modelli non è stato considerato una prova.",
-    "L’elenco finale delle 51 fonti distingue schede dei produttori, repertori sui pigmenti, studi di conservazione, testimonianze e letture parziali. Le classificazioni dei produttori riguardano le sole gamme esaminate, mentre le prove comparative datate non certificano tutte le formulazioni oggi in commercio.",
+    "La pagina riunisce la ricerca generale sui pigmenti blu nell’acquerello (11-12 novembre 2026) e lo studio monografico sul blu oltremare PB29 (3 novembre 2026) e il capitolo su Yves Klein (16 novembre 2026), svolti con l’aiuto di più strumenti di intelligenza artificiale e verificati sulle fonti tecniche, storiche e di prodotto. L’accordo fra risposte dei modelli non è stato considerato una prova.",
+    "L’elenco finale delle 63 fonti distingue schede dei produttori, repertori sui pigmenti, studi di conservazione, testimonianze e letture parziali. Le classificazioni dei produttori riguardano le sole gamme esaminate, mentre le prove comparative datate non certificano tutte le formulazioni oggi in commercio.",
     "Per due studi scientifici sulla degradazione del blu oltremare è stato consultato soltanto il riassunto e non il testo integrale, come indicato nel paragrafo 5.6 e nelle rispettive voci bibliografiche; la prima adozione dell’oltremare sintetico in acquerello e il comportamento nel tempo del sistema pigmento, gomma arabica e carta restano questioni aperte nel materiale esaminato.",
-    "I confronti pratici del paragrafo 5.8 e del capitolo 10 sono esercizi proposti al lettore e non prove di studio già eseguite; il curatore ha scelto i contenuti e rivisto il testo prima della pubblicazione."
+    "I confronti pratici del paragrafo 5.8 e dei capitoli 6 e 11 sono esercizi proposti al lettore e non prove di studio già eseguite; il curatore ha scelto i contenuti e rivisto il testo prima della pubblicazione."
   ],
   "capitoli": [
     {
@@ -387,7 +391,7 @@
               "celle": [
                 "PB27",
                 "Blu di Prussia",
-                "Esempi di prodotti trasparenti e macchianti; la permanenza richiede il confronto del capitolo 11."
+                "Esempi di prodotti trasparenti e macchianti; la permanenza richiede il confronto del capitolo 12."
               ],
               "fonti": [
                 "F08",
@@ -842,9 +846,199 @@
       ]
     },
     {
+      "id": "yves-klein",
+      "breve": "Yves Klein",
+      "titolo": "6. Yves Klein: il blu come esperienza",
+      "indice_interno": true,
+      "blocchi": [
+        {
+          "tipo": "p",
+          "testo": "Il blu può descrivere un cielo, costruire un’ombra o partecipare a una miscela. Nell’opera di Yves Klein diventa invece il centro dell’esperienza. Il colore occupa la superficie senza dover rappresentare un oggetto. Per Klein, il dipinto può aprire uno spazio mentale che supera i suoi confini materiali. È una concezione dell’arte, non una proprietà scientifica attribuita al pigmento.",
+          "fonti": [
+            "klein-k1",
+            "klein-k2"
+          ]
+        },
+        {
+          "tipo": "titoletto",
+          "id": "dal-pittore-al-monocromo",
+          "testo": "6.1. Dal pittore al monocromo"
+        },
+        {
+          "tipo": "p",
+          "testo": "Yves Klein nasce a Nizza nel 1928 e muore a Parigi nel 1962. Figlio dei pittori Fred Klein e Marie Raymond, si dedica anche al judo. Negli anni Cinquanta presenta monocromi di colori diversi. Il blu non è quindi la sua unica scelta fin dall’inizio. Nel 1960 partecipa alla fondazione del Nouveau Réalisme, mantenendo una ricerca personale sulla materia e sull’immateriale.",
+          "fonti": [
+            "klein-k3",
+            "klein-k4"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Un passaggio decisivo è la mostra <i>Proposte monocrome, epoca blu</i>, alla Galleria Apollinaire di Milano nel gennaio 1957. Vi sono presentate undici tele blu, apparentemente uguali. Il colore non serve più a distinguere figure o oggetti: diventa il motivo per sostare davanti a un’intera superficie. Il distacco dalla parete contribuisce a far percepire il quadro come una presenza nello spazio.",
+          "fonti": [
+            "klein-k1"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Il viaggio ad Assisi conferma, secondo la ricostruzione del Centre Pompidou, l’interesse di Klein per i cieli di Giotto. Non si tratta di identificare le due tecniche. Klein riconosce in quel blu una possibilità spirituale e la sviluppa con materiali e intenzioni differenti. Il confronto riguarda una lettura artistica, non la continuità di una ricetta.",
+          "fonti": [
+            "klein-k3"
+          ]
+        },
+        {
+          "tipo": "titoletto",
+          "id": "blu-e-immateriale",
+          "testo": "6.2. Il blu e l’immateriale"
+        },
+        {
+          "tipo": "p",
+          "testo": "Il cielo è importante perché suggerisce uno spazio che non sembra delimitato da un contorno. Klein associa il blu alla libertà, all’infinito e a ciò che non può essere posseduto come un oggetto. La frase «Il blu non ha dimensioni», qui tradotta, esprime questa posizione poetica. Non significa che una superficie dipinta sia fisicamente priva di dimensioni.",
+          "fonti": [
+            "klein-k1"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Il monocromo non equivale dunque a una tela sulla quale non accade nulla. Riduce gli elementi narrativi e richiama l’attenzione sull’incontro con il colore. In <a href=\"https://www.moma.org/collection/works/80103\"><i>Blue Monochrome</i></a>, conservato al MoMA, l’assenza di disegno convive con una superficie opaca e finemente tessuta. La materia resta essenziale anche quando l’artista parla di immaterialità.",
+          "fonti": [
+            "klein-k2"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Nel 1958 la mostra del <i>Vuoto</i>, alla Galerie Iris Clert di Parigi, porta questa ricerca oltre la tela. Lo spazio della galleria diventa il luogo di un’esperienza senza il consueto oggetto esposto. Il blu va letto dentro questo percorso più ampio, non come una semplice firma cromatica. Klein continuerà inoltre a lavorare con oro, rosa e fuoco.",
+          "fonti": [
+            "klein-k3",
+            "klein-k12"
+          ]
+        },
+        {
+          "tipo": "titoletto",
+          "id": "international-klein-blue",
+          "testo": "6.3. Che cosa distingue l’International Klein Blue"
+        },
+        {
+          "tipo": "p",
+          "testo": "L’International Klein Blue, o IKB, nasce dal lavoro sul rapporto fra pigmento, legante e applicazione. Klein collabora con il mercante di colori Édouard Adam. Il materiale impiegato è blu oltremare sintetico; non è un nuovo elemento chimico scoperto dall’artista e non è blu di cobalto. L’oltremare sintetico appartiene alla famiglia Pigment Blue 29, PB29.",
+          "fonti": [
+            "klein-k1",
+            "klein-k5",
+            "klein-k6"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "L’obiettivo è mantenere sulla superficie l’intensità visiva della polvere di pigmento, senza l’effetto che Klein riscontrava nei leganti tradizionali. La soluzione comprende una resina sintetica. La scheda del MoMA descrive <a href=\"https://www.moma.org/collection/works/80103\"><i>Blue Monochrome</i></a> come pigmento in acetato di polivinile su cotone montato su compensato. Il nome IKB non va quindi ridotto alla sola tinta.",
+          "fonti": [
+            "klein-k1",
+            "klein-k2"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Uno studio del Metropolitan Museum del 2026 chiarisce che il risultato dipende anche dal modo di applicare il materiale. Quantità di legante, proporzioni e stesura possono produrre differenze visibili. La nota 2 dello studio precisa che l’aspetto dell’IKB varia nelle opere di Klein. Non esiste, per questo motivo, un unico campione digitale capace di sostituirle tutte.",
+          "fonti": [
+            "klein-k5"
+          ]
+        },
+        {
+          "tipo": "titoletto",
+          "id": "deposito-soleau",
+          "testo": "6.4. Il deposito del 1960 non è un brevetto sul blu"
+        },
+        {
+          "tipo": "p",
+          "testo": "Il 19 maggio 1960 Klein deposita presso l’INPI una busta Soleau relativa al procedimento, con numero 63471. È frequente leggere che avrebbe brevettato il blu. La distinzione va mantenuta: il deposito Soleau serve a documentare un contenuto e la sua anteriorità; non equivale al rilascio di un brevetto.",
+          "fonti": [
+            "klein-k1",
+            "klein-k7"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "La pagina dell’INPI distingue espressamente il servizio Soleau dai titoli di proprietà intellettuale. È quindi più preciso parlare di un procedimento documentato mediante deposito, non di proprietà esclusiva su una porzione dello spettro visibile. Questa precisazione storica non stabilisce la libertà di riprodurre opere, fotografie o nomi commerciali.",
+          "fonti": [
+            "klein-k7",
+            "klein-k2"
+          ]
+        },
+        {
+          "tipo": "titoletto",
+          "id": "opere",
+          "testo": "6.5. Un colore, opere molto diverse"
+        },
+        {
+          "tipo": "p",
+          "testo": "L’IKB attraversa quadri, rilievi e sculture. In <a href=\"https://www.centrepompidou.fr/fr/ressources/oeuvre/cAne9x5\"><i>IKB 3, Monochrome bleu</i></a> del 1960 il pigmento e la resina sono stesi su tela montata su legno. Il dipinto misura 199 × 153 centimetri: le dimensioni dell’originale fanno parte dell’esperienza, che una piccola immagine non conserva.",
+          "fonti": [
+            "klein-k8"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "In <a href=\"https://www.centrepompidou.fr/fr/offre-aux-professionnels/enseignants/dossiers-ressources-sur-lart/yves-klein/se-71-larbre-grande-eponge-bleue\"><i>L’Arbre, grande éponge bleue</i></a>, del 1962, la spugna non è soltanto un attrezzo per stendere. Diventa il materiale dell’opera. Il blu aderisce a un volume poroso e irregolare, entra nello spazio e cambia il rapporto fra colore e forma. Il titolo non trasforma la scultura nella descrizione naturalistica di un albero.",
+          "fonti": [
+            "klein-k9"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Nelle <i>Anthropométries</i> il colore registra invece il contatto dei corpi con il supporto. Le modelle non vanno confuse con figure disegnate a pennello. Il dipinto conserva tracce di un’azione diretta dall’artista. <a href=\"https://www.centrepompidou.fr/fr/ressources/oeuvre/cKagoa\"><i>ANT 82, Anthropométrie de l’époque bleue</i></a>, del 1960, è realizzato con pigmento e resina su carta montata su tela: la presenza della carta non ne fa un acquerello.",
+          "fonti": [
+            "klein-k10",
+            "klein-k11"
+          ]
+        },
+        {
+          "tipo": "titoletto",
+          "id": "confronto-acquerello",
+          "testo": "6.6. Il confronto con l’acquerello"
+        },
+        {
+          "tipo": "p",
+          "testo": "Per chi studia l’acquerello, il legame più utile è la distinzione fra pigmento e risultato pittorico. Il blu oltremare PB29 è impiegato anche nell’acquerello, ma il codice comune non rende identici due materiali. L’IKB studiato nelle opere museali comprende una resina sintetica e una superficie particolare. Non è la ricetta di un normale acquerello.",
+          "fonti": [
+            "klein-k2",
+            "klein-k5",
+            "klein-k6"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Come proposta del Quaderno, si potrebbe confrontare lo stesso acquerello oltremare in una stesura diluita e in una più carica, osservando il bianco della carta e il deposito del colore. Sarebbe uno studio del proprio materiale, non una ricostruzione dell’IKB né un esercizio attribuito a Klein. Il confronto avrebbe senso soprattutto per mostrare che scegliere il pigmento è soltanto una parte del lavoro.",
+          "fonti": [
+            "klein-k5",
+            "klein-k6"
+          ]
+        },
+        {
+          "tipo": "titoletto",
+          "id": "opera-e-schermo",
+          "testo": "6.7. Un’opera non è un tassello sullo schermo"
+        },
+        {
+          "tipo": "p",
+          "testo": "La superficie dell’IKB può essere molto fragile. Lo studio del Met descrive come abrasioni, compressioni e zone lucidate alterino l’esperienza dell’opera. Anche variazioni modeste della tessitura possono interrompere la continuità del blu. Un rettangolo di colore uniforme non restituisce queste caratteristiche.",
+          "fonti": [
+            "klein-k5"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Nel Quaderno, un eventuale tassello sarebbe soltanto un richiamo grafico. Non andrebbe presentato come misura dell’originale o formula per riprodurlo. Per avvicinarsi all’opera servono le fotografie documentate dei musei e, quando possibile, l’osservazione diretta. La lezione di Klein, per lo studio del colore, è che pigmento, superficie, dimensione e intenzione lavorano insieme.",
+          "fonti": [
+            "klein-k2",
+            "klein-k5",
+            "klein-k8"
+          ]
+        }
+      ]
+    },
+    {
       "id": "blu-intenso",
       "breve": "Blu intenso",
-      "titolo": "6. Il «blu intenso»: dal nome commerciale al pigmento",
+      "titolo": "7. Il «blu intenso»: dal nome commerciale al pigmento",
       "blocchi": [
         {
           "tipo": "titoletto",
@@ -975,7 +1169,7 @@
     {
       "id": "stesura",
       "breve": "Stesura",
-      "titolo": "7. Trasparenza, macchiatura e tessitura: leggere una stesura",
+      "titolo": "8. Trasparenza, macchiatura e tessitura: leggere una stesura",
       "blocchi": [
         {
           "tipo": "titoletto",
@@ -1036,7 +1230,7 @@
     {
       "id": "miscele",
       "breve": "Miscele",
-      "titolo": "8. Verdi, violetti, neutri: mescolare o velare",
+      "titolo": "9. Verdi, violetti, neutri: mescolare o velare",
       "blocchi": [
         {
           "tipo": "titoletto",
@@ -1116,7 +1310,7 @@
     {
       "id": "impieghi",
       "breve": "Impieghi",
-      "titolo": "9. Cieli, acqua, ombre e altri soggetti: esempi di scelte",
+      "titolo": "10. Cieli, acqua, ombre e altri soggetti: esempi di scelte",
       "blocchi": [
         {
           "tipo": "titoletto",
@@ -1189,7 +1383,7 @@
     {
       "id": "confronti",
       "breve": "Confronti",
-      "titolo": "10. Scegliere e confrontare i propri blu",
+      "titolo": "11. Scegliere e confrontare i propri blu",
       "blocchi": [
         {
           "tipo": "titoletto",
@@ -1318,7 +1512,7 @@
     {
       "id": "conservazione",
       "breve": "Conservazione",
-      "titolo": "11. Permanenza, conservazione e cose ancora incerte",
+      "titolo": "12. Permanenza, conservazione e cose ancora incerte",
       "blocchi": [
         {
           "tipo": "titoletto",
@@ -1732,6 +1926,102 @@
       "nota": "Esercizi da svolgere sui propri materiali, non prove già eseguite né un protocollo normalizzato.",
       "consultazione": "Ricerca del 3 novembre 2026: adattamento del protocollo di ricerca. Le scelte di attesa e di applicazione sono convenzioni del confronto.",
       "registro_precedente": "Quaderno di acquerello, proposta di prove comparative, 3 novembre 2026. Adattamento del protocollo della ricerca sul blu oltremare: esercizi da svolgere sui propri materiali, non prove già eseguite né protocollo normalizzato. Le scelte di attesa e di applicazione sono convenzioni del confronto."
+    },
+    "klein-k1": {
+      "autore": "Séverine Pierron, Centre Pompidou",
+      "titolo": "The untold story of the International Klein Blue (IKB) of Yves Klein",
+      "pubblicazione": "Magazine, 7 febbraio 2025.",
+      "url": "https://www.centrepompidou.fr/en/pompidou-plus/magazine/article/lhistoire-secrete-de-linternational-klein-blue-ikb-dyves-klein",
+      "nota": "Ricostruzione museale della mostra del 1957, del lavoro con Édouard Adam e del deposito del 19 maggio 1960. La citazione tradotta «Il blu non ha dimensioni» è riportata dal museo; originale: “Blue has no dimensions, it is beyond dimensions.” Per la distinzione fra Soleau e brevetto si segue la fonte INPI.",
+      "consultazione": "Articolo letto integralmente nella ricerca del 16 novembre 2026. La citazione non è confrontata con il manoscritto di Klein."
+    },
+    "klein-k2": {
+      "autore": "Museum of Modern Art",
+      "titolo": "Yves Klein. Blue Monochrome. 1961",
+      "pubblicazione": "Scheda di collezione, senza data univoca; testi del 2006 e del 2019.",
+      "url": "https://www.moma.org/collection/works/80103",
+      "nota": "Materiali, dimensioni, superficie e interpretazione del monocromo; inventario 618.1967. La sezione Licensing rinvia ai titolari per le riproduzioni.",
+      "consultazione": "Scheda e sezioni testuali lette nella ricerca del 16 novembre 2026; il collegamento apre la scheda istituzionale, non una copia dell’immagine."
+    },
+    "klein-k3": {
+      "autore": "Centre Pompidou",
+      "titolo": "L’artiste et son œuvre",
+      "pubblicazione": "Dossier Yves Klein, senza data editoriale visibile.",
+      "url": "https://www.centrepompidou.fr/fr/offre-aux-professionnels/enseignants/dossiers-ressources-sur-lart/yves-klein/lartiste-et-son-oeuvre",
+      "nota": "Biografia e interpretazione museale: genitori, judo, monocromi, Assisi, Nouveau Réalisme, oro, rosa e fuoco. Le letture spirituali restano attribuzioni artistiche, non spiegazioni fisiche del colore.",
+      "consultazione": "Testo letto integralmente nella ricerca del 16 novembre 2026."
+    },
+    "klein-k4": {
+      "autore": "Centre Pompidou",
+      "titolo": "Yves Klein, chronologie",
+      "pubblicazione": "Dossier didattico, senza data editoriale certa, 16 pagine.",
+      "url": "https://www.centrepompidou.fr/fileadmin/user_upload/dossierressources-yves_klein-chronologie.pdf",
+      "nota": "Cronologia: nascita a p. 2, primi monocromi a p. 5, Vuoto a p. 8 e morte a p. 15. La collocazione del deposito a p. 6 è incongruente con la data puntuale dell’articolo del museo; non è usata per datare il deposito.",
+      "consultazione": "Testo estratto letto per intero nella ricerca del 16 novembre 2026; controllo visivo mirato delle pagine PDF 6, 8 e 15."
+    },
+    "klein-k5": {
+      "autore": "James Hughes, Metropolitan Museum of Art",
+      "titolo": "Preserving the Immaterial: Ethical and Technical Considerations in Treating an Yves Klein Blue Venus Sculpture",
+      "pubblicazione": "22 settembre 2026.",
+      "url": "https://www.metmuseum.org/it/essays/object-conservation-ethical-technical-treatment-yves-klein-blue-venus-sculpture",
+      "nota": "Studio di conservazione su una Blue Venus concepita intorno al 1961 e realizzata nell’edizione del Met nel 1984. La nota 2 distingue il pigmento dalla tecnica applicativa e precisa la variabilità dell’IKB. Non è analisi diretta di ogni monocromo degli anni Cinquanta.",
+      "consultazione": "Letti introduzione, materiali, problemi conservativi, sperimentazione, intervento, conclusione e note nella ricerca del 16 novembre 2026; riscontrati nuovamente i passi tecnici e la nota 2 per l’integrazione."
+    },
+    "klein-k6": {
+      "autore": "Museum of Fine Arts, Boston, CAMEO",
+      "titolo": "Ultramarine blue, synthetic",
+      "pubblicazione": "Scheda tecnica, senza data univoca.",
+      "url": "https://cameo.mfa.org/wiki/Ultramarine_blue,_synthetic",
+      "nota": "Identifica l’oltremare sintetico come Pigment Blue 29, CI 77007, e ne documenta l’uso ad acquerello. Non identifica un lotto usato da Klein e non prova l’identità fra PB29 in gomma e IKB.",
+      "consultazione": "Nella ricerca del 16 novembre 2026 lette Description, Synonyms and Related Terms, Physical and Chemical Properties."
+    },
+    "klein-k7": {
+      "autore": "Institut national de la propriété industrielle",
+      "titolo": "Se préparer au dépôt d’une e-Soleau",
+      "pubblicazione": "Pagina istituzionale, senza data editoriale visibile.",
+      "url": "https://www.inpi.fr/realiser-demarches/propriete-intellectuelle/se-preparer-au-depot-dune-e-soleau",
+      "nota": "La sezione Différence entre le dépôt de brevet, de marque ou de modèle et e-Soleau distingue l’attestazione di data e contenuto dai titoli di proprietà intellettuale. Descrive il servizio odierno, non le formalità del 1960; la data di Klein deriva dall’articolo del Centre Pompidou.",
+      "consultazione": "Sezione pertinente letta nella ricerca del 16 novembre 2026. Non utilizzato come fonte il precedente opuscolo cartaceo non recuperato."
+    },
+    "klein-k8": {
+      "autore": "Centre Pompidou",
+      "titolo": "IKB 3, Monochrome bleu",
+      "pubblicazione": "Opera del 1960; scheda di collezione senza data editoriale.",
+      "url": "https://www.centrepompidou.fr/fr/ressources/oeuvre/cAne9x5",
+      "nota": "Pigmento e resina sintetica su tela montata su legno, 199 × 153 cm. Collegamento alla scheda istituzionale; nessuna riproduzione dell’opera nel Quaderno.",
+      "consultazione": "Letti scheda, materiali, dimensioni, crediti e bibliografia nella ricerca del 16 novembre 2026."
+    },
+    "klein-k9": {
+      "autore": "Centre Pompidou",
+      "titolo": "SE 71, L’Arbre, grande éponge bleue",
+      "pubblicazione": "Opera del 1962; dossier didattico senza data univoca.",
+      "url": "https://www.centrepompidou.fr/fr/offre-aux-professionnels/enseignants/dossiers-ressources-sur-lart/yves-klein/se-71-larbre-grande-eponge-bleue",
+      "nota": "Pigmento, resina, spugna e gesso, 150 × 90 × 42 cm. Lettura del passaggio dal piano al volume; collegamento al dossier, senza riproduzione dell’opera.",
+      "consultazione": "Testo letto nella ricerca del 16 novembre 2026; il podcast indicato nella pagina non è stato ascoltato."
+    },
+    "klein-k10": {
+      "autore": "Centre Pompidou",
+      "titolo": "ANT 82, Anthropométrie de l’époque bleue",
+      "pubblicazione": "Opera del 1960; scheda di collezione senza data editoriale.",
+      "url": "https://www.centrepompidou.fr/fr/ressources/oeuvre/cKagoa",
+      "nota": "Pigmento e resina sintetica su carta montata su tela, 156,5 × 282,5 cm; inventario AM 1984-279. Collegamento alla scheda, senza riproduzione dell’opera.",
+      "consultazione": "Scheda, materiali, dimensioni e crediti letti nella ricerca del 16 novembre 2026."
+    },
+    "klein-k11": {
+      "autore": "Centre Pompidou",
+      "titolo": "ANT 82, Anthropométrie de l’époque bleue",
+      "pubblicazione": "Dossier di lettura dell’opera, senza data editoriale visibile.",
+      "url": "https://www.centrepompidou.fr/es/offre-aux-professionnels/enseignants/dossiers-ressources-sur-lart/yves-klein/ant-82-anthropometrie-de-lepoque-bleue",
+      "nota": "Testo francese sulla pagina con percorso /es/: impronta, modelle, performance e rapporto con l’action painting. La scheda di collezione e il dossier sono due documenti diversi sulla stessa opera.",
+      "consultazione": "Testo letto integralmente nella ricerca del 16 novembre 2026; documenti audiovisivi collegati non visionati integralmente."
+    },
+    "klein-k12": {
+      "autore": "Centre Pompidou",
+      "titolo": "Vides (voids), Une rétrospective",
+      "pubblicazione": "Mostra, 25 febbraio-23 marzo 2009.",
+      "url": "https://www.centrepompidou.fr/en/program/calendar/event/c4rd4Xr",
+      "nota": "Presentazione di una retrospettiva successiva: documenta il ruolo della mostra del Vuoto di Klein, non è una recensione del 1958. Le date dell’evento originario sono riscontrate nella cronologia.",
+      "consultazione": "Presentazione letta nella ricerca del 16 novembre 2026."
     }
   },
   "pagine_precedenti": [
@@ -1835,5 +2125,70 @@
         "pratica-r8": "oltremare-r36"
       }
     }
-  ]
+  ],
+  "ancore_fonti": {
+    "F01": "bibliografia-f1",
+    "F02": "bibliografia-f2",
+    "F03": "bibliografia-f3",
+    "F04": "bibliografia-f4",
+    "F05": "bibliografia-f5",
+    "F06": "bibliografia-f6",
+    "F07": "bibliografia-f7",
+    "F08": "bibliografia-f8",
+    "F09": "bibliografia-f9",
+    "F10": "bibliografia-f10",
+    "F11": "bibliografia-f11",
+    "F12": "bibliografia-f12",
+    "F13": "bibliografia-f13",
+    "F14": "bibliografia-f14",
+    "F15": "bibliografia-f15",
+    "F16": "bibliografia-f16",
+    "F17": "bibliografia-f17",
+    "F18": "bibliografia-f18",
+    "F19": "bibliografia-f19",
+    "F20": "bibliografia-f20",
+    "F21": "bibliografia-f21",
+    "F22": "bibliografia-f22",
+    "F23": "bibliografia-f23",
+    "olt-f01": "bibliografia-f24",
+    "olt-f02": "bibliografia-f25",
+    "olt-f08": "bibliografia-f26",
+    "olt-f05": "bibliografia-f27",
+    "olt-f04": "bibliografia-f28",
+    "olt-f07": "bibliografia-f29",
+    "olt-f09": "bibliografia-f30",
+    "olt-f11": "bibliografia-f31",
+    "olt-f12": "bibliografia-f32",
+    "F39": "bibliografia-f33",
+    "olt-f15": "bibliografia-f34",
+    "olt-f14": "bibliografia-f35",
+    "olt-quaderno-prove": "bibliografia-f36",
+    "F24": "bibliografia-f37",
+    "F25": "bibliografia-f38",
+    "F26": "bibliografia-f39",
+    "F27": "bibliografia-f40",
+    "F28": "bibliografia-f41",
+    "F29": "bibliografia-f42",
+    "F30": "bibliografia-f43",
+    "F31": "bibliografia-f44",
+    "F32": "bibliografia-f45",
+    "F33": "bibliografia-f46",
+    "F34": "bibliografia-f47",
+    "F35": "bibliografia-f48",
+    "F36": "bibliografia-f49",
+    "F37": "bibliografia-f50",
+    "F38": "bibliografia-f51",
+    "klein-k1": "bibliografia-klein-1",
+    "klein-k2": "bibliografia-klein-2",
+    "klein-k3": "bibliografia-klein-3",
+    "klein-k4": "bibliografia-klein-4",
+    "klein-k5": "bibliografia-klein-5",
+    "klein-k6": "bibliografia-klein-6",
+    "klein-k7": "bibliografia-klein-7",
+    "klein-k8": "bibliografia-klein-8",
+    "klein-k9": "bibliografia-klein-9",
+    "klein-k10": "bibliografia-klein-10",
+    "klein-k11": "bibliografia-klein-11",
+    "klein-k12": "bibliografia-klein-12"
+  }
 }
