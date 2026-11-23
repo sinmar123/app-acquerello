@@ -1,5 +1,13 @@
 # CHANGELOG - app-acquerello
 
+## 2026-11-23 - OC (Acquerello) - L’acqua nell’acquerello, nuova pagina 5.6
+
+Inserita la versione integrata approvata dal curatore: otto capitoli su funzioni dell’acqua, miscela, pennello, carta, stesura, recipienti, qualità dell’acqua e confronti pratici. Ventuno fonti esterne e una voce distinta per le proposte del Quaderno; quattro prove proposte, non eseguite. Le esperienze degli artisti restano attribuite; riserva pulita e secondo risciacquo sono configurazioni distinte. Conservati i limiti delle fonti e la divergenza sull’acqua distillata, senza ricavarne una regola universale.
+
+Testo identico alla proposta approvata, compresi i chiarimenti e le integrazioni delle ricerche fornite dal curatore. La nuova pagina entra nella home, nell’indice degli Approfondimenti, nella sitemap e nel contesto dell’assistente mediante i generatori esistenti. Nessuna nuova ricerca a consumo o modifica alle altre pagine tematiche. Firma: OC (Acquerello).
+
+Prossima azione: verificare la pubblicazione autorizzata e raccogliere eventuali osservazioni del curatore sulla pagina online.
+
 ## 2026-11-16 - OC (Acquerello) - Yves Klein integrato nella pagina sul blu, non pubblicato
 
 Su autorizzazione di Sandro nel topic Ricerche 46, messaggio 1218, trasmessa da Ricerche, integrato il capitolo completo «Yves Klein: il blu come esperienza» come capitolo 6 della pagina unica 5.2, subito dopo l’oltremare. Diciannove paragrafi confrontati integralmente con il testo approvato, senza riscritture; sette paragrafi titolati con indice interno. Restano la natura poetica delle affermazioni dell’artista, il deposito Soleau distinto dal brevetto e la distinzione fra IKB e acquerello. Dodici fonti istituzionali e tecniche aggiunte nel formato comune; totale 63 fonti e dodici capitoli. Blu intenso al capitolo 7; numeri nei titoli, sintesi e rimandi riallineati. Nessuna immagine d’opera copiata o generata: soltanto collegamenti alle schede istituzionali. Note al curatore e dati interni della consegna esclusi dal testo pubblico.

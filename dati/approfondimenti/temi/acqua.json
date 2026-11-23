@@ -1,0 +1,973 @@
+{
+  "id": "acqua",
+  "ordine": 6,
+  "data": "2026-11-21",
+  "titolo": "L’acqua nell’acquerello: miscela, pennello e carta",
+  "sottotitolo": "Preparare il colore, regolare il carico, leggere l’umidità del foglio e organizzare l’acqua di lavoro",
+  "scheda": "Diluizione, carico e carta: gesti, recipienti, qualità dell’acqua e quattro confronti proposti, non eseguiti",
+  "sintesi": [
+    {
+      "testo": "La miscela, il liquido nel pennello e l’umidità della carta richiedono controlli distinti. Per il Quaderno sarebbe utile verificarli prima di ogni passaggio.",
+      "capitolo": "funzioni",
+      "fonti": [
+        "pennello",
+        "bagnato",
+        "proposta"
+      ]
+    },
+    {
+      "testo": "Tè, latte e miele sono analogie per riconoscere le miscele. Non corrispondono a percentuali fisse; la prova sul ritaglio conta più del nome.",
+      "capitolo": "miscela",
+      "fonti": [
+        "holmes",
+        "diluizione",
+        "mader"
+      ]
+    },
+    {
+      "testo": "Un pennello appena lavato può contenere troppa acqua. La carta che non appare più lucida può essere ancora umida all’interno.",
+      "capitolo": "pennello",
+      "fonti": [
+        "palomar",
+        "bagnato"
+      ]
+    },
+    {
+      "testo": "Due recipienti possono servire a lavare e conservare acqua pulita, oppure a risciacquare due volte. Sono organizzazioni diverse, da scegliere secondo il lavoro.",
+      "capitolo": "recipienti",
+      "fonti": [
+        "miscele",
+        "palomar",
+        "steel"
+      ]
+    },
+    {
+      "testo": "Le fonti danno indicazioni diverse sull’acqua distillata e la granulazione. Una prova sui propri materiali potrebbe aiutare a scegliere, senza stabilire una regola per tutti.",
+      "capitolo": "qualita",
+      "fonti": [
+        "granulazione",
+        "brochure",
+        "proposta"
+      ]
+    },
+    {
+      "testo": "Le quattro prove finali sono proposte non eseguite. Non sono disponibili risultati del Quaderno su questi confronti.",
+      "capitolo": "prove",
+      "fonti": [
+        "proposta"
+      ]
+    }
+  ],
+  "premessa": [
+    {
+      "testo": "L’acqua serve ad attivare e diluire il colore, trasportarlo e distribuirlo sulla carta. Permette anche di riprendere alcune stesure e lavare gli strumenti. Il gesto cambia secondo il liquido già presente nel pennello e nel foglio.",
+      "fonti": [
+        "met",
+        "palomar",
+        "pennello",
+        "bagnato"
+      ]
+    },
+    "Questa pagina sviluppa i rapporti fra i gesti descritti nei <a href=\"/principi/\">Principi generali</a>. Non sostituisce le tre consistenze o gli stati della carta lì adottati. L’organizzazione dei recipienti entra nel discorso insieme alla preparazione delle miscele, alla stesura e alle riprese."
+  ],
+  "nota_metodo": [
+    "La pagina nasce dalla ricerca del 21 novembre 2026, integrata il 23 novembre con due rapporti forniti dal curatore. L’intelligenza artificiale ha aiutato a raccogliere e confrontare le informazioni. Le aggiunte sono state controllate nei passi delle fonti indicati nell’elenco finale.",
+    "Due rapporti che citano lo stesso articolo non costituiscono due prove diverse. I consigli degli artisti sono attribuiti ai loro autori. Quando le fonti danno indicazioni diverse, la pagina lo segnala. I video collegati non sono stati visionati in questa ricerca.",
+    "Le proposte del Quaderno sono distinte dalle indicazioni delle fonti. I quattro esercizi finali non sono stati eseguiti: non ne sono disponibili risultati o fotografie."
+  ],
+  "capitoli": [
+    {
+      "id": "funzioni",
+      "breve": "Dove si trova l’acqua",
+      "titolo": "1. Prima del gesto: dove si trova l’acqua",
+      "blocchi": [
+        {
+          "tipo": "p",
+          "testo": "L’acquerello comprende pigmento e legante. L’aggiunta d’acqua rende utilizzabile il colore e ne modifica la diluizione. Non si tratta di sciogliere ogni pigmento nell’acqua: il colore contiene particelle che vengono distribuite sul supporto.",
+          "fonti": [
+            "met"
+          ]
+        },
+        {
+          "tipo": "tabella",
+          "intestazione": [
+            "Dove",
+            "Che cosa si controlla"
+          ],
+          "righe": [
+            {
+              "celle": [
+                "Tavolozza",
+                "La concentrazione della miscela e la quantità già preparata per la campitura."
+              ],
+              "fonti": [
+                "miscele"
+              ]
+            },
+            {
+              "celle": [
+                "Pennello",
+                "Il liquido trattenuto e quello che lo strumento rilascia durante il gesto. Un pennello può anche assorbire."
+              ],
+              "fonti": [
+                "pennello"
+              ]
+            },
+            {
+              "celle": [
+                "Carta",
+                "L’acqua sulla superficie e l’umidità ancora presente all’interno del foglio."
+              ],
+              "fonti": [
+                "bagnato"
+              ]
+            },
+            {
+              "celle": [
+                "Recipienti e scorta",
+                "L’acqua disponibile per lavare, diluire, bagnare o rinnovare quella già usata."
+              ],
+              "fonti": [
+                "miscele",
+                "steel"
+              ]
+            }
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Prima di dipingere, il Quaderno suggerirebbe tre domande: quanto è diluita la miscela? Quanto liquido contiene il pennello? Quanto è umida la carta? Le risposte aiuterebbero a preparare il gesto successivo. È una proposta didattica basata sulle fonti, non una prova eseguita dal Quaderno.",
+          "fonti": [
+            "proposta"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Un risciacquo può lasciare il pennello pieno d’acqua. Se lo si porta subito in una miscela densa, si aggiunge anche quel liquido. MacEvoy descrive perciò lo scarico e il nuovo caricamento come passaggi distinti dal lavaggio.",
+          "fonti": [
+            "miscele"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "miscela",
+      "breve": "Attivare e diluire",
+      "titolo": "2. Attivare il colore e preparare la miscela",
+      "blocchi": [
+        {
+          "tipo": "p",
+          "testo": "Mader propone di inumidire il colore essiccato e provarlo su carta. Le quantità del suo kit non sono dosi universali.",
+          "fonti": [
+            "mader"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "MacEvoy prepara miscela un po’ più abbondante del previsto, regolando tinta e concentrazione. Quantità e concentrazione restano distinte: una pozza grande può essere diluita oppure densa.",
+          "fonti": [
+            "miscele"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Nei <a href=\"/principi/#consistenze\">Principi, capitolo 1</a>, il Quaderno usa tre analogie: tè per la miscela più acquosa, latte per quella intermedia, miele per quella densa. Holmes impiega gli stessi nomi per il proprio metodo, presentandolo come una delle possibilità di dipingere. Le analogie aiutano a riconoscere comportamenti, non fissano rapporti volumetrici.",
+          "fonti": [
+            "holmes"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "MacEvoy misura diluizioni diverse per colori e formulazioni diverse. Tè, latte e miele non indicano quindi un numero fisso di gocce. Il confronto serve a riconoscere la miscela, non a ottenere una ricetta uguale per tutti i colori.",
+          "fonti": [
+            "diluizione"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Mader raccomanda di giudicare il campione anche da asciutto. L’aspetto della pozza non basta; la variazione durante l’asciugatura non è uguale per tutti i colori.",
+          "fonti": [
+            "mader"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Il Quaderno proporrebbe di preparare la miscela, provarla su un ritaglio della carta usata e correggerla prima della campitura. Il nome tè, latte o miele resterebbe un promemoria da accompagnare al segno di prova.",
+          "fonti": [
+            "proposta"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pennello",
+      "breve": "Caricare e scaricare",
+      "titolo": "3. Caricare, scaricare e usare il pennello",
+      "blocchi": [
+        {
+          "tipo": "p",
+          "testo": "La capacità indica quanto liquido può trattenere un pennello in determinate condizioni. Il carico indica quanto ne contiene in quel momento. MacEvoy distingue inoltre il rilascio, cioè il modo in cui il liquido passa dallo strumento alla carta. Capacità, carico e rilascio non sono sinonimi.",
+          "fonti": [
+            "pennello"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Il manuale di Palomar descrive il tamponamento dopo il risciacquo. Panno o carta assorbente servono anche a regolare il carico: un pennello pulito può essere troppo bagnato.",
+          "fonti": [
+            "palomar"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Per assorbire un accumulo MacEvoy descrive un pennello prima inumidito e poi scaricato. Non equivale a uno strumento completamente secco. Il pennello preparato può sottrarre liquido; se è pieno, può invece aggiungerne. Il controllo continua durante la stesura.",
+          "fonti": [
+            "pennello"
+          ]
+        },
+        {
+          "tipo": "nota",
+          "testo": "Come sequenza di apprendimento, il Quaderno proporrebbe i passaggi seguenti. Non stabiliscono una quantità d’acqua fissa per ogni pennello."
+        },
+        {
+          "tipo": "lista",
+          "numerata": true,
+          "voci": [
+            {
+              "testo": "Si risciacquerebbe il colore precedente e si toglierebbe il liquido in eccesso.",
+              "fonti": [
+                "proposta"
+              ]
+            },
+            {
+              "testo": "Si caricherebbe la miscela già preparata, controllando il segno su un ritaglio.",
+              "fonti": [
+                "proposta"
+              ]
+            },
+            {
+              "testo": "Si adeguerebbe il carico allo stato del foglio e al bordo cercato, senza correggere ogni problema aggiungendo acqua.",
+              "fonti": [
+                "proposta"
+              ]
+            }
+          ]
+        },
+        {
+          "tipo": "nota",
+          "testo": "I rapporti fra pennello e supporto sono richiamati nei <a href=\"/principi/#abbinare\">Principi, capitolo 3</a> e nel <a href=\"/principi/#acqua\">capitolo 4 sul controllo dell’acqua</a>."
+        }
+      ]
+    },
+    {
+      "id": "carta",
+      "breve": "Leggere il foglio",
+      "titolo": "4. Leggere l’umidità della carta",
+      "blocchi": [
+        {
+          "tipo": "p",
+          "testo": "MacEvoy distingue l’acqua sulla superficie da quella trattenuta all’interno del foglio. La superficie può perdere il lucido mentre la carta è ancora umida.",
+          "fonti": [
+            "bagnato"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Nei <a href=\"/principi/#carta-umidita\">Principi, capitolo 2</a>, la carta è descritta come bagnata, umida o asciutta, con momenti intermedi. Per riconoscerli si potrebbe osservare il foglio in luce radente. Il lucido uniforme andrebbe distinto dalle zone dove l’acqua si accumula.",
+          "fonti": [
+            "proposta",
+            "bagnato"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Mader usa il fresco al tatto come indizio di umidità. MacEvoy avverte che vento e sole possono alterarlo: non è una misura assoluta.",
+          "fonti": [
+            "mader",
+            "bagnato"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Anche il supporto interviene nella stesura. Il Metropolitan Museum descrive la collatura come un trattamento che riduce l’assorbimento. Le differenze di carta non si riassumono perciò nella sola grammatura. Il tema è sviluppato nei <a href=\"/principi/#carta-tipi\">Principi, capitolo 7</a>.",
+          "fonti": [
+            "met"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Prima di un passaggio delicato, si potrebbe fare un segno su un ritaglio bagnato insieme al foglio. La prova aiuterebbe a capire come si comporta la carta in quel momento. L’attesa osservata non sarebbe un tempo valido per ogni carta o giornata.",
+          "fonti": [
+            "proposta"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stesura",
+      "breve": "Stendere e riprendere",
+      "titolo": "5. Stendere, ammorbidire e riprendere",
+      "blocchi": [
+        {
+          "tipo": "tabella",
+          "intestazione": [
+            "Scopo",
+            "Condizione e limite"
+          ],
+          "righe": [
+            {
+              "celle": [
+                "Bordo più definito",
+                "Il colore su carta asciutta produce in genere contorni più netti."
+              ],
+              "fonti": [
+                "met"
+              ]
+            },
+            {
+              "celle": [
+                "Fusione e diffusione",
+                "Su carta o campitura bagnata i colori tendono a fondersi e i bordi risultano più diffusi."
+              ],
+              "fonti": [
+                "met"
+              ]
+            },
+            {
+              "celle": [
+                "Velatura",
+                "Si stende un nuovo velo sul fondo asciutto. Non è il nome di ogni passaggio su carta umida."
+              ],
+              "fonti": [
+                "mader"
+              ]
+            },
+            {
+              "celle": [
+                "Ammorbidimento o sollevamento",
+                "Si può intervenire localmente con un pennello pulito e appena umido, sottraendo parte del colore riattivato. L’efficacia varia."
+              ],
+              "fonti": [
+                "palomar",
+                "brochure"
+              ]
+            }
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Un’aggiunta di liquido durante l’asciugatura può produrre fioriture volute o indesiderate. Non è vietato intervenire sulla carta umida: occorre distinguere lo scopo del gesto.",
+          "fonti": [
+            "bagnato"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "La velatura richiede il fondo asciutto, che può però essere riattivato. Il sollevamento non garantisce il ritorno al bianco intonso.",
+          "fonti": [
+            "mader",
+            "palomar",
+            "brochure"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Il Quaderno proporrebbe di decidere prima se la ripresa deve fondere, definire un bordo o sottrarre colore. Si regolerebbe poi il pennello per quello scopo. Una stessa aggiunta d’acqua non sarebbe una correzione adatta a tutti e tre i casi.",
+          "fonti": [
+            "proposta"
+          ]
+        },
+        {
+          "tipo": "nota",
+          "testo": "Rimandi: <a href=\"/principi/#bordi\">Principi, capitolo 5 sui bordi</a> e <a href=\"/principi/#asciugatura\">capitolo 6 sull’asciugatura</a>."
+        }
+      ]
+    },
+    {
+      "id": "recipienti",
+      "breve": "Organizzare i recipienti",
+      "titolo": "6. Organizzare l’acqua disponibile",
+      "blocchi": [
+        {
+          "tipo": "p",
+          "testo": "MacEvoy riferisce che una fonte d’acqua può bastare per alcuni studi e lavori all’aperto. Per lavori grandi distingue invece l’acqua di risciacquo da quella da prelevare. Non ne deriva un numero di recipienti obbligatorio per ogni dipinto.",
+          "fonti": [
+            "miscele"
+          ]
+        },
+        {
+          "tipo": "tabella",
+          "intestazione": [
+            "Organizzazione",
+            "Funzione e attenzione"
+          ],
+          "righe": [
+            {
+              "celle": [
+                "Un recipiente con ricambi",
+                "Lavaggio e prelievo condividono la stessa acqua. Occorre poterla rinnovare quando non è più adatta al passaggio previsto."
+              ],
+              "fonti": [
+                "miscele",
+                "steel"
+              ]
+            },
+            {
+              "celle": [
+                "Lavaggio e riserva protetta",
+                "Il primo recipiente riceve residui. La riserva fornisce acqua da prelevare e non accoglie il pennello ancora sporco."
+              ],
+              "fonti": [
+                "miscele",
+                "mader"
+              ]
+            },
+            {
+              "celle": [
+                "Primo e secondo risciacquo",
+                "Il secondo completa la pulizia e riceve a sua volta residui. Non resta automaticamente una riserva pulita."
+              ],
+              "fonti": [
+                "palomar",
+                "mader"
+              ]
+            },
+            {
+              "celle": [
+                "Scorta separata",
+                "L’acqua trasportata per i ricambi non coincide con il recipiente in uso. Steel porta più acqua di quella impiegata nel singolo schizzo."
+              ],
+              "fonti": [
+                "steel"
+              ]
+            }
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Il manuale di Palomar descrive l’uso di una seconda acqua per completare il risciacquo o rifornire la tavolozza. Anche Mader prevede un ulteriore risciacquo quando serve. Se il secondo recipiente riceve ancora colore dal pennello, la sua acqua non resta pulita.",
+          "fonti": [
+            "palomar",
+            "mader"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Per chi inizia, il Quaderno suggerirebbe di assegnare un compito preciso a ogni recipiente. Se uno serve da riserva pulita, non vi si immergerebbe il pennello ancora sporco. Se serve al secondo risciacquo, si terrebbe conto dei residui che riceve. Una bottiglia separata potrebbe conservare l’acqua per i ricambi.",
+          "fonti": [
+            "proposta"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Marengoni indica una pipetta o un cucchiaino per dosare l’acqua dal barattolo pulito. Per il Quaderno, questo prelievo potrebbe aiutare a proteggere la riserva: il pennello usato non vi entrerebbe. Anche il dosatore dovrebbe restare pulito.",
+          "fonti": [
+            "marengoni",
+            "proposta"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Louise De Masi usa spesso due contenitori: uno per lavare il pennello durante la preparazione delle miscele e l’altro fra i colori. Entrambi ricevono quindi residui. Questa organizzazione non equivale a conservare una riserva nella quale non si lava mai il pennello.",
+          "fonti": [
+            "demasi"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Liz Steel usa due recipienti con ruoli distinti in studio, ma uno solo per ciascuno schizzo sul posto. Porta anche acqua di scorta e, quando serve, una bottiglia per raccogliere quella usata. Portare più contenitori non significa usarli tutti per lavare il pennello.",
+          "fonti": [
+            "steel"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Jennifer Branch segue un’organizzazione diversa: in studio usa un recipiente e cambia spesso l’acqua; all’aperto ne usa due, uno pulito e uno sporco. Passare all’aperto non comporta quindi necessariamente ridurre il numero dei contenitori. Conta anche la possibilità di rinnovare l’acqua durante il lavoro.",
+          "fonti": [
+            "branch"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Prima di una campitura delicata, si potrebbero preparare il recipiente, l’acqua di riserva e un contenitore per l’usato. Il Quaderno suggerirebbe di scegliere quantità e ingombro in base al lavoro previsto e agli spostamenti.",
+          "fonti": [
+            "proposta"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "qualita",
+      "breve": "Qualità e ambiente",
+      "titolo": "7. Qualità dell’acqua e condizioni di lavoro",
+      "blocchi": [
+        {
+          "tipo": "titoletto",
+          "id": "tinta-residui",
+          "testo": "Acqua tinta, residui e ricambio"
+        },
+        {
+          "tipo": "p",
+          "testo": "Grahame Booth distingue un colore alterato nella tinta da una stesura che perde freschezza e trasparenza. Nella dimostrazione che descrive, l’acqua sporca incide poco, tranne nelle miscele molto pallide. Questo non permette di fissare quanto possa essere sporca l’acqua in ogni situazione.",
+          "fonti": [
+            "booth"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Erik Lundgren descrive un confronto personale fra acqua pulita e acqua di risciacquo verdastra. Con un giallo freddo e un rosso giudica piccola la differenza, più visibile nel giallo chiaro. È un riscontro sui suoi campioni, senza misure che stabiliscano una quantità di residui accettabile per tutti.",
+          "fonti": [
+            "lundgren"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Louise De Masi cambia l’acqua sporca prima di bagnare le aree bianche, per evitare tracce e aloni. Non considera invece ogni acqua tinta una causa di colori spenti. È la sua pratica, non una soglia di ricambio valida per ogni pittore.",
+          "fonti": [
+            "demasi"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Per le stesure pallide, il Quaderno suggerirebbe di controllare l’acqua e pulire il pennello. Una pennellata di sola acqua su un ritaglio potrebbe rivelare una tinta indesiderata. Un segno incolore, però, non dimostrerebbe l’assenza di altri residui.",
+          "fonti": [
+            "proposta",
+            "booth"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Dopo la pulizia con sapone, gli strumenti vanno risciacquati. Un agente bagnante è invece un prodotto aggiunto apposta per facilitare la distribuzione dell’acqua. Il sapone rimasto per errore non equivale a un’aggiunta controllata di questo prodotto. Il Quaderno non suggerirebbe detergenti domestici nell’acqua usata per dipingere.",
+          "fonti": [
+            "manutenzione",
+            "bagnante",
+            "proposta"
+          ]
+        },
+        {
+          "tipo": "titoletto",
+          "id": "deposito",
+          "testo": "Lasciare riposare l’acqua basta a pulirla?"
+        },
+        {
+          "tipo": "p",
+          "testo": "MacEvoy descrive particelle che si depositano sul fondo e altre che restano sospese. Il comportamento dipende dalle caratteristiche del pigmento e dalla formulazione della pittura. Un’acqua più chiara in superficie può quindi contenere ancora residui.",
+          "fonti": [
+            "sedimentazione"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Per il Quaderno, il solo deposito sul fondo non dimostrerebbe che l’acqua è adatta a una bagnatura sul bianco o a una miscela pallida. La scelta andrebbe verificata sul proprio ritaglio. Non si propone di considerare il liquido decantato equivalente all’acqua iniziale.",
+          "fonti": [
+            "proposta"
+          ]
+        },
+        {
+          "tipo": "titoletto",
+          "id": "distillata",
+          "testo": "Acqua di rubinetto o distillata?"
+        },
+        {
+          "tipo": "p",
+          "testo": "Lee Angold descrive un confronto su carta identica nel quale la distillata riduceva gli aggrumamenti di alcuni colori. Riferisce differenze e residui ancora visibili, ma non misura il meccanismo chimico. Il risultato appartiene ai suoi materiali e al suo confronto personale.",
+          "fonti": [
+            "angold"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Due produttori danno indicazioni diverse. La scheda sulla granulazione dice che l’acqua distillata o deionizzata aumenta l’effetto. Una brochure del 2005 dice invece che può ridurlo, soprattutto rispetto all’acqua dura. I documenti non descrivono prove svolte nelle stesse condizioni. Non permettono quindi di scegliere una regola valida per tutti i colori.",
+          "fonti": [
+            "granulazione",
+            "brochure"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Se un colore producesse grumi o una trama inattesa, si potrebbe confrontarlo con acque diverse. Per il Quaderno sarebbe utile tenere separati gli effetti dell’acqua da quelli dei residui negli strumenti. Non si assumerebbe che distillata e demineralizzata siano equivalenti o sempre migliori dell’acqua di rubinetto.",
+          "fonti": [
+            "proposta"
+          ]
+        },
+        {
+          "tipo": "titoletto",
+          "id": "ambiente",
+          "testo": "Studio e lavoro all’aperto"
+        },
+        {
+          "tipo": "p",
+          "testo": "MacEvoy richiama vento, temperatura, umidità e sole perché cambiano l’asciugatura e gli indizi sui quali si basa il pittore. Propone un segno di prova durante la preparazione all’aperto, per riconoscere i tempi di quella situazione. Non ne ricava minuti uguali per ogni giornata.",
+          "fonti": [
+            "aperto"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Steel descrive come organizza la scorta e la raccolta dell’acqua usata. Il Quaderno suggerirebbe di prepararle prima della stesura, insieme al panno e al ritaglio di prova. Durante il lavoro resterebbe necessario controllare l’umidità del foglio.",
+          "fonti": [
+            "steel",
+            "proposta"
+          ]
+        },
+        {
+          "tipo": "nota",
+          "testo": "Il confronto generale fra studio e aperto è nei <a href=\"/principi/#studio-aperto\">Principi, capitolo 8</a>. Qui non si stabiliscono norme locali di smaltimento o soglie ambientali universali."
+        }
+      ]
+    },
+    {
+      "id": "prove",
+      "breve": "Quattro prove proposte",
+      "titolo": "8. Quattro confronti da eseguire",
+      "blocchi": [
+        {
+          "tipo": "nota",
+          "testo": "Proposte del Quaderno, NON ESEGUITE. Non sono disponibili campioni, fotografie o risultati di queste prove. Non si anticipa quale soluzione funzionerà meglio."
+        },
+        {
+          "tipo": "p",
+          "testo": "Per confrontare le prove, si annoterebbero il tipo di carta e il lato usato, il colore con la sua formulazione, il pennello e l’acqua. Si registrerebbero anche l’inclinazione del foglio e le condizioni ambientali note. I campioni asciutti si fotograferebbero insieme, con la stessa luce e un riferimento bianco. Si ripeterebbero i confronti cambiando l’ordine. Le differenze non controllate resterebbero indicate nelle note.",
+          "fonti": [
+            "proposta"
+          ]
+        },
+        {
+          "tipo": "titoletto",
+          "id": "prova-miscela",
+          "testo": "1. Concentrazione della miscela"
+        },
+        {
+          "tipo": "p",
+          "testo": "Si preparerebbero tre miscele dello stesso colore, indicate come tè, latte e miele. Su carta inizialmente asciutta si ripeterebbe quanto possibile la sequenza di caricamento. Si confronterebbero valore, uniformità e bordi da asciutti, annotando anche le differenze di carico rimaste.",
+          "fonti": [
+            "proposta"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "La preparazione a vista non isolerebbe perfettamente la concentrazione. La prova servirebbe a riconoscere i propri materiali, non a ricavare percentuali universali.",
+          "fonti": [
+            "proposta"
+          ]
+        },
+        {
+          "tipo": "titoletto",
+          "id": "prova-umidita",
+          "testo": "2. Umidità della carta e carico del pennello"
+        },
+        {
+          "tipo": "p",
+          "testo": "In una prima serie si terrebbero uguali miscela e sequenza di carico. Si confronterebbero carta asciutta, bagnata con lucido uniforme e opaca ma ancora umida. Si annoterebbe come è stato riconosciuto ciascuno stato, senza imporre tempi uguali.",
+          "fonti": [
+            "proposta"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "In una seconda serie si sceglierebbe un solo stato del foglio. Si varierebbe il carico del pennello mantenendo la stessa miscela. Si registrerebbero traccia iniziale e finale, diffusione, accumuli e fioriture. L’umidità della carta continuerebbe a cambiare durante la prova.",
+          "fonti": [
+            "proposta"
+          ]
+        },
+        {
+          "tipo": "titoletto",
+          "id": "prova-qualita",
+          "testo": "3. Qualità del liquido: due confronti distinti"
+        },
+        {
+          "tipo": "p",
+          "testo": "Per la contaminazione cromatica si confronterebbero acqua iniziale e acqua di risciacquo ottenuta da una sequenza annotata. Si preparerebbero una campitura pallida e una più intensa. Si registrerebbero il colore introdotto e i gesti, non soltanto l’aspetto chiaro o scuro del recipiente.",
+          "fonti": [
+            "proposta"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Un confronto separato potrebbe distinguere i residui nell’acqua da quelli rimasti nel pennello. Si preparerebbero tre serie: acqua iniziale e pennello pulito; acqua di risciacquo e pennello pulito; acqua iniziale e pennello volutamente risciacquato poco.",
+          "fonti": [
+            "proposta"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Per ciascun campione si userebbero porzioni d’acqua e miscele separate. Il pennello sporco non tornerebbe nelle riserve o nelle pozze di riferimento. Prima di ripetere un campione si ripristinerebbe la condizione prevista per quella serie.",
+          "fonti": [
+            "proposta"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Si potrebbero confrontare una bagnatura sul bianco, una miscela pallida, una più intensa e una velatura su fondo asciutto. Il giudizio visivo resterebbe limitato ai materiali usati. Differenze di carico e quantità di colore non perfettamente controllate andrebbero annotate.",
+          "fonti": [
+            "proposta"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "In un’altra sessione si confronterebbero rubinetto e distillata identificata, con attrezzi lavati e risciacquati. Si proverebbero più colori separati, annotando i residui preesistenti. Una demineralizzata eventualmente aggiunta resterebbe un campione distinto. Non si introdurrebbe detergente per simulare l’acqua sporca.",
+          "fonti": [
+            "proposta"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Il confronto visivo non identificherebbe il meccanismo chimico né misurerebbe durezza o acidità. I risultati resterebbero riferiti alle combinazioni provate.",
+          "fonti": [
+            "proposta"
+          ]
+        },
+        {
+          "tipo": "titoletto",
+          "id": "prova-recipienti",
+          "testo": "4. Organizzazione dei recipienti"
+        },
+        {
+          "tipo": "p",
+          "testo": "Si ripeterebbe un piccolo esercizio in sessioni distinte: un recipiente con ricambi; lavaggio e riserva protetta; primo e secondo risciacquo. Un’eventuale riserva aggiuntiva andrebbe dichiarata. Colori, carta e successione dei passaggi resterebbero quanto possibile uguali.",
+          "fonti": [
+            "proposta"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Se si volesse confrontare soltanto l’organizzazione dei recipienti, si potrebbe mantenere uguale il volume totale d’acqua disponibile. Si annoterebbero a parte i ricambi. Confrontare un vaso grande con due piccoli senza registrare i volumi confonderebbe due differenze: la quantità d’acqua e il numero dei recipienti.",
+          "fonti": [
+            "proposta"
+          ]
+        },
+        {
+          "tipo": "p",
+          "testo": "Si registrerebbero ricambi, interruzioni, contaminazioni osservate su carta e acqua rimasta disponibile. All’aperto si annoterebbero anche ingombro, peso e stabilità. Le differenze di abitudine farebbero parte del confronto: il risultato non stabilirebbe la dotazione migliore per tutti.",
+          "fonti": [
+            "proposta"
+          ]
+        }
+      ]
+    }
+  ],
+  "fonti": {
+    "pennello": {
+      "autore": "Bruce MacEvoy",
+      "titolo": "The brush and brushstrokes",
+      "pubblicazione": "Handprint, data di pubblicazione non verificata.",
+      "url": "https://www.handprint.com/HP/WCL/tech18.html",
+      "nota": "Capacità, carico, rilascio e pennello scaricato per assorbire.",
+      "consultazione": "21 novembre 2026. Letti «how a brush works» e «brush wetness & capacity», compresi i metodi di misura.",
+      "limite": "Le misure sono dell’autore e non sono state ripetute dal Quaderno. Non indicano quanta acqua togliere sempre dal pennello."
+    },
+    "bagnato": {
+      "autore": "Bruce MacEvoy",
+      "titolo": "Wet in wet",
+      "pubblicazione": "Handprint, revisione 8 gennaio 2015.",
+      "url": "https://www.handprint.com/HP/WCL/tech23.html",
+      "nota": "Umidità superficiale e interna, fioriture e condizioni di lavoro.",
+      "consultazione": "21 novembre 2026. Letti «six stages of paper wetness», «Visualizing Wetness», «surface vs. inner wetness» e le avvertenze ambientali.",
+      "limite": "Descrive come riconoscere l’umidità. Non stabilisce tempi di asciugatura uguali per ogni carta e ambiente."
+    },
+    "proposta": {
+      "autore": "Quaderno di acquerello",
+      "titolo": "Sequenze operative e quattro confronti proposti",
+      "pubblicazione": "Proposta editoriale, 21-23 novembre 2026.",
+      "url": "#prove",
+      "nota": "Sequenze didattiche e confronti da provare, ricavati dalle fonti della pagina.",
+      "consultazione": "Proposte del Quaderno, distinte dai consigli degli autori citati.",
+      "limite": "Esercizi non eseguiti: non sono disponibili campioni o risultati. Le sequenze sono suggerimenti da provare, non metodi già verificati dal Quaderno."
+    },
+    "holmes": {
+      "autore": "Marc Taro Holmes",
+      "titolo": "Tea, Milk and Honey",
+      "pubblicazione": "Citizen Sketcher, senza data esplicita nel testo letto.",
+      "url": "https://citizensketcher.com/paintings/",
+      "nota": "Tre analogie del metodo personale, con cautele sulla loro applicazione.",
+      "consultazione": "21 novembre 2026. Letta la presentazione del metodo.",
+      "limite": "Letta solo la presentazione sul sito, non il libro o la dispensa collegati. Le tre analogie non indicano quantità fisse d’acqua."
+    },
+    "diluizione": {
+      "autore": "Bruce MacEvoy",
+      "titolo": "The secret of glowing color",
+      "pubblicazione": "Handprint, data di pubblicazione non verificata.",
+      "url": "https://www.handprint.com/HP/WCL/tech16.html",
+      "nota": "Differenze di diluizione fra formulazioni e condizioni di misura.",
+      "consultazione": "21 novembre 2026. Letti «Learning how dilution feels», i limiti delle formulazioni e «Technical Data».",
+      "limite": "Campioni e misure dell’autore, non ripetuti dal Quaderno. I rapporti di diluizione non valgono per tutti i colori."
+    },
+    "mader": {
+      "autore": "Julie Mader",
+      "titolo": "Watercolor Hints & Tips",
+      "pubblicazione": "Sito dell’autrice, senza data esplicita.",
+      "url": "https://www.juliemader.com/watercolor-tipshtml",
+      "nota": "Preparazione, prova, velatura, risciacquo e indizio tattile dell’umidità.",
+      "consultazione": "21 novembre 2026. Letti «Basics», «Getting Started», «Mixing colors on a palette», «Glazing colors» e il controllo tattile.",
+      "limite": "Le gocce indicate per il kit dell’autrice non sono dosi valide per ogni colore."
+    },
+    "palomar": {
+      "autore": "Briana Stanley, Stephen P. Curry, Chelsea Wright, Elaine Wilson",
+      "titolo": "Wet Media",
+      "pubblicazione": "Foundations of Drawing, Palomar College / Pressbooks, senza data esplicita nel capitolo.",
+      "url": "https://pressbooks.palomar.edu/art102/chapter/wet-media/",
+      "nota": "Risciacquo, tamponamento, seconda acqua e sollevamento.",
+      "consultazione": "21 novembre 2026. Letto «Applying Wet Media».",
+      "limite": "Il capitolo tratta anche inchiostri e matite idrosolubili: non ogni indicazione vale per l’acquerello. I video non sono stati visionati."
+    },
+    "miscele": {
+      "autore": "Bruce MacEvoy",
+      "titolo": "Working with paints",
+      "pubblicazione": "Handprint, revisione 23 gennaio 2017.",
+      "url": "https://www.handprint.com/HP/WCL/tech14.html",
+      "nota": "Preparazione delle miscele, acqua di risciacquo e riserva.",
+      "consultazione": "21 novembre 2026. Letti «rinse water & pure water» e i passi pertinenti di «mixing tube paints» e «mixing pan paints».",
+      "limite": "Descrive il metodo dell’autore, non una prova comparativa sul numero migliore di recipienti."
+    },
+    "steel": {
+      "autore": "Liz Steel",
+      "titolo": "Managing water supply when urban sketching",
+      "pubblicazione": "Sito dell’autrice, 19 aprile 2024.",
+      "url": "https://www.lizsteel.com/water-urbansketching/",
+      "nota": "Recipiente operativo, scorta, stabilità e raccolta dell’usato.",
+      "consultazione": "21 novembre 2026. Letto il corpo fino ai commenti, compresi «General Comments» e «Managing the dirty-ness of the water».",
+      "limite": "Testimonianza personale; corso collegato non visto e immagini non analizzate separatamente."
+    },
+    "granulazione": {
+      "autore": "Daniel Smith",
+      "titolo": "What causes granulation in watercolors?",
+      "pubblicazione": "Scheda del produttore, senza data esplicita nel testo conservato.",
+      "url": "https://danielsmith.com/product-updates/primatek-watercolor/what-causes-granulation-in-watercolors/",
+      "nota": "Associa acqua distillata o deionizzata a un aumento della granulazione.",
+      "consultazione": "21 novembre 2026. Letto il paragrafo «Granulation of a watercolor paint»; testo acquisito e conservato.",
+      "limite": "L’indicazione riguarda la granulazione. La pagina e la brochure del 2005 non descrivono prove svolte nelle stesse condizioni."
+    },
+    "brochure": {
+      "autore": "Winsor & Newton",
+      "titolo": "Perfecting the Fine Art of Water Colours",
+      "pubblicazione": "Brochure del produttore, ©2005, copia ospitata da Blick.",
+      "url": "https://cdn.dickblick.com/items/003/19/pdfs/Winsor%20Newton%20Artists%20Watercolor.pdf",
+      "nota": "Distillata e riduzione della granulazione; limiti del sollevamento.",
+      "consultazione": "21 novembre 2026. Letti i testi delle pagine PDF 3 («Binders») e 6 («Granulation», «Staining and Lifting»).",
+      "limite": "Brochure del 2005: non descrive necessariamente i prodotti attuali. Consultato il testo delle pagine, non le immagini."
+    },
+    "met": {
+      "autore": "The Metropolitan Museum of Art",
+      "titolo": "Watercolor",
+      "pubblicazione": "Materials and Techniques, 1 maggio 2020.",
+      "url": "https://www.metmuseum.org/perspectives/materials-and-techniques-drawing-watercolor",
+      "nota": "Composizione, collatura e applicazioni su asciutto e bagnato.",
+      "consultazione": "21 novembre 2026. Letto il corpo tecnico pertinente.",
+      "limite": "Testo istituzionale descrittivo; video incorporati non visionati."
+    },
+    "marengoni": {
+      "autore": "Elena Marengoni",
+      "titolo": "Acquerello: quanta acqua serve? Dipende!",
+      "pubblicazione": "Sito dell’autrice, 13 settembre 2024.",
+      "url": "https://www.elenamarengoni.com/2024/09/13/acquerello-quanta-acqua-serve-dipende/",
+      "nota": "Prelievo dell’acqua pulita con pipetta o cucchiaino.",
+      "consultazione": "23 novembre 2026. Letto il testo dell’articolo, in particolare «Imparare a diluire gli acquerelli: strumenti essenziali».",
+      "limite": "Citata per gli strumenti di prelievo. La scala a cinque consistenze non viene adottata; le immagini non sono state analizzate."
+    },
+    "demasi": {
+      "autore": "Louise De Masi",
+      "titolo": "9 Tips to Avoid Muddy Colours",
+      "pubblicazione": "Sito dell’autrice, 11 maggio 2023.",
+      "url": "https://www.louisedemasi.com/tips/2023/5/11/9-tips-to-avoid-muddy-colours",
+      "nota": "Uso dei due contenitori e ricambio prima di bagnare le aree bianche.",
+      "consultazione": "23 novembre 2026. Letta la sezione «Does dirty water make your paint mixes muddy?».",
+      "limite": "Pratica dichiarata dall’autrice, non una prova controllata. Il video collegato non è stato visionato. La pagina contiene link affiliati e rimandi a corsi."
+    },
+    "branch": {
+      "autore": "Jennifer Branch",
+      "titolo": "Watercolor Art Supplies",
+      "pubblicazione": "Sito dell’autrice, senza data di pubblicazione verificata.",
+      "url": "https://jenniferbranch.com/PaintingWatercolor/Art-Lessons/Watercolor-Art-Supplies.html",
+      "nota": "Un recipiente in studio con ricambi frequenti e due all’aperto.",
+      "consultazione": "23 novembre 2026. Letto il paragrafo sul contenitore d’acqua nella sezione «Other Stuff».",
+      "limite": "Descrive il metodo dell’autrice, non una graduatoria fra sistemi. Video e altri consigli sui materiali non verificati."
+    },
+    "booth": {
+      "autore": "Grahame Booth; firma redazionale della testata",
+      "titolo": "How to avoid muddy watercolours",
+      "pubblicazione": "Artists & Illustrators, 6 ottobre 2020.",
+      "url": "https://www.artistsandillustrators.co.uk/how-to/watercolour/how-to-avoid-muddy-watercolours/",
+      "nota": "Acqua tinta, trasparenza e caso delle campiture molto pallide.",
+      "consultazione": "21 novembre 2026. Letti «Fallacy #1», «What causes muddy colours» e «Tips».",
+      "limite": "Dimostrazione descritta; campioni non misurati o replicati dal Quaderno."
+    },
+    "lundgren": {
+      "autore": "Erik Lundgren",
+      "titolo": "Two water containers?",
+      "pubblicazione": "Sito dell’autore, 22 aprile 2022.",
+      "url": "https://akvarell.se/2022/04/22/two-water-containers/",
+      "nota": "Confronto personale di un giallo e un rosso preparati con acqua pulita e acqua di risciacquo.",
+      "consultazione": "23 novembre 2026. Letti la descrizione del confronto e il commento conclusivo dell’autore.",
+      "limite": "Test informale, senza misure della concentrazione dei residui. Video non visionato; fotografie non analizzate separatamente."
+    },
+    "manutenzione": {
+      "autore": "Canson",
+      "titolo": "Cleaning and maintaining your watercolor materials",
+      "pubblicazione": "Indicazioni del produttore, senza data esplicita.",
+      "url": "https://en.canson.com/expert-advice/cleaning-and-maintaining-your-watercolor-materials",
+      "nota": "Pulizia e risciacquo dopo il sapone.",
+      "consultazione": "21 novembre 2026. Lette «Paintbrushes» e «Palette».",
+      "limite": "Manutenzione finale, non istruzioni per aggiungere sapone all’acqua durante la pittura."
+    },
+    "bagnante": {
+      "autore": "Schmincke",
+      "titolo": "Oxgall 50031",
+      "pubblicazione": "Scheda del produttore, senza data esplicita.",
+      "url": "https://www.schmincke.de/en/products/mediums/details/50031-ochsengalle-gereinigt",
+      "nota": "Funzione di un agente bagnante intenzionale.",
+      "consultazione": "21 novembre 2026. Letto il testo specifico del prodotto 50031.",
+      "limite": "Descrive un additivo specifico, non i residui accidentali di sapone. Qui non si propongono dosi."
+    },
+    "sedimentazione": {
+      "autore": "Bruce MacEvoy",
+      "titolo": "Laying a wash",
+      "pubblicazione": "Handprint, data di pubblicazione non verificata.",
+      "url": "https://www.handprint.com/HP/WCL/tech24.html",
+      "nota": "Deposito e sospensione delle particelle; ruolo della formulazione.",
+      "consultazione": "23 novembre 2026. Letta la sezione «pigment & paint behavior», nei passi su particelle, deposito e ingredienti della pittura.",
+      "limite": "Descrizione tecnica dell’autore, non analisi dell’acqua del lettore. Non determina quando un’acqua decantata sia adatta a dipingere."
+    },
+    "angold": {
+      "autore": "Lee Angold",
+      "titolo": "Effects of water hardness on watercolour paints",
+      "pubblicazione": "Sito dell’autrice, senza data esplicita nel corpo letto.",
+      "url": "https://leeangold.com/blogs/news/effects-of-water-hardness-on-watercolour-paints",
+      "nota": "Confronto personale fra acqua di rubinetto e distillata.",
+      "consultazione": "21 novembre 2026. Letti racconto, materiali e limiti.",
+      "limite": "Testimonianza, non analisi chimica. Immagini non analizzate separatamente."
+    },
+    "aperto": {
+      "autore": "Bruce MacEvoy",
+      "titolo": "Painting outdoors",
+      "pubblicazione": "Handprint, revisione 8 gennaio 2015.",
+      "url": "https://www.handprint.com/HP/WCL/tech32.html",
+      "nota": "Condizioni ambientali e segno di prova durante la preparazione.",
+      "consultazione": "21 novembre 2026. Letta «The Elements» e il contesto pertinente.",
+      "limite": "Consigli dell’autore, senza temperature o tempi di asciugatura validi per ogni situazione."
+    }
+  },
+  "ancore_fonti": {
+    "pennello": "bibliografia-pennello",
+    "bagnato": "bibliografia-bagnato",
+    "proposta": "bibliografia-proposta",
+    "holmes": "bibliografia-holmes",
+    "diluizione": "bibliografia-diluizione",
+    "mader": "bibliografia-mader",
+    "palomar": "bibliografia-palomar",
+    "miscele": "bibliografia-miscele",
+    "steel": "bibliografia-steel",
+    "granulazione": "bibliografia-granulazione",
+    "brochure": "bibliografia-brochure",
+    "met": "bibliografia-met",
+    "marengoni": "bibliografia-marengoni",
+    "demasi": "bibliografia-demasi",
+    "branch": "bibliografia-branch",
+    "booth": "bibliografia-booth",
+    "lundgren": "bibliografia-lundgren",
+    "manutenzione": "bibliografia-manutenzione",
+    "bagnante": "bibliografia-bagnante",
+    "sedimentazione": "bibliografia-sedimentazione",
+    "angold": "bibliografia-angold",
+    "aperto": "bibliografia-aperto"
+  }
+}
